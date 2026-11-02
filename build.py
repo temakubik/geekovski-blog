@@ -199,6 +199,7 @@ PAGE = """<!DOCTYPE html>
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
 <link rel="alternate" type="application/rss+xml" href="/rss.xml">
+<link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 </head>
 <body class="t-{theme}">
@@ -394,6 +395,12 @@ def build(theme, out_dir, content_dir=None):
     shutil.copy(ROOT / "static" / "themes" / ("%s.css" % theme), out / "assets" / "theme.css")
     for extra in (ROOT / "static" / "assets").glob("*") if (ROOT / "static" / "assets").exists() else []:
         shutil.copy(extra, out / "assets" / extra.name)
+    fonts_src = ROOT / "static" / "fonts"
+    if fonts_src.exists():
+        (out / "assets" / "fonts").mkdir(parents=True, exist_ok=True)
+        for f in fonts_src.glob("*.woff2"):
+            shutil.copy(f, out / "assets" / "fonts" / f.name)
+        shutil.copy(ROOT / "static" / "fonts.css", out / "assets" / "fonts.css")
     img_src = ROOT / "static" / "img"
     if img_src.exists():
         (out / "assets" / "img").mkdir(parents=True, exist_ok=True)
