@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PC-игры — GEEKOVSKI</title>
+<meta name="description" content="PC-игры">
+<meta property="og:title" content="PC-игры — GEEKOVSKI">
+<meta property="og:description" content="PC-игры">
+<meta property="og:type" content="website">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml">
+<link rel="stylesheet" href="/assets/theme.css">
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/"><span class="brand__mark">G</span><span class="brand__name">GEEKOVSKI</span></a>
+    <nav class="nav"><a class="nav__link" href="/xbox/">Xbox</a><a class="nav__link" href="/switch/">Nintendo Switch</a><a class="nav__link" href="/playstation/">PlayStation</a><a class="nav__link" href="/pc/">PC-игры</a><a class="nav__link" href="/kino/">Кино</a><a class="nav__link" href="/serialy/">Сериалы</a><a class="nav__link" href="/ai/">AI</a></nav>
+    <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+  </div>
+</header>
+<main class="wrap"><section class="lead"><h1>PC-игры</h1><p>1 материалов</p></section><div class="grid grid--list"><article class="card card-- cat-pc">
+  <div class="card__cover" style="--h:57"></div>
+  <div class="card__body">
+    <div class="card__meta"><span class="chip">PC-игры</span><time>29.10</time></div>
+    <h3 class="card__title"><a href="/iphone-duo.html">iPhone Duo — первый складной iPhone: предзаказы 16 октября, продажи с 23-го</a></h3>
+    <p class="card__sum">Книжный формат, внешний экран ~5,4″, внутренний ~7,6″ и цена от 1999 до 3199 долларов за версию на 2 ТБ. Разбираем, кому это вообще нужно.</p>
+    <div class="card__foot"><a class="more" href="/iphone-duo.html">Читать →</a><span class="srcc">источников: 2</span></div>
+  </div>
+</article></div></main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+</script>
+</body>
+</html>

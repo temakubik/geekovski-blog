@@ -1,0 +1,100 @@
+[
+ {
+  "slug": "pikmin-4-switch-2-demo",
+  "title": "Pikmin 4 на Switch 2 — бесплатное демо уже в eShop, полный релиз 12 ноября",
+  "date": "2026-11-02T10:05:00",
+  "category": "switch",
+  "summary": "Nintendo провела Pikmin Direct за десять минут до эфира, объявила «День пикмина» и выкатила демку: стартовая зона плюс два экзамена Dandori Academy.",
+  "sources": [
+   {
+    "name": "Nintendo Life — итоги Pikmin Day",
+    "url": "https://www.nintendolife.com/news/2026/11/round-up-pikmin-day-2026-updates-demo-and-new-animated-shorts"
+   },
+   {
+    "name": "GoNintendo — демо и Dandori Academy",
+    "url": "https://gonintendo.com/contents/66746-pikmin-4-nintendo-switch-2-edition-dandori-academy-getting-free-demo-nov-2nd-2026"
+   }
+  ]
+ },
+ {
+  "slug": "zelda-ocarina-switch-2",
+  "title": "Zelda: Ocarina of Time на Switch 2 — 5 ноября, и это не ремастер в привычном смысле",
+  "date": "2026-11-01T12:10:00",
+  "category": "switch",
+  "summary": "Полностью озвученные катсцены, игра на окарине через микрофон консоли и выросший до 24,5 ГБ размер. Разбираем, что именно Nintendo меняет в легендарной игре.",
+  "sources": [
+   {
+    "name": "Nintendo Everything — трейлер «What's New»",
+    "url": "https://nintendoeverything.com/zelda-ocarina-of-time-nintendo-switch-2-remake-whats-new-trailer/"
+   },
+   {
+    "name": "Notebookcheck — эмбарго на рецензии",
+    "url": "https://www.notebookcheck.net/Metacritic-reveals-Zelda-Ocarina-of-Time-review-embargo-as-release-date-approaches.1438321.0.html"
+   }
+  ]
+ },
+ {
+  "slug": "monster-hunter-wilds-switch-2",
+  "title": "Monster Hunter Wilds на Switch 2 — 4 декабря, и 30 fps здесь не приговор",
+  "date": "2026-10-31T09:40:00",
+  "category": "switch",
+  "summary": "Демо Prologue живёт с 19 октября, предзаказы открыты, сейв переносится в полную версию. Главный третьесторонний релиз года для платформы.",
+  "sources": [
+   {
+    "name": "Monster Hunter Wilds — официальный сайт",
+    "url": "https://www.monsterhunter.com/wilds/en-us"
+   }
+  ]
+ },
+ {
+  "slug": "gemini-4-argon",
+  "title": "Gemini 4 Argon — миллион токенов на выходе, но пользоваться ей пока нельзя",
+  "date": "2026-10-30T14:20:00",
+  "category": "ai",
+  "summary": "Google подняла лимит вывода до 1 млн токенов и поставила цену 2/10 доллара за миллион, но доступ открыт только доверенным киберзащитникам.",
+  "sources": [
+   {
+    "name": "Google Blog — Gemini 4 Argon",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon"
+   },
+   {
+    "name": "Ars Technica — модель анонсирована, но недоступна",
+    "url": "https://arstechnica.com/ai/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it"
+   }
+  ]
+ },
+ {
+  "slug": "iphone-duo",
+  "title": "iPhone Duo — первый складной iPhone: предзаказы 16 октября, продажи с 23-го",
+  "date": "2026-10-29T18:05:00",
+  "category": "pc",
+  "summary": "Книжный формат, внешний экран ~5,4″, внутренний ~7,6″ и цена от 1999 до 3199 долларов за версию на 2 ТБ. Разбираем, кому это вообще нужно.",
+  "sources": [
+   {
+    "name": "Lenta.ru — линейка iPhone 18 и iPhone Duo",
+    "url": "https://lenta.ru/articles/2026/09/24/iphone-18-all"
+   },
+   {
+    "name": "Hi-Tech Mail — всё об iPhone 18",
+    "url": "https://hi-tech.mail.ru/articles/142865-vse-ob-iphone-18"
+   }
+  ]
+ },
+ {
+  "slug": "carrie-prime-video",
+  "title": "«Кэрри» Майка Флэнагана — все восемь серий на Prime Video, 85% на Rotten Tomatoes",
+  "date": "2026-10-28T21:30:00",
+  "category": "kino",
+  "summary": "Осовремененная экранизация Кинга про травлю в эпоху соцсетей. Сам Кинг назвал сериал «блестящим» — и это редкость.",
+  "sources": [
+   {
+    "name": "Киноафиша — «Кэрри», 85% RT",
+    "url": "https://www.kinoafisha.info/articles/amazon-vydal-odnu-iz-luchshih-adaptaciy-stivena-kinga--ot-novogo-seriala-s-reytingom-85-ne-hochetsya-otryvatsya_id139823_a16283248"
+   },
+   {
+    "name": "Кино Mail.ru — Кинг о сериале",
+    "url": "https://kino.mail.ru/news/138832-stiven-king-vysoko-ocenil-novyj-serial-po-svoemu-romanu"
+   }
+  ]
+ }
+]
