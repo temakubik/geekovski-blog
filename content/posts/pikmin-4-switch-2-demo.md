@@ -3,11 +3,12 @@ title: Pikmin 4 на Switch 2 — бесплатное демо уже в eShop,
 date: 2026-11-02 10:05
 category: switch
 summary: Nintendo провела Pikmin Direct за десять минут до эфира, объявила «День пикмина» и выкатила демку: стартовая зона плюс два экзамена Dandori Academy.
+cover: /assets/img/pikmin-4-switch-2-demo.jpg
+credit: Обложка: Doop / GEEKOVSKI
 sources: Nintendo Life — итоги Pikmin Day | https://www.nintendolife.com/news/2026/11/round-up-pikmin-day-2026-updates-demo-and-new-animated-shorts; GoNintendo — демо и Dandori Academy | https://gonintendo.com/contents/66746-pikmin-4-nintendo-switch-2-edition-dandori-academy-getting-free-demo-nov-2nd-2026
 ---
 Самое японское объявление месяца: 31 октября Nintendo собрала Pikmin Direct, о котором предупредила за десять минут, и объявила 1 ноября «Днём пикмина».
 
-![Nintendo](/assets/img/pikmin-4-switch-2-demo.webp)
 
 ## Что в демо
 

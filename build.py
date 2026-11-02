@@ -238,10 +238,7 @@ def page(title, desc, content, theme):
 
 def card(p, theme, big=False):
     cat = p["category"]
-    cover = ('<div class="card__cover" style="--h:%d">%s</div>' % (
-        abs(hash(p["slug"])) % 40 + 20,
-        '<img src="%s" alt="" loading="lazy">' % p["cover"] if p["cover"] else "",
-    ))
+    cover = ('<div class="card__cover"><img src="%s" alt="" loading="lazy"></div>' % p["cover"]) if p["cover"] else ""
     return """<article class="card card--{cls} cat-{cat}">
   {cover}
   <div class="card__body">
@@ -259,8 +256,10 @@ def card(p, theme, big=False):
 
 
 def hero(p):
+    img = '<div class="hero__cover"><img src="%s" alt="" loading="lazy"></div>' % p["cover"] if p["cover"] else ""
     return """<section class="hero">
   <a class="hero__link" href="/{slug}.html">
+    """ + img + """
     <span class="chip chip--solid">{catname}</span>
     <h1>{title}</h1>
     <p>{sum}</p>
@@ -296,7 +295,7 @@ def render_index(posts, theme, digests=None):
         head = hero(posts[0])
         blocks = []
         for c, name in CATS:
-            items = [p for p in posts if p["category"] == c][:4]
+            items = [p for p in posts if p["category"] == c and p["slug"] != posts[0]["slug"]][:4]
             if not items:
                 continue
             rows = "\n".join(card(p, theme) for p in items)
