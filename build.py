@@ -198,6 +198,10 @@ PAGE = """<!DOCTYPE html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#0A0C0F">
 <link rel="alternate" type="application/rss+xml" href="/rss.xml">
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
@@ -205,7 +209,7 @@ PAGE = """<!DOCTYPE html>
 <body class="t-{theme}">
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/"><span class="brand__mark">G</span><span class="brand__name">GEEKOVSKI</span></a>
+    <a class="brand" href="/"><img class="brand__mark" src="/assets/img/logo.svg" alt="" width="24" height="24" loading="eager"><span class="brand__name">GEEKOVSKI</span></a>
     <nav class="nav">{nav}</nav>
     <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
   </div>
@@ -429,6 +433,9 @@ def build(theme, out_dir, content_dir=None):
         {k: (v.strftime("%Y-%m-%dT%H:%M:%S") if isinstance(v, datetime) else v)
          for k, v in p.items() if k in ("slug", "title", "date", "category", "summary", "sources")}
         for p in posts], ensure_ascii=False, indent=1), encoding="utf-8")
+    ico = ROOT / "static" / "img" / "favicon.ico"
+    if ico.exists():
+        shutil.copy(ico, out / "favicon.ico")
     (out / ".nojekyll").write_text("")
     if (ROOT / "static" / "CNAME").exists():
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
