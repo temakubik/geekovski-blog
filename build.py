@@ -356,6 +356,7 @@ def build(theme, out_dir, content_dir=None):
         {k: (v.strftime("%Y-%m-%dT%H:%M:%S") if isinstance(v, datetime) else v)
          for k, v in p.items() if k in ("slug", "title", "date", "category", "summary", "sources")}
         for p in posts], ensure_ascii=False, indent=1), encoding="utf-8")
+    (out / ".nojekyll").write_text("")
     if (ROOT / "static" / "CNAME").exists():
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
     return posts
