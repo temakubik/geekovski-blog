@@ -31,7 +31,9 @@ img { max-width: 100%; display: block; }
 .top__in { display: flex; align-items: center; gap: 10px 18px; height: auto; padding: 10px 0; flex-wrap: wrap; }
 @media (min-width: 720px) { .top__in { flex-wrap: nowrap; height: 58px; padding: 0; } }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .14em; font-size: 13px; font-family: "Tiny5", "Medeo Sans", sans-serif; }
-.brand__mark { width: 24px; height: 24px; display: block; flex: none; }
+.brand__mark { width: 26px; height: 26px; display: block; flex: none; }
+.foot__brand { display: flex; align-items: center; gap: 8px; }
+.foot__brand img { opacity: .9; }
 .nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex: 1 1 100%; order: 3; min-width: 0; }
 @media (min-width: 720px) { .nav { flex: 1; order: 0; } }
 .nav::-webkit-scrollbar { display: none; }
