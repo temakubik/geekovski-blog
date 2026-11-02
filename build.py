@@ -99,6 +99,7 @@ def parse_post(path: Path):
         "category": cat,
         "summary": meta.get("summary", ""),
         "cover": meta.get("cover", ""),
+        "credit": meta.get("credit", ""),
         "body": "\n".join(body_lines).strip(),
         "sources": sources,
         "draft": meta.get("draft", "false").lower() == "true",
@@ -319,7 +320,10 @@ def render_post(p, posts, theme):
             '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (html.escape(s["url"]), html.escape(s["name"]))
             if s["url"] else "<li>%s</li>" % html.escape(s["name"]) for s in p["sources"])
     body = md(p["body"])
-    cover = '<figure class="post__cover"><img src="%s" alt=""></figure>' % p["cover"] if p["cover"] else ""
+    cover = ""
+    if p["cover"]:
+        cap = '<figcaption>%s</figcaption>' % html.escape(p["credit"]) if p.get("credit") else ""
+        cover = '<figure class="post__cover"><img src="%s" alt="">%s</figure>' % (p["cover"], cap)
     rel = ""
     if related:
         rel = '<section class="related"><h2>По теме</h2><div class="grid grid--list">%s</div></section>' % "\n".join(
@@ -391,6 +395,12 @@ def build(theme, out_dir, content_dir=None):
     shutil.copy(ROOT / "static" / "themes" / ("%s.css" % theme), out / "assets" / "theme.css")
     for extra in (ROOT / "static" / "assets").glob("*") if (ROOT / "static" / "assets").exists() else []:
         shutil.copy(extra, out / "assets" / extra.name)
+    img_src = ROOT / "static" / "img"
+    if img_src.exists():
+        (out / "assets" / "img").mkdir(parents=True, exist_ok=True)
+        for img in img_src.glob("*"):
+            if img.is_file():
+                shutil.copy(img, out / "assets" / "img" / img.name)
 
     (out / "index.html").write_text(render_index(posts, theme, digests), encoding="utf-8")
     for p in posts:

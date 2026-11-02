@@ -7,6 +7,8 @@ sources: Nintendo Life — итоги Pikmin Day | https://www.nintendolife.com/
 ---
 Самое японское объявление месяца: 31 октября Nintendo собрала Pikmin Direct, о котором предупредила за десять минут, и объявила 1 ноября «Днём пикмина».
 
+![Nintendo](/assets/img/pikmin-4-switch-2-demo.webp)
+
 ## Что в демо
 
 - Стартовая зона кампании.

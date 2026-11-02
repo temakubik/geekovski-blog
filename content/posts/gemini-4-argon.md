@@ -7,6 +7,8 @@ sources: Google Blog — Gemini 4 Argon | https://blog.google/innovation-and-ai/
 ---
 Анонс 30 сентября, и он странный: модель есть, цены опубликованы, а доступа нет.
 
+![Google](/assets/img/gemini-4-argon.png)
+
 ## Что заявлено
 
 - **Лимит вывода — 1 млн токенов** против 32 тысяч у предыдущего поколения.
