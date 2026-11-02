@@ -68,14 +68,38 @@ def parse_post(path: Path):
             sources.append({"name": name.strip(), "url": url.strip()})
         else:
             sources.append({"name": line, "url": ""})
+    kind = meta.get("kind", "post").strip().lower()
+    if kind not in ("post", "digest"):
+        kind = "post"
+    items, cur = [], None
+    for line in body.splitlines():
+        s = line.strip()
+        if not s:
+            continue
+        # «- category: switch» открывает новость, «title: …» / «summary: …» её дополняют
+        m = re.match(r"^(?:-\s+)?([a-z_]+):\s*(.*)$", s)
+        if not (m and m.group(1) in ("category", "title", "summary", "source")):
+            continue
+        key, val = m.group(1), m.group(2).strip()
+        if key == "category":
+            cur = {"category": val.lower(), "title": "", "summary": "", "source": ""}
+            items.append(cur)
+        elif cur is not None:
+            cur[key] = val
+    if kind != "digest":
+        items, body_lines = [], body.splitlines()
+    else:
+        body_lines = []
     return {
+        "items": items,
+        "kind": kind,
         "slug": slug,
         "title": meta.get("title", "Без заголовка"),
         "date": date,
         "category": cat,
         "summary": meta.get("summary", ""),
         "cover": meta.get("cover", ""),
-        "body": body.strip(),
+        "body": "\n".join(body_lines).strip(),
         "sources": sources,
         "draft": meta.get("draft", "false").lower() == "true",
         "file": path,
@@ -116,6 +140,14 @@ def md(text: str) -> str:
         if not s.strip():
             flush()
             continue
+        mi = re.match(r"^!\[([^\]]*)\]\(([^)\s]+)\)$", s)
+        if mi:
+            flush()
+            alt, src = mi.group(1), mi.group(2)
+            cap = "<figcaption>%s</figcaption>" % html.escape(alt) if alt else ""
+            out.append('<figure class="post__fig"><img src="%s" alt="%s" loading="lazy">%s</figure>' % (
+                html.escape(src), html.escape(alt), cap))
+            continue
         m = re.match(r"^(#{2,4})\s+(.*)$", s)
         if m:
             flush()
@@ -149,9 +181,11 @@ def plain(text: str, n: int = 240) -> str:
 
 # ---------- templates ----------
 
-NAV = "".join(
-    '<a class="nav__link" href="/{slug}/">{name}</a>'.format(slug=c, name=n) for c, n in CATS
-)
+NAV = ('<a class="nav__link" href="/">Блог</a>'
+       '<a class="nav__link" href="/digests/">Дайджесты</a>'
+       '<span class="nav__sep"></span>'
+       + "".join('<a class="nav__link nav__link--sm" href="/{slug}/">{name}</a>'.format(slug=c, name=n)
+                 for c, n in CATS))
 
 PAGE = """<!DOCTYPE html>
 <html lang="ru" data-theme="{theme}">
@@ -237,7 +271,7 @@ def hero(p):
     )
 
 
-def render_index(posts, theme):
+def render_index(posts, theme, digests=None):
     if not posts:
         return page(SITE["title"], SITE["tagline"], '<main class="wrap"><p>Пусто.</p></main>', theme)
     if theme == "magazine":
@@ -249,6 +283,15 @@ def render_index(posts, theme):
         content = ('<main class="wrap"><section class="lead"><h1>Последнее</h1><p>%s</p></section>'
                    '<div class="grid grid--cards">%s</div></main>') % (SITE["tagline"], cards)
     if theme == "editorial":
+        dg = locals().get("digests") or []
+        dblock = ""
+        if dg:
+            latest = dg[0]
+            dblock = ('<section class="rubric rubric--digest"><div class="rubric__head"><h2>Дайджесты</h2>'
+                      '<a class="rubric__all" href="/digests/">Все дайджесты →</a></div>'
+                      '<a class="dteaser" href="/digests/%s.html"><span class="dteaser__date">%s</span>'
+                      '<strong>%s</strong><span class="dteaser__count">%d новостей</span></a></section>') % (
+                latest["slug"], latest["date"].strftime("%d.%m, %H:%M"), html.escape(latest["title"]), len(latest["items"]))
         head = hero(posts[0])
         blocks = []
         for c, name in CATS:
@@ -260,7 +303,7 @@ def render_index(posts, theme):
                 '<section class="rubric"><div class="rubric__head"><h2>%s</h2>'
                 '<a class="rubric__all" href="/%s/">Все материалы →</a></div>'
                 '<div class="grid grid--list">%s</div></section>' % (name, c, rows))
-        content = '<main class="wrap"><div class="hero-wrap">%s</div>%s</main>' % (head, "\n".join(blocks))
+        content = '<main class="wrap">%s<div class="hero-wrap">%s</div>%s</main>' % (dblock, head, "\n".join(blocks))
     else:  # magazine
         head = hero(posts[0])
         cards = "\n".join(card(p, theme) for p in posts[1:])
@@ -309,20 +352,24 @@ def render_cat(slug, name, items, theme):
     return page("%s — %s" % (name, SITE["title"]), name, content, theme)
 
 
-def rss(posts):
-    items = "".join("""<item><title>{t}</title><link>{u}/{s}.html</link>
-<guid>{u}/{s}.html</guid><pubDate>{d}</pubDate><description>{desc}</description></item>""".format(
-        t=html.escape(p["title"]), u=SITE["url"], s=p["slug"], d=p["date"].strftime("%a, %d %b %Y %H:%M:%S +0300"),
+def rss(posts, title=None, path=""):
+    items = "".join("""<item><title>{t}</title><link>{u}/{p}{s}.html</link>
+<guid>{u}/{p}{s}.html</guid><pubDate>{d}</pubDate><description>{desc}</description></item>""".format(
+        t=html.escape(p["title"]), u=SITE["url"], p=path, s=p["slug"], d=p["date"].strftime("%a, %d %b %Y %H:%M:%S +0300"),
         desc=html.escape(p["summary"])) for p in posts[:40])
     return """<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel><title>{title}</title><link>{url}</link>
 <description>{tag}</description><language>ru</language>{items}</channel></rss>""".format(
-        title=SITE["title"], url=SITE["url"], tag=SITE["tagline"], items=items)
+        title=title or SITE["title"], url=SITE["url"], tag=SITE["tagline"], items=items)
 
 
-def sitemap(posts):
+def sitemap(posts, digests=None):
     urls = ["<url><loc>%s/</loc></url>" % SITE["url"]]
     urls += ['<url><loc>%s/%s/</loc></url>' % (SITE["url"], c) for c, _ in CATS]
+    urls.append("<url><loc>%s/digests/</loc></url>" % SITE["url"])
+    for d in (digests or []):
+        urls.append("<url><loc>{u}/digests/{s}.html</loc><lastmod>{d}</lastmod></url>".format(
+            u=SITE["url"], s=d["slug"], d=d["date"].strftime("%Y-%m-%d")))
     urls += ["<url><loc>{u}/{s}.html</loc><lastmod>{d}</lastmod></url>".format(
         u=SITE["url"], s=p["slug"], d=p["date"].strftime("%Y-%m-%d")) for p in posts]
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>' % "".join(urls)
@@ -330,9 +377,11 @@ def sitemap(posts):
 
 def build(theme, out_dir, content_dir=None):
     content = Path(content_dir) if content_dir else ROOT / "content"
-    posts = [parse_post(p) for p in sorted((content / "posts").glob("*.md"))]
-    posts = [p for p in posts if not p["draft"]]
-    posts.sort(key=lambda p: p["date"], reverse=True)
+    everything = [parse_post(p) for p in sorted((content / "posts").glob("*.md"))]
+    everything = [p for p in everything if not p["draft"]]
+    everything.sort(key=lambda p: p["date"], reverse=True)
+    posts = [p for p in everything if p["kind"] == "post"]
+    digests = [p for p in everything if p["kind"] == "digest"]
 
     out = Path(out_dir)
     if out.exists():
@@ -343,7 +392,7 @@ def build(theme, out_dir, content_dir=None):
     for extra in (ROOT / "static" / "assets").glob("*") if (ROOT / "static" / "assets").exists() else []:
         shutil.copy(extra, out / "assets" / extra.name)
 
-    (out / "index.html").write_text(render_index(posts, theme), encoding="utf-8")
+    (out / "index.html").write_text(render_index(posts, theme, digests), encoding="utf-8")
     for p in posts:
         (out / ("%s.html" % p["slug"])).write_text(render_post(p, posts, theme), encoding="utf-8")
     for c, name in CATS:
@@ -351,7 +400,15 @@ def build(theme, out_dir, content_dir=None):
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(render_cat(c, name, [p for p in posts if p["category"] == c], theme), encoding="utf-8")
     (out / "rss.xml").write_text(rss(posts), encoding="utf-8")
-    (out / "sitemap.xml").write_text(sitemap(posts), encoding="utf-8")
+    dgdir = out / "digests"
+    dgdir.mkdir(exist_ok=True)
+    (dgdir / "index.html").write_text(render_digests_index(digests, theme), encoding="utf-8")
+    for i, d in enumerate(digests):
+        nxt = digests[i - 1] if i > 0 else None      # новее
+        prv = digests[i + 1] if i + 1 < len(digests) else None
+        (dgdir / ("%s.html" % d["slug"])).write_text(render_digest(d, theme, nxt, prv), encoding="utf-8")
+    (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests"), encoding="utf-8")
+    (out / "sitemap.xml").write_text(sitemap(posts, digests), encoding="utf-8")
     (out / "feed.json").write_text(json.dumps([
         {k: (v.strftime("%Y-%m-%dT%H:%M:%S") if isinstance(v, datetime) else v)
          for k, v in p.items() if k in ("slug", "title", "date", "category", "summary", "sources")}
@@ -360,6 +417,83 @@ def build(theme, out_dir, content_dir=None):
     if (ROOT / "static" / "CNAME").exists():
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
     return posts
+
+# ---------- дайджесты ----------
+
+DIGEST_ITEM = """<article class="ditem">
+  <div class="ditem__meta"><span class="chip chip--sm cat-{cat}">{catname}</span></div>
+  <h3 class="ditem__title">{title}</h3>
+  <p class="ditem__text">{text}</p>
+  {src}
+</article>"""
+
+
+def digest_item(it):
+    cat = CAT_ALIAS.get(it["category"], it["category"])
+    if cat not in CAT_NAME:
+        cat = "ai"
+    src = ""
+    if it.get("source"):
+        name, _, url = it["source"].partition("|")
+        name, url = name.strip(), url.strip()
+        src = ('<a class="ditem__src" href="%s" rel="nofollow noopener" target="_blank">%s</a>'
+               % (html.escape(url), html.escape(name or url))) if url else (
+               '<span class="ditem__src">%s</span>' % html.escape(name))
+    return DIGEST_ITEM.format(cat=cat, catname=CAT_NAME.get(cat, cat), title=html.escape(it["title"]),
+                              text=html.escape(it["summary"]), src=src)
+
+
+def render_digest(d, theme, next_d=None, prev_d=None):
+    from collections import OrderedDict
+    groups = OrderedDict()
+    for it in d["items"]:
+        c = CAT_ALIAS.get(it["category"], it["category"])
+        groups.setdefault(CAT_NAME.get(c, "Другое"), []).append(it)
+    blocks = []
+    for name, items in groups.items():
+        blocks.append('<section class="dgroup"><h2>%s</h2>%s</section>' % (
+            html.escape(name), "".join(digest_item(i) for i in items)))
+    nav = ""
+    if next_d or prev_d:
+        nav = '<nav class="dnav">%s%s</nav>' % (
+            '<a href="/digests/%s.html">← %s</a>' % (prev_d["slug"], prev_d["date"].strftime("%d.%m, %H:%M")) if prev_d else "<span></span>",
+            '<a href="/digests/%s.html">%s →</a>' % (next_d["slug"], next_d["date"].strftime("%d.%m, %H:%M")) if next_d else "<span></span>")
+    content = """<main class="wrap">
+<article class="digest">
+  <header class="post__head">
+    <div class="post__meta"><span class="chip chip--solid">Дайджест</span><time>{date}</time></div>
+    <h1>{title}</h1>
+    <p class="post__lead">{sum} · {count} новостей</p>
+  </header>
+  {body}
+  {blocks}
+  {srcs}
+  {nav}
+</article>
+</main>""".format(
+        date=d["date"].strftime("%d.%m.%Y, %H:%M"), title=html.escape(d["title"]),
+        sum=html.escape(d["summary"]), count=len(d["items"]), blocks="".join(blocks),
+        body=md(d["body"]) if d["body"] else "", nav=nav,
+        srcs=('<section class="sources"><h2>Все источники</h2><ol>%s</ol></section>' % "".join(
+            '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (
+                html.escape(s["url"]), html.escape(s["name"])) for s in d["sources"] if s["url"])) if d["sources"] else "",
+    )
+    return page("%s — %s" % (d["title"], SITE["title"]), d["summary"], content, theme)
+
+
+def render_digests_index(digests, theme):
+    rows = []
+    for d in digests:
+        rows.append("""<article class="drow">
+  <div class="drow__meta"><time>{date}</time><span class="drow__count">{count} новостей</span></div>
+  <h3 class="drow__title"><a href="/digests/{slug}.html">{title}</a></h3>
+  <p class="drow__sum">{sum}</p>
+</article>""".format(date=d["date"].strftime("%d.%m.%Y, %H:%M"), count=len(d["items"]),
+                    slug=d["slug"], title=html.escape(d["title"]), sum=html.escape(d["summary"])))
+    content = ('<main class="wrap"><section class="lead"><h1>Дайджесты</h1>'
+               '<p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p>'
+               '</section><div class="dlist">%s</div></main>') % ("".join(rows) or "<p>Пока пусто.</p>")
+    return page("Дайджесты — %s" % SITE["title"], "Дважды в день: короткие новости", content, theme)
 
 
 if __name__ == "__main__":
@@ -370,3 +504,4 @@ if __name__ == "__main__":
     a = ap.parse_args()
     ps = build(a.theme, a.out, a.content)
     print("theme=%s posts=%d -> %s" % (a.theme, len(ps), a.out))
+

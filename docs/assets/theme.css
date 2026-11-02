@@ -113,3 +113,34 @@ img { max-width: 100%; display: block; }
 .foot { border-top: 1px solid var(--line); margin-top: 50px; }
 .foot__in { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; padding: 24px 20px 40px; font-size: 12px; color: var(--muted); }
 .foot__note { max-width: 52ch; }
+
+/* два основных раздела и дайджесты */
+.nav__sep { width: 1px; height: 16px; background: var(--line); margin: 0 6px; flex: none; }
+.nav__link--sm { font-size: 12px; opacity: .75; }
+.dteaser { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; padding: 14px 16px; margin-top: 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); }
+.dteaser:hover { border-color: var(--accent); }
+.dteaser__date { font-size: 12px; color: var(--muted); }
+.dteaser__count { font-size: 12px; color: var(--muted); margin-left: auto; }
+.digest { max-width: 760px; margin: 0 auto; padding: 40px 0 10px; }
+.dgroup { margin-top: 26px; }
+.dgroup h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 4px; }
+.ditem { padding: 18px 0 16px; border-bottom: 1px solid var(--line); }
+.ditem__title { font-size: clamp(17px, 4.3vw, 20px); line-height: 1.3; margin: 0 0 6px; font-weight: 700; }
+.ditem__text { margin: 0 0 8px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.ditem__src { font-size: 12px; color: var(--text); text-decoration: underline; text-underline-offset: 2px; opacity: .8; }
+.ditem__src:hover { color: var(--accent); }
+.chip--sm { font-size: 10px; padding: 2px 6px; }
+.dnav { display: flex; justify-content: space-between; gap: 12px; margin: 30px 0 10px; font-size: 13px; }
+.dnav a { color: var(--muted); }
+.dnav a:hover { color: var(--accent); }
+.dlist { padding-bottom: 30px; }
+.drow { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.drow__meta { display: flex; gap: 12px; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.drow__title { margin: 0 0 6px; font-size: clamp(18px, 4.6vw, 23px); line-height: 1.25; font-weight: 700; }
+.drow__title a:hover { color: var(--accent); }
+.drow__sum { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+/* картинки в тексте */
+.post__fig { margin: 26px 0; }
+.post__fig img { width: 100%; border-radius: 4px; }
+.post__fig figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дайджесты — GEEKOVSKI</title>
+<meta name="description" content="Дважды в день: короткие новости">
+<meta property="og:title" content="Дайджесты — GEEKOVSKI">
+<meta property="og:description" content="Дважды в день: короткие новости">
+<meta property="og:type" content="website">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml">
+<link rel="stylesheet" href="/assets/theme.css">
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/"><span class="brand__mark">G</span><span class="brand__name">GEEKOVSKI</span></a>
+    <nav class="nav"><a class="nav__link" href="/">Блог</a><a class="nav__link" href="/digests/">Дайджесты</a><span class="nav__sep"></span><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></nav>
+    <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+  </div>
+</header>
+<main class="wrap"><section class="lead"><h1>Дайджесты</h1><p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p></section><div class="dlist"><article class="drow">
+  <div class="drow__meta"><time>02.11.2026, 09:00</time><span class="drow__count">4 новостей</span></div>
+  <h3 class="drow__title"><a href="/digests/2026-11-02-utro.html">Утро 2 ноября: Ocarina of Time на пороге, продажи Switch 2 в США просели, Pikmin без предупреждения</a></h3>
+  <p class="drow__sum">Демо Pikmin 4 в eShop, Zelda выходит 5 ноября, Circana зафиксировала падение продаж Switch 2 в США, а HoYoverse впервые едет на железо Nintendo</p>
+</article></div></main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+</script>
+</body>
+</html>
