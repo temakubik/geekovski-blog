@@ -366,18 +366,20 @@ def render_index(posts, theme, digests=None):
     return page(SITE["title"], SITE["tagline"], content, theme)
 
 
-def share_block(url, title):
+def share_block(url, title, image=None):
     """Кнопки «поделиться». Ссылки — обычные share-URL соцсетей, без сторонних скриптов."""
     u = urllib.parse.quote(url, safe="")
     tx = urllib.parse.quote(title, safe="")
+    img = urllib.parse.quote(image or DEFAULT_OG, safe="")
     return ("""<section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url={u}&text={t}" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url={u}&title={t}" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://wa.me/?text={t}%20{u}" target="_blank" rel="noopener nofollow">WhatsApp</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url={u}&text={t}" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url={u}&media={i}&description={t}" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="{u}">Скопировать ссылку</button>
-</section>""").format(u=u, t=tx)
+</section>""").format(u=u, t=tx, i=img)
 
 
 def render_post(p, posts, theme):
@@ -420,7 +422,8 @@ def render_post(p, posts, theme):
         date=p["date"].strftime("%d.%m.%Y, %H:%M"), title=html.escape(p["title"]),
         sum=html.escape(p["summary"]), cover=cover, body=body, srcs=srcs, rel=rel,
         credit_line=credit_line,
-        share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"]),
+        share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"],
+                          SITE["url"] + p["cover"] if p["cover"] else None),
     )
     og = SITE["url"] + p["cover"] if p["cover"] else None
     return page("%s — %s" % (p["title"], SITE["title"]), p["summary"] or plain(p["body"], 160),
