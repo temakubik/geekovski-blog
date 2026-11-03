@@ -194,3 +194,6 @@ img { max-width: 100%; display: block; }
 .share__btn--copy { margin-left: auto; }
 .share__btn--done { border-color: var(--accent); color: var(--accent); }
 .imgcredit { margin: 26px 0 0; font-family: "Medeo Mono", monospace; font-size: 11px; color: var(--muted); opacity: .75; }
+@media (max-width: 520px) {
+  .share__btn--copy { margin-left: 0; flex: 1 1 100%; text-align: center; }
+}
