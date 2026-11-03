@@ -1,5 +1,30 @@
 [
  {
+  "slug": "anthropic-ipo-895-mlrd",
+  "title": "Anthropic перед IPO: счёт за чипы на $895 млрд",
+  "date": "2026-11-03T18:00:00",
+  "category": "ai",
+  "summary": "Обновлённый проспект S-1: выручка $17 млрд за квартал, но обязательства по вычислениям в семь раз больше запаса кэша.",
+  "sources": [
+   {
+    "name": "CNBC — обновлённый проспект S-1/A",
+    "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html"
+   },
+   {
+    "name": "Yahoo Finance — счёт за вычисления",
+    "url": "https://finance.yahoo.com/markets/article/anthropics-new-ipo-filing-puts-its-computing-bill-near-900-billion-151830444.html"
+   },
+   {
+    "name": "CNBC — разбор первичного S-1",
+    "url": "https://www.cnbc.com/2026/10/30/anthropic-ipo-s1-revenue-compute.html"
+   },
+   {
+    "name": "Fortune — первичный проспект и ожидаемая оценка",
+    "url": "https://fortune.com/2026/10/26/anthropics-s-1/"
+   }
+  ]
+ },
+ {
   "slug": "pikmin-4-switch-2-demo",
   "title": "Pikmin 4 на Switch 2 — бесплатное демо уже в eShop, полный релиз 12 ноября",
   "date": "2026-11-02T10:05:00",
