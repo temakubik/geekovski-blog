@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "static/themes/editorial.css"
+        ],
+        "createdAt": "2026-11-02T11:26:01.807Z",
+        "reason": "Existing article blockquote quotation rule, not a card accent; present in HEAD before this session."
+      }
+    ]
+  }
+}
