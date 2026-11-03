@@ -1,5 +1,18 @@
-/* GEEKOVSKI — шрифты. Medeo Sans / Mono / Pixel, SIL OFL 1.1 (DNFDEVS/medeo-font).
-   Лежат локально: никаких Google Fonts и CDN — из РФ они тормозят. */
+/* GEEKOVSKI — локальные шрифты. */
+
+@font-face {
+  font-family: 'Chava';
+  src: url('/assets/fonts/Chava-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Random Grotesque Spacious';
+  src: url('/assets/fonts/RG-SpaciousBlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'Medeo Sans';

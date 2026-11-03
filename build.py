@@ -182,11 +182,14 @@ def plain(text: str, n: int = 240) -> str:
 
 # ---------- templates ----------
 
-NAV = ('<a class="nav__link" href="/">Блог</a>'
-       '<a class="nav__link" href="/digests/">Дайджесты</a>'
-       '<span class="nav__sep"></span>'
+NAV = ('<a class="nav__link nav__link--blog" href="/">Блог</a>'
+       '<span class="nav__sep" aria-hidden="true"></span>'
+       '<a class="nav__link nav__link--digests" href="/digests/">Дайджесты</a>'
+       '<span class="nav__sep" aria-hidden="true"></span>'
+       '<details class="nav__rubrics"><summary class="nav__link">Рубрики</summary>'
+       '<div class="nav__categories">'
        + "".join('<a class="nav__link nav__link--sm" href="/{slug}/">{name}</a>'.format(slug=c, name=n)
-                 for c, n in CATS))
+                 for c, n in CATS) + '</div></details>')
 
 PAGE = """<!DOCTYPE html>
 <html lang="ru" data-theme="{theme}">
@@ -214,9 +217,12 @@ PAGE = """<!DOCTYPE html>
 <body class="t-{theme}">
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/"><img class="brand__mark" src="/assets/img/logo.svg" alt="" width="24" height="24" loading="eager"><span class="brand__name">GEEKOVSKI</span></a>
-    <nav class="nav">{nav}</nav>
-    <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню">{nav}</nav>
+    <div class="top__actions">
+      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 {content}
@@ -233,6 +239,26 @@ document.querySelector('.theme-toggle')?.addEventListener('click', () => {{
   localStorage.setItem('gv-mode', r.dataset.mode);
 }});
 if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {{
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}}
+menuButton?.addEventListener('click', () => {{
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+}});
+siteNav?.addEventListener('click', (event) => {{ if (event.target.closest('a')) closeMenu(); }});
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => {{ if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; }});
+document.addEventListener('keydown', (event) => {{ if (event.key === 'Escape') {{ closeMenu(); if (rubrics) rubrics.open = false; }} }});
+const route = location.pathname;
+const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+document.querySelector(active)?.classList.add('nav__link--active');
 </script>
 </body>
 </html>
@@ -413,8 +439,9 @@ def build(theme, out_dir, content_dir=None):
     fonts_src = ROOT / "static" / "fonts"
     if fonts_src.exists():
         (out / "assets" / "fonts").mkdir(parents=True, exist_ok=True)
-        for f in fonts_src.glob("*.woff2"):
-            shutil.copy(f, out / "assets" / "fonts" / f.name)
+        for pattern in ("*.woff2", "*.ttf"):
+            for f in fonts_src.glob(pattern):
+                shutil.copy(f, out / "assets" / "fonts" / f.name)
         shutil.copy(ROOT / "static" / "fonts.css", out / "assets" / "fonts.css")
     img_src = ROOT / "static" / "img"
     if img_src.exists():
