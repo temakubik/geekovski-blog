@@ -521,8 +521,9 @@ def render_digest(d, theme, next_d=None, prev_d=None):
         groups.setdefault(CAT_NAME.get(c, "Другое"), []).append(it)
     blocks = []
     for name, items in groups.items():
-        blocks.append('<section class="dgroup"><h2>%s</h2>%s</section>' % (
-            html.escape(name), "".join(digest_item(i) for i in items)))
+        # имя рубрики уже стоит чипом в каждой новости — заголовок группы его дублировал
+        blocks.append('<section class="dgroup">%s</section>'
+                      % "".join(digest_item(i) for i in items))
     nav = ""
     if next_d or prev_d:
         nav = '<nav class="dnav">%s%s</nav>' % (
