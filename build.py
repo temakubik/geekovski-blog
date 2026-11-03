@@ -229,7 +229,7 @@ PAGE = """<!DOCTYPE html>
 {content}
 <footer class="foot">
   <div class="wrap foot__in">
-    <span class="foot__brand"><img src="/assets/img/logo.svg" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
     <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
   </div>
 </footer>
