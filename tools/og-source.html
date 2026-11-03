@@ -11,14 +11,18 @@ body:before{content:'';position:absolute;inset:0;
 .in{position:absolute;inset:0;padding:64px 72px;display:flex;flex-direction:column}
 .top{display:flex;align-items:center;gap:16px}
 .top img{width:56px;height:56px;display:block}
-.word{font-family:'Tiny5',sans-serif;font-size:34px;letter-spacing:.02em;color:#E9EBEE}
+/* display — тот же Random Grotesque Spacious, что в заголовках сайта */
+.word{font-family:'Random Grotesque Spacious','Medeo Sans',sans-serif;font-style:italic;font-weight:900;
+      font-size:34px;letter-spacing:-.01em;color:#E9EBEE}
 .mid{margin-top:auto}
-.h{font-family:'Tiny5',sans-serif;font-size:64px;line-height:1.22;color:#E9EBEE;max-width:24ch}
-.h em{color:#C9F24D;font-style:normal}
-.sub{font-size:21px;line-height:1.45;color:#8B939E;margin-top:16px;max-width:48ch}
-.bot{margin-top:34px;padding-top:20px;border-top:1px solid #1F252E;display:flex;gap:16px;
-     font-family:'Medeo Mono',monospace;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#8B939E}
-.bot b{color:#C9F24D;font-weight:600}
+.h{font-family:'Random Grotesque Spacious','Medeo Sans',sans-serif;font-style:italic;font-weight:900;
+   font-size:58px;line-height:1.06;letter-spacing:-.025em;color:#E9EBEE;max-width:22ch}
+.h em{color:#C9F24D;font-style:italic}
+.sub{font-size:21px;line-height:1.45;color:#8B939E;margin-top:18px;max-width:52ch}
+/* метки и системная строка — Chava, как чипы и навигация на сайте */
+.bot{margin-top:34px;padding-top:20px;border-top:1px solid #1F252E;display:flex;gap:14px;align-items:baseline;
+     font-family:'Chava','Medeo Mono',monospace;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#8B939E}
+.bot b{color:#C9F24D;font-weight:400}
 </style></head><body>
 <div class="in">
   <div class="top">
@@ -27,8 +31,8 @@ body:before{content:'';position:absolute;inset:0;
   </div>
   <div class="mid">
     <div class="h">Технологии, игры и кино <em>без маркетингового сиропа</em></div>
-    <div class="sub">Дважды в день короткие дайджесты, между ними — большие разборы с источниками.</div>
+    <div class="sub">Новые материалы каждый день: игры, платформы, VR, кино и сериалы — с источниками в каждом тексте.</div>
   </div>
-  <div class="bot"><b>geekovski.ru</b><span>·</span><span>Xbox · Switch · PlayStation · PC · Кино · Сериалы · AI</span></div>
+  <div class="bot"><b>geekovski.ru</b><span>·</span><span>Xbox · Switch · PlayStation · PC · VR · Кино · Сериалы · AI</span></div>
 </div>
 </body></html>

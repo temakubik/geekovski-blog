@@ -29,57 +29,11 @@
   font-display: swap;
 }
 
-/* Medeo Pixel — только сабсетами, полного файла в релизе нет */
-@font-face {
-  font-family: 'Medeo Pixel';
-  src: url('/assets/fonts/medeo-pixel-cyrillic-ext.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F;
-}
-@font-face {
-  font-family: 'Medeo Pixel';
-  src: url('/assets/fonts/medeo-pixel-cyrillic.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'Medeo Pixel';
-  src: url('/assets/fonts/medeo-pixel-latin-ext.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0;
-}
-@font-face {
-  font-family: 'Medeo Pixel';
-  src: url('/assets/fonts/medeo-pixel-latin.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2212;
-}
+/* Medeo Pixel и Pixelify Sans из fonts.css убраны 03.11.26: на сайте они нигде не
+   использовались (типографика = Chava + RG Spacious + Medeo Sans/Mono). */
 
-/* Pixelify Sans — дисплейная замена Chava (SIL OFL 1.1, Google Fonts) */
-@font-face {
-  font-family: 'Pixelify Sans';
-  src: url('/assets/fonts/pixelify-cyrillic.woff2') format('woff2');
-  font-weight: 400 700;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'Pixelify Sans';
-  src: url('/assets/fonts/pixelify-latin.woff2') format('woff2');
-  font-weight: 400 700;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
-}
-
-/* Tiny5 — самая близкая к Chava: сетка 5×6, полноценная кириллица (SIL OFL 1.1) */
+/* Tiny5 — исходник для tools/make_logo.py (пиксельная «G») и старых артбордов.
+   В вёрстке сайта не используется. */
 @font-face {
   font-family: 'Tiny5';
   src: url('/assets/fonts/tiny5-cyrillic.woff2') format('woff2');
