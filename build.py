@@ -201,7 +201,13 @@ PAGE = """<!DOCTYPE html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/svg+xml" href="/assets/img/geekovski-icon.svg">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:image" content="{og_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#0A0C0F">
 <link rel="alternate" type="application/rss+xml" href="/rss.xml">
@@ -222,7 +228,7 @@ PAGE = """<!DOCTYPE html>
 {content}
 <footer class="foot">
   <div class="wrap foot__in">
-    <span>© {year} GEEKOVSKI</span>
+    <span class="foot__brand"><img src="/assets/img/logo.svg" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
     <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
   </div>
 </footer>
@@ -259,10 +265,14 @@ document.querySelector(active)?.classList.add('nav__link--active');
 """
 
 
-def page(title, desc, content, theme):
+DEFAULT_OG = SITE["url"] + "/assets/img/og-default.png"
+
+
+def page(title, desc, content, theme, og_image=None):
     return PAGE.format(
         theme=theme, title=html.escape(title), desc=html.escape(desc),
         nav=NAV, content=content, year=datetime.now().year,
+        og_image=og_image or DEFAULT_OG,
     )
 
 
@@ -374,7 +384,9 @@ def render_post(p, posts, theme):
         date=p["date"].strftime("%d.%m.%Y, %H:%M"), title=html.escape(p["title"]),
         sum=html.escape(p["summary"]), cover=cover, body=body, srcs=srcs, rel=rel,
     )
-    return page("%s — %s" % (p["title"], SITE["title"]), p["summary"] or plain(p["body"], 160), content, theme)
+    og = SITE["url"] + p["cover"] if p["cover"] else None
+    return page("%s — %s" % (p["title"], SITE["title"]), p["summary"] or plain(p["body"], 160),
+                content, theme, og_image=og)
 
 
 def render_cat(slug, name, items, theme):
