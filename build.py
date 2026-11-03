@@ -29,6 +29,7 @@ CATS = [
     ("switch", "Nintendo Switch"),
     ("playstation", "PlayStation"),
     ("pc", "PC-игры"),
+    ("vr", "VR"),
     ("kino", "Кино"),
     ("serialy", "Сериалы"),
     ("ai", "AI"),
@@ -392,9 +393,16 @@ def render_post(p, posts, theme):
 
 def render_cat(slug, name, items, theme):
     cards = "\n".join(card(p, theme) for p in items)
-    content = ('<main class="wrap"><section class="lead"><h1>%s</h1><p>%d материалов</p></section>'
-               '<div class="grid grid--%s">%s</div></main>') % (
-        html.escape(name), len(items), "cards" if theme == "dashboard" else "list", cards)
+    count = "%d %s" % (len(items), "материал" if len(items) % 10 == 1 and len(items) % 100 != 11 else "материалов")
+    if items:
+        body = '<div class="grid grid--%s">%s</div>' % ("cards" if theme == "dashboard" else "list", cards)
+    else:
+        # пустая рубрика не должна выглядеть сломанной: говорим прямо и уводим в дайджесты
+        body = ('<p class="lead__empty">Здесь пока пусто — рубрика только открылась. '
+                'Свежие новости по всем направлениям выходят в <a href="/digests/">дайджестах</a>, '
+                'а разборы появляются на главной.</p>')
+    content = ('<main class="wrap"><section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
+               % (html.escape(name), count if items else "рубрика открыта", body))
     return page("%s — %s" % (name, SITE["title"]), name, content, theme)
 
 
