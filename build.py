@@ -297,7 +297,8 @@ def card(p, theme, big=False):
 
 def hero(p):
     img = '<div class="hero__cover"><img src="%s" alt="" loading="lazy"></div>' % p["cover"] if p["cover"] else ""
-    return """<section class="hero">
+    # .format() применяем ко ВСЕЙ склейке: иначе {slug} в первом литерале уходит в HTML буквально
+    return ("""<section class="hero">
   <a class="hero__link" href="/{slug}.html">
     """ + img + """
     <span class="chip chip--solid">{catname}</span>
@@ -305,7 +306,7 @@ def hero(p):
     <p>{sum}</p>
     <span class="hero__cta">Читать разбор →</span>
   </a>
-</section>""".format(
+</section>""").format(
         slug=p["slug"], catname=CAT_NAME.get(p["category"], p["category"]),
         title=html.escape(p["title"]), sum=html.escape(p["summary"] or plain(p["body"], 220)),
     )
