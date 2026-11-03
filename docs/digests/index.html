@@ -75,5 +75,18 @@ const route = location.pathname;
 const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
 document.querySelector(active)?.classList.add('nav__link--active');
 </script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
 </body>
 </html>

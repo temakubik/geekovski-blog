@@ -13,6 +13,7 @@ import json
 import os
 import re
 import shutil
+import urllib.parse
 from datetime import datetime
 from pathlib import Path
 
@@ -146,9 +147,8 @@ def md(text: str) -> str:
         if mi:
             flush()
             alt, src = mi.group(1), mi.group(2)
-            cap = "<figcaption>%s</figcaption>" % html.escape(alt) if alt else ""
-            out.append('<figure class="post__fig"><img src="%s" alt="%s" loading="lazy">%s</figure>' % (
-                html.escape(src), html.escape(alt), cap))
+            out.append('<figure class="post__fig"><img src="%s" alt="%s" loading="lazy"></figure>' % (
+                html.escape(src), html.escape(alt)))
             continue
         m = re.match(r"^(#{2,4})\s+(.*)$", s)
         if m:
@@ -261,6 +261,19 @@ const route = location.pathname;
 const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
 document.querySelector(active)?.classList.add('nav__link--active');
 </script>
+<script>
+(() => {{
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {{
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {{
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => {{ btn.textContent = old; btn.classList.remove('share__btn--done'); }}, 1800);
+    }} catch (e) {{ window.prompt('Скопируйте ссылку', url); }}
+  }});
+}})();
+</script>
 </body>
 </html>
 """
@@ -353,6 +366,20 @@ def render_index(posts, theme, digests=None):
     return page(SITE["title"], SITE["tagline"], content, theme)
 
 
+def share_block(url, title):
+    """Кнопки «поделиться». Ссылки — обычные share-URL соцсетей, без сторонних скриптов."""
+    u = urllib.parse.quote(url, safe="")
+    tx = urllib.parse.quote(title, safe="")
+    return ("""<section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url={u}&text={t}" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url={u}&title={t}" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://wa.me/?text={t}%20{u}" target="_blank" rel="noopener nofollow">WhatsApp</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url={u}&text={t}" target="_blank" rel="noopener nofollow">X</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="{u}">Скопировать ссылку</button>
+</section>""").format(u=u, t=tx)
+
+
 def render_post(p, posts, theme):
     related = [x for x in posts if x["category"] == p["category"] and x["slug"] != p["slug"]][:3]
     srcs = ""
@@ -363,8 +390,13 @@ def render_post(p, posts, theme):
     body = md(p["body"])
     cover = ""
     if p["cover"]:
-        cap = '<figcaption>%s</figcaption>' % html.escape(p["credit"]) if p.get("credit") else ""
-        cover = '<figure class="post__cover"><img src="%s" alt="">%s</figure>' % (p["cover"], cap)
+        cover = '<figure class="post__cover"><img src="%s" alt=""></figure>' % p["cover"]
+    # CC BY / CC BY-SA требуют указания автора и лицензии: держим их мелкой строкой в конце,
+    # а не подписью под картинкой. CC0 и public domain — без упоминания.
+    credit_line = ""
+    if p.get("credit") and "CC BY" in p["credit"]:
+        credit_line = ('<p class="imgcredit">Изображения: %s</p>'
+                       % html.escape(p["credit"].replace("Обложка: ", "")))
     rel = ""
     if related:
         rel = '<section class="related"><h2>По теме</h2><div class="grid grid--list">%s</div></section>' % "\n".join(
@@ -378,13 +410,17 @@ def render_post(p, posts, theme):
   </header>
   {cover}
   <div class="post__body">{body}</div>
+  {credit_line}
   {srcs}
+  {share}
 </article>
 {rel}
 </main>""".format(
         cat=p["category"], catname=CAT_NAME.get(p["category"], p["category"]),
         date=p["date"].strftime("%d.%m.%Y, %H:%M"), title=html.escape(p["title"]),
         sum=html.escape(p["summary"]), cover=cover, body=body, srcs=srcs, rel=rel,
+        credit_line=credit_line,
+        share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"]),
     )
     og = SITE["url"] + p["cover"] if p["cover"] else None
     return page("%s — %s" % (p["title"], SITE["title"]), p["summary"] or plain(p["body"], 160),
@@ -539,12 +575,14 @@ def render_digest(d, theme, next_d=None, prev_d=None):
   {body}
   {blocks}
   {srcs}
+  {share}
   {nav}
 </article>
 </main>""".format(
         date=d["date"].strftime("%d.%m.%Y, %H:%M"), title=html.escape(d["title"]),
         sum=html.escape(d["summary"]), count=len(d["items"]), blocks="".join(blocks),
         body=md(d["body"]) if d["body"] else "", nav=nav,
+        share=share_block(SITE["url"] + "/digests/" + d["slug"] + ".html", d["title"]),
         srcs=('<section class="sources"><h2>Все источники</h2><ol>%s</ol></section>' % "".join(
             '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (
                 html.escape(s["url"]), html.escape(s["name"])) for s in d["sources"] if s["url"])) if d["sources"] else "",
