@@ -1,5 +1,34 @@
 [
  {
+  "slug": "meta-quest-2-pro-konets-obnovleniy",
+  "title": "Quest 2 и Quest Pro: Meta объявила последнее обновление",
+  "date": "2026-11-03T21:05:00",
+  "category": "vr",
+  "summary": "Horizon OS 2.13 станет финальной прошивкой для Quest 2 и Quest Pro — новые функции уйдут на Quest 3 и новее, а патчи безопасности будут выходить до конца 2027 года.",
+  "sources": [
+   {
+    "name": "Meta — Quest 2 и Quest Pro: конец разработки функций",
+    "url": "https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/"
+   },
+   {
+    "name": "UploadVR — Meta Is Winding Down Quest 2 & Quest Pro Support",
+    "url": "https://www.uploadvr.com/meta-is-winding-down-quest-2-quest-pro-support-next-year/"
+   },
+   {
+    "name": "The Verge — Meta will end Quest 2 OS updates in 2027",
+    "url": "https://www.theverge.com/tech/1024835/meta-vr-quest-2-pro-os-end-updates"
+   },
+   {
+    "name": "9to5Google — последние обновления Quest 2 и Quest Pro",
+    "url": "https://9to5google.com/2026/11/02/the-meta-quest-2-and-quest-pro-are-receiving-their-last-os-updates-soon-heres-what-you-need-to-know/"
+   },
+   {
+    "name": "UploadVR — конец поддержки Windows Mixed Reality",
+    "url": "https://uploadvr.com/windows-mixed-reality-headset-support-end-date"
+   }
+  ]
+ },
+ {
   "slug": "anthropic-ipo-895-mlrd",
   "title": "Anthropic перед IPO: счёт за чипы на $895 млрд",
   "date": "2026-11-03T18:00:00",
