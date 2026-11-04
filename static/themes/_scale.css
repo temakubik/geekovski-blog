@@ -1,0 +1,70 @@
+/* ==========================================================================
+   GEEKOVSKI · type-scale
+   Единственный источник типографики. Ни один компонент ниже не задаёт
+   font-family и font-size «от себя» — только токены из :root.
+   Шрифты: Chava (капитель) / Random Grotesque Spacious (H1–H3) / Medeo Sans / Medeo Mono
+   ========================================================================== */
+
+:root {
+  /* семейства */
+  --font-display: "Random Grotesque Spacious", "Medeo Sans", sans-serif; /* H1–H3 */
+  --font-caps: "Chava", "Medeo Mono", monospace;                          /* капитель: метки, время, цифры */
+  --font-ui: "Chava", sans-serif;                                         /* капитель для крупных чисел */
+  --font-text: "Medeo Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "Medeo Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* размеры — 8 ступеней, всё остальное запрещено */
+  --fs-h0: clamp(28px, 6.8vw, 52px);   /* заголовок страницы: H1 статьи, дайджеста, рубрики */
+  --fs-h1: clamp(24px, 5.6vw, 40px);   /* заголовок карточки-героя и H2 в тексте */
+  --fs-h2: clamp(18px, 4.4vw, 24px);   /* заголовки в лентах, H3 в тексте */
+  --fs-lead: 17px;                     /* лид, подзаголовок */
+  --fs-body: 16px;                     /* основной текст */
+  --fs-small: 14px;                    /* подписи, теги, счётчики */
+  --fs-meta: 12px;                     /* метки, даты, источник */
+
+  /* межстрочные */
+  --lh-tight: 1.12;
+  --lh-snug: 1.25;
+  --lh-body: 1.65;
+
+  /* вес: заголовки — 400 у капители, 900 у дисплейного */
+  --fw-display: 900;
+  --fw-bold: 700;
+  --fw-normal: 400;
+}
+
+/* ---------- базовые элементы ---------- */
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-display);
+  font-style: italic;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+.h0 { font-family: var(--font-display); font-weight: var(--fw-display); font-style: italic; font-size: var(--fs-h0); line-height: var(--lh-tight); letter-spacing: -.025em; }
+.h1 { font-family: var(--font-display); font-weight: var(--fw-display); font-style: italic; font-size: var(--fs-h1); line-height: var(--lh-tight); letter-spacing: -.02em; }
+.h2 { font-family: var(--font-display); font-weight: var(--fw-display); font-style: italic; font-size: var(--fs-h2); line-height: var(--lh-snug); letter-spacing: -.015em; }
+
+/* лид — обычная гарнитура, не капитель */
+.lead-text { font-family: var(--font-text); font-size: var(--fs-lead); line-height: 1.5; color: var(--muted); }
+.body-text { font-family: var(--font-text); font-size: var(--fs-body); line-height: var(--lh-body); }
+.small-text { font-family: var(--font-text); font-size: var(--fs-small); line-height: 1.45; color: var(--muted); }
+
+/* метка: ЧАВА, капитель, разрядка */
+.meta-text {
+  font-family: var(--font-caps);
+  font-size: var(--fs-meta);
+  line-height: 1.2;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

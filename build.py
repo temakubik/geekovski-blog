@@ -503,7 +503,13 @@ def build(theme, out_dir, content_dir=None):
         shutil.rmtree(out)
     (out / "assets").mkdir(parents=True)
 
-    shutil.copy(ROOT / "static" / "themes" / ("%s.css" % theme), out / "assets" / "theme.css")
+    scale = ROOT / "static" / "themes" / "_scale.css"
+    theme_css = ROOT / "static" / "themes" / ("%s.css" % theme)
+    parts = []
+    if scale.exists():
+        parts.append(scale.read_text(encoding="utf-8"))
+    parts.append(theme_css.read_text(encoding="utf-8"))
+    (out / "assets" / "theme.css").write_text("\n".join(parts), encoding="utf-8")
     for extra in (ROOT / "static" / "assets").glob("*") if (ROOT / "static" / "assets").exists() else []:
         shutil.copy(extra, out / "assets" / extra.name)
     fonts_src = ROOT / "static" / "fonts"
@@ -535,6 +541,7 @@ def build(theme, out_dir, content_dir=None):
         nxt = digests[i - 1] if i > 0 else None      # новее
         prv = digests[i + 1] if i + 1 < len(digests) else None
         (dgdir / ("%s.html" % d["slug"])).write_text(render_digest(d, theme, nxt, prv), encoding="utf-8")
+    (out / "style-guide.html").write_text(render_style_guide(theme), encoding="utf-8")
     (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests"), encoding="utf-8")
     (out / "sitemap.xml").write_text(sitemap(posts, digests), encoding="utf-8")
     (out / "feed.json").write_text(json.dumps([
@@ -548,6 +555,101 @@ def build(theme, out_dir, content_dir=None):
     if (ROOT / "static" / "CNAME").exists():
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
     return posts
+
+
+
+# ---------- Style Guide ----------
+
+def _swatch(name, var, note=""):
+    return ('<div class="sg-swatch"><span class="sg-swatch__chip" style="background:%s"></span>'
+            '<span class="sg-swatch__name">%s</span><span class="sg-swatch__hex">%s</span>'
+            '<span class="sg-swatch__note">%s</span></div>' % (var, name, var, note))
+
+
+def render_style_guide(theme):
+    months = ["ВЕЧЕР", "УТРО"]
+    rows = []
+
+    # --- типографика
+    type_rows = [
+        ("H0 · заголовок статьи", "h0", "var(--fs-h0) · 52 px · дисплейный, 900 italic", "Убыток Anthropic и Crimson Desert на PS5"),
+        ("H1 · герой, H2 в тексте", "h1", "var(--fs-h1) · 40 px", "Ocarina of Time выходит 5 ноября"),
+        ("H2 · карточки, H3 в тексте", "h2", "var(--fs-h2) · 24 px", "Pikmin 4: демо уже в eShop"),
+        ("Лид", "lead-text", "var(--fs-lead) · 17 px · Medeo Sans", "Демо Pikmin 4 в eShop, Zelda выходит 5 ноября, Circana зафиксировала падение продаж."),
+        ("Основной текст", "body-text", "var(--fs-body) · 16 px · Medeo Sans", "Nintendo провела Pikmin Direct, предупредив за десять минут до эфира."),
+        ("Мелкий текст", "small-text", "var(--fs-small) · 14 px", "Стартовая зона и два экзамена Dandori Academy"),
+        ("Метка · капитель", "meta-text", "var(--fs-meta) · 12 px · Chava", "NINTENDO SWITCH · 3 НОЯБРЯ"),
+    ]
+    for label, cls, spec, sample in type_rows:
+        rows.append('<div class="sg-row"><div class="sg-row__label">%s<br><code>%s</code></div>'
+                    '<div class="sg-row__demo"><div class="%s">%s</div>'
+                    '<div class="sg-row__spec">%s</div></div></div>' % (label, spec, cls, sample, spec))
+    type_block = '<section class="sg-block"><h2>Типографика</h2>%s</section>' % "".join(rows)
+
+    # --- палитра
+    palette = [
+        ("ink", "#0A0C0F", "фон"), ("panel", "#11151A", "плашки"), ("line", "#1F252E", "разделители"),
+        ("text", "#E9EBEE", "основной текст"), ("muted", "#8B939E", "второй план"),
+        ("accent", "#C9F24D", "акцент"),
+    ]
+    cats = [("Xbox", "#2FB344"), ("Nintendo Switch", "#E60012"), ("PlayStation", "#2F6DF6"),
+            ("PC-игры", "#8B5CF6"), ("VR", "#A855F7"), ("Гаджеты", "#22D3EE"),
+            ("Кино", "#F0553F"), ("Сериалы", "#F5A524"), ("AI", "#14B8A6")]
+    slots = [("Утро", "#F5C518", "жёлтый"), ("Вечер", "#A855F7", "фиолетовый")]
+    palette_block = ('<section class="sg-block"><h2>Палитра</h2><div class="sg-grid">%s</div>'
+                     '<h3>Рубрики</h3><div class="sg-grid">%s</div>'
+                     '<h3>Время суток в дайджестах</h3><div class="sg-grid">%s</div></section>') % (
+        "".join(_swatch(n, h, note) for n, h, note in palette),
+        "".join(_swatch(n, h) for n, h in cats),
+        "".join(_swatch(n, h, note) for n, h, note in slots))
+
+    # --- чипы
+    chips = "".join('<span class="chip cat-%s">%s</span>' % (c, name) for c, name in
+                    [("switch", "Nintendo Switch"), ("ai", "AI"), ("gadgets", "Гаджеты"), ("kino", "Кино")])
+    chip_block = ('<section class="sg-block"><h2>Теги</h2><div class="sg-demo">%s '
+                  '<span class="chip chip--solid">Дайджест</span></div>'
+                  '<p class="sg-hint">Chava, 12 px, uppercase, разрядка .08em. Цвет — маркер рубрики, не акцент.</p></section>') % chips
+
+    # --- иконки рубрик
+    icons = "".join('<div class="sg-icon"><span class="ditem__icon cat-%s">%s</span><span>%s</span></div>'
+                    % (c, ICONS.get(c, ""), name) for c, name in CATS)
+    icon_block = ('<section class="sg-block"><h2>Иконки рубрик</h2><div class="sg-icons">%s</div>'
+                  '<p class="sg-hint">Инлайн-SVG 24×24, цвет наследуется от рубрики. Иконки бренда: '
+                  '<img src="/assets/img/favicon.svg" alt="" width="18" height="18" style="vertical-align:middle"> favicon · '
+                  '<img src="/assets/img/logo.svg" alt="" width="18" height="18" style="vertical-align:middle"> лого.</p></section>') % icons
+
+    # --- компоненты
+    card = card_sample = ("<article class=\"sg-card\"><div class=\"card__body\"><div class=\"card__meta\">"
+                          "<span class=\"chip cat-switch\">Nintendo Switch</span><time>3 ноября</time></div>"
+                          "<h3 class=\"card__title\">Pikmin 4: демо уже в eShop</h3>"
+                          "<p class=\"card__sum\">Стартовая зона и два экзамена Dandori Academy, сейв переносится.</p>"
+                          "<div class=\"card__foot\"><a class=\"more\">Читать →</a><span>источников: 2</span></div>"
+                          "</div></article>")
+    item = ("<article class=\"ditem cat-switch\"><div class=\"ditem__rail\"><span class=\"ditem__num\">01</span>"
+            "<span class=\"ditem__icon\">" + ICONS["switch"] + "</span></div><div class=\"ditem__body\">"
+            "<div class=\"ditem__meta\"><span class=\"chip chip--sm cat-switch\">Nintendo Switch</span></div>"
+            "<h3 class=\"ditem__title\">Демо Pikmin 4 уже в eShop</h3>"
+            "<p class=\"ditem__text\">Стартовая зона и два экзамена Dandori Academy, сейв переносится.</p>"
+            "<a class=\"ditem__src\">Nintendo Life</a></div></article>")
+    row = ("<article class=\"drow is-evening\"><a class=\"drow__date\"><span class=\"drow__day\">3 ноября</span>"
+           "<span class=\"drow__part\">ВЕЧЕР</span></a><div class=\"drow__body\">"
+           "<h3 class=\"drow__title\">Убыток Anthropic, Crimson Desert на PS5</h3>"
+           "<p class=\"drow__sum\">Квартальная выручка $17 млрд, Crimson Desert снова не держит 30 fps.</p>"
+           "<div class=\"drow__tags\"><span class=\"chip chip--sm cat-ai\">AI</span></div></div>"
+           "<span class=\"drow__count\">6 новостей</span></article>")
+    share = share_block(SITE["url"] + "/style-guide.html", "Style Guide GEEKOVSKI", SITE["url"] + "/assets/img/og-default.png")
+    comp_block = ('<section class="sg-block"><h2>Компоненты</h2>'
+                  '<h3>Карточка материала</h3><div class="sg-demo">%s</div>'
+                  '<h3>Новость в дайджесте</h3><div class="sg-demo sg-demo--narrow">%s</div>'
+                  '<h3>Выпуск в списке дайджестов</h3><div class="sg-demo sg-demo--narrow">%s</div>'
+                  '<h3>Поделиться</h3>%s</section>') % (card, item, row, share)
+
+    content = ('<main class="wrap sg"><section class="lead"><h1>Style Guide</h1>'
+               '<p>Единый набор типографики, цветов, компонентов и иконок блога. Всё, что не описано здесь, '
+               'в вёрстке не используется.</p></section>%s%s%s%s%s</main>') % (
+        type_block, palette_block, chip_block, icon_block, comp_block)
+
+    return page("Style Guide — %s" % SITE["title"], "Типографика, цвета, компоненты и иконки GEEKOVSKI", content, theme)
 
 
 # ---------- дайджест: техническая мета и оформление ----------
