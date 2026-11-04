@@ -1,5 +1,34 @@
 [
  {
+  "slug": "claude-vodyanoy-znak-starye-modeli",
+  "title": "Claude ставит водяные знаки на старые модели",
+  "date": "2026-11-04T12:05:00",
+  "category": "ai",
+  "summary": "С 3 ноября Anthropic прячет в тексте трёх старых моделей Claude невидимый водяной знак — и на одной из них его можно обойти настройкой sampling.",
+  "sources": [
+   {
+    "name": "Anthropic — как работает текстовый водяной знак",
+    "url": "https://www.anthropic.com/news/claude-text-watermark"
+   },
+   {
+    "name": "Claude Platform — release notes за 3 ноября 2026",
+    "url": "https://platform.claude.com/docs/en/release-notes/overview"
+   },
+   {
+    "name": "Claude Help Center — как Claude маркирует сгенерированный контент",
+    "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+   },
+   {
+    "name": "The Verge — разбор SynthID-Text",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system"
+   },
+   {
+    "name": "The Decoder — лазейка с параметрами sampling",
+    "url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/"
+   }
+  ]
+ },
+ {
   "slug": "gta-6-predzagruzka-212-gb",
   "title": "GTA VI: предзагрузка с 10 ноября и 212 ГБ",
   "date": "2026-11-04T09:05:00",
