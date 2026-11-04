@@ -12,7 +12,7 @@
 ## Рубрики
 
 - [Xbox](https://geekovski.ru/xbox/): 0 материалов
-- [Nintendo Switch](https://geekovski.ru/switch/): 3 материала
+- [Nintendo Switch](https://geekovski.ru/switch/): 4 материала
 - [PlayStation](https://geekovski.ru/playstation/): 1 материал
 - [PC-игры](https://geekovski.ru/pc/): 0 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
@@ -24,6 +24,7 @@
 
 ## Материалы
 
+- [Macronix уходит из ROM: картриджи Switch без чипов](https://geekovski.ru/macronix-rom-kartridzhi.html): Крупный поставщик ROM-чипов для картриджей Switch и Switch 2 объявил об уходе из бизнеса. Картриджи не исчезнут завтра, но давление на них выросло. (04.11.2026)
 - [Steam Frame: стрим стал чётче, суперсэмплинг убрали](https://geekovski.ru/steam-frame-steamvr-2-19-1.html): Valve выпустила бету SteamVR 2.19.1 с более резкой картинкой стрима на всех шлемах со Steam Link, а в SteamOS 0.5.7 для Steam Frame молча убрала Advanced Supersampling. (04.11.2026)
 - [Blue Eye Samurai: второй сезон выйдет 19 января 2027](https://geekovski.ru/blue-eye-samurai-season-2.html): Netflix назвал дату премьеры — шесть серий, Лондон 1657 года и Мидзу, которая наконец добирается до тех, кто её сделал. Третий сезон уже заказан и станет последним. (04.11.2026)
 - [Claude ставит водяные знаки на старые модели](https://geekovski.ru/claude-vodyanoy-znak-starye-modeli.html): С 3 ноября Anthropic прячет в тексте трёх старых моделей Claude невидимый водяной знак — и на одной из них его можно обойти настройкой sampling. (04.11.2026)

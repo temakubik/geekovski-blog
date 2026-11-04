@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/macronix-rom-kartridzhi.html",
+   "url": "https://geekovski.ru/macronix-rom-kartridzhi.html",
+   "title": "Macronix уходит из ROM: картриджи Switch без чипов",
+   "summary": "Крупный поставщик ROM-чипов для картриджей Switch и Switch 2 объявил об уходе из бизнеса. Картриджи не исчезнут завтра, но давление на них выросло.",
+   "date_published": "2026-11-04T21:05:00+03:00",
+   "date_modified": "2026-11-04T21:05:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/macronix-rom-kartridzhi.jpg",
+   "_sources": [
+    {
+     "name": "David Gibson (X) — выдержки из звонка Macronix по итогам Q3",
+     "url": "https://x.com/gibbogame/status/2117805196130582970"
+    },
+    {
+     "name": "GameSpot — что уход Macronix значит для физических игр",
+     "url": "https://www.gamespot.com/articles/nintendo-could-have-a-new-cartridge-problem-on-its-hands/"
+    },
+    {
+     "name": "Gizmodo — game cards Switch 2",
+     "url": "https://gizmodo.com/nintendos-switch-2-game-cards-matronix-2000834832"
+    },
+    {
+     "name": "Межа (по Eurogamer) — Macronix выходит из ROM-бизнеса",
+     "url": "https://mezha.net/eng/news/mezha-da005a37ec56ec283aa3f5cd_macronix_to_exit/"
+    },
+    {
+     "name": "Nintendo Everything — поставщик картриджей уходит",
+     "url": "https://nintendoeverything.com/nintendos-main-manufacturer-for-switch-2-and-switch-cartridges-is-quitting-the-business/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/steam-frame-steamvr-2-19-1.html",
    "url": "https://geekovski.ru/steam-frame-steamvr-2-19-1.html",
    "title": "Steam Frame: стрим стал чётче, суперсэмплинг убрали",
