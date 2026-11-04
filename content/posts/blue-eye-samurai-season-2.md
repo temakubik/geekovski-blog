@@ -3,6 +3,7 @@ title: Blue Eye Samurai: второй сезон выйдет 19 января 20
 date: 2026-11-04 15:05
 category: serialy
 summary: Netflix назвал дату премьеры — шесть серий, Лондон 1657 года и Мидзу, которая наконец добирается до тех, кто её сделал. Третий сезон уже заказан и станет последним.
+tldr: Второй сезон стартует 19 января 2027 года, Netflix объявил дату 3 ноября | В сезоне шесть серий, действие переносится в Лондон 1657 года | Третий сезон уже заказан и станет последним — премьера в 2028-м
 cover: /assets/img/blue-eye-samurai-season-2.jpg
 credit: Обложка: Doop / GEEKOVSKI. Фото: Sachith Ravishka Kodikara, Nguyen Ngoc Tien — Pexels, свободная лицензия.
 sources: Netflix Tudum — дата премьеры второго сезона и интервью создателей | https://www.netflix.com/tudum/articles/blue-eye-samurai-season-2-release-date; Deadline — Netflix назначил премьеру Blue Eye Samurai | https://deadline.com/2026/11/blue-eye-samurai-season-2-release-date-netflix-1237212165/; Variety — дата второго сезона и третий финальный сезон | https://variety.com/2026/tv/news/blue-eye-samurai-season-2-release-date-netflix-1236938383/

@@ -3,6 +3,7 @@ title: GTA VI: предзагрузка с 10 ноября и 212 ГБ
 date: 2026-11-04 09:05
 category: playstation
 summary: Rockstar официально подтвердила размер GTA VI — до 212 ГБ, а предзагрузка стартует не 12 ноября, как говорили раньше, а на два дня раньше. В коробочных изданиях диска не будет.
+tldr: Предзагрузка стартует 10 ноября, файлы займут до 212 ГБ в зависимости от консоли | Стандартное издание стоит $79.99, Ultimate — $99.99, релиз 19 ноября | В коробочных изданиях вместо диска будет код на загрузку
 cover: /assets/img/gta-6-predzagruzka-212-gb.jpg
 credit: Обложка: Doop / GEEKOVSKI (кадр Osmany Mederos, Pexels). Фото в тексте: Luis Erives, FOX — Pexels, свободная лицензия.
 sources: Rockstar Newswire — GTA VI: Pre-Load Begins on November 10 | https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10; Rockstar Support — Grand Theft Auto VI Pre-Load FAQ | https://support.rockstargames.com/articles/7nPqOA2uCbpEQHXx7KVrYd/grand-theft-auto-vi-pre-load-faq; VideoCardz — GTA VI preload begins November 10, up to 212GB | https://videocardz.com/newz/gta-vi-preload-begins-november-10-requires-up-to-212gb-of-storage; Shazoo — предзагрузка GTA 6 стартует на два дня раньше | https://shazoo.ru/2026/11/03/193484/predzagruzka-gta-6-startuet-na-dva-dnya-ranse-i-potrebuet-212-gb

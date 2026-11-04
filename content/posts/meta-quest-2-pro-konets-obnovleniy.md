@@ -3,6 +3,7 @@ title: Quest 2 и Quest Pro: Meta объявила последнее обнов
 date: 2026-11-03 21:05
 category: vr
 summary: Horizon OS 2.13 станет финальной прошивкой для Quest 2 и Quest Pro — новые функции уйдут на Quest 3 и новее, а патчи безопасности будут выходить до конца 2027 года.
+tldr: Horizon OS 2.13 — последняя прошивка для Quest 2 и Quest Pro | Раскатка начнётся в январе 2027 года и доберётся до всех шлемов к марту | Патчи безопасности будут выходить до конца 2027, новые приложения принимают до декабря
 cover: /assets/img/meta-quest-2-pro-konets.jpg
 credit: Обложка: Doop / GEEKOVSKI. Фото: Pexels (Justin Doherty), свободная лицензия.
 sources: Meta — Quest 2 и Quest Pro: конец разработки функций | https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/; UploadVR — Meta Is Winding Down Quest 2 & Quest Pro Support | https://www.uploadvr.com/meta-is-winding-down-quest-2-quest-pro-support-next-year/; The Verge — Meta will end Quest 2 OS updates in 2027 | https://www.theverge.com/tech/1024835/meta-vr-quest-2-pro-os-end-updates; 9to5Google — последние обновления Quest 2 и Quest Pro | https://9to5google.com/2026/11/02/the-meta-quest-2-and-quest-pro-are-receiving-their-last-os-updates-soon-heres-what-you-need-to-know/; UploadVR — конец поддержки Windows Mixed Reality | https://uploadvr.com/windows-mixed-reality-headset-support-end-date

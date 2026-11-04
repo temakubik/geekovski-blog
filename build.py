@@ -83,6 +83,8 @@ def parse_post(path: Path):
     kind = meta.get("kind", "post").strip().lower()
     if kind not in ("post", "digest"):
         kind = "post"
+    # tldr: пункт | пункт — выжимка для блока «Коротко» в начале материала
+    tldr = [x.strip() for x in meta.get("tldr", "").split("|") if x.strip()]
     items, cur = [], None
     for line in body.splitlines():
         s = line.strip()
@@ -104,6 +106,7 @@ def parse_post(path: Path):
         body_lines = []
     return {
         "items": items,
+        "tldr": tldr,
         "kind": kind,
         "slug": slug,
         "title": meta.get("title", "Без заголовка"),
@@ -128,7 +131,9 @@ def md_inline(text: str) -> str:
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"(?<![\w*])\*([^*\n]+)\*(?![\w*])", r"<em>\1</em>", text)
-    text = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2">\1</a>', text)
+    # ссылки: абсолютные И относительные (/rss.xml, /about.html) — на страницах сайта
+    # используются оба вида, и раньше относительные оставались сырым markdown
+    text = re.sub(r"\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)", r'<a href="\2">\1</a>', text)
     return text
 
 
@@ -252,6 +257,7 @@ PAGE = """<!DOCTYPE html>
   <div class="wrap foot__in">
     <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
     <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
   </div>
 </footer>
 <script>
@@ -480,6 +486,8 @@ def ld_article(p, url, image_url=None):
     cites = [s["url"] for s in p["sources"] if s.get("url")]
     if cites:
         obj["citation"] = cites
+    if p.get("tldr"):
+        obj["abstract"] = " ".join(p["tldr"])
     return obj
 
 
@@ -624,6 +632,12 @@ def render_post(p, posts, theme):
             '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (html.escape(s["url"]), html.escape(s["name"]))
             if s["url"] else "<li>%s</li>" % html.escape(s["name"]) for s in p["sources"])
     body = md(p["body"])
+    # «Коротко»: список фактов из frontmatter tldr — то, что можно процитировать
+    # в ответе, не пересказывая статью.
+    tldr = ""
+    if p.get("tldr"):
+        tldr = ('<aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul>%s</ul></aside>'
+                % "".join("<li>%s</li>" % md_inline(x) for x in p["tldr"]))
     cover = ""
     if p["cover"]:
         cover = ('<figure class="post__cover"><img src="%s" alt="%s"></figure>'
@@ -645,6 +659,7 @@ def render_post(p, posts, theme):
     <h1>{title}</h1>
     <p class="post__lead">{sum}</p>
   </header>
+  {tldr}
   {cover}
   <div class="post__body">{body}</div>
   {credit_line}
@@ -657,6 +672,7 @@ def render_post(p, posts, theme):
         date=p["date"].strftime("%d.%m.%Y, %H:%M"), isodt=iso(p["date"]),
         title=html.escape(p["title"]),
         sum=html.escape(p["summary"]), cover=cover, body=body, srcs=srcs, rel=rel,
+        tldr=tldr,
         credit_line=credit_line,
         share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"],
                           SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None),
@@ -744,6 +760,7 @@ def sitemap(posts, digests=None):
         urls.append(entry(SITE["url"] + "/%s/" % c,
                           max([p["date"] for p in items]).strftime("%Y-%m-%d") if items else None))
     urls.append(entry(SITE["url"] + "/digests/"))
+    urls.append(entry(SITE["url"] + "/about.html"))
     for d in (digests or []):
         urls.append(entry("%s/digests/%s.html" % (SITE["url"], d["slug"]), d["date"].strftime("%Y-%m-%d")))
     for p in posts:
@@ -810,6 +827,7 @@ def llms_txt(posts, digests):
             out.append("- [%s](%s/digests/%s.html): %s" % (
                 d["title"], SITE["url"], d["slug"], (d["summary"] or "").replace("\n", " ")))
     out += ["", "## Служебное", "",
+            "- [О сайте и правила редакции](%s/about.html)" % SITE["url"],
             "- [Полный текст всех материалов](%s/llms-full.txt)" % SITE["url"], ""]
     return "\n".join(out)
 
@@ -836,6 +854,42 @@ def llms_full_txt(posts):
                     for s in p["sources"]]
             out.append("")
     return "\n".join(out)
+
+
+def parse_page(path: Path):
+    """Простая страница (например, «О сайте»): frontmatter + markdown-тело."""
+    raw = path.read_text(encoding="utf-8")
+    meta, body = {}, raw
+    if raw.startswith("---"):
+        _, fm, body = raw.split("---", 2)
+        for line in fm.strip().splitlines():
+            if ":" in line:
+                k, v = line.split(":", 1)
+                meta[k.strip()] = v.strip()
+    return meta, body.strip()
+
+
+def render_about(theme):
+    """AboutPage: для GEO это карточка сущности «кто здесь пишет и по каким правилам»."""
+    path = ROOT / "content" / "about.md"
+    if not path.exists():
+        return None
+    meta, body = parse_page(path)
+    title = meta.get("title", "О сайте")
+    desc = meta.get("summary") or plain(body, 160)
+    content = ('<main class="wrap"><article class="post">'
+               '<header class="post__head"><h1>%s</h1><p class="post__lead">%s</p></header>'
+               '<div class="post__body">%s</div></article></main>'
+               % (html.escape(title), html.escape(desc), md(body)))
+    url = SITE["url"] + "/about.html"
+    return page(title_tag(title), desc, content, theme, canonical=url, og_alt=title,
+                jsonld=ldjson(ld_org(), ld_website(),
+                              {"@type": "AboutPage", "@id": url + "#page", "url": url,
+                               "name": title, "description": desc, "inLanguage": "ru-RU",
+                               "isPartOf": {"@id": WEBSITE_ID},
+                               "publisher": {"@id": ORG_ID},
+                               "author": {"@id": ORG_ID}},
+                              ld_breadcrumb([("Главная", "/"), (title, "/about.html")])))
 
 
 def feed_json(posts):
@@ -930,6 +984,9 @@ def build(theme, out_dir, content_dir=None):
         (dgdir / ("%s.html" % d["slug"])).write_text(render_digest(d, theme, nxt, prv), encoding="utf-8")
     (out / "style-guide.html").write_text(render_style_guide(theme), encoding="utf-8")
     (out / "404.html").write_text(render_404(theme), encoding="utf-8")
+    about = render_about(theme)
+    if about:
+        (out / "about.html").write_text(about, encoding="utf-8")
     (out / "robots.txt").write_text(robots_txt(), encoding="utf-8")
     (out / "llms.txt").write_text(llms_txt(posts, digests), encoding="utf-8")
     (out / "llms-full.txt").write_text(llms_full_txt(posts), encoding="utf-8")

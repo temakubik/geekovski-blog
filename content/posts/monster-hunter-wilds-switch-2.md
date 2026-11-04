@@ -3,6 +3,7 @@ title: Monster Hunter Wilds на Switch 2 — 4 декабря, и 30 fps зде
 date: 2026-10-31 09:40
 category: switch
 summary: Демо Prologue живёт с 19 октября, предзаказы открыты, сейв переносится в полную версию. Главный третьесторонний релиз года для платформы.
+tldr: Демо Prologue доступно с 19–20 октября, прогресс переносится в релизную версию | Полная версия выходит 4 декабря, предзаказы уже открыты | Ориентир производительности на Switch 2 — 30 fps, без обещаний «до 60»
 cover: /assets/img/monster-hunter-wilds-switch-2.jpg
 credit: Обложка: Haekalhaekal / Wikimedia Commons, CC0
 sources: Monster Hunter Wilds — официальный сайт | https://www.monsterhunter.com/wilds/en-us

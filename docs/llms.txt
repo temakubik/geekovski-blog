@@ -43,4 +43,5 @@
 
 ## Служебное
 
+- [О сайте и правила редакции](https://geekovski.ru/about.html)
 - [Полный текст всех материалов](https://geekovski.ru/llms-full.txt)

@@ -3,6 +3,7 @@ title: Zelda: Ocarina of Time на Switch 2 — 5 ноября, и это не �
 date: 2026-11-01 12:10
 category: switch
 summary: Полностью озвученные катсцены, игра на окарине через микрофон консоли и выросший до 24,5 ГБ размер. Разбираем, что именно Nintendo меняет в легендарной игре.
+tldr: Релиз на Switch 2 — 5 ноября, катсцены полностью озвучены впервые в истории игры | Играть на окарине можно голосом через микрофон консоли, добавлен гиро-прицел | Загрузка уменьшилась с ~27 ГБ до 24,5 ГБ, плюс два новых режима
 cover: /assets/img/zelda-ocarina-switch-2.jpg
 pin: /assets/img/zelda-ocarina-switch-2-pin.jpg
 credit: Обложка: Crisco 1492 / Wikimedia Commons, CC BY-SA 4.0

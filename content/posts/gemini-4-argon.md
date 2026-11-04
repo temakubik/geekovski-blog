@@ -3,6 +3,7 @@ title: Gemini 4 Argon — миллион токенов на выходе, но 
 date: 2026-10-30 14:20
 category: ai
 summary: Google подняла лимит вывода до 1 млн токенов и поставила цену 2/10 доллара за миллион, но доступ открыт только доверенным киберзащитникам.
+tldr: Лимит вывода — 1 млн токенов против 32 тысяч у предыдущего поколения | Цена — 2/10 доллара за миллион входных и выходных токенов | Доступ только участникам программы киберзащиты, по заявке
 cover: /assets/img/gemini-4-argon.png
 credit: Обложка: Google / Wikimedia Commons, Public domain
 sources: Google Blog — Gemini 4 Argon | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon; Ars Technica — модель анонсирована, но недоступна | https://arstechnica.com/ai/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it
