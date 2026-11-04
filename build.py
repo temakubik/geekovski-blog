@@ -13,6 +13,7 @@ import json
 import os
 import re
 import shutil
+import struct
 import urllib.parse
 from datetime import datetime
 from pathlib import Path
@@ -61,6 +62,14 @@ def parse_post(path: Path):
     if cat not in CAT_NAME:
         cat = "ai"
     date = datetime.strptime(meta.get("date", "2026-01-01 00:00"), "%Y-%m-%d %H:%M")
+    # updated: — необязательная дата правки. Если её нет, dateModified = date:
+    # подставлять mtime файла нельзя, иначе пересборка на другой машине «омолодит» статью.
+    updated = date
+    if meta.get("updated"):
+        try:
+            updated = datetime.strptime(meta["updated"], "%Y-%m-%d %H:%M")
+        except ValueError:
+            updated = date
     sources = []
     for line in meta.get("sources", "").split(";"):
         line = line.strip()
@@ -99,6 +108,7 @@ def parse_post(path: Path):
         "slug": slug,
         "title": meta.get("title", "Без заголовка"),
         "date": date,
+        "updated": updated,
         "category": cat,
         "summary": meta.get("summary", ""),
         "cover": meta.get("cover", ""),
@@ -201,22 +211,30 @@ PAGE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+<meta name="robots" content="{robots}">
+{canonical}
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="GEEKOVSKI">
-<meta property="og:image" content="{og_image}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+{og_url}
+{og_image_meta}
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+{article_meta}
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#0A0C0F">
-<link rel="alternate" type="application/rss+xml" href="/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 {metrika}
+{jsonld}
 </head>
 <body class="t-{theme}">
 <header class="top">
@@ -302,13 +320,189 @@ METRIKA_COUNTER = """<!-- Yandex.Metrika counter -->
 <!-- /Yandex.Metrika counter -->"""
 
 
+# ---------- SEO / GEO ----------
+#
+# canonical     — один документ = один адрес (иначе /index.html, /xbox/ и /xbox/index.html дают дубли);
+# robots        — max-image-preview:large и max-snippet:-1: без них Яндекс и Google режут
+#                 картинку и сниппет, а именно развёрнутый сниппет попадает в ответы AI-поиска;
+# JSON-LD       — Organization/WebSite на всех страницах, BlogPosting + BreadcrumbList на
+#                 материалах: оттуда поисковики и LLM берут дату, раздел, автора и источники;
+# og:image мета — размеры читаются из файла, а не пишутся «1200×630» на веру: обложки на
+#                 сайте бывают 16:9 и 4:3, и врущие width/height ломают превью ссылки.
 
-def page(title, desc, content, theme, og_image=None):
+ROBOTS_INDEX = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+ROBOTS_NOINDEX = "noindex,follow"
+
+ORG_ID = SITE["url"] + "/#organization"
+WEBSITE_ID = SITE["url"] + "/#website"
+
+
+def iso(dt: datetime) -> str:
+    return dt.strftime("%Y-%m-%dT%H:%M:%S+03:00")
+
+
+def _png_size(data):
+    return struct.unpack(">II", data[16:24]) if len(data) >= 24 else None
+
+
+def _jpeg_size(data):
+    i = 2
+    while i < len(data) - 9:
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        if marker in (0xD8, 0xD9) or 0xD0 <= marker <= 0xD7:
+            i += 2
+            continue
+        seglen = struct.unpack(">H", data[i + 2:i + 4])[0]
+        # SOF0…SOF15, кроме DHT (C4) и JPG (C8) — там нет размеров кадра
+        if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+            h, w = struct.unpack(">HH", data[i + 5:i + 9])
+            return w, h
+        i += 2 + seglen
+    return None
+
+
+def image_size(path: Path):
+    try:
+        head = path.read_bytes()[:262144]
+    except OSError:
+        return None
+    if head[:8] == b"\x89PNG\r\n\x1a\n":
+        return _png_size(head)
+    if head[:2] == b"\xff\xd8":
+        return _jpeg_size(head)
+    return None
+
+
+def local_image(url):
+    """Абсолютный URL обложки → файл в static/img (нужен для реальных размеров)."""
+    prefix = SITE["url"] + "/assets/img/"
+    if url and url.startswith(prefix):
+        return ROOT / "static" / "img" / url[len(prefix):]
+    return None
+
+
+def og_image_meta(url, alt):
+    url = url or DEFAULT_OG
+    path = local_image(url)
+    size = image_size(path) if path and path.exists() else None
+    if size is None and url == DEFAULT_OG:
+        size = (1200, 630)
+    tags = ['<meta property="og:image" content="%s">' % html.escape(url, quote=True)]
+    if size:
+        tags.append('<meta property="og:image:width" content="%d">' % size[0])
+        tags.append('<meta property="og:image:height" content="%d">' % size[1])
+    tags.append('<meta property="og:image:alt" content="%s">' % html.escape(alt or SITE["title"], quote=True))
+    return "\n".join(tags)
+
+
+def ldjson(*objs):
+    """Несколько сущностей одним графом JSON-LD (сайт, организация, статья, крошки)."""
+    graph = [o for o in objs if o]
+    payload = json.dumps({"@context": "https://schema.org", "@graph": graph},
+                         ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    return '<script type="application/ld+json">%s</script>' % payload
+
+
+def ld_org():
+    return {
+        "@type": "Organization", "@id": ORG_ID, "name": SITE["title"],
+        "url": SITE["url"] + "/", "description": SITE["tagline"],
+        "logo": {"@type": "ImageObject", "url": SITE["url"] + "/assets/img/icon-512.png",
+                 "width": 512, "height": 512},
+    }
+
+
+def ld_website():
+    return {
+        "@type": "WebSite", "@id": WEBSITE_ID, "url": SITE["url"] + "/",
+        "name": SITE["title"], "description": SITE["tagline"], "inLanguage": "ru-RU",
+        "publisher": {"@id": ORG_ID},
+    }
+
+
+def ld_breadcrumb(crumbs):
+    """crumbs — [(название, путь от корня)], первым идёт («Главная», «/»)."""
+    return {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": name, "item": SITE["url"] + path}
+            for i, (name, path) in enumerate(crumbs)
+        ],
+    }
+
+
+def ld_itemlist(posts, name):
+    return {
+        "@type": "ItemList", "name": name, "numberOfItems": len(posts),
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1,
+             "url": SITE["url"] + "/" + p["slug"] + ".html", "name": p["title"]}
+            for i, p in enumerate(posts)
+        ],
+    }
+
+
+def ld_article(p, url, image_url=None):
+    """BlogPosting для материалов, Article для дайджестов.
+
+    citation со ссылками на первоисточники — сигнал проверяемости: на такие страницы
+    охотнее ссылаются ответы AI-поиска.
+    """
+    body_text = p["body"] if p["kind"] == "post" else " ".join(i["summary"] for i in p["items"])
+    obj = {
+        "@type": "Article" if p["kind"] == "digest" else "BlogPosting",
+        "@id": url + "#article",
+        "headline": p["title"],
+        "description": p["summary"] or plain(body_text, 160),
+        "datePublished": iso(p["date"]),
+        "dateModified": iso(p.get("updated") or p["date"]),
+        "inLanguage": "ru-RU",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": url},
+        "author": {"@id": ORG_ID},
+        "publisher": {"@id": ORG_ID},
+        "isAccessibleForFree": True,
+        "articleSection": CAT_NAME.get(p["category"], p["category"]),
+        "keywords": [CAT_NAME.get(p["category"], p["category"]), SITE["title"]],
+        "wordCount": len(re.findall(r"\w+", body_text)),
+        "isPartOf": {"@id": WEBSITE_ID},
+    }
+    img = image_url or (SITE["url"] + p["cover"] if p["cover"] else None)
+    if img:
+        entry = {"@type": "ImageObject", "url": img}
+        path = local_image(img)
+        size = image_size(path) if path and path.exists() else None
+        if size:
+            entry["width"], entry["height"] = size
+        obj["image"] = [entry]
+    cites = [s["url"] for s in p["sources"] if s.get("url")]
+    if cites:
+        obj["citation"] = cites
+    return obj
+
+
+def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
+         og_type="website", robots=ROBOTS_INDEX, article=None, og_alt=None, metrika=None):
+    canonical_tag = '<link rel="canonical" href="%s">' % html.escape(canonical, quote=True) if canonical else ""
+    og_url = '<meta property="og:url" content="%s">' % html.escape(canonical, quote=True) if canonical else ""
+    article_meta = ""
+    if article:
+        article_meta = "\n".join([
+            '<meta property="article:published_time" content="%s">' % iso(article["date"]),
+            '<meta property="article:modified_time" content="%s">' % iso(article.get("updated") or article["date"]),
+            '<meta property="article:section" content="%s">' % html.escape(
+                CAT_NAME.get(article["category"], article["category"]), quote=True),
+            '<meta property="article:author" content="GEEKOVSKI">',
+        ])
     return PAGE.format(
         theme=theme, title=html.escape(title), desc=html.escape(desc),
         nav=NAV, content=content, year=datetime.now().year,
-        og_image=og_image or DEFAULT_OG,
-        metrika=METRIKA_COUNTER,
+        og_image_meta=og_image_meta(og_image, og_alt or title),
+        og_url=og_url, canonical=canonical_tag, robots=robots, og_type=og_type,
+        article_meta=article_meta, jsonld=jsonld,
+        metrika=METRIKA_COUNTER if metrika is None else metrika,
     )
 
 
@@ -348,9 +542,15 @@ def hero(p):
     )
 
 
+HOME_TITLE = "GEEKOVSKI — игры, технологии и кино: разборы и новости"
+HOME_DESC = ("Разборы новостей игровой индустрии, техники, кино и AI: проверяемые факты, "
+             "источники и даты. Xbox, PlayStation, Nintendo Switch, PC, VR и гаджеты.")
+
+
 def render_index(posts, theme, digests=None):
     if not posts:
-        return page(SITE["title"], SITE["tagline"], '<main class="wrap"><p>Пусто.</p></main>', theme)
+        return page(HOME_TITLE, HOME_DESC, '<main class="wrap"><p>Пусто.</p></main>', theme,
+                    canonical=SITE["url"] + "/", jsonld=ldjson(ld_org(), ld_website()))
     if theme == "magazine":
         head = hero(posts[0])
         cards = "\n".join(card(p, theme, big=(i < 2)) for i, p in enumerate(posts[1:]))
@@ -551,6 +751,12 @@ def build(theme, out_dir, content_dir=None):
     ico = ROOT / "static" / "img" / "favicon.ico"
     if ico.exists():
         shutil.copy(ico, out / "favicon.ico")
+    nometrika = (out / "style-guide-noindex.html")
+    if (out / "style-guide.html").exists() and nometrika.exists():
+        nometrika.unlink()
+    (out / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\nDisallow: /style-guide.html\n\nSitemap: %s/sitemap.xml\n" % SITE["url"],
+        encoding="utf-8")
     (out / ".nojekyll").write_text("")
     if (ROOT / "static" / "CNAME").exists():
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
@@ -649,7 +855,8 @@ def render_style_guide(theme):
                'в вёрстке не используется.</p></section>%s%s%s%s%s</main>') % (
         type_block, palette_block, chip_block, icon_block, comp_block)
 
-    return page("Style Guide — %s" % SITE["title"], "Типографика, цвета, компоненты и иконки GEEKOVSKI", content, theme)
+    return page("Style Guide — %s" % SITE["title"], "Типографика, цвета, компоненты и иконки GEEKOVSKI",
+                content, theme, robots=ROBOTS_NOINDEX, metrika="")
 
 
 # ---------- дайджест: техническая мета и оформление ----------
