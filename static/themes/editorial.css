@@ -420,3 +420,26 @@ a.chip:hover, a.chip:focus-visible { border-color: currentColor; }
 @media (max-width: 560px) { .mrow { grid-template-columns: 34px 1fr; } .mrow__p { grid-column: 2; } }
 .anno__cat { margin-left: auto; font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em;
   text-transform: uppercase; color: var(--cat); opacity: .85; }
+
+/* ---------- карточка анонса как ссылка ---------- */
+a.anno { text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+a.anno:hover { border-color: var(--cat); }
+a.anno:hover .anno__cover img { transform: scale(1.03); }
+.anno__cover img { transition: transform .25s; }
+
+/* ---------- страница тайтла ---------- */
+.tp { padding-bottom: 40px; }
+.tp__cover { margin-bottom: 18px; border-radius: 8px; overflow: hidden; }
+.tp__cover img { width: 100%; display: block; }
+.tp h1 { font-family: var(--font-display); font-size: var(--fs-h0); line-height: var(--lh-tight);
+  letter-spacing: -.025em; margin: 0 0 10px; }
+.tp__when { font-family: var(--font-caps); font-size: var(--fs-small); letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.tp__when b { color: var(--accent); }
+.tp__meta { display: grid; gap: 6px; padding: 16px 0 22px; margin-bottom: 6px; border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line); }
+.tp__row { display: grid; grid-template-columns: 130px 1fr; gap: 12px; }
+.tp__k { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); }
+.tp__v { font-size: var(--fs-small); }
+@media (max-width: 560px) { .tp__row { grid-template-columns: 1fr; gap: 2px; } }

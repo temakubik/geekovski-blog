@@ -977,6 +977,9 @@ def build(theme, out_dir, content_dir=None):
     digests = [p for p in everything if p["kind"] == "digest"]
     calendars = [p for p in everything if p["kind"] == "calendar"]
     cal_entries = calendar_entries(calendars)
+    CAL_ENTRIES[:] = cal_entries
+    TITLES.clear()
+    TITLES.update(load_titles())
 
     out = Path(out_dir)
     if out.exists():
@@ -1027,6 +1030,12 @@ def build(theme, out_dir, content_dir=None):
         nxt = digests[i - 1] if i > 0 else None      # новее
         prv = digests[i + 1] if i + 1 < len(digests) else None
         (dgdir / ("%s.html" % d["slug"])).write_text(render_digest(d, theme, nxt, prv), encoding="utf-8")
+    tdir = out / "titles"
+    tdir.mkdir(exist_ok=True)
+    for slug in TITLES:
+        htmlp = title_page(slug, theme)
+        if htmlp:
+            (tdir / ("%s.html" % slug)).write_text(htmlp, encoding="utf-8")
     cdir = out / "calendar"
     cdir.mkdir(exist_ok=True)
     (cdir / "index.html").write_text(render_calendar_page(cal_entries, theme), encoding="utf-8")
@@ -1113,12 +1122,12 @@ def _cal_card(e):
     else:
         visual = '<div class="anno__cover anno__cover--mono"><span>%s</span></div>' % html.escape(
             e["title"][:2].upper())
-    return ('<article class="anno cat-{cat}">{visual}'
+    return ('<a class="anno cat-{cat}" href="/titles/{slug}.html">{visual}'
             '<div class="anno__body"><div class="anno__meta"><span class="anno__type">{icon}{note}</span>'
             '<span class="anno__cat">{catname}</span></div>'
             '<h3 class="anno__title">{title}</h3>'
-            '<div class="anno__plat">{plats}</div></div></article>').format(
-        cat=e["category"], visual=visual, icon=_cal_icon(e["kind_note"]),
+            '<div class="anno__plat">{plats}</div></div></a>').format(
+        cat=e["category"], visual=visual, icon=_cal_icon(e["kind_note"]), slug=e["slug"],
         catname=CAT_NAME.get(e["category"], e["category"]),
         note=html.escape(e["kind_note"] or "релиз"), title=html.escape(e["title"]),
         plats=_plat_tags(e["platforms"]))
@@ -1180,6 +1189,79 @@ def render_calendar_page(entries, theme, today=None):
                 jsonld=ldjson(ld_org(), ld_website()))
 
 
+TRANSLIT = {"а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "e", "ж": "zh",
+            "з": "z", "и": "i", "й": "y", "к": "k", "л": "l", "м": "m", "н": "n", "о": "o",
+            "п": "p", "р": "r", "с": "s", "т": "t", "у": "u", "ф": "f", "х": "h", "ц": "c",
+            "ч": "ch", "ш": "sh", "щ": "sch", "ъ": "", "ы": "y", "ь": "", "э": "e", "ю": "yu", "я": "ya"}
+
+
+def title_slug(text):
+    s = "".join(TRANSLIT.get(ch, ch) for ch in (text or "").lower())
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:60] or "title"
+
+
+TITLES = {}
+CAL_ENTRIES = []   # заполняется в build(): записи календаря для страниц тайтлов
+
+
+def load_titles():
+    """content/titles/*.md — база игр, фильмов и сериалов. Ключ — слаг заголовка."""
+    out = {}
+    d = ROOT / "content" / "titles"
+    if not d.exists():
+        return out
+    for f in sorted(d.glob("*.md")):
+        rec = parse_post(f)          # frontmatter + текст как summary-тело
+        slug = rec["slug"] if rec.get("slug") else f.stem
+        out[slug] = {
+            "slug": slug,
+            "kind": rec["kind"] if rec["kind"] in ("game", "film", "series") else "game",
+            "title": rec["title"],
+            "year": (rec["summary"] or "").strip(),
+            "developers": "",
+            "platforms": "",
+            "cover": rec["cover"],
+            "body": rec["body"],
+            "sources": rec["sources"],
+            "meta": rec,
+        }
+    return out
+
+
+def title_page(slug, theme):
+    t = TITLES.get(slug)
+    if not t:
+        return None
+    rows = []
+    if t["kind"] == "game":
+        rows = [("Разработчик", t["developers"]), ("Жанр", t["year"]), ("Платформы", t["platforms"])]
+    else:
+        rows = [("Год", t["year"]), ("Платформа", t["platforms"])]
+    meta = "".join('<div class="tp__row"><span class="tp__k">%s</span><span class="tp__v">%s</span></div>'
+                   % (k, html.escape(v)) for k, v in rows if v)
+    srcs = "".join('<li><a href="%s">%s</a></li>' % (x["url"], html.escape(x["name"]))
+                   for x in t["sources"] if x["url"])
+    cover = ('<div class="tp__cover"><img src="%s" alt=""></div>' % t["cover"]) if t["cover"] else ""
+    # даты из календаря: ближайшая будущая
+    rel = [e for e in CAL_ENTRIES if e["slug"] == slug and e["day"] >= datetime.now().date()]
+    when = ""
+    if rel:
+        e = sorted(rel, key=lambda x: x["day"])[0]
+        when = ('<div class="tp__when">Выходит <b>%d %s</b></div>'
+                % (e["day"].day, MONTHS_GEN[e["day"].month - 1]))
+    content = ('<main class="wrap"><article class="tp">%s<h1>%s</h1>%s'
+               '<div class="tp__meta">%s</div><div class="post__body">%s</div>%s'
+               '%s</article></main>') % (
+        cover, html.escape(t["title"]), when, meta, md(t["body"]) if t["body"] else "",
+        ('<section class="sources"><h2>Источники</h2><ul>%s</ul></section>' % srcs) if srcs else "",
+        share_block(SITE["url"] + "/titles/%s.html" % slug, t["title"], t["cover"] or DEFAULT_OG))
+    return page("%s — %s | %s" % (t["title"], "игра" if t["kind"] == "game" else "фильм",
+                                  SITE["title"]),
+                plain(t["body"], 180), content, theme,
+                canonical=SITE["url"] + "/titles/%s.html" % slug,
+                og_image=t["cover"] or DEFAULT_OG)
+
+
 def calendar_entries(calendars):
     """Разворачивает заметки kind: calendar в плоский список записей."""
     out = []
@@ -1193,9 +1275,10 @@ def calendar_entries(calendars):
             out.append({
                 "day": day, "category": it["category"], "title": it["title"],
                 "cover": it.get("cover", ""),
+                "slug": it.get("slug") or title_slug(it["title"]),
                 "platforms": it.get("platforms", ""), "kind_note": it.get("kind_note", ""),
                 "summary": it["summary"], "source": it["source"],
-                "href": (it["source"].split("|")[-1].strip() if "|" in it["source"] else "/calendar/"),
+                "href": "/titles/%s.html" % (it.get("slug") or title_slug(it["title"])),
             })
     out.sort(key=lambda e: (e["day"], e["title"]))
     return out
