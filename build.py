@@ -81,7 +81,7 @@ def parse_post(path: Path):
         else:
             sources.append({"name": line, "url": ""})
     kind = meta.get("kind", "post").strip().lower()
-    if kind not in ("post", "digest"):
+    if kind not in ("post", "digest", "calendar"):
         kind = "post"
     # tldr: пункт | пункт — выжимка для блока «Коротко» в начале материала
     tldr = [x.strip() for x in meta.get("tldr", "").split("|") if x.strip()]
@@ -92,15 +92,26 @@ def parse_post(path: Path):
             continue
         # «- category: switch» открывает новость, «title: …» / «summary: …» её дополняют
         m = re.match(r"^(?:-\s+)?([a-z_]+):\s*(.*)$", s)
-        if not (m and m.group(1) in ("category", "title", "summary", "source")):
+        allowed = ("category", "title", "summary", "source", "platforms", "kind_note", "date", "where", "day")
+        if not (m and m.group(1) in allowed):
             continue
         key, val = m.group(1), m.group(2).strip()
-        if key == "category":
+        if key == "category" and kind == "calendar":
+            cur = {"category": val.lower(), "title": "", "summary": "", "source": "",
+                   "platforms": "", "kind_note": "", "date": "", "where": ""}
+            items.append(cur)
+        elif key == "category":
             cur = {"category": val.lower(), "title": "", "summary": "", "source": ""}
             items.append(cur)
+        elif kind == "calendar" and cur is not None:
+            cur[key] = val   # date / platforms / kind_note / where / title / summary / source
+        elif kind == "calendar" and cur is not None and key == "date":
+            cur["date"] = val
+        elif kind == "calendar" and cur is not None and key in ("platforms", "kind_note", "where"):
+            cur[key] = val
         elif cur is not None:
             cur[key] = val
-    if kind != "digest":
+    if kind not in ("digest", "calendar"):
         items, body_lines = [], body.splitlines()
     else:
         body_lines = []
@@ -200,7 +211,7 @@ def plain(text: str, n: int = 240) -> str:
 
 # ---------- templates ----------
 
-NAV_COUNTS = {"posts": 0, "digests": 0, "rubrics": 0}
+NAV_COUNTS = {"posts": 0, "digests": 0, "rubrics": 0, "calendars": 0}
 open_rubrics = {}   # заполняется в build(): слаг -> число материалов
 
 
@@ -212,9 +223,11 @@ def nav(**counts):
             '<span class="nav__sep" aria-hidden="true"></span>'
             '<a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(%d)</span></a>'
             '<span class="nav__sep" aria-hidden="true"></span>'
+            '<a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(%d)</span></a>'
+            '<span class="nav__sep" aria-hidden="true"></span>'
             '<details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(%d)</span></summary>'
             '<div class="nav__categories">'
-            % (c["posts"], c["digests"], c["rubrics"])
+            % (c["posts"], c["digests"], c["calendars"], c["rubrics"])
             + "".join('<a class="nav__link nav__link--sm" href="/{slug}/">{name}</a>'.format(slug=k, name=n)
                       for k, n in CATS) + '</div></details>')
 
@@ -586,7 +599,7 @@ HOME_DESC = ("Разборы новостей игровой индустрии,
              "источники и даты. Xbox, PlayStation, Nintendo Switch, PC, VR и гаджеты.")
 
 
-def render_index(posts, theme, digests=None):
+def render_index(posts, theme, digests=None, cal_entries=None):
     if not posts:
         return page(HOME_TITLE, HOME_DESC, '<main class="wrap"><p>Пусто.</p></main>', theme,
                     canonical=SITE["url"] + "/", jsonld=ldjson(ld_org(), ld_website()))
@@ -619,7 +632,8 @@ def render_index(posts, theme, digests=None):
                 '<span class="rubric__all">%d %s</span></div>'
                 '<div class="grid grid--feed">%s</div></section>'
                 % (len(posts), plural(len(posts), "материал", "материала", "материалов"), feed_rows)) if rest else ""
-        content = '<main class="wrap">%s%s%s</main>' % (dblock, top, feed)
+        cstrip = calendar_strip(cal_entries or [], theme)
+        content = '<main class="wrap">%s%s%s%s</main>' % (dblock, cstrip, top, feed)
     else:  # magazine
         head = hero(posts[0])
         cards = "\n".join(card(p, theme) for p in posts[1:])
@@ -961,6 +975,8 @@ def build(theme, out_dir, content_dir=None):
     everything.sort(key=lambda p: p["date"], reverse=True)
     posts = [p for p in everything if p["kind"] == "post"]
     digests = [p for p in everything if p["kind"] == "digest"]
+    calendars = [p for p in everything if p["kind"] == "calendar"]
+    cal_entries = calendar_entries(calendars)
 
     out = Path(out_dir)
     if out.exists():
@@ -995,7 +1011,8 @@ def build(theme, out_dir, content_dir=None):
         open_rubrics[c] = len([p for p in posts if p["category"] == c])
     NAV_COUNTS["posts"] = len(posts)
     NAV_COUNTS["digests"] = len(digests)
-    (out / "index.html").write_text(render_index(posts, theme, digests), encoding="utf-8")
+    NAV_COUNTS["calendars"] = sum(1 for e in cal_entries if e["day"] >= datetime.now().date())
+    (out / "index.html").write_text(render_index(posts, theme, digests, cal_entries), encoding="utf-8")
     for p in posts:
         (out / ("%s.html" % p["slug"])).write_text(render_post(p, posts, theme), encoding="utf-8")
     for c, name in CATS:
@@ -1010,6 +1027,9 @@ def build(theme, out_dir, content_dir=None):
         nxt = digests[i - 1] if i > 0 else None      # новее
         prv = digests[i + 1] if i + 1 < len(digests) else None
         (dgdir / ("%s.html" % d["slug"])).write_text(render_digest(d, theme, nxt, prv), encoding="utf-8")
+    cdir = out / "calendar"
+    cdir.mkdir(exist_ok=True)
+    (cdir / "index.html").write_text(render_calendar_page(cal_entries, theme), encoding="utf-8")
     (out / "style-guide.html").write_text(render_style_guide(theme), encoding="utf-8")
     (out / "404.html").write_text(render_404(theme), encoding="utf-8")
     about = render_about(theme)
@@ -1034,6 +1054,121 @@ def build(theme, out_dir, content_dir=None):
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
     return posts
 
+
+
+
+# ---------- Календарь анонсов ----------
+
+WD = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
+              "июля", "августа", "сентября", "октября", "ноября", "декабря"]
+
+
+def _cal_icon(kind_note):
+    """Иконка по типу анонса: релиз / порт / ремастер / сериал."""
+    k = (kind_note or "").lower()
+    if "сериал" in k or "фильм" in k:
+        return ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
+                'stroke-width="1.7"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 3l4 4 4-4"/></svg>')
+    if "порт" in k or "ремастер" in k or "ремейк" in k:
+        return ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
+                'stroke-width="1.7"><path d="M4 12a8 8 0 0 1 13.7-5.6M20 12a8 8 0 0 1-13.7 5.6"/><path d="M18 4v4h-4M6 20v-4h4"/></svg>')
+    return ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
+            'stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg>')
+
+
+def _cal_week(entries, today=None):
+    """Записи на ближайшие 7 дней: от сегодня до +6."""
+    today = today or datetime.now().date()
+    return [e for e in entries if 0 <= (e["day"] - today).days <= 6]
+
+
+def render_calendar_page(entries, theme, today=None):
+    today = today or datetime.now().date()
+    week = _cal_week(entries, today)
+    groups = {}
+    for e in week:
+        groups.setdefault(e["day"], []).append(e)
+    blocks = []
+    for day in sorted(groups):
+        d = datetime.combine(day, datetime.min.time())
+        rel = ""
+        if day == today:
+            rel = "сегодня"
+        elif (day - today).days == 1:
+            rel = "завтра"
+        head = ('<div class="cal__day"><span class="cal__num">%02d</span>'
+                '<span class="cal__month">%s</span><span class="cal__wd">%s</span>'
+                '%s</div>') % (d.day, MONTHS_GEN[d.month - 1], WD[d.weekday()],
+                               ('<span class="cal__rel">%s</span>' % rel) if rel else "")
+        rows = []
+        for e in groups[day]:
+            rows.append(
+                '<a class="cal__item cat-{cat}" href="{href}">'
+                '<span class="cal__icon">{icon}</span>'
+                '<span class="cal__body"><span class="cal__title">{title}</span>'
+                '<span class="cal__meta">{chip}{plat}{sep}{note}</span></span>'
+                '</a>'.format(
+                    cat=e["category"], href=e["href"], icon=_cal_icon(e["kind_note"]),
+                    title=html.escape(e["title"]),
+                    chip='<span class="chip chip--sm cat-%s">%s</span>'
+                         % (e["category"], CAT_NAME.get(e["category"], e["category"])),
+                    plat=('<span class="cal__plat">%s</span>' % html.escape(e["platforms"])) if e["platforms"] else "",
+                    sep='<span class="cal__sep">·</span>' if (e["platforms"] and e["kind_note"]) else "",
+                    note=('<span class="cal__note">%s</span>' % html.escape(e["kind_note"])) if e["kind_note"] else ""))
+        blocks.append('<section class="cal__group">%s<div class="cal__items">%s</div></section>' % (head, "".join(rows)))
+
+    if not blocks:
+        body = ('<p class="lead__empty">На ближайшую неделю подтверждённых дат пока нет. '
+                'Как только анонсы появятся — они окажутся здесь.</p>')
+        desc = "Что выходит на этой неделе: игры, фильмы и сериалы с подтверждёнными датами. " + SITE["tagline"]
+    else:
+        body = ('<div class="cal">%s</div>' % "".join(blocks))
+        desc = ("Календарь анонсов на неделю: %d %s с подтверждёнными датами — игры, "
+                "платформы, фильмы и сериалы. %s") % (
+            len(week), plural(len(week), "релиз", "релиза", "релизов"), SITE["tagline"])
+    content = ('<main class="wrap"><section class="lead"><h1>Календарь анонсов</h1>'
+               '<p>Ближайшая неделя — только подтверждённые даты. Сверху то, что выходит скорее.</p></section>'
+               '%s</main>') % body
+    return page("Календарь анонсов — что выходит на этой неделе | %s" % SITE["title"], desc, content, theme,
+                canonical=SITE["url"] + "/calendar/",
+                jsonld=ldjson(ld_org(), ld_website()))
+
+
+def calendar_entries(calendars):
+    """Разворачивает заметки kind: calendar в плоский список записей."""
+    out = []
+    for c in calendars:
+        for it in c["items"]:
+            day = None
+            try:
+                day = datetime.strptime(it.get("date", ""), "%Y-%m-%d").date()
+            except ValueError:
+                continue
+            out.append({
+                "day": day, "category": it["category"], "title": it["title"],
+                "platforms": it.get("platforms", ""), "kind_note": it.get("kind_note", ""),
+                "summary": it["summary"], "source": it["source"],
+                "href": (it["source"].split("|")[-1].strip() if "|" in it["source"] else "/calendar/"),
+            })
+    out.sort(key=lambda e: (e["day"], e["title"]))
+    return out
+
+
+def calendar_strip(entries, theme, limit=3, today=None):
+    """Плашка «ближайшая неделя» на главной."""
+    week = _cal_week(entries, today)[:limit]
+    if not week:
+        return ""
+    rows = "".join(
+        '<a class="cstrip__row cat-{cat}" href="{href}"><span class="cstrip__d">{d}</span>'
+        '<span class="cstrip__t">{t}</span><span class="cstrip__p">{p}</span></a>'.format(
+            cat=e["category"], href=e["href"],
+            d="%02d.%02d" % (e["day"].day, e["day"].month),
+            t=html.escape(e["title"]), p=html.escape(e["platforms"]))
+        for e in week)
+    return ('<section class="cstrip"><div class="rubric__head"><h2>Календарь анонсов</h2>'
+            '<a class="rubric__all" href="/calendar/">Вся неделя →</a></div>%s</section>') % rows
 
 
 # ---------- Style Guide ----------
