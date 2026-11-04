@@ -215,6 +215,7 @@ PAGE = """<!DOCTYPE html>
 <link rel="alternate" type="application/rss+xml" href="/rss.xml">
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
+{metrika}
 </head>
 <body class="t-{theme}">
 <header class="top">
@@ -282,12 +283,31 @@ document.querySelector(active)?.classList.add('nav__link--active');
 
 DEFAULT_OG = SITE["url"] + "/assets/img/og-default.png"
 
+# Счётчик Яндекс.Метрики. Отдельной строкой, а не внутри PAGE: код счётчика
+# набит фигурными скобками, а PAGE собирается через str.format() — в шаблоне
+# пришлось бы удваивать каждую. Подставляется как значение {metrika}.
+METRIKA_COUNTER = """<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->"""
+
+
 
 def page(title, desc, content, theme, og_image=None):
     return PAGE.format(
         theme=theme, title=html.escape(title), desc=html.escape(desc),
         nav=NAV, content=content, year=datetime.now().year,
         og_image=og_image or DEFAULT_OG,
+        metrika=METRIKA_COUNTER,
     )
 
 
