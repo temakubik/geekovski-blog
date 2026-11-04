@@ -101,6 +101,7 @@ def parse_post(path: Path):
         "category": cat,
         "summary": meta.get("summary", ""),
         "cover": meta.get("cover", ""),
+        "pin": meta.get("pin", ""),
         "credit": meta.get("credit", ""),
         "body": "\n".join(body_lines).strip(),
         "sources": sources,
@@ -423,7 +424,7 @@ def render_post(p, posts, theme):
         sum=html.escape(p["summary"]), cover=cover, body=body, srcs=srcs, rel=rel,
         credit_line=credit_line,
         share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"],
-                          SITE["url"] + p["cover"] if p["cover"] else None),
+                          SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None),
     )
     og = SITE["url"] + p["cover"] if p["cover"] else None
     return page("%s — %s" % (p["title"], SITE["title"]), p["summary"] or plain(p["body"], 160),

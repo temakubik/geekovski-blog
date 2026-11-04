@@ -4,6 +4,7 @@ date: 2026-11-01 12:10
 category: switch
 summary: Полностью озвученные катсцены, игра на окарине через микрофон консоли и выросший до 24,5 ГБ размер. Разбираем, что именно Nintendo меняет в легендарной игре.
 cover: /assets/img/zelda-ocarina-switch-2.jpg
+pin: /assets/img/zelda-ocarina-switch-2-pin.jpg
 credit: Обложка: Crisco 1492 / Wikimedia Commons, CC BY-SA 4.0
 sources: Nintendo Everything — трейлер «What's New» | https://nintendoeverything.com/zelda-ocarina-of-time-nintendo-switch-2-remake-whats-new-trailer/; Notebookcheck — эмбарго на рецензии | https://www.notebookcheck.net/Metacritic-reveals-Zelda-Ocarina-of-Time-review-embargo-as-release-date-approaches.1438321.0.html
 ---
