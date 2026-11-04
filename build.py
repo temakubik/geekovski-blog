@@ -484,7 +484,8 @@ def ld_article(p, url, image_url=None):
 
 
 def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
-         og_type="website", robots=ROBOTS_INDEX, article=None, og_alt=None, metrika=None):
+         og_type="website", robots=ROBOTS_INDEX, article=None, og_alt=None,
+         metrika=None):
     canonical_tag = '<link rel="canonical" href="%s">' % html.escape(canonical, quote=True) if canonical else ""
     og_url = '<meta property="og:url" content="%s">' % html.escape(canonical, quote=True) if canonical else ""
     article_meta = ""
@@ -663,13 +664,25 @@ def render_post(p, posts, theme):
     og = SITE["url"] + p["cover"] if p["cover"] else None
     url = SITE["url"] + "/" + p["slug"] + ".html"
     catname = CAT_NAME.get(p["category"], p["category"])
-    return page("%s — %s" % (p["title"], SITE["title"]),
+    return page(title_tag(p["title"]),
                 p["summary"] or plain(p["body"], 160),
                 content, theme, og_image=og, canonical=url, og_type="article",
                 article=p, og_alt=p["title"],
                 jsonld=ldjson(ld_org(), ld_website(), ld_article(p, url),
                               ld_breadcrumb([("Главная", "/"), (catname, "/%s/" % p["category"]),
                                              (p["title"], "/%s.html" % p["slug"])])))
+
+
+def title_tag(text, brand=SITE["title"], limit=68):
+    """Заголовок для <title>: бренд добавляем только если влезаем в сниппет.
+
+    Длинный H1 (а он у нас любит быть длинным) с « — GEEKOVSKI» превращается в 90+
+    символов, и поиск обрезает самое важное — начало. Бренд в этом случае лишний:
+    домен и так подписан в выдаче.
+    """
+    if len(text) + 3 + len(brand) <= limit:
+        return "%s — %s" % (text, brand)
+    return text
 
 
 def render_cat(slug, name, items, theme):
@@ -752,9 +765,10 @@ def robots_txt():
     bots = ["YandexBot", "Googlebot", "Bingbot", "GPTBot", "OAI-SearchBot", "ChatGPT-User",
             "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Amazonbot", "Applebot",
             "Applebot-Extended"]
-    lines = ["# GEEKOVSKI — robots.txt", "User-agent: *", "Allow: /", ""]
+    lines = ["# GEEKOVSKI — robots.txt", "User-agent: *", "Allow: /",
+             "Disallow: /style-guide.html", ""]
     lines += ["User-agent: %s" % b for b in bots]
-    lines += ["Allow: /", "", "Sitemap: %s/sitemap.xml" % SITE["url"],
+    lines += ["Allow: /", "Disallow: /style-guide.html", "", "Sitemap: %s/sitemap.xml" % SITE["url"],
               "Host: %s" % SITE["url"].split("//")[1], ""]
     return "\n".join(lines)
 
@@ -824,6 +838,34 @@ def llms_full_txt(posts):
     return "\n".join(out)
 
 
+def feed_json(posts):
+    """JSON Feed 1.1: абсолютные ссылки, даты в ISO, обложка и источники.
+
+    Такой фид читают агрегаторы и LLM без разбора HTML — карточка материала
+    собирается из одного запроса.
+    """
+    return json.dumps({
+        "version": "https://jsonfeed.org/version/1.1",
+        "title": SITE["title"],
+        "home_page_url": SITE["url"] + "/",
+        "feed_url": SITE["url"] + "/feed.json",
+        "description": SITE["tagline"],
+        "language": "ru",
+        "favicon": SITE["url"] + "/assets/img/icon-512.png",
+        "items": [{
+            "id": SITE["url"] + "/" + p["slug"] + ".html",
+            "url": SITE["url"] + "/" + p["slug"] + ".html",
+            "title": p["title"],
+            "summary": p["summary"] or plain(p["body"], 240),
+            "date_published": iso(p["date"]),
+            "date_modified": iso(p.get("updated") or p["date"]),
+            "tags": [CAT_NAME.get(p["category"], p["category"])],
+            "image": SITE["url"] + p["cover"] if p["cover"] else None,
+            "_sources": [{"name": s["name"], "url": s["url"]} for s in p["sources"] if s.get("url")],
+        } for p in posts],
+    }, ensure_ascii=False, indent=1)
+
+
 def render_404(theme):
     content = ('<main class="wrap"><section class="lead"><h1>Страница не нашлась</h1>'
                '<p>Адрес мог измениться или в ссылке опечатка. Живые материалы — в рубриках '
@@ -887,21 +929,21 @@ def build(theme, out_dir, content_dir=None):
         prv = digests[i + 1] if i + 1 < len(digests) else None
         (dgdir / ("%s.html" % d["slug"])).write_text(render_digest(d, theme, nxt, prv), encoding="utf-8")
     (out / "style-guide.html").write_text(render_style_guide(theme), encoding="utf-8")
+    (out / "404.html").write_text(render_404(theme), encoding="utf-8")
+    (out / "robots.txt").write_text(robots_txt(), encoding="utf-8")
+    (out / "llms.txt").write_text(llms_txt(posts, digests), encoding="utf-8")
+    (out / "llms-full.txt").write_text(llms_full_txt(posts), encoding="utf-8")
     (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests"), encoding="utf-8")
     (out / "sitemap.xml").write_text(sitemap(posts, digests), encoding="utf-8")
-    (out / "feed.json").write_text(json.dumps([
-        {k: (v.strftime("%Y-%m-%dT%H:%M:%S") if isinstance(v, datetime) else v)
-         for k, v in p.items() if k in ("slug", "title", "date", "category", "summary", "sources")}
-        for p in posts], ensure_ascii=False, indent=1), encoding="utf-8")
+    (out / "feed.json").write_text(feed_json(posts), encoding="utf-8")
     ico = ROOT / "static" / "img" / "favicon.ico"
     if ico.exists():
         shutil.copy(ico, out / "favicon.ico")
-    nometrika = (out / "style-guide-noindex.html")
-    if (out / "style-guide.html").exists() and nometrika.exists():
-        nometrika.unlink()
-    (out / "robots.txt").write_text(
-        "User-agent: *\nAllow: /\nDisallow: /style-guide.html\n\nSitemap: %s/sitemap.xml\n" % SITE["url"],
-        encoding="utf-8")
+    # IndexNow: ключ должен лежать файлом <ключ>.txt в корне сайта, иначе пинг отклонят
+    keyfile = ROOT / "static" / "indexnow-key.txt"
+    if keyfile.exists():
+        k = keyfile.read_text(encoding="utf-8").strip()
+        (out / ("%s.txt" % k)).write_text(k, encoding="utf-8")
     (out / ".nojekyll").write_text("")
     if (ROOT / "static" / "CNAME").exists():
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
@@ -1153,7 +1195,12 @@ def render_digest(d, theme, next_d=None, prev_d=None):
             '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (
                 html.escape(s["url"]), html.escape(s["name"])) for s in d["sources"] if s["url"])) if d["sources"] else "",
     )
-    return page("%s — %s" % (head_title, SITE["title"]), d["summary"] or meta, content, theme)
+    url = "%s/digests/%s.html" % (SITE["url"], d["slug"])
+    return page(title_tag(head_title), d["summary"] or meta, content, theme,
+                canonical=url, og_type="article", article=d, og_alt=head_title,
+                jsonld=ldjson(ld_org(), ld_website(), ld_article(d, url),
+                              ld_breadcrumb([("Главная", "/"), ("Дайджесты", "/digests/"),
+                                             (head_title, "/digests/%s.html" % d["slug"])])))
 
 
 def render_digests_index(digests, theme):
@@ -1175,7 +1222,17 @@ def render_digests_index(digests, theme):
     content = ('<main class="wrap"><section class="lead"><h1>Дайджесты</h1>'
                '<p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p>'
                '</section><div class="dlist">%s</div></main>') % ("".join(rows) or "<p>Пока пусто.</p>")
-    return page("Дайджесты — %s" % SITE["title"], "Дважды в день: короткие новости", content, theme)
+    url = SITE["url"] + "/digests/"
+    desc = ("Дайджесты GEEKOVSKI: короткие выпуски новостей игр, техники, кино и AI с ссылками "
+            "на первоисточники. Выпусков в архиве: %d." % len(digests))
+    return page("Дайджесты — короткие новости GEEKOVSKI", desc, content, theme,
+                canonical=url, og_alt="Дайджесты GEEKOVSKI",
+                jsonld=ldjson(ld_org(), ld_website(),
+                              {"@type": "CollectionPage", "@id": url + "#page", "url": url,
+                               "name": "Дайджесты", "description": desc, "inLanguage": "ru-RU",
+                               "isPartOf": {"@id": WEBSITE_ID}},
+                              ld_itemlist(digests, "Дайджесты") if digests else None,
+                              ld_breadcrumb([("Главная", "/"), ("Дайджесты", "/digests/")])))
 
 
 if __name__ == "__main__":
