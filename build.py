@@ -200,14 +200,23 @@ def plain(text: str, n: int = 240) -> str:
 
 # ---------- templates ----------
 
-NAV = ('<a class="nav__link nav__link--blog" href="/">Блог</a>'
-       '<span class="nav__sep" aria-hidden="true"></span>'
-       '<a class="nav__link nav__link--digests" href="/digests/">Дайджесты</a>'
-       '<span class="nav__sep" aria-hidden="true"></span>'
-       '<details class="nav__rubrics"><summary class="nav__link">Рубрики</summary>'
-       '<div class="nav__categories">'
-       + "".join('<a class="nav__link nav__link--sm" href="/{slug}/">{name}</a>'.format(slug=c, name=n)
-                 for c, n in CATS) + '</div></details>')
+NAV_COUNTS = {"posts": 0, "digests": 0, "rubrics": 0}
+open_rubrics = {}   # заполняется в build(): слаг -> число материалов
+
+
+def nav(**counts):
+    """Шапка. Цифры в скобках — сколько статей, дайджестов и рубрик на сайте."""
+    c = dict(NAV_COUNTS, **counts)
+    c["rubrics"] = sum(1 for k, _ in CATS if open_rubrics.get(k))
+    return ('<a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(%d)</span></a>'
+            '<span class="nav__sep" aria-hidden="true"></span>'
+            '<a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(%d)</span></a>'
+            '<span class="nav__sep" aria-hidden="true"></span>'
+            '<details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(%d)</span></summary>'
+            '<div class="nav__categories">'
+            % (c["posts"], c["digests"], c["rubrics"])
+            + "".join('<a class="nav__link nav__link--sm" href="/{slug}/">{name}</a>'.format(slug=k, name=n)
+                      for k, n in CATS) + '</div></details>')
 
 PAGE = """<!DOCTYPE html>
 <html lang="ru" data-theme="{theme}">
@@ -507,7 +516,7 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         ])
     return PAGE.format(
         theme=theme, title=html.escape(title), desc=html.escape(desc),
-        nav=NAV, content=content, year=datetime.now().year,
+        nav=nav(), content=content, year=datetime.now().year,
         og_image_meta=og_image_meta(og_image, og_alt or title),
         og_url=og_url, canonical=canonical_tag, robots=robots, og_type=og_type,
         article_meta=article_meta, jsonld=jsonld,
@@ -585,18 +594,18 @@ def render_index(posts, theme, digests=None):
                       '<a class="dteaser" href="/digests/%s.html"><span class="dteaser__date">%s</span>'
                       '<strong>%s</strong><span class="dteaser__count">%d новостей</span></a></section>') % (
                 latest["slug"], latest["date"].strftime("%d.%m, %H:%M"), html.escape(latest["title"]), len(latest["items"]))
-        head = hero(posts[0])
-        blocks = []
-        for c, name in CATS:
-            items = [p for p in posts if p["category"] == c and p["slug"] != posts[0]["slug"]][:4]
-            if not items:
-                continue
-            rows = "\n".join(card(p, theme) for p in items)
-            blocks.append(
-                '<section class="rubric"><div class="rubric__head"><h2>%s</h2>'
-                '<a class="rubric__all" href="/%s/">Все материалы →</a></div>'
-                '<div class="grid grid--list">%s</div></section>' % (name, c, rows))
-        content = '<main class="wrap">%s<div class="hero-wrap">%s</div>%s</main>' % (dblock, head, "\n".join(blocks))
+        # Одна лента: сверху два закреплённых больших материала, дальше сетка по четыре,
+        # всё сортировано по дате — без группировки по рубрикам, которая оставляла дырки.
+        lead2 = posts[:2]
+        rest = posts[2:]
+        top = ('<section class="lead-two">%s</section>'
+               % "\n".join(card(p, theme, big=True) for p in lead2)) if lead2 else ""
+        feed_rows = "\n".join(card(p, theme) for p in rest)
+        feed = ('<section class="feed-block"><div class="rubric__head"><h2>Все материалы</h2>'
+                '<span class="rubric__all">%d %s</span></div>'
+                '<div class="grid grid--feed">%s</div></section>'
+                % (len(posts), plural(len(posts), "материал", "материала", "материалов"), feed_rows)) if rest else ""
+        content = '<main class="wrap">%s%s%s</main>' % (dblock, top, feed)
     else:  # magazine
         head = hero(posts[0])
         cards = "\n".join(card(p, theme) for p in posts[1:])
@@ -967,6 +976,11 @@ def build(theme, out_dir, content_dir=None):
             if img.is_file():
                 shutil.copy(img, out / "assets" / "img" / img.name)
 
+    open_rubrics.clear()
+    for c, _n in CATS:
+        open_rubrics[c] = len([p for p in posts if p["category"] == c])
+    NAV_COUNTS["posts"] = len(posts)
+    NAV_COUNTS["digests"] = len(digests)
     (out / "index.html").write_text(render_index(posts, theme, digests), encoding="utf-8")
     for p in posts:
         (out / ("%s.html" % p["slug"])).write_text(render_post(p, posts, theme), encoding="utf-8")

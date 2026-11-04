@@ -298,3 +298,31 @@ a.chip:hover, a.chip:focus-visible { border-color: currentColor; }
 .sg-hint { margin: 12px 0 0; font-family: var(--font-text); font-size: var(--fs-small); color: var(--muted); }
 .sg-card { padding: 16px; border: 1px solid var(--line); border-radius: 4px; width: 100%; max-width: 420px; }
 @media (max-width: 560px) { .sg-row { grid-template-columns: 1fr; gap: 6px; } }
+
+/* ---------- главная: одна лента ---------- */
+/* сверху два закреплённых крупных материала, дальше сетка по четыре,
+   всё сортировано по дате — группировка по рубрикам давала дырки в сетке */
+.lead-two { display: grid; grid-template-columns: 1fr; gap: 0; }
+.lead-two .card { padding: 26px 0 30px; border-bottom: 1px solid var(--line); }
+.lead-two .card__cover { aspect-ratio: 16 / 9; }
+.lead-two .card__title { font-size: var(--fs-h1); line-height: var(--lh-tight); letter-spacing: -.02em; }
+.lead-two .card__sum { font-size: var(--fs-lead); line-height: 1.5; max-width: 62ch; }
+.feed-block { margin-top: 34px; }
+.grid--feed { display: grid; grid-template-columns: 1fr; gap: 0; }
+.grid--feed .card { padding: 22px 0; }
+
+@media (min-width: 720px) {
+  .lead-two { grid-template-columns: 1fr 1fr; column-gap: 46px; }
+  .lead-two .card { border-bottom: 0; }
+  .lead-two { border-bottom: 1px solid var(--line); }
+  .grid--feed { grid-template-columns: 1fr 1fr; column-gap: 46px; }
+}
+@media (min-width: 1100px) {
+  .lead-two { grid-template-columns: 1.35fr 1fr; column-gap: 56px; }
+  .grid--feed { grid-template-columns: repeat(4, 1fr); column-gap: 30px; }
+  .grid--feed .card__title { font-size: var(--fs-h2); }
+}
+
+/* счётчики в шапке: маленькие цифры в скобках, не спорим с названием раздела */
+.nav__num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0; margin-left: 4px; opacity: .55; }
+.nav__link:hover .nav__num { opacity: .9; }
