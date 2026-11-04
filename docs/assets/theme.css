@@ -238,13 +238,13 @@ img { max-width: 100%; display: block; }
 
 /* список выпусков */
 .dlist { padding: 8px 0 30px; }
-.drow { display: grid; grid-template-columns: max-content 1fr auto; gap: 18px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--line); border-left: 3px solid var(--part, var(--line)); padding-left: 14px; }
-.drow.is-morning { --part: #F5C518; }
-.drow.is-evening { --part: #A855F7; }
-.drow__date { display: flex; flex-direction: column; gap: 2px; text-decoration: none; }
+.drow { display: grid; grid-template-columns: max-content 1fr auto; gap: 18px; align-items: start; padding: 22px 18px; margin-bottom: 10px; border: 1px solid var(--line); border-left: 3px solid var(--part, var(--line)); border-radius: 4px; background: var(--part-tint, transparent); }
+.drow.is-morning { --part: #F5C518; --part-tint: rgba(245, 197, 24, .02); }
+.drow.is-evening { --part: #A855F7; --part-tint: rgba(168, 85, 247, .02); }
+.drow__date { display: flex; flex-direction: column; gap: 4px; text-decoration: none; }
 .drow__part { font-family: "Chava", sans-serif; font-size: 15px; line-height: 1.1; letter-spacing: .06em; color: var(--part, var(--muted)); text-transform: uppercase; }
 .drow__day { font-family: "Chava", sans-serif; font-size: 15px; line-height: 1.15; letter-spacing: .04em; color: var(--text); }
-.drow__title { margin: 0 0 6px; font-size: clamp(17px, 4.2vw, 21px); line-height: 1.25; }
+.drow__title { margin: 0 0 8px; font-size: clamp(19px, 4.9vw, 25px); line-height: 1.22; letter-spacing: -.015em; }
 .drow__title a:hover { color: var(--accent); }
 .drow__sum { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
 .drow__tags { display: flex; flex-wrap: wrap; gap: 5px; }

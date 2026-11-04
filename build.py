@@ -580,6 +580,15 @@ def strip_prefix(title):
     return re.sub(r"^(Утро|Вечер|День)\s+\d{1,2}\s+[а-яё]+:\s*", "", title, flags=re.I).strip()
 
 
+def sentence_case(text):
+    """Заголовок с заглавной буквы. Числа и аббревиатуры не трогаем."""
+    if not text:
+        return text
+    if text[0].isdigit() or (len(text) > 1 and text[1].isdigit()):
+        return text
+    return text[0].upper() + text[1:]
+
+
 def digest_tags(d):
     seen, out = set(), []
     for it in d["items"]:
@@ -695,7 +704,7 @@ def render_digests_index(digests, theme):
     rows = []
     for d in digests:
         rows.append("""<article class="drow cat-{cat} is-{slot}">
-  <a class="drow__date" href="/digests/{slug}.html"><span class="drow__part">{part}</span><span class="drow__day">{day}</span></a>
+  <a class="drow__date" href="/digests/{slug}.html"><span class="drow__day">{day}</span><span class="drow__part">{part}</span></a>
   <div class="drow__body">
     <h3 class="drow__title"><a href="/digests/{slug}.html">{title}</a></h3>
     <p class="drow__sum">{sum}</p>
@@ -705,7 +714,7 @@ def render_digests_index(digests, theme):
 </article>""".format(slot=("morning" if d["date"].hour < 12 else "evening"),
                     cat=(digest_tags(d)[0][0] if digest_tags(d) else "ai"),
                     slug=d["slug"], part=part_of_day(d["date"]).upper(), day=ru_date(d["date"]),
-                    title=html.escape(strip_prefix(d["title"])), sum=html.escape(d["summary"]),
+                    title=html.escape(sentence_case(strip_prefix(d["title"]))), sum=html.escape(d["summary"]),
                     tags=tags_html(d), count=news_count(len(d["items"]))))
     content = ('<main class="wrap"><section class="lead"><h1>Дайджесты</h1>'
                '<p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p>'
