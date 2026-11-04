@@ -548,17 +548,80 @@ def build(theme, out_dir, content_dir=None):
         shutil.copy(ROOT / "static" / "CNAME", out / "CNAME")
     return posts
 
+
+# ---------- дайджест: техническая мета и оформление ----------
+
+MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
+              "июля", "августа", "сентября", "октября", "ноября", "декабря"]
+
+
+def part_of_day(dt):
+    return "Утро" if dt.hour < 12 else "Вечер"
+
+
+def ru_date(dt):
+    return "%d %s" % (dt.day, MONTHS_GEN[dt.month - 1])
+
+
+def plural(n, one, few, many):
+    if n % 10 == 1 and n % 100 != 11:
+        return one
+    if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
+        return few
+    return many
+
+
+def news_count(n):
+    return "%d %s" % (n, plural(n, "новость", "новости", "новостей"))
+
+
+def strip_prefix(title):
+    """«Вечер 3 ноября: Anthropic к IPO…» → «Anthropic к IPO…»"""
+    return re.sub(r"^(Утро|Вечер|День)\s+\d{1,2}\s+[а-яё]+:\s*", "", title, flags=re.I).strip()
+
+
+def digest_tags(d):
+    seen, out = set(), []
+    for it in d["items"]:
+        c = CAT_ALIAS.get(it["category"], it["category"])
+        if c in CAT_NAME and c not in seen:
+            seen.add(c)
+            out.append((c, CAT_NAME[c]))
+    return out
+
+
+def tags_html(d, solid=False):
+    cls = "chip chip--solid" if solid else "chip chip--sm"
+    return "".join('<span class="%s cat-%s">%s</span>' % (cls, c, n) for c, n in digest_tags(d))
+
+
+# иконки рубрик — инлайн-SVG, без внешних библиотек
+ICONS = {
+    "xbox": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M7.5 7.5c2.6 2.4 4.2 5.1 6 9M16.5 7.5c-2.6 2.4-4.2 5.1-6 9"/></svg>',
+    "switch": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="8" height="14" rx="3"/><rect x="13" y="5" width="8" height="14" rx="3"/><circle cx="7" cy="9" r="1.3"/><circle cx="17" cy="15" r="1.3"/></svg>',
+    "playstation": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8v9l4-1.5V6c1.2-.6 2 .2 2 1.8V14l5-2c2-.8 3 .2 3 1.8 0 1.4-.8 2.3-2.4 2.9L9 20"/></svg>',
+    "pc": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="11" rx="2"/><path d="M8 20h8M12 16v4"/></svg>',
+    "kino": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M8 6v12M16 6v12M3 12h18"/></svg>',
+    "serialy": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 3l4 4 4-4"/></svg>',
+    "ai": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg>',
+    "vr": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9h18v5a3 3 0 0 1-3 3h-3l-3-3-3 3H6a3 3 0 0 1-3-3z"/></svg>',
+}
+
+
 # ---------- дайджесты ----------
 
-DIGEST_ITEM = """<article class="ditem">
-  <div class="ditem__meta"><span class="chip chip--sm cat-{cat}">{catname}</span></div>
-  <h3 class="ditem__title">{title}</h3>
-  <p class="ditem__text">{text}</p>
-  {src}
+DIGEST_ITEM = """<article class="ditem cat-{cat}">
+  <div class="ditem__rail"><span class="ditem__num">{num}</span><span class="ditem__icon">{icon}</span></div>
+  <div class="ditem__body">
+    <div class="ditem__meta"><span class="chip chip--sm cat-{cat}">{catname}</span></div>
+    <h3 class="ditem__title">{title}</h3>
+    <p class="ditem__text">{text}</p>
+    {src}
+  </div>
 </article>"""
 
 
-def digest_item(it):
+def digest_item(it, num):
     cat = CAT_ALIAS.get(it["category"], it["category"])
     if cat not in CAT_NAME:
         cat = "ai"
@@ -569,7 +632,8 @@ def digest_item(it):
         src = ('<a class="ditem__src" href="%s" rel="nofollow noopener" target="_blank">%s</a>'
                % (html.escape(url), html.escape(name or url))) if url else (
                '<span class="ditem__src">%s</span>' % html.escape(name))
-    return DIGEST_ITEM.format(cat=cat, catname=CAT_NAME.get(cat, cat), title=html.escape(it["title"]),
+    return DIGEST_ITEM.format(cat=cat, catname=CAT_NAME.get(cat, cat), num="%02d" % num,
+                              icon=ICONS.get(cat, ""), title=html.escape(it["title"]),
                               text=html.escape(it["summary"]), src=src)
 
 
@@ -579,50 +643,68 @@ def render_digest(d, theme, next_d=None, prev_d=None):
     for it in d["items"]:
         c = CAT_ALIAS.get(it["category"], it["category"])
         groups.setdefault(CAT_NAME.get(c, "Другое"), []).append(it)
+
+    # нумерация сквозная по всему выпуску
+    numbered, n = {}, 0
+    for it in d["items"]:
+        n += 1
+        numbered[id(it)] = n
     blocks = []
     for name, items in groups.items():
-        # имя рубрики уже стоит чипом в каждой новости — заголовок группы его дублировал
-        blocks.append('<section class="dgroup">%s</section>'
-                      % "".join(digest_item(i) for i in items))
+        rows = "".join(digest_item(i, numbered[id(i)]) for i in items)
+        blocks.append('<section class="dgroup">%s</section>' % rows)
+
+    head_title = strip_prefix(d["title"])
+    meta = "%s · %s" % (ru_date(d["date"]), news_count(len(d["items"])))
     nav = ""
     if next_d or prev_d:
         nav = '<nav class="dnav">%s%s</nav>' % (
-            '<a href="/digests/%s.html">← %s</a>' % (prev_d["slug"], prev_d["date"].strftime("%d.%m, %H:%M")) if prev_d else "<span></span>",
-            '<a href="/digests/%s.html">%s →</a>' % (next_d["slug"], next_d["date"].strftime("%d.%m, %H:%M")) if next_d else "<span></span>")
+            '<a href="/digests/%s.html">← %s, %s</a>' % (prev_d["slug"], part_of_day(prev_d["date"]).lower(), ru_date(prev_d["date"])) if prev_d else "<span></span>",
+            '<a href="/digests/%s.html">%s, %s →</a>' % (next_d["slug"], part_of_day(next_d["date"]).lower(), ru_date(next_d["date"])) if next_d else "<span></span>")
+
     content = """<main class="wrap">
 <article class="digest">
-  <header class="post__head">
-    <div class="post__meta"><span class="chip chip--solid">Дайджест</span><time>{date}</time></div>
+  <header class="digest__head">
+    <div class="digest__meta">
+      <span class="digest__part"><span class="digest__dot"></span>{part}</span>
+      <span class="digest__sep">·</span><span>{meta}</span>
+    </div>
     <h1>{title}</h1>
-    <p class="post__lead">{sum} · {count} новостей</p>
+    <div class="digest__tags">{tags}</div>
+    {lead}
   </header>
-  {body}
   {blocks}
   {srcs}
   {share}
   {nav}
 </article>
 </main>""".format(
-        date=d["date"].strftime("%d.%m.%Y, %H:%M"), title=html.escape(d["title"]),
-        sum=html.escape(d["summary"]), count=len(d["items"]), blocks="".join(blocks),
-        body=md(d["body"]) if d["body"] else "", nav=nav,
+        part=part_of_day(d["date"]), meta=html.escape(meta), title=html.escape(head_title),
+        tags=tags_html(d), lead=('<p class="post__lead">%s</p>' % html.escape(d["summary"])) if d["summary"] else "",
+        blocks="".join(blocks), nav=nav,
         share=share_block(SITE["url"] + "/digests/" + d["slug"] + ".html", d["title"]),
         srcs=('<section class="sources"><h2>Все источники</h2><ol>%s</ol></section>' % "".join(
             '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (
                 html.escape(s["url"]), html.escape(s["name"])) for s in d["sources"] if s["url"])) if d["sources"] else "",
     )
-    return page("%s — %s" % (d["title"], SITE["title"]), d["summary"], content, theme)
+    return page("%s — %s" % (head_title, SITE["title"]), d["summary"] or meta, content, theme)
 
 
 def render_digests_index(digests, theme):
     rows = []
     for d in digests:
-        rows.append("""<article class="drow">
-  <div class="drow__meta"><time>{date}</time><span class="drow__count">{count} новостей</span></div>
-  <h3 class="drow__title"><a href="/digests/{slug}.html">{title}</a></h3>
-  <p class="drow__sum">{sum}</p>
-</article>""".format(date=d["date"].strftime("%d.%m.%Y, %H:%M"), count=len(d["items"]),
-                    slug=d["slug"], title=html.escape(d["title"]), sum=html.escape(d["summary"])))
+        rows.append("""<article class="drow cat-{cat}">
+  <a class="drow__date" href="/digests/{slug}.html"><span class="drow__part">{part}</span><span class="drow__day">{day}</span></a>
+  <div class="drow__body">
+    <h3 class="drow__title"><a href="/digests/{slug}.html">{title}</a></h3>
+    <p class="drow__sum">{sum}</p>
+    <div class="drow__tags">{tags}</div>
+  </div>
+  <span class="drow__count">{count}</span>
+</article>""".format(cat=(digest_tags(d)[0][0] if digest_tags(d) else "ai"),
+                    slug=d["slug"], part=part_of_day(d["date"]).upper(), day=ru_date(d["date"]),
+                    title=html.escape(strip_prefix(d["title"])), sum=html.escape(d["summary"]),
+                    tags=tags_html(d), count=news_count(len(d["items"]))))
     content = ('<main class="wrap"><section class="lead"><h1>Дайджесты</h1>'
                '<p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p>'
                '</section><div class="dlist">%s</div></main>') % ("".join(rows) or "<p>Пока пусто.</p>")

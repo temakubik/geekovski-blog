@@ -197,3 +197,57 @@ img { max-width: 100%; display: block; }
 @media (max-width: 520px) {
   .share__btn--copy { margin-left: 0; flex: 1 1 100%; text-align: center; }
 }
+
+/* ---------- дайджест: техническая мета, рельса с иконками, теги ---------- */
+.digest__head { padding: 34px 0 6px; }
+.digest__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-family: "Medeo Mono", monospace; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.digest__part { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); }
+.digest__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.digest__sep { opacity: .45; }
+.digest__head h1 { font-size: clamp(26px, 6.2vw, 42px); line-height: 1.12; letter-spacing: -.02em; margin: 0 0 14px; }
+.digest__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+
+/* карточка новости: слева нумерованная рельса с иконкой рубрики */
+.dgroup { margin-top: 18px; }
+.ditem { display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--line); position: relative; }
+.ditem:first-of-type { border-top: 1px solid var(--line); }
+.ditem__rail { display: flex; flex-direction: column; align-items: center; gap: 10px; padding-top: 2px; }
+.ditem__num { font-family: "Medeo Mono", monospace; font-size: 11px; letter-spacing: .06em; color: var(--muted); }
+.ditem__icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 8px; background: color-mix(in srgb, var(--cat, var(--accent)) 14%, transparent); color: var(--cat, var(--accent)); }
+.ditem__icon svg { display: block; }
+.ditem__body { min-width: 0; }
+.ditem__title { margin: 6px 0 8px; }
+.ditem__text { margin: 0 0 10px; }
+.ditem__src { font-family: "Medeo Mono", monospace; }
+
+/* цвет рубрики как переменная */
+.cat-xbox { --cat: #2FB344; }
+.cat-switch { --cat: #E60012; }
+.cat-playstation { --cat: #2F6DF6; }
+.cat-pc { --cat: #8B5CF6; }
+.cat-kino { --cat: #F0553F; }
+.cat-serialy { --cat: #F5A524; }
+.cat-ai { --cat: #14B8A6; }
+.cat-vr { --cat: #A855F7; }
+.ditem.cat-xbox .ditem__icon, .ditem.cat-switch .ditem__icon, .ditem.cat-playstation .ditem__icon,
+.ditem.cat-pc .ditem__icon, .ditem.cat-kino .ditem__icon, .ditem.cat-serialy .ditem__icon,
+.ditem.cat-ai .ditem__icon, .ditem.cat-vr .ditem__icon { color: var(--cat); background: color-mix(in srgb, var(--cat) 15%, transparent); }
+
+/* список выпусков */
+.dlist { padding: 8px 0 30px; }
+.drow { display: grid; grid-template-columns: 84px 1fr auto; gap: 16px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--line); border-left: 3px solid var(--cat, var(--line)); padding-left: 14px; }
+.drow__date { display: flex; flex-direction: column; gap: 2px; text-decoration: none; }
+.drow__part { font-family: "Medeo Mono", monospace; font-size: 10px; letter-spacing: .14em; color: var(--cat, var(--accent)); }
+.drow__day { font-family: "Medeo Sans", sans-serif; font-weight: 600; font-size: 13px; color: var(--text); line-height: 1.25; letter-spacing: -.01em; }
+.drow__title { margin: 0 0 6px; font-size: clamp(17px, 4.2vw, 21px); line-height: 1.25; }
+.drow__title a:hover { color: var(--accent); }
+.drow__sum { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.drow__tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.drow__count { font-family: "Medeo Mono", monospace; font-size: 11px; color: var(--muted); white-space: nowrap; padding-top: 3px; }
+
+@media (max-width: 560px) {
+  .ditem { grid-template-columns: 38px 1fr; gap: 11px; }
+  .ditem__icon { width: 30px; height: 30px; }
+  .drow { grid-template-columns: 66px 1fr; }
+  .drow__count { grid-column: 2; padding-top: 0; }
+}
