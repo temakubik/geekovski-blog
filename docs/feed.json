@@ -1,229 +1,293 @@
-[
- {
-  "slug": "blue-eye-samurai-season-2",
-  "title": "Blue Eye Samurai: второй сезон выйдет 19 января 2027",
-  "date": "2026-11-04T15:05:00",
-  "category": "serialy",
-  "summary": "Netflix назвал дату премьеры — шесть серий, Лондон 1657 года и Мидзу, которая наконец добирается до тех, кто её сделал. Третий сезон уже заказан и станет последним.",
-  "sources": [
-   {
-    "name": "Netflix Tudum — дата премьеры второго сезона и интервью создателей",
-    "url": "https://www.netflix.com/tudum/articles/blue-eye-samurai-season-2-release-date"
-   },
-   {
-    "name": "Deadline — Netflix назначил премьеру Blue Eye Samurai",
-    "url": "https://deadline.com/2026/11/blue-eye-samurai-season-2-release-date-netflix-1237212165/"
-   },
-   {
-    "name": "Variety — дата второго сезона и третий финальный сезон",
-    "url": "https://variety.com/2026/tv/news/blue-eye-samurai-season-2-release-date-netflix-1236938383/"
-   }
-  ]
- },
- {
-  "slug": "claude-vodyanoy-znak-starye-modeli",
-  "title": "Claude ставит водяные знаки на старые модели",
-  "date": "2026-11-04T12:05:00",
-  "category": "ai",
-  "summary": "С 3 ноября Anthropic прячет в тексте трёх старых моделей Claude невидимый водяной знак — и на одной из них его можно обойти настройкой sampling.",
-  "sources": [
-   {
-    "name": "Anthropic — как работает текстовый водяной знак",
-    "url": "https://www.anthropic.com/news/claude-text-watermark"
-   },
-   {
-    "name": "Claude Platform — release notes за 3 ноября 2026",
-    "url": "https://platform.claude.com/docs/en/release-notes/overview"
-   },
-   {
-    "name": "Claude Help Center — как Claude маркирует сгенерированный контент",
-    "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
-   },
-   {
-    "name": "The Verge — разбор SynthID-Text",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system"
-   },
-   {
-    "name": "The Decoder — лазейка с параметрами sampling",
-    "url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/"
-   }
-  ]
- },
- {
-  "slug": "gta-6-predzagruzka-212-gb",
-  "title": "GTA VI: предзагрузка с 10 ноября и 212 ГБ",
-  "date": "2026-11-04T09:05:00",
-  "category": "playstation",
-  "summary": "Rockstar официально подтвердила размер GTA VI — до 212 ГБ, а предзагрузка стартует не 12 ноября, как говорили раньше, а на два дня раньше. В коробочных изданиях диска не будет.",
-  "sources": [
-   {
-    "name": "Rockstar Newswire — GTA VI: Pre-Load Begins on November 10",
-    "url": "https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10"
-   },
-   {
-    "name": "Rockstar Support — Grand Theft Auto VI Pre-Load FAQ",
-    "url": "https://support.rockstargames.com/articles/7nPqOA2uCbpEQHXx7KVrYd/grand-theft-auto-vi-pre-load-faq"
-   },
-   {
-    "name": "VideoCardz — GTA VI preload begins November 10, up to 212GB",
-    "url": "https://videocardz.com/newz/gta-vi-preload-begins-november-10-requires-up-to-212gb-of-storage"
-   },
-   {
-    "name": "Shazoo — предзагрузка GTA 6 стартует на два дня раньше",
-    "url": "https://shazoo.ru/2026/11/03/193484/predzagruzka-gta-6-startuet-na-dva-dnya-ranse-i-potrebuet-212-gb"
-   }
-  ]
- },
- {
-  "slug": "meta-quest-2-pro-konets-obnovleniy",
-  "title": "Quest 2 и Quest Pro: Meta объявила последнее обновление",
-  "date": "2026-11-03T21:05:00",
-  "category": "vr",
-  "summary": "Horizon OS 2.13 станет финальной прошивкой для Quest 2 и Quest Pro — новые функции уйдут на Quest 3 и новее, а патчи безопасности будут выходить до конца 2027 года.",
-  "sources": [
-   {
-    "name": "Meta — Quest 2 и Quest Pro: конец разработки функций",
-    "url": "https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/"
-   },
-   {
-    "name": "UploadVR — Meta Is Winding Down Quest 2 & Quest Pro Support",
-    "url": "https://www.uploadvr.com/meta-is-winding-down-quest-2-quest-pro-support-next-year/"
-   },
-   {
-    "name": "The Verge — Meta will end Quest 2 OS updates in 2027",
-    "url": "https://www.theverge.com/tech/1024835/meta-vr-quest-2-pro-os-end-updates"
-   },
-   {
-    "name": "9to5Google — последние обновления Quest 2 и Quest Pro",
-    "url": "https://9to5google.com/2026/11/02/the-meta-quest-2-and-quest-pro-are-receiving-their-last-os-updates-soon-heres-what-you-need-to-know/"
-   },
-   {
-    "name": "UploadVR — конец поддержки Windows Mixed Reality",
-    "url": "https://uploadvr.com/windows-mixed-reality-headset-support-end-date"
-   }
-  ]
- },
- {
-  "slug": "anthropic-ipo-895-mlrd",
-  "title": "Anthropic перед IPO: счёт за чипы на $895 млрд",
-  "date": "2026-11-03T18:00:00",
-  "category": "ai",
-  "summary": "Обновлённый проспект S-1: выручка $17 млрд за квартал, но обязательства по вычислениям в семь раз больше запаса кэша.",
-  "sources": [
-   {
-    "name": "CNBC — обновлённый проспект S-1/A",
-    "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html"
-   },
-   {
-    "name": "Yahoo Finance — счёт за вычисления",
-    "url": "https://finance.yahoo.com/markets/article/anthropics-new-ipo-filing-puts-its-computing-bill-near-900-billion-151830444.html"
-   },
-   {
-    "name": "CNBC — разбор первичного S-1",
-    "url": "https://www.cnbc.com/2026/10/30/anthropic-ipo-s1-revenue-compute.html"
-   },
-   {
-    "name": "Fortune — первичный проспект и ожидаемая оценка",
-    "url": "https://fortune.com/2026/10/26/anthropics-s-1/"
-   }
-  ]
- },
- {
-  "slug": "pikmin-4-switch-2-demo",
-  "title": "Pikmin 4 на Switch 2 — бесплатное демо уже в eShop, полный релиз 12 ноября",
-  "date": "2026-11-02T10:05:00",
-  "category": "switch",
-  "summary": "Nintendo провела Pikmin Direct за десять минут до эфира, объявила «День пикмина» и выкатила демку: стартовая зона плюс два экзамена Dandori Academy.",
-  "sources": [
-   {
-    "name": "Nintendo Life — итоги Pikmin Day",
-    "url": "https://www.nintendolife.com/news/2026/11/round-up-pikmin-day-2026-updates-demo-and-new-animated-shorts"
-   },
-   {
-    "name": "GoNintendo — демо и Dandori Academy",
-    "url": "https://gonintendo.com/contents/66746-pikmin-4-nintendo-switch-2-edition-dandori-academy-getting-free-demo-nov-2nd-2026"
-   }
-  ]
- },
- {
-  "slug": "zelda-ocarina-switch-2",
-  "title": "Zelda: Ocarina of Time на Switch 2 — 5 ноября, и это не ремастер в привычном смысле",
-  "date": "2026-11-01T12:10:00",
-  "category": "switch",
-  "summary": "Полностью озвученные катсцены, игра на окарине через микрофон консоли и выросший до 24,5 ГБ размер. Разбираем, что именно Nintendo меняет в легендарной игре.",
-  "sources": [
-   {
-    "name": "Nintendo Everything — трейлер «What's New»",
-    "url": "https://nintendoeverything.com/zelda-ocarina-of-time-nintendo-switch-2-remake-whats-new-trailer/"
-   },
-   {
-    "name": "Notebookcheck — эмбарго на рецензии",
-    "url": "https://www.notebookcheck.net/Metacritic-reveals-Zelda-Ocarina-of-Time-review-embargo-as-release-date-approaches.1438321.0.html"
-   }
-  ]
- },
- {
-  "slug": "monster-hunter-wilds-switch-2",
-  "title": "Monster Hunter Wilds на Switch 2 — 4 декабря, и 30 fps здесь не приговор",
-  "date": "2026-10-31T09:40:00",
-  "category": "switch",
-  "summary": "Демо Prologue живёт с 19 октября, предзаказы открыты, сейв переносится в полную версию. Главный третьесторонний релиз года для платформы.",
-  "sources": [
-   {
-    "name": "Monster Hunter Wilds — официальный сайт",
-    "url": "https://www.monsterhunter.com/wilds/en-us"
-   }
-  ]
- },
- {
-  "slug": "gemini-4-argon",
-  "title": "Gemini 4 Argon — миллион токенов на выходе, но пользоваться ей пока нельзя",
-  "date": "2026-10-30T14:20:00",
-  "category": "ai",
-  "summary": "Google подняла лимит вывода до 1 млн токенов и поставила цену 2/10 доллара за миллион, но доступ открыт только доверенным киберзащитникам.",
-  "sources": [
-   {
-    "name": "Google Blog — Gemini 4 Argon",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon"
-   },
-   {
-    "name": "Ars Technica — модель анонсирована, но недоступна",
-    "url": "https://arstechnica.com/ai/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it"
-   }
-  ]
- },
- {
-  "slug": "iphone-duo",
-  "title": "iPhone Duo — первый складной iPhone: предзаказы 16 октября, продажи с 23-го",
-  "date": "2026-10-29T18:05:00",
-  "category": "gadgets",
-  "summary": "Книжный формат, внешний экран ~5,4″, внутренний ~7,6″ и цена от 1999 до 3199 долларов за версию на 2 ТБ. Разбираем, кому это вообще нужно.",
-  "sources": [
-   {
-    "name": "Lenta.ru — линейка iPhone 18 и iPhone Duo",
-    "url": "https://lenta.ru/articles/2026/09/24/iphone-18-all"
-   },
-   {
-    "name": "Hi-Tech Mail — всё об iPhone 18",
-    "url": "https://hi-tech.mail.ru/articles/142865-vse-ob-iphone-18"
-   }
-  ]
- },
- {
-  "slug": "carrie-prime-video",
-  "title": "«Кэрри» Майка Флэнагана — все восемь серий на Prime Video, 85% на Rotten Tomatoes",
-  "date": "2026-10-28T21:30:00",
-  "category": "kino",
-  "summary": "Осовремененная экранизация Кинга про травлю в эпоху соцсетей. Сам Кинг назвал сериал «блестящим» — и это редкость.",
-  "sources": [
-   {
-    "name": "Киноафиша — «Кэрри», 85% RT",
-    "url": "https://www.kinoafisha.info/articles/amazon-vydal-odnu-iz-luchshih-adaptaciy-stivena-kinga--ot-novogo-seriala-s-reytingom-85-ne-hochetsya-otryvatsya_id139823_a16283248"
-   },
-   {
-    "name": "Кино Mail.ru — Кинг о сериале",
-    "url": "https://kino.mail.ru/news/138832-stiven-king-vysoko-ocenil-novyj-serial-po-svoemu-romanu"
-   }
-  ]
- }
-]
+{
+ "version": "https://jsonfeed.org/version/1.1",
+ "title": "GEEKOVSKI",
+ "home_page_url": "https://geekovski.ru/",
+ "feed_url": "https://geekovski.ru/feed.json",
+ "description": "Технологии, игры и кино без маркетингового сиропа",
+ "language": "ru",
+ "favicon": "https://geekovski.ru/assets/img/icon-512.png",
+ "items": [
+  {
+   "id": "https://geekovski.ru/blue-eye-samurai-season-2.html",
+   "url": "https://geekovski.ru/blue-eye-samurai-season-2.html",
+   "title": "Blue Eye Samurai: второй сезон выйдет 19 января 2027",
+   "summary": "Netflix назвал дату премьеры — шесть серий, Лондон 1657 года и Мидзу, которая наконец добирается до тех, кто её сделал. Третий сезон уже заказан и станет последним.",
+   "date_published": "2026-11-04T15:05:00+03:00",
+   "date_modified": "2026-11-04T15:05:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/blue-eye-samurai-season-2.jpg",
+   "_sources": [
+    {
+     "name": "Netflix Tudum — дата премьеры второго сезона и интервью создателей",
+     "url": "https://www.netflix.com/tudum/articles/blue-eye-samurai-season-2-release-date"
+    },
+    {
+     "name": "Deadline — Netflix назначил премьеру Blue Eye Samurai",
+     "url": "https://deadline.com/2026/11/blue-eye-samurai-season-2-release-date-netflix-1237212165/"
+    },
+    {
+     "name": "Variety — дата второго сезона и третий финальный сезон",
+     "url": "https://variety.com/2026/tv/news/blue-eye-samurai-season-2-release-date-netflix-1236938383/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/claude-vodyanoy-znak-starye-modeli.html",
+   "url": "https://geekovski.ru/claude-vodyanoy-znak-starye-modeli.html",
+   "title": "Claude ставит водяные знаки на старые модели",
+   "summary": "С 3 ноября Anthropic прячет в тексте трёх старых моделей Claude невидимый водяной знак — и на одной из них его можно обойти настройкой sampling.",
+   "date_published": "2026-11-04T12:05:00+03:00",
+   "date_modified": "2026-11-04T12:05:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/claude-watermark.jpg",
+   "_sources": [
+    {
+     "name": "Anthropic — как работает текстовый водяной знак",
+     "url": "https://www.anthropic.com/news/claude-text-watermark"
+    },
+    {
+     "name": "Claude Platform — release notes за 3 ноября 2026",
+     "url": "https://platform.claude.com/docs/en/release-notes/overview"
+    },
+    {
+     "name": "Claude Help Center — как Claude маркирует сгенерированный контент",
+     "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+    },
+    {
+     "name": "The Verge — разбор SynthID-Text",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system"
+    },
+    {
+     "name": "The Decoder — лазейка с параметрами sampling",
+     "url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/gta-6-predzagruzka-212-gb.html",
+   "url": "https://geekovski.ru/gta-6-predzagruzka-212-gb.html",
+   "title": "GTA VI: предзагрузка с 10 ноября и 212 ГБ",
+   "summary": "Rockstar официально подтвердила размер GTA VI — до 212 ГБ, а предзагрузка стартует не 12 ноября, как говорили раньше, а на два дня раньше. В коробочных изданиях диска не будет.",
+   "date_published": "2026-11-04T09:05:00+03:00",
+   "date_modified": "2026-11-04T09:05:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta-6-predzagruzka-212-gb.jpg",
+   "_sources": [
+    {
+     "name": "Rockstar Newswire — GTA VI: Pre-Load Begins on November 10",
+     "url": "https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10"
+    },
+    {
+     "name": "Rockstar Support — Grand Theft Auto VI Pre-Load FAQ",
+     "url": "https://support.rockstargames.com/articles/7nPqOA2uCbpEQHXx7KVrYd/grand-theft-auto-vi-pre-load-faq"
+    },
+    {
+     "name": "VideoCardz — GTA VI preload begins November 10, up to 212GB",
+     "url": "https://videocardz.com/newz/gta-vi-preload-begins-november-10-requires-up-to-212gb-of-storage"
+    },
+    {
+     "name": "Shazoo — предзагрузка GTA 6 стартует на два дня раньше",
+     "url": "https://shazoo.ru/2026/11/03/193484/predzagruzka-gta-6-startuet-na-dva-dnya-ranse-i-potrebuet-212-gb"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/meta-quest-2-pro-konets-obnovleniy.html",
+   "url": "https://geekovski.ru/meta-quest-2-pro-konets-obnovleniy.html",
+   "title": "Quest 2 и Quest Pro: Meta объявила последнее обновление",
+   "summary": "Horizon OS 2.13 станет финальной прошивкой для Quest 2 и Quest Pro — новые функции уйдут на Quest 3 и новее, а патчи безопасности будут выходить до конца 2027 года.",
+   "date_published": "2026-11-03T21:05:00+03:00",
+   "date_modified": "2026-11-03T21:05:00+03:00",
+   "tags": [
+    "VR"
+   ],
+   "image": "https://geekovski.ru/assets/img/meta-quest-2-pro-konets.jpg",
+   "_sources": [
+    {
+     "name": "Meta — Quest 2 и Quest Pro: конец разработки функций",
+     "url": "https://developers.meta.com/vr/blog/meta-quest-2-quest-pro-end-of-feature-development-what-to-know/"
+    },
+    {
+     "name": "UploadVR — Meta Is Winding Down Quest 2 & Quest Pro Support",
+     "url": "https://www.uploadvr.com/meta-is-winding-down-quest-2-quest-pro-support-next-year/"
+    },
+    {
+     "name": "The Verge — Meta will end Quest 2 OS updates in 2027",
+     "url": "https://www.theverge.com/tech/1024835/meta-vr-quest-2-pro-os-end-updates"
+    },
+    {
+     "name": "9to5Google — последние обновления Quest 2 и Quest Pro",
+     "url": "https://9to5google.com/2026/11/02/the-meta-quest-2-and-quest-pro-are-receiving-their-last-os-updates-soon-heres-what-you-need-to-know/"
+    },
+    {
+     "name": "UploadVR — конец поддержки Windows Mixed Reality",
+     "url": "https://uploadvr.com/windows-mixed-reality-headset-support-end-date"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/anthropic-ipo-895-mlrd.html",
+   "url": "https://geekovski.ru/anthropic-ipo-895-mlrd.html",
+   "title": "Anthropic перед IPO: счёт за чипы на $895 млрд",
+   "summary": "Обновлённый проспект S-1: выручка $17 млрд за квартал, но обязательства по вычислениям в семь раз больше запаса кэша.",
+   "date_published": "2026-11-03T18:00:00+03:00",
+   "date_modified": "2026-11-03T18:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/anthropic-ipo-895.jpg",
+   "_sources": [
+    {
+     "name": "CNBC — обновлённый проспект S-1/A",
+     "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html"
+    },
+    {
+     "name": "Yahoo Finance — счёт за вычисления",
+     "url": "https://finance.yahoo.com/markets/article/anthropics-new-ipo-filing-puts-its-computing-bill-near-900-billion-151830444.html"
+    },
+    {
+     "name": "CNBC — разбор первичного S-1",
+     "url": "https://www.cnbc.com/2026/10/30/anthropic-ipo-s1-revenue-compute.html"
+    },
+    {
+     "name": "Fortune — первичный проспект и ожидаемая оценка",
+     "url": "https://fortune.com/2026/10/26/anthropics-s-1/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/pikmin-4-switch-2-demo.html",
+   "url": "https://geekovski.ru/pikmin-4-switch-2-demo.html",
+   "title": "Pikmin 4 на Switch 2 — бесплатное демо уже в eShop, полный релиз 12 ноября",
+   "summary": "Nintendo провела Pikmin Direct за десять минут до эфира, объявила «День пикмина» и выкатила демку: стартовая зона плюс два экзамена Dandori Academy.",
+   "date_published": "2026-11-02T10:05:00+03:00",
+   "date_modified": "2026-11-02T10:05:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/pikmin-4-switch-2-demo.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo Life — итоги Pikmin Day",
+     "url": "https://www.nintendolife.com/news/2026/11/round-up-pikmin-day-2026-updates-demo-and-new-animated-shorts"
+    },
+    {
+     "name": "GoNintendo — демо и Dandori Academy",
+     "url": "https://gonintendo.com/contents/66746-pikmin-4-nintendo-switch-2-edition-dandori-academy-getting-free-demo-nov-2nd-2026"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/zelda-ocarina-switch-2.html",
+   "url": "https://geekovski.ru/zelda-ocarina-switch-2.html",
+   "title": "Zelda: Ocarina of Time на Switch 2 — 5 ноября, и это не ремастер в привычном смысле",
+   "summary": "Полностью озвученные катсцены, игра на окарине через микрофон консоли и выросший до 24,5 ГБ размер. Разбираем, что именно Nintendo меняет в легендарной игре.",
+   "date_published": "2026-11-01T12:10:00+03:00",
+   "date_modified": "2026-11-01T12:10:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/zelda-ocarina-switch-2.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo Everything — трейлер «What's New»",
+     "url": "https://nintendoeverything.com/zelda-ocarina-of-time-nintendo-switch-2-remake-whats-new-trailer/"
+    },
+    {
+     "name": "Notebookcheck — эмбарго на рецензии",
+     "url": "https://www.notebookcheck.net/Metacritic-reveals-Zelda-Ocarina-of-Time-review-embargo-as-release-date-approaches.1438321.0.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/monster-hunter-wilds-switch-2.html",
+   "url": "https://geekovski.ru/monster-hunter-wilds-switch-2.html",
+   "title": "Monster Hunter Wilds на Switch 2 — 4 декабря, и 30 fps здесь не приговор",
+   "summary": "Демо Prologue живёт с 19 октября, предзаказы открыты, сейв переносится в полную версию. Главный третьесторонний релиз года для платформы.",
+   "date_published": "2026-10-31T09:40:00+03:00",
+   "date_modified": "2026-10-31T09:40:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/monster-hunter-wilds-switch-2.jpg",
+   "_sources": [
+    {
+     "name": "Monster Hunter Wilds — официальный сайт",
+     "url": "https://www.monsterhunter.com/wilds/en-us"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/gemini-4-argon.html",
+   "url": "https://geekovski.ru/gemini-4-argon.html",
+   "title": "Gemini 4 Argon — миллион токенов на выходе, но пользоваться ей пока нельзя",
+   "summary": "Google подняла лимит вывода до 1 млн токенов и поставила цену 2/10 доллара за миллион, но доступ открыт только доверенным киберзащитникам.",
+   "date_published": "2026-10-30T14:20:00+03:00",
+   "date_modified": "2026-10-30T14:20:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/gemini-4-argon.png",
+   "_sources": [
+    {
+     "name": "Google Blog — Gemini 4 Argon",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon"
+    },
+    {
+     "name": "Ars Technica — модель анонсирована, но недоступна",
+     "url": "https://arstechnica.com/ai/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/iphone-duo.html",
+   "url": "https://geekovski.ru/iphone-duo.html",
+   "title": "iPhone Duo — первый складной iPhone: предзаказы 16 октября, продажи с 23-го",
+   "summary": "Книжный формат, внешний экран ~5,4″, внутренний ~7,6″ и цена от 1999 до 3199 долларов за версию на 2 ТБ. Разбираем, кому это вообще нужно.",
+   "date_published": "2026-10-29T18:05:00+03:00",
+   "date_modified": "2026-10-29T18:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/iphone-duo.jpg",
+   "_sources": [
+    {
+     "name": "Lenta.ru — линейка iPhone 18 и iPhone Duo",
+     "url": "https://lenta.ru/articles/2026/09/24/iphone-18-all"
+    },
+    {
+     "name": "Hi-Tech Mail — всё об iPhone 18",
+     "url": "https://hi-tech.mail.ru/articles/142865-vse-ob-iphone-18"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/carrie-prime-video.html",
+   "url": "https://geekovski.ru/carrie-prime-video.html",
+   "title": "«Кэрри» Майка Флэнагана — все восемь серий на Prime Video, 85% на Rotten Tomatoes",
+   "summary": "Осовремененная экранизация Кинга про травлю в эпоху соцсетей. Сам Кинг назвал сериал «блестящим» — и это редкость.",
+   "date_published": "2026-10-28T21:30:00+03:00",
+   "date_modified": "2026-10-28T21:30:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": null,
+   "_sources": [
+    {
+     "name": "Киноафиша — «Кэрри», 85% RT",
+     "url": "https://www.kinoafisha.info/articles/amazon-vydal-odnu-iz-luchshih-adaptaciy-stivena-kinga--ot-novogo-seriala-s-reytingom-85-ne-hochetsya-otryvatsya_id139823_a16283248"
+    },
+    {
+     "name": "Кино Mail.ru — Кинг о сериале",
+     "url": "https://kino.mail.ru/news/138832-stiven-king-vysoko-ocenil-novyj-serial-po-svoemu-romanu"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+# GEEKOVSKI
+
+> Технологии, игры и кино без маркетингового сиропа. Разборы новостей игровой индустрии, техники, кино и AI: проверяемые факты, ссылки на первоисточники и даты. Русский язык.
+
+## О сайте
+
+- Адрес: https://geekovski.ru/
+- Язык: русский (ru-RU), часовой пояс материалов — MSK (UTC+3).
+- Формат: самостоятельные разборы новостей и дайджесты; у каждого материала перечислены источники, мнение автора помечено отдельно от факта.
+- Лента: https://geekovski.ru/rss.xml (RSS), https://geekovski.ru/feed.json (JSON), https://geekovski.ru/sitemap.xml (sitemap).
+
+## Рубрики
+
+- [Xbox](https://geekovski.ru/xbox/): 0 материалов
+- [Nintendo Switch](https://geekovski.ru/switch/): 3 материала
+- [PlayStation](https://geekovski.ru/playstation/): 1 материал
+- [PC-игры](https://geekovski.ru/pc/): 0 материалов
+- [VR](https://geekovski.ru/vr/): 1 материал
+- [Гаджеты](https://geekovski.ru/gadgets/): 1 материал
+- [Кино](https://geekovski.ru/kino/): 1 материал
+- [Сериалы](https://geekovski.ru/serialy/): 1 материал
+- [AI](https://geekovski.ru/ai/): 3 материала
+- [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
+
+## Материалы
+
+- [Blue Eye Samurai: второй сезон выйдет 19 января 2027](https://geekovski.ru/blue-eye-samurai-season-2.html): Netflix назвал дату премьеры — шесть серий, Лондон 1657 года и Мидзу, которая наконец добирается до тех, кто её сделал. Третий сезон уже заказан и станет последним. (04.11.2026)
+- [Claude ставит водяные знаки на старые модели](https://geekovski.ru/claude-vodyanoy-znak-starye-modeli.html): С 3 ноября Anthropic прячет в тексте трёх старых моделей Claude невидимый водяной знак — и на одной из них его можно обойти настройкой sampling. (04.11.2026)
+- [GTA VI: предзагрузка с 10 ноября и 212 ГБ](https://geekovski.ru/gta-6-predzagruzka-212-gb.html): Rockstar официально подтвердила размер GTA VI — до 212 ГБ, а предзагрузка стартует не 12 ноября, как говорили раньше, а на два дня раньше. В коробочных изданиях диска не будет. (04.11.2026)
+- [Quest 2 и Quest Pro: Meta объявила последнее обновление](https://geekovski.ru/meta-quest-2-pro-konets-obnovleniy.html): Horizon OS 2.13 станет финальной прошивкой для Quest 2 и Quest Pro — новые функции уйдут на Quest 3 и новее, а патчи безопасности будут выходить до конца 2027 года. (03.11.2026)
+- [Anthropic перед IPO: счёт за чипы на $895 млрд](https://geekovski.ru/anthropic-ipo-895-mlrd.html): Обновлённый проспект S-1: выручка $17 млрд за квартал, но обязательства по вычислениям в семь раз больше запаса кэша. (03.11.2026)
+- [Pikmin 4 на Switch 2 — бесплатное демо уже в eShop, полный релиз 12 ноября](https://geekovski.ru/pikmin-4-switch-2-demo.html): Nintendo провела Pikmin Direct за десять минут до эфира, объявила «День пикмина» и выкатила демку: стартовая зона плюс два экзамена Dandori Academy. (02.11.2026)
+- [Zelda: Ocarina of Time на Switch 2 — 5 ноября, и это не ремастер в привычном смысле](https://geekovski.ru/zelda-ocarina-switch-2.html): Полностью озвученные катсцены, игра на окарине через микрофон консоли и выросший до 24,5 ГБ размер. Разбираем, что именно Nintendo меняет в легендарной игре. (01.11.2026)
+- [Monster Hunter Wilds на Switch 2 — 4 декабря, и 30 fps здесь не приговор](https://geekovski.ru/monster-hunter-wilds-switch-2.html): Демо Prologue живёт с 19 октября, предзаказы открыты, сейв переносится в полную версию. Главный третьесторонний релиз года для платформы. (31.10.2026)
+- [Gemini 4 Argon — миллион токенов на выходе, но пользоваться ей пока нельзя](https://geekovski.ru/gemini-4-argon.html): Google подняла лимит вывода до 1 млн токенов и поставила цену 2/10 доллара за миллион, но доступ открыт только доверенным киберзащитникам. (30.10.2026)
+- [iPhone Duo — первый складной iPhone: предзаказы 16 октября, продажи с 23-го](https://geekovski.ru/iphone-duo.html): Книжный формат, внешний экран ~5,4″, внутренний ~7,6″ и цена от 1999 до 3199 долларов за версию на 2 ТБ. Разбираем, кому это вообще нужно. (29.10.2026)
+- [«Кэрри» Майка Флэнагана — все восемь серий на Prime Video, 85% на Rotten Tomatoes](https://geekovski.ru/carrie-prime-video.html): Осовремененная экранизация Кинга про травлю в эпоху соцсетей. Сам Кинг назвал сериал «блестящим» — и это редкость. (28.10.2026)
+
+## Дайджесты
+
+- [Вечер 3 ноября: убыток Anthropic, Crimson Desert на PS5, ZERO PARADES на консолях](https://geekovski.ru/digests/2026-11-03-vecher.html): Anthropic показала $17 млрд квартальной выручки и $895 млрд обязательств, Crimson Desert после DLC снова не держит 30 fps, ZERO PARADES вышла на консолях, Thief получил дату ремастера
+- [Утро 2 ноября: Ocarina of Time на пороге, продажи Switch 2 в США просели, Pikmin без предупреждения](https://geekovski.ru/digests/2026-11-02-utro.html): Демо Pikmin 4 в eShop, Zelda выходит 5 ноября, Circana зафиксировала падение продаж Switch 2 в США, а HoYoverse впервые едет на железо Nintendo
+
+## Служебное
+
+- [Полный текст всех материалов](https://geekovski.ru/llms-full.txt)
