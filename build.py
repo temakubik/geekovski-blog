@@ -524,6 +524,20 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
     )
 
 
+def first_sentence(text, limit=170):
+    """Ровно одно предложение для карточки ленты: режем по первой точке/!/?,
+    но не даём предложению раздуться сверх limit символов."""
+    text = (text or "").strip()
+    if not text:
+        return text
+    m = re.search(r"[.!?…](\s|$)", text)
+    sent = text[:m.end()].strip() if m else text
+    if len(sent) > limit:
+        cut = sent[:limit].rsplit(" ", 1)[0]
+        sent = cut.rstrip(",;:—- ") + "…"
+    return sent
+
+
 def card(p, theme, big=False):
     cat = p["category"]
     # обложка получает alt из заголовка: пустой alt оставляем только декоративным плашкам
@@ -542,7 +556,7 @@ def card(p, theme, big=False):
         cls="big" if big else "", cat=cat, catname=CAT_NAME.get(cat, cat),
         date=p["date"].strftime("%d.%m"), isodt=iso(p["date"]),
         slug=p["slug"], title=html.escape(p["title"]),
-        sum=html.escape(p["summary"] or plain(p["body"], 150)), cover=cover,
+        sum=html.escape(first_sentence(p["summary"] or plain(p["body"], 130), limit=125 if not big else 170)), cover=cover,
         src=('<span class="srcc">источников: %d</span>' % len(p["sources"])) if p["sources"] else "",
     )
 
