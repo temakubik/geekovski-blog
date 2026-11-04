@@ -92,7 +92,7 @@ def parse_post(path: Path):
             continue
         # «- category: switch» открывает новость, «title: …» / «summary: …» её дополняют
         m = re.match(r"^(?:-\s+)?([a-z_]+):\s*(.*)$", s)
-        allowed = ("category", "title", "summary", "source", "platforms", "kind_note", "date", "where", "day")
+        allowed = ("category", "title", "summary", "source", "platforms", "kind_note", "date", "where", "day", "cover")
         if not (m and m.group(1) in allowed):
             continue
         key, val = m.group(1), m.group(2).strip()
@@ -1060,12 +1060,23 @@ def build(theme, out_dir, content_dir=None):
 # ---------- Календарь анонсов ----------
 
 WD = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+              "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
 MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
               "июля", "августа", "сентября", "октября", "ноября", "декабря"]
 
 
+PLATFORMS = {
+    "switch2": ("Switch 2", "switch"), "switch": ("Switch", "switch"),
+    "ps5": ("PS5", "playstation"), "ps4": ("PS4", "playstation"),
+    "xbox": ("Xbox Series", "xbox"), "pc": ("PC", "pc"), "mac": ("Mac", "pc"),
+    "vr": ("VR", "vr"), "netflix": ("Netflix", "serialy"), "kino": ("Кино", "kino"),
+    "tv": ("ТВ", "serialy"),
+}
+
+
 def _cal_icon(kind_note):
-    """Иконка по типу анонса: релиз / порт / ремастер / сериал."""
+    """Иконка по типу анонса: релиз / порт / сериал."""
     k = (kind_note or "").lower()
     if "сериал" in k or "фильм" in k:
         return ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
@@ -1078,57 +1089,91 @@ def _cal_icon(kind_note):
 
 
 def _cal_week(entries, today=None):
-    """Записи на ближайшие 7 дней: от сегодня до +6."""
+    """Ближайшие 7 дней: от сегодня до +6."""
     today = today or datetime.now().date()
     return [e for e in entries if 0 <= (e["day"] - today).days <= 6]
+
+
+def _plat_tags(value):
+    """'pc ps5 switch2' → chips. Незнакомое значение печатаем как текст."""
+    out = []
+    for tok in (value or "").split():
+        label, cat = PLATFORMS.get(tok.lower(), (tok, None))
+        cls = "plat plat--%s" % cat if cat else "plat"
+        out.append('<span class="%s">%s</span>' % (cls, html.escape(label)))
+    return "".join(out)
+
+
+def _cal_card(e):
+    """Карточка анонса: картинка 16:9, тип, название, платформы."""
+    visual = ""
+    if e.get("cover"):
+        visual = '<div class="anno__cover"><img src="%s" alt="%s" loading="lazy"></div>' % (
+            e["cover"], html.escape(e["title"], quote=True))
+    else:
+        visual = '<div class="anno__cover anno__cover--mono"><span>%s</span></div>' % html.escape(
+            e["title"][:2].upper())
+    return ('<article class="anno cat-{cat}">{visual}'
+            '<div class="anno__body"><div class="anno__meta"><span class="anno__type">{icon}{note}</span>'
+            '<span class="anno__cat">{catname}</span></div>'
+            '<h3 class="anno__title">{title}</h3>'
+            '<div class="anno__plat">{plats}</div></div></article>').format(
+        cat=e["category"], visual=visual, icon=_cal_icon(e["kind_note"]),
+        catname=CAT_NAME.get(e["category"], e["category"]),
+        note=html.escape(e["kind_note"] or "релиз"), title=html.escape(e["title"]),
+        plats=_plat_tags(e["platforms"]))
 
 
 def render_calendar_page(entries, theme, today=None):
     today = today or datetime.now().date()
     week = _cal_week(entries, today)
+    # дальше — «Дальше по календарю», сгруппировано по месяцам
+    later = [e for e in entries if (e["day"] - today).days > 6]
     groups = {}
     for e in week:
         groups.setdefault(e["day"], []).append(e)
+
     blocks = []
     for day in sorted(groups):
         d = datetime.combine(day, datetime.min.time())
-        rel = ""
-        if day == today:
-            rel = "сегодня"
-        elif (day - today).days == 1:
-            rel = "завтра"
-        head = ('<div class="cal__day"><span class="cal__num">%02d</span>'
-                '<span class="cal__month">%s</span><span class="cal__wd">%s</span>'
-                '%s</div>') % (d.day, MONTHS_GEN[d.month - 1], WD[d.weekday()],
-                               ('<span class="cal__rel">%s</span>' % rel) if rel else "")
-        rows = []
-        for e in groups[day]:
-            rows.append(
-                '<a class="cal__item cat-{cat}" href="{href}">'
-                '<span class="cal__icon">{icon}</span>'
-                '<span class="cal__body"><span class="cal__title">{title}</span>'
-                '<span class="cal__meta">{chip}{plat}{sep}{note}</span></span>'
-                '</a>'.format(
-                    cat=e["category"], href=e["href"], icon=_cal_icon(e["kind_note"]),
-                    title=html.escape(e["title"]),
-                    chip='<span class="chip chip--sm cat-%s">%s</span>'
-                         % (e["category"], CAT_NAME.get(e["category"], e["category"])),
-                    plat=('<span class="cal__plat">%s</span>' % html.escape(e["platforms"])) if e["platforms"] else "",
-                    sep='<span class="cal__sep">·</span>' if (e["platforms"] and e["kind_note"]) else "",
-                    note=('<span class="cal__note">%s</span>' % html.escape(e["kind_note"])) if e["kind_note"] else ""))
-        blocks.append('<section class="cal__group">%s<div class="cal__items">%s</div></section>' % (head, "".join(rows)))
+        rel = "сегодня" if day == today else ("завтра" if (day - today).days == 1 else "")
+        head = ('<div class="cal__day"><span class="cal__how"><span class="cal__num">%02d</span>'
+                '<span class="cal__month">%s</span></span><span class="cal__wd">%s</span>%s</div>') % (
+            d.day, MONTHS_GEN[d.month - 1], WD[d.weekday()],
+            ('<span class="cal__rel">%s</span>' % rel) if rel else "")
+        cards = "".join(_cal_card(e) for e in groups[day])
+        blocks.append('<section class="cal__group">%s<div class="cal__cards">%s</div></section>' % (head, cards))
 
     if not blocks:
         body = ('<p class="lead__empty">На ближайшую неделю подтверждённых дат пока нет. '
                 'Как только анонсы появятся — они окажутся здесь.</p>')
         desc = "Что выходит на этой неделе: игры, фильмы и сериалы с подтверждёнными датами. " + SITE["tagline"]
     else:
-        body = ('<div class="cal">%s</div>' % "".join(blocks))
-        desc = ("Календарь анонсов на неделю: %d %s с подтверждёнными датами — игры, "
-                "платформы, фильмы и сериалы. %s") % (
+        body = '<div class="cal">%s</div>' % "".join(blocks)
+        desc = ("Календарь анонсов: %d %s на этой неделе с подтверждёнными датами — "
+                "игры, платформы, фильмы и сериалы. %s") % (
             len(week), plural(len(week), "релиз", "релиза", "релизов"), SITE["tagline"])
+
+    # месяцы дальше недели: старые месяцы остаются в истории, новые добавляются блоком
+    if later:
+        months = {}
+        for e in later:
+            months.setdefault((e["day"].year, e["day"].month), []).append(e)
+        mblocks = []
+        for (y, m) in sorted(months):
+            rows = "".join(
+                '<a class="mrow cat-%s" href="%s"><span class="mrow__d">%02d</span>'
+                '<span class="mrow__t">%s</span><span class="mrow__p">%s</span></a>'
+                % (e["category"], e["href"], e["day"].day, html.escape(e["title"]), _plat_tags(e["platforms"]))
+                for e in months[(y, m)])
+            mblocks.append('<section class="mblock"><h3 class="mblock__h">%s %d</h3>%s</section>'
+                           % (MONTHS_NOM[m - 1], y, rows))
+        body += ('<section class="cal-later"><div class="rubric__head"><h2>Дальше по календарю</h2>'
+                 '<span class="rubric__all">%d %s</span></div>%s</section>'
+                 % (len(later), plural(len(later), "дата", "даты", "дат"), "".join(mblocks)))
+
     content = ('<main class="wrap"><section class="lead"><h1>Календарь анонсов</h1>'
-               '<p>Ближайшая неделя — только подтверждённые даты. Сверху то, что выходит скорее.</p></section>'
+               '<p>Что выходит на этой неделе и что уже назначено дальше. Только подтверждённые даты.</p></section>'
                '%s</main>') % body
     return page("Календарь анонсов — что выходит на этой неделе | %s" % SITE["title"], desc, content, theme,
                 canonical=SITE["url"] + "/calendar/",
@@ -1147,6 +1192,7 @@ def calendar_entries(calendars):
                 continue
             out.append({
                 "day": day, "category": it["category"], "title": it["title"],
+                "cover": it.get("cover", ""),
                 "platforms": it.get("platforms", ""), "kind_note": it.get("kind_note", ""),
                 "summary": it["summary"], "source": it["source"],
                 "href": (it["source"].split("|")[-1].strip() if "|" in it["source"] else "/calendar/"),
@@ -1268,6 +1314,8 @@ def render_style_guide(theme):
 
 # ---------- дайджест: техническая мета и оформление ----------
 
+MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+              "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
 MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
               "июля", "августа", "сентября", "октября", "ноября", "декабря"]
 
