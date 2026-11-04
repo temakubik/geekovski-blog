@@ -508,36 +508,43 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
 
 def card(p, theme, big=False):
     cat = p["category"]
-    cover = ('<div class="card__cover"><img src="%s" alt="" loading="lazy"></div>' % p["cover"]) if p["cover"] else ""
+    # обложка получает alt из заголовка: пустой alt оставляем только декоративным плашкам
+    cover = ('<div class="card__cover"><img src="%s" alt="%s" loading="lazy"></div>'
+             % (p["cover"], html.escape(p["title"], quote=True))) if p["cover"] else ""
+    # чип рубрики — ссылка: даёт краулеру путь из каждой карточки в раздел
     return """<article class="card card--{cls} cat-{cat}">
   {cover}
   <div class="card__body">
-    <div class="card__meta"><span class="chip">{catname}</span><time>{date}</time></div>
+    <div class="card__meta"><a class="chip cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
     <h3 class="card__title"><a href="/{slug}.html">{title}</a></h3>
     <p class="card__sum">{sum}</p>
     <div class="card__foot"><a class="more" href="/{slug}.html">Читать →</a>{src}</div>
   </div>
 </article>""".format(
         cls="big" if big else "", cat=cat, catname=CAT_NAME.get(cat, cat),
-        date=p["date"].strftime("%d.%m"), slug=p["slug"], title=html.escape(p["title"]),
+        date=p["date"].strftime("%d.%m"), isodt=iso(p["date"]),
+        slug=p["slug"], title=html.escape(p["title"]),
         sum=html.escape(p["summary"] or plain(p["body"], 150)), cover=cover,
         src=('<span class="srcc">источников: %d</span>' % len(p["sources"])) if p["sources"] else "",
     )
 
 
 def hero(p):
-    img = '<div class="hero__cover"><img src="%s" alt="" loading="lazy"></div>' % p["cover"] if p["cover"] else ""
-    # .format() применяем ко ВСЕЙ склейке: иначе {slug} в первом литерале уходит в HTML буквально
+    img = ('<div class="hero__cover"><img src="%s" alt="%s" loading="lazy"></div>'
+           % (p["cover"], html.escape(p["title"], quote=True))) if p["cover"] else ""
+    # .format() применяем ко ВСЕЙ склейке: иначе {slug} в первом литерале уходит в HTML буквально.
+    # Чип внутри героя остаётся span: он лежит внутри <a class="hero__link">, а вложенная
+    # ссылка — невалидный HTML, и браузер разорвёт разметку. Ссылки на рубрику дают карточки.
     return ("""<section class="hero">
   <a class="hero__link" href="/{slug}.html">
     """ + img + """
-    <span class="chip chip--solid">{catname}</span>
+    <span class="chip chip--solid cat-{cat}">{catname}</span>
     <h1>{title}</h1>
     <p>{sum}</p>
     <span class="hero__cta">Читать разбор →</span>
   </a>
 </section>""").format(
-        slug=p["slug"], catname=CAT_NAME.get(p["category"], p["category"]),
+        slug=p["slug"], cat=p["category"], catname=CAT_NAME.get(p["category"], p["category"]),
         title=html.escape(p["title"]), sum=html.escape(p["summary"] or plain(p["body"], 220)),
     )
 
@@ -585,7 +592,11 @@ def render_index(posts, theme, digests=None):
         head = hero(posts[0])
         cards = "\n".join(card(p, theme) for p in posts[1:])
         content = '<main class="wrap"><div class="hero-wrap">%s</div><div class="grid grid--mag">%s</div></main>' % (head, cards)
-    return page(SITE["title"], SITE["tagline"], content, theme)
+    return page(HOME_TITLE, HOME_DESC, content, theme,
+                canonical=SITE["url"] + "/",
+                og_alt="GEEKOVSKI — игры, технологии и кино",
+                jsonld=ldjson(ld_org(), ld_website(),
+                              ld_itemlist(posts[:12], "Свежие материалы GEEKOVSKI")))
 
 
 def share_block(url, title, image=None):
@@ -614,7 +625,8 @@ def render_post(p, posts, theme):
     body = md(p["body"])
     cover = ""
     if p["cover"]:
-        cover = '<figure class="post__cover"><img src="%s" alt=""></figure>' % p["cover"]
+        cover = ('<figure class="post__cover"><img src="%s" alt="%s"></figure>'
+                 % (p["cover"], html.escape(p["title"], quote=True)))
     # CC BY / CC BY-SA требуют указания автора и лицензии: держим их мелкой строкой в конце,
     # а не подписью под картинкой. CC0 и public domain — без упоминания.
     credit_line = ""
@@ -628,7 +640,7 @@ def render_post(p, posts, theme):
     content = """<main class="wrap">
 <article class="post cat-{cat}">
   <header class="post__head">
-    <div class="post__meta"><span class="chip chip--solid">{catname}</span><time>{date}</time></div>
+    <div class="post__meta"><a class="chip chip--solid cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
     <h1>{title}</h1>
     <p class="post__lead">{sum}</p>
   </header>
@@ -641,30 +653,49 @@ def render_post(p, posts, theme):
 {rel}
 </main>""".format(
         cat=p["category"], catname=CAT_NAME.get(p["category"], p["category"]),
-        date=p["date"].strftime("%d.%m.%Y, %H:%M"), title=html.escape(p["title"]),
+        date=p["date"].strftime("%d.%m.%Y, %H:%M"), isodt=iso(p["date"]),
+        title=html.escape(p["title"]),
         sum=html.escape(p["summary"]), cover=cover, body=body, srcs=srcs, rel=rel,
         credit_line=credit_line,
         share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"],
                           SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None),
     )
     og = SITE["url"] + p["cover"] if p["cover"] else None
-    return page("%s — %s" % (p["title"], SITE["title"]), p["summary"] or plain(p["body"], 160),
-                content, theme, og_image=og)
+    url = SITE["url"] + "/" + p["slug"] + ".html"
+    catname = CAT_NAME.get(p["category"], p["category"])
+    return page("%s — %s" % (p["title"], SITE["title"]),
+                p["summary"] or plain(p["body"], 160),
+                content, theme, og_image=og, canonical=url, og_type="article",
+                article=p, og_alt=p["title"],
+                jsonld=ldjson(ld_org(), ld_website(), ld_article(p, url),
+                              ld_breadcrumb([("Главная", "/"), (catname, "/%s/" % p["category"]),
+                                             (p["title"], "/%s.html" % p["slug"])])))
 
 
 def render_cat(slug, name, items, theme):
     cards = "\n".join(card(p, theme) for p in items)
-    count = "%d %s" % (len(items), "материал" if len(items) % 10 == 1 and len(items) % 100 != 11 else "материалов")
+    count = "%d %s" % (len(items), plural(len(items), "материал", "материала", "материалов"))
     if items:
         body = '<div class="grid grid--%s">%s</div>' % ("cards" if theme == "dashboard" else "list", cards)
+        desc = ("%s: %s — разборы новостей с источниками и датами. %s"
+                % (name, count, SITE["tagline"]))
     else:
         # пустая рубрика не должна выглядеть сломанной: говорим прямо и уводим в дайджесты
         body = ('<p class="lead__empty">Здесь пока пусто — рубрика только открылась. '
                 'Свежие новости по всем направлениям выходят в <a href="/digests/">дайджестах</a>, '
                 'а разборы появляются на главной.</p>')
+        desc = "%s: рубрика открыта — материалы с разбором новостей и ссылками на источники. %s" % (name, SITE["tagline"])
     content = ('<main class="wrap"><section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
                % (html.escape(name), count if items else "рубрика открыта", body))
-    return page("%s — %s" % (name, SITE["title"]), name, content, theme)
+    url = SITE["url"] + "/%s/" % slug
+    return page("%s — новости и разборы | %s" % (name, SITE["title"]), desc, content, theme,
+                canonical=url, og_alt="%s — GEEKOVSKI" % name,
+                jsonld=ldjson(ld_org(), ld_website(),
+                              {"@type": "CollectionPage", "@id": url + "#page", "url": url,
+                               "name": name, "description": desc, "inLanguage": "ru-RU",
+                               "isPartOf": {"@id": WEBSITE_ID}},
+                              ld_itemlist(items, name) or None,
+                              ld_breadcrumb([("Главная", "/"), (name, "/%s/" % slug)])))
 
 
 def rss(posts, title=None, path=""):
@@ -679,15 +710,129 @@ def rss(posts, title=None, path=""):
 
 
 def sitemap(posts, digests=None):
-    urls = ["<url><loc>%s/</loc></url>" % SITE["url"]]
-    urls += ['<url><loc>%s/%s/</loc></url>' % (SITE["url"], c) for c, _ in CATS]
-    urls.append("<url><loc>%s/digests/</loc></url>" % SITE["url"])
+    """Sitemap с lastmod у каждой записи и картинками материалов.
+
+    lastmod без него поисковики перекачивают всё подряд; image:image пускает обложки
+    в поиск по картинкам (в Яндексе это отдельная выдача).
+    """
+    def entry(loc, lastmod=None, image=None, caption=None):
+        parts = ["<loc>%s</loc>" % loc]
+        if lastmod:
+            parts.append("<lastmod>%s</lastmod>" % lastmod)
+        if image:
+            parts.append('<image:image><image:loc>%s</image:loc>%s</image:image>'
+                         % (image, "<image:title>%s</image:title>" % html.escape(caption) if caption else ""))
+        return "<url>%s</url>" % "".join(parts)
+
+    newest = max([p["date"] for p in posts] or [datetime.now()])
+    urls = [entry(SITE["url"] + "/", newest.strftime("%Y-%m-%d"))]
+    for c, _ in CATS:
+        items = [p for p in posts if p["category"] == c]
+        urls.append(entry(SITE["url"] + "/%s/" % c,
+                          max([p["date"] for p in items]).strftime("%Y-%m-%d") if items else None))
+    urls.append(entry(SITE["url"] + "/digests/"))
     for d in (digests or []):
-        urls.append("<url><loc>{u}/digests/{s}.html</loc><lastmod>{d}</lastmod></url>".format(
-            u=SITE["url"], s=d["slug"], d=d["date"].strftime("%Y-%m-%d")))
-    urls += ["<url><loc>{u}/{s}.html</loc><lastmod>{d}</lastmod></url>".format(
-        u=SITE["url"], s=p["slug"], d=p["date"].strftime("%Y-%m-%d")) for p in posts]
-    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">%s</urlset>' % "".join(urls)
+        urls.append(entry("%s/digests/%s.html" % (SITE["url"], d["slug"]), d["date"].strftime("%Y-%m-%d")))
+    for p in posts:
+        urls.append(entry("%s/%s.html" % (SITE["url"], p["slug"]),
+                          (p.get("updated") or p["date"]).strftime("%Y-%m-%d"),
+                          SITE["url"] + p["cover"] if p["cover"] else None, p["title"]))
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">%s</urlset>'
+            % "".join(urls))
+
+
+def robots_txt():
+    """Разрешаем всё, включая краулеры AI-поиска — иначе сайт не попадает в ответы.
+
+    Отдельные User-agent не нужны (нет запретов), но перечисляем явно: часть площадок
+    иначе считает, что её бот не приветствуется.
+    """
+    bots = ["YandexBot", "Googlebot", "Bingbot", "GPTBot", "OAI-SearchBot", "ChatGPT-User",
+            "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Amazonbot", "Applebot",
+            "Applebot-Extended"]
+    lines = ["# GEEKOVSKI — robots.txt", "User-agent: *", "Allow: /", ""]
+    lines += ["User-agent: %s" % b for b in bots]
+    lines += ["Allow: /", "", "Sitemap: %s/sitemap.xml" % SITE["url"],
+              "Host: %s" % SITE["url"].split("//")[1], ""]
+    return "\n".join(lines)
+
+
+def llms_txt(posts, digests):
+    """llms.txt по llmstxt.org: короткая карта сайта для языковых моделей.
+
+    Не заменяет индексацию, но даёт LLM готовый список материалов со ссылками,
+    датами и сутью — то, из чего собирается ответ со ссылкой на источник.
+    """
+    out = ["# %s" % SITE["title"],
+           "",
+           "> %s. Разборы новостей игровой индустрии, техники, кино и AI: проверяемые факты, "
+           "ссылки на первоисточники и даты. Русский язык." % SITE["tagline"],
+           "",
+           "## О сайте",
+           "",
+           "- Адрес: %s/" % SITE["url"],
+           "- Язык: русский (ru-RU), часовой пояс материалов — MSK (UTC+3).",
+           "- Формат: самостоятельные разборы новостей и дайджесты; у каждого материала "
+           "перечислены источники, мнение автора помечено отдельно от факта.",
+           "- Лента: %s/rss.xml (RSS), %s/feed.json (JSON), %s/sitemap.xml (sitemap)." % (
+               SITE["url"], SITE["url"], SITE["url"]),
+           "",
+           "## Рубрики",
+           ""]
+    for c, name in CATS:
+        items = [p for p in posts if p["category"] == c]
+        out.append("- [%s](%s/%s/): %d %s" % (name, SITE["url"], c, len(items),
+                                              plural(len(items), "материал", "материала", "материалов")))
+    out += ["- [Дайджесты](%s/digests/): короткие выпуски новостей" % SITE["url"], "", "## Материалы", ""]
+    for p in posts:
+        out.append("- [%s](%s/%s.html): %s (%s)" % (
+            p["title"], SITE["url"], p["slug"], (p["summary"] or plain(p["body"], 160)).replace("\n", " "),
+            p["date"].strftime("%d.%m.%Y")))
+    if digests:
+        out += ["", "## Дайджесты", ""]
+        for d in digests:
+            out.append("- [%s](%s/digests/%s.html): %s" % (
+                d["title"], SITE["url"], d["slug"], (d["summary"] or "").replace("\n", " ")))
+    out += ["", "## Служебное", "",
+            "- [Полный текст всех материалов](%s/llms-full.txt)" % SITE["url"], ""]
+    return "\n".join(out)
+
+
+def llms_full_txt(posts):
+    """Весь текст материалов одним файлом — для моделей, которым нужен корпус, а не карта."""
+    out = ["# %s — полный текст" % SITE["title"], "",
+           "Источник: %s. Лицензия на тексты — все права принадлежат %s; цитирование "
+           "со ссылкой на страницу материала." % (SITE["url"], SITE["title"]), ""]
+    for p in posts:
+        out += ["---", "",
+                "## %s" % p["title"], "",
+                "- URL: %s/%s.html" % (SITE["url"], p["slug"]),
+                "- Дата: %s" % p["date"].strftime("%d.%m.%Y %H:%M"),
+                "- Рубрика: %s" % CAT_NAME.get(p["category"], p["category"]),
+                "- Лид: %s" % (p["summary"] or plain(p["body"], 200)), ""]
+        body = p["body"]
+        body = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", body)                     # картинки
+        body = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r"\1 (\2)", body)  # ссылки → текст
+        out += [body.strip(), ""]
+        if p["sources"]:
+            out.append("Источники:")
+            out += ["- %s — %s" % (s["name"], s["url"]) if s["url"] else "- %s" % s["name"]
+                    for s in p["sources"]]
+            out.append("")
+    return "\n".join(out)
+
+
+def render_404(theme):
+    content = ('<main class="wrap"><section class="lead"><h1>Страница не нашлась</h1>'
+               '<p>Адрес мог измениться или в ссылке опечатка. Живые материалы — в рубриках '
+               'и на <a href="/">главной</a>: '
+               + ", ".join('<a href="/%s/">%s</a>' % (c, n) for c, n in CATS)
+               + '.</p></section></main>')
+    return page("Страница не найдена — %s" % SITE["title"],
+                "Такой страницы нет. Свежие материалы GEEKOVSKI — на главной.",
+                content, theme, robots="noindex,follow")
 
 
 def build(theme, out_dir, content_dir=None):
