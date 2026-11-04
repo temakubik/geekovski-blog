@@ -663,7 +663,7 @@ def render_digest(d, theme, next_d=None, prev_d=None):
             '<a href="/digests/%s.html">%s, %s →</a>' % (next_d["slug"], part_of_day(next_d["date"]).lower(), ru_date(next_d["date"])) if next_d else "<span></span>")
 
     content = """<main class="wrap">
-<article class="digest">
+<article class="digest is-{slot}">
   <header class="digest__head">
     <div class="digest__meta">
       <span class="digest__part"><span class="digest__dot"></span>{part}</span>
@@ -679,7 +679,8 @@ def render_digest(d, theme, next_d=None, prev_d=None):
   {nav}
 </article>
 </main>""".format(
-        part=part_of_day(d["date"]), meta=html.escape(meta), title=html.escape(head_title),
+        part=part_of_day(d["date"]), slot=("morning" if d["date"].hour < 12 else "evening"),
+        meta=html.escape(meta), title=html.escape(head_title),
         tags=tags_html(d), lead=('<p class="post__lead">%s</p>' % html.escape(d["summary"])) if d["summary"] else "",
         blocks="".join(blocks), nav=nav,
         share=share_block(SITE["url"] + "/digests/" + d["slug"] + ".html", d["title"]),
@@ -693,7 +694,7 @@ def render_digest(d, theme, next_d=None, prev_d=None):
 def render_digests_index(digests, theme):
     rows = []
     for d in digests:
-        rows.append("""<article class="drow cat-{cat}">
+        rows.append("""<article class="drow cat-{cat} is-{slot}">
   <a class="drow__date" href="/digests/{slug}.html"><span class="drow__part">{part}</span><span class="drow__day">{day}</span></a>
   <div class="drow__body">
     <h3 class="drow__title"><a href="/digests/{slug}.html">{title}</a></h3>
@@ -701,7 +702,8 @@ def render_digests_index(digests, theme):
     <div class="drow__tags">{tags}</div>
   </div>
   <span class="drow__count">{count}</span>
-</article>""".format(cat=(digest_tags(d)[0][0] if digest_tags(d) else "ai"),
+</article>""".format(slot=("morning" if d["date"].hour < 12 else "evening"),
+                    cat=(digest_tags(d)[0][0] if digest_tags(d) else "ai"),
                     slug=d["slug"], part=part_of_day(d["date"]).upper(), day=ru_date(d["date"]),
                     title=html.escape(strip_prefix(d["title"])), sum=html.escape(d["summary"]),
                     tags=tags_html(d), count=news_count(len(d["items"]))))

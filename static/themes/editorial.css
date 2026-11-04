@@ -201,7 +201,10 @@ img { max-width: 100%; display: block; }
 /* ---------- дайджест: техническая мета, рельса с иконками, теги ---------- */
 .digest__head { padding: 34px 0 6px; }
 .digest__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-family: "Medeo Mono", monospace; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-.digest__part { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); }
+.digest.is-morning .digest__part, .digest.is-morning .digest__dot { color: #F5C518; }
+.digest.is-evening .digest__part, .digest.is-evening .digest__dot { color: #A855F7; }
+.digest__part { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); font-family: "Chava", sans-serif; font-size: 13px; letter-spacing: .08em; }
+.digest__dot { background: currentColor; }
 .digest__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
 .digest__sep { opacity: .45; }
 .digest__head h1 { font-size: clamp(26px, 6.2vw, 42px); line-height: 1.12; letter-spacing: -.02em; margin: 0 0 14px; }
@@ -235,10 +238,12 @@ img { max-width: 100%; display: block; }
 
 /* список выпусков */
 .dlist { padding: 8px 0 30px; }
-.drow { display: grid; grid-template-columns: 84px 1fr auto; gap: 16px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--line); border-left: 3px solid var(--cat, var(--line)); padding-left: 14px; }
+.drow { display: grid; grid-template-columns: max-content 1fr auto; gap: 18px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--line); border-left: 3px solid var(--part, var(--line)); padding-left: 14px; }
+.drow.is-morning { --part: #F5C518; }
+.drow.is-evening { --part: #A855F7; }
 .drow__date { display: flex; flex-direction: column; gap: 2px; text-decoration: none; }
-.drow__part { font-family: "Medeo Mono", monospace; font-size: 10px; letter-spacing: .14em; color: var(--cat, var(--accent)); }
-.drow__day { font-family: "Medeo Sans", sans-serif; font-weight: 600; font-size: 13px; color: var(--text); line-height: 1.25; letter-spacing: -.01em; }
+.drow__part { font-family: "Chava", sans-serif; font-size: 15px; line-height: 1.1; letter-spacing: .06em; color: var(--part, var(--muted)); text-transform: uppercase; }
+.drow__day { font-family: "Chava", sans-serif; font-size: 15px; line-height: 1.15; letter-spacing: .04em; color: var(--text); }
 .drow__title { margin: 0 0 6px; font-size: clamp(17px, 4.2vw, 21px); line-height: 1.25; }
 .drow__title a:hover { color: var(--accent); }
 .drow__sum { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
@@ -248,6 +253,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .ditem { grid-template-columns: 38px 1fr; gap: 11px; }
   .ditem__icon { width: 30px; height: 30px; }
-  .drow { grid-template-columns: 66px 1fr; }
+  .drow { grid-template-columns: max-content 1fr; }
   .drow__count { grid-column: 2; padding-top: 0; }
 }
