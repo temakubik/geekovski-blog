@@ -163,6 +163,7 @@ img { max-width: 100%; display: block; }
 .chip.cat-playstation { color: #2E9BFF; border-color: #2E9BFF; }
 .chip.cat-pc { color: #C9F24D; border-color: #C9F24D; }
 .chip.cat-vr { color: #B983FF; border-color: #B983FF; }
+.chip.cat-gadgets { color: #22D3EE; border-color: #22D3EE; }
 .chip.cat-kino { color: #FFB020; border-color: #FFB020; }
 .chip.cat-serialy { color: #FF6BD6; border-color: #FF6BD6; }
 .chip.cat-ai { color: #8C9EFF; border-color: #8C9EFF; }
@@ -232,9 +233,10 @@ img { max-width: 100%; display: block; }
 .cat-serialy { --cat: #F5A524; }
 .cat-ai { --cat: #14B8A6; }
 .cat-vr { --cat: #A855F7; }
+.cat-gadgets { --cat: #22D3EE; }
 .ditem.cat-xbox .ditem__icon, .ditem.cat-switch .ditem__icon, .ditem.cat-playstation .ditem__icon,
 .ditem.cat-pc .ditem__icon, .ditem.cat-kino .ditem__icon, .ditem.cat-serialy .ditem__icon,
-.ditem.cat-ai .ditem__icon, .ditem.cat-vr .ditem__icon { color: var(--cat); background: color-mix(in srgb, var(--cat) 15%, transparent); }
+.ditem.cat-ai .ditem__icon, .ditem.cat-vr .ditem__icon, .ditem.cat-gadgets .ditem__icon { color: var(--cat); background: color-mix(in srgb, var(--cat) 15%, transparent); }
 
 /* список выпусков */
 .dlist { padding: 8px 0 30px; }

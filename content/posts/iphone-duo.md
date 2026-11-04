@@ -1,7 +1,7 @@
 ---
 title: iPhone Duo — первый складной iPhone: предзаказы 16 октября, продажи с 23-го
 date: 2026-10-29 18:05
-category: pc
+category: gadgets
 summary: Книжный формат, внешний экран ~5,4″, внутренний ~7,6″ и цена от 1999 до 3199 долларов за версию на 2 ТБ. Разбираем, кому это вообще нужно.
 cover: /assets/img/iphone-duo.jpg
 credit: Обложка: ΚΑ ΚΙΤ / Wikimedia Commons, CC BY-SA 4.0

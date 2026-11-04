@@ -31,13 +31,14 @@ CATS = [
     ("playstation", "PlayStation"),
     ("pc", "PC-игры"),
     ("vr", "VR"),
+    ("gadgets", "Гаджеты"),
     ("kino", "Кино"),
     ("serialy", "Сериалы"),
     ("ai", "AI"),
 ]
 CAT_NAME = dict(CATS)
 # старые слаги заметок → новые рубрики
-CAT_ALIAS = {"gadgets": "pc", "igry": "switch", "techno": "ai"}
+CAT_ALIAS = {"igry": "switch", "techno": "ai"}
 
 
 # ---------- front matter ----------
@@ -614,6 +615,7 @@ ICONS = {
     "serialy": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 3l4 4 4-4"/></svg>',
     "ai": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg>',
     "vr": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9h18v5a3 3 0 0 1-3 3h-3l-3-3-3 3H6a3 3 0 0 1-3-3z"/></svg>',
+    "gadgets": '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 5.5h3"/></svg>',
 }
 
 
