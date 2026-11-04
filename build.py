@@ -132,6 +132,7 @@ def parse_post(path: Path):
         "sources": sources,
         "draft": meta.get("draft", "false").lower() == "true",
         "file": path,
+        "meta": meta,
     }
 
 
@@ -645,6 +646,71 @@ def render_index(posts, theme, digests=None, cal_entries=None):
                               ld_itemlist(posts[:12], "Свежие материалы GEEKOVSKI")))
 
 
+
+# ---------- перелинковка: тайтл ↔ статьи ----------
+
+def _aliases(t):
+    """Как тайтл может упоминаться в тексте: заголовок, короткое имя и slug-варианты."""
+    names = [t["title"]]
+    raw = t.get("aliases") or ""
+    if raw:
+        names += [x.strip() for x in raw.split("|") if x.strip()]
+    return [n for n in names if len(n) >= 3]
+
+
+def link_articles_to_titles(html_text):
+    """Первое упоминание тайтла в тексте статьи → ссылка на его страницу.
+    Работает по чистому тексту ДО markdown, поэтому длинные имена
+    обрабатываются первыми и ссылки не вкладываются друг в друга."""
+    if not TITLES:
+        return html_text
+    pairs = []
+    for slug, t in TITLES.items():
+        for name in _aliases(t):
+            pairs.append((name, slug, t["title"]))
+    pairs.sort(key=lambda x: len(x[0]), reverse=True)
+    done = set()
+    for name, slug, full in pairs:
+        if slug in done:
+            continue
+        pat = re.compile(r"(?<![\w\[/])(" + re.escape(name) + r")(?![\w\]])", re.IGNORECASE)
+        m = pat.search(html_text)
+        if not m:
+            continue
+        link = "[%s](/titles/%s.html)" % (m.group(1), slug)
+        html_text = html_text[:m.start()] + link + html_text[m.end():]
+        done.add(slug)
+    return html_text
+
+
+def articles_for_title(slug):
+    """Все материалы и новости дайджестов, где упомянут тайтл."""
+    t = TITLES.get(slug)
+    if not t:
+        return []
+    names = [re.escape(n) for n in _aliases(t)]
+    pat = re.compile("|".join(names), re.IGNORECASE) if names else None
+    if not pat:
+        return []
+    hits = []
+    for post in ALL_POSTS:
+        parts = [post["title"], post["summary"], post["body"] or ""]
+        if post["kind"] == "digest":
+            parts += [i["title"] + " " + i["summary"] for i in post["items"]]
+        if pat.search(" ".join(parts)):
+            # текст, где тайтл упомянут именно в новости, а не только в метаданных
+            hits.append(post)
+    return hits[:12]
+
+
+def back_link(label=None, href=None):
+    """Кнопка «назад». Сначала история браузера, иначе — ссылка по контексту."""
+    label = label or "Назад"
+    fallback = href or "/"
+    return ('<a class="backlink" href="%s" onclick="if(document.referrer){history.back();return false}">'
+            '<span aria-hidden="true">←</span> %s</a>' % (fallback, label))
+
+
 def share_block(url, title, image=None):
     """Кнопки «поделиться». Ссылки — обычные share-URL соцсетей, без сторонних скриптов."""
     u = urllib.parse.quote(url, safe="")
@@ -663,6 +729,7 @@ def share_block(url, title, image=None):
 
 def render_post(p, posts, theme):
     related = [x for x in posts if x["category"] == p["category"] and x["slug"] != p["slug"]][:3]
+    p = dict(p, body=link_articles_to_titles(p["body"]))
     srcs = ""
     if p["sources"]:
         srcs = '<section class="sources"><h2>Источники</h2><ol>%s</ol></section>' % "".join(
@@ -696,6 +763,7 @@ def render_post(p, posts, theme):
     <h1>{title}</h1>
     <p class="post__lead">{sum}</p>
   </header>
+  {back}
   {tldr}
   {cover}
   <div class="post__body">{body}</div>
@@ -708,9 +776,11 @@ def render_post(p, posts, theme):
         cat=p["category"], catname=CAT_NAME.get(p["category"], p["category"]),
         date=p["date"].strftime("%d.%m.%Y, %H:%M"), isodt=iso(p["date"]),
         title=html.escape(p["title"]),
-        sum=html.escape(p["summary"]), cover=cover, body=body, srcs=srcs, rel=rel,
+        sum=html.escape(p["summary"]), cover=cover,
+        body=body, srcs=srcs, rel=rel,
         tldr=tldr,
         credit_line=credit_line,
+        back=back_link("Назад", "/%s/" % p["category"]),
         share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"],
                           SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None),
     )
@@ -751,7 +821,8 @@ def render_cat(slug, name, items, theme):
                 'Свежие новости по всем направлениям выходят в <a href="/digests/">дайджестах</a>, '
                 'а разборы появляются на главной.</p>')
         desc = "%s: рубрика открыта — материалы с разбором новостей и ссылками на источники. %s" % (name, SITE["tagline"])
-    content = ('<main class="wrap"><section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
+    content = (back_link("На главную", "/") +
+               '<main class="wrap"><section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
                % (html.escape(name), count if items else "рубрика открыта", body))
     url = SITE["url"] + "/%s/" % slug
     return page("%s — новости и разборы | %s" % (name, SITE["title"]), desc, content, theme,
@@ -980,6 +1051,7 @@ def build(theme, out_dir, content_dir=None):
     CAL_ENTRIES[:] = cal_entries
     TITLES.clear()
     TITLES.update(load_titles())
+    ALL_POSTS[:] = posts + digests
 
     out = Path(out_dir)
     if out.exists():
@@ -1181,7 +1253,7 @@ def render_calendar_page(entries, theme, today=None):
                  '<span class="rubric__all">%d %s</span></div>%s</section>'
                  % (len(later), plural(len(later), "дата", "даты", "дат"), "".join(mblocks)))
 
-    content = ('<main class="wrap"><section class="lead"><h1>Календарь анонсов</h1>'
+    content = (back_link("На главную", "/") + '<main class="wrap"><section class="lead"><h1>Календарь анонсов</h1>'
                '<p>Что выходит на этой неделе и что уже назначено дальше. Только подтверждённые даты.</p></section>'
                '%s</main>') % body
     return page("Календарь анонсов — что выходит на этой неделе | %s" % SITE["title"], desc, content, theme,
@@ -1201,6 +1273,7 @@ def title_slug(text):
 
 
 TITLES = {}
+ALL_POSTS = []   # все материалы и дайджесты: нужны для обратной перелинковки
 CAL_ENTRIES = []   # заполняется в build(): записи календаря для страниц тайтлов
 
 
@@ -1217,13 +1290,16 @@ def load_titles():
             "slug": slug,
             "kind": rec["kind"] if rec["kind"] in ("game", "film", "series") else "game",
             "title": rec["title"],
-            "year": (rec["summary"] or "").strip(),
-            "developers": "",
-            "platforms": "",
+            "year": rec["meta"].get("year", ""),
+            "genre": rec["meta"].get("genre", ""),
+            "developers": rec["meta"].get("developer", ""),
+            "platforms": rec["meta"].get("platforms", ""),
+            "links": rec["meta"].get("links", ""),
             "cover": rec["cover"],
             "body": rec["body"],
             "sources": rec["sources"],
             "meta": rec,
+            "aliases": rec["meta"].get("aliases", ""),
         }
     return out
 
@@ -1249,12 +1325,40 @@ def title_page(slug, theme):
         e = sorted(rel, key=lambda x: x["day"])[0]
         when = ('<div class="tp__when">Выходит <b>%d %s</b></div>'
                 % (e["day"].day, MONTHS_GEN[e["day"].month - 1]))
+    mentions = articles_for_title(slug)
+    if mentions:
+        if len(mentions) == 1 and mentions[0]["kind"] == "post":
+            m = mentions[0]
+            ment_block = ('<section class="related"><h2>Упоминается в статье</h2>'
+                          '<a class="mnews" href="/%s.html"><span class="mnews__t">%s</span>'
+                          '<span class="mnews__d">%s</span></a></section>') % (
+                m["slug"], html.escape(m["title"]), m["date"].strftime("%d.%m.%Y"))
+        else:
+            rows = []
+            for m in mentions:
+                if m["kind"] == "digest":
+                    href = "/digests/%s.html" % m["slug"]
+                    label = m["title"]
+                    date = m["date"].strftime("%d.%m.%Y")
+                else:
+                    href = "/%s.html" % m["slug"]
+                    label = m["title"]
+                    date = m["date"].strftime("%d.%m.%Y")
+                rows.append('<a class="mnews" href="%s"><span class="mnews__t">%s</span>'
+                            '<span class="mnews__d">%s</span></a>' % (href, html.escape(label), date))
+            ment_block = ('<section class="related"><h2>Упоминается в %d %s</h2>%s</section>'
+                          % (len(mentions), plural(len(mentions), "материале", "материалах", "материалах"),
+                             "".join(rows)))
+    else:
+        ment_block = ""
     content = ('<main class="wrap"><article class="tp">%s<h1>%s</h1>%s'
                '<div class="tp__meta">%s</div><div class="post__body">%s</div>%s'
-               '%s</article></main>') % (
+               '%s</article>%s</main>') % (
         cover, html.escape(t["title"]), when, meta, md(t["body"]) if t["body"] else "",
         ('<section class="sources"><h2>Источники</h2><ul>%s</ul></section>' % srcs) if srcs else "",
-        share_block(SITE["url"] + "/titles/%s.html" % slug, t["title"], t["cover"] or DEFAULT_OG))
+        share_block(SITE["url"] + "/titles/%s.html" % slug, t["title"], t["cover"] or DEFAULT_OG),
+        ment_block)
+    content = back_link("К календарю", "/calendar/") + content
     return page("%s — %s | %s" % (t["title"], "игра" if t["kind"] == "game" else "фильм",
                                   SITE["title"]),
                 plain(t["body"], 180), content, theme,
@@ -1521,6 +1625,7 @@ def render_digest(d, theme, next_d=None, prev_d=None):
             '<a href="/digests/%s.html">%s, %s →</a>' % (next_d["slug"], part_of_day(next_d["date"]).lower(), ru_date(next_d["date"])) if next_d else "<span></span>")
 
     content = """<main class="wrap">
+{back}
 <article class="digest is-{slot}">
   <header class="digest__head">
     <div class="digest__meta">
@@ -1542,6 +1647,7 @@ def render_digest(d, theme, next_d=None, prev_d=None):
         tags=tags_html(d), lead=('<p class="post__lead">%s</p>' % html.escape(d["summary"])) if d["summary"] else "",
         blocks="".join(blocks), nav=nav,
         share=share_block(SITE["url"] + "/digests/" + d["slug"] + ".html", d["title"]),
+        back=back_link("Все дайджесты", "/digests/"),
         srcs=('<section class="sources"><h2>Все источники</h2><ol>%s</ol></section>' % "".join(
             '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (
                 html.escape(s["url"]), html.escape(s["name"])) for s in d["sources"] if s["url"])) if d["sources"] else "",

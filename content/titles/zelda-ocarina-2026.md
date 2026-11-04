@@ -8,6 +8,7 @@ publisher: Nintendo
 genre: экшн-приключение
 platforms: switch2
 cover: /assets/img/anno-zelda-ocarina-2026.jpg
+aliases: Zelda: Ocarina of Time | Ocarina of Time | Зельда: Ocarina of Time
 links: Официальная страница | https://www.nintendo.com/
 sources: Nintendo | https://www.nintendo.com/
 ---
