@@ -7,9 +7,8 @@ developer: Nintendo EPD
 publisher: Nintendo
 genre: экшн-приключение
 platforms: switch2
-cover: /assets/img/anno-zelda-ocarina-2026.jpg
+cover: /assets/img/anno-zelda-ocarina-of-time.jpg
 aliases: Zelda: Ocarina of Time | Ocarina of Time | Зельда: Ocarina of Time
-links: Официальная страница | https://www.nintendo.com/
-sources: Nintendo | https://www.nintendo.com/
+sources: Nintendo — Ask the Developer Vol. 24 | https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-24-the-legend-of-zelda-ocarina-of-time-part-1/; StopGame — календарь игр | https://stopgame.ru/games/dates
 ---
-Ремейк классики 1998 года для Switch 2: полностью озвученные катсцены, игра на окарине через микрофон консоли и выросший до 24,5 ГБ размер.
+Полный ремейк классики 1998 года для Switch 2, разработка — внутренняя студия Nintendo EPD. Озвученные катсцены, игра на окарине через микрофон консоли, размер вырос до 24,5 ГБ. Выходит 5 ноября.

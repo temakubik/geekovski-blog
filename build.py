@@ -81,7 +81,7 @@ def parse_post(path: Path):
         else:
             sources.append({"name": line, "url": ""})
     kind = meta.get("kind", "post").strip().lower()
-    if kind not in ("post", "digest", "calendar"):
+    if kind not in ("post", "digest", "calendar", "game", "film", "series"):
         kind = "post"
     # tldr: пункт | пункт — выжимка для блока «Коротко» в начале материала
     tldr = [x.strip() for x in meta.get("tldr", "").split("|") if x.strip()]
@@ -92,7 +92,8 @@ def parse_post(path: Path):
             continue
         # «- category: switch» открывает новость, «title: …» / «summary: …» её дополняют
         m = re.match(r"^(?:-\s+)?([a-z_]+):\s*(.*)$", s)
-        allowed = ("category", "title", "summary", "source", "platforms", "kind_note", "date", "where", "day", "cover")
+        allowed = ("category", "title", "summary", "source", "platforms", "kind_note",
+                   "date", "where", "day", "cover", "slug")
         if not (m and m.group(1) in allowed):
             continue
         key, val = m.group(1), m.group(2).strip()
@@ -145,7 +146,11 @@ def md_inline(text: str) -> str:
     text = re.sub(r"(?<![\w*])\*([^*\n]+)\*(?![\w*])", r"<em>\1</em>", text)
     # ссылки: абсолютные И относительные (/rss.xml, /about.html) — на страницах сайта
     # используются оба вида, и раньше относительные оставались сырым markdown
-    text = re.sub(r"\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)", r'<a href="\2">\1</a>', text)
+    def _link(m):
+        label, href = m.group(1), m.group(2)
+        cls = ' class="tlink"' if href.startswith("/titles/") else ""
+        return '<a%s href="%s">%s</a>' % (cls, href, label)
+    text = re.sub(r"\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)", _link, text)
     return text
 
 
@@ -1298,7 +1303,7 @@ def load_titles():
             "cover": rec["cover"],
             "body": rec["body"],
             "sources": rec["sources"],
-            "meta": rec,
+            "meta": rec["meta"],
             "aliases": rec["meta"].get("aliases", ""),
         }
     return out
@@ -1308,11 +1313,15 @@ def title_page(slug, theme):
     t = TITLES.get(slug)
     if not t:
         return None
-    rows = []
+    plat_labels = " · ".join(PLATFORMS.get(p, (p, ""))[0] for p in (t["platforms"] or "").split())
     if t["kind"] == "game":
-        rows = [("Разработчик", t["developers"]), ("Жанр", t["year"]), ("Платформы", t["platforms"])]
+        rows = [("Год", t["year"]), ("Разработчик", t["developers"]),
+                ("Издатель", t["meta"].get("publisher", "")), ("Жанр", t["genre"]),
+                ("Платформы", plat_labels)]
     else:
-        rows = [("Год", t["year"]), ("Платформа", t["platforms"])]
+        rows = [("Год", t["year"]), ("Студия", t["developers"]),
+                ("Дистрибьютор", t["meta"].get("publisher", "")), ("Жанр", t["genre"]),
+                ("Где смотреть", plat_labels)]
     meta = "".join('<div class="tp__row"><span class="tp__k">%s</span><span class="tp__v">%s</span></div>'
                    % (k, html.escape(v)) for k, v in rows if v)
     srcs = "".join('<li><a href="%s">%s</a></li>' % (x["url"], html.escape(x["name"]))
