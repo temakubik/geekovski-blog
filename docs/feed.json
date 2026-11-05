@@ -8,6 +8,108 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/baidu-ernie-5-5-flash-base.html",
+   "url": "https://geekovski.ru/baidu-ernie-5-5-flash-base.html",
+   "title": "Baidu открыла веса ERNIE 5.5 Flash Base",
+   "summary": "Baidu выложила на Hugging Face и ModelScope веса ERNIE 5.5 Flash Base — разреженной MoE-модели на 280 млрд параметров, где на каждый токен работает 14 млрд. Это сырой чекпойнт после предобучения, без инструктажа и дообучения.",
+   "date_published": "2026-11-05T18:05:00+03:00",
+   "date_modified": "2026-11-05T18:05:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/baidu-ernie-5-5-flash-base.jpg",
+   "_sources": [
+    {
+     "name": "Hugging Face — baidu/ERNIE-5.5-Flash-Base, карточка модели",
+     "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base"
+    },
+    {
+     "name": "Baidu — ERNIE 5.5 Flash Base, страница релиза",
+     "url": "https://ernie.baidu.com/zh/release/ernie-5-5-flash-base"
+    },
+    {
+     "name": "Baidu (X) — анонс ERNIE 5.5 Flash Base",
+     "url": "https://x.com/Baidu_Inc/status/2118265920665587935"
+    },
+    {
+     "name": "智东西 — 280B总参数、14B激活, релиз и бенчмарки",
+     "url": "https://zhidx.com/p/607749.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/motorola-signature-27.html",
+   "url": "https://geekovski.ru/motorola-signature-27.html",
+   "title": "Motorola Signature 27: 7000 мА·ч и $1599",
+   "summary": "Motorola официально вернулась во флагманский сегмент: Signature 27 получил Snapdragon 8 Elite Extreme Gen 6, аккумулятор на 7000 мА·ч, перископ на 200 Мп и семь лет обновлений. В США — $1599,99, предзаказы с 19 ноября.",
+   "date_published": "2026-11-05T18:05:00+03:00",
+   "date_modified": "2026-11-05T18:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/motorola-signature-27.jpg",
+   "_sources": [
+    {
+     "name": "Motorola — пресс-релиз о motorola signature 27 (StreetInsider)",
+     "url": "https://www.streetinsider.com/Corporate+News/Motorola+unveils+signature+27+flagship+smartphone+at+%241%2C599.99/27296510.html"
+    },
+    {
+     "name": "9to5Google — Motorola Signature 27 goes official with flagship specs, $1,599",
+     "url": "https://9to5google.com/2026/11/05/motorola-signature-27-specs-price-release-date/"
+    },
+    {
+     "name": "Android Headlines — Motorola Signature 27 Is Official With the Snapdragon 8 Elite Extreme Gen 6",
+     "url": "https://www.androidheadlines.com/motorola-signature-27-launch"
+    },
+    {
+     "name": "GSMArena — Motorola Signature 27 is now fully official",
+     "url": "https://www.gsmarena.com/motorola_signature_27_is_now_fully_official_with_a_7000_mah_battery_and_a_dedicated_action_sensor-news-75362.php"
+    },
+    {
+     "name": "PhoneArena — Motorola Signature 27 is here",
+     "url": "https://www.phonearena.com/news/motorola-signature-27-official_id184398"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/stellar-blade-switch-2.html",
+   "url": "https://geekovski.ru/stellar-blade-switch-2.html",
+   "title": "Stellar Blade на Switch 2: 60 fps из 30",
+   "summary": "Stellar Blade Complete Edition вышла на Switch 2 — со всеми DLC, четырьмя костюмами Bayonetta и генерацией кадров, которая поднимает базовые 30 fps до 60. Порт удачный, но с оговорками: мыло в портативе и задержка ввода при включённой интерполяции.",
+   "date_published": "2026-11-05T18:05:00+03:00",
+   "date_modified": "2026-11-05T18:05:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/stellar-blade-switch-2.jpg",
+   "_sources": [
+    {
+     "name": "Final Weapon — Stellar Blade Complete Edition Review, Impressive Switch 2 Debut",
+     "url": "https://finalweapon.net/2026/11/02/stellar-blade-complete-edition-review-nintendo-switch-2"
+    },
+    {
+     "name": "RPG Site — Stellar Blade Complete Edition on Switch 2 feels better than the demo, but needs more work",
+     "url": "https://rpgsite.net/feature/21675-stellar-blade-complete-edition-on-switch-2-feels-better-than-the-demo-but-needs-more-work"
+    },
+    {
+     "name": "GamingTrend — Stellar Blade Complete Edition Switch 2 impressions",
+     "url": "https://gamingtrend.com/impressions/stellar-blade-complete-edition-switch-2-impressions"
+    },
+    {
+     "name": "Polygon — 2024's Best Action Game Is (Mostly) Just as Good in Stunning Switch 2 Port",
+     "url": "https://polygon.com/stellar-blade-nintendo-switch-2-impressions"
+    },
+    {
+     "name": "Hobby Consolas — Análisis de Stellar Blade Complete Edition para Switch 2",
+     "url": "https://hobbyconsolas.com/videojuegos/analisis-stellar-blade-complete-edition-para-nintendo-switch-2-un-port-estelar-lleno-contenido-todo-incluido-cartucho_7056433_0.html"
+    },
+    {
+     "name": "Game Rant — Bayonetta crossover outfits",
+     "url": "https://gamerant.com/bayonetta-x-stellar-blade-collab-november-5-2026/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/androsnitch-apt29-android.html",
    "url": "https://geekovski.ru/androsnitch-apt29-android.html",
    "title": "Android ломали одним открытием страницы в Chrome",
