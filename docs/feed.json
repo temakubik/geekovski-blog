@@ -8,6 +8,62 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/fragmentary-order-vselennaya-tarkova.html",
+   "url": "https://geekovski.ru/fragmentary-order-vselennaya-tarkova.html",
+   "title": "Буянов подтвердил: Fragmentary Order — во вселенной Таркова",
+   "summary": "Никита Буянов 5 ноября сообщил, что научно-фантастический шутер Fragmentary Order разворачивается в той же вселенной, что и Escape from Tarkov. Даты релиза по-прежнему нет, зато стартует закрытая альфа — платная.",
+   "date_published": "2026-11-05T15:20:00+03:00",
+   "date_modified": "2026-11-05T15:20:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/fragmentary-order-vselennaya-tarkova.jpg",
+   "_sources": [
+    {
+     "name": "DTF — Буянов подтвердил связь вселенных",
+     "url": "https://dtf.ru/games/5394486-nikita-buyanov-podtverdil-svyaz-fragmentary-order-i-escape-from-tarkov"
+    },
+    {
+     "name": "Insider Gaming — разбор ролика и Prime Batch",
+     "url": "https://insider-gaming.com/nikita-buyanov-fragmentary-order-gameplay-reveal-2"
+    },
+    {
+     "name": "GameReactor — тиры Prime Batch и детали сеттинга",
+     "url": "https://gamereactor.eu/fragmentary-order-gameplay-reveal-buyanov"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/spider-man-brend-new-day-rekord.html",
+   "url": "https://geekovski.ru/spider-man-brend-new-day-rekord.html",
+   "title": "Человек-паук обошёл «Мстителей: Финал» вне Китая",
+   "summary": "«Spider-Man: Brand New Day» собрал $2,288 млрд вне Китая и на один миллион обошёл «Мстителей: Финал» — это рекорд для киновселенной Marvel. Мировой рекорд «Финала» пока держится, а Sony Pictures уже отчиталась о лучшем квартале.",
+   "date_published": "2026-11-05T15:15:00+03:00",
+   "date_modified": "2026-11-05T15:15:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/spider-man-brend-new-day-rekord.jpg",
+   "_sources": [
+    {
+     "name": "Global Box Office — рекорд MCU вне Китая (подсчёт от 4 ноября)",
+     "url": "https://x.com/GlobalBoxOffice/status/2118058274377564244"
+    },
+    {
+     "name": "The Numbers — касса киновселенной Marvel",
+     "url": "https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe"
+    },
+    {
+     "name": "Comic Basics — разбор рекорда и цифр",
+     "url": "https://www.comicbasics.com/spider-man-brand-new-day-edges-past-avengers-endgame-as-the-mcus-biggest-hit-outside-china/"
+    },
+    {
+     "name": "Deadline — финансовые итоги Sony Pictures (через The Statesman)",
+     "url": "https://www.thestatesman.com/entertainment/hollywood/how-big-is-spider-man-brand-new-day-for-sony-a-2-52-billion-global-haul-is-now-driving-the-studios-earnings-1503659114.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/openai-community-compact.html",
    "url": "https://geekovski.ru/openai-community-compact.html",
    "title": "OpenAI обещает платить за электричество дата-центров",
