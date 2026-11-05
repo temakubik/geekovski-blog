@@ -16,14 +16,17 @@
 - [PlayStation](https://geekovski.ru/playstation/): 4 материала
 - [PC-игры](https://geekovski.ru/pc/): 5 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
-- [Гаджеты](https://geekovski.ru/gadgets/): 6 материалов
-- [Кино](https://geekovski.ru/kino/): 3 материала
+- [Гаджеты](https://geekovski.ru/gadgets/): 7 материалов
+- [Кино](https://geekovski.ru/kino/): 4 материала
 - [Сериалы](https://geekovski.ru/serialy/): 1 материал
-- [AI](https://geekovski.ru/ai/): 8 материалов
+- [AI](https://geekovski.ru/ai/): 9 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 
 ## Материалы
 
+- [IMAX: рекордный квартал на «Одиссее»](https://geekovski.ru/imax-rekord-odyssey.html): Выручка IMAX за третий квартал выросла на 64% до $175 млн, чистая прибыль — в пять раз. Причина одна: «Одиссея» Кристофера Нолана собрала на больших экранах $550 млн — вдвое больше прежнего рекорда. (05.11.2026)
+- [Apple выпускает пять устройств 6 ноября](https://geekovski.ru/apple-5-ustroystv-6-noyabrya.html): В пятницу Apple начнёт продажи пяти новинок, включая первые в истории компании ноутбуки с сенсорным OLED-экраном. Самая доступная — iPad mini 8 на A20 Pro за $699, самая дорогая — 16-дюймовый MacBook Pro за $3399. (05.11.2026)
+- [OpenAI заплатит за электричество своих дата-центров](https://geekovski.ru/openai-plata-za-elektrichestvo.html): Через два дня после выборов, где избиратели провалили почти все проекты дата-центров, OpenAI опубликовала «Национальный общественный договор»: компания обещает полностью оплачивать электроэнергию и инфраструктуру своих ЦОДов и давать гарантии местным потребителям. (05.11.2026)
 - [Baidu открыла веса ERNIE 5.5 Flash Base](https://geekovski.ru/baidu-ernie-5-5-flash-base.html): Baidu выложила на Hugging Face и ModelScope веса ERNIE 5.5 Flash Base — разреженной MoE-модели на 280 млрд параметров, где на каждый токен работает 14 млрд. Это сырой чекпойнт после предобучения, без инструктажа и дообучения. (05.11.2026)
 - [Motorola Signature 27: 7000 мА·ч и $1599](https://geekovski.ru/motorola-signature-27.html): Motorola официально вернулась во флагманский сегмент: Signature 27 получил Snapdragon 8 Elite Extreme Gen 6, аккумулятор на 7000 мА·ч, перископ на 200 Мп и семь лет обновлений. В США — $1599,99, предзаказы с 19 ноября. (05.11.2026)
 - [Stellar Blade на Switch 2: 60 fps из 30](https://geekovski.ru/stellar-blade-switch-2.html): Stellar Blade Complete Edition вышла на Switch 2 — со всеми DLC, четырьмя костюмами Bayonetta и генерацией кадров, которая поднимает базовые 30 fps до 60. Порт удачный, но с оговорками: мыло в портативе и задержка ввода при включённой интерполяции. (05.11.2026)

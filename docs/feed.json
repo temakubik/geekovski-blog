@@ -8,6 +8,72 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/imax-rekord-odyssey.html",
+   "url": "https://geekovski.ru/imax-rekord-odyssey.html",
+   "title": "IMAX: рекордный квартал на «Одиссее»",
+   "summary": "Выручка IMAX за третий квартал выросла на 64% до $175 млн, чистая прибыль — в пять раз. Причина одна: «Одиссея» Кристофера Нолана собрала на больших экранах $550 млн — вдвое больше прежнего рекорда.",
+   "date_published": "2026-11-05T19:14:00+03:00",
+   "date_modified": "2026-11-05T19:14:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/imax-rekord-odyssey.jpg",
+   "_sources": [
+    {
+     "name": "Variety — 'The Odyssey' Takes Imax to Biggest Quarterly Revenue to Date",
+     "url": "https://variety.com/2026/film/news/imax-quarterly-revenue-record-the-odyssey-1236940229/"
+    },
+    {
+     "name": "Deadline — 'The Odyssey' Powers Record Q3 For Imax, Stock Jumps",
+     "url": "https://deadline.com/2026/11/the-odyssey-imax-quartelry-earnings-1237214226/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/apple-5-ustroystv-6-noyabrya.html",
+   "url": "https://geekovski.ru/apple-5-ustroystv-6-noyabrya.html",
+   "title": "Apple выпускает пять устройств 6 ноября",
+   "summary": "В пятницу Apple начнёт продажи пяти новинок, включая первые в истории компании ноутбуки с сенсорным OLED-экраном. Самая доступная — iPad mini 8 на A20 Pro за $699, самая дорогая — 16-дюймовый MacBook Pro за $3399.",
+   "date_published": "2026-11-05T19:12:00+03:00",
+   "date_modified": "2026-11-05T19:12:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/apple-5-ustroystv-6-noyabrya.jpg",
+   "_sources": [
+    {
+     "name": "MacRumors — Apple Launching Five New Products This Friday",
+     "url": "https://www.macrumors.com/2026/11/02/apple-launching-five-new-products-this-friday/"
+    },
+    {
+     "name": "MacRumors — Apple Isn't Done With 2026: Here's What's Still Coming",
+     "url": "https://www.macrumors.com/2026/11/02/apple-isnt-done-with-2026-heres-whats-still-coming/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/openai-plata-za-elektrichestvo.html",
+   "url": "https://geekovski.ru/openai-plata-za-elektrichestvo.html",
+   "title": "OpenAI заплатит за электричество своих дата-центров",
+   "summary": "Через два дня после выборов, где избиратели провалили почти все проекты дата-центров, OpenAI опубликовала «Национальный общественный договор»: компания обещает полностью оплачивать электроэнергию и инфраструктуру своих ЦОДов и давать гарантии местным потребителям.",
+   "date_published": "2026-11-05T19:10:00+03:00",
+   "date_modified": "2026-11-05T19:10:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/openai-plata-za-elektrichestvo.jpg",
+   "_sources": [
+    {
+     "name": "CNBC — OpenAI pledges to pay for data center power after election highlights AI concerns",
+     "url": "https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html"
+    },
+    {
+     "name": "TechStartups — OpenAI promises to pay for AI data center electricity",
+     "url": "https://techstartups.com/2026/11/05/openai-promises-to-pay-for-ai-data-center-electricity-as-voters-push-back-against-rising-power-bills"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/baidu-ernie-5-5-flash-base.html",
    "url": "https://geekovski.ru/baidu-ernie-5-5-flash-base.html",
    "title": "Baidu открыла веса ERNIE 5.5 Flash Base",
