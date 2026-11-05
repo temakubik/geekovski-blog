@@ -8,6 +8,96 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/elder-scrolls-6-sentinel.html",
+   "url": "https://geekovski.ru/elder-scrolls-6-sentinel.html",
+   "title": "The Elder Scrolls VI: Sentinel — имя есть, даты нет",
+   "summary": "На 40-летии Bethesda Game Studios Тодд Говард наконец назвал шестую часть — The Elder Scrolls VI: Sentinel. Ни даты, ни платформ, ни геймплея: по данным Bloomberg, до релиза больше двух лет.",
+   "date_published": "2026-11-05T11:16:00+03:00",
+   "date_modified": "2026-11-05T11:16:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/elder-scrolls-6-sentinel.jpg",
+   "_sources": [
+    {
+     "name": "Wccftech — Schreier says TES VI: Sentinel is still more than 2 years away",
+     "url": "https://wccftech.com/the-elder-scrolls-vi-sentinel-release-window-jason-schreier/"
+    },
+    {
+     "name": "Nintendo Life — The Elder Scrolls 6: Sentinel Is Reportedly Still \"More Than Two Years Away\"",
+     "url": "https://www.nintendolife.com/news/2026/11/the-elder-scrolls-6-sentinel-is-reportedly-still-more-than-two-years-away"
+    },
+    {
+     "name": "Bleeding Cool — The Elder Scrolls VI: Sentinel Has Been Officially Named",
+     "url": "https://bleedingcool.com/games/the-elder-scrolls-vi-sentinel-has-been-officially-named/"
+    },
+    {
+     "name": "Bethesda Softworks — Celebrating 40 Years of Bethesda Game Studios",
+     "url": "https://www.youtube.com/watch?v=uvcfI8RPZYc"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/openai-pokupaet-pierre.html",
+   "url": "https://geekovski.ru/openai-pokupaet-pierre.html",
+   "title": "OpenAI покупает Pierre — Codex получит свой GitHub",
+   "summary": "4 ноября OpenAI объявила о покупке Pierre Computer Company — компании за Code Storage и open-source библиотеками Trees, Diffs и Highlights, которые уже работают в приложении Codex. Сделку ещё не закрыли.",
+   "date_published": "2026-11-05T11:14:00+03:00",
+   "date_modified": "2026-11-05T11:14:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/openai-pokupaet-pierre.jpg",
+   "_sources": [
+    {
+     "name": "OpenAI — OpenAI to acquire Pierre Computer Company, Inc.",
+     "url": "https://openai.com/index/openai-to-acquire-pierre/"
+    },
+    {
+     "name": "Axios — OpenAI targets Microsoft's GitHub with deal for startup",
+     "url": "https://www.axios.com/2026/11/04/openai-pierre-computer-github"
+    },
+    {
+     "name": "The Decoder — OpenAI acquires Pierre Computer Company",
+     "url": "https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/"
+    },
+    {
+     "name": "WSJ — OpenAI to Bring Pierre Computer's Code Storage to Codex",
+     "url": "https://www.wsj.com/tech/ai/openai-to-bring-pierre-computers-code-storage-to-codex-through-acquisition-05f53582"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/honor-magic-9-pro-max-global.html",
+   "url": "https://geekovski.ru/honor-magic-9-pro-max-global.html",
+   "title": "Honor Magic 9 Pro Max: мировая версия с батареей поменьше",
+   "summary": "4 ноября Honor открыла международный запуск серии Magic 9 с Гонконга. Флагман Magic 9 Pro Max там стоит от HK$10 999, но аккумулятор у гонконгской версии — 8000 мА·ч против 8800 мА·ч у китайской.",
+   "date_published": "2026-11-05T11:12:00+03:00",
+   "date_modified": "2026-11-05T11:12:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/honor-magic-9-pro-max-global.jpg",
+   "_sources": [
+    {
+     "name": "iXBT — представлена глобальная версия Honor Magic 9 Pro Max",
+     "url": "https://www.ixbt.com/news/2026/11/05/akb-8000-mac-kamera-200-mp-200-kratnyi-zum-i-zariadka-100-vt-predstavlena-globalnaia-versiia-honor-magic-9-pro-max.html"
+    },
+    {
+     "name": "HuaweiCentral — Magic 9 Pro Max debuts in Hong Kong",
+     "url": "https://www.huaweicentral.com/honor-magic-9-pro-max-debuts-in-hong-kong/"
+    },
+    {
+     "name": "9to5Google — Honor Magic 9 Pro Max goes official (Китай, 28 сентября)",
+     "url": "https://9to5google.com/2026/09/28/honor-magic-9-pro-max-battery-arri-cameras-official-specs/"
+    },
+    {
+     "name": "PhoneDroid — Honor Magic 9 Pro Max: цена, характеристики, Европа",
+     "url": "https://www.phonedroid.net/blog/honor-magic-9-pro-max-specs/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/god-of-war-ragnarok-1-4-mlrd.html",
    "url": "https://geekovski.ru/god-of-war-ragnarok-1-4-mlrd.html",
    "title": "God of War: Ragnarök — $1,4 млрд выручки, оценка аналитиков",
