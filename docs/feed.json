@@ -8,6 +8,84 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/androsnitch-apt29-android.html",
+   "url": "https://geekovski.ru/androsnitch-apt29-android.html",
+   "title": "Android ломали одним открытием страницы в Chrome",
+   "summary": "Sekoia описала кампанию APT29, в которой Android-смартфоны на Snapdragon заражались при открытии вредоносной страницы в устаревшем Chrome — без клика, установки и разрешений. Похищались cookie, сохранённые пароли и конфиг Wi-Fi; все уязвимости уже закрыты.",
+   "date_published": "2026-11-05T17:05:00+03:00",
+   "date_modified": "2026-11-05T17:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/androsnitch-apt29-android.jpg",
+   "_sources": [
+    {
+     "name": "Sekoia — Poisoned Source: APT29 watering holes target mobile devices with n-day exploits",
+     "url": "https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits"
+    },
+    {
+     "name": "Android Authority — Hackers used Chrome and Snapdragon GPU flaws to hack Android phones",
+     "url": "https://androidauthority.com/hackers-chrome-snapdragon-gpu-flaws-android-zero-click-3731860"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/bluetooth-7-0-hdt.html",
+   "url": "https://geekovski.ru/bluetooth-7-0-hdt.html",
+   "title": "Bluetooth 7.0: 7,5 Мбит/с и путь к lossless-звуку",
+   "summary": "Bluetooth SIG утвердила High Data Throughput — до 7,5 Мбит/с по Bluetooth LE, почти вчетверо быстрее прежнего режима. Это опциональная часть спецификации Core 7.0, а первым флагманским применением в 2027 году станет беспроводной звук без потерь.",
+   "date_published": "2026-11-05T17:05:00+03:00",
+   "date_modified": "2026-11-05T17:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/bluetooth-7-0-hdt.jpg",
+   "_sources": [
+    {
+     "name": "Bluetooth SIG — Bluetooth High Data Throughput opens a new chapter in wireless performance",
+     "url": "https://www.bluetooth.com/press/bluetooth-high-data-throughput-opens-a-new-chapter-in-wireless-performance/"
+    },
+    {
+     "name": "Bluetooth SIG — Bluetooth Core 7.0 feature overview",
+     "url": "https://www.bluetooth.com/bluetooth-core-7-0-feature-overview/"
+    },
+    {
+     "name": "Компьютерра — Bluetooth получит новый режим передачи данных со скоростью до 7,5 Мбит/с",
+     "url": "https://www.computerra.ru/373259/bluetooth-poluchit-novyj-rezhim-peredachi-dannyh-so-skorostyu-do-7-5-mbit-s/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/discord-rust-gpui.html",
+   "url": "https://geekovski.ru/discord-rust-gpui.html",
+   "title": "Discord уходит с Electron: 290 МБ вместо гигабайтов",
+   "summary": "Discord переписывает приложение целиком на Rust и отказывается от Electron и React Native. Ранняя сборка нового клиента под кодовым именем Phoenix на Windows 11 занимает 290 МБ памяти против 1–2 ГБ у нынешней версии.",
+   "date_published": "2026-11-05T17:05:00+03:00",
+   "date_modified": "2026-11-05T17:05:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/discord-rust-gpui.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Discord is ditching Electron and its new app uses less RAM",
+     "url": "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app"
+    },
+    {
+     "name": "Stanislav Vishnevskiy — пост в X",
+     "url": "https://x.com/svishnevskiy/status/2118081920194203799"
+    },
+    {
+     "name": "Windows Latest — Discord is killing its Electron app that can eat 4GB of RAM",
+     "url": "https://windowslatest.com/2026/11/05/discord-is-killing-its-electron-app-that-can-eat-4gb-of-ram-on-windows-11-and-the-rust-rebuild-uses-just-290mb"
+    },
+    {
+     "name": "Frandroid — De 4 Go à 290 Mo en RAM",
+     "url": "https://frandroid.com/os/3311599_290-mo-au-lieu-de-4-go-en-ram-discord-repart-de-zero-pour-alleger-definitivement-son-application"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/cat-wu-v-openai.html",
    "url": "https://geekovski.ru/cat-wu-v-openai.html",
    "title": "Cat Wu перешла из Anthropic в OpenAI",

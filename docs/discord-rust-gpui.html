@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discord уходит с Electron: 290 МБ вместо гигабайтов — GEEKOVSKI</title>
+<meta name="description" content="Discord переписывает приложение целиком на Rust и отказывается от Electron и React Native. Ранняя сборка нового клиента под кодовым именем Phoenix на Windows 11 занимает 290 МБ памяти против 1–2 ГБ у нынешней версии.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/discord-rust-gpui.html">
+<meta property="og:title" content="Discord уходит с Electron: 290 МБ вместо гигабайтов — GEEKOVSKI">
+<meta property="og:description" content="Discord переписывает приложение целиком на Rust и отказывается от Electron и React Native. Ранняя сборка нового клиента под кодовым именем Phoenix на Windows 11 занимает 290 МБ памяти против 1–2 ГБ у нынешней версии.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/discord-rust-gpui.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/discord-rust-gpui.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Discord уходит с Electron: 290 МБ вместо гигабайтов">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Discord уходит с Electron: 290 МБ вместо гигабайтов — GEEKOVSKI">
+<meta name="twitter:description" content="Discord переписывает приложение целиком на Rust и отказывается от Electron и React Native. Ранняя сборка нового клиента под кодовым именем Phoenix на Windows 11 занимает 290 МБ памяти против 1–2 ГБ у нынешней версии.">
+<meta property="article:published_time" content="2026-11-05T17:05:00+03:00">
+<meta property="article:modified_time" content="2026-11-05T17:05:00+03:00">
+<meta property="article:section" content="PC-игры">
+<meta property="article:author" content="GEEKOVSKI">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#0A0C0F">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BlogPosting","@id":"https://geekovski.ru/discord-rust-gpui.html#article","headline":"Discord уходит с Electron: 290 МБ вместо гигабайтов","description":"Discord переписывает приложение целиком на Rust и отказывается от Electron и React Native. Ранняя сборка нового клиента под кодовым именем Phoenix на Windows 11 занимает 290 МБ памяти против 1–2 ГБ у нынешней версии.","datePublished":"2026-11-05T17:05:00+03:00","dateModified":"2026-11-05T17:05:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/discord-rust-gpui.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"PC-игры","keywords":["PC-игры","GEEKOVSKI"],"wordCount":378,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/discord-rust-gpui.jpg","width":1600,"height":900}],"citation":["https://www.theverge.com/news/1027379/discord-ditching-electron-web-app","https://x.com/svishnevskiy/status/2118081920194203799","https://windowslatest.com/2026/11/05/discord-is-killing-its-electron-app-that-can-eat-4gb-of-ram-on-windows-11-and-the-rust-rebuild-uses-just-290mb","https://frandroid.com/os/3311599_290-mo-au-lieu-de-4-go-en-ram-discord-repart-de-zero-pour-alleger-definitivement-son-application"],"abstract":"CTO Discord Станислав Вишневский подтвердил полный переход клиента на Rust Интерфейс десктопа рисуется на GPUI — фреймворке команды редактора Zed Скриншот ранней сборки «Phoenix»: 290,2 МБ RAM с двумя подключёнными аккаунтами Даты релиза нет, компания надеется скоро выйти на тесты с пользователями"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"PC-игры","item":"https://geekovski.ru/pc/"},{"@type":"ListItem","position":3,"name":"Discord уходит с Electron: 290 МБ вместо гигабайтов","item":"https://geekovski.ru/discord-rust-gpui.html"}]}]}</script>
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(35)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(2)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <div class="top__actions">
+      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main class="wrap post-page">
+<div class="backrow"><a class="backlink" href="/pc/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<article class="post cat-pc">
+  <header class="post__head">
+    <div class="post__meta"><a class="chip chip--solid cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-05T17:05:00+03:00">05.11.2026, 17:05</time></div>
+    <h1>Discord уходит с Electron: 290 МБ вместо гигабайтов</h1>
+    <p class="post__lead">Discord переписывает приложение целиком на Rust и отказывается от Electron и React Native. Ранняя сборка нового клиента под кодовым именем Phoenix на Windows 11 занимает 290 МБ памяти против 1–2 ГБ у нынешней версии.</p>
+  </header>
+  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>CTO Discord Станислав Вишневский подтвердил полный переход клиента на Rust</li><li>Интерфейс десктопа рисуется на GPUI — фреймворке команды редактора Zed</li><li>Скриншот ранней сборки «Phoenix»: 290,2 МБ RAM с двумя подключёнными аккаунтами</li><li>Даты релиза нет, компания надеется скоро выйти на тесты с пользователями</li></ul></aside>
+  <figure class="post__cover"><img src="/assets/img/discord-rust-gpui.jpg" alt="Discord уходит с Electron: 290 МБ вместо гигабайтов"></figure>
+  <div class="post__body"><p>4 ноября сооснователь и технический директор Discord Станислав Вишневский объявил в X, что компания переписывает клиент на Rust целиком. Формулировка максимально прямая: «Это значит, что Electron уходит, как и React Native; мобильные приложения сохраняют нативный интерфейс, но делят код с десктопом через Rust». Это не слух и не утечка — заявление топ-менеджера, которое The Verge подтвердило в тот же день.</p>
+<p>Интерфейс десктопа переезжает на GPUI — Rust-фреймворк, который сделала команда редактора Zed. Он рисует всё через GPU и не тащит внутри браузерный движок, в отличие от Electron, который фактически везёт с собой Chromium. Именно Chromium и был причиной, по которой память у Discord росла независимо от нагрузки.</p>
+<p>Цифра, которая облетела новостные сайты, — 290,2 МБ. Столько показывал скриншот диспетчера задач с ранней сборкой под кодовым именем «Discord Phoenix» на Windows 11, причём с двумя подключёнными аккаунтами. Для сравнения: Discord сам признавал, что на Windows приложение доходит до 4 ГБ, и в декабре 2025 года тестировал автоматический перезапуск клиента при превышении этого порога. В обычном режиме нынешняя версия держит 1–2 ГБ в простое.</p>
+<figure class="post__fig"><img src="/assets/img/discord-rust-gpui-hp.jpg" alt="Рабочий стол с ноутбуком и подсвеченной клавиатурой" loading="lazy"></figure>
+<p>Осторожность здесь нужна. 290 МБ — это один скриншот со стартового экрана, без указания нагрузки: ни десятка серверов, ни тысяч сообщений в истории, ни голосового канала, ни демонстрации экрана. Заголовки «4 ГБ против 290 МБ» сравнивают худший случай с лучшим, а не два замера на одной машине. Что Rust-клиент будет легче — почти наверняка; что он будет занимать 290 МБ в реальной работе — не подтверждено ничем, кроме одной картинки.</p>
+<p>Rust в Discord не новость: компания взяла его ещё в 2018 году, и значительная часть инфраструктуры, голосовых технологий и даже текущего клиента уже на нём написана. Вишневский называет переход «святым Граалем» — добраться до всего клиента. Сроков публичного релиза нет, есть только обещание «скоро вывести на тесты с пользователями». Отдельный открытый вопрос — останется ли в новом клиенте отключение аппаратного ускорения: GPUI рисует всё видеокартой, а эта настройка нужна слабым машинам.</p>
+<p>Оценка: за последние годы Discord стал главным аргументом в спорах о том, что Electron — это удобно разработчику и дорого пользователю. Уход на нативный Rust с GPUI — редкий случай, когда компания платит за это полной перепиской клиента, а не оптимизацией костылями. Но пока это обещание и скриншот: проверять придётся на своей машине, когда появится бета.</p></div>
+  
+  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.theverge.com/news/1027379/discord-ditching-electron-web-app" rel="nofollow noopener" target="_blank">The Verge — Discord is ditching Electron and its new app uses less RAM</a></li><li><a href="https://x.com/svishnevskiy/status/2118081920194203799" rel="nofollow noopener" target="_blank">Stanislav Vishnevskiy — пост в X</a></li><li><a href="https://windowslatest.com/2026/11/05/discord-is-killing-its-electron-app-that-can-eat-4gb-of-ram-on-windows-11-and-the-rust-rebuild-uses-just-290mb" rel="nofollow noopener" target="_blank">Windows Latest — Discord is killing its Electron app that can eat 4GB of RAM</a></li><li><a href="https://frandroid.com/os/3311599_290-mo-au-lieu-de-4-go-en-ram-discord-repart-de-zero-pour-alleger-definitivement-son-application" rel="nofollow noopener" target="_blank">Frandroid — De 4 Go à 290 Mo en RAM</a></li></ol></section>
+  <section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fdiscord-rust-gpui.html&text=Discord%20%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D1%81%20Electron%3A%20290%20%D0%9C%D0%91%20%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B3%D0%B8%D0%B3%D0%B0%D0%B1%D0%B0%D0%B9%D1%82%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fdiscord-rust-gpui.html&title=Discord%20%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D1%81%20Electron%3A%20290%20%D0%9C%D0%91%20%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B3%D0%B8%D0%B3%D0%B0%D0%B1%D0%B0%D0%B9%D1%82%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://wa.me/?text=Discord%20%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D1%81%20Electron%3A%20290%20%D0%9C%D0%91%20%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B3%D0%B8%D0%B3%D0%B0%D0%B1%D0%B0%D0%B9%D1%82%D0%BE%D0%B2%20https%3A%2F%2Fgeekovski.ru%2Fdiscord-rust-gpui.html" target="_blank" rel="noopener nofollow">WhatsApp</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fdiscord-rust-gpui.html&text=Discord%20%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D1%81%20Electron%3A%20290%20%D0%9C%D0%91%20%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B3%D0%B8%D0%B3%D0%B0%D0%B1%D0%B0%D0%B9%D1%82%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fdiscord-rust-gpui.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fdiscord-rust-gpui-pin.jpg&description=Discord%20%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D1%81%20Electron%3A%20290%20%D0%9C%D0%91%20%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B3%D0%B8%D0%B3%D0%B0%D0%B1%D0%B0%D0%B9%D1%82%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fdiscord-rust-gpui.html">Скопировать ссылку</button>
+</section>
+</article>
+<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/fragmentary-order-vselennaya-tarkova.jpg" alt="Буянов подтвердил: Fragmentary Order — во вселенной Таркова" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-05T15:20:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/fragmentary-order-vselennaya-tarkova.html">Буянов подтвердил: Fragmentary Order — во вселенной Таркова</a></h3>
+    <p class="card__sum">Никита Буянов 5 ноября сообщил, что научно-фантастический шутер Fragmentary Order разворачивается в той же вселенной, что и…</p>
+    <div class="card__foot"><a class="more" href="/fragmentary-order-vselennaya-tarkova.html">Читать →</a><span class="srcc">источников: 3</span></div>
+  </div>
+</article>
+<article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/unreal-engine-6-bez-blueprintov.jpg" alt="Unreal Engine 6 останется без Blueprints" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-05T12:05:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/unreal-engine-6-bez-blueprintov.html">Unreal Engine 6 останется без Blueprints</a></h3>
+    <p class="card__sum">На Unreal Fest Tokyo Тим Суини показал, что в UE6 Blueprints, Actors и C++ Gameplay Framework будут удалены, а не отложены в…</p>
+    <div class="card__foot"><a class="more" href="/unreal-engine-6-bez-blueprintov.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article>
+<article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/elder-scrolls-6-sentinel.jpg" alt="The Elder Scrolls VI: Sentinel — имя есть, даты нет" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-05T11:16:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/elder-scrolls-6-sentinel.html">The Elder Scrolls VI: Sentinel — имя есть, даты нет</a></h3>
+    <p class="card__sum">На 40-летии Bethesda Game Studios Тодд Говард наконец назвал шестую часть — The Elder Scrolls VI: Sentinel.</p>
+    <div class="card__foot"><a class="more" href="/elder-scrolls-6-sentinel.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
+const route = location.pathname;
+const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+document.querySelector(active)?.classList.add('nav__link--active');
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+</body>
+</html>

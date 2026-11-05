@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android ломали одним открытием страницы в Chrome — GEEKOVSKI</title>
+<meta name="description" content="Sekoia описала кампанию APT29, в которой Android-смартфоны на Snapdragon заражались при открытии вредоносной страницы в устаревшем Chrome — без клика, установки и разрешений. Похищались cookie, сохранённые пароли и конфиг Wi-Fi; все уязвимости уже закрыты.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/androsnitch-apt29-android.html">
+<meta property="og:title" content="Android ломали одним открытием страницы в Chrome — GEEKOVSKI">
+<meta property="og:description" content="Sekoia описала кампанию APT29, в которой Android-смартфоны на Snapdragon заражались при открытии вредоносной страницы в устаревшем Chrome — без клика, установки и разрешений. Похищались cookie, сохранённые пароли и конфиг Wi-Fi; все уязвимости уже закрыты.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/androsnitch-apt29-android.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/androsnitch-apt29-android.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Android ломали одним открытием страницы в Chrome">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Android ломали одним открытием страницы в Chrome — GEEKOVSKI">
+<meta name="twitter:description" content="Sekoia описала кампанию APT29, в которой Android-смартфоны на Snapdragon заражались при открытии вредоносной страницы в устаревшем Chrome — без клика, установки и разрешений. Похищались cookie, сохранённые пароли и конфиг Wi-Fi; все уязвимости уже закрыты.">
+<meta property="article:published_time" content="2026-11-05T17:05:00+03:00">
+<meta property="article:modified_time" content="2026-11-05T17:05:00+03:00">
+<meta property="article:section" content="Гаджеты">
+<meta property="article:author" content="GEEKOVSKI">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#0A0C0F">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BlogPosting","@id":"https://geekovski.ru/androsnitch-apt29-android.html#article","headline":"Android ломали одним открытием страницы в Chrome","description":"Sekoia описала кампанию APT29, в которой Android-смартфоны на Snapdragon заражались при открытии вредоносной страницы в устаревшем Chrome — без клика, установки и разрешений. Похищались cookie, сохранённые пароли и конфиг Wi-Fi; все уязвимости уже закрыты.","datePublished":"2026-11-05T17:05:00+03:00","dateModified":"2026-11-05T17:05:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/androsnitch-apt29-android.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"Гаджеты","keywords":["Гаджеты","GEEKOVSKI"],"wordCount":397,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/androsnitch-apt29-android.jpg","width":1600,"height":900}],"citation":["https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits","https://androidauthority.com/hackers-chrome-snapdragon-gpu-flaws-android-zero-click-3731860"],"abstract":"Связка CVE-2026-3910 в Chrome и CVE-2025-27038 в драйвере Adreno выводила код из песочницы браузера Хватало открытия заражённой страницы в Chrome 139–145 Малварь AndroSnitch копировала cookie, логины, историю и файл Wi-Fi с паролями Обе уязвимости пропатчены до начала атак: нужно обновить Chrome выше 145 и поставить патч безопасности"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"Гаджеты","item":"https://geekovski.ru/gadgets/"},{"@type":"ListItem","position":3,"name":"Android ломали одним открытием страницы в Chrome","item":"https://geekovski.ru/androsnitch-apt29-android.html"}]}]}</script>
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(35)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(2)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <div class="top__actions">
+      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main class="wrap post-page">
+<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<article class="post cat-gadgets">
+  <header class="post__head">
+    <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T17:05:00+03:00">05.11.2026, 17:05</time></div>
+    <h1>Android ломали одним открытием страницы в Chrome</h1>
+    <p class="post__lead">Sekoia описала кампанию APT29, в которой Android-смартфоны на Snapdragon заражались при открытии вредоносной страницы в устаревшем Chrome — без клика, установки и разрешений. Похищались cookie, сохранённые пароли и конфиг Wi-Fi; все уязвимости уже закрыты.</p>
+  </header>
+  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Связка CVE-2026-3910 в Chrome и CVE-2025-27038 в драйвере Adreno выводила код из песочницы браузера</li><li>Хватало открытия заражённой страницы в Chrome 139–145</li><li>Малварь AndroSnitch копировала cookie, логины, историю и файл Wi-Fi с паролями</li><li>Обе уязвимости пропатчены до начала атак: нужно обновить Chrome выше 145 и поставить патч безопасности</li></ul></aside>
+  <figure class="post__cover"><img src="/assets/img/androsnitch-apt29-android.jpg" alt="Android ломали одним открытием страницы в Chrome"></figure>
+  <div class="post__body"><p>Компания Sekoia опубликовала разбор мобильной кампании, которую связывает с APT29 — группировкой, которую приписывают Службе внешней разведки России. На Android атака не требовала ни клика по ссылке, ни установки приложения, ни выдачи разрешений: достаточно было открыть заражённую страницу в устаревшей версии Chrome.</p>
+<p>Механика двухступенчатая. Сначала эксплуатировалась уязвимость CVE-2026-3910 в самом Chrome — она давала выполнение кода внутри браузера. Дальше в дело шла CVE-2025-27038, дыра в драйвере графики Qualcomm Adreno: она позволяла выйти из песочницы Chrome и получить доступ к системе глубже. Поскольку Adreno стоит в чипах Snapdragon, под удар попадали аппараты на Qualcomm. Атака работала только на Chrome с 139-й по 145-ю версию, причём 143-ю почему-то пропускала — Sekoia причин не объясняет.</p>
+<p>После компрометации на телефон ставился вредонос, который в отчёте назван AndroSnitch. Он копировал cookie Chrome, сохранённые логины и историю посещений, а вместе с ними — файл конфигурации Wi-Fi со всеми паролями от сетей, к которым подключался владелец. Украденные cookie — самый ценный трофей: с ними можно войти в аккаунт, не зная пароля и не проходя второй фактор заново.</p>
+<figure class="post__fig"><img src="/assets/img/androsnitch-apt29-android-hp.jpg" alt="Смартфон в руке на тёмном фоне" loading="lazy"></figure>
+<p>Векторов было несколько: вредоносный код встраивали в легитимные сайты, делали двойники — включая копию сайта America250 и подделку лондонского отеля рядом с правительственными офисами, — а с 27 августа по 3 сентября взломали украинский веб-аналитический сервис, которым пользовались тысячи преимущественно украинских сайтов. Скрипт на странице оценивал устройство посетителя и подсовывал подходящий эксплойт. Любопытная деталь: android-часть была написана так, чтобы останавливаться при обнаружении Samsung Galaxy S25 Ultra. Заодно били и по iPhone — цепочка на iOS 16–17.4 воровала cookie, эксплойт DarkSword на iOS 18.5 забирал сообщения, фото и пароли.</p>
+<p>Хорошая новость в том, что все использованные уязвимости закрыли до начала атак, так что это история про запущенные устройства. Защита простая: обновить Chrome из Play Store и проверить, что версия выше 145 (меню → «Настройки» → «О приложении Chrome»), плюс поставить последнее обновление безопасности телефона — патчи драйверов Qualcomm приходят именно с ежемесячными апдейтами.</p>
+<p>Оценка: пугающая часть здесь не в экзотике эксплойтов, а в том, что они были n-day — то есть на момент атаки уже закрытыми. Работает это лишь на устройствах, которые годами не видели обновлений, и именно такие телефоны составляют заметную долю рынка. Цели у кампании были узкие — дипломаты и люди, связанные с войной в Украине, — но привычка обновлять браузер защищает от всего класса подобных атак, а не только от этой.</p></div>
+  
+  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits" rel="nofollow noopener" target="_blank">Sekoia — Poisoned Source: APT29 watering holes target mobile devices with n-day exploits</a></li><li><a href="https://androidauthority.com/hackers-chrome-snapdragon-gpu-flaws-android-zero-click-3731860" rel="nofollow noopener" target="_blank">Android Authority — Hackers used Chrome and Snapdragon GPU flaws to hack Android phones</a></li></ol></section>
+  <section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fandrosnitch-apt29-android.html&text=Android%20%D0%BB%D0%BE%D0%BC%D0%B0%D0%BB%D0%B8%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%B2%20Chrome" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fandrosnitch-apt29-android.html&title=Android%20%D0%BB%D0%BE%D0%BC%D0%B0%D0%BB%D0%B8%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%B2%20Chrome" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://wa.me/?text=Android%20%D0%BB%D0%BE%D0%BC%D0%B0%D0%BB%D0%B8%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%B2%20Chrome%20https%3A%2F%2Fgeekovski.ru%2Fandrosnitch-apt29-android.html" target="_blank" rel="noopener nofollow">WhatsApp</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fandrosnitch-apt29-android.html&text=Android%20%D0%BB%D0%BE%D0%BC%D0%B0%D0%BB%D0%B8%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%B2%20Chrome" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fandrosnitch-apt29-android.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fandrosnitch-apt29-android-pin.jpg&description=Android%20%D0%BB%D0%BE%D0%BC%D0%B0%D0%BB%D0%B8%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%B2%20Chrome" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fandrosnitch-apt29-android.html">Скопировать ссылку</button>
+</section>
+</article>
+<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/bluetooth-7-0-hdt.jpg" alt="Bluetooth 7.0: 7,5 Мбит/с и путь к lossless-звуку" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T17:05:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/bluetooth-7-0-hdt.html">Bluetooth 7.0: 7,5 Мбит/с и путь к lossless-звуку</a></h3>
+    <p class="card__sum">Bluetooth SIG утвердила High Data Throughput — до 7,5 Мбит/с по Bluetooth LE, почти вчетверо быстрее прежнего режима.</p>
+    <div class="card__foot"><a class="more" href="/bluetooth-7-0-hdt.html">Читать →</a><span class="srcc">источников: 3</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/siri-ai-razrabotchiki.jpg" alt="Siri AI пустили в любые приложения" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T16:05:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/siri-ai-razrabotchiki.html">Siri AI пустили в любые приложения</a></h3>
+    <p class="card__sum">3 ноября Apple открыла Siri AI всем разработчикам — любое приложение может отдать ассистенту свои действия через App Intents.</p>
+    <div class="card__foot"><a class="more" href="/siri-ai-razrabotchiki.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/honor-magic-9-pro-max-global.jpg" alt="Honor Magic 9 Pro Max: мировая версия с батареей поменьше" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T11:12:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/honor-magic-9-pro-max-global.html">Honor Magic 9 Pro Max: мировая версия с батареей поменьше</a></h3>
+    <p class="card__sum">4 ноября Honor открыла международный запуск серии Magic 9 с Гонконга.</p>
+    <div class="card__foot"><a class="more" href="/honor-magic-9-pro-max-global.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
+const route = location.pathname;
+const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+document.querySelector(active)?.classList.add('nav__link--active');
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+</body>
+</html>
