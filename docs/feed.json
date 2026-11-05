@@ -8,6 +8,92 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/god-of-war-laufey-may-2027.html",
+   "url": "https://geekovski.ru/god-of-war-laufey-may-2027.html",
+   "title": "God of War Laufey переехала на 20 мая 2027",
+   "summary": "Santa Monica Studio официально перенесла God of War Laufey с 16 февраля на 20 мая 2027 года — на три месяца. Причина, которую назвала студия, — «финальные штрихи»; конкуренцию в феврале она причиной не называла.",
+   "date_published": "2026-11-05T12:05:00+03:00",
+   "date_modified": "2026-11-05T12:05:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/god-of-war-laufey-may-2027.jpg",
+   "_sources": [
+    {
+     "name": "Santa Monica Studio — заявление о переносе",
+     "url": "https://x.com/SonySantaMonica/status/2118025571020271817"
+    },
+    {
+     "name": "GameSpot — God Of War Laufey Delayed",
+     "url": "https://www.gamespot.com/articles/god-of-war-laufey-delayed"
+    },
+    {
+     "name": "Engadget — God Of War Laufey Is Delayed Until May 20",
+     "url": "https://www.engadget.com/2306802/god-of-war-laufey-is-delayed-until-may-20"
+    },
+    {
+     "name": "IGN — God of War Laufey Delayed to May 2027",
+     "url": "https://www.ign.com/articles/god-of-war-laufey-delayed-to-may-2027"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/nintendo-otchet-26-mln.html",
+   "url": "https://geekovski.ru/nintendo-otchet-26-mln.html",
+   "title": "Switch 2 перевалила за 26 миллионов",
+   "summary": "Nintendo отчиталась за первое полугодие финансового года: Switch 2 разошлась тиражом 26,35 млн, но поставки консолей упали на 37,4%. Операционная прибыль при этом выросла на 49,1% — деньги приносит софт.",
+   "date_published": "2026-11-05T12:05:00+03:00",
+   "date_modified": "2026-11-05T12:05:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/nintendo-otchet-26-mln.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo — финансовый отчёт за первое полугодие FY2027",
+     "url": "https://www.nintendo.co.jp/ir/pdf/2026/261105_3e.pdf"
+    },
+    {
+     "name": "Nintendo Life — Switch 2 Surpasses 26 Million Units Sold, Hardware Sales Down By 37.4%",
+     "url": "https://www.nintendolife.com/news/2026/11/switch-2-surpasses-26-million-units-sold-hardware-sales-down-by-37-4percent"
+    },
+    {
+     "name": "Nintendo Everything — Nintendo financial results, November 2026",
+     "url": "https://nintendoeverything.com/nintendo-financial-results-november-2026-switch-2-at-26-35-million-switch-at-157-20-million-more"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/unreal-engine-6-bez-blueprintov.html",
+   "url": "https://geekovski.ru/unreal-engine-6-bez-blueprintov.html",
+   "title": "Unreal Engine 6 останется без Blueprints",
+   "summary": "На Unreal Fest Tokyo Тим Суини показал, что в UE6 Blueprints, Actors и C++ Gameplay Framework будут удалены, а не отложены в долгий ящик: игровая логика переезжает в Verse. Epic это письменно не подтверждала.",
+   "date_published": "2026-11-05T12:05:00+03:00",
+   "date_modified": "2026-11-05T12:05:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/unreal-engine-6-bez-blueprintov.jpg",
+   "_sources": [
+    {
+     "name": "Inven Global — Epic Games will remove Blueprints and Actors from Unreal Engine 6",
+     "url": "https://www.invenglobal.com/articles/28098/epic-games-will-remove-blueprints-and-actors-from-unreal-engine-6"
+    },
+    {
+     "name": "Digital Developer — Unreal Fest Tokyo: UE6 to remove Blueprints and C++ Gameplay Framework",
+     "url": "https://www.digitaldeveloper.io/article/unreal-fest-tokyo-ue6-to-remove-blueprints-and-c-gameplay-framework"
+    },
+    {
+     "name": "AIGamer — Report: Unreal Engine 6 drops Blueprints and Actors",
+     "url": "https://www.aigamer.gg/news/unreal-engine-6-drops-blueprints-actors-verse"
+    },
+    {
+     "name": "Game Developer — Unreal Engine 6 will merge UE5 and UEFN into one engine",
+     "url": "https://www.gamedeveloper.com/programming/unreal-engine-6-will-merge-ue5-and-uefn-into-a-single-unified-engine-"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/elder-scrolls-6-sentinel.html",
    "url": "https://geekovski.ru/elder-scrolls-6-sentinel.html",
    "title": "The Elder Scrolls VI: Sentinel — имя есть, даты нет",

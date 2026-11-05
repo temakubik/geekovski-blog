@@ -12,9 +12,9 @@
 ## Рубрики
 
 - [Xbox](https://geekovski.ru/xbox/): 2 материала
-- [Nintendo Switch](https://geekovski.ru/switch/): 4 материала
-- [PlayStation](https://geekovski.ru/playstation/): 2 материала
-- [PC-игры](https://geekovski.ru/pc/): 2 материала
+- [Nintendo Switch](https://geekovski.ru/switch/): 5 материалов
+- [PlayStation](https://geekovski.ru/playstation/): 3 материала
+- [PC-игры](https://geekovski.ru/pc/): 3 материала
 - [VR](https://geekovski.ru/vr/): 2 материала
 - [Гаджеты](https://geekovski.ru/gadgets/): 2 материала
 - [Кино](https://geekovski.ru/kino/): 1 материал
@@ -24,6 +24,9 @@
 
 ## Материалы
 
+- [God of War Laufey переехала на 20 мая 2027](https://geekovski.ru/god-of-war-laufey-may-2027.html): Santa Monica Studio официально перенесла God of War Laufey с 16 февраля на 20 мая 2027 года — на три месяца. Причина, которую назвала студия, — «финальные штрихи»; конкуренцию в феврале она причиной не называла. (05.11.2026)
+- [Switch 2 перевалила за 26 миллионов](https://geekovski.ru/nintendo-otchet-26-mln.html): Nintendo отчиталась за первое полугодие финансового года: Switch 2 разошлась тиражом 26,35 млн, но поставки консолей упали на 37,4%. Операционная прибыль при этом выросла на 49,1% — деньги приносит софт. (05.11.2026)
+- [Unreal Engine 6 останется без Blueprints](https://geekovski.ru/unreal-engine-6-bez-blueprintov.html): На Unreal Fest Tokyo Тим Суини показал, что в UE6 Blueprints, Actors и C++ Gameplay Framework будут удалены, а не отложены в долгий ящик: игровая логика переезжает в Verse. Epic это письменно не подтверждала. (05.11.2026)
 - [The Elder Scrolls VI: Sentinel — имя есть, даты нет](https://geekovski.ru/elder-scrolls-6-sentinel.html): На 40-летии Bethesda Game Studios Тодд Говард наконец назвал шестую часть — The Elder Scrolls VI: Sentinel. Ни даты, ни платформ, ни геймплея: по данным Bloomberg, до релиза больше двух лет. (05.11.2026)
 - [OpenAI покупает Pierre — Codex получит свой GitHub](https://geekovski.ru/openai-pokupaet-pierre.html): 4 ноября OpenAI объявила о покупке Pierre Computer Company — компании за Code Storage и open-source библиотеками Trees, Diffs и Highlights, которые уже работают в приложении Codex. Сделку ещё не закрыли. (05.11.2026)
 - [Honor Magic 9 Pro Max: мировая версия с батареей поменьше](https://geekovski.ru/honor-magic-9-pro-max-global.html): 4 ноября Honor открыла международный запуск серии Magic 9 с Гонконга. Флагман Magic 9 Pro Max там стоит от HK$10 999, но аккумулятор у гонконгской версии — 8000 мА·ч против 8800 мА·ч у китайской. (05.11.2026)
