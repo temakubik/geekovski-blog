@@ -11,10 +11,10 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 2 материала
+- [Xbox](https://geekovski.ru/xbox/): 3 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 7 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 5 материалов
-- [PC-игры](https://geekovski.ru/pc/): 6 материалов
+- [PC-игры](https://geekovski.ru/pc/): 7 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
 - [Гаджеты](https://geekovski.ru/gadgets/): 8 материалов
 - [Кино](https://geekovski.ru/kino/): 4 материала
@@ -25,6 +25,8 @@
 
 ## Материалы
 
+- [Nvidia отметила 20 лет GeForce 8800 GTX демо в Steam](https://geekovski.ru/geforce-8800-gtx-20-let.html): К 20-летию GeForce 8800 GTX Nvidia выпустила бесплатную полуинтерактивную демку в Steam: карту можно распаковать, поставить в корпус 2006 года и осмотреть комнату геймера той эпохи. Всё это на path tracing и DLSS 4.5 — минималка RTX 4070. (05.11.2026)
+- [Xbox PC app переписали: запуск быстрее на 60%](https://geekovski.ru/xbox-pc-app-redesign.html): Microsoft показала новый Xbox PC app — он стартует до 60% быстрее, страницы грузятся на 50% быстрее, а окна открываются на 65%. Сегодня приложение начали тестировать Xbox Insiders, обновлённый Xbox Cloud Gaming раскатают в ближайшие недели. (05.11.2026)
 - [DLSS 5 пришла в Hogwarts Legacy — без новых лиц](https://geekovski.ru/hogwarts-legacy-dlss-5.html): NVIDIA выпустила бесплатное обновление PC-версии: 3D-Guided Neural Rendering доводит свет и материалы, а персонажей Avalanche Software защитила масками. В середине ноября технология доедет до War Thunder, 23-го — до Where Winds Meet. (05.11.2026)
 - [One UI 9 ломает Wi-Fi, интернет и SIM на Galaxy](https://geekovski.ru/one-ui-9-svyaz.html): После финального One UI 9 на Android 17 владельцы Galaxy жалуются на обрывы Wi-Fi, пропажу мобильных данных и нераспознанные SIM-карты. Samsung проблему официально не признала. (05.11.2026)
 - [Галерея GTA VI: две недели до релиза](https://geekovski.ru/gta-vi-launch-galereya.html): Rockstar выложила релизную галерею GTA VI — почти четыре десятка 4K-кадров из Леониды. До релиза 19 ноября остаются две недели, предзагрузка стартует 10 ноября. (05.11.2026)

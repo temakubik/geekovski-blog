@@ -8,6 +8,46 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/geforce-8800-gtx-20-let.html",
+   "url": "https://geekovski.ru/geforce-8800-gtx-20-let.html",
+   "title": "Nvidia отметила 20 лет GeForce 8800 GTX демо в Steam",
+   "summary": "К 20-летию GeForce 8800 GTX Nvidia выпустила бесплатную полуинтерактивную демку в Steam: карту можно распаковать, поставить в корпус 2006 года и осмотреть комнату геймера той эпохи. Всё это на path tracing и DLSS 4.5 — минималка RTX 4070.",
+   "date_published": "2026-11-05T21:20:00+03:00",
+   "date_modified": "2026-11-05T21:20:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/geforce-8800-gtx-20-let.jpg",
+   "_sources": [
+    {
+     "name": "NVIDIA — GeForce 8800 GTX: Celebrating 20 Years Of Gaming And CUDA",
+     "url": "https://www.nvidia.com/en-us/geforce/news/8800-gtx-gpu-20-year-celebration-dlss-4-5-path-tracing-steam-demo/"
+    },
+    {
+     "name": "PC Guide — Nvidia announces GeForce 8800 GTX unboxing simulator, available on Steam",
+     "url": "https://www.pcguide.com/news/nvidia-announces-geforce-8800-gtx-unboxing-simulator-available-on-steam-to-celebrate-20-years-of-a-legend/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/xbox-pc-app-redesign.html",
+   "url": "https://geekovski.ru/xbox-pc-app-redesign.html",
+   "title": "Xbox PC app переписали: запуск быстрее на 60%",
+   "summary": "Microsoft показала новый Xbox PC app — он стартует до 60% быстрее, страницы грузятся на 50% быстрее, а окна открываются на 65%. Сегодня приложение начали тестировать Xbox Insiders, обновлённый Xbox Cloud Gaming раскатают в ближайшие недели.",
+   "date_published": "2026-11-05T21:15:00+03:00",
+   "date_modified": "2026-11-05T21:15:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-pc-app-redesign.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Xbox overhauls its PC, web, and cloud apps with a faster design",
+     "url": "https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/hogwarts-legacy-dlss-5.html",
    "url": "https://geekovski.ru/hogwarts-legacy-dlss-5.html",
    "title": "DLSS 5 пришла в Hogwarts Legacy — без новых лиц",
