@@ -8,6 +8,84 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/hogwarts-legacy-dlss-5.html",
+   "url": "https://geekovski.ru/hogwarts-legacy-dlss-5.html",
+   "title": "DLSS 5 пришла в Hogwarts Legacy — без новых лиц",
+   "summary": "NVIDIA выпустила бесплатное обновление PC-версии: 3D-Guided Neural Rendering доводит свет и материалы, а персонажей Avalanche Software защитила масками. В середине ноября технология доедет до War Thunder, 23-го — до Where Winds Meet.",
+   "date_published": "2026-11-05T20:10:00+03:00",
+   "date_modified": "2026-11-05T20:10:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/hogwarts-legacy-dlss-5.jpg",
+   "_sources": [
+    {
+     "name": "NVIDIA — Hogwarts Legacy Adds DLSS 5 Neural Rendering Nov 5",
+     "url": "https://www.nvidia.com/en-us/geforce/news/hogwarts-legacy-war-thunder-dlss-5-3d-guided-neural-rendering/"
+    },
+    {
+     "name": "PCWorld — Nvidia's DLSS 5 learned a new spell for Hogwarts Legacy: restraint",
+     "url": "https://www.pcworld.com/article/3277879/nvidias-dlss-5-learned-a-new-spell-for-hogwarts-legacy-restraint.html"
+    },
+    {
+     "name": "TechPowerUp — NVIDIA DLSS 5 Arrives in Hogwarts Legacy, War Thunder and Where Winds Meet",
+     "url": "https://www.techpowerup.com/354455/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/one-ui-9-svyaz.html",
+   "url": "https://geekovski.ru/one-ui-9-svyaz.html",
+   "title": "One UI 9 ломает Wi-Fi, интернет и SIM на Galaxy",
+   "summary": "После финального One UI 9 на Android 17 владельцы Galaxy жалуются на обрывы Wi-Fi, пропажу мобильных данных и нераспознанные SIM-карты. Samsung проблему официально не признала.",
+   "date_published": "2026-11-05T20:08:00+03:00",
+   "date_modified": "2026-11-05T20:08:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/one-ui-9-svyaz.jpg",
+   "_sources": [
+    {
+     "name": "Android Authority — One UI 9 is breaking Wi-Fi, mobile data, and even SIM detection for some Galaxy users",
+     "url": "https://www.androidauthority.com/one-ui-9-wi-fi-mobile-data-sim-issues-galaxy-users-3731894/"
+    },
+    {
+     "name": "ComputerBase — One UI 9: Galaxy-Nutzer melden Probleme nach Android-17-Update",
+     "url": "https://www.computerbase.de/news/smartphones/one-ui-9-galaxy-nutzer-melden-probleme-nach-android-17-update.100188/"
+    },
+    {
+     "name": "iXBT — после обновления One UI 9 смартфоны Samsung теряют Wi-Fi, мобильную сеть и SIM-карты",
+     "url": "https://www.ixbt.com/news/2026/11/05/wi-fi-otvalivaetsia-sim-karty-iscezaiut-posle-obnovleniia-one-ui-9-smartfony-samsung-teriaiut-wi-fi-mobilnuiu-set-i-sim-karty.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/gta-vi-launch-galereya.html",
+   "url": "https://geekovski.ru/gta-vi-launch-galereya.html",
+   "title": "Галерея GTA VI: две недели до релиза",
+   "summary": "Rockstar выложила релизную галерею GTA VI — почти четыре десятка 4K-кадров из Леониды. До релиза 19 ноября остаются две недели, предзагрузка стартует 10 ноября.",
+   "date_published": "2026-11-05T20:06:00+03:00",
+   "date_modified": "2026-11-05T20:06:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta-vi-launch-galereya.jpg",
+   "_sources": [
+    {
+     "name": "Rockstar Newswire — Launch Gallery",
+     "url": "https://www.rockstargames.com/VI/launch-gallery"
+    },
+    {
+     "name": "The Verge — Rockstar just released dozens of new GTA VI screenshots",
+     "url": "https://www.theverge.com/games/1027550/rockstar-just-released-dozens-of-new-gta-vi-screenshots"
+    },
+    {
+     "name": "TalkEsport — Rockstar Drops New GTA 6 Screenshots Ahead of Launch",
+     "url": "https://talkesport.com/gta-6/gta-6-new-screenshots-rockstar"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/imax-rekord-odyssey.html",
    "url": "https://geekovski.ru/imax-rekord-odyssey.html",
    "title": "IMAX: рекордный квартал на «Одиссее»",

@@ -13,10 +13,10 @@
 
 - [Xbox](https://geekovski.ru/xbox/): 2 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 7 материалов
-- [PlayStation](https://geekovski.ru/playstation/): 4 материала
-- [PC-игры](https://geekovski.ru/pc/): 5 материалов
+- [PlayStation](https://geekovski.ru/playstation/): 5 материалов
+- [PC-игры](https://geekovski.ru/pc/): 6 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
-- [Гаджеты](https://geekovski.ru/gadgets/): 7 материалов
+- [Гаджеты](https://geekovski.ru/gadgets/): 8 материалов
 - [Кино](https://geekovski.ru/kino/): 4 материала
 - [Сериалы](https://geekovski.ru/serialy/): 1 материал
 - [AI](https://geekovski.ru/ai/): 9 материалов
@@ -24,6 +24,9 @@
 
 ## Материалы
 
+- [DLSS 5 пришла в Hogwarts Legacy — без новых лиц](https://geekovski.ru/hogwarts-legacy-dlss-5.html): NVIDIA выпустила бесплатное обновление PC-версии: 3D-Guided Neural Rendering доводит свет и материалы, а персонажей Avalanche Software защитила масками. В середине ноября технология доедет до War Thunder, 23-го — до Where Winds Meet. (05.11.2026)
+- [One UI 9 ломает Wi-Fi, интернет и SIM на Galaxy](https://geekovski.ru/one-ui-9-svyaz.html): После финального One UI 9 на Android 17 владельцы Galaxy жалуются на обрывы Wi-Fi, пропажу мобильных данных и нераспознанные SIM-карты. Samsung проблему официально не признала. (05.11.2026)
+- [Галерея GTA VI: две недели до релиза](https://geekovski.ru/gta-vi-launch-galereya.html): Rockstar выложила релизную галерею GTA VI — почти четыре десятка 4K-кадров из Леониды. До релиза 19 ноября остаются две недели, предзагрузка стартует 10 ноября. (05.11.2026)
 - [IMAX: рекордный квартал на «Одиссее»](https://geekovski.ru/imax-rekord-odyssey.html): Выручка IMAX за третий квартал выросла на 64% до $175 млн, чистая прибыль — в пять раз. Причина одна: «Одиссея» Кристофера Нолана собрала на больших экранах $550 млн — вдвое больше прежнего рекорда. (05.11.2026)
 - [Apple выпускает пять устройств 6 ноября](https://geekovski.ru/apple-5-ustroystv-6-noyabrya.html): В пятницу Apple начнёт продажи пяти новинок, включая первые в истории компании ноутбуки с сенсорным OLED-экраном. Самая доступная — iPad mini 8 на A20 Pro за $699, самая дорогая — 16-дюймовый MacBook Pro за $3399. (05.11.2026)
 - [OpenAI заплатит за электричество своих дата-центров](https://geekovski.ru/openai-plata-za-elektrichestvo.html): Через два дня после выборов, где избиратели провалили почти все проекты дата-центров, OpenAI опубликовала «Национальный общественный договор»: компания обещает полностью оплачивать электроэнергию и инфраструктуру своих ЦОДов и давать гарантии местным потребителям. (05.11.2026)
