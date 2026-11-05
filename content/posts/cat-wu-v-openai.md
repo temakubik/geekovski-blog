@@ -5,6 +5,7 @@ category: ai
 summary: Продакт-лидер Claude Code Кэт Ву, ушедшая из Anthropic на прошлой неделе, объявила о переходе в OpenAI — она возглавит продакт-менеджмент основных продуктов. Это за две недели до IPO Anthropic.
 tldr: Кэт Ву вела продуктовую часть Claude Code — от внутреннего прототипа до коммерческого продукта | В OpenAI она будет отвечать за продакт-менеджмент Core Products и подчиняться Тибо Соттио | OpenAI переход подтвердила, Anthropic от комментариев отказалась | Уход случился примерно за две недели до планируемого IPO Anthropic
 cover: /assets/img/cat-wu-v-openai.jpg
+pin: /assets/img/cat-wu-v-openai-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Nemuel Sereti
 sources: Business Insider — Cat Wu joins OpenAI from Anthropic in huge product-lead coup | https://www.businessinsider.com/cat-wu-joins-openai-from-anthropic-product-lead-coup-2026-11; Cat Wu — пост о переходе в X | https://x.com/_catwu/status/2118137612577968402
 ---

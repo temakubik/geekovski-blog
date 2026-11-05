@@ -5,6 +5,7 @@ category: gadgets
 summary: 3 ноября Apple открыла Siri AI всем разработчикам — любое приложение может отдать ассистенту свои действия через App Intents. В App Store такие интеграции пустят только весной, а в ЕС Siri AI по-прежнему недоступна на iPhone.
 tldr: С беты iOS 27.3 любое приложение может подключить свои действия к Siri AI через App Intents — отдельного разрешения Apple не нужно | Появились «навыки»: разработчик учит ассистента склеивать несколько действий в одну просьбу | К покупателям это придёт через несколько месяцев, приём в App Store откроется весной, условия использования Apple ещё не опубликовала | В ЕС Siri AI недоступна на iOS, iPadOS и watchOS
 cover: /assets/img/siri-ai-razrabotchiki.jpg
+pin: /assets/img/siri-ai-razrabotchiki-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels
 sources: Apple Developer — Siri AI is now open to all developers | https://developer.apple.com/news/?id=gdk2umrf; PPC Land — Apple opens Siri AI to all developers, but apps can't ship it until spring | https://ppc.land/apple-opens-siri-ai-to-all-developers-but-apps-cant-ship-it-until-spring; Rozetked — в iOS 27.3 у Siri AI появился доступ к сторонним приложениям | https://rozetked.me/news/49265-v-ios-27-3-u-siri-ai-poyavilsya-dostup-k-storonniim-prilozheniyam-ona-rabotaet-v-roli-ii-agenta; Rozetked — в бете iOS 27.3 появилась функция Selfie Sing | https://rozetked.me/news/49273-v-bete-ios-27-3-poyavilas-funkciya-selfie-sing-karaoke-so-svoim-licom
 ---
