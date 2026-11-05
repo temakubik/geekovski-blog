@@ -1769,15 +1769,16 @@ def render_digest(d, theme, next_d=None, prev_d=None):
         c = CAT_ALIAS.get(it["category"], it["category"])
         groups.setdefault(CAT_NAME.get(c, "Другое"), []).append(it)
 
-    # нумерация сквозная по всему выпуску
-    numbered, n = {}, 0
-    for it in d["items"]:
-        n += 1
-        numbered[id(it)] = n
     blocks = []
+    # номер идёт подряд в порядке показа: раньше он брался из исходного списка,
+    # и при группировке по рубрикам лента читалась как 01, 03, 32 — 02, 07
+    n = 0
     for name, items in groups.items():
-        rows = "".join(digest_item(i, numbered[id(i)]) for i in items)
-        blocks.append('<section class="dgroup">%s</section>' % rows)
+        rows = []
+        for i in items:
+            n += 1
+            rows.append(digest_item(i, n))
+        blocks.append('<section class="dgroup">%s</section>' % "".join(rows))
 
     head_title = strip_prefix(d["title"])
     meta = "%s · %s" % (ru_date(d["date"]), news_count(len(d["items"])))
