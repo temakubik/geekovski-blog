@@ -471,3 +471,11 @@ a.tlink:hover { border-bottom-style: solid; }
 @media (max-width: 560px) {
   .post-page .backrow, .digest-page .backrow { padding-left: 0; padding-right: 0; }
 }
+
+/* ---------- Календарь: разделы «неделя» и «месяц» ---------- */
+.cal-week { margin-bottom: 10px; }
+.cal-week .rubric__head, .cal-month .rubric__head, .cal-later .rubric__head { margin-bottom: 6px; }
+.cal-month { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line); }
+.cal-month .mrow:last-child { border-bottom: 0; }
+.cal-history { opacity: .82; }
+.mblock--past .mrow { color: var(--muted); }

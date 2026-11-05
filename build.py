@@ -1148,6 +1148,8 @@ def build(theme, out_dir, content_dir=None):
 # ---------- Календарь анонсов ----------
 
 WD = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+MONTHS_GEN_MONTH = ["января", "февраля", "марта", "апреля", "мая", "июня",
+                   "июля", "августа", "сентября", "октября", "ноября", "декабря"]
 MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
               "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
 MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
@@ -1192,6 +1194,15 @@ def _plat_tags(value):
     return "".join(out)
 
 
+def _same_as_category(e):
+    """Тип анонса, совпадающий с названием рубрики, второй раз не печатаем."""
+    note = (e["kind_note"] or "").strip().lower()
+    cat = CAT_NAME.get(e["category"], "").lower()
+    if not note:
+        return False
+    return note in cat or cat in note
+
+
 def _cal_card(e):
     """Карточка анонса: картинка 16:9, тип, название, платформы."""
     visual = ""
@@ -1203,11 +1214,12 @@ def _cal_card(e):
             e["title"][:2].upper())
     return ('<a class="anno cat-{cat}" href="/titles/{slug}.html">{visual}'
             '<div class="anno__body"><div class="anno__meta"><span class="anno__type">{icon}{note}</span>'
-            '<span class="anno__cat">{catname}</span></div>'
+            '{catsfx}</div>'
             '<h3 class="anno__title">{title}</h3>'
             '<div class="anno__plat">{plats}</div></div></a>').format(
         cat=e["category"], visual=visual, icon=_cal_icon(e["kind_note"]), slug=e["slug"],
-        catname=CAT_NAME.get(e["category"], e["category"]),
+        catsfx=('<span class="anno__cat">%s</span>' % CAT_NAME.get(e["category"], e["category"]))
+                   if not _same_as_category(e) else "",
         note=html.escape(e["kind_note"] or "релиз"), title=html.escape(e["title"]),
         plats=_plat_tags(e["platforms"]))
 
@@ -1237,33 +1249,61 @@ def render_calendar_page(entries, theme, today=None):
                 'Как только анонсы появятся — они окажутся здесь.</p>')
         desc = "Что выходит на этой неделе: игры, фильмы и сериалы с подтверждёнными датами. " + SITE["tagline"]
     else:
-        body = '<div class="cal">%s</div>' % "".join(blocks)
+        body = ('<section class="cal-week"><div class="rubric__head"><h2>Релизы на этой неделе</h2>'
+                '<span class="rubric__all">%d %s</span></div><div class="cal">%s</div></section>'
+                % (len(week), plural(len(week), "релиз", "релиза", "релизов"), "".join(blocks)))
         desc = ("Календарь анонсов: %d %s на этой неделе с подтверждёнными датами — "
                 "игры, платформы, фильмы и сериалы. %s") % (
             len(week), plural(len(week), "релиз", "релиза", "релизов"), SITE["tagline"])
 
-    # месяцы дальше недели: старые месяцы остаются в истории, новые добавляются блоком
-    if later:
-        months = {}
-        for e in later:
-            months.setdefault((e["day"].year, e["day"].month), []).append(e)
-        mblocks = []
-        for (y, m) in sorted(months):
-            rows = "".join(
-                '<a class="mrow cat-%s" href="%s"><span class="mrow__d">%02d</span>'
-                '<span class="mrow__t">%s</span><span class="mrow__p">%s</span></a>'
-                % (e["category"], e["href"], e["day"].day, html.escape(e["title"]), _plat_tags(e["platforms"]))
-                for e in months[(y, m)])
-            mblocks.append('<section class="mblock"><h3 class="mblock__h">%s %d</h3>%s</section>'
-                           % (MONTHS_NOM[m - 1], y, rows))
+    # «Громкие релизы месяца»: тот же месяц, но дальше недели. Каждый месяц — свой блок,
+    # поэтому прошлый месяц не исчезает, а спускается в блок истории.
+    this_month = [e for e in entries if (e["day"] - today).days > 6
+                  and (e["day"].year, e["day"].month) == (today.year, today.month)]
+    past_months = {}
+    for e in entries:
+        if e["day"] < today:
+            past_months.setdefault((e["day"].year, e["day"].month), []).append(e)
+    later_months = {}
+    for e in entries:
+        if (e["day"] - today).days > 6 and (e["day"].year, e["day"].month) != (today.year, today.month):
+            later_months.setdefault((e["day"].year, e["day"].month), []).append(e)
+
+    def month_rows(items):
+        return "".join(
+            '<a class="mrow cat-%s" href="%s"><span class="mrow__d">%02d</span>'
+            '<span class="mrow__t">%s</span><span class="mrow__p">%s</span></a>'
+            % (e["category"], e["href"], e["day"].day, html.escape(e["title"]), _plat_tags(e["platforms"]))
+            for e in sorted(items, key=lambda x: (x["day"], x["title"])))
+
+    if this_month:
+        body += ('<section class="cal-month"><div class="rubric__head"><h2>Громкие релизы %s</h2>'
+                 '<span class="rubric__all">%d %s</span></div>%s</section>'
+                 % (MONTHS_GEN_MONTH[today.month - 1], len(this_month),
+                    plural(len(this_month), "релиз", "релиза", "релизов"), month_rows(this_month)))
+
+    if later_months:
+        mblocks = "".join(
+            '<section class="mblock"><h3 class="mblock__h">%s %d</h3>%s</section>'
+            % (MONTHS_NOM[m - 1], y, month_rows(later_months[(y, m)]))
+            for (y, m) in sorted(later_months))
         body += ('<section class="cal-later"><div class="rubric__head"><h2>Дальше по календарю</h2>'
                  '<span class="rubric__all">%d %s</span></div>%s</section>'
-                 % (len(later), plural(len(later), "дата", "даты", "дат"), "".join(mblocks)))
+                 % (sum(len(v) for v in later_months.values()),
+                    plural(sum(len(v) for v in later_months.values()), "дата", "даты", "дат"), mblocks))
+
+    if past_months:
+        pblocks = "".join(
+            '<section class="mblock mblock--past"><h3 class="mblock__h">%s %d</h3>%s</section>'
+            % (MONTHS_NOM[m - 1], y, month_rows(past_months[(y, m)]))
+            for (y, m) in sorted(past_months, reverse=True))
+        body += ('<section class="cal-later cal-history"><div class="rubric__head"><h2>История</h2></div>%s</section>'
+                 % pblocks)
 
     content = ('<main class="wrap">' + back_link("На главную", "/") + '<section class="lead"><h1>Календарь анонсов</h1>'
                '<p>Что выходит на этой неделе и что уже назначено дальше. Только подтверждённые даты.</p></section>'
                '%s</main>') % body
-    return page("Календарь анонсов — что выходит на этой неделе | %s" % SITE["title"], desc, content, theme,
+    return page("Календарь анонсов — релизы недели и месяца | %s" % SITE["title"], desc, content, theme,
                 canonical=SITE["url"] + "/calendar/",
                 jsonld=ldjson(ld_org(), ld_website()))
 
@@ -1513,6 +1553,8 @@ def render_style_guide(theme):
 
 # ---------- дайджест: техническая мета и оформление ----------
 
+MONTHS_GEN_MONTH = ["января", "февраля", "марта", "апреля", "мая", "июня",
+                   "июля", "августа", "сентября", "октября", "ноября", "декабря"]
 MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
               "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
 MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
