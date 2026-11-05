@@ -1686,8 +1686,18 @@ def plural(n, one, few, many):
     return many
 
 
-def news_count(n):
+def news_count(n, word="новость"):
+    """«36 статей» для выпуска-оглавления и «6 новостей» для обычного дайджеста."""
+    if word == "статья":
+        return "%d %s" % (n, plural(n, "статья", "статьи", "статей"))
     return "%d %s" % (n, plural(n, "новость", "новости", "новостей"))
+
+
+def is_digest_of_articles(d):
+    """Выпуск, где все записи ссылаются внутрь сайта, — это оглавление дня."""
+    srcs = [(i.get("source") or "") for i in d["items"]]
+    urls = [s.split("|")[-1].strip() for s in srcs if "|" in s]
+    return bool(urls) and all(u.startswith(SITE["url"]) or u.startswith("/") for u in urls)
 
 
 def strip_prefix(title):
@@ -1754,9 +1764,14 @@ def digest_item(it, num):
     if it.get("source"):
         name, _, url = it["source"].partition("|")
         name, url = name.strip(), url.strip()
-        src = ('<a class="ditem__src" href="%s" rel="nofollow noopener" target="_blank">%s</a>'
-               % (html.escape(url), html.escape(name or url))) if url else (
-               '<span class="ditem__src">%s</span>' % html.escape(name))
+        internal = url.startswith(SITE["url"]) or url.startswith("/")
+        if internal and url:
+            src = ('<a class="ditem__src ditem__src--in" href="%s">Читать статью →</a>'
+                   % html.escape(url))
+        else:
+            src = ('<a class="ditem__src" href="%s" rel="nofollow noopener" target="_blank">%s</a>'
+                   % (html.escape(url), html.escape(name or url))) if url else (
+                   '<span class="ditem__src">%s</span>' % html.escape(name))
     return DIGEST_ITEM.format(cat=cat, catname=CAT_NAME.get(cat, cat), num="%02d" % num,
                               icon=ICONS.get(cat, ""), title=html.escape(it["title"]),
                               text=html.escape(it["summary"]), src=src)
@@ -1781,7 +1796,8 @@ def render_digest(d, theme, next_d=None, prev_d=None):
         blocks.append('<section class="dgroup">%s</section>' % "".join(rows))
 
     head_title = strip_prefix(d["title"])
-    meta = "%s · %s" % (ru_date(d["date"]), news_count(len(d["items"])))
+    word = "статья" if is_digest_of_articles(d) else "новость"
+    meta = "%s · %s" % (ru_date(d["date"]), news_count(len(d["items"]), word))
     nav = ""
     if next_d or prev_d:
         nav = '<nav class="dnav">%s%s</nav>' % (
