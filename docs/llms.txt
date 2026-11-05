@@ -13,17 +13,20 @@
 
 - [Xbox](https://geekovski.ru/xbox/): 2 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 5 материалов
-- [PlayStation](https://geekovski.ru/playstation/): 3 материала
+- [PlayStation](https://geekovski.ru/playstation/): 4 материала
 - [PC-игры](https://geekovski.ru/pc/): 3 материала
 - [VR](https://geekovski.ru/vr/): 2 материала
 - [Гаджеты](https://geekovski.ru/gadgets/): 2 материала
-- [Кино](https://geekovski.ru/kino/): 1 материал
+- [Кино](https://geekovski.ru/kino/): 2 материала
 - [Сериалы](https://geekovski.ru/serialy/): 1 материал
-- [AI](https://geekovski.ru/ai/): 4 материала
+- [AI](https://geekovski.ru/ai/): 5 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 
 ## Материалы
 
+- [Anthropic впервые заплатил издателю — Associated Press](https://geekovski.ru/anthropic-ap-licensing.html): Adweek сообщил, что Anthropic заключил первую в своей истории лицензионную сделку с издателем — с Associated Press. Ни одна из сторон сделку не подтвердила, условия не раскрыты. (05.11.2026)
+- [Годзилла идёт на рекордный старт в США](https://geekovski.ru/godzilla-minus-zero-start.html): «Godzilla Minus Zero» выходит в широкий прокат в Северной Америке 6 ноября. Прогнозы дают $30 млн за уикенд — почти втрое больше, чем у «Minus One» три года назад. (05.11.2026)
+- [У Sony 97,9 млн PS5 и PS6 по графику](https://geekovski.ru/sony-otchet-ps5-97-9-mln.html): Sony отчиталась за квартал: PS5 дошла до 97,9 млн, а игровое подразделение дало лучшую операционную прибыль за два года. (05.11.2026)
 - [God of War Laufey переехала на 20 мая 2027](https://geekovski.ru/god-of-war-laufey-may-2027.html): Santa Monica Studio официально перенесла God of War Laufey с 16 февраля на 20 мая 2027 года — на три месяца. Причина, которую назвала студия, — «финальные штрихи»; конкуренцию в феврале она причиной не называла. (05.11.2026)
 - [Switch 2 перевалила за 26 миллионов](https://geekovski.ru/nintendo-otchet-26-mln.html): Nintendo отчиталась за первое полугодие финансового года: Switch 2 разошлась тиражом 26,35 млн, но поставки консолей упали на 37,4%. Операционная прибыль при этом выросла на 49,1% — деньги приносит софт. (05.11.2026)
 - [Unreal Engine 6 останется без Blueprints](https://geekovski.ru/unreal-engine-6-bez-blueprintov.html): На Unreal Fest Tokyo Тим Суини показал, что в UE6 Blueprints, Actors и C++ Gameplay Framework будут удалены, а не отложены в долгий ящик: игровая логика переезжает в Verse. Epic это письменно не подтверждала. (05.11.2026)

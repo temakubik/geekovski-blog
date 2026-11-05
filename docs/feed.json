@@ -8,6 +8,92 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/anthropic-ap-licensing.html",
+   "url": "https://geekovski.ru/anthropic-ap-licensing.html",
+   "title": "Anthropic впервые заплатил издателю — Associated Press",
+   "summary": "Adweek сообщил, что Anthropic заключил первую в своей истории лицензионную сделку с издателем — с Associated Press. Ни одна из сторон сделку не подтвердила, условия не раскрыты.",
+   "date_published": "2026-11-05T13:05:00+03:00",
+   "date_modified": "2026-11-05T13:05:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/anthropic-ap-licensing.jpg",
+   "_sources": [
+    {
+     "name": "Adweek — Anthropic Strikes Its First Licensing Deal, With the AP, for Election Coverage",
+     "url": "https://www.adweek.com/media/anthropic-licensing-deal-ap-election/"
+    },
+    {
+     "name": "The Verge — Anthropic reportedly made a licensing deal with the Associated Press",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1027173/anthropic-reportedly-made-a-licensing-deal-with-the-associated-press"
+    },
+    {
+     "name": "Techmeme — сводка о сделке",
+     "url": "https://www.techmeme.com/261104/p58"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/godzilla-minus-zero-start.html",
+   "url": "https://geekovski.ru/godzilla-minus-zero-start.html",
+   "title": "Годзилла идёт на рекордный старт в США",
+   "summary": "«Godzilla Minus Zero» выходит в широкий прокат в Северной Америке 6 ноября. Прогнозы дают $30 млн за уикенд — почти втрое больше, чем у «Minus One» три года назад.",
+   "date_published": "2026-11-05T13:05:00+03:00",
+   "date_modified": "2026-11-05T13:05:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/godzilla-minus-zero-start.jpg",
+   "_sources": [
+    {
+     "name": "Variety — Box Office: \"Godzilla Minus Zero\" to Lead With $30 Million Opening Weekend",
+     "url": "https://variety.com/2026/film/box-office/godzilla-minus-zero-box-office-opening-weekend-estimates-cat-in-the-hat-1236938885/"
+    },
+    {
+     "name": "Deadline — \"Godzilla Minus Zero\" Stomping To $60M+ WW Opening",
+     "url": "https://deadline.com/2026/11/godzilla-minus-zero-ramayana-cat-in-the-hat-box-office-1237213555"
+    },
+    {
+     "name": "GKIDS — релизные даты в Северной Америке",
+     "url": "https://gkids.com/2026/01/09/toho-and-gkids-unleash-godzilla-minus-zero-in-north-america-on-november-6-2026/"
+    },
+    {
+     "name": "Anime News Network — рекордный первый день в Японии",
+     "url": "https://animenewsnetwork.com/news/2026-11-04/godzilla-minus-zero-earns-highest-ever-opening-day-for-live-action-film-in-japan/.243535"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/sony-otchet-ps5-97-9-mln.html",
+   "url": "https://geekovski.ru/sony-otchet-ps5-97-9-mln.html",
+   "title": "У Sony 97,9 млн PS5 и PS6 по графику",
+   "summary": "Sony отчиталась за квартал: PS5 дошла до 97,9 млн, а игровое подразделение дало лучшую операционную прибыль за два года.",
+   "date_published": "2026-11-05T13:05:00+03:00",
+   "date_modified": "2026-11-05T13:05:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/sony-otchet-ps5-97-9-mln.jpg",
+   "_sources": [
+    {
+     "name": "Sony — финансовый отчёт и таблица Q2 FY2026",
+     "url": "https://www.sony.com/en/SonyInfo/IR/library/er/pdf/26q2_supplement.pdf"
+    },
+    {
+     "name": "VGC — Sony says PlayStation 6 development is \"progressing as scheduled\", as PS5 sales hit 97.9m",
+     "url": "https://www.videogameschronicle.com/news/sony-says-playstation-6-development-is-progressing-as-scheduled-as-ps5-sales-hit-97-9m/"
+    },
+    {
+     "name": "Gematsu — PS5 shipments top 97.9 million, Marvel's Wolverine tops 2.4 million",
+     "url": "https://www.gematsu.com/2026/11/ps5-shipments-top-97-9-million-marvels-wolverine-tops-2-4-million"
+    },
+    {
+     "name": "Wccftech — PlayStation Posts Its Strongest Quarter In Years",
+     "url": "https://wccftech.com/playstation-profit-record-quarter-ps5-shipments-drop/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/god-of-war-laufey-may-2027.html",
    "url": "https://geekovski.ru/god-of-war-laufey-may-2027.html",
    "title": "God of War Laufey переехала на 20 мая 2027",
