@@ -8,6 +8,36 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/fsr-4-xbox.html",
+   "url": "https://geekovski.ru/fsr-4-xbox.html",
+   "title": "FSR 4 на Xbox: машинный апскейл для разработчиков",
+   "summary": "Microsoft открыла студиям FSR Upscaling 4 на Xbox Series X|S — нейросетевой апскейл добрался до консолей 2020 года. Полная модель на Series S стоит 5,2 мс кадра.",
+   "date_published": "2026-11-05T09:05:00+03:00",
+   "date_modified": "2026-11-05T09:05:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/fsr-4-xbox.jpg",
+   "_sources": [
+    {
+     "name": "Microsoft Developer — AMD FSR Upscaling 4 Is Now Available for Xbox",
+     "url": "https://developer.microsoft.com/en-us/games/articles/2026/11/amd-fsr-upscaling-4-is-now-available-for-xbox/"
+    },
+    {
+     "name": "The Verge — Xbox developers can now put FSR 4 upscaling in their games",
+     "url": "https://www.theverge.com/games/1027195/xbox-developers-can-now-put-fsr-4-upscaling-in-their-games"
+    },
+    {
+     "name": "The Verge — AMD is bringing FSR 4.1 to Xbox consoles and handhelds",
+     "url": "https://www.theverge.com/news/1014455/amd-fsr-4-1-xbox-consoles-handhelds-laptops"
+    },
+    {
+     "name": "GitHub — Microsoft Xbox GDK Samples, AMD_FSR",
+     "url": "https://github.com/microsoft/Xbox-GDK-Samples/tree/main/Samples/Graphics/AMD_FSR"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/macronix-rom-kartridzhi.html",
    "url": "https://geekovski.ru/macronix-rom-kartridzhi.html",
    "title": "Macronix уходит из ROM: картриджи Switch без чипов",

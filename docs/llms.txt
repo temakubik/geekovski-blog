@@ -11,7 +11,7 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 0 материалов
+- [Xbox](https://geekovski.ru/xbox/): 1 материал
 - [Nintendo Switch](https://geekovski.ru/switch/): 4 материала
 - [PlayStation](https://geekovski.ru/playstation/): 1 материал
 - [PC-игры](https://geekovski.ru/pc/): 0 материалов
@@ -24,6 +24,7 @@
 
 ## Материалы
 
+- [FSR 4 на Xbox: машинный апскейл для разработчиков](https://geekovski.ru/fsr-4-xbox.html): Microsoft открыла студиям FSR Upscaling 4 на Xbox Series X|S — нейросетевой апскейл добрался до консолей 2020 года. Полная модель на Series S стоит 5,2 мс кадра. (05.11.2026)
 - [Macronix уходит из ROM: картриджи Switch без чипов](https://geekovski.ru/macronix-rom-kartridzhi.html): Крупный поставщик ROM-чипов для картриджей Switch и Switch 2 объявил об уходе из бизнеса. Картриджи не исчезнут завтра, но давление на них выросло. (04.11.2026)
 - [Steam Frame: стрим стал чётче, суперсэмплинг убрали](https://geekovski.ru/steam-frame-steamvr-2-19-1.html): Valve выпустила бету SteamVR 2.19.1 с более резкой картинкой стрима на всех шлемах со Steam Link, а в SteamOS 0.5.7 для Steam Frame молча убрала Advanced Supersampling. (04.11.2026)
 - [Blue Eye Samurai: второй сезон выйдет 19 января 2027](https://geekovski.ru/blue-eye-samurai-season-2.html): Netflix назвал дату премьеры — шесть серий, Лондон 1657 года и Мидзу, которая наконец добирается до тех, кто её сделал. Третий сезон уже заказан и станет последним. (04.11.2026)
