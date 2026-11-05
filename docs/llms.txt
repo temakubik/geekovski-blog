@@ -16,14 +16,16 @@
 - [PlayStation](https://geekovski.ru/playstation/): 4 материала
 - [PC-игры](https://geekovski.ru/pc/): 4 материала
 - [VR](https://geekovski.ru/vr/): 2 материала
-- [Гаджеты](https://geekovski.ru/gadgets/): 2 материала
+- [Гаджеты](https://geekovski.ru/gadgets/): 3 материала
 - [Кино](https://geekovski.ru/kino/): 3 материала
 - [Сериалы](https://geekovski.ru/serialy/): 1 материал
-- [AI](https://geekovski.ru/ai/): 6 материалов
+- [AI](https://geekovski.ru/ai/): 7 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 
 ## Материалы
 
+- [Cat Wu перешла из Anthropic в OpenAI](https://geekovski.ru/cat-wu-v-openai.html): Продакт-лидер Claude Code Кэт Ву, ушедшая из Anthropic на прошлой неделе, объявила о переходе в OpenAI — она возглавит продакт-менеджмент основных продуктов. Это за две недели до IPO Anthropic. (05.11.2026)
+- [Siri AI пустили в любые приложения](https://geekovski.ru/siri-ai-razrabotchiki.html): 3 ноября Apple открыла Siri AI всем разработчикам — любое приложение может отдать ассистенту свои действия через App Intents. В App Store такие интеграции пустят только весной, а в ЕС Siri AI по-прежнему недоступна на iPhone. (05.11.2026)
 - [Буянов подтвердил: Fragmentary Order — во вселенной Таркова](https://geekovski.ru/fragmentary-order-vselennaya-tarkova.html): Никита Буянов 5 ноября сообщил, что научно-фантастический шутер Fragmentary Order разворачивается в той же вселенной, что и Escape from Tarkov. Даты релиза по-прежнему нет, зато стартует закрытая альфа — платная. (05.11.2026)
 - [Человек-паук обошёл «Мстителей: Финал» вне Китая](https://geekovski.ru/spider-man-brend-new-day-rekord.html): «Spider-Man: Brand New Day» собрал $2,288 млрд вне Китая и на один миллион обошёл «Мстителей: Финал» — это рекорд для киновселенной Marvel. Мировой рекорд «Финала» пока держится, а Sony Pictures уже отчиталась о лучшем квартале. (05.11.2026)
 - [OpenAI обещает платить за электричество дата-центров](https://geekovski.ru/openai-community-compact.html): 5 ноября OpenAI опубликовала National Community Compact и Compute Campus Policy Blueprint: полная оплата электричества и инфраструктуры, отказ от NDA с чиновниками, публичные отчёты о воде и шуме. Это ответ на выборы, где 40 из 41 местной инициативы против дата-центров. (05.11.2026)

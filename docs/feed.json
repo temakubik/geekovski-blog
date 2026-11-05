@@ -8,6 +8,58 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/cat-wu-v-openai.html",
+   "url": "https://geekovski.ru/cat-wu-v-openai.html",
+   "title": "Cat Wu перешла из Anthropic в OpenAI",
+   "summary": "Продакт-лидер Claude Code Кэт Ву, ушедшая из Anthropic на прошлой неделе, объявила о переходе в OpenAI — она возглавит продакт-менеджмент основных продуктов. Это за две недели до IPO Anthropic.",
+   "date_published": "2026-11-05T16:05:00+03:00",
+   "date_modified": "2026-11-05T16:05:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/cat-wu-v-openai.jpg",
+   "_sources": [
+    {
+     "name": "Business Insider — Cat Wu joins OpenAI from Anthropic in huge product-lead coup",
+     "url": "https://www.businessinsider.com/cat-wu-joins-openai-from-anthropic-product-lead-coup-2026-11"
+    },
+    {
+     "name": "Cat Wu — пост о переходе в X",
+     "url": "https://x.com/_catwu/status/2118137612577968402"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/siri-ai-razrabotchiki.html",
+   "url": "https://geekovski.ru/siri-ai-razrabotchiki.html",
+   "title": "Siri AI пустили в любые приложения",
+   "summary": "3 ноября Apple открыла Siri AI всем разработчикам — любое приложение может отдать ассистенту свои действия через App Intents. В App Store такие интеграции пустят только весной, а в ЕС Siri AI по-прежнему недоступна на iPhone.",
+   "date_published": "2026-11-05T16:05:00+03:00",
+   "date_modified": "2026-11-05T16:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/siri-ai-razrabotchiki.jpg",
+   "_sources": [
+    {
+     "name": "Apple Developer — Siri AI is now open to all developers",
+     "url": "https://developer.apple.com/news/?id=gdk2umrf"
+    },
+    {
+     "name": "PPC Land — Apple opens Siri AI to all developers, but apps can't ship it until spring",
+     "url": "https://ppc.land/apple-opens-siri-ai-to-all-developers-but-apps-cant-ship-it-until-spring"
+    },
+    {
+     "name": "Rozetked — в iOS 27.3 у Siri AI появился доступ к сторонним приложениям",
+     "url": "https://rozetked.me/news/49265-v-ios-27-3-u-siri-ai-poyavilsya-dostup-k-storonniim-prilozheniyam-ona-rabotaet-v-roli-ii-agenta"
+    },
+    {
+     "name": "Rozetked — в бете iOS 27.3 появилась функция Selfie Sing",
+     "url": "https://rozetked.me/news/49273-v-bete-ios-27-3-poyavilas-funkciya-selfie-sing-karaoke-so-svoim-licom"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/fragmentary-order-vselennaya-tarkova.html",
    "url": "https://geekovski.ru/fragmentary-order-vselennaya-tarkova.html",
    "title": "Буянов подтвердил: Fragmentary Order — во вселенной Таркова",
