@@ -712,8 +712,10 @@ def back_link(label=None, href=None):
     """Кнопка «назад». Сначала история браузера, иначе — ссылка по контексту."""
     label = label or "Назад"
     fallback = href or "/"
-    return ('<a class="backlink" href="%s" onclick="if(document.referrer){history.back();return false}">'
-            '<span aria-hidden="true">←</span> %s</a>' % (fallback, label))
+    return ('<div class="backrow"><a class="backlink" href="%s" '
+            'onclick="if(document.referrer){history.back();return false}">'
+            '<span class="backlink__arrow" aria-hidden="true">←</span> %s</a></div>'
+            % (fallback, label))
 
 
 def share_block(url, title, image=None):
@@ -761,14 +763,14 @@ def render_post(p, posts, theme):
     if related:
         rel = '<section class="related"><h2>По теме</h2><div class="grid grid--list">%s</div></section>' % "\n".join(
             card(x, theme) for x in related)
-    content = """<main class="wrap">
+    content = """<main class="wrap post-page">
+{back}
 <article class="post cat-{cat}">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
     <h1>{title}</h1>
     <p class="post__lead">{sum}</p>
   </header>
-  {back}
   {tldr}
   {cover}
   <div class="post__body">{body}</div>
@@ -826,9 +828,9 @@ def render_cat(slug, name, items, theme):
                 'Свежие новости по всем направлениям выходят в <a href="/digests/">дайджестах</a>, '
                 'а разборы появляются на главной.</p>')
         desc = "%s: рубрика открыта — материалы с разбором новостей и ссылками на источники. %s" % (name, SITE["tagline"])
-    content = (back_link("На главную", "/") +
-               '<main class="wrap"><section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
-               % (html.escape(name), count if items else "рубрика открыта", body))
+    content = ('<main class="wrap">%s<section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
+               % (back_link("На главную", "/"), html.escape(name),
+                  count if items else "рубрика открыта", body))
     url = SITE["url"] + "/%s/" % slug
     return page("%s — новости и разборы | %s" % (name, SITE["title"]), desc, content, theme,
                 canonical=url, og_alt="%s — GEEKOVSKI" % name,
@@ -1258,7 +1260,7 @@ def render_calendar_page(entries, theme, today=None):
                  '<span class="rubric__all">%d %s</span></div>%s</section>'
                  % (len(later), plural(len(later), "дата", "даты", "дат"), "".join(mblocks)))
 
-    content = (back_link("На главную", "/") + '<main class="wrap"><section class="lead"><h1>Календарь анонсов</h1>'
+    content = ('<main class="wrap">' + back_link("На главную", "/") + '<section class="lead"><h1>Календарь анонсов</h1>'
                '<p>Что выходит на этой неделе и что уже назначено дальше. Только подтверждённые даты.</p></section>'
                '%s</main>') % body
     return page("Календарь анонсов — что выходит на этой неделе | %s" % SITE["title"], desc, content, theme,
@@ -1367,7 +1369,8 @@ def title_page(slug, theme):
         ('<section class="sources"><h2>Источники</h2><ul>%s</ul></section>' % srcs) if srcs else "",
         share_block(SITE["url"] + "/titles/%s.html" % slug, t["title"], t["cover"] or DEFAULT_OG),
         ment_block)
-    content = back_link("К календарю", "/calendar/") + content
+    content = content.replace('<main class="wrap"><article class="tp">',
+                              '<main class="wrap">' + back_link("К календарю", "/calendar/") + '<article class="tp">', 1)
     return page("%s — %s | %s" % (t["title"], "игра" if t["kind"] == "game" else "фильм",
                                   SITE["title"]),
                 plain(t["body"], 180), content, theme,
@@ -1633,7 +1636,7 @@ def render_digest(d, theme, next_d=None, prev_d=None):
             '<a href="/digests/%s.html">← %s, %s</a>' % (prev_d["slug"], part_of_day(prev_d["date"]).lower(), ru_date(prev_d["date"])) if prev_d else "<span></span>",
             '<a href="/digests/%s.html">%s, %s →</a>' % (next_d["slug"], part_of_day(next_d["date"]).lower(), ru_date(next_d["date"])) if next_d else "<span></span>")
 
-    content = """<main class="wrap">
+    content = """<main class="wrap digest-page">
 {back}
 <article class="digest is-{slot}">
   <header class="digest__head">
@@ -1685,7 +1688,7 @@ def render_digests_index(digests, theme):
                     slug=d["slug"], part=part_of_day(d["date"]).upper(), day=ru_date(d["date"]),
                     title=html.escape(sentence_case(strip_prefix(d["title"]))), sum=html.escape(d["summary"]),
                     tags=tags_html(d), count=news_count(len(d["items"]))))
-    content = ('<main class="wrap"><section class="lead"><h1>Дайджесты</h1>'
+    content = ('<main class="wrap">' + back_link("На главную", "/") + '<section class="lead"><h1>Дайджесты</h1>'
                '<p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p>'
                '</section><div class="dlist">%s</div></main>') % ("".join(rows) or "<p>Пока пусто.</p>")
     url = SITE["url"] + "/digests/"
