@@ -2,8 +2,13 @@
 """Собирает набор иконок сайта из пиксельного аватара (не из знака G).
 
 Источник — static/img/geekovski-icon.svg (пиксельный портрет, 64×64).
-Скрипт делает из него: favicon.svg со скруглёнными углами, favicon-32.png,
-apple-touch-icon.png (180), icon-512.png и favicon.ico (16+32).
+Скрипт делает из него: favicon.svg со скруглёнными углами, PNG 32/48/96/120/180/192/512
+и favicon.ico с шестью размерами внутри.
+
+Почему размеров много: Google требует квадратный значок «не меньше 8×8» и
+рекомендует от 48×48, а из ICO берёт самый крупный кадр; Яндекс рекомендует
+120×120. ICO из двух кадров (16+32) Google фактически игнорирует и держит
+старый значок из кэша — именно это и случилось 03.11.26.
 
   python3 tools/make_icons.py
   python3 tools/make_icons.py --src static/img/logo.svg     # вернуть знак G
@@ -19,6 +24,13 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 IMG = ROOT / "static" / "img"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+# PNG для <link rel="icon">: 48 и 96 — под Google, 120 — под Яндекс,
+# 192 и 512 — под Android/PWA и разметку Organization.logo
+PNG_SIZES = [(32, "favicon-32.png"), (48, "favicon-48.png"), (96, "favicon-96.png"),
+             (120, "favicon-120.png"), (180, "apple-touch-icon.png"),
+             (192, "favicon-192.png"), (512, "icon-512.png")]
+ICO_SIZES = [(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)]
 
 
 def rounded_svg(source: pathlib.Path, radius_ratio: float = 0.19) -> str:
@@ -66,13 +78,14 @@ def main():
     (IMG / "favicon.svg").write_text(rounded_svg(src), encoding="utf-8")
     print("favicon.svg из", src.name)
 
-    for size, name in ((32, "favicon-32.png"), (180, "apple-touch-icon.png"), (512, "icon-512.png")):
+    for size, name in PNG_SIZES:
         rasterize(IMG / "favicon.svg", size, str(IMG / name))
         print("иконка", name)
 
-    ico = Image.open(IMG / "favicon-32.png").convert("RGBA")
-    ico.save(IMG / "favicon.ico", sizes=[(16, 16), (32, 32)])
-    print("favicon.ico")
+    # ICO собираем из самого крупного кадра: Pillow сам downscale-ит под каждый размер
+    ico = Image.open(IMG / "icon-512.png").convert("RGBA")
+    ico.save(IMG / "favicon.ico", sizes=ICO_SIZES)
+    print("favicon.ico:", ", ".join("%dx%d" % s for s in ICO_SIZES))
 
 
 if __name__ == "__main__":
