@@ -77,6 +77,7 @@
 
 ## Дайджесты
 
+- [Вечер 5 ноября: GOG Galaxy на Linux, Gemini Omni 1.2, Huawei без Windows](https://geekovski.ru/digests/2026-11-05-vecher.html): GOG показала новый Galaxy и уходит на Linux, Google дала 15-секундные ролики за $0,07 в секунду, Huawei начала продажи первого десктопа на HarmonyOS, Nintendo не собирается снова поднимать цену Switch 2
 - [Вечер 3 ноября: убыток Anthropic, Crimson Desert на PS5, ZERO PARADES на консолях](https://geekovski.ru/digests/2026-11-03-vecher.html): Anthropic показала $17 млрд квартальной выручки и $895 млрд обязательств, Crimson Desert после DLC снова не держит 30 fps, ZERO PARADES вышла на консолях, Thief получил дату ремастера
 - [Утро 2 ноября: Ocarina of Time на пороге, продажи Switch 2 в США просели, Pikmin без предупреждения](https://geekovski.ru/digests/2026-11-02-utro.html): Демо Pikmin 4 в eShop, Zelda выходит 5 ноября, Circana зафиксировала падение продаж Switch 2 в США, а HoYoverse впервые едет на железо Nintendo
 

@@ -649,7 +649,7 @@ def render_index(posts, theme, digests=None, cal_entries=None):
                       '<a class="rubric__all" href="/digests/">Все дайджесты →</a></div>'
                       '<a class="dteaser" href="/digests/%s.html"><span class="dteaser__date">%s</span>'
                       '<strong>%s</strong><span class="dteaser__count">%d новостей</span></a></section>') % (
-                latest["slug"], latest["date"].strftime("%d.%m, %H:%M"), html.escape(latest["title"]), len(latest["items"]))
+                latest["slug"], latest["date"].strftime("%d.%m, %H:%M"), html.escape(strip_prefix(latest["title"])), len(latest["items"]))
         # Одна лента: сверху два закреплённых больших материала, дальше сетка по четыре,
         # всё сортировано по дате — без группировки по рубрикам, которая оставляла дырки.
         lead2 = posts[:2]
