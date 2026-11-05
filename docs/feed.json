@@ -8,6 +8,88 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/grimes-gods-dont-give-gifts.html",
+   "url": "https://geekovski.ru/grimes-gods-dont-give-gifts.html",
+   "title": "Grimes сыграет в первом AI-фильме для кинотеатров",
+   "summary": "Певица Grimes появится в сгенерированной нейросетями фантастической антологии Gods Don't Give Gifts — она отдала фильму свою внешность и голос. Премьера в кинотеатрах 4 декабря, проект студии Fable называют первым AI-фильмом в прокате.",
+   "date_published": "2026-11-05T22:20:00+03:00",
+   "date_modified": "2026-11-05T22:20:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/grimes-gods-dont-give-gifts.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Grimes is going to star in an AI movie that's coming to theaters",
+     "url": "https://www.theverge.com/entertainment/1026282/grimes-ai-movie"
+    },
+    {
+     "name": "The Verge — трейлер Gods Don't Give Gifts и дата релиза",
+     "url": "https://www.theverge.com/entertainment/1005871/gods-dont-give-gifts-trailer-release-date"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/telegram-htmlbubbles.html",
+   "url": "https://geekovski.ru/telegram-htmlbubbles.html",
+   "title": "В Telegram 13.2 запускают игры прямо в сообщениях",
+   "summary": "В стабильной сборке Telegram 13.2 заработали HTMLBubbles — интерактивные сообщения на HTML, CSS и JavaScript. Внутри пузыря чата уже запускают клоны Wolfenstein 3D и 2048, прогресс сохраняется между запусками приложения.",
+   "date_published": "2026-11-05T22:15:00+03:00",
+   "date_modified": "2026-11-05T22:15:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/telegram-htmlbubbles.jpg",
+   "_sources": [
+    {
+     "name": "Код Дурова — Telegram превратил сообщения в мини-приложения: HTML-виджеты заработали в версии 13.2",
+     "url": "https://kod.ru/telegram-zapustil-html-bubbles"
+    },
+    {
+     "name": "Rozetked — В Telegram появилась поддержка интерактивных сообщений на базе HTML",
+     "url": "https://rozetked.me/news/49302-v-telegram-poyavilas-podderzhka-interaktivnyh-soobscheniy-na-baze-html"
+    },
+    {
+     "name": "GramNews — Как работают виджеты в сообщениях Telegram на Android, iOS и macOS",
+     "url": "https://gramnews.org/ru/articles/telegram-message-widgets"
+    },
+    {
+     "name": "iTzine — В версии Telegram 13.2 нашли поддержку игр внутри переписки",
+     "url": "https://itzine.ru/news/social-networks/versii-telegram-13-2-nashli-podderzhku-igr-vnutri-perepiski.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/claude-personal-finance.html",
+   "url": "https://geekovski.ru/claude-personal-finance.html",
+   "title": "Claude подключили к банковскому счёту",
+   "summary": "Anthropic добавила в Claude инструмент Personal Finance: через Plaid он подключается к банковским счетам и картам и отвечает на вопросы о тратах. Доступ только на чтение, бета — для Pro, Max и Ultra в США.",
+   "date_published": "2026-11-05T22:10:00+03:00",
+   "date_modified": "2026-11-05T22:10:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/claude-personal-finance.jpg",
+   "_sources": [
+    {
+     "name": "TechCrunch — Claude can now analyze your spending with its new Personal Finance tool",
+     "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool"
+    },
+    {
+     "name": "The Verge — Claude AI can plug directly into your bank account",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance"
+    },
+    {
+     "name": "Engadget — Now Claude can help with your finances too",
+     "url": "https://www.engadget.com/2307936/now-claude-can-help-with-your-finances-too"
+    },
+    {
+     "name": "ZDNET — Claude's new Personal Finance tool aims to help analyze your spending",
+     "url": "https://www.zdnet.com/innovation/personal-finance-claude-anthropic"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/geforce-8800-gtx-20-let.html",
    "url": "https://geekovski.ru/geforce-8800-gtx-20-let.html",
    "title": "Nvidia отметила 20 лет GeForce 8800 GTX демо в Steam",

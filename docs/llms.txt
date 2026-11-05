@@ -14,17 +14,20 @@
 - [Xbox](https://geekovski.ru/xbox/): 3 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 7 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 5 материалов
-- [PC-игры](https://geekovski.ru/pc/): 7 материалов
+- [PC-игры](https://geekovski.ru/pc/): 8 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
 - [Гаджеты](https://geekovski.ru/gadgets/): 8 материалов
-- [Кино](https://geekovski.ru/kino/): 4 материала
+- [Кино](https://geekovski.ru/kino/): 5 материалов
 - [Сериалы](https://geekovski.ru/serialy/): 1 материал
-- [AI](https://geekovski.ru/ai/): 9 материалов
+- [AI](https://geekovski.ru/ai/): 10 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Материалы
 
+- [Grimes сыграет в первом AI-фильме для кинотеатров](https://geekovski.ru/grimes-gods-dont-give-gifts.html): Певица Grimes появится в сгенерированной нейросетями фантастической антологии Gods Don't Give Gifts — она отдала фильму свою внешность и голос. Премьера в кинотеатрах 4 декабря, проект студии Fable называют первым AI-фильмом в прокате. (05.11.2026)
+- [В Telegram 13.2 запускают игры прямо в сообщениях](https://geekovski.ru/telegram-htmlbubbles.html): В стабильной сборке Telegram 13.2 заработали HTMLBubbles — интерактивные сообщения на HTML, CSS и JavaScript. Внутри пузыря чата уже запускают клоны Wolfenstein 3D и 2048, прогресс сохраняется между запусками приложения. (05.11.2026)
+- [Claude подключили к банковскому счёту](https://geekovski.ru/claude-personal-finance.html): Anthropic добавила в Claude инструмент Personal Finance: через Plaid он подключается к банковским счетам и картам и отвечает на вопросы о тратах. Доступ только на чтение, бета — для Pro, Max и Ultra в США. (05.11.2026)
 - [Nvidia отметила 20 лет GeForce 8800 GTX демо в Steam](https://geekovski.ru/geforce-8800-gtx-20-let.html): К 20-летию GeForce 8800 GTX Nvidia выпустила бесплатную полуинтерактивную демку в Steam: карту можно распаковать, поставить в корпус 2006 года и осмотреть комнату геймера той эпохи. Всё это на path tracing и DLSS 4.5 — минималка RTX 4070. (05.11.2026)
 - [Xbox PC app переписали: запуск быстрее на 60%](https://geekovski.ru/xbox-pc-app-redesign.html): Microsoft показала новый Xbox PC app — он стартует до 60% быстрее, страницы грузятся на 50% быстрее, а окна открываются на 65%. Сегодня приложение начали тестировать Xbox Insiders, обновлённый Xbox Cloud Gaming раскатают в ближайшие недели. (05.11.2026)
 - [DLSS 5 пришла в Hogwarts Legacy — без новых лиц](https://geekovski.ru/hogwarts-legacy-dlss-5.html): NVIDIA выпустила бесплатное обновление PC-версии: 3D-Guided Neural Rendering доводит свет и материалы, а персонажей Avalanche Software защитила масками. В середине ноября технология доедет до War Thunder, 23-го — до Where Winds Meet. (05.11.2026)
@@ -84,6 +87,7 @@
 - [CRYMELIGHT](https://geekovski.ru/titles/crymelight.html): 2026
 - [Fragmentary Order](https://geekovski.ru/titles/fragmentary-order.html): 2026
 - [God of War Laufey](https://geekovski.ru/titles/god-of-war-laufey.html): 2027
+- [Gods Don't Give Gifts](https://geekovski.ru/titles/gods-dont-give-gifts.html): 2026
 - [Godzilla: Destroy All Monsters Melee Remastered](https://geekovski.ru/titles/godzilla-destroy-all-monsters-melee-remastered.html): 2026
 - [Godzilla Minus Zero](https://geekovski.ru/titles/godzilla-minus-zero.html): 2026
 - [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
