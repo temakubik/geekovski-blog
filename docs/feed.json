@@ -8,6 +8,92 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/god-of-war-ragnarok-1-4-mlrd.html",
+   "url": "https://geekovski.ru/god-of-war-ragnarok-1-4-mlrd.html",
+   "title": "God of War: Ragnarök — $1,4 млрд выручки, оценка аналитиков",
+   "summary": "Alinea Analytics оценила продажи Ragnarök в 21,6 млн копий и $1,4 млрд выручки — это самый прибыльный эксклюзив PlayStation Studios нынешнего поколения. Официальных цифр Sony не публиковала.",
+   "date_published": "2026-11-05T10:15:00+03:00",
+   "date_modified": "2026-11-05T10:15:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/god-of-war-ragnarok-1-4-mlrd.jpg",
+   "_sources": [
+    {
+     "name": "iXBT Games — God of War: Ragnarok стала самой прибыльной игрой PlayStation Studios",
+     "url": "https://ixbt.games/en/news/2026/11/05/god-of-war-ragnarok-stala-samoi-pribylnoi-igroi-playstation-studios-dlia-ps5-analitiki.html"
+    },
+    {
+     "name": "VGTimes — God of War Ragnarök Has Sold 21.6 Million Copies, Alinea Analytics Estimates",
+     "url": "https://vgtimes.com/gaming-news/173491-god-of-war-ragnark-has-sold-21-6-million-copies-alinea-analytics-estimates.html"
+    },
+    {
+     "name": "PlayStation Blog — Physical disc production ending in January 2028",
+     "url": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/xbox-cloud-nano-wifi.html",
+   "url": "https://geekovski.ru/xbox-cloud-nano-wifi.html",
+   "title": "Xbox Nano подключается к облаку напрямую по Wi-Fi",
+   "summary": "Microsoft открыла два превью Xbox Cloud Gaming: геймпад Xbox Nano соединяется с серверами Xbox по Wi-Fi в обход Bluetooth, а в странах вне США телефон сам становится контроллером на смарт-ТВ.",
+   "date_published": "2026-11-05T10:10:00+03:00",
+   "date_modified": "2026-11-05T10:10:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-cloud-nano-wifi.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Xbox previews two new ways to control cloud games",
+     "url": "https://www.theverge.com/news/1026455/xbox-nano-direct-cloud-wifi-connection-xbox-cloud-gaming-phone-controller"
+    },
+    {
+     "name": "Xbox Support — Cloud Connect",
+     "url": "https://support.xbox.com/en-US/help/hardware-network/controller/cloud-connect"
+    },
+    {
+     "name": "VGTimes — New Xbox Nano Controller Gets Unusual Direct-to-Cloud Tech",
+     "url": "https://vgtimes.com/tech-and-hardware/173452-new-xbox-nano-controller-gets-unusual-direct-to-cloud-tech.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/amd-pk-padenie-2027.html",
+   "url": "https://geekovski.ru/amd-pk-padenie-2027.html",
+   "title": "AMD: рекордный квартал, но рынок ПК падает",
+   "summary": "AMD закрыла третий квартал с рекордной выручкой $13,4 млрд, но на 2027 год сама себе прогнозирует двузначное падение мировых поставок ПК из-за подорожавшей памяти.",
+   "date_published": "2026-11-05T10:05:00+03:00",
+   "date_modified": "2026-11-05T10:05:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/amd-pk-padenie-2027.jpg",
+   "_sources": [
+    {
+     "name": "AMD Investor Relations — Third Quarter 2026 Financial Results",
+     "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results"
+    },
+    {
+     "name": "The Verge — AMD rides data center riches to 'largest and most profitable' quarter in history",
+     "url": "https://www.theverge.com/tech/1026148/amd-earnings-q3-2026-data-center-pc"
+    },
+    {
+     "name": "Club386 — AMD predicts double-digit PC sales decline",
+     "url": "https://www.club386.com/amd-predicts-double-digit-pc-sales-decline/"
+    },
+    {
+     "name": "iXBT Games — Продажи ПК продолжат падать",
+     "url": "https://ixbt.games/news/2026/11/05/prodazi-pk-prodolzat-padat-amd-predupredila-o-dvuznacnom-snizenii-rynka.html"
+    },
+    {
+     "name": "Benzinga — AMD Sees PC Market Drop in 2027 as Memory Costs Bite",
+     "url": "https://www.benzinga.com/markets/earnings/26/11/62851331/amd-lisa-su-memory-costs-pc-demand-intel-double-digit-decline-2027"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/fsr-4-xbox.html",
    "url": "https://geekovski.ru/fsr-4-xbox.html",
    "title": "FSR 4 на Xbox: машинный апскейл для разработчиков",

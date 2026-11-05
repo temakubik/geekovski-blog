@@ -11,10 +11,10 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 1 материал
+- [Xbox](https://geekovski.ru/xbox/): 2 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 4 материала
-- [PlayStation](https://geekovski.ru/playstation/): 1 материал
-- [PC-игры](https://geekovski.ru/pc/): 0 материалов
+- [PlayStation](https://geekovski.ru/playstation/): 2 материала
+- [PC-игры](https://geekovski.ru/pc/): 1 материал
 - [VR](https://geekovski.ru/vr/): 2 материала
 - [Гаджеты](https://geekovski.ru/gadgets/): 1 материал
 - [Кино](https://geekovski.ru/kino/): 1 материал
@@ -24,6 +24,9 @@
 
 ## Материалы
 
+- [God of War: Ragnarök — $1,4 млрд выручки, оценка аналитиков](https://geekovski.ru/god-of-war-ragnarok-1-4-mlrd.html): Alinea Analytics оценила продажи Ragnarök в 21,6 млн копий и $1,4 млрд выручки — это самый прибыльный эксклюзив PlayStation Studios нынешнего поколения. Официальных цифр Sony не публиковала. (05.11.2026)
+- [Xbox Nano подключается к облаку напрямую по Wi-Fi](https://geekovski.ru/xbox-cloud-nano-wifi.html): Microsoft открыла два превью Xbox Cloud Gaming: геймпад Xbox Nano соединяется с серверами Xbox по Wi-Fi в обход Bluetooth, а в странах вне США телефон сам становится контроллером на смарт-ТВ. (05.11.2026)
+- [AMD: рекордный квартал, но рынок ПК падает](https://geekovski.ru/amd-pk-padenie-2027.html): AMD закрыла третий квартал с рекордной выручкой $13,4 млрд, но на 2027 год сама себе прогнозирует двузначное падение мировых поставок ПК из-за подорожавшей памяти. (05.11.2026)
 - [FSR 4 на Xbox: машинный апскейл для разработчиков](https://geekovski.ru/fsr-4-xbox.html): Microsoft открыла студиям FSR Upscaling 4 на Xbox Series X|S — нейросетевой апскейл добрался до консолей 2020 года. Полная модель на Series S стоит 5,2 мс кадра. (05.11.2026)
 - [Macronix уходит из ROM: картриджи Switch без чипов](https://geekovski.ru/macronix-rom-kartridzhi.html): Крупный поставщик ROM-чипов для картриджей Switch и Switch 2 объявил об уходе из бизнеса. Картриджи не исчезнут завтра, но давление на них выросло. (04.11.2026)
 - [Steam Frame: стрим стал чётче, суперсэмплинг убрали](https://geekovski.ru/steam-frame-steamvr-2-19-1.html): Valve выпустила бету SteamVR 2.19.1 с более резкой картинкой стрима на всех шлемах со Steam Link, а в SteamOS 0.5.7 для Steam Frame молча убрала Advanced Supersampling. (04.11.2026)
