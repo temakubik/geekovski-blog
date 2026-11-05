@@ -12,18 +12,20 @@
 ## Рубрики
 
 - [Xbox](https://geekovski.ru/xbox/): 2 материала
-- [Nintendo Switch](https://geekovski.ru/switch/): 5 материалов
+- [Nintendo Switch](https://geekovski.ru/switch/): 6 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 4 материала
 - [PC-игры](https://geekovski.ru/pc/): 3 материала
 - [VR](https://geekovski.ru/vr/): 2 материала
 - [Гаджеты](https://geekovski.ru/gadgets/): 2 материала
 - [Кино](https://geekovski.ru/kino/): 2 материала
 - [Сериалы](https://geekovski.ru/serialy/): 1 материал
-- [AI](https://geekovski.ru/ai/): 5 материалов
+- [AI](https://geekovski.ru/ai/): 6 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 
 ## Материалы
 
+- [OpenAI обещает платить за электричество дата-центров](https://geekovski.ru/openai-community-compact.html): 5 ноября OpenAI опубликовала National Community Compact и Compute Campus Policy Blueprint: полная оплата электричества и инфраструктуры, отказ от NDA с чиновниками, публичные отчёты о воде и шуме. Это ответ на выборы, где 40 из 41 местной инициативы против дата-центров. (05.11.2026)
+- [Ocarina of Time вышла — 96 баллов и лучший релиз года](https://geekovski.ru/ocarina-of-time-reliz-96.html): Ремейк Ocarina of Time вышел на Switch 2 сегодня и стал самой высоко оценённой игрой 2026 года — 96 у Metacritic при 80 рецензиях, все положительные. До 99 баллов оригинала 1998-го он не дотянул. (05.11.2026)
 - [Anthropic впервые заплатил издателю — Associated Press](https://geekovski.ru/anthropic-ap-licensing.html): Adweek сообщил, что Anthropic заключил первую в своей истории лицензионную сделку с издателем — с Associated Press. Ни одна из сторон сделку не подтвердила, условия не раскрыты. (05.11.2026)
 - [Годзилла идёт на рекордный старт в США](https://geekovski.ru/godzilla-minus-zero-start.html): «Godzilla Minus Zero» выходит в широкий прокат в Северной Америке 6 ноября. Прогнозы дают $30 млн за уикенд — почти втрое больше, чем у «Minus One» три года назад. (05.11.2026)
 - [У Sony 97,9 млн PS5 и PS6 по графику](https://geekovski.ru/sony-otchet-ps5-97-9-mln.html): Sony отчиталась за квартал: PS5 дошла до 97,9 млн, а игровое подразделение дало лучшую операционную прибыль за два года. (05.11.2026)
