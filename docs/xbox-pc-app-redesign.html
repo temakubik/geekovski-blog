@@ -31,7 +31,12 @@
 <link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0A0C0F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="yandex-verification" content="acc866b9b963f469">
 <link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
 <link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
@@ -57,7 +62,7 @@
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(52)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(4)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(54)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(4)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -157,6 +162,11 @@ document.querySelector(active)?.classList.add('nav__link--active');
     } catch (e) { window.prompt('Скопируйте ссылку', url); }
   });
 })();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
 </script>
 </body>
 </html>

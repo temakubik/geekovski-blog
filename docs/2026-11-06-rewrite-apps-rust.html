@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discord и Xbox переписывают приложения — и это заметно по памяти</title>
+<meta name="description" content="Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/2026-11-06-rewrite-apps-rust.html">
+<meta property="og:title" content="Discord и Xbox переписывают приложения — и это заметно по памяти">
+<meta property="og:description" content="Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/2026-11-06-rewrite-apps-rust.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/rewrite-apps-rust.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Discord и Xbox переписывают приложения — и это заметно по памяти">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Discord и Xbox переписывают приложения — и это заметно по памяти">
+<meta name="twitter:description" content="Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.">
+<meta property="article:published_time" content="2026-11-06T09:20:00+03:00">
+<meta property="article:modified_time" content="2026-11-06T09:20:00+03:00">
+<meta property="article:section" content="Гаджеты">
+<meta property="article:author" content="GEEKOVSKI">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0A0C0F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="yandex-verification" content="acc866b9b963f469">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BlogPosting","@id":"https://geekovski.ru/2026-11-06-rewrite-apps-rust.html#article","headline":"Discord и Xbox переписывают приложения — и это заметно по памяти","description":"Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.","datePublished":"2026-11-06T09:20:00+03:00","dateModified":"2026-11-06T09:20:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/2026-11-06-rewrite-apps-rust.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"Гаджеты","keywords":["Гаджеты","GEEKOVSKI"],"wordCount":521,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/rewrite-apps-rust.jpg","width":1600,"height":900}],"citation":["https://www.theverge.com/news/1027379/discord-ditching-electron-web-app","https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign","https://news.xbox.com/en-us/2026/11/05/a-faster-simpler-xbox-experience-is-coming-to-pc-web-and-cloud/","https://www.windowscentral.com/gaming/xbox/hands-on-xboxs-brand-new-pc-app-offers-big-performance-improvements"],"abstract":"Discord переписывает десктопный клиент на Rust и убирает Electron Ранняя сборка под Windows 11 занимает 290 МБ RAM вместо гигабайта Xbox выпустил новый PC-клиент Garrison: запуск до 60% быстрее, страницы до 50% Тренд общий: приложения возвращаются с веб-технологий на нативные движки"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"Гаджеты","item":"https://geekovski.ru/gadgets/"},{"@type":"ListItem","position":3,"name":"Discord и Xbox переписывают приложения — и это заметно по памяти","item":"https://geekovski.ru/2026-11-06-rewrite-apps-rust.html"}]}]}</script>
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(54)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(4)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <div class="top__actions">
+      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main class="wrap post-page">
+<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<article class="post cat-gadgets">
+  <header class="post__head">
+    <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T09:20:00+03:00">06.11.2026, 09:20</time></div>
+    <h1>Discord и Xbox переписывают приложения — и это заметно по памяти</h1>
+    <p class="post__lead">Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.</p>
+  </header>
+  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Discord переписывает десктопный клиент на Rust и убирает Electron</li><li>Ранняя сборка под Windows 11 занимает 290 МБ RAM вместо гигабайта</li><li>Xbox выпустил новый PC-клиент Garrison: запуск до 60% быстрее, страницы до 50%</li><li>Тренд общий: приложения возвращаются с веб-технологий на нативные движки</li></ul></aside>
+  <figure class="post__cover"><img src="/assets/img/rewrite-apps-rust.jpg" alt="Discord и Xbox переписывают приложения — и это заметно по памяти"></figure>
+  <div class="post__body"><p>Год назад главным аргументом за Electron было «написано один раз, работает везде». В 2026-м два крупных продукта одновременно показали цену этого удобства — и оба решили платить меньше.</p>
+<h2>Discord: 290 МБ вместо гигабайта</h2>
+<p>Технический директор Discord Станислав Вишневский подтвердил, что десктопный клиент полностью переезжает на Rust. «Мы были ранними адоптерами Rust с 2018 года, многое в инфраструктуре и голосовых технологиях уже на нём, — написал он. — Святой Грааль был в том, чтобы перевести туда весь клиент. Это значит, что Electron уходит, а вместе с ним и React Native: мобильные приложения сохраняют нативный интерфейс, но делят код с десктопом через Rust».</p>
+<p>Он же показал скриншот ранней сборки под Windows 11: <strong>290 МБ оперативной памяти</strong>. Старый клиент на Electron при десятке серверов легко доходил до гигабайта и больше; на тяжёлых конфигурациях пользователи жаловались и на несколько гигабайт. Публичного релиза пока нет — компания обещает «скоро дать пощупать тестировщикам».</p>
+<h2>Xbox: Garrison вместо веб-обёртки</h2>
+<p>У Microsoft свой заход. Новый PC-клиент, который внутри называли Garrison, вышел на тест для Xbox Insiders вместе с обновлением веб-версии и облачного стриминга. Вице-президент Xbox по продуктам Джейсон Бомонт приводит цифры: <strong>приложение запускается до 60% быстрее, страницы Home, Store и Game Pass грузятся до 50% быстрее, внутриоконные переходы — до 65% быстрее</strong>.</p>
+<p>Важнее цифр — что именно поменяли. Приложение перестало ощущаться веб-страницей: навигация упрощена под геймпад, поиск больше не выскакивает сам при переключении разделов, друзья вынесены на главный экран, переработаны карточки игр и анимации. The Verge описывает новый клиент как смесь нативных и веб-элементов — то есть Microsoft не отказалась от веба целиком, а перенесла на нативный слой то, что тормозило больше всего.</p>
+<p>Заодно обновился веб-клиент облачного гейминга: появилась вкладка библиотеки, десктопный режим для больших экранов, тёмная и светлая темы и пять контрастных вариантов для доступности. На смарт-ТВ и VR-шлемах тот же дизайн приедет отдельно, с поправкой под конкретный экран.</p>
+<h2>Почему это происходит именно сейчас</h2>
+<p>Три причины складываются.</p>
+<p><strong>Железо перестало быть бесплатным.</strong> Электронный клиент на Chromium — это фактически отдельный браузер в каждом приложении. Пользователи с 16 ГБ памяти заметили это раньше, чем разработчики, а теперь ещё и цены на память растут: экономить мегабайты стало выгодно бизнесу, а не только перфекционистам.</p>
+<p><strong>Rust перестал быть экзотикой.</strong> У Discord на нём уже годы работает инфраструктура, у Microsoft — части Windows. Язык даёт скорость C++ без ручного управления памятью, и это снимает главный страх: «перепишем — получим утечки и краши».</p>
+<p><strong>Появились альтернативные оболочки.</strong> Tauri собирает нативное окно с системным веб-вьюером вместо встроенного Chromium, и приложения на нём занимают десятки мегабайт вместо сотен. Не всем подходит — веб-вьюер на разных системах ведёт себя по-разному, — но как способ поставить приложение на диету работает.</p>
+<h2>Что это значит для нас</h2>
+<p>Практический вывод простой: <strong>приложения снова начинают соревноваться за память</strong>, а не только за функции. Если у тебя ноутбук на 8–16 ГБ, следующий год будет приятнее: сначала Discord, теперь Xbox, дальше потянутся остальные, у кого Electron висел на шее.</p>
+<p>Вторая мысль, менее утешительная: переписывание — это не «оптимизация», а полная замена фундамента. Discord пишет, что Rust у него с 2018 года, и только сейчас дошёл до полного клиента. Такие вещи не делаются за спринт, и обещать «станет быстрее к следующему обновлению» никто из них не стал.</p></div>
+  
+  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.theverge.com/news/1027379/discord-ditching-electron-web-app" rel="nofollow noopener" target="_blank">The Verge — Discord is ditching Electron</a></li><li><a href="https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign" rel="nofollow noopener" target="_blank">The Verge — Xbox overhauls its PC, web, and cloud apps</a></li><li><a href="https://news.xbox.com/en-us/2026/11/05/a-faster-simpler-xbox-experience-is-coming-to-pc-web-and-cloud/" rel="nofollow noopener" target="_blank">Xbox Wire — A Faster, Simpler Xbox Experience</a></li><li><a href="https://www.windowscentral.com/gaming/xbox/hands-on-xboxs-brand-new-pc-app-offers-big-performance-improvements" rel="nofollow noopener" target="_blank">Windows Central — hands-on нового PC-клиента</a></li></ol></section>
+  <section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&text=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&title=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://wa.me/?text=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8%20https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html" target="_blank" rel="noopener nofollow">WhatsApp</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&text=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Frewrite-apps-rust-pin.jpg&description=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html">Скопировать ссылку</button>
+</section>
+</article>
+<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/pwa-install.jpg" alt="Блог теперь ставится как приложение: кнопка «Установить»" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T09:40:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-pwa-install.html">Блог теперь ставится как приложение: кнопка «Установить»</a></h3>
+    <p class="card__sum">У geekovski.ru появился веб-манифест и service worker — сайт устанавливается на телефон и десктоп как обычное приложение…</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-pwa-install.html">Читать →</a><span class="srcc">источников: 2</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/c64-ultimate-v-magazinah.jpg" alt="Commodore 64 возвращается в магазины Европы" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T23:07:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/c64-ultimate-v-magazinah.html">Commodore 64 возвращается в магазины Европы</a></h3>
+    <p class="card__sum">Commodore подписала эксклюзивный контракт с дистрибьютором Colby: C64 Ultimate впервые за тридцать с лишним лет попадёт на…</p>
+    <div class="card__foot"><a class="more" href="/c64-ultimate-v-magazinah.html">Читать →</a><span class="srcc">источников: 3</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/one-ui-9-svyaz.jpg" alt="One UI 9 ломает Wi-Fi, интернет и SIM на Galaxy" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T20:08:00+03:00">05.11</time></div>
+    <h3 class="card__title"><a href="/one-ui-9-svyaz.html">One UI 9 ломает Wi-Fi, интернет и SIM на Galaxy</a></h3>
+    <p class="card__sum">После финального One UI 9 на Android 17 владельцы Galaxy жалуются на обрывы Wi-Fi, пропажу мобильных данных и нераспознанные…</p>
+    <div class="card__foot"><a class="more" href="/one-ui-9-svyaz.html">Читать →</a><span class="srcc">источников: 3</span></div>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
+const route = location.pathname;
+const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+document.querySelector(active)?.classList.add('nav__link--active');
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>

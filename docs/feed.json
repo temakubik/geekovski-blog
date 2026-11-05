@@ -8,6 +8,58 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-pwa-install.html",
+   "url": "https://geekovski.ru/2026-11-06-pwa-install.html",
+   "title": "Блог теперь ставится как приложение: кнопка «Установить»",
+   "summary": "У geekovski.ru появился веб-манифест и service worker — сайт устанавливается на телефон и десктоп как обычное приложение, открывается без адресной строки и запоминает прочитанное.",
+   "date_published": "2026-11-06T09:40:00+03:00",
+   "date_modified": "2026-11-06T09:40:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/pwa-install.jpg",
+   "_sources": [
+    {
+     "name": "MDN — Web app manifest",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/Manifest"
+    },
+    {
+     "name": "web.dev — Service worker basics",
+     "url": "https://web.dev/articles/service-workers"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-rewrite-apps-rust.html",
+   "url": "https://geekovski.ru/2026-11-06-rewrite-apps-rust.html",
+   "title": "Discord и Xbox переписывают приложения — и это заметно по памяти",
+   "summary": "Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.",
+   "date_published": "2026-11-06T09:20:00+03:00",
+   "date_modified": "2026-11-06T09:20:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/rewrite-apps-rust.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Discord is ditching Electron",
+     "url": "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app"
+    },
+    {
+     "name": "The Verge — Xbox overhauls its PC, web, and cloud apps",
+     "url": "https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign"
+    },
+    {
+     "name": "Xbox Wire — A Faster, Simpler Xbox Experience",
+     "url": "https://news.xbox.com/en-us/2026/11/05/a-faster-simpler-xbox-experience-is-coming-to-pc-web-and-cloud/"
+    },
+    {
+     "name": "Windows Central — hands-on нового PC-клиента",
+     "url": "https://www.windowscentral.com/gaming/xbox/hands-on-xboxs-brand-new-pc-app-offers-big-performance-improvements"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/c64-ultimate-v-magazinah.html",
    "url": "https://geekovski.ru/c64-ultimate-v-magazinah.html",
    "title": "Commodore 64 возвращается в магазины Европы",

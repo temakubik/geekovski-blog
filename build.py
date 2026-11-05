@@ -264,7 +264,12 @@ PAGE = """<!DOCTYPE html>
 <link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0A0C0F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
 {verify}
 <link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
 <link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
@@ -333,6 +338,11 @@ document.querySelector(active)?.classList.add('nav__link--active');
     }} catch (e) {{ window.prompt('Скопируйте ссылку', url); }}
   }});
 }})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {{
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {{}}));
+}}
 </script>
 </body>
 </html>
@@ -739,6 +749,16 @@ def back_link(label=None, href=None):
             'onclick="if(document.referrer){history.back();return false}">'
             '<span class="backlink__arrow" aria-hidden="true">←</span> %s</a></div>'
             % (fallback, label))
+
+
+
+def offline_page(theme):
+    """Заглушка для установленного приложения, когда сети нет."""
+    content = ('<main class="wrap"><section class="lead"><h1>Нет соединения</h1>'
+               '<p>Страница не загрузилась — похоже, пропал интернет. Уже открытые материалы '
+               'доступны, а свежие появятся, как только связь вернётся.</p></section></main>')
+    return page("Нет соединения — %s" % SITE["title"], "Страница недоступна без интернета.",
+                content, theme, robots="noindex,nofollow")
 
 
 def share_block(url, title, image=None):
@@ -1173,6 +1193,25 @@ def build(theme, out_dir, content_dir=None):
     about = render_about(theme)
     if about:
         (out / "about.html").write_text(about, encoding="utf-8")
+    (out / "manifest.webmanifest").write_text(json.dumps({
+        "name": "GEEKOVSKI — игры, техника, кино",
+        "short_name": "GEEKOVSKI",
+        "description": "Разборы и новости игр, техники, кино и AI с источниками.",
+        "lang": "ru",
+        "start_url": "/",
+        "scope": "/",
+        "display": "standalone",
+        "orientation": "portrait",
+        "background_color": "#0A0C0F",
+        "theme_color": "#0A0C0F",
+        "icons": [
+            {"src": "/assets/img/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+            {"src": "/assets/img/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+            {"src": "/assets/img/favicon-192.png", "sizes": "192x192", "type": "image/png"},
+        ],
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+    shutil.copy(ROOT / "static" / "sw.js", out / "sw.js")
+    (out / "offline.html").write_text(offline_page(theme), encoding="utf-8")
     (out / "robots.txt").write_text(robots_txt(), encoding="utf-8")
     (out / "llms.txt").write_text(llms_txt(posts, digests, TITLES), encoding="utf-8")
     (out / "llms-full.txt").write_text(llms_full_txt(posts), encoding="utf-8")

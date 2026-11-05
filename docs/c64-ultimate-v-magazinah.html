@@ -31,7 +31,12 @@
 <link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0A0C0F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="yandex-verification" content="acc866b9b963f469">
 <link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
 <link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
@@ -57,7 +62,7 @@
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(52)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(4)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(54)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(4)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -93,30 +98,30 @@
 </section>
 </article>
 <section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/pwa-install.jpg" alt="Блог теперь ставится как приложение: кнопка «Установить»" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T09:40:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-pwa-install.html">Блог теперь ставится как приложение: кнопка «Установить»</a></h3>
+    <p class="card__sum">У geekovski.ru появился веб-манифест и service worker — сайт устанавливается на телефон и десктоп как обычное приложение…</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-pwa-install.html">Читать →</a><span class="srcc">источников: 2</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/rewrite-apps-rust.jpg" alt="Discord и Xbox переписывают приложения — и это заметно по памяти" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T09:20:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-rewrite-apps-rust.html">Discord и Xbox переписывают приложения — и это заметно по памяти</a></h3>
+    <p class="card__sum">Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта.</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-rewrite-apps-rust.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
   <div class="card__cover"><img src="/assets/img/one-ui-9-svyaz.jpg" alt="One UI 9 ломает Wi-Fi, интернет и SIM на Galaxy" loading="lazy"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T20:08:00+03:00">05.11</time></div>
     <h3 class="card__title"><a href="/one-ui-9-svyaz.html">One UI 9 ломает Wi-Fi, интернет и SIM на Galaxy</a></h3>
     <p class="card__sum">После финального One UI 9 на Android 17 владельцы Galaxy жалуются на обрывы Wi-Fi, пропажу мобильных данных и нераспознанные…</p>
     <div class="card__foot"><a class="more" href="/one-ui-9-svyaz.html">Читать →</a><span class="srcc">источников: 3</span></div>
-  </div>
-</article>
-<article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/apple-5-ustroystv-6-noyabrya.jpg" alt="Apple выпускает пять устройств 6 ноября" loading="lazy"></div>
-  <div class="card__body">
-    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T19:12:00+03:00">05.11</time></div>
-    <h3 class="card__title"><a href="/apple-5-ustroystv-6-noyabrya.html">Apple выпускает пять устройств 6 ноября</a></h3>
-    <p class="card__sum">В пятницу Apple начнёт продажи пяти новинок, включая первые в истории компании ноутбуки с сенсорным OLED-экраном.</p>
-    <div class="card__foot"><a class="more" href="/apple-5-ustroystv-6-noyabrya.html">Читать →</a><span class="srcc">источников: 2</span></div>
-  </div>
-</article>
-<article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/motorola-signature-27.jpg" alt="Motorola Signature 27: 7000 мА·ч и $1599" loading="lazy"></div>
-  <div class="card__body">
-    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T18:05:00+03:00">05.11</time></div>
-    <h3 class="card__title"><a href="/motorola-signature-27.html">Motorola Signature 27: 7000 мА·ч и $1599</a></h3>
-    <p class="card__sum">Motorola официально вернулась во флагманский сегмент: Signature 27 получил Snapdragon 8 Elite Extreme Gen 6, аккумулятор на…</p>
-    <div class="card__foot"><a class="more" href="/motorola-signature-27.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article></div></section>
 </main>
@@ -167,6 +172,11 @@ document.querySelector(active)?.classList.add('nav__link--active');
     } catch (e) { window.prompt('Скопируйте ссылку', url); }
   });
 })();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
 </script>
 </body>
 </html>
