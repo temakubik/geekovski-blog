@@ -261,6 +261,7 @@ PAGE = """<!DOCTYPE html>
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#0A0C0F">
+{verify}
 <link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
 <link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -366,6 +367,14 @@ METRIKA_COUNTER = """<!-- Yandex.Metrika counter -->
 
 ROBOTS_INDEX = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
 ROBOTS_NOINDEX = "noindex,follow"
+
+# Подтверждение прав на домен в панелях вебмастеров. Значения не секретные,
+# но менять их вручную в шапке нельзя: строка должна совпадать с той, что
+# выдала панель, иначе подтверждение отваливается.
+#   Яндек.Вебмастер → «Добавить сайт» → «Мета-тег» → сюда
+#   Google Search Console → «HTML-тег» → GOOGLE_VERIFICATION
+YANDEX_VERIFICATION = "acc866b9b963f469"
+GOOGLE_VERIFICATION = ""
 
 ORG_ID = SITE["url"] + "/#organization"
 WEBSITE_ID = SITE["url"] + "/#website"
@@ -519,6 +528,15 @@ def ld_article(p, url, image_url=None):
     return obj
 
 
+def verify_meta():
+    tags = []
+    if YANDEX_VERIFICATION:
+        tags.append('<meta name="yandex-verification" content="%s">' % YANDEX_VERIFICATION)
+    if GOOGLE_VERIFICATION:
+        tags.append('<meta name="google-site-verification" content="%s">' % GOOGLE_VERIFICATION)
+    return "\n".join(tags)
+
+
 def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
          og_type="website", robots=ROBOTS_INDEX, article=None, og_alt=None,
          metrika=None):
@@ -539,6 +557,7 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         og_image_meta=og_image_meta(og_image, og_alt or title),
         og_url=og_url, canonical=canonical_tag, robots=robots, og_type=og_type,
         article_meta=article_meta, jsonld=jsonld,
+        verify=verify_meta(),
         metrika=METRIKA_COUNTER if metrika is None else metrika,
     )
 
@@ -853,7 +872,7 @@ def rss(posts, title=None, path=""):
         title=title or SITE["title"], url=SITE["url"], tag=SITE["tagline"], items=items)
 
 
-def sitemap(posts, digests=None):
+def sitemap(posts, digests=None, titles=None, with_calendar=False):
     """Sitemap с lastmod у каждой записи и картинками материалов.
 
     lastmod без него поисковики перекачивают всё подряд; image:image пускает обложки
@@ -876,6 +895,12 @@ def sitemap(posts, digests=None):
                           max([p["date"] for p in items]).strftime("%Y-%m-%d") if items else None))
     urls.append(entry(SITE["url"] + "/digests/"))
     urls.append(entry(SITE["url"] + "/about.html"))
+    if with_calendar:
+        urls.append(entry(SITE["url"] + "/calendar/"))
+    # страницы тайтлов (игры, фильмы, сериалы) — такие же точки входа, как материалы:
+    # по ним ищут «<название> дата выхода», и из календаря на них ведут ссылки
+    for slug in sorted(titles or {}):
+        urls.append(entry(SITE["url"] + "/titles/" + slug + ".html"))
     for d in (digests or []):
         urls.append(entry("%s/digests/%s.html" % (SITE["url"], d["slug"]), d["date"].strftime("%Y-%m-%d")))
     for p in posts:
@@ -905,7 +930,7 @@ def robots_txt():
     return "\n".join(lines)
 
 
-def llms_txt(posts, digests):
+def llms_txt(posts, digests, titles=None):
     """llms.txt по llmstxt.org: короткая карта сайта для языковых моделей.
 
     Не заменяет индексацию, но даёт LLM готовый список материалов со ссылками,
@@ -931,7 +956,9 @@ def llms_txt(posts, digests):
         items = [p for p in posts if p["category"] == c]
         out.append("- [%s](%s/%s/): %d %s" % (name, SITE["url"], c, len(items),
                                               plural(len(items), "материал", "материала", "материалов")))
-    out += ["- [Дайджесты](%s/digests/): короткие выпуски новостей" % SITE["url"], "", "## Материалы", ""]
+    out += ["- [Дайджесты](%s/digests/): короткие выпуски новостей" % SITE["url"],
+            "- [Календарь анонсов](%s/calendar/): подтверждённые даты релизов игр, фильмов и сериалов" % SITE["url"],
+            "", "## Материалы", ""]
     for p in posts:
         out.append("- [%s](%s/%s.html): %s (%s)" % (
             p["title"], SITE["url"], p["slug"], (p["summary"] or plain(p["body"], 160)).replace("\n", " "),
@@ -941,6 +968,13 @@ def llms_txt(posts, digests):
         for d in digests:
             out.append("- [%s](%s/digests/%s.html): %s" % (
                 d["title"], SITE["url"], d["slug"], (d["summary"] or "").replace("\n", " ")))
+    if titles:
+        out += ["", "## Тайтлы (страницы игр, фильмов и сериалов)", ""]
+        for slug in sorted(titles):
+            t = titles[slug]
+            out.append("- [%s](%s/titles/%s.html)%s" % (
+                t["title"], SITE["url"], slug,
+                ": %s" % (t["meta"].get("year") or "") if t["meta"].get("year") else ""))
     out += ["", "## Служебное", "",
             "- [О сайте и правила редакции](%s/about.html)" % SITE["url"],
             "- [Полный текст всех материалов](%s/llms-full.txt)" % SITE["url"], ""]
@@ -1136,10 +1170,11 @@ def build(theme, out_dir, content_dir=None):
     if about:
         (out / "about.html").write_text(about, encoding="utf-8")
     (out / "robots.txt").write_text(robots_txt(), encoding="utf-8")
-    (out / "llms.txt").write_text(llms_txt(posts, digests), encoding="utf-8")
+    (out / "llms.txt").write_text(llms_txt(posts, digests, TITLES), encoding="utf-8")
     (out / "llms-full.txt").write_text(llms_full_txt(posts), encoding="utf-8")
     (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests"), encoding="utf-8")
-    (out / "sitemap.xml").write_text(sitemap(posts, digests), encoding="utf-8")
+    (out / "sitemap.xml").write_text(sitemap(posts, digests, TITLES, with_calendar=bool(cal_entries)),
+                                     encoding="utf-8")
     (out / "feed.json").write_text(feed_json(posts), encoding="utf-8")
     ico = ROOT / "static" / "img" / "favicon.ico"
     if ico.exists():
@@ -1317,7 +1352,30 @@ def render_calendar_page(entries, theme, today=None):
                '%s</main>') % body
     return page("Календарь анонсов — релизы недели и месяца | %s" % SITE["title"], desc, content, theme,
                 canonical=SITE["url"] + "/calendar/",
-                jsonld=ldjson(ld_org(), ld_website()))
+                jsonld=ldjson(ld_org(), ld_website(),
+                              {"@type": "CollectionPage", "@id": SITE["url"] + "/calendar/#page",
+                               "url": SITE["url"] + "/calendar/", "name": "Календарь анонсов",
+                               "description": desc, "inLanguage": "ru-RU",
+                               "isPartOf": {"@id": WEBSITE_ID}},
+                              calendar_itemlist(entries),
+                              ld_breadcrumb([("Главная", "/"), ("Календарь анонсов", "/calendar/")])))
+
+
+def calendar_itemlist(entries, limit=30):
+    """Даты релизов списком: машиночитаемый ответ на «когда выходит X»."""
+    upcoming = sorted(entries, key=lambda e: e["day"])[:limit]
+    if not upcoming:
+        return None
+    return {
+        "@type": "ItemList", "name": "Ближайшие релизы", "numberOfItems": len(upcoming),
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1,
+             "url": SITE["url"] + e["href"],
+             "name": e["title"],
+             "description": e["day"].strftime("%d.%m.%Y")}
+            for i, e in enumerate(upcoming)
+        ],
+    }
 
 
 TRANSLIT = {"а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "e", "ж": "zh",
@@ -1380,7 +1438,8 @@ def title_page(slug, theme):
                    % (k, html.escape(v)) for k, v in rows if v)
     srcs = "".join('<li><a href="%s">%s</a></li>' % (x["url"], html.escape(x["name"]))
                    for x in t["sources"] if x["url"])
-    cover = ('<div class="tp__cover"><img src="%s" alt=""></div>' % t["cover"]) if t["cover"] else ""
+    cover = ('<div class="tp__cover"><img src="%s" alt="%s"></div>'
+             % (t["cover"], html.escape(t["title"], quote=True))) if t["cover"] else ""
     # даты из календаря: ближайшая будущая
     rel = [e for e in CAL_ENTRIES if e["slug"] == slug and e["day"] >= datetime.now().date()]
     when = ""
@@ -1427,7 +1486,41 @@ def title_page(slug, theme):
                                   SITE["title"]),
                 plain(t["body"], 180), content, theme,
                 canonical=SITE["url"] + "/titles/%s.html" % slug,
-                og_image=t["cover"] or DEFAULT_OG)
+                og_image=t["cover"] or DEFAULT_OG,
+                jsonld=ldjson(ld_org(), ld_website(), ld_title(t, slug),
+                              ld_breadcrumb([("Главная", "/"), ("Календарь анонсов", "/calendar/"),
+                                             (t["title"], "/titles/%s.html" % slug)])))
+
+
+def ld_title(t, slug):
+    """Разметка страницы тайтла: VideoGame / Movie / TVSeries.
+
+    Именно на такие страницы опирается ответ «когда выходит <название>»:
+    в разметке есть дата релиза из календаря, жанр, студия и издатель.
+    """
+    url = "%s/titles/%s.html" % (SITE["url"], slug)
+    kind = {"game": "VideoGame", "film": "Movie", "series": "TVSeries"}.get(t["kind"], "CreativeWork")
+    obj = {"@type": kind, "@id": url + "#entity", "name": t["title"], "url": url,
+           "inLanguage": "ru-RU", "description": plain(t["body"], 200) or None}
+    if t["cover"]:
+        entry = {"@type": "ImageObject", "url": SITE["url"] + t["cover"]}
+        size = image_size(local_image(SITE["url"] + t["cover"]) or Path("/nonexistent"))
+        if size:
+            entry["width"], entry["height"] = size
+        obj["image"] = entry
+    if t["genre"]:
+        obj["genre"] = [g.strip() for g in re.split(r"[,/]", t["genre"]) if g.strip()]
+    for key, meta_key in (("productionCompany", "developer"), ("publisher", "publisher")):
+        name = (t.get("meta") or {}).get(meta_key) or t["developers"]
+        if name:
+            obj[key] = {"@type": "Organization", "name": name}
+    # подтверждённая дата релиза из календаря (ближайшая будущая или последняя прошедшая)
+    days = sorted(e["day"] for e in CAL_ENTRIES if e.get("slug") == slug)
+    if days:
+        today = datetime.now().date()
+        future = [d for d in days if d >= today]
+        obj["datePublished"] = (future[0] if future else days[-1]).strftime("%Y-%m-%d")
+    return {k: v for k, v in obj.items() if v is not None}
 
 
 def calendar_entries(calendars):

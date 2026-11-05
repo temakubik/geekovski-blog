@@ -21,6 +21,7 @@
 - [Сериалы](https://geekovski.ru/serialy/): 1 материал
 - [AI](https://geekovski.ru/ai/): 9 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
+- [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Материалы
 
@@ -73,6 +74,23 @@
 
 - [Вечер 3 ноября: убыток Anthropic, Crimson Desert на PS5, ZERO PARADES на консолях](https://geekovski.ru/digests/2026-11-03-vecher.html): Anthropic показала $17 млрд квартальной выручки и $895 млрд обязательств, Crimson Desert после DLC снова не держит 30 fps, ZERO PARADES вышла на консолях, Thief получил дату ремастера
 - [Утро 2 ноября: Ocarina of Time на пороге, продажи Switch 2 в США просели, Pikmin без предупреждения](https://geekovski.ru/digests/2026-11-02-utro.html): Демо Pikmin 4 в eShop, Zelda выходит 5 ноября, Circana зафиксировала падение продаж Switch 2 в США, а HoYoverse впервые едет на железо Nintendo
+
+## Тайтлы (страницы игр, фильмов и сериалов)
+
+- [Angry Birds 3 в кино](https://geekovski.ru/titles/angry-birds-3-v-kino.html): 2026
+- [Black Doves, сезон 2](https://geekovski.ru/titles/black-doves-sezon-2.html): 2026
+- [CRYMELIGHT](https://geekovski.ru/titles/crymelight.html): 2026
+- [Fragmentary Order](https://geekovski.ru/titles/fragmentary-order.html): 2026
+- [God of War Laufey](https://geekovski.ru/titles/god-of-war-laufey.html): 2027
+- [Godzilla: Destroy All Monsters Melee Remastered](https://geekovski.ru/titles/godzilla-destroy-all-monsters-melee-remastered.html): 2026
+- [Godzilla Minus Zero](https://geekovski.ru/titles/godzilla-minus-zero.html): 2026
+- [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
+- [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
+- [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
+- [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
+- [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
+- [The Legend of Zelda: Ocarina of Time](https://geekovski.ru/titles/zelda-ocarina-2026.html): 2026
+- [Zero Parades: Director's Cut](https://geekovski.ru/titles/zero-parades-directors-cut.html): 2026
 
 ## Служебное
 
