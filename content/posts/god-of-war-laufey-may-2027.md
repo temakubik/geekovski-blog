@@ -5,6 +5,7 @@ category: playstation
 summary: Santa Monica Studio официально перенесла God of War Laufey с 16 февраля на 20 мая 2027 года — на три месяца. Причина, которую назвала студия, — «финальные штрихи»; конкуренцию в феврале она причиной не называла.
 tldr: 4 ноября Santa Monica Studio объявила о переносе релиза с 16 февраля на 20 мая 2027 года | Официальная причина — «финальные штрихи»; о конкуренции в феврале студия не говорила | Это первая God of War без Кратоса в главной роли: в центре — Фейя, жена Кратоса | Предзаказы открылись в сентябре, а коллекционная коробка была объявлена под февральский релиз
 cover: /assets/img/god-of-war-laufey-may-2027.jpg
+pin: /assets/img/god-of-war-laufey-may-2027-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Riedelmax
 sources: Santa Monica Studio — заявление о переносе | https://x.com/SonySantaMonica/status/2118025571020271817; GameSpot — God Of War Laufey Delayed | https://www.gamespot.com/articles/god-of-war-laufey-delayed; Engadget — God Of War Laufey Is Delayed Until May 20 | https://www.engadget.com/2306802/god-of-war-laufey-is-delayed-until-may-20; IGN — God of War Laufey Delayed to May 2027 | https://www.ign.com/articles/god-of-war-laufey-delayed-to-may-2027
 ---

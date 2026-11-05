@@ -5,6 +5,7 @@ category: switch
 summary: Nintendo провела Pikmin Direct за десять минут до эфира, объявила «День пикмина» и выкатила демку: стартовая зона плюс два экзамена Dandori Academy.
 tldr: Бесплатное демо уже в eShop: стартовая зона и два экзамена Dandori Academy | Полный релиз Pikmin 4 для Switch 2 выходит 12 ноября | В версии для Switch 2 — 72 этапа Dandori Academy и голосовые команды через микрофон
 cover: /assets/img/pikmin-4-switch-2-demo.jpg
+pin: /assets/img/pikmin-4-switch-2-demo-pin.jpg
 credit: Обложка: Doop / GEEKOVSKI
 sources: Nintendo Life — итоги Pikmin Day | https://www.nintendolife.com/news/2026/11/round-up-pikmin-day-2026-updates-demo-and-new-animated-shorts; GoNintendo — демо и Dandori Academy | https://gonintendo.com/contents/66746-pikmin-4-nintendo-switch-2-edition-dandori-academy-getting-free-demo-nov-2nd-2026
 ---

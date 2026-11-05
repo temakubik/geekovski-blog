@@ -4,6 +4,7 @@ date: 2026-11-04 21:05
 category: switch
 summary: Крупный поставщик ROM-чипов для картриджей Switch и Switch 2 объявил об уходе из бизнеса. Картриджи не исчезнут завтра, но давление на них выросло.
 cover: /assets/img/macronix-rom-kartridzhi.jpg
+pin: /assets/img/macronix-rom-kartridzhi-pin.jpg
 credit: Обложка: Doop / GEEKOVSKI
 sources: David Gibson (X) — выдержки из звонка Macronix по итогам Q3 | https://x.com/gibbogame/status/2117805196130582970; GameSpot — что уход Macronix значит для физических игр | https://www.gamespot.com/articles/nintendo-could-have-a-new-cartridge-problem-on-its-hands/; Gizmodo — game cards Switch 2 | https://gizmodo.com/nintendos-switch-2-game-cards-matronix-2000834832; Межа (по Eurogamer) — Macronix выходит из ROM-бизнеса | https://mezha.net/eng/news/mezha-da005a37ec56ec283aa3f5cd_macronix_to_exit/; Nintendo Everything — поставщик картриджей уходит | https://nintendoeverything.com/nintendos-main-manufacturer-for-switch-2-and-switch-cartridges-is-quitting-the-business/
 ---

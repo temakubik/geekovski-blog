@@ -5,6 +5,7 @@ category: vr
 summary: Valve выпустила бету SteamVR 2.19.1 с более резкой картинкой стрима на всех шлемах со Steam Link, а в SteamOS 0.5.7 для Steam Frame молча убрала Advanced Supersampling.
 tldr: SteamVR 2.19.1 beta поднимает рендер по умолчанию до 1,5× с целью 1,4× разрешения панели | SteamOS 0.5.7 beta для Steam Frame убрала Advanced Supersampling без объяснений | Улучшения касаются Quest, Vive Focus, PICO и самого Frame
 cover: /assets/img/steam-frame-steamvr-2-19-1.jpg
+pin: /assets/img/steam-frame-steamvr-2-19-1-pin.jpg
 credit: Обложка: Doop / GEEKOVSKI. Фото: Pexels (SHVETS production), свободная лицензия.
 sources: Valve — SteamVR Beta 2.19.1, список изменений | https://store.steampowered.com/news/app/250820/view/683017363938871519; Road to VR — SteamVR Update Improves Image Quality for All Steam Link Compatible Headsets | https://roadtovr.com/steamvr-beta-update-image-quality-quest-frame-pico/; GamingOnLinux — SteamOS 0.5.7 Beta for Steam Frame | https://www.gamingonlinux.com/2026/11/steamos-0-5-7-beta-for-steam-frame-brings-webxr-improved-settings-and-more/; PCZ — Steam Frame climbs into the top five VR headsets in Valve's October Steam survey | https://www.pczone.co.uk/steam-frame-top-five-vr-headsets-steam-survey-october/
 ---

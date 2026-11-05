@@ -5,6 +5,7 @@ category: ai
 summary: Обновлённый проспект S-1: выручка $17 млрд за квартал, но обязательства по вычислениям в семь раз больше запаса кэша.
 tldr: Обновлённый проспект S-1/A подан в SEC 2 ноября, выручка III квартала — $16,96 млрд | Обязательства по вычислениям и аренде — $895,4 млрд против около $132 млрд кэша | Тикер ANT на Nasdaq, СМИ ждут оценку в $1,5–2 трлн, цена акций пока не названа
 cover: /assets/img/anthropic-ipo-895.jpg
+pin: /assets/img/anthropic-ipo-895-mlrd-pin.jpg
 credit: Обложка: Doop / GEEKOVSKI
 sources: CNBC — обновлённый проспект S-1/A | https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html; Yahoo Finance — счёт за вычисления | https://finance.yahoo.com/markets/article/anthropics-new-ipo-filing-puts-its-computing-bill-near-900-billion-151830444.html; CNBC — разбор первичного S-1 | https://www.cnbc.com/2026/10/30/anthropic-ipo-s1-revenue-compute.html; Fortune — первичный проспект и ожидаемая оценка | https://fortune.com/2026/10/26/anthropics-s-1/
 ---

@@ -5,6 +5,7 @@ category: kino
 summary: «Spider-Man: Brand New Day» собрал $2,288 млрд вне Китая и на один миллион обошёл «Мстителей: Финал» — это рекорд для киновселенной Marvel. Мировой рекорд «Финала» пока держится, а Sony Pictures уже отчиталась о лучшем квартале.
 tldr: $2,288 млрд вне Китая против $2,287 млрд у «Финала» — разрыв всего $1 млн | Мировой итог фильма — $2,52 млрд, третье место в истории кино | Выручка Sony Pictures за квартал выросла на 37%, кинопрокат — в 11 раз
 cover: /assets/img/spider-man-brend-new-day-rekord.jpg
+pin: /assets/img/spider-man-brend-new-day-rekord-pin.jpg
 credit: Обложка: GEEKOVSKI. Кадр: Sony Pictures
 sources: Global Box Office — рекорд MCU вне Китая (подсчёт от 4 ноября) | https://x.com/GlobalBoxOffice/status/2118058274377564244; The Numbers — касса киновселенной Marvel | https://www.the-numbers.com/movies/franchise/Marvel-Cinematic-Universe; Comic Basics — разбор рекорда и цифр | https://www.comicbasics.com/spider-man-brand-new-day-edges-past-avengers-endgame-as-the-mcus-biggest-hit-outside-china/; Deadline — финансовые итоги Sony Pictures (через The Statesman) | https://www.thestatesman.com/entertainment/hollywood/how-big-is-spider-man-brand-new-day-for-sony-a-2-52-billion-global-haul-is-now-driving-the-studios-earnings-1503659114.html
 ---

@@ -5,6 +5,7 @@ category: pc
 summary: Никита Буянов 5 ноября сообщил, что научно-фантастический шутер Fragmentary Order разворачивается в той же вселенной, что и Escape from Tarkov. Даты релиза по-прежнему нет, зато стартует закрытая альфа — платная.
 tldr: Действие Frago — в той же вселенной, что и Escape from Tarkov, заявил Буянов | Будет встроенное PvE без отдельного игрового профиля | Prime Batch за $44,99 и $79,99 даёт доступ к альфе навсегда, даты релиза нет
 cover: /assets/img/fragmentary-order-vselennaya-tarkova.jpg
+pin: /assets/img/fragmentary-order-vselennaya-tarkova-pin.jpg
 credit: Обложка: GEEKOVSKI. Кадр: Rant Gaming
 sources: DTF — Буянов подтвердил связь вселенных | https://dtf.ru/games/5394486-nikita-buyanov-podtverdil-svyaz-fragmentary-order-i-escape-from-tarkov; Insider Gaming — разбор ролика и Prime Batch | https://insider-gaming.com/nikita-buyanov-fragmentary-order-gameplay-reveal-2; GameReactor — тиры Prime Batch и детали сеттинга | https://gamereactor.eu/fragmentary-order-gameplay-reveal-buyanov
 ---

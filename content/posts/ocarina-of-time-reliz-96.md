@@ -5,6 +5,7 @@ category: switch
 summary: Ремейк Ocarina of Time вышел на Switch 2 сегодня и стал самой высоко оценённой игрой 2026 года — 96 у Metacritic при 80 рецензиях, все положительные. До 99 баллов оригинала 1998-го он не дотянул.
 tldr: 96 баллов Metacritic — лучший результат 2026 года и топ-25 в истории | Все 80 рецензий положительные, у OpenCritic 95 и 100% рекомендаций | Оригинал 1998 года держит 99 — рекорд, который, похоже, не побьют
 cover: /assets/img/ocarina-of-time-reliz-96.jpg
+pin: /assets/img/ocarina-of-time-reliz-96-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Crisco 1492 / Wikimedia Commons, CC BY-SA 4.0
 sources: Game Watch (Impress) — релиз и японские цены | https://game.watch.impress.co.jp/docs/news/2153822.html; OpenCritic — сводка оценок | https://opencritic.com/news/39045/ocarina-of-time-is-comfortably-the-highest-rated-game-of-2026-for-now; Console PC Gaming — 96 у Metacritic при 80 рецензиях | https://consolepcgaming.com/ocarina-of-time-remake-tops-2026-metacritic-rankings-with-a-96/; CNBC — отчёт Nintendo и ставка на Zelda | https://www.cnbc.com/amp/2026/11/05/nintendo-earnings-switch-2-sales.html; This Week in Video Games — оценки и место в списках OpenCritic | https://thisweekinvideogames.com/news/the-legend-of-zelda-ocarina-of-time-remake-achieves-highest-critic-scores-of-2026-so-far/
 ---

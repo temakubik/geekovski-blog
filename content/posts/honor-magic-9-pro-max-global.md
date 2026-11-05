@@ -5,6 +5,7 @@ category: gadgets
 summary: 4 ноября Honor открыла международный запуск серии Magic 9 с Гонконга. Флагман Magic 9 Pro Max там стоит от HK$10 999, но аккумулятор у гонконгской версии — 8000 мА·ч против 8800 мА·ч у китайской.
 tldr: Гонконг — первая остановка мирового запуска серии Magic 9 после Китая, продажи с 19 ноября | Magic 9 Pro Max (12/512 ГБ) — HK$10 999, версия 16 ГБ/1 ТБ — HK$14 999 | Аккумулятор у гонконгской версии 8000 мА·ч, у китайской — 8800 мА·ч: одно имя, разное железо | В Европе серию ждут в январе 2027, цены не объявлены
 cover: /assets/img/honor-magic-9-pro-max-global.jpg
+pin: /assets/img/honor-magic-9-pro-max-global-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: пресс-кадр Honor
 sources: iXBT — представлена глобальная версия Honor Magic 9 Pro Max | https://www.ixbt.com/news/2026/11/05/akb-8000-mac-kamera-200-mp-200-kratnyi-zum-i-zariadka-100-vt-predstavlena-globalnaia-versiia-honor-magic-9-pro-max.html; HuaweiCentral — Magic 9 Pro Max debuts in Hong Kong | https://www.huaweicentral.com/honor-magic-9-pro-max-debuts-in-hong-kong/; 9to5Google — Honor Magic 9 Pro Max goes official (Китай, 28 сентября) | https://9to5google.com/2026/09/28/honor-magic-9-pro-max-battery-arri-cameras-official-specs/; PhoneDroid — Honor Magic 9 Pro Max: цена, характеристики, Европа | https://www.phonedroid.net/blog/honor-magic-9-pro-max-specs/
 ---

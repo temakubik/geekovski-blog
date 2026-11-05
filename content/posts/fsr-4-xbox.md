@@ -5,6 +5,7 @@ category: xbox
 summary: Microsoft открыла студиям FSR Upscaling 4 на Xbox Series X|S — нейросетевой апскейл добрался до консолей 2020 года. Полная модель на Series S стоит 5,2 мс кадра.
 tldr: FSR Upscaling 4 доступен разработчикам Xbox Series X|S и портативок ROG Xbox Ally с 4 ноября | В сэмпле GDK две модели INT8 — Full и Lite, плюс переключение на старый FSR 3 | Дороже всего полная модель на Series S: 5,2 мс при выводе 1440p | Это инструмент для студий, а не обновление системы — играм нужны патчи
 cover: /assets/img/fsr-4-xbox.jpg
+pin: /assets/img/fsr-4-xbox-pin.jpg
 credit: Обложка: Doop / GEEKOVSKI. Фото: Pexels (Nikolaos Kofidis), свободная лицензия.
 sources: Microsoft Developer — AMD FSR Upscaling 4 Is Now Available for Xbox | https://developer.microsoft.com/en-us/games/articles/2026/11/amd-fsr-upscaling-4-is-now-available-for-xbox/; The Verge — Xbox developers can now put FSR 4 upscaling in their games | https://www.theverge.com/games/1027195/xbox-developers-can-now-put-fsr-4-upscaling-in-their-games; The Verge — AMD is bringing FSR 4.1 to Xbox consoles and handhelds | https://www.theverge.com/news/1014455/amd-fsr-4-1-xbox-consoles-handhelds-laptops; GitHub — Microsoft Xbox GDK Samples, AMD_FSR | https://github.com/microsoft/Xbox-GDK-Samples/tree/main/Samples/Graphics/AMD_FSR
 ---

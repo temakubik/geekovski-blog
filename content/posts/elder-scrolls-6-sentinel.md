@@ -5,6 +5,7 @@ category: pc
 summary: На 40-летии Bethesda Game Studios Тодд Говард наконец назвал шестую часть — The Elder Scrolls VI: Sentinel. Ни даты, ни платформ, ни геймплея: по данным Bloomberg, до релиза больше двух лет.
 tldr: 3 ноября Bethesda официально назвала игру The Elder Scrolls VI: Sentinel — это всё, что показали | Ни даты выхода, ни платформ, ни кадров игры Bethesda не дала | Джейсон Шрайер (Bloomberg) утверждает, что до релиза больше двух лет — то есть не раньше конца 2028-го | Игру анонсировали на E3 2018, разрыв между анонсом и выходом будет не меньше десяти лет
 cover: /assets/img/elder-scrolls-6-sentinel.jpg
+pin: /assets/img/elder-scrolls-6-sentinel-pin.jpg
 credit: Обложка: GEEKOVSKI. Кадр: Bethesda Softworks
 sources: Wccftech — Schreier says TES VI: Sentinel is still more than 2 years away | https://wccftech.com/the-elder-scrolls-vi-sentinel-release-window-jason-schreier/; Nintendo Life — The Elder Scrolls 6: Sentinel Is Reportedly Still "More Than Two Years Away" | https://www.nintendolife.com/news/2026/11/the-elder-scrolls-6-sentinel-is-reportedly-still-more-than-two-years-away; Bleeding Cool — The Elder Scrolls VI: Sentinel Has Been Officially Named | https://bleedingcool.com/games/the-elder-scrolls-vi-sentinel-has-been-officially-named/; Bethesda Softworks — Celebrating 40 Years of Bethesda Game Studios | https://www.youtube.com/watch?v=uvcfI8RPZYc
 ---

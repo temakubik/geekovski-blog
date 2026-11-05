@@ -5,6 +5,7 @@ category: playstation
 summary: Sony отчиталась за квартал: PS5 дошла до 97,9 млн, а игровое подразделение дало лучшую операционную прибыль за два года.
 tldr: За июль–сентябрь поставлено 2,6 млн PS5 против 4,0 млн годом ранее — минус 35% | Продажи софта 88,2 млн копий за квартал, 78% из них цифровые, активных пользователей 127 млн | Прогноз на год повышен: выручка сегмента до ¥4,83 трлн, операционная прибыль до ¥700 млрд | Про PS6: разработка «идёт по графику», инвестиции в новую платформу — со следующего финансового года
 cover: /assets/img/sony-otchet-ps5-97-9-mln.jpg
+pin: /assets/img/sony-otchet-ps5-97-9-mln-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Sirius Df
 sources: Sony — финансовый отчёт и таблица Q2 FY2026 | https://www.sony.com/en/SonyInfo/IR/library/er/pdf/26q2_supplement.pdf; VGC — Sony says PlayStation 6 development is "progressing as scheduled", as PS5 sales hit 97.9m | https://www.videogameschronicle.com/news/sony-says-playstation-6-development-is-progressing-as-scheduled-as-ps5-sales-hit-97-9m/; Gematsu — PS5 shipments top 97.9 million, Marvel's Wolverine tops 2.4 million | https://www.gematsu.com/2026/11/ps5-shipments-top-97-9-million-marvels-wolverine-tops-2-4-million; Wccftech — PlayStation Posts Its Strongest Quarter In Years | https://wccftech.com/playstation-profit-record-quarter-ps5-shipments-drop/
 ---

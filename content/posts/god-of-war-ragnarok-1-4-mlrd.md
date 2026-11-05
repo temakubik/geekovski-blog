@@ -5,6 +5,7 @@ category: playstation
 summary: Alinea Analytics оценила продажи Ragnarök в 21,6 млн копий и $1,4 млрд выручки — это самый прибыльный эксклюзив PlayStation Studios нынешнего поколения. Официальных цифр Sony не публиковала.
 tldr: 21,6 млн копий и около $1,4 млрд выручки — оценка Alinea Analytics, а не данные Sony | 75,2% консольных продаж пришлось на PS5, физические копии — 27,5% | В 2026 году игра продалась ещё 1,1 млн раз и принесла около $60 млн
 cover: /assets/img/god-of-war-ragnarok-1-4-mlrd.jpg
+pin: /assets/img/god-of-war-ragnarok-1-4-mlrd-pin.jpg
 credit: Обложка: GEEKOVSKI, шаблон T6 · фото Pexels / Fernando Cortés
 sources: iXBT Games — God of War: Ragnarok стала самой прибыльной игрой PlayStation Studios | https://ixbt.games/en/news/2026/11/05/god-of-war-ragnarok-stala-samoi-pribylnoi-igroi-playstation-studios-dlia-ps5-analitiki.html; VGTimes — God of War Ragnarök Has Sold 21.6 Million Copies, Alinea Analytics Estimates | https://vgtimes.com/gaming-news/173491-god-of-war-ragnark-has-sold-21-6-million-copies-alinea-analytics-estimates.html; PlayStation Blog — Physical disc production ending in January 2028 | https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/
 ---

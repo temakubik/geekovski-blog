@@ -5,6 +5,7 @@ category: xbox
 summary: Microsoft открыла два превью Xbox Cloud Gaming: геймпад Xbox Nano соединяется с серверами Xbox по Wi-Fi в обход Bluetooth, а в странах вне США телефон сам становится контроллером на смарт-ТВ.
 tldr: Xbox Nano умеет подключаться по Wi-Fi прямо к серверам Xbox Cloud Gaming, минуя телевизор или ПК как посредника | Cloud connect тестируют в США, остальным предложили телефон вместо геймпада на смарт-ТВ | Обе функции — превью и бета: список игр и стран Microsoft не называет
 cover: /assets/img/xbox-nano-wifi-official.jpg
+pin: /assets/img/xbox-cloud-nano-wifi-pin.jpg
 credit: Обложка: официальный кадр Xbox Wire
 sources: The Verge — Xbox previews two new ways to control cloud games | https://www.theverge.com/news/1026455/xbox-nano-direct-cloud-wifi-connection-xbox-cloud-gaming-phone-controller; Xbox Support — Cloud Connect | https://support.xbox.com/en-US/help/hardware-network/controller/cloud-connect; VGTimes — New Xbox Nano Controller Gets Unusual Direct-to-Cloud Tech | https://vgtimes.com/tech-and-hardware/173452-new-xbox-nano-controller-gets-unusual-direct-to-cloud-tech.html
 ---

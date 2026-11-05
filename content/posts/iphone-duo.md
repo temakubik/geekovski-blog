@@ -5,6 +5,7 @@ category: gadgets
 summary: Книжный формат, внешний экран ~5,4″, внутренний ~7,6″ и цена от 1999 до 3199 долларов за версию на 2 ТБ. Разбираем, кому это вообще нужно.
 tldr: Предзаказы открываются 16 октября, продажи начинаются 23-го, анонс был 9 сентября | Внешний экран около 5,4 дюйма, внутренний — около 7,6 дюйма | Цена от 1999 долларов, версия на 2 ТБ стоит 3199
 cover: /assets/img/iphone-duo.jpg
+pin: /assets/img/iphone-duo-pin.jpg
 credit: Обложка: ΚΑ ΚΙΤ / Wikimedia Commons, CC BY-SA 4.0
 sources: Lenta.ru — линейка iPhone 18 и iPhone Duo | https://lenta.ru/articles/2026/09/24/iphone-18-all; Hi-Tech Mail — всё об iPhone 18 | https://hi-tech.mail.ru/articles/142865-vse-ob-iphone-18
 ---

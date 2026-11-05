@@ -5,6 +5,7 @@ category: pc
 summary: На Unreal Fest Tokyo Тим Суини показал, что в UE6 Blueprints, Actors и C++ Gameplay Framework будут удалены, а не отложены в долгий ящик: игровая логика переезжает в Verse. Epic это письменно не подтверждала.
 tldr: На слайдах Unreal Fest Tokyo три системы помечены «Remove», а не «deprecated» — Blueprints, Actors и C++ Gameplay Framework | Игровая логика в UE6 переходит в Verse, сцены собираются в Scene Graph | Это разворот июньского плана: тогда Blueprints обещали оставить в первых версиях | UE6 Early Access ожидается в конце 2027 года, проекты на UE5 остаются на ветке UE5
 cover: /assets/img/unreal-engine-6-bez-blueprintov.jpg
+pin: /assets/img/unreal-engine-6-bez-blueprintov-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Nemuel Sereti
 sources: Inven Global — Epic Games will remove Blueprints and Actors from Unreal Engine 6 | https://www.invenglobal.com/articles/28098/epic-games-will-remove-blueprints-and-actors-from-unreal-engine-6; Digital Developer — Unreal Fest Tokyo: UE6 to remove Blueprints and C++ Gameplay Framework | https://www.digitaldeveloper.io/article/unreal-fest-tokyo-ue6-to-remove-blueprints-and-c-gameplay-framework; AIGamer — Report: Unreal Engine 6 drops Blueprints and Actors | https://www.aigamer.gg/news/unreal-engine-6-drops-blueprints-actors-verse; Game Developer — Unreal Engine 6 will merge UE5 and UEFN into one engine | https://www.gamedeveloper.com/programming/unreal-engine-6-will-merge-ue5-and-uefn-into-a-single-unified-engine-
 ---

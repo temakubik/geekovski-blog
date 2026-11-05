@@ -5,6 +5,7 @@ category: ai
 summary: 4 ноября OpenAI объявила о покупке Pierre Computer Company — компании за Code Storage и open-source библиотеками Trees, Diffs и Highlights, которые уже работают в приложении Codex. Сделку ещё не закрыли.
 tldr: OpenAI подписала соглашение о покупке Pierre Computer Company, сумма не раскрыта | Библиотеки Pierre (Trees, Diffs, Highlights) уже используются в Codex, Code Storage хранит код поверх Git | Сделка не закрыта — нужны регуляторные одобрения, до закрытия компании независимы | Axios называет это заходом на GitHub; open-source проекты Pierre останутся открытыми
 cover: /assets/img/openai-pokupaet-pierre.jpg
+pin: /assets/img/openai-pokupaet-pierre-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Markus Spiske / Unsplash, CC0
 sources: OpenAI — OpenAI to acquire Pierre Computer Company, Inc. | https://openai.com/index/openai-to-acquire-pierre/; Axios — OpenAI targets Microsoft's GitHub with deal for startup | https://www.axios.com/2026/11/04/openai-pierre-computer-github; The Decoder — OpenAI acquires Pierre Computer Company | https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/; WSJ — OpenAI to Bring Pierre Computer's Code Storage to Codex | https://www.wsj.com/tech/ai/openai-to-bring-pierre-computers-code-storage-to-codex-through-acquisition-05f53582
 ---

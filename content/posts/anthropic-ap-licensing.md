@@ -5,6 +5,7 @@ category: ai
 summary: Adweek сообщил, что Anthropic заключил первую в своей истории лицензионную сделку с издателем — с Associated Press. Ни одна из сторон сделку не подтвердила, условия не раскрыты.
 tldr: Adweek со ссылкой на два анонимных источника: сделка с AP на контент и данные заключена перед выборами в США | В ночь выборов Claude показывал свежие данные с пометкой Associated Press | Это первая платная сделка Anthropic с цифровым издателем — у OpenAI их больше десятка | Официального подтверждения нет: ни Anthropic, ни AP не комментировали, суммы, срок и объём неизвестны
 cover: /assets/img/anthropic-ap-licensing.jpg
+pin: /assets/img/anthropic-ap-licensing-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Lisa Fotios
 sources: Adweek — Anthropic Strikes Its First Licensing Deal, With the AP, for Election Coverage | https://www.adweek.com/media/anthropic-licensing-deal-ap-election/; The Verge — Anthropic reportedly made a licensing deal with the Associated Press | https://www.theverge.com/ai-artificial-intelligence/1027173/anthropic-reportedly-made-a-licensing-deal-with-the-associated-press; Techmeme — сводка о сделке | https://www.techmeme.com/261104/p58
 ---

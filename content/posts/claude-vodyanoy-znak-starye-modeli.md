@@ -5,6 +5,7 @@ category: ai
 summary: С 3 ноября Anthropic прячет в тексте трёх старых моделей Claude невидимый водяной знак — и на одной из них его можно обойти настройкой sampling.
 tldr: С 3 ноября знак вшивают в текст Claude Mythos 5, Opus 4.7 и Sonnet 4.6 | На Sonnet 4.6 маркировку можно обойти через нестандартные temperature, top_p или top_k | Развёртывание на Amazon Bedrock завершится к 10 ноября, отключить знак нельзя
 cover: /assets/img/claude-watermark.jpg
+pin: /assets/img/claude-vodyanoy-znak-starye-modeli-pin.jpg
 credit: Обложка: Doop / GEEKOVSKI
 sources: Anthropic — как работает текстовый водяной знак | https://www.anthropic.com/news/claude-text-watermark; Claude Platform — release notes за 3 ноября 2026 | https://platform.claude.com/docs/en/release-notes/overview; Claude Help Center — как Claude маркирует сгенерированный контент | https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content; The Verge — разбор SynthID-Text | https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system; The Decoder — лазейка с параметрами sampling | https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/
 ---

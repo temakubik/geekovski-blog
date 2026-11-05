@@ -5,6 +5,7 @@ category: pc
 summary: AMD закрыла третий квартал с рекордной выручкой $13,4 млрд, но на 2027 год сама себе прогнозирует двузначное падение мировых поставок ПК из-за подорожавшей памяти.
 tldr: Выручка Q3 — $13,4 млрд, рекорд; дата-центры дали $8,5 млрд, это +97% к прошлому году | Клиентский сегмент — $2,95 млрд (+7% год к году), игровой просел на 40% до $773 млн | На 2027 год AMD ждёт двузначного снижения поставок ПК на рынке
 cover: /assets/img/amd-pk-padenie-2027.jpg
+pin: /assets/img/amd-pk-padenie-2027-pin.jpg
 credit: Обложка: GEEKOVSKI, шаблон T6 · фото Pexels / Atahan Demir
 sources: AMD Investor Relations — Third Quarter 2026 Financial Results | https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results; The Verge — AMD rides data center riches to 'largest and most profitable' quarter in history | https://www.theverge.com/tech/1026148/amd-earnings-q3-2026-data-center-pc; Club386 — AMD predicts double-digit PC sales decline | https://www.club386.com/amd-predicts-double-digit-pc-sales-decline/; iXBT Games — Продажи ПК продолжат падать | https://ixbt.games/news/2026/11/05/prodazi-pk-prodolzat-padat-amd-predupredila-o-dvuznacnom-snizenii-rynka.html; Benzinga — AMD Sees PC Market Drop in 2027 as Memory Costs Bite | https://www.benzinga.com/markets/earnings/26/11/62851331/amd-lisa-su-memory-costs-pc-demand-intel-double-digit-decline-2027
 ---

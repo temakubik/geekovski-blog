@@ -5,6 +5,7 @@ category: switch
 summary: Nintendo отчиталась за первое полугодие финансового года: Switch 2 разошлась тиражом 26,35 млн, но поставки консолей упали на 37,4%. Операционная прибыль при этом выросла на 49,1% — деньги приносит софт.
 tldr: За апрель–сентябрь Nintendo поставила 6,49 млн Switch 2 против 10,36 млн годом ранее — падение на 37,4% | Всего продано 26,35 млн Switch 2 и 73,21 млн игр для неё | Выручка упала на 12,1% до ¥966 млрд, операционная прибыль выросла на 49,1% до ¥216,5 млрд | Прогноз на год не менялся — 16,5 млн консолей и 60 млн игр
 cover: /assets/img/nintendo-otchet-26-mln.jpg
+pin: /assets/img/nintendo-otchet-26-mln-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: PantheraLeo1359531 / Wikimedia Commons, CC BY 4.0
 sources: Nintendo — финансовый отчёт за первое полугодие FY2027 | https://www.nintendo.co.jp/ir/pdf/2026/261105_3e.pdf; Nintendo Life — Switch 2 Surpasses 26 Million Units Sold, Hardware Sales Down By 37.4% | https://www.nintendolife.com/news/2026/11/switch-2-surpasses-26-million-units-sold-hardware-sales-down-by-37-4percent; Nintendo Everything — Nintendo financial results, November 2026 | https://nintendoeverything.com/nintendo-financial-results-november-2026-switch-2-at-26-35-million-switch-at-157-20-million-more
 ---

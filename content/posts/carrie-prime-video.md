@@ -2,6 +2,8 @@
 title: «Кэрри» Майка Флэнагана — все восемь серий на Prime Video, 85% на Rotten Tomatoes
 date: 2026-10-28 21:30
 category: kino
+cover: /assets/img/carrie-prime-video.jpg
+pin: /assets/img/carrie-prime-video-pin.jpg
 summary: Осовремененная экранизация Кинга про травлю в эпоху соцсетей. Сам Кинг назвал сериал «блестящим» — и это редкость.
 tldr: Все восемь серий вышли разом — для Prime Video это редкость | Рейтинг 85% на Rotten Tomatoes по первой волне рецензий | Стивен Кинг назвал сериал «блестящим» при своей обычной придирчивости
 sources: Киноафиша — «Кэрри», 85% RT | https://www.kinoafisha.info/articles/amazon-vydal-odnu-iz-luchshih-adaptaciy-stivena-kinga--ot-novogo-seriala-s-reytingom-85-ne-hochetsya-otryvatsya_id139823_a16283248; Кино Mail.ru — Кинг о сериале | https://kino.mail.ru/news/138832-stiven-king-vysoko-ocenil-novyj-serial-po-svoemu-romanu

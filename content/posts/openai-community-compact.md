@@ -5,6 +5,7 @@ category: ai
 summary: 5 ноября OpenAI опубликовала National Community Compact и Compute Campus Policy Blueprint: полная оплата электричества и инфраструктуры, отказ от NDA с чиновниками, публичные отчёты о воде и шуме. Это ответ на выборы, где 40 из 41 местной инициативы против дата-центров.
 tldr: OpenAI оплатит 100% электричества и сетевой инфраструктуры своих будущих кампусов | Отказ от NDA с публичными чиновниками, публикация планов стройки и замеров шума | Контекст: на выборах 4 ноября 40 из 41 местной меры против дата-центров
 cover: /assets/img/openai-community-compact.jpg
+pin: /assets/img/openai-community-compact-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Brett Sayles
 sources: OpenAI — Setting a new standard for responsible AI infrastructure | https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/; Reuters — OpenAI kicks off charm offensive to change voters' view of data centers | https://www.investing.com/news/stock-market-news/openai-kicks-off-charm-offensive-to-change-voters-view-of-data-centers-5002831; CNBC — OpenAI to pay for data center power after election shows AI concern | https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html; Axios — Big tech turns to cash, concessions to offer new AI deal after smackdown | https://www.axios.com/2026/11/05/ai-data-center-election-backlash-concessions
 ---
