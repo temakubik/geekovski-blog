@@ -1115,6 +1115,18 @@ def build(theme, out_dir, content_dir=None):
         htmlp = title_page(slug, theme)
         if htmlp:
             (tdir / ("%s.html" % slug)).write_text(htmlp, encoding="utf-8")
+    # файл календаря живёт в content/posts, но собственной страницы у него нет:
+    # его slug мог попасть в закладки и в поиск — отдаём редирект на общий раздел
+    for c in calendars:
+        (out / ("%s.html" % c["slug"])).write_text(
+            '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">'
+            '<title>Календарь анонсов — GEEKOVSKI</title>'
+            '<meta name="robots" content="noindex,follow">'
+            '<link rel="canonical" href="%s/calendar/">'
+            '<meta http-equiv="refresh" content="0; url=/calendar/">'
+            '</head><body><p>Календарь переехал: <a href="/calendar/">geekovski.ru/calendar/</a></p>'
+            '<script>location.replace("/calendar/")</script></body></html>' % SITE["url"],
+            encoding="utf-8")
     cdir = out / "calendar"
     cdir.mkdir(exist_ok=True)
     (cdir / "index.html").write_text(render_calendar_page(cal_entries, theme), encoding="utf-8")
