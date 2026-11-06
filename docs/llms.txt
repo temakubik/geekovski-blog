@@ -111,6 +111,8 @@
 
 ## Дайджесты
 
+- [Что вышло 6 ноября: 31 статья](https://geekovski.ru/digests/2026-11-06-otchet.html): Тридцать одна заметка за день — от дыры в OpenSSH и обвала ИИ-акций до Cybertruck, NieR: Automata и возвращения «Одиссеи» в кино
+- [Вечер 6 ноября: приквел «Очень странных дел», «Годзилла: Минус ноль» в прокате, Matrice 5T](https://geekovski.ru/digests/2026-11-06-vecher.html): Netflix заказал лайв-экшен приквел «Очень странных дел» с премьерой в 2028-м, «Годзилла: Минус ноль» стартовала в США с рекордных для GKIDS превью, а DJI поставила LiDAR и 1K-тепловизор в компактный промышленный дрон
 - [Утро 6 ноября: игры Switch 2 на 2027-й, наушники Walkman по USB-C, OpenAI к IPO](https://geekovski.ru/digests/2026-11-06-utro.html): Nintendo расписала сторонние релизы для Switch 2 до 2027 года, Sony вернула наушники первого Walkman уже с USB-C за $59,99, а президент OpenAI допустил IPO в 2027-м.
 - [Что вышло 5 ноября: 36 статей](https://geekovski.ru/digests/2026-11-05-otchet.html): Отчёты Sony и Nintendo, ремейк Ocarina of Time на 96 баллов, покупка Pierre, Bluetooth 7.0, Discord на Rust и галерея GTA VI — всё, что вышло на сайте за день.
 - [Вечер 5 ноября: GOG Galaxy на Linux, Gemini Omni 1.2, Huawei без Windows](https://geekovski.ru/digests/2026-11-05-vecher.html): GOG показала новый Galaxy и уходит на Linux, Google дала 15-секундные ролики за $0,07 в секунду, Huawei начала продажи первого десктопа на HarmonyOS, Nintendo не собирается снова поднимать цену Switch 2
