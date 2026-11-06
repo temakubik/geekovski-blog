@@ -8,6 +8,58 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/soulframe-otkrytaya-alfa.html",
+   "url": "https://geekovski.ru/soulframe-otkrytaya-alfa.html",
+   "title": "Soulframe открыли для всех: бесплатная альфа на PC",
+   "summary": "Digital Extremes с 6 ноября пустила всех желающих в открытую альфу Soulframe — раньше игра была только по инвайтам. Вместе с этим пришёл апдейт Verse of the Veilands: ездовые волки, которые вырастают из щенка, и новая система прогрессии мира.",
+   "date_published": "2026-11-06T10:14:00+03:00",
+   "date_modified": "2026-11-06T10:14:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/soulframe-otkrytaya-alfa.jpg",
+   "_sources": [
+    {
+     "name": "Digital Extremes — October Soulframe Devstream: Preludes Opens for All Nov. 6",
+     "url": "https://www.digitalextremes.com/news/soulframe-october-devstream-preludes-opens-for-all-nov-6"
+    },
+    {
+     "name": "TechPowerUp — Digital Extremes's Soulframe launches into free open alpha",
+     "url": "https://www.techpowerup.com/354336/digital-extremess-fantasy-arpg-soulframe-launches-into-free-open-alpha-in-november"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/obval-ai-akcii.html",
+   "url": "https://geekovski.ru/obval-ai-akcii.html",
+   "title": "Nasdaq в коррекции, азиатские чипы рухнули",
+   "summary": "Индекс Nasdaq Composite упал на 5,52% и ушёл в коррекцию, а индекс полупроводников потерял 12,2% за день. В Азии торги останавливали: KOSPI падал на 8,8%. Повод — опасения, что после выборов в США ИИ-стройку начнут ограничивать.",
+   "date_published": "2026-11-06T10:08:00+03:00",
+   "date_modified": "2026-11-06T10:08:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/obval-ai-akcii.jpg",
+   "_sources": [
+    {
+     "name": "CNBC — Asian chip stocks tumble after Nasdaq sell-off",
+     "url": "https://www.cnbc.com/2026/11/06/tech-stocks-sk-hynix-samsung-softbank.html"
+    },
+    {
+     "name": "DW — Asian stocks slump after tech rout",
+     "url": "https://www.dw.com/en/asian-stocks-slump-after-us-tech-rout-amid-ai-jitters/a-79871504"
+    },
+    {
+     "name": "Bloomberg (via Swissinfo) — AI Slump Deepens as Taiwan Drops Most in a Year",
+     "url": "https://www.swissinfo.ch/eng/ai-slump-deepens-as-taiwan-drops-most-in-a-year%3A-markets-wrap/92336450"
+    },
+    {
+     "name": "Reuters (via The Star) — Tech-stock rout accelerates retreat from the AI trade",
+     "url": "https://www.thestar.com.my/tech/tech-news/2026/11/06/tech-stock-rout-accelerates-retreat-from-the-ai-trade"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/honor-700-design.html",
    "url": "https://geekovski.ru/honor-700-design.html",
    "title": "Honor 700 показали с экраном на задней панели",

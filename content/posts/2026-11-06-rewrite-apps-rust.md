@@ -5,7 +5,7 @@ category: gadgets
 summary: Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.
 tldr: Discord переписывает десктопный клиент на Rust и убирает Electron | Ранняя сборка под Windows 11 занимает 290 МБ RAM вместо гигабайта | Xbox выпустил новый PC-клиент Garrison: запуск до 60% быстрее, страницы до 50% | Тренд общий: приложения возвращаются с веб-технологий на нативные движки
 cover: /assets/img/rewrite-apps-rust.jpg
-pin: /assets/img/rewrite-apps-rust-pin.jpg
+pin: /assets/img/2026-11-06-rewrite-apps-rust-pin.jpg
 sources: The Verge — Discord is ditching Electron | https://www.theverge.com/news/1027379/discord-ditching-electron-web-app; The Verge — Xbox overhauls its PC, web, and cloud apps | https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign; Xbox Wire — A Faster, Simpler Xbox Experience | https://news.xbox.com/en-us/2026/11/05/a-faster-simpler-xbox-experience-is-coming-to-pc-web-and-cloud/; Windows Central — hands-on нового PC-клиента | https://www.windowscentral.com/gaming/xbox/hands-on-xboxs-brand-new-pc-app-offers-big-performance-improvements
 ---
 

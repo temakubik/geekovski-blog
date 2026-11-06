@@ -5,7 +5,7 @@ category: gadgets
 summary: У geekovski.ru появился веб-манифест и service worker — сайт устанавливается на телефон и десктоп как обычное приложение, открывается без адресной строки и запоминает прочитанное.
 tldr: На сайте появился манифест приложен��я — Android и десктопный Chrome ставят блог одной кнопкой | iOS ставит через «Поделиться → На экран Домой» | Прочитанные страницы кэшируются, при обрыве сети показывается заглушка
 cover: /assets/img/pwa-install.jpg
-pin: /assets/img/pwa-install-pin.jpg
+pin: /assets/img/2026-11-06-pwa-install-pin.jpg
 sources: MDN — Web app manifest | https://developer.mozilla.org/en-US/docs/Web/Manifest; web.dev — Service worker basics | https://web.dev/articles/service-workers
 ---
 
