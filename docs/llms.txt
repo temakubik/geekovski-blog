@@ -16,15 +16,17 @@
 - [PlayStation](https://geekovski.ru/playstation/): 5 материалов
 - [PC-игры](https://geekovski.ru/pc/): 14 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
-- [Гаджеты](https://geekovski.ru/gadgets/): 15 материалов
+- [Гаджеты](https://geekovski.ru/gadgets/): 16 материалов
 - [Кино](https://geekovski.ru/kino/): 9 материалов
 - [Сериалы](https://geekovski.ru/serialy/): 2 материала
-- [AI](https://geekovski.ru/ai/): 17 материалов
+- [AI](https://geekovski.ru/ai/): 18 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Материалы
 
+- [Paint в Windows 11 уязвим, а исправление не доехало](https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html): Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell. (06.11.2026)
+- [Инвесторы не верят в оценку Anthropic в $1,5 трлн](https://geekovski.ru/2026-11-06-1605-anthropic-ipo-ocenka.html): Крупные инвесторы, которые собирались зайти в IPO Anthropic, после обвала техов заговорили о снижении оценки — один собеседник WSJ называет цифру около $1 трлн. Reuters пишет, что под вопросом и само роуд-шоу на неделе 9 ноября. (06.11.2026)
 - [Lionsgate завела хоррор-лейбл Render Road](https://geekovski.ru/2026-11-06-1506-render-road-lionsgate.html): Lionsgate и её дочка 3 Arts запускают Render Road — студию, которая будет разрабатывать, производить и финансировать хорроры для кино, ТВ и цифровых платформ. Возглавят её менеджеры 3 Arts Люк Максвелл и Уилл Роуботэм, а на подходе у компании уже новая «Пила», «Ведьма из Блэр» и ремейк «Магии» от Сэма Рэйми. (06.11.2026)
 - [NieR: Automata внезапно требует 366 ГБ](https://geekovski.ru/2026-11-06-1505-nier-automata-366-gb.html): Первый за пять лет патч для Steam-версии NieR: Automata добавил корейский и два китайских языка, а заодно раздул требуемое место с 50 до 366 ГБ. Square Enix подтвердила баг и предложила обход, пока ищет причину. (06.11.2026)
 - [EA вернула в Steam 25 классических игр](https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html): 5 ноября EA выложила на Steam, GOG и в EA App 25 старых PC-игр, включая Ultima, Wing Commander, Crusader и Theme Hospital. Семь из них — «восстановленные» Anniversary Editions, собранные по мастерам из найденного архива с тысячами кассет Betacam и VHS. (06.11.2026)

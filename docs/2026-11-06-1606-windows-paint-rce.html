@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paint в Windows 11 уязвим, а исправление не доехало — GEEKOVSKI</title>
+<meta name="description" content="Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html">
+<meta property="og:title" content="Paint в Windows 11 уязвим, а исправление не доехало — GEEKOVSKI">
+<meta property="og:description" content="Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/windows-paint-rce.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Paint в Windows 11 уязвим, а исправление не доехало">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paint в Windows 11 уязвим, а исправление не доехало — GEEKOVSKI">
+<meta name="twitter:description" content="Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell.">
+<meta property="article:published_time" content="2026-11-06T16:06:00+03:00">
+<meta property="article:modified_time" content="2026-11-06T16:06:00+03:00">
+<meta property="article:section" content="Гаджеты">
+<meta property="article:author" content="GEEKOVSKI">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0A0C0F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="yandex-verification" content="acc866b9b963f469">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BlogPosting","@id":"https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html#article","headline":"Paint в Windows 11 уязвим, а исправление не доехало","description":"Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell.","datePublished":"2026-11-06T16:06:00+03:00","dateModified":"2026-11-06T16:06:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"Гаджеты","keywords":["Гаджеты","GEEKOVSKI"],"wordCount":434,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/windows-paint-rce.jpg","width":1600,"height":900}],"citation":["https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83844","https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html","https://www.pcworld.com/article/3277811/paint-has-a-no-click-security-flaw-your-pc-mightve-missed-the-patch.html","https://securitylab.ru/news/579755.php"],"abstract":"CVE-2026-83844 — чтение за границей буфера в Paint, позволяет выполнить код по сети без авторизации и действий пользователя; CVSS 8.1, уровень Important Исправленная сборка — 11.2609.401.0; сначала Microsoft называла 11.2605.91.0, которой в магазине никогда не было Paint обновляется через Microsoft Store, а не через Windows Update: полностью обновлённая Windows 11 может остаться с дырой Сообщений о реальных атаках нет, эксплуатация требует глубокого понимания системы"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"Гаджеты","item":"https://geekovski.ru/gadgets/"},{"@type":"ListItem","position":3,"name":"Paint в Windows 11 уязвим, а исправление не доехало","item":"https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html"}]}]}</script>
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(78)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(2)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <div class="top__actions">
+      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main class="wrap post-page">
+<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<article class="post cat-gadgets">
+  <header class="post__head">
+    <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T16:06:00+03:00">06.11.2026, 16:06</time></div>
+    <h1>Paint в Windows 11 уязвим, а исправление не доехало</h1>
+    <p class="post__lead">Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell.</p>
+  </header>
+  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>CVE-2026-83844 — чтение за границей буфера в Paint, позволяет выполнить код по сети без авторизации и действий пользователя; CVSS 8.1, уровень Important</li><li>Исправленная сборка — 11.2609.401.0; сначала Microsoft называла 11.2605.91.0, которой в магазине никогда не было</li><li>Paint обновляется через Microsoft Store, а не через Windows Update: полностью обновлённая Windows 11 может остаться с дырой</li><li>Сообщений о реальных атаках нет, эксплуатация требует глубокого понимания системы</li></ul></aside>
+  <figure class="post__cover"><img src="/assets/img/windows-paint-rce.jpg" alt="Paint в Windows 11 уязвим, а исправление не доехало"></figure>
+  <div class="post__body"><p>У встроенного в Windows 11 Paint нашлась уязвимость, которую Microsoft закрыла ещё 13 октября, — но патч больше месяца не доезжал до части машин. Речь о CVE-2026-83844: чтение за границей выделенного буфера (CWE-125), из-за которого атакующий может выполнить произвольный код. Оценка по CVSS 3.1 — 8,1, уровень Important. В описании Microsoft сказано, что атака идёт по сети и не требует ни аутентификации, ни действий пользователя.</p>
+<p>Именно последнее переводит историю из «ещё один патч вторника» в неприятную: Paint получает обновления не через Windows Update, а отдельным пакетом из Microsoft Store. То есть машина с полностью установленными октябрьскими кумулятивными обновлениями Windows 11 может оставаться с уязвимым редактором — обновление системы его не касается.</p>
+<p>Отдельная путаница — с номером сборки. Изначально Microsoft указала исправленной версию 11.2605.91.0, но в публичном каталоге Store такой сборки не было вовсе: администраторы обновлялись и упирались в 11.2605.81.0. В начале ноября Microsoft поменяла в Security Update Guide цифру на 11.2609.401.0, не добавив записи в историю ревизий, а в самой карточке CVE и в NVD по-прежнему фигурирует старый порог. Пока обе планки на практике отсекают одни и те же ПК, но сканеры, читающие карточку CVE, могут считать уязвимую сборку исправленной.</p>
+<p>5 ноября издание Windows Latest проверило машину с включённым автообновлением и нашло Paint сборки 11.2603.251.0 — задолго до патча. Брайан Витко из RFF на этой неделе смотрел, какие версии предлагает Store в шести странах, и везде видел 11.2605.81.0. The Hacker News сегодня проверила десять стран и во всех получила уже 11.2609.401.0 — то есть исправление начало расходиться, но проверить конкретный компьютер всё равно придётся вручную.</p>
+<p>Проверка — одна строка в PowerShell от администратора: Get-AppxPackage -AllUsers -Name Microsoft.Paint, в выводе нужна версия 11.2609.401.0 или новее. Если ниже — открыть Store, раздел «Загрузки» и нажать «Получить обновления»; для парка машин то же делается через Intune или winget с идентификатором 9PCFS5B6T72H.</p>
+<p>Статус инфоповода: уязвимость официально раскрыта Microsoft, исправление официально выпущено, подтверждённых атак нет — в карточке CVE эксплуатация отмечена как не обнаруженная, а сама Microsoft пишет, что успешная атака требует глубокого понимания целевой системы. То есть это не пожар, а гигиена: обновить небольшое приложение, которое годами живёт отдельно от системы и поэтому выпадает из привычного «поставил обновления — закрыл вопрос».</p>
+<p>Мнение: самая интересная часть истории — не сама дыра, а то, как Microsoft обращается с исправлением. Смена номера сборки без ревизии в бюллетене и патч, который месяц не виден в магазине, — это проблема процесса, а не кода. И она повторится: чем больше частей Windows живёт в Store, тем чаще «всё обновлено» будет означать не то, что мы думаем.</p></div>
+  
+  <section class="sources"><h2>Источники</h2><ol><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83844" rel="nofollow noopener" target="_blank">Microsoft Security Update Guide — CVE-2026-83844</a></li><li><a href="https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html" rel="nofollow noopener" target="_blank">The Hacker News — Microsoft Paint RCE Fix Now Available, but Windows Update Won&#x27;t Deliver It</a></li><li><a href="https://www.pcworld.com/article/3277811/paint-has-a-no-click-security-flaw-your-pc-mightve-missed-the-patch.html" rel="nofollow noopener" target="_blank">PCWorld — Paint has a no-click security flaw</a></li><li><a href="https://securitylab.ru/news/579755.php" rel="nofollow noopener" target="_blank">SecurityLab — 0Click в Paint</a></li></ol></section>
+  <section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1606-windows-paint-rce.html&text=Paint%20%D0%B2%20Windows%2011%20%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%2C%20%D0%B0%20%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B5%20%D0%B4%D0%BE%D0%B5%D1%85%D0%B0%D0%BB%D0%BE" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1606-windows-paint-rce.html&title=Paint%20%D0%B2%20Windows%2011%20%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%2C%20%D0%B0%20%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B5%20%D0%B4%D0%BE%D0%B5%D1%85%D0%B0%D0%BB%D0%BE" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://wa.me/?text=Paint%20%D0%B2%20Windows%2011%20%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%2C%20%D0%B0%20%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B5%20%D0%B4%D0%BE%D0%B5%D1%85%D0%B0%D0%BB%D0%BE%20https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1606-windows-paint-rce.html" target="_blank" rel="noopener nofollow">WhatsApp</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1606-windows-paint-rce.html&text=Paint%20%D0%B2%20Windows%2011%20%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%2C%20%D0%B0%20%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B5%20%D0%B4%D0%BE%D0%B5%D1%85%D0%B0%D0%BB%D0%BE" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1606-windows-paint-rce.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fwindows-paint-rce.jpg&description=Paint%20%D0%B2%20Windows%2011%20%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%2C%20%D0%B0%20%D0%B8%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B5%20%D0%B4%D0%BE%D0%B5%D1%85%D0%B0%D0%BB%D0%BE" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1606-windows-paint-rce.html">Скопировать ссылку</button>
+</section>
+</article>
+<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/tesla-cybertruck-konec.jpg" alt="Tesla снимает Cybertruck с конвейера" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T14:05:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-1405-tesla-cybertruck-konec.html">Tesla снимает Cybertruck с конвейера</a></h3>
+    <p class="card__sum">Маск объявил, что Tesla сворачивает выпуск Cybertruck в Техасе примерно к середине следующего года — завод в Остине нужен…</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-1405-tesla-cybertruck-konec.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/gamesir-nova-vision.jpg" alt="GameSir встроила экран в геймпад Nova Vision" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T11:16:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-1116-gamesir-nova-vision.html">GameSir встроила экран в геймпад Nova Vision</a></h3>
+    <p class="card__sum">GameSir вывела на мировой рынок контроллер Nova Vision с 0,96-дюймовым ЖК-экраном по центру: через него настраиваются…</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-1116-gamesir-nova-vision.html">Читать →</a><span class="srcc">источников: 3</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/honor-700-design.jpg" alt="Honor 700 показали с экраном на задней панели" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T09:45:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/honor-700-design.html">Honor 700 показали с экраном на задней панели</a></h3>
+    <p class="card__sum">Honor официально раскрыла дизайн серии Honor 700 — 700, 700 Pro и 700S.</p>
+    <div class="card__foot"><a class="more" href="/honor-700-design.html">Читать →</a><span class="srcc">источников: 2</span></div>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
+const route = location.pathname;
+const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+document.querySelector(active)?.classList.add('nav__link--active');
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>
