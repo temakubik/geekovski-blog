@@ -5,6 +5,7 @@ category: ai
 summary: Крупные инвесторы, которые собирались зайти в IPO Anthropic, после обвала техов заговорили о снижении оценки — один собеседник WSJ называет цифру около $1 трлн. Reuters пишет, что под вопросом и само роуд-шоу на неделе 9 ноября.
 tldr: WSJ: инвесторы всё более скептичны, что IPO пройдёт с оценкой $1,5 трлн; один называет около $1 трлн | Reuters: четыре источника сомневаются, что роуд-шоу стартует на неделе 9 ноября и размещение уложится в ноябрь | В обновлённом S-1 Anthropic не раскрыла выручку за октябрь — инвесторы ждут цифру, чтобы понять, восстановился ли рост | Речь может идти о размещении до $100 млрд; при слабом рынке компания может сдвинуть сроки
 cover: /assets/img/anthropic-ipo-ocenka.jpg
+pin: /assets/img/2026-11-06-1605-anthropic-ipo-ocenka-pin.jpg
 sources: WSJ — Major Investors Are Skeptical Anthropic IPO Can Achieve $1.5 Trillion Valuation | https://www.wsj.com/finance/major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5-trillion-valuation-ca965d8b; Reuters — AI backlash could threaten Anthropic IPO timing | https://reut.rs/3UAC4J0; Reuters (via Euronext) — Investors temper Anthropic IPO valuation expectations | https://live.euronext.com/en/financial-news/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown; FAZ — Investors are skeptical that Anthropic's IPO can proceed at its expected valuation | https://www.faz.net/aktuell/wall-street-journal/investors-are-skeptical-that-anthropics-ipo-can-proceed-at-its-expected-valuation-201657820.html
 ---
 

@@ -5,6 +5,7 @@ category: gadgets
 summary: Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell.
 tldr: CVE-2026-83844 — чтение за границей буфера в Paint, позволяет выполнить код по сети без авторизации и действий пользователя; CVSS 8.1, уровень Important | Исправленная сборка — 11.2609.401.0; сначала Microsoft называла 11.2605.91.0, которой в магазине никогда не было | Paint обновляется через Microsoft Store, а не через Windows Update: полностью обновлённая Windows 11 может остаться с дырой | Сообщений о реальных атаках нет, эксплуатация требует глубокого понимания системы
 cover: /assets/img/windows-paint-rce.jpg
+pin: /assets/img/2026-11-06-1606-windows-paint-rce-pin.jpg
 sources: Microsoft Security Update Guide — CVE-2026-83844 | https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83844; The Hacker News — Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It | https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html; PCWorld — Paint has a no-click security flaw | https://www.pcworld.com/article/3277811/paint-has-a-no-click-security-flaw-your-pc-mightve-missed-the-patch.html; SecurityLab — 0Click в Paint | https://securitylab.ru/news/579755.php
 ---
 
