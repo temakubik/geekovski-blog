@@ -8,6 +8,28 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/honor-700-design.html",
+   "url": "https://geekovski.ru/honor-700-design.html",
+   "title": "Honor 700 показали с экраном на задней панели",
+   "summary": "Honor официально раскрыла дизайн серии Honor 700 — 700, 700 Pro и 700S. У всех трёх квадратный дополнительный экран встроен прямо в блок камер, а в Китае уже открыты предзаказы; цены при этом не объявлены.",
+   "date_published": "2026-11-06T09:45:00+03:00",
+   "date_modified": "2026-11-06T09:45:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/honor-700-design.jpg",
+   "_sources": [
+    {
+     "name": "iXBT — Honor показала смартфоны 700, 700 Pro и 700S",
+     "url": "https://www.ixbt.com/news/2026/11/06/honor-pokazala-smartfony-700-700-pro-i-700s-s-dopolnitelnym-ekranom-i-ocen-tonkoi-ramkoi.html"
+    },
+    {
+     "name": "Gizmochina — Honor 700 Pro, 700, 700S officially revealed with rear display ahead of launch",
+     "url": "https://www.gizmochina.com/2026/11/06/honor-700-pro-700-700s-revealed-rear-display-ahead-of-launch/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-pwa-install.html",
    "url": "https://geekovski.ru/2026-11-06-pwa-install.html",
    "title": "Блог теперь ставится как приложение: кнопка «Установить»",
@@ -26,6 +48,58 @@
     {
      "name": "web.dev — Service worker basics",
      "url": "https://web.dev/articles/service-workers"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/perplexity-teammates.html",
+   "url": "https://geekovski.ru/perplexity-teammates.html",
+   "title": "Perplexity выпустила агентов Teammates за $200 в месяц",
+   "summary": "Perplexity запустила Teammates — постоянно работающих агентов, которые берут на себя целые направления работы, ведут несколько задач параллельно и сами пишут коллегам в Slack. Доступ пока research preview и только по подписке Max за $200 в месяц.",
+   "date_published": "2026-11-06T09:40:00+03:00",
+   "date_modified": "2026-11-06T09:40:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/perplexity-teammates.jpg",
+   "_sources": [
+    {
+     "name": "Perplexity — анонс Teammates",
+     "url": "https://www.perplexity.ai/hub/blog/teammates-are-agents-for-complex-ongoing-work"
+    },
+    {
+     "name": "Perplexity Help Center — Get started with teammates",
+     "url": "https://www.perplexity.ai/help-center/en/articles/2026102601-perplexity-teammates"
+    },
+    {
+     "name": "The Verge — Perplexity launches its own take on AI agents for work",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/nintendo-kino-filmy.html",
+   "url": "https://geekovski.ru/nintendo-kino-filmy.html",
+   "title": "Nintendo: после Zelda будут другие фильмы",
+   "summary": "На брифинге по итогам полугодия президент Nintendo Сюнтаро Фурукава подтвердил, что кино для компании не разовый проект: после игрового фильма The Legend of Zelda выйдут другие картины. Суммарные сборы двух мультфильмов про Марио уже превысили $2 млрд.",
+   "date_published": "2026-11-06T09:35:00+03:00",
+   "date_modified": "2026-11-06T09:35:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/nintendo-kino-filmy.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo Life — Nintendo To Continue Delivering Movies Beyond Live-Action Zelda",
+     "url": "https://www.nintendolife.com/news/2026/11/nintendo-to-continue-delivering-movies-beyond-live-action-zelda-unsurprisingly"
+    },
+    {
+     "name": "Nintendo Everything — Nintendo discusses success of the Mario movies",
+     "url": "https://nintendoeverything.com/nintendo-discusses-success-of-the-mario-movies-still-teasing-more-movies-in-the-future/"
+    },
+    {
+     "name": "Nintendo — пресс-релиз о фильме The Legend of Zelda",
+     "url": "https://www.nintendo.co.jp/corporate/release/en/2026/260908.html"
     }
    ]
   },
