@@ -60,6 +60,88 @@
    ]
   },
   {
+   "id": "https://geekovski.ru/meta-usloviya-pauza.html",
+   "url": "https://geekovski.ru/meta-usloviya-pauza.html",
+   "title": "Meta отложила новые условия: скрейпинг издателей на паузе",
+   "summary": "Meta бессрочно приостановила обновлённые коммерческие условия, которые разрешали собирать контент сайтов, «связанных» с бизнес-аккаунтами. Дата 20 ноября отменена, действуют прежние правила; суды Норвегии и Бразилии уже вынесли запреты, а британский регулятор начал проверку.",
+   "date_published": "2026-11-06T08:14:00+03:00",
+   "date_modified": "2026-11-06T08:14:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/meta-usloviya-pauza.jpg",
+   "_sources": [
+    {
+     "name": "Nieman Lab — Meta pulls down controversial terms of service",
+     "url": "https://www.niemanlab.org/2026/11/meta-pulls-down-controversial-terms-of-service/"
+    },
+    {
+     "name": "The Verge — Meta is delaying its controversial new business terms indefinitely",
+     "url": "https://www.theverge.com/tech/1028473/meta-is-delaying-its-controversial-new-business-terms-indefinitely"
+    },
+    {
+     "name": "AP — Meta delays new business terms after legal challenges over data collection",
+     "url": "https://apnews.com/article/norway-media-meta-competition-european-union-united-kingdom-c15442c8e505e50e45ce3fd7bbaae1ba"
+    },
+    {
+     "name": "Meta — Commercial Terms",
+     "url": "https://www.facebook.com/legal/commercial_terms"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/nyt-letterboxd.html",
+   "url": "https://geekovski.ru/nyt-letterboxd.html",
+   "title": "New York Times в шаге от покупки Letterboxd за $330 млн",
+   "summary": "The New York Times Company ведёт эксклюзивные переговоры о покупке Letterboxd примерно за $330 млн — это около 22 прогнозируемых EBITDA сервиса за 2026 год. Сделка не подписана: обсуждается, что основатели останутся во главе, а платформа сохранит самостоятельность.",
+   "date_published": "2026-11-06T08:13:00+03:00",
+   "date_modified": "2026-11-06T08:13:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/nyt-letterboxd.jpg",
+   "_sources": [
+    {
+     "name": "The New York Times — New York Times Company in Advanced Talks to Acquire Letterboxd",
+     "url": "https://www.nytimes.com/2026/11/05/business/letterboxd-new-york-times-company.html"
+    },
+    {
+     "name": "The Verge — The New York Times is in talks to buy Letterboxd for around $330 million",
+     "url": "https://www.theverge.com/news/1028375/the-new-york-times-letterboxd-acquisition-report"
+    },
+    {
+     "name": "TheWrap — New York Times Enters Exclusive Talks to Buy Letterboxd for $330 Million",
+     "url": "https://www.thewrap.com/industry-news/tech/new-york-times-letterboxd-acquisition-330-million-talks/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/warzone-switch-2.html",
+   "url": "https://geekovski.ru/warzone-switch-2.html",
+   "title": "Warzone добралась до Switch 2 — впервые на Nintendo",
+   "summary": "Call of Duty: Warzone с 6 ноября доступна на Nintendo Switch 2 — впервые за всю историю серии на консолях Nintendo. Первый сезон Warzone собран вокруг Modern Warfare 4, а PS4 и Xbox One из списка платформ выпали.",
+   "date_published": "2026-11-06T08:12:00+03:00",
+   "date_modified": "2026-11-06T08:12:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/warzone-switch-2.jpg",
+   "_sources": [
+    {
+     "name": "Call of Duty — Warzone Season 1: Everything You Need to Know",
+     "url": "https://www.callofduty.com/blog/2026/11/call-of-duty-modern-warfare-4-warzone-season-1"
+    },
+    {
+     "name": "GameSpot — CoD: Modern Warfare 4 Arrives To Warzone With New Maps, Movement, And Features",
+     "url": "https://www.gamespot.com/articles/cod-modern-warfare-4-arrives-to-warzone-with-new-maps-movement-and-features"
+    },
+    {
+     "name": "GoNintendo — Warzone Season 1 trailer, Warzone debuts on Switch 2 Nov. 6th",
+     "url": "https://gonintendo.com/contents/66783-call-of-duty-warzone-season-1-trailer-warzone-debuts-on-switch-2-nov-6th-2026"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/chatgpt-gif-images-2-6.html",
    "url": "https://geekovski.ru/chatgpt-gif-images-2-6.html",
    "title": "ChatGPT научился делать GIF — вместе с моделью Images 2.6",
