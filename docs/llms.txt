@@ -14,17 +14,20 @@
 - [Xbox](https://geekovski.ru/xbox/): 3 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 9 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 5 материалов
-- [PC-игры](https://geekovski.ru/pc/): 10 материалов
+- [PC-игры](https://geekovski.ru/pc/): 11 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
-- [Гаджеты](https://geekovski.ru/gadgets/): 13 материалов
+- [Гаджеты](https://geekovski.ru/gadgets/): 14 материалов
 - [Кино](https://geekovski.ru/kino/): 7 материалов
-- [Сериалы](https://geekovski.ru/serialy/): 1 материал
+- [Сериалы](https://geekovski.ru/serialy/): 2 материала
 - [AI](https://geekovski.ru/ai/): 15 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Материалы
 
+- [Netflix выпустил сериал о штурме Дворца правосудия](https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html): 6 ноября на Netflix вышли все восемь эпизодов «Palacio» (Under Siege) — драмы о захвате Дворца правосудия в Боготе отрядом M-19 в 1985 году и его штурме армией. Сценарий писали больше семи лет по документам и показаниям. (06.11.2026)
+- [GameSir встроила экран в геймпад Nova Vision](https://geekovski.ru/2026-11-06-1116-gamesir-nova-vision.html): GameSir вывела на мировой рынок контроллер Nova Vision с 0,96-дюймовым ЖК-экраном по центру: через него настраиваются профили и стики, не открывая приложение на ПК или телефоне. $54,99 за чёрный и белый, $64,99 за версию по Nioh 3. (06.11.2026)
+- [Взлом Sega Fave оставил аркады Японии без сети](https://geekovski.ru/2026-11-06-1112-sega-fave-vzlom-arkady.html): Sega Fave с 1 ноября держит выключенными ALL.Net и Aime после несанкционированного доступа к серверам — без онлайн-режимов остались Initial D, CHUNITHM, maimai и даже Taiko no Tatsujin от Bandai Namco. 6 ноября компания признала, что даты восстановления до сих пор нет. (06.11.2026)
 - [Soulframe открыли для всех: бесплатная альфа на PC](https://geekovski.ru/soulframe-otkrytaya-alfa.html): Digital Extremes с 6 ноября пустила всех желающих в открытую альфу Soulframe — раньше игра была только по инвайтам. Вместе с этим пришёл апдейт Verse of the Veilands: ездовые волки, которые вырастают из щенка, и новая система прогрессии мира. (06.11.2026)
 - [Nasdaq в коррекции, азиатские чипы рухнули](https://geekovski.ru/obval-ai-akcii.html): Индекс Nasdaq Composite упал на 5,52% и ушёл в коррекцию, а индекс полупроводников потерял 12,2% за день. В Азии торги останавливали: KOSPI падал на 8,8%. Повод — опасения, что после выборов в США ИИ-стройку начнут ограничивать. (06.11.2026)
 - [Honor 700 показали с экраном на задней панели](https://geekovski.ru/honor-700-design.html): Honor официально раскрыла дизайн серии Honor 700 — 700, 700 Pro и 700S. У всех трёх квадратный дополнительный экран встроен прямо в блок камер, а в Китае уже открыты предзаказы; цены при этом не объявлены. (06.11.2026)
@@ -114,6 +117,7 @@
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
+- [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
 - [The Legend of Zelda: Ocarina of Time](https://geekovski.ru/titles/zelda-ocarina-2026.html): 2026
 - [Zero Parades: Director's Cut](https://geekovski.ru/titles/zero-parades-directors-cut.html): 2026

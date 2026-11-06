@@ -8,6 +8,84 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html",
+   "url": "https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html",
+   "title": "Netflix выпустил сериал о штурме Дворца правосудия",
+   "summary": "6 ноября на Netflix вышли все восемь эпизодов «Palacio» (Under Siege) — драмы о захвате Дворца правосудия в Боготе отрядом M-19 в 1985 году и его штурме армией. Сценарий писали больше семи лет по документам и показаниям.",
+   "date_published": "2026-11-06T11:20:00+03:00",
+   "date_modified": "2026-11-06T11:20:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/palacio-netflix-1985.jpg",
+   "_sources": [
+    {
+     "name": "Netflix — Under Siege arrives on Netflix on November 6",
+     "url": "https://about.netflix.com/en/news/under-siege-arrives-on-netflix-on-november-6"
+    },
+    {
+     "name": "Variety — Netflix Ambitious Fact-Based Thriller 'Under Siege' Bows Nov. 6",
+     "url": "https://variety.com/2026/tv/news/under-siege-netflix-second-most-ambitious-series-bows-nov-6-1236906083"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1116-gamesir-nova-vision.html",
+   "url": "https://geekovski.ru/2026-11-06-1116-gamesir-nova-vision.html",
+   "title": "GameSir встроила экран в геймпад Nova Vision",
+   "summary": "GameSir вывела на мировой рынок контроллер Nova Vision с 0,96-дюймовым ЖК-экраном по центру: через него настраиваются профили и стики, не открывая приложение на ПК или телефоне. $54,99 за чёрный и белый, $64,99 за версию по Nioh 3.",
+   "date_published": "2026-11-06T11:16:00+03:00",
+   "date_modified": "2026-11-06T11:16:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/gamesir-nova-vision.jpg",
+   "_sources": [
+    {
+     "name": "GameSir — Nova Vision",
+     "url": "https://gamesir.com/products/gamesir-nova-vision"
+    },
+    {
+     "name": "GameSir — Nova Vision Nioh 3 Edition",
+     "url": "https://gamesir.com/products/gamesir-nova-vision-nioh-3-edition"
+    },
+    {
+     "name": "Notebookcheck — GameSir launches Nova Vision controller with built-in display",
+     "url": "https://www.notebookcheck.net/GameSir-launches-Nova-Vision-controller-with-built-in-display-Switch-2-support-and-a-Nioh-3-edition.1442999.0.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1112-sega-fave-vzlom-arkady.html",
+   "url": "https://geekovski.ru/2026-11-06-1112-sega-fave-vzlom-arkady.html",
+   "title": "Взлом Sega Fave оставил аркады Японии без сети",
+   "summary": "Sega Fave с 1 ноября держит выключенными ALL.Net и Aime после несанкционированного доступа к серверам — без онлайн-режимов остались Initial D, CHUNITHM, maimai и даже Taiko no Tatsujin от Bandai Namco. 6 ноября компания признала, что даты восстановления до сих пор нет.",
+   "date_published": "2026-11-06T11:12:00+03:00",
+   "date_modified": "2026-11-06T11:12:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/sega-fave-vzlom-arkady.jpg",
+   "_sources": [
+    {
+     "name": "Sega Fave — уведомление о несанкционированном доступе",
+     "url": "https://www.segafave.co.jp/news/261102_1/"
+    },
+    {
+     "name": "iXBT Games — Взлом серверов Sega парализовал японские аркады",
+     "url": "https://ixbt.games/news/2026/11/06/vzlom-serverov-sega-paralizoval-iaponskie-arkady-sroki-vosstanovleniia-neizvestny.html"
+    },
+    {
+     "name": "Kotaku — Japanese Arcade Machines Have Been Taken Down By A Major Hack",
+     "url": "https://kotaku.com/sega-taiko-no-tatsujin-arcade-machines-service-breach-hack-2000752477"
+    },
+    {
+     "name": "Automaton — SEGA's major arcade network services down after subsidiary suffers server breach",
+     "url": "https://automaton-media.com/en/news/segas-major-arcade-network-services-down-after-subsidiary-suffers-server-breach"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/soulframe-otkrytaya-alfa.html",
    "url": "https://geekovski.ru/soulframe-otkrytaya-alfa.html",
    "title": "Soulframe открыли для всех: бесплатная альфа на PC",
