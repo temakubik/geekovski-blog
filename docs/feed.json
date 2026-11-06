@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1707-odysseya-vozvrat-v-kino.html",
+   "url": "https://geekovski.ru/2026-11-06-1707-odysseya-vozvrat-v-kino.html",
+   "title": "«Одиссея» вернётся в 1000 залов 11 декабря",
+   "summary": "Universal вернёт фильм Нолана в кинотеатры 11 декабря — через три недели после домашней премьеры 17 ноября. Под возврат пойдут 1000 экранов в США и Канаде, включая IMAX и IMAX 70 мм.",
+   "date_published": "2026-11-06T17:07:00+03:00",
+   "date_modified": "2026-11-06T17:07:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/odysseya-vozvrat-v-kino.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — 'The Odyssey' Venturing Back Into Cinemas After Mid-November In-Home Release",
+     "url": "https://deadline.com/2026/11/the-odyssey-theatrical-re-release-1237214537/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1706-macbook-neo-2-proizvodstvo.html",
+   "url": "https://geekovski.ru/2026-11-06-1706-macbook-neo-2-proizvodstvo.html",
+   "title": "Apple удвоит выпуск MacBook Neo в 2027 году",
+   "summary": "Digitimes сообщает, что Apple закладывает 16 млн MacBook Neo на 2027 год — почти вдвое больше первого поколения. По слухам, новинка получит 12 ГБ памяти и чип A19 Pro.",
+   "date_published": "2026-11-06T17:06:00+03:00",
+   "date_modified": "2026-11-06T17:06:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/macbook-neo-2-proizvodstvo.jpg",
+   "_sources": [
+    {
+     "name": "ZDNET — MacBook Neo production to double in 2027",
+     "url": "https://www.zdnet.com/tech/macbook-neo-2027-double-production-more-memory/"
+    },
+    {
+     "name": "Digitimes — Apple MacBook 2027 shipments forecast",
+     "url": "https://www.digitimes.com/news/a20261104PD226/apple-macbook-2027-shipments-forecast.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1705-alexa-zakaz-po-tekstu.html",
+   "url": "https://geekovski.ru/2026-11-06-1705-alexa-zakaz-po-tekstu.html",
+   "title": "Amazon разрешила заказывать товары через SMS для Alexa",
+   "summary": "Amazon добавила в Alexa for Shopping приём заказов обычными SMS: достаточно описать товар словами или прислать фото, ассистент подберёт варианты и оформит покупку. Пока — небольшой группе пользователей в США.",
+   "date_published": "2026-11-06T17:05:00+03:00",
+   "date_modified": "2026-11-06T17:05:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/alexa-zakaz-po-tekstu.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Amazon will let you text Alexa your shopping list",
+     "url": "https://www.theverge.com/tech/1028587/amazon-alexa-shopping-ai-text-orders"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html",
    "url": "https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html",
    "title": "Paint в Windows 11 уязвим, а исправление не доехало",

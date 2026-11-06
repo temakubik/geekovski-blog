@@ -16,15 +16,18 @@
 - [PlayStation](https://geekovski.ru/playstation/): 5 материалов
 - [PC-игры](https://geekovski.ru/pc/): 14 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
-- [Гаджеты](https://geekovski.ru/gadgets/): 16 материалов
-- [Кино](https://geekovski.ru/kino/): 9 материалов
+- [Гаджеты](https://geekovski.ru/gadgets/): 17 материалов
+- [Кино](https://geekovski.ru/kino/): 10 материалов
 - [Сериалы](https://geekovski.ru/serialy/): 2 материала
-- [AI](https://geekovski.ru/ai/): 18 материалов
+- [AI](https://geekovski.ru/ai/): 19 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Материалы
 
+- [«Одиссея» вернётся в 1000 залов 11 декабря](https://geekovski.ru/2026-11-06-1707-odysseya-vozvrat-v-kino.html): Universal вернёт фильм Нолана в кинотеатры 11 декабря — через три недели после домашней премьеры 17 ноября. Под возврат пойдут 1000 экранов в США и Канаде, включая IMAX и IMAX 70 мм. (06.11.2026)
+- [Apple удвоит выпуск MacBook Neo в 2027 году](https://geekovski.ru/2026-11-06-1706-macbook-neo-2-proizvodstvo.html): Digitimes сообщает, что Apple закладывает 16 млн MacBook Neo на 2027 год — почти вдвое больше первого поколения. По слухам, новинка получит 12 ГБ памяти и чип A19 Pro. (06.11.2026)
+- [Amazon разрешила заказывать товары через SMS для Alexa](https://geekovski.ru/2026-11-06-1705-alexa-zakaz-po-tekstu.html): Amazon добавила в Alexa for Shopping приём заказов обычными SMS: достаточно описать товар словами или прислать фото, ассистент подберёт варианты и оформит покупку. Пока — небольшой группе пользователей в США. (06.11.2026)
 - [Paint в Windows 11 уязвим, а исправление не доехало](https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html): Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через Microsoft Store — и у части пользователей с включённым автопатчем осталась старая сборка. Проверить версию можно одной командой в PowerShell. (06.11.2026)
 - [Инвесторы не верят в оценку Anthropic в $1,5 трлн](https://geekovski.ru/2026-11-06-1605-anthropic-ipo-ocenka.html): Крупные инвесторы, которые собирались зайти в IPO Anthropic, после обвала техов заговорили о снижении оценки — один собеседник WSJ называет цифру около $1 трлн. Reuters пишет, что под вопросом и само роуд-шоу на неделе 9 ноября. (06.11.2026)
 - [Lionsgate завела хоррор-лейбл Render Road](https://geekovski.ru/2026-11-06-1506-render-road-lionsgate.html): Lionsgate и её дочка 3 Arts запускают Render Road — студию, которая будет разрабатывать, производить и финансировать хорроры для кино, ТВ и цифровых платформ. Возглавят её менеджеры 3 Arts Люк Максвелл и Уилл Роуботэм, а на подходе у компании уже новая «Пила», «Ведьма из Блэр» и ремейк «Магии» от Сэма Рэйми. (06.11.2026)
@@ -126,6 +129,7 @@
 - [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
 - [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
 - [NieR: Automata](https://geekovski.ru/titles/nier-automata.html): 2017
+- [The Odyssey / «Одиссея»](https://geekovski.ru/titles/odysseya-nolan.html): 2026
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
