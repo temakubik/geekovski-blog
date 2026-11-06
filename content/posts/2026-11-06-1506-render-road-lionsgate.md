@@ -5,6 +5,7 @@ category: kino
 summary: Lionsgate и её дочка 3 Arts запускают Render Road — студию, которая будет разрабатывать, производить и финансировать хорроры для кино, ТВ и цифровых платформ. Возглавят её менеджеры 3 Arts Люк Максвелл и Уилл Роуботэм, а на подходе у компании уже новая «Пила», «Ведьма из Блэр» и ремейк «Магии» от Сэма Рэйми.
 tldr: Deadline сообщает о запуске со ссылкой на источники; официального пресс-релиза нет | Лейбл возглавят Люк Максвелл и Уилл Роуботэм из 3 Arts, они остаются менеджерами 3 Arts | Render Road будет открыт и для авторов вне 3 Arts, включая цифровые проекты | В портфеле Lionsgate — новая «Пила» Майка П. Нельсона, «Ведьма из Блэр» и ремейк «Магии» (1978) в режиссуре Сэма Рэйми
 cover: /assets/img/render-road-lionsgate.jpg
+pin: /assets/img/2026-11-06-1506-render-road-lionsgate-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Tima Miroshnichenko
 sources: Deadline — Lionsgate & 3 Arts set new horror banner Render Road | https://deadline.com/2026/11/horror-films-lionsgate-3-arts-banner-1237215107/; TheWrap — Lionsgate and 3 Arts team for new horror banner Render Road | https://www.thewrap.com/creative-content/movies/lionsgate-3-arts-team-new-horror-banner-render-road/
 ---
