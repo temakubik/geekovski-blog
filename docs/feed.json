@@ -8,6 +8,58 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1306-dzhon-uik-animaciya.html",
+   "url": "https://geekovski.ru/2026-11-06-1306-dzhon-uik-animaciya.html",
+   "title": "«Джон Уик» станет анимационным приквелом",
+   "summary": "Lionsgate официально запустила полнометражный анимационный приквел «Джона Уика» про «невыполнимую задачу». Киану Ривз вернётся к роли голосом и продюсером, режиссёр — Шеннон Тиндл.",
+   "date_published": "2026-11-06T13:06:00+03:00",
+   "date_modified": "2026-11-06T13:06:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/dzhon-uik-animaciya.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — Lionsgate запускает анимационный «Джон Уик» с Киану Ривзом",
+     "url": "https://deadline.com/2026/11/lionsgate-animated-john-wick-film-with-keanu-reaves-officially-a-go-1237214979/"
+    },
+    {
+     "name": "Variety — Ривз вернётся к роли в анимационном приквеле",
+     "url": "https://variety.com/2026/film/news/keanu-reeves-john-wick-animated-movie-prequel-1236940815"
+    },
+    {
+     "name": "TheWrap — детали анонса и другие проекты франшизы",
+     "url": "https://www.thewrap.com/creative-content/movies/john-wick-animated-prequel-keanu-reeves-lionsgate/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1305-apple-proled-macbook-v-prodazhe.html",
+   "url": "https://geekovski.ru/2026-11-06-1305-apple-proled-macbook-v-prodazhe.html",
+   "title": "Сенсорный MacBook Pro поступил в продажу",
+   "summary": "6 ноября Apple начала продавать пять новинок: 14- и 16-дюймовые MacBook Pro с сенсорным OLED-экраном, MacBook Pro и iMac на M6, а также iPad mini с OLED. Вход в сенсорную линейку — $2 899.",
+   "date_published": "2026-11-06T13:05:00+03:00",
+   "date_modified": "2026-11-06T13:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/apple-proled-macbook-v-prodazhe.jpg",
+   "_sources": [
+    {
+     "name": "MacRumors — Apple запускает пять новинок 6 ноября",
+     "url": "https://macrumors.com/2026/11/05/apple-launching-five-new-products-tomorrow"
+    },
+    {
+     "name": "The Verge — обзор MacBook Pro с PROLED XDR",
+     "url": "https://theverge.com/e/1026570"
+    },
+    {
+     "name": "Ars Technica — анонс сенсорного MacBook Pro с OLED",
+     "url": "https://arstechnica.com/apple/2026/10/apple-announces-touchscreen-macbook-pro-with-oled-display"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html",
    "url": "https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html",
    "title": "Anthropic разгоняется вдвое — на своём же Claude",
