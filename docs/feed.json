@@ -60,6 +60,80 @@
    ]
   },
   {
+   "id": "https://geekovski.ru/chatgpt-gif-images-2-6.html",
+   "url": "https://geekovski.ru/chatgpt-gif-images-2-6.html",
+   "title": "ChatGPT научился делать GIF — вместе с моделью Images 2.6",
+   "summary": "OpenAI выпустила модель генерации изображений Images 2.6, и вместе с ней в ChatGPT появилась нативная сборка GIF: анимация делается одним промптом или из загруженного фото. Скорость воспроизведения и отдельные кадры можно править прямо в чате.",
+   "date_published": "2026-11-06T07:14:00+03:00",
+   "date_modified": "2026-11-06T07:14:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/chatgpt-gif-images-2-6.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — ChatGPT will now make you animated GIFs",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
+    },
+    {
+     "name": "Silicon Report — ChatGPT can now create GIFs using prompts or photos",
+     "url": "https://www.siliconreport.com/chatgpt-can-now-create-gifs-using-prompts-or-photos"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/nothing-ai-gadget-dekabr.html",
+   "url": "https://geekovski.ru/nothing-ai-gadget-dekabr.html",
+   "title": "Nothing выпустит первый ИИ-гаджет в декабре — без экрана",
+   "summary": "Карл Пей объявил, что первый «AI-native» продукт Nothing выйдет в декабре 2026 года. Устройство будет рабочим инструментом без собственного экрана, и, по словам главы компании, его нельзя заменить приложением.",
+   "date_published": "2026-11-06T07:12:00+03:00",
+   "date_modified": "2026-11-06T07:12:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/nothing-ai-gadget-dekabr.jpg",
+   "_sources": [
+    {
+     "name": "TechCrunch — Nothing CEO says company’s mysterious AI-first device is dropping next month",
+     "url": "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month"
+    },
+    {
+     "name": "The Verge — Nothing teases a screen-free AI device ahead of launch next month",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei"
+    },
+    {
+     "name": "Карл Пей (X) — эссе «Toolmakers»",
+     "url": "https://x.com/getpeid/status/2117991714879410204"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/wow-forever-bez-ocheredey.html",
+   "url": "https://geekovski.ru/wow-forever-bez-ocheredey.html",
+   "title": "«WoW: Forever» стартовал без очередей: 251 ТБ памяти",
+   "summary": "Blizzard перезапустила классический World of Warcraft — «Forever» вышел ночью 5 ноября и обошёлся без привычных очередей и лагов. Серверы нового проекта крутятся на 3 924 виртуальных машинах с 251 136 ГБ памяти и 70 480 ядрами.",
+   "date_published": "2026-11-06T07:10:00+03:00",
+   "date_modified": "2026-11-06T07:10:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/wow-forever-bez-ocheredey.jpg",
+   "_sources": [
+    {
+     "name": "Blizzard — Carve a New Path with World of Warcraft Forever",
+     "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302093"
+    },
+    {
+     "name": "IGN — WoW Forever launch ran on over 200 000 GB of RAM",
+     "url": "https://nordic.ign.com/world-of-warcraft-forever/115281/world-of-warcraft-forevers-launch-was-running-on-over-200000-gigabytes-of-ram"
+    },
+    {
+     "name": "Warcraft (X) — 3 924 VM, 251 136 GB, 70 480 cores",
+     "url": "https://x.com/Warcraft/status/2118171078912618887"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/c64-ultimate-v-magazinah.html",
    "url": "https://geekovski.ru/c64-ultimate-v-magazinah.html",
    "title": "Commodore 64 возвращается в магазины Европы",
