@@ -5,7 +5,7 @@ category: gadgets
 summary: В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.
 tldr: Уязвимы OpenSSH на musl-Linux (Alpine, OpenWrt, Buildroot, Yocto) без PAM — то есть конфигурация Alpine по умолчанию | Пароль на 257–1024 символа проходит как валидный для аккаунтов с «*» в /etc/shadow, включая root и пользователей «только по ключу» | Дыра живёт с 2016 года, патч — OpenSSH 10.6p2, Alpine закрыла 3.16–3.24 и edge; обновление требует перезапуска sshd
 cover: /assets/img/openssh-sshole.jpg
-pin: /assets/img/openssh-sshole-pin.jpg
+pin: /assets/img/2026-11-06-1805-openssh-sshole-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / panumas nikhomkhai, Tima Miroshnichenko
 sources: Ars Technica — Meet *sshole, the vulnerability that lets hackers SSH into Linux devices | https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/; BleepingComputer — OpenSSH flaw lets attackers log into password-disabled Linux accounts | https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/; SecurityWeek — OpenSSH Rushes Patches for 'SSHole' Authentication Bypass | https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/; Help Net Security — OpenSSH flaw exploited in the wild just hours after disclosure | https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation/
 ---
