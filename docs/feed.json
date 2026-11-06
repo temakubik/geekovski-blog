@@ -8,6 +8,66 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html",
+   "url": "https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html",
+   "title": "EA вернула в Steam 25 классических игр",
+   "summary": "5 ноября EA выложила на Steam, GOG и в EA App 25 старых PC-игр, включая Ultima, Wing Commander, Crusader и Theme Hospital. Семь из них — «восстановленные» Anniversary Editions, собранные по мастерам из найденного архива с тысячами кассет Betacam и VHS.",
+   "date_published": "2026-11-06T14:06:00+03:00",
+   "date_modified": "2026-11-06T14:06:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/ea-25-klassik-v-steam.jpg",
+   "_sources": [
+    {
+     "name": "GamesBeat — EA launches 25 PC classic games on Steam, including Road Rash, Ultima and Wing Commander",
+     "url": "https://gamesbeat.com/ea-launches-25-pc-classic-games-on-steam-including-road-rash-ultima-and-wing-commander/"
+    },
+    {
+     "name": "VGC — EA has released classic 'restored' games on PC, including Ultima and Road Rash",
+     "url": "https://www.videogameschronicle.com/news/ea-has-released-25-classic-restored-games-on-pc-including-ultima-and-road-rash/"
+    },
+    {
+     "name": "EA — From the vault to your library",
+     "url": "https://www.ea.com/news/from-the-vault-to-your-library"
+    },
+    {
+     "name": "Steam — Road Rash: 30th Anniversary Edition",
+     "url": "https://store.steampowered.com/app/2448570/Road_Rash_30th_Anniversary_Edition/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1405-tesla-cybertruck-konec.html",
+   "url": "https://geekovski.ru/2026-11-06-1405-tesla-cybertruck-konec.html",
+   "title": "Tesla снимает Cybertruck с конвейера",
+   "summary": "Маск объявил, что Tesla сворачивает выпуск Cybertruck в Техасе примерно к середине следующего года — завод в Остине нужен под Cybercab. За три года пикап, которому прочили 250 тысяч машин в год, собрал, по максимальным оценкам аналитиков, около 70 тысяч поставок.",
+   "date_published": "2026-11-06T14:05:00+03:00",
+   "date_modified": "2026-11-06T14:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/tesla-cybertruck-konec.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Tesla is 'winding down' production of the Cybertruck next year",
+     "url": "https://www.theverge.com/transportation/1028542/tesla-cybertruck-winding-down-production-2027"
+    },
+    {
+     "name": "Reuters — Tesla to wind down Cybertruck production at Texas gigafactory next year",
+     "url": "https://www.devdiscourse.com/article/international/4002549-tesla-to-wind-down-cybertruck-production-at-texas-gigafactory-next-year-musk-says"
+    },
+    {
+     "name": "Invezz — Tesla Cybertruck production cut: why Musk is shifting to Cybercab",
+     "url": "https://invezz.com/news/2026/11/06/tesla-cybertruck-texas-production-cybercab/"
+    },
+    {
+     "name": "The National — Musk says Tesla will stop making Cybertrucks in 2027",
+     "url": "https://www.thenationalnews.com/future/technology/2026/11/06/elon-musk-says-tesla-will-stop-cybertruck-production-in-2027/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1307-palo-alto-clutch.html",
    "url": "https://geekovski.ru/2026-11-06-1307-palo-alto-clutch.html",
    "title": "Palo Alto Networks присмотрелась к Clutch за $500 млн",

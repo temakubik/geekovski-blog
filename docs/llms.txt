@@ -14,9 +14,9 @@
 - [Xbox](https://geekovski.ru/xbox/): 3 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 9 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 5 материалов
-- [PC-игры](https://geekovski.ru/pc/): 12 материалов
+- [PC-игры](https://geekovski.ru/pc/): 13 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
-- [Гаджеты](https://geekovski.ru/gadgets/): 14 материалов
+- [Гаджеты](https://geekovski.ru/gadgets/): 15 материалов
 - [Кино](https://geekovski.ru/kino/): 8 материалов
 - [Сериалы](https://geekovski.ru/serialy/): 2 материала
 - [AI](https://geekovski.ru/ai/): 17 материалов
@@ -25,6 +25,8 @@
 
 ## Материалы
 
+- [EA вернула в Steam 25 классических игр](https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html): 5 ноября EA выложила на Steam, GOG и в EA App 25 старых PC-игр, включая Ultima, Wing Commander, Crusader и Theme Hospital. Семь из них — «восстановленные» Anniversary Editions, собранные по мастерам из найденного архива с тысячами кассет Betacam и VHS. (06.11.2026)
+- [Tesla снимает Cybertruck с конвейера](https://geekovski.ru/2026-11-06-1405-tesla-cybertruck-konec.html): Маск объявил, что Tesla сворачивает выпуск Cybertruck в Техасе примерно к середине следующего года — завод в Остине нужен под Cybercab. За три года пикап, которому прочили 250 тысяч машин в год, собрал, по максимальным оценкам аналитиков, около 70 тысяч поставок. (06.11.2026)
 - [Palo Alto Networks присмотрелась к Clutch за $500 млн](https://geekovski.ru/2026-11-06-1307-palo-alto-clutch.html): Palo Alto Networks ведёт переговоры о покупке Clutch Security — стартапа, который контролирует доступ AI-агентов к корпоративным системам. Источник TechCrunch оценивает сделку в $500 млн наличными плюс выплаты по вехам. (06.11.2026)
 - [«Джон Уик» станет анимационным приквелом](https://geekovski.ru/2026-11-06-1306-dzhon-uik-animaciya.html): Lionsgate официально запустила полнометражный анимационный приквел «Джона Уика» про «невыполнимую задачу». Киану Ривз вернётся к роли голосом и продюсером, режиссёр — Шеннон Тиндл. (06.11.2026)
 - [Anthropic разгоняется вдвое — на своём же Claude](https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html): Независимая группа METR изучила внутренние данные Anthropic и оценила, что компания улучшает модели примерно вдвое быстрее, чем год назад, — и большую часть ускорения объясняет помощью ИИ. (06.11.2026)
