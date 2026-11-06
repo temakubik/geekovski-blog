@@ -7,7 +7,7 @@ tldr: Digitimes: прогноз поставок MacBook Neo на 2027-й — 16
 cover: /assets/img/macbook-neo-2-proizvodstvo.jpg
 pin: /assets/img/2026-11-06-1706-macbook-neo-2-proizvodstvo-pin.jpg
 credit: Обложка: GEEKOVSKI. Фото: Pexels / Letícia Alvares
-sources: ZDNET — MacBook Neo production to double in 2027 | https://www.zdnet.com/tech/macbook-neo-2027-double-production-more-memory/; Digitimes — Apple MacBook 2027 shipments forecast | https://www.digitimes.com/news/a20261104PD226/apple-macbook-2027-shipments-forecast.html
+sources: ZDNET — MacBook Neo production to double in 2027 | https://www.zdnet.com/tech/macbook-neo-2027-double-production-more-memory/; Digitimes — Apple MacBook 2027 shipments forecast | https://www.digitimes.com/news/a20261104PD226/apple-macbook-2027-shipments-forecast.html; iClarified — Apple Expects Memory Shortages to Limit Mac and iPad Holiday Supply | https://www.iclarified.com/103245/apple-expects-memory-shortages-to-limit-mac-and-ipad-holiday-supply
 ---
 
 Apple закладывает на 2027 год 16 млн MacBook Neo — примерно вдвое больше, чем в первом поколении. Об этом 4 ноября сообщил Digitimes, а 6 ноября детали разобрал ZDNET. Это прогноз цепочки поставок, а не анонс: Apple собственные планы не подтверждала, так что статус информации — сообщение отраслевого издания со ссылкой на поставщиков.
