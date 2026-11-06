@@ -8,6 +8,24 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1307-palo-alto-clutch.html",
+   "url": "https://geekovski.ru/2026-11-06-1307-palo-alto-clutch.html",
+   "title": "Palo Alto Networks присмотрелась к Clutch за $500 млн",
+   "summary": "Palo Alto Networks ведёт переговоры о покупке Clutch Security — стартапа, который контролирует доступ AI-агентов к корпоративным системам. Источник TechCrunch оценивает сделку в $500 млн наличными плюс выплаты по вехам.",
+   "date_published": "2026-11-06T13:07:00+03:00",
+   "date_modified": "2026-11-06T13:07:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/palo-alto-clutch-500-mln.jpg",
+   "_sources": [
+    {
+     "name": "TechCrunch — Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
+     "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1306-dzhon-uik-animaciya.html",
    "url": "https://geekovski.ru/2026-11-06-1306-dzhon-uik-animaciya.html",
    "title": "«Джон Уик» станет анимационным приквелом",
@@ -30,32 +48,6 @@
     {
      "name": "TheWrap — детали анонса и другие проекты франшизы",
      "url": "https://www.thewrap.com/creative-content/movies/john-wick-animated-prequel-keanu-reeves-lionsgate/"
-    }
-   ]
-  },
-  {
-   "id": "https://geekovski.ru/2026-11-06-1305-apple-proled-macbook-v-prodazhe.html",
-   "url": "https://geekovski.ru/2026-11-06-1305-apple-proled-macbook-v-prodazhe.html",
-   "title": "Сенсорный MacBook Pro поступил в продажу",
-   "summary": "6 ноября Apple начала продавать пять новинок: 14- и 16-дюймовые MacBook Pro с сенсорным OLED-экраном, MacBook Pro и iMac на M6, а также iPad mini с OLED. Вход в сенсорную линейку — $2 899.",
-   "date_published": "2026-11-06T13:05:00+03:00",
-   "date_modified": "2026-11-06T13:05:00+03:00",
-   "tags": [
-    "Гаджеты"
-   ],
-   "image": "https://geekovski.ru/assets/img/apple-proled-macbook-v-prodazhe.jpg",
-   "_sources": [
-    {
-     "name": "MacRumors — Apple запускает пять новинок 6 ноября",
-     "url": "https://macrumors.com/2026/11/05/apple-launching-five-new-products-tomorrow"
-    },
-    {
-     "name": "The Verge — обзор MacBook Pro с PROLED XDR",
-     "url": "https://theverge.com/e/1026570"
-    },
-    {
-     "name": "Ars Technica — анонс сенсорного MacBook Pro с OLED",
-     "url": "https://arstechnica.com/apple/2026/10/apple-announces-touchscreen-macbook-pro-with-oled-display"
     }
    ]
   },
