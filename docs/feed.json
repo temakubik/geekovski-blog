@@ -8,6 +8,44 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-2105-meta-skraping-otmena.html",
+   "url": "https://geekovski.ru/2026-11-06-2105-meta-skraping-otmena.html",
+   "title": "Meta отменила скрапинг сайтов рекламодателей",
+   "summary": "Meta на неопределённый срок отложила обновление коммерческих условий, которое разрешало сканировать сайты владельцев бизнес-аккаунтов для продуктов на базе ИИ. После двух судебных запретов, расследования британского регулятора и писем сенаторов компания сняла превью новых условий: 20 ноября они не вступят в силу.",
+   "date_published": "2026-11-06T21:05:00+03:00",
+   "date_modified": "2026-11-06T21:05:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/meta-skraping-otmena.jpg",
+   "_sources": [
+    {
+     "name": "Meta Business Help Center — обновление о приостановке условий",
+     "url": "https://www.facebook.com/business/help/2481113349080785"
+    },
+    {
+     "name": "Reuters — Meta pauses planned terms updates, keeps existing rules in place",
+     "url": "https://www.reuters.com/business/meta-pauses-planned-terms-updates-keeps-existing-rules-place-2026-11-06/"
+    },
+    {
+     "name": "Nieman Lab — Meta pulls down controversial terms of service",
+     "url": "https://niemanlab.org/2026/11/meta-pulls-down-controversial-terms-of-service"
+    },
+    {
+     "name": "Ars Technica — «Does Meta think we can't read?» Meta abandons sketchy commercial terms update",
+     "url": "https://arstechnica.com/tech-policy/2026/11/does-meta-think-we-cant-read-meta-abandons-sketchy-commercial-terms-update"
+    },
+    {
+     "name": "The Verge — Meta is delaying its controversial new business terms indefinitely",
+     "url": "https://www.theverge.com/tech/1028473/meta-is-delaying-its-controversial-new-business-terms-indefinitely"
+    },
+    {
+     "name": "CMA — расследование коммерческих условий Meta",
+     "url": "https://www.gov.uk/government/news/cma-opens-investigation-into-metas-commercial-terms--2"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1806-ai-golos-129-mln.html",
    "url": "https://geekovski.ru/2026-11-06-1806-ai-golos-129-mln.html",
    "title": "AI-двойники выманили $129 млн у больниц и банков",
