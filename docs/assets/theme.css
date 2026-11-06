@@ -378,6 +378,8 @@ a.chip:hover, a.chip:focus-visible { border-color: currentColor; }
 .lead-two .card { padding: 26px 0 30px; border-bottom: 1px solid var(--line); }
 .lead-two .card__cover { aspect-ratio: 16 / 9; }
 .lead-two .card__title { font-size: var(--fs-h2); line-height: var(--lh-tight); letter-spacing: -.02em; }
+/* заголовок главного материала — H1 страницы: крупнее остальных карточек */
+h1.card__title { font-size: var(--fs-h1); line-height: var(--lh-tight); }
 .lead-two .card__sum { font-size: var(--fs-lead); line-height: 1.42; max-width: 60ch; }
 .feed-block { margin-top: 34px; }
 .grid--feed { display: grid; grid-template-columns: 1fr; gap: 0; }

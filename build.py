@@ -590,8 +590,9 @@ def first_sentence(text, limit=170):
     return sent
 
 
-def card(p, theme, big=False):
+def card(p, theme, big=False, h1=False):
     cat = p["category"]
+    head_tag = "h1" if h1 else "h3"
     # обложка получает alt из заголовка: пустой alt оставляем только декоративным плашкам
     cover = ('<div class="card__cover"><img src="%s" alt="%s" loading="lazy"></div>'
              % (p["cover"], html.escape(p["title"], quote=True))) if p["cover"] else ""
@@ -600,12 +601,12 @@ def card(p, theme, big=False):
   {cover}
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
-    <h3 class="card__title"><a href="/{slug}.html">{title}</a></h3>
+    <{head_tag} class="card__title"><a href="/{slug}.html">{title}</a></{head_tag}>
     <p class="card__sum">{sum}</p>
     <div class="card__foot"><a class="more" href="/{slug}.html">Читать →</a>{src}</div>
   </div>
 </article>""".format(
-        cls="big" if big else "", cat=cat, catname=CAT_NAME.get(cat, cat),
+        cls="big" if big else "", cat=cat, catname=CAT_NAME.get(cat, cat), head_tag=head_tag,
         date=p["date"].strftime("%d.%m"), isodt=iso(p["date"]),
         slug=p["slug"], title=html.escape(p["title"]),
         sum=html.escape(first_sentence(p["summary"] or plain(p["body"], 130), limit=125 if not big else 170)), cover=cover,
@@ -665,7 +666,7 @@ def render_index(posts, theme, digests=None, cal_entries=None):
         lead2 = posts[:2]
         rest = posts[2:]
         top = ('<section class="lead-two">%s</section>'
-               % "\n".join(card(p, theme, big=True) for p in lead2)) if lead2 else ""
+               % "\n".join(card(p, theme, big=True, h1=(i == 0)) for i, p in enumerate(lead2))) if lead2 else ""
         feed_rows = "\n".join(card(p, theme) for p in rest)
         feed = ('<section class="feed-block"><div class="rubric__head"><h2>Все материалы</h2>'
                 '<span class="rubric__all">%d %s</span></div>'
