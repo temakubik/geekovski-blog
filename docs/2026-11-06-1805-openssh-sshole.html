@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSSH пускает в Alpine одним длинным паролем — GEEKOVSKI</title>
+<meta name="description" content="В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/2026-11-06-1805-openssh-sshole.html">
+<meta property="og:title" content="OpenSSH пускает в Alpine одним длинным паролем — GEEKOVSKI">
+<meta property="og:description" content="В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/2026-11-06-1805-openssh-sshole.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/openssh-sshole.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="OpenSSH пускает в Alpine одним длинным паролем">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenSSH пускает в Alpine одним длинным паролем — GEEKOVSKI">
+<meta name="twitter:description" content="В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.">
+<meta property="article:published_time" content="2026-11-06T18:05:00+03:00">
+<meta property="article:modified_time" content="2026-11-06T18:05:00+03:00">
+<meta property="article:section" content="Гаджеты">
+<meta property="article:author" content="GEEKOVSKI">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0A0C0F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="yandex-verification" content="acc866b9b963f469">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BlogPosting","@id":"https://geekovski.ru/2026-11-06-1805-openssh-sshole.html#article","headline":"OpenSSH пускает в Alpine одним длинным паролем","description":"В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.","datePublished":"2026-11-06T18:05:00+03:00","dateModified":"2026-11-06T18:05:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/2026-11-06-1805-openssh-sshole.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"Гаджеты","keywords":["Гаджеты","GEEKOVSKI"],"wordCount":521,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/openssh-sshole.jpg","width":1600,"height":900}],"citation":["https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/","https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/","https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/","https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation/"],"abstract":"Уязвимы OpenSSH на musl-Linux (Alpine, OpenWrt, Buildroot, Yocto) без PAM — то есть конфигурация Alpine по умолчанию Пароль на 257–1024 символа проходит как валидный для аккаунтов с «*» в /etc/shadow, включая root и пользователей «только по ключу» Дыра живёт с 2016 года, патч — OpenSSH 10.6p2, Alpine закрыла 3.16–3.24 и edge; обновление требует перезапуска sshd"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"Гаджеты","item":"https://geekovski.ru/gadgets/"},{"@type":"ListItem","position":3,"name":"OpenSSH пускает в Alpine одним длинным паролем","item":"https://geekovski.ru/2026-11-06-1805-openssh-sshole.html"}]}]}</script>
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(83)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(5)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(2)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <div class="top__actions">
+      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main class="wrap post-page">
+<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<article class="post cat-gadgets">
+  <header class="post__head">
+    <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T18:05:00+03:00">06.11.2026, 18:05</time></div>
+    <h1>OpenSSH пускает в Alpine одним длинным паролем</h1>
+    <p class="post__lead">В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.</p>
+  </header>
+  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Уязвимы OpenSSH на musl-Linux (Alpine, OpenWrt, Buildroot, Yocto) без PAM — то есть конфигурация Alpine по умолчанию</li><li>Пароль на 257–1024 символа проходит как валидный для аккаунтов с «*» в /etc/shadow, включая root и пользователей «только по ключу»</li><li>Дыра живёт с 2016 года, патч — OpenSSH 10.6p2, Alpine закрыла 3.16–3.24 и edge; обновление требует перезапуска sshd</li></ul></aside>
+  <figure class="post__cover"><img src="/assets/img/openssh-sshole.jpg" alt="OpenSSH пускает в Alpine одним длинным паролем"></figure>
+  <div class="post__body"><p>5 ноября OpenSSH выпустил обновление 10.6p2, закрывающее дыру, которую исследователь Озгюн Кюльтекин из Wakefield нашёл и назвал *sshole. Уязвимости присвоен номер CVE-2026-123158 и оценка 8.1 по CVSS. Это не слух и не утечка: патч вышел официально, Alpine Linux в тот же день опубликовала собственный бюллетень и разослала исправленные пакеты. Суть проблемы — аутентификация, которую можно обойти, не зная ни одного пароля.</p>
+<p>Затронуты Linux-системы на библиотеке musl, где OpenSSH собран без PAM и с включённой парольной аутентификацией. Это Alpine — в том числе её конфигурация по умолчанию, — а также OpenWrt, Buildroot и Yocto. Механика такая: служебные аккаунты, которым вход по паролю запрещён, держат в /etc/shadow звёздочку вместо хеша. В 2016 году OpenSSH специально научили считать хеш даже для таких аккаунтов — чтобы по времени ответа нельзя было вычислить существующие имена (CVE-2016-6210). Но musl-функция crypt() при ошибке тоже возвращает звёздочку, в том числе когда присланный пароль длиннее 256 байт. Дальше sshd сравнивает звёздочку со звёздочкой — и впускает.</p>
+<p>То есть эксплойт — это пароль на 257–1024 символа. Нужны ещё два условия: хотя бы один обычный аккаунт с настоящим хешем SHA-256 или SHA-512 (у него sshd берёт соль) и открытый наружу SSH. Root сам по себе защищён настройкой PermitRootLogin по умолчанию, но косвенный путь есть: на официальных облачных образах Alpine для AWS и Azure (tiny-cloud с 3.18.11 по 3.24.3) пользователь alpine по умолчанию входит без пароля и имеет doas без пароля — то есть получает root.</p>
+<p>Масштаб оценивают по косвенным числам. У образа Alpine в Docker Hub больше миллиарда скачиваний, сама система живёт в роутерах, телевизорах и промышленных контроллерах, которые обновляют годами, а то и никогда. По данным Detectify, в Shodan около 22 млн систем с открытым 22-м портом — подходят из них далеко не все, но проверка одного адреса занимает одну попытку.</p>
+<p>Долго ждать эксплуатации не пришлось. Компания Previdian 6 ноября сообщила, что её датчики зафиксировали первую попытку меньше чем через девять часов после публикации CVE и подтвердили успешный вход под root на ханипоте с настоящими Alpine и OpenSSH. Атака шла с адреса 89.116.89[.]18, дальше — разведка командами id, uname и hostname в неинтерактивных сессиях; всего восемь попыток с одного адреса.</p>
+<p>Что делать, если у вас musl-система без PAM: обновить openssh (в Alpine — apk upgrade openssh) и обязательно перезапустить sshd, потому что работающий процесс продолжает жить со старым кодом. Если обновиться нельзя — выключить вход по паролю через PasswordAuthentication no. Проверить, не входили ли к вам, можно по строкам «Accepted password» в /var/log/messages: логин аккаунта, у которого пароля нет, — повод считать машину скомпрометированной. Debian, Ubuntu и Fedora на glibc, конфигурации через PAM, Dropbear и OpenBSD проблеме не подвержены.</p>
+<figure class="post__fig"><img src="/assets/img/openssh-sshole-foto.jpg" alt="Тёмный экран монитора с данными кибербезопасности и строками кода" loading="lazy"></figure>
+<p>Кто виноват — стороны спорят до сих пор. OpenSSH считает, что причина вне sshd, хотя эксплуатируется баг именно через него; автор musl Рич Фелкер настаивает, что это ошибка вызывающей стороны, а не библиотеки. Для администратора это уже неважно: дыра десять лет была в конфигурации по умолчанию у одного из самых популярных лёгких дистрибутивов, и это тот случай, когда «обновимся на следующей неделе» стоит дороже перезапуска sshd.</p></div>
+  
+  <section class="sources"><h2>Источники</h2><ol><li><a href="https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/" rel="nofollow noopener" target="_blank">Ars Technica — Meet *sshole, the vulnerability that lets hackers SSH into Linux devices</a></li><li><a href="https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/" rel="nofollow noopener" target="_blank">BleepingComputer — OpenSSH flaw lets attackers log into password-disabled Linux accounts</a></li><li><a href="https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/" rel="nofollow noopener" target="_blank">SecurityWeek — OpenSSH Rushes Patches for &#x27;SSHole&#x27; Authentication Bypass</a></li><li><a href="https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation/" rel="nofollow noopener" target="_blank">Help Net Security — OpenSSH flaw exploited in the wild just hours after disclosure</a></li></ol></section>
+  <section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1805-openssh-sshole.html&text=OpenSSH%20%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D1%82%20%D0%B2%20Alpine%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D0%B5%D0%BC" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1805-openssh-sshole.html&title=OpenSSH%20%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D1%82%20%D0%B2%20Alpine%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D0%B5%D0%BC" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://wa.me/?text=OpenSSH%20%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D1%82%20%D0%B2%20Alpine%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D0%B5%D0%BC%20https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1805-openssh-sshole.html" target="_blank" rel="noopener nofollow">WhatsApp</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1805-openssh-sshole.html&text=OpenSSH%20%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D1%82%20%D0%B2%20Alpine%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D0%B5%D0%BC" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1805-openssh-sshole.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fopenssh-sshole-pin.jpg&description=OpenSSH%20%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D1%82%20%D0%B2%20Alpine%20%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%20%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D0%B5%D0%BC" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-06-1805-openssh-sshole.html">Скопировать ссылку</button>
+</section>
+</article>
+<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/macbook-neo-2-proizvodstvo.jpg" alt="Apple удвоит выпуск MacBook Neo в 2027 году" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T17:06:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-1706-macbook-neo-2-proizvodstvo.html">Apple удвоит выпуск MacBook Neo в 2027 году</a></h3>
+    <p class="card__sum">Digitimes сообщает, что Apple закладывает 16 млн MacBook Neo на 2027 год — почти вдвое больше первого поколения.</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-1706-macbook-neo-2-proizvodstvo.html">Читать →</a><span class="srcc">источников: 3</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/windows-paint-rce.jpg" alt="Paint в Windows 11 уязвим, а исправление не доехало" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T16:06:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-1606-windows-paint-rce.html">Paint в Windows 11 уязвим, а исправление не доехало</a></h3>
+    <p class="card__sum">Microsoft закрыла 13 октября удалённое выполнение кода в Paint (CVE-2026-83844, 8,1 из 10), но обновление идёт только через…</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-1606-windows-paint-rce.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article>
+<article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/tesla-cybertruck-konec.jpg" alt="Tesla снимает Cybertruck с конвейера" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T14:05:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-1405-tesla-cybertruck-konec.html">Tesla снимает Cybertruck с конвейера</a></h3>
+    <p class="card__sum">Маск объявил, что Tesla сворачивает выпуск Cybertruck в Техасе примерно к середине следующего года — завод в Остине нужен…</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-1405-tesla-cybertruck-konec.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
+const route = location.pathname;
+const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+document.querySelector(active)?.classList.add('nav__link--active');
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>

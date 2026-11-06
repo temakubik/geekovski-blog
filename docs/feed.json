@@ -8,6 +8,62 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1806-ai-golos-129-mln.html",
+   "url": "https://geekovski.ru/2026-11-06-1806-ai-golos-129-mln.html",
+   "title": "AI-двойники выманили $129 млн у больниц и банков",
+   "summary": "Прокуратура Манхэттена предъявила обвинения трём человеком, которые полтора года звонили бухгалтерам голосом и лицом их же гендиректоров, а потом «юристом» крупной фирмы. Суммарный ущерб по шести названным в обвинении компаниям — $129 млн.",
+   "date_published": "2026-11-06T18:06:00+03:00",
+   "date_modified": "2026-11-06T18:06:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/ai-golos-129-mln.jpg",
+   "_sources": [
+    {
+     "name": "AP News — 3 charged in scheme to use AI to impersonate CEOs and attorneys to steal $129 million",
+     "url": "https://apnews.com/article/artificial-intelligence-impersonation-theft-fraud-c348a0c96e941214e56f8d923d03fc4b"
+    },
+    {
+     "name": "CBS News — 3 allegedly used AI to steal some $129 million from companies by impersonating executives and lawyers",
+     "url": "https://www.cbsnews.com/news/3-ai-steal-129-million-companies-impersonating-executives-lawyers/"
+    },
+    {
+     "name": "Ynetnews — Fake CEOs, stolen millions: two Israelis charged in $129 million AI fraud scheme",
+     "url": "https://www.ynetnews.com/article/b1o115ncafl"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1805-openssh-sshole.html",
+   "url": "https://geekovski.ru/2026-11-06-1805-openssh-sshole.html",
+   "title": "OpenSSH пускает в Alpine одним длинным паролем",
+   "summary": "В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.",
+   "date_published": "2026-11-06T18:05:00+03:00",
+   "date_modified": "2026-11-06T18:05:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/openssh-sshole.jpg",
+   "_sources": [
+    {
+     "name": "Ars Technica — Meet *sshole, the vulnerability that lets hackers SSH into Linux devices",
+     "url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/"
+    },
+    {
+     "name": "BleepingComputer — OpenSSH flaw lets attackers log into password-disabled Linux accounts",
+     "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/"
+    },
+    {
+     "name": "SecurityWeek — OpenSSH Rushes Patches for 'SSHole' Authentication Bypass",
+     "url": "https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/"
+    },
+    {
+     "name": "Help Net Security — OpenSSH flaw exploited in the wild just hours after disclosure",
+     "url": "https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1707-odysseya-vozvrat-v-kino.html",
    "url": "https://geekovski.ru/2026-11-06-1707-odysseya-vozvrat-v-kino.html",
    "title": "«Одиссея» вернётся в 1000 залов 11 декабря",
