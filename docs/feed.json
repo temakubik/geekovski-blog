@@ -8,6 +8,58 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1506-render-road-lionsgate.html",
+   "url": "https://geekovski.ru/2026-11-06-1506-render-road-lionsgate.html",
+   "title": "Lionsgate завела хоррор-лейбл Render Road",
+   "summary": "Lionsgate и её дочка 3 Arts запускают Render Road — студию, которая будет разрабатывать, производить и финансировать хорроры для кино, ТВ и цифровых платформ. Возглавят её менеджеры 3 Arts Люк Максвелл и Уилл Роуботэм, а на подходе у компании уже новая «Пила», «Ведьма из Блэр» и ремейк «Магии» от Сэма Рэйми.",
+   "date_published": "2026-11-06T15:06:00+03:00",
+   "date_modified": "2026-11-06T15:06:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/render-road-lionsgate.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — Lionsgate & 3 Arts set new horror banner Render Road",
+     "url": "https://deadline.com/2026/11/horror-films-lionsgate-3-arts-banner-1237215107/"
+    },
+    {
+     "name": "TheWrap — Lionsgate and 3 Arts team for new horror banner Render Road",
+     "url": "https://www.thewrap.com/creative-content/movies/lionsgate-3-arts-team-new-horror-banner-render-road/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1505-nier-automata-366-gb.html",
+   "url": "https://geekovski.ru/2026-11-06-1505-nier-automata-366-gb.html",
+   "title": "NieR: Automata внезапно требует 366 ГБ",
+   "summary": "Первый за пять лет патч для Steam-версии NieR: Automata добавил корейский и два китайских языка, а заодно раздул требуемое место с 50 до 366 ГБ. Square Enix подтвердила баг и предложила обход, пока ищет причину.",
+   "date_published": "2026-11-06T15:05:00+03:00",
+   "date_modified": "2026-11-06T15:05:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/nier-automata-366-gb.jpg",
+   "_sources": [
+    {
+     "name": "IGN — NieR: Automata dev working on fix for 366GB bug",
+     "url": "https://nordic.ign.com/nier-automata/115323/nier-automata-dev-working-on-fix-for-patch-that-accidentally-bloated-the-game-size-to-366gb-on-pc"
+    },
+    {
+     "name": "VGC — NieR: Automata update increases game size from 50GB to 366GB",
+     "url": "https://videogameschronicle.com/news/nier-automatas-latest-update-increases-game-size-from-50gb-to-366gb"
+    },
+    {
+     "name": "Automaton — NieR: Automata update raises file size from 50GB to 366GB",
+     "url": "https://automaton-media.com/en/news/nier-automata-developers-working-on-fix-after-update-accidentally-raises-steam-versions-file-size-from-50gb-to-366gb"
+    },
+    {
+     "name": "NieR (официальный аккаунт) — заявление о проблеме с местом на диске",
+     "url": "https://x.com/NieR_JPN/status/2118520550851281206"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html",
    "url": "https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html",
    "title": "EA вернула в Steam 25 классических игр",
