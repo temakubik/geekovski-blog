@@ -14,17 +14,19 @@
 - [Xbox](https://geekovski.ru/xbox/): 3 материала
 - [Nintendo Switch](https://geekovski.ru/switch/): 9 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 5 материалов
-- [PC-игры](https://geekovski.ru/pc/): 11 материалов
+- [PC-игры](https://geekovski.ru/pc/): 12 материалов
 - [VR](https://geekovski.ru/vr/): 2 материала
 - [Гаджеты](https://geekovski.ru/gadgets/): 14 материалов
 - [Кино](https://geekovski.ru/kino/): 7 материалов
 - [Сериалы](https://geekovski.ru/serialy/): 2 материала
-- [AI](https://geekovski.ru/ai/): 15 материалов
+- [AI](https://geekovski.ru/ai/): 16 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Материалы
 
+- [Anthropic разгоняется вдвое — на своём же Claude](https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html): Независимая группа METR изучила внутренние данные Anthropic и оценила, что компания улучшает модели примерно вдвое быстрее, чем год назад, — и большую часть ускорения объясняет помощью ИИ. (06.11.2026)
+- [Покупатели EA присмотрелись к Unity: $25 млрд](https://geekovski.ru/2026-11-06-1205-unity-25-mlrd-silver-lake-pif.html): Reuters сообщает, что Silver Lake и саудовский PIF вели переговоры о покупке Unity с оценкой около $25 млрд — тот же консорциум в августе закрыл выкуп EA за $55 млрд. (06.11.2026)
 - [Netflix выпустил сериал о штурме Дворца правосудия](https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html): 6 ноября на Netflix вышли все восемь эпизодов «Palacio» (Under Siege) — драмы о захвате Дворца правосудия в Боготе отрядом M-19 в 1985 году и его штурме армией. Сценарий писали больше семи лет по документам и показаниям. (06.11.2026)
 - [GameSir встроила экран в геймпад Nova Vision](https://geekovski.ru/2026-11-06-1116-gamesir-nova-vision.html): GameSir вывела на мировой рынок контроллер Nova Vision с 0,96-дюймовым ЖК-экраном по центру: через него настраиваются профили и стики, не открывая приложение на ПК или телефоне. $54,99 за чёрный и белый, $64,99 за версию по Nioh 3. (06.11.2026)
 - [Взлом Sega Fave оставил аркады Японии без сети](https://geekovski.ru/2026-11-06-1112-sega-fave-vzlom-arkady.html): Sega Fave с 1 ноября держит выключенными ALL.Net и Aime после несанкционированного доступа к серверам — без онлайн-режимов остались Initial D, CHUNITHM, maimai и даже Taiko no Tatsujin от Bandai Namco. 6 ноября компания признала, что даты восстановления до сих пор нет. (06.11.2026)

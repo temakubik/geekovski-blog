@@ -8,6 +8,54 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html",
+   "url": "https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html",
+   "title": "Anthropic разгоняется вдвое — на своём же Claude",
+   "summary": "Независимая группа METR изучила внутренние данные Anthropic и оценила, что компания улучшает модели примерно вдвое быстрее, чем год назад, — и большую часть ускорения объясняет помощью ИИ.",
+   "date_published": "2026-11-06T12:06:00+03:00",
+   "date_modified": "2026-11-06T12:06:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/metr-anthropic-uskorenie-vdvoe.jpg",
+   "_sources": [
+    {
+     "name": "AP — Anthropic is rapidly accelerating AI development amid slowdown calls, outside research group says",
+     "url": "https://www.news-herald.com/2026/11/05/anthropic-rapid-ai-development/"
+    },
+    {
+     "name": "Reuters — Anthropic's models improving nearly twice as fast with help from AI",
+     "url": "https://cio.economictimes.indiatimes.com/news/artificial-intelligence/anthropics-models-improving-nearly-twice-as-fast-with-help-from-ai/135590986"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-06-1205-unity-25-mlrd-silver-lake-pif.html",
+   "url": "https://geekovski.ru/2026-11-06-1205-unity-25-mlrd-silver-lake-pif.html",
+   "title": "Покупатели EA присмотрелись к Unity: $25 млрд",
+   "summary": "Reuters сообщает, что Silver Lake и саудовский PIF вели переговоры о покупке Unity с оценкой около $25 млрд — тот же консорциум в августе закрыл выкуп EA за $55 млрд.",
+   "date_published": "2026-11-06T12:05:00+03:00",
+   "date_modified": "2026-11-06T12:05:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/unity-25-mlrd-silver-lake-pif.jpg",
+   "_sources": [
+    {
+     "name": "Reuters — Silver Lake, PIF have held recent talks to buy gaming software provider Unity",
+     "url": "https://www.reuters.com/world/silver-lake-pif-have-held-recent-talks-buy-gaming-software-provider-unity-2026-11-05/"
+    },
+    {
+     "name": "The Verge — Unity has reportedly had acquisition talks with Silver Lake and PIF",
+     "url": "https://www.theverge.com/games/1028484/unity-has-reportedly-had-acquisition-talks-with-silver-lake-and-pif"
+    },
+    {
+     "name": "Inven Global — Unity posts first GAAP profit since IPO as Q3 revenue hits $622m",
+     "url": "https://www.invenglobal.com/articles/28232/unity-posts-first-gaap-profit-since-ipo-as-q3-revenue-hits-622m"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html",
    "url": "https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html",
    "title": "Netflix выпустил сериал о штурме Дворца правосудия",
