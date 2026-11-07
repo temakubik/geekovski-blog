@@ -8,6 +8,28 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-07-game-pass-noyabr.html",
+   "url": "https://geekovski.ru/2026-11-07-game-pass-noyabr.html",
+   "title": "Game Pass в ноябре: 14 игр уходят, восемь классик приезжают",
+   "summary": "15 ноября из Game Pass исчезнут 13 игр разом — включая GoldenEye 007 и Wreckfest, а в тот же день каталог пополнят восемь классик Xbox. Разбираем календарь месяца и что успеть пройти.",
+   "date_published": "2026-11-07T20:30:00+03:00",
+   "date_modified": "2026-11-07T20:30:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/gamepass-november.jpg",
+   "_sources": [
+    {
+     "name": "Xbox Wire — Game Pass ноябрь, волна 1",
+     "url": "https://news.xbox.com/en-us/2026/11/03/xbox-game-pass-november-2026-wave-1"
+    },
+    {
+     "name": "NME — ноябрьские добавления",
+     "url": "https://www.nme.com/news/gaming-news/xbox-game-pass-confirms-november-2026-additions-3974805"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-07-skidki-noyabrya.html",
    "url": "https://geekovski.ru/2026-11-07-skidki-noyabrya.html",
    "title": "Скидки недели: PlayStation до 85%, Xbox раздаёт дни, eShop с 9 ноября",
