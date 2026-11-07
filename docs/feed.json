@@ -8,6 +8,36 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-07-gta6-212gb-predzagruzka.html",
+   "url": "https://geekovski.ru/2026-11-07-gta6-212gb-predzagruzka.html",
+   "title": "GTA 6 за 12 дней: 212 ГБ, предзагрузка 10 ноября и код вместо диска",
+   "summary": "Rockstar подтвердила параметры запуска: предзагрузка стартует 10 ноября, файлы занимают до 212 ГБ, а в коробочных изданиях будет только код — карту Леониды продают отдельно.",
+   "date_published": "2026-11-07T12:30:00+03:00",
+   "date_modified": "2026-11-07T12:30:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-grassrivers-1.jpg",
+   "_sources": [
+    {
+     "name": "Rockstar Newswire — Pre-Load Begins on November 10",
+     "url": "https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10"
+    },
+    {
+     "name": "Rockstar Support — Pre-Load FAQ",
+     "url": "https://support.rockstargames.com/articles/7nPqOA2uCbpEQHXx7KVrYd/grand-theft-auto-vi-pre-load-faq"
+    },
+    {
+     "name": "Push Square — 212 ГБ и карта вне коробки",
+     "url": "https://www.pushsquare.com/news/2026/11/gta-6-ps5-file-size-confirmed-to-be-212gb-physical-map-available-but-not-in-boxed-copies"
+    },
+    {
+     "name": "PlayStation Support — системное ПО PS5",
+     "url": "https://www.playstation.com/en-us/support/hardware/ps5/system-software/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-06-2105-meta-skraping-otmena.html",
    "url": "https://geekovski.ru/2026-11-06-2105-meta-skraping-otmena.html",
    "title": "Meta отменила скрапинг сайтов рекламодателей",
