@@ -8,6 +8,36 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-07-skidki-noyabrya.html",
+   "url": "https://geekovski.ru/2026-11-07-skidki-noyabrya.html",
+   "title": "Скидки недели: PlayStation до 85%, Xbox раздаёт дни, eShop с 9 ноября",
+   "summary": "PS Store запустил Black Friday до 30 ноября с дисконтами до 85%, Xbox отдаёт PAYDAY 3 и Anno 117 на выходные, Nintendo открывает распродажу 9 ноября, а большая распродажа Steam будет только в декабре.",
+   "date_published": "2026-11-07T16:10:00+03:00",
+   "date_modified": "2026-11-07T16:10:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/deal-xbox-fpd.jpg",
+   "_sources": [
+    {
+     "name": "PlayStation.Blog — Black Friday Deals 2026",
+     "url": "https://blog.playstation.com/2026/11/03/playstations-black-friday-deals-2026"
+    },
+    {
+     "name": "Polygon — PS Store Black Friday sale",
+     "url": "https://polygon.com/playstation-store-black-friday-sale-2026-ps5-ps4-games"
+    },
+    {
+     "name": "Xbox Wire — Free Play Days",
+     "url": "https://news.xbox.com/en-us/2026/11/05/free-play-days-11-04-2026/"
+    },
+    {
+     "name": "Nintendo — eShop Sale с 9 ноября",
+     "url": "https://www.nintendo.com/my/news/article/7ChdabSXGHZS7RnyNd0gfD"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-07-gta6-212gb-predzagruzka.html",
    "url": "https://geekovski.ru/2026-11-07-gta6-212gb-predzagruzka.html",
    "title": "GTA 6 за 12 дней: 212 ГБ, предзагрузка 10 ноября и код вместо диска",
