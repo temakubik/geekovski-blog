@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-08-2355-nvidia-proverka-huang.html",
+   "url": "https://geekovski.ru/2026-11-08-2355-nvidia-proverka-huang.html",
+   "title": "Совет Nvidia проверяет Хуана из-за шпионского скандала",
+   "summary": "Совет директоров Nvidia в воскресенье открыл независимое расследование: американская разведка считает, что Дженсена Хуана пытались завербовать китайские спецслужбы. Хуан признал в письме сотрудникам, что изменил жене, но настаивает, что секретов компании не передавал.",
+   "date_published": "2026-11-08T23:55:00+03:00",
+   "date_modified": "2026-11-08T23:55:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/nvidia-proverka-huang.jpg",
+   "_sources": [
+    {
+     "name": "NVIDIA Newsroom — Statement from NVIDIA Board of Directors",
+     "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+    },
+    {
+     "name": "The Verge — Nvidia is investigating Jensen Huang's relationship with a Chinese spy",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy"
+    },
+    {
+     "name": "CNBC — Nvidia investigates CEO Jensen Huang's relationship with alleged Chinese spy",
+     "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html"
+    },
+    {
+     "name": "CNBC — Nvidia's Huang is asked to brief Congress on reported Chinese spy relationship",
+     "url": "https://www.cnbc.com/2026/11/05/nvidia-jensen-huang-china-spy-congress.html"
+    },
+    {
+     "name": "Axios — Nvidia CEO Jensen Huang admits affair, board to launch investigation",
+     "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-admits-affair-board-to-launch-investigation"
+    },
+    {
+     "name": "The New York Times — Nvidia China Jensen Huang Trump",
+     "url": "https://www.nytimes.com/2026/10/29/us/politics/nvidia-china-jensen-huang-trump.html"
+    },
+    {
+     "name": "TechCrunch — Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+     "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/"
+    },
+    {
+     "name": "The Verge — The US let Nvidia sell chips to an empty office in China",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-08-7-serialov-noyabrya.html",
    "url": "https://geekovski.ru/2026-11-08-7-serialov-noyabrya.html",
    "title": "7 сериалов ноября: «Бегущий по лезвию 2099», финал «Императрицы» и 12 12 12",
