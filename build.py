@@ -15,7 +15,7 @@ import re
 import shutil
 import struct
 import urllib.parse
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -1426,6 +1426,51 @@ TRANSLIT = {"а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "�
             "з": "z", "и": "i", "й": "y", "к": "k", "л": "l", "м": "m", "н": "n", "о": "o",
             "п": "p", "р": "r", "с": "s", "т": "t", "у": "u", "ф": "f", "х": "h", "ц": "c",
             "ч": "ch", "ш": "sh", "щ": "sch", "ъ": "", "ы": "y", "ь": "", "э": "e", "ю": "yu", "я": "ya"}
+
+
+def published_index():
+    """Индекс уже вышедших материалов для проверки на дубли: слаг, заголовок,
+    дата и текст. Читается из content/posts, чтобы проверка была дешёвой."""
+    out = []
+    for f in sorted((ROOT / "content" / "posts").glob("*.md")):
+        t = f.read_text(encoding="utf-8")
+        title = ""
+        date = ""
+        for line in t.split("\n")[:20]:
+            if line.startswith("title:"):
+                title = line.split(":", 1)[1].strip()
+            elif line.startswith("date:"):
+                date = line.split(":", 1)[1].strip()
+        if title:
+            out.append({"slug": f.stem, "title": title, "date": date[:10],
+                        "words": len(t.split())})
+    return out
+
+
+def is_duplicate(topic, posts_index, lookback_days=7):
+    """Грубая, но честная проверка на дубль: доля общих значимых слов заголовка
+    с любым материалом за N дней. 0.6 и выше — дубль."""
+    import re as _re
+    stop = {"и", "в", "на", "с", "по", "для", "из", "о", "как", "что", "это",
+            "the", "a", "of", "to", "in", "and", "for"}
+    def words(s):
+        return {w for w in _re.findall(r"[а-яёa-z0-9]+", s.lower())
+                if w not in stop and len(w) > 2}
+    tw = words(topic)
+    if not tw:
+        return None
+    best = None
+    cutoff = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
+    for p in posts_index:
+        if p["date"] and p["date"] < cutoff:
+            continue
+        sw = words(p["title"])
+        if not sw:
+            continue
+        share = len(tw & sw) / len(tw)
+        if share >= 0.6 and (best is None or share > best[0]):
+            best = (share, p)
+    return best
 
 
 def title_slug(text):

@@ -75,6 +75,30 @@ def abspath(url):
     return "https://geekovski.ru" + url if url.startswith("/") else url
 
 
+def photo_url(cover):
+    """Картинку подставляем data-URI из local-файла.
+
+    Пин рендерится по file://, и внешний URL в background-image там не грузится
+    (или грузится уже после снимка) — получается чёрная плашка. Локальный файл
+    в base64 снимает и сеть, и гонку с загрузкой.
+    """
+    import base64, mimetypes
+    url = abspath(cover)
+    if url.startswith("http://") or url.startswith("https://"):
+        if url.startswith("https://geekovski.ru"):
+            # cover: пишется как /assets/img/x.jpg, а файл лежит в static/img/x.jpg —
+            # префикс /assets/ надо снять, иначе путь ведёт в несуществующий static/assets
+            rel = url.split("geekovski.ru", 1)[1].lstrip("/")
+            if rel.startswith("assets/"):
+                rel = rel[len("assets/"):]
+            local = ROOT / "static" / rel
+            if local.exists():
+                mime = mimetypes.guess_type(str(local))[0] or "image/jpeg"
+                return "data:%s;base64,%s" % (mime, base64.b64encode(local.read_bytes()).decode())
+        return url
+    return url
+
+
 def render(slug, meta):
     cat = meta.get("category", "ai")
     color = CAT_COLOR.get(cat, "#C9F24D")
@@ -88,13 +112,14 @@ def render(slug, meta):
         day, month = str(int(dm.group(3))), MONTHS[int(dm.group(2)) - 1]
     elif stem:
         day, month = str(int(stem.group(3))), MONTHS[int(stem.group(2)) - 1]
-    html = HTML.format(img=abspath(meta.get("cover", "")), c=color, cat=CAT_LABEL.get(cat, cat),
+    html = HTML.format(img=photo_url(meta.get("cover", "")), c=color, cat=CAT_LABEL.get(cat, cat),
                        title=title, size=size, day=day, month=month)
     OUT.mkdir(exist_ok=True)
     page = OUT / ("%s.html" % slug)
     page.write_text(html, encoding="utf-8")
     png = OUT / ("%s.png" % slug)
     subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-first-run",
+                    "--allow-file-access-from-files",
                     "--user-data-dir=/tmp/ch_pin_%s" % slug[:10], "--hide-scrollbars",
                     "--virtual-time-budget=7000", "--window-size=1000,1500",
                     "--screenshot=%s" % png, page.as_uri()], check=True, capture_output=True)

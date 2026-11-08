@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-08-7-serialov-noyabrya.html",
+   "url": "https://geekovski.ru/2026-11-08-7-serialov-noyabrya.html",
+   "title": "7 сериалов ноября: «Бегущий по лезвию 2099», финал «Императрицы» и 12 12 12",
+   "summary": "Ноябрь 2026 выдался на сериалы плотным: Amazon запускает первый сериал во вселенной «Бегущего по лезвию», Netflix закрывает «Императрицу», Apple везёт ограбление с Энтони Маки, а Стивен Кинг возвращается на MGM+. Разбираем семь проектов с датами, платформами и одним объяснением — почему именно этот.",
+   "date_published": "2026-11-08T10:00:00+03:00",
+   "date_modified": "2026-11-08T10:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/empress.jpg",
+   "_sources": [
+    {
+     "name": "Netflix — The Empress season 3",
+     "url": "https://about.netflix.com/en/news/the-empress-third-final-season-trailer-and-artwork"
+    },
+    {
+     "name": "Amazon — Blade Runner 2099",
+     "url": "https://www.aboutamazon.com/news/entertainment/blade-runner-2099-prime-video"
+    },
+    {
+     "name": "Variety — Rings of Power season 3 date",
+     "url": "https://variety.com/2026/tv/news/the-rings-of-power-season-3-fall-release-date-1236745269/"
+    },
+    {
+     "name": "Apple TV Press — 12 12 12",
+     "url": "https://www.apple.com/tv-pr/originals/12-12-12/"
+    },
+    {
+     "name": "Amazon MGM Press — The Institute season 2",
+     "url": "https://press.amazonmgmstudios.com/us/en/mgm-plus-series/the-institute/2"
+    },
+    {
+     "name": "Netflix Tudum — The Body",
+     "url": "https://www.netflix.com/tudum/articles/the-body-plot-release-date-news"
+    },
+    {
+     "name": "Netflix Tudum — The Hunting Wives S2",
+     "url": "https://www.netflix.com/tudum/articles/the-hunting-wives-season-2-cast-release-date-news"
+    },
+    {
+     "name": "Disney+ — Percy Jackson S3",
+     "url": "https://www.disneyplus.com/explore/articles/percy-jackson-season-3"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-07-game-pass-noyabr.html",
    "url": "https://geekovski.ru/2026-11-07-game-pass-noyabr.html",
    "title": "Game Pass в ноябре: 14 игр уходят, восемь классик приезжают",
