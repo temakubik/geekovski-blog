@@ -8,6 +8,60 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-09-1000-ps5-za-300-vmesto-ps6.html",
+   "url": "https://geekovski.ru/2026-11-09-1000-ps5-za-300-vmesto-ps6.html",
+   "title": "Экс-босс PlayStation хочет PS5 за $300 вместо PS6",
+   "summary": "Шон Лейден, бывший президент Sony Interactive Entertainment America, считает, что гонку мощностей пора заканчивать: настоящая инновация — не PS6 за $1200, а «ещё одна PS5 за $300». Разбираем, откуда взялись цены на консоли, которые больше не падают.",
+   "date_published": "2026-11-09T10:00:00+03:00",
+   "date_modified": "2026-11-09T10:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/ps5-za-300-vmesto-ps6.jpg",
+   "_sources": [
+    {
+     "name": "IGN — Layden о PS6 и PS5 за $300",
+     "url": "https://www.ign.com/articles/former-playstation-boss-says-sony-doesnt-need-a-ps6-for-1200-it-needs-a-ps5-for-300"
+    },
+    {
+     "name": "GamesRadar+ — Лейден в The Trophy Room",
+     "url": "https://www.gamesradar.com/platforms/playstation/ps6-doesnt-need-more-power-ex-playstation-boss-says-because-true-innovation-would-be-making-a-usd300-console-again"
+    },
+    {
+     "name": "PlayStation.Blog — новые цены с 2 апреля 2026",
+     "url": "https://blog.playstation.com/2026/03/27/new-price-changes-for-ps5-ps5-pro-and-playstation-portal-remote-player/"
+    },
+    {
+     "name": "The Verge — Sony поднимает цены на PS5",
+     "url": "https://www.theverge.com/games/902224/sony-ps5-playstation-price-hike"
+    },
+    {
+     "name": "Sony — финансовый отчёт Q2 FY2026",
+     "url": "https://www.sony.com/en/SonyInfo/IR/library/er/pdf/26q2_supplement.pdf"
+    },
+    {
+     "name": "Game File — Sony прекращает производство дисков в 2028-м",
+     "url": "https://www.gamefile.news/p/sony-drops-playstation-discs-2028-ps3-vita-stores-closing"
+    },
+    {
+     "name": "TechRadar — Ampere о PS6 в конце 2028-го",
+     "url": "https://www.techradar.com/gaming/analysts-say-sonys-digital-only-plan-almost-certainly-guarantees-that-the-ps6-wont-arrive-until-2028-at-the-earliest-and-wont-have-a-disc-drive"
+    },
+    {
+     "name": "tbreak — оценка PS6 около $1000",
+     "url": "https://tbreak.com/ps6-needs-cheaper-not-faster-shawn-layden"
+    },
+    {
+     "name": "VGC — Nintendo не планирует новое подорожание Switch 2",
+     "url": "https://www.videogameschronicle.com/news/nintendo-says-it-is-not-considering-a-switch-2-price-hike/"
+    },
+    {
+     "name": "iXBT Games — пересказ слов Лейдена",
+     "url": "https://ixbt.games/en/news/2026/11/09/byvsii-boss-playstation-prizval-sony-otkazatsia-ot-gonki-texnologii-radi-ps6-za-300.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-08-2355-nvidia-proverka-huang.html",
    "url": "https://geekovski.ru/2026-11-08-2355-nvidia-proverka-huang.html",
    "title": "Совет Nvidia проверяет Хуана из-за шпионского скандала",
