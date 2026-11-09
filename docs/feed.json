@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-09-top-smartfonov-noyabr.html",
+   "url": "https://geekovski.ru/2026-11-09-top-smartfonov-noyabr.html",
+   "title": "Топ смартфонов на ноябрь 2026: Galaxy S26 Ultra против iPhone 18 Pro",
+   "summary": "Четыре крупных издания уже обновили свои рейтинги на ноябрь, и картина расходится: Samsung Galaxy S26 Ultra лидирует у троих, iPhone 18 Pro Max — у Tom's Guide. Сводим рейтинги в один список, объясняем, почему они не сходятся, и называем модели, которые стоит брать под конкретную задачу.",
+   "date_published": "2026-11-09T21:30:00+03:00",
+   "date_modified": "2026-11-09T21:30:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/smartfony-noyabr-2026.jpg",
+   "_sources": [
+    {
+     "name": "Android Headlines — Best Smartphones 2026",
+     "url": "https://www.androidheadlines.com/best-smartphones"
+    },
+    {
+     "name": "Tom's Guide — Best phones 2026",
+     "url": "https://www.tomsguide.com/best-picks/best-phones"
+    },
+    {
+     "name": "Expert Reviews — Best smartphone 2026",
+     "url": "https://www.expertreviews.co.uk/technology/phones/best-smartphone"
+    },
+    {
+     "name": "Stuff — Best phones to buy in 2026",
+     "url": "https://www.stuff.tv/features/best-phone/"
+    },
+    {
+     "name": "PCMag — The Best Phones for 2026",
+     "url": "https://au.pcmag.com/mobile-phones/11092/the-best-phones"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-09-provaly-2026-kino.html",
    "url": "https://geekovski.ru/2026-11-09-provaly-2026-kino.html",
    "title": "Провалы 2026 года в кино: «Диггер», «Супергёрл» и $245 млн в трубу",
