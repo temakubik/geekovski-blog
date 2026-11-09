@@ -567,3 +567,11 @@ a.tlink:hover { border-bottom-style: solid; }
 .table-wrap tbody tr:last-child td { border-bottom: 0; }
 .table-wrap tbody tr:hover { background: var(--panel); }
 .table-wrap td:first-child { color: var(--fg); }
+
+/* Переносы и висячие строки в тексте статьи. hyphens работает благодаря
+   lang="ru" на <html>; text-wrap: pretty убирает одиночные слова в последней
+   строке абзаца там, где браузер это поддерживает. */
+.post p, .post li, .post blockquote p {
+  hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; text-wrap: pretty;
+}
+.post h1, .post h2, .post h3 { text-wrap: balance; hyphens: manual; }

@@ -5,7 +5,7 @@ category: switch
 author: hermes
 summary: Samsung готовит 8LPU+ — техпроцесс на 12 % быстрее и на 15 % экономнее прежнего 8 нм, на котором сделан чип Switch 2. Из этого уже вывели «дешёвую Switch 2 Lite за $299 в 2027 году». Digital Foundry разобрал версию по частям и говорит: цифры процесса не превращаются в характеристики консоли, а памяти в мире всё равно не хватает.
 tldr: Samsung 8LPU+ даёт +12 % производительности, −15 % потребления и −8 % площади логики — но это параметры процесса, а не будущей консоли | Чип Switch 2 — кастомный гибрид 8 и 10 нм от NVIDIA, перенос на новый узел требует перепроектирования, а не копипаста | Switch 2 продаётся на 37,4 % хуже прошлого года, цена выросла на $50 из-за памяти, и это главный аргумент против дешёвой модели
-cover: /assets/img/switch-2-lite-sluh.jpg
+cover: /assets/img/switch-2-lite-cover.jpg
 pin: /assets/img/2026-11-09-2100-switch-2-lite-sluh-pin.jpg
 credit: Изображения: Crisco 1492 / Wikimedia Commons, CC BY-SA 4.0; DYVER / Wikimedia Commons, CC BY-SA 4.0; Fritzchens Fritz / Wikimedia Commons, CC0.
 sources: Digital Foundry — возможно ли Switch 2 Lite на новом чипе Samsung | https://digitalfoundry.net/news/2026/11/is-switch-2-lite-possible-thanks-to-new-samsung-chip-technology; Nintendo Life — слух о Switch 2 Lite и разбор Digital Foundry | https://www.nintendolife.com/news/2026/11/rumour-samsungs-new-chip-process-kicks-off-nintendo-switch-2-lite-speculation; TechPowerUp — 8LPU+ как узел для будущей Switch 2 Lite | https://www.techpowerup.com/354201/samsung-8lpu-gets-floated-as-the-node-for-a-future-switch-2-lite; VideoCardz — параметры чипа T239 и узла 8LPU+ | https://videocardz.com/newz/nintendo-switch-2-lite-rumored-to-feature-samsungs-new-8lpu-process; NotebookCheck — слух о Switch 2 Lite на 8LPU+ | https://www.notebookcheck.net/Switch-2-Lite-rumored-with-cheaper-Samsung-chip-process-benefiting-Nintendo-console.1431129.0.html; Nintendo — финансовый отчёт за первое полугодие FY2027 | https://www.nintendo.co.jp/ir/pdf/2026/261105_3e.pdf; IGN — Nintendo исключает дальнейшее повышение цены Switch 2 | https://www.ign.com/articles/nintendo-rules-out-further-switch-2-price-rises-as-console-sales-and-profit-fall; IEDM 2026 — сессия Samsung по 8LPU+ | https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=368
@@ -49,7 +49,7 @@ Switch 2 работает на NVIDIA T239: восемь ядер ARM Cortex-A78
 
 Из этой картины следует неприятная для слуха вещь: сделать «дешёвую» консоль в момент, когда дорожает каждый компонент, — значит либо урезать железо сильнее, чем это делала Switch Lite, либо потерять маржу. Switch Lite в 2019-м стоила $199,99 при основной модели за $299: экономия шла за счёт 5,5-дюймового экрана 720p, несъёмных контроллеров и отсутствия выхода на телевизор. У Switch 2 таких запасов меньше: экран уже 1080p, а память — самая дорогая часть платы.
 
-![Switch Lite 2019 года: экономия шла за счёт экрана 720p, несъёмных контроллеров и отсутствия дока](/assets/img/switch-2-lite-sluh-lite.jpg)
+![Switch 2 в доке: именно эту модель слухи предлагают «удешевить»](/assets/img/switch-2-lite-sluh.jpg)
 
 ## Что реально может выйти
 

@@ -139,6 +139,60 @@ def parse_post(path: Path):
 
 # ---------- markdown ----------
 
+NBSP = "\u00a0"
+
+# Короткие слова, которые не должны висеть в конце строки: «в», «на», «и» и т. п.
+_SHORT_WORDS = ("в|во|на|и|а|но|с|со|к|ко|по|у|о|об|от|до|из|за|для|при|не|ни|"
+                "же|ли|бы|или|под|над|без|про|через|после|перед|между|что|как|"
+                "то|так|все|всё|это|их|его|её|им|ей|мне|мы|вы|он|она|они")
+
+
+def typo_text(t: str) -> str:
+    """Русская типографика прямо в тексте публикации.
+
+    Что делает и зачем:
+    - дефис между словами превращает в тире с неразрывным пробелом ПЕРЕД ним:
+      «слово — слово». Тире никогда не начинает строку, а висячий дефис не рвёт вёрстку;
+    - приклеивает короткие предлоги и союзы («в», «на», «и») к следующему слову
+      неразрывным пробелом — именно из-за них в тексте появлялись строки из одного слова;
+    - «5 ноября», «212 ГБ», «12 %» держит вместе: число не отрывается от единицы;
+    - «т. д.», «т. п.» приводит к одному виду;
+    - три точки — в один символ многоточия.
+    """
+    if not t:
+        return t
+    t = re.sub(r"[ \t]{2,}", " ", t)
+    # тире: только когда пробелы с двух сторон. Дефис в «--theme» или «file-name»
+    # иначе превращался в тире и ломал код в статьях
+    t = re.sub(r"[ \t]+[-–—][ \t]+", NBSP + "— ", t)
+    # короткие слова приклеиваются к следующему слову
+    t = re.sub(r"(?<![\w" + NBSP + r"])(" + _SHORT_WORDS + r")\s+", lambda m: m.group(1) + NBSP, t)
+    # число + единица/слово/валюта
+    t = re.sub(r"(\d)\s+(?=[\wА-Яа-яЁё$€₽])", lambda m: m.group(1) + NBSP, t)
+    t = re.sub(r"(\d)\s*([%°])", lambda m: m.group(1) + NBSP + m.group(2), t)
+    t = re.sub(r"\bт\.\s*д\.", "т." + NBSP + "д.", t)
+    t = re.sub(r"\bт\.\s*п\.", "т." + NBSP + "п.", t)
+    t = t.replace("...", "…")
+    return t
+
+
+def typo_html(fragment: str) -> str:
+    """Типографика только по текстовым узлам: атрибуты, теги и <code> не трогаем."""
+    parts = re.split(r"(<[^>]*>)", fragment)
+    in_code = False
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            low = part.lower()
+            if low.startswith("<code"):
+                in_code = True
+            elif low.startswith("</code"):
+                in_code = False
+            continue
+        if part and not in_code:
+            parts[i] = typo_text(part)
+    return "".join(parts)
+
+
 def md_inline(text: str) -> str:
     text = html.escape(text, quote=False)
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
@@ -151,7 +205,7 @@ def md_inline(text: str) -> str:
         cls = ' class="tlink"' if href.startswith("/titles/") else ""
         return '<a%s href="%s">%s</a>' % (cls, href, label)
     text = re.sub(r"\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)", _link, text)
-    return text
+    return typo_html(text)
 
 
 def _table_html(head, rows, aligns):
