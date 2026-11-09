@@ -481,3 +481,16 @@ a.tlink:hover { border-bottom-style: solid; }
 .cal-month .mrow:last-child { border-bottom: 0; }
 .cal-history { opacity: .82; }
 .mblock--past .mrow { color: var(--muted); }
+
+/* Таблицы в тексте статьи. На мобиле таблица не ломает вёрстку:
+   .table-wrap скроллится по горизонтали, тело таблицы получает min-width,
+   иначе браузер сжимает колонки до нечитаемого. */
+.table-wrap { overflow-x: auto; margin: 26px 0 30px; -webkit-overflow-scrolling: touch; }
+.table-wrap table { width: 100%; border-collapse: collapse; font-family: var(--font-text);
+  font-size: var(--fs-small); line-height: 1.45; min-width: 460px; }
+.table-wrap th, .table-wrap td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.table-wrap thead th { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--muted); white-space: nowrap; }
+.table-wrap tbody tr:last-child td { border-bottom: 0; }
+.table-wrap tbody tr:hover { background: var(--panel); }
+.table-wrap td:first-child { color: var(--fg); }

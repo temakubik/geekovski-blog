@@ -154,6 +154,24 @@ def md_inline(text: str) -> str:
     return text
 
 
+def _table_html(head, rows, aligns):
+    """Таблица из markdown. Первая строка — заголовок, <th> внутри <thead>.
+
+    ВАЖНО: таблица вставляется в шаблон через .format() только в других местах;
+    здесь обычная склейка, поэтому скобки не удваиваем.
+    """
+    def cell(tag, txt, idx):
+        al = aligns[idx] if idx < len(aligns) else "left"
+        return '<%s style="text-align:%s">%s</%s>' % (tag, al, md_inline(txt), tag)
+    th = "".join(cell("th", c, k) for k, c in enumerate(head))
+    tb = ""
+    for r in rows:
+        tds = "".join(cell("td", c, k) for k, c in enumerate(r))
+        tb += "<tr>%s</tr>" % tds
+    return ('<div class="table-wrap"><table>'
+            '<thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (th, tb))
+
+
 def md(text: str) -> str:
     out, buf, mode = [], [], None
     def flush():
@@ -172,8 +190,32 @@ def md(text: str) -> str:
             out.append("<p>%s</p>" % md_inline(chunk))
         buf, mode = [], None
 
-    for line in text.splitlines():
+    lines = text.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
         s = line.rstrip()
+        # ТАБЛИЦА: строка «|…|», затем разделитель «|---|:--:|». Без этой ветки
+        # трубы печатались в тексте как «| Издание | Первое место |», и автор
+        # видел «таблица отображается некорректно» вместо самой таблицы.
+        if s.strip().startswith("|") and i + 1 < len(lines) and re.match(
+                r"^\s*\|?[\s:|-]+\|?\s*$", lines[i + 1]) and "-" in lines[i + 1]:
+            flush()
+            head = [c.strip() for c in s.strip().strip("|").split("|")]
+            aligns = []
+            for c in lines[i + 1].strip().strip("|").split("|"):
+                c = c.strip()
+                aligns.append("center" if c.startswith(":") and c.endswith(":")
+                              else "right" if c.endswith(":") else "left")
+            rows = []
+            j = i + 2
+            while j < len(lines) and lines[j].strip().startswith("|"):
+                rows.append([c.strip() for c in lines[j].strip().strip("|").split("|")])
+                j += 1
+            out.append(_table_html(head, rows, aligns))
+            i = j
+            continue
+        i += 1
         if not s.strip():
             flush()
             continue

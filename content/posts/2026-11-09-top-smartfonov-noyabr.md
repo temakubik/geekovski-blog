@@ -17,11 +17,13 @@ sources: Android Headlines — Best Smartphones 2026 | https://www.androidheadli
 
 ## Кто на первом месте у кого
 
-- **Android Headlines** (5 ноября) — Samsung Galaxy S26 Ultra, $1399
-- **Expert Reviews** — Samsung Galaxy S26 Ultra
-- **PCMag** — Samsung Galaxy S26 Ultra
-- **Tom's Guide** — Apple iPhone 18 Pro / Pro Max, $1199 / $1299
-- **Stuff** — Apple iPhone 17, $799
+| Издание | Первое место | Цена |
+|---|---|---|
+| Android Headlines (5 ноября) | Samsung Galaxy S26 Ultra | $1399 |
+| Expert Reviews | Samsung Galaxy S26 Ultra | — |
+| PCMag | Samsung Galaxy S26 Ultra | — |
+| Tom's Guide | Apple iPhone 18 Pro / Pro Max | $1199 / $1299 |
+| Stuff | Apple iPhone 17 | $799 |
 
 Три из пяти ставят на Samsung, причём Android Headlines обосновывает это конкретным тестом: S26 Ultra **дольше всех работал в их тесте автономности среди нефолдингов** и остался единственным телефоном в списке со встроенным S Pen.
 
@@ -61,10 +63,14 @@ sources: Android Headlines — Best Smartphones 2026 | https://www.androidheadli
 
 Отдельная картина — рейтинг AnTuTu за октябрь 2026, опубликованный 3 ноября:
 
-- **Honor WIN2** — 4 958 339 баллов, первое место. Игровой флагман с активной системой охлаждения: вентилятор и два воздушных канала.
-- **Red Magic 12 Pro+** — 4 956 846 баллов. Разница с лидером **всего 1493 балла**, то есть меньше 0,1%; здесь жидкостное охлаждение.
-- **iQOO 16** — 4 865 546 баллов, третье место.
-- Дальше: **Xiaomi 18 Fold** с собственным чипом XRing O3 (4 737 201), **OnePlus 16** (4 721 800), **Honor Magic9 Pro Max** (4 544 330).
+| Место | Модель | Баллы AnTuTu | Чип |
+|---|---|---|---|
+| 1 | Honor WIN2 | 4 958 339 | Snapdragon 8 Elite Extreme Gen 6 |
+| 2 | Red Magic 12 Pro+ | 4 956 846 | Snapdragon 8 Elite Extreme Gen 6 |
+| 3 | iQOO 16 | 4 865 546 | Snapdragon 8 Elite Extreme Gen 6 |
+| 4 | Xiaomi 18 Fold | 4 737 201 | XRing O3 |
+| 5 | OnePlus 16 | 4 721 800 | Snapdragon 8 Elite Extreme Gen 6 |
+| 6 | Honor Magic9 Pro Max | 4 544 330 | Snapdragon 8 Elite Extreme Gen 6 |
 
 Семь из десяти самых производительных смартфонов октября работают на чипах Qualcomm Snapdragon, два — на MediaTek Dimensity 9600 Pro, один — на собственной разработке Xiaomi.
 
