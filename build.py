@@ -1453,6 +1453,52 @@ def published_index():
     return out
 
 
+def topic_duplicates(topics, lookback_days=7, max_df=8):
+    """Проверка СПИСКА ТЕМ перед отправкой автору.
+
+    Сравнения по заголовку мало: «Бегущий по лезвию 2099: всё, что известно»
+    и «7 сериалов ноября» не делят ни одного слова из названия темы, хотя это
+    один и тот же материал. Поэтому тема сверяется с заголовком, summary и
+    началом тела по «якорям» — латинским названиям, числам от трёх цифр и
+    редким русским словам. Редкость считается по всему архиву: слово,
+    которое встречается в 10 постах («ноября», «премьера»), якорем не бывает.
+    """
+    import re as _re
+
+    def raw_anchors(s):
+        latin = _re.findall(r"[A-Za-z][A-Za-z0-9'’-]{2,}", s)
+        nums = _re.findall(r"\b\d{3,}\b", s)
+        cyr = [w for w in _re.findall(r"[А-Яа-яЁё]{6,}", s)]
+        return {w.lower() for w in latin + nums + cyr}
+
+    posts = []
+    df = {}
+    for f in sorted((ROOT / "content" / "posts").glob("*.md")):
+        text = f.read_text(encoding="utf-8")
+        m = _re.search(r"^title:\s*(.+)$", text, _re.M)
+        title = m.group(1) if m else ""
+        head = "\n".join(text.split("\n")[:12])
+        body = text.split("---", 2)[-1][:1500]
+        seen = raw_anchors(head) | raw_anchors(body)
+        posts.append((f.stem, title, head, body))
+        for w in seen:
+            df[w] = df.get(w, 0) + 1
+
+    out = []
+    for t in topics:
+        ta = {w for w in raw_anchors(t) if df.get(w, 0) <= max_df}
+        best = None
+        for slug, title, head, body in posts:
+            for part, weight in ((head, 1.0), (body, 0.7)):
+                shared = ta & {w for w in raw_anchors(part) if df.get(w, 0) <= max_df}
+                letters = {w for w in shared if not w.isdigit()}
+                if (len(letters) >= 2 or (len(letters) >= 1 and len(shared) >= 2)) \
+                        and (best is None or weight > best[0]):
+                    best = (weight, slug, title, sorted(shared))
+        out.append((t, best))
+    return out
+
+
 def is_duplicate(topic, posts_index, lookback_days=7):
     """Грубая, но честная проверка на дубль: доля общих значимых слов заголовка
     с любым материалом за N дней. 0.6 и выше — дубль."""
