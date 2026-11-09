@@ -8,6 +8,130 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-09-provaly-2026-kino.html",
+   "url": "https://geekovski.ru/2026-11-09-provaly-2026-kino.html",
+   "title": "Провалы 2026 года в кино: «Диггер», «Супергёрл» и $245 млн в трубу",
+   "summary": "Год дал два миллиардных хита — и рекордную серию провалов. Том Круз с Иньярриту теряет $245 млн, «Супергёрл» перезапустила вселенную DC в минус, а «Белоснежка» и «Моана» провалились на бюджетах в $250 млн. Разбираем, кто потерял сколько и почему имена перестали работать.",
+   "date_published": "2026-11-09T20:00:00+03:00",
+   "date_modified": "2026-11-09T20:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/kino-provaly-2026.jpg",
+   "_sources": [
+    {
+     "name": "Fortune — Digger projected $245M loss",
+     "url": "https://fortune.com/2026/10/14/tom-cruise-digger-box-office-bomb-245-million-loss-warner-bros"
+    },
+    {
+     "name": "Variety — The Social Reckoning flops",
+     "url": "https://variety.com/2026/film/box-office/social-reckoning-flops-other-mommy-leads-box-office-12"
+    },
+    {
+     "name": "Looper — biggest box office bombs of 2026",
+     "url": "https://looper.com/2094997/biggest-box-office-bombs-2026"
+    },
+    {
+     "name": "Российская газета — почему «Диггер» и «Повелитель пустыни» провалились",
+     "url": "https://rg.ru/2026/11/06/pochemu-blokbastery-digger-i-povelitel-pustyni-provalilis-v-prokate.htm"
+    },
+    {
+     "name": "People — biggest flops of 2026",
+     "url": "https://people.com/biggest-box-office-flops-2026-12111074"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-09-ipad-mini-2026-nuzhen-li.html",
+   "url": "https://geekovski.ru/2026-11-09-ipad-mini-2026-nuzhen-li.html",
+   "title": "iPad mini 2026: OLED, IP67 и вопрос, стоит ли переплачивать",
+   "summary": "Новый iPad mini впервые получил OLED-экран, стал на 14% тоньше и впервые в линейке не боится воды — IP67. Но стартовая цена выросла до $699, и обозреватели расходятся: одни называют его лучшим Mini за годы, другие не понимают, кому он нужен за эти деньги.",
+   "date_published": "2026-11-09T17:30:00+03:00",
+   "date_modified": "2026-11-09T17:30:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/ipad-mini-oled-1.jpg",
+   "_sources": [
+    {
+     "name": "Apple Newsroom — iPad mini biggest update ever",
+     "url": "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever"
+    },
+    {
+     "name": "The Verge — 2026 iPad Mini review",
+     "url": "https://www.theverge.com/tech/1025015/2026-ipad-mini-oled-review"
+    },
+    {
+     "name": "MacRumors — iPad mini 2024 vs 2026",
+     "url": "https://www.macrumors.com/guide/ipad-mini-2024-vs-2026/"
+    },
+    {
+     "name": "9to5Mac — hands-on",
+     "url": "https://9to5mac.com/2026/11/03/new-ipad-mini-a20-pro-review/"
+    },
+    {
+     "name": "PCMag — first look",
+     "url": "https://au.pcmag.com/tablets/120673/i-tried-the-699-oled-ipad-mini-im-still-not-sure-who-its-for"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-09-macbook-pro-oled-obzory.html",
+   "url": "https://geekovski.ru/2026-11-09-macbook-pro-oled-obzory.html",
+   "title": "OLED-впечатления: как обозреватели приняли новый MacBook Pro",
+   "summary": "Первые недельные обзоры сошлись почти в одном: дисплей PROLED XDR — лучший, что ставили в ноутбук, а вот тачскрин оказался самым спорным пунктом. Разбираем, что пишут The Verge, WIRED, 9to5Mac и Ars Technica, и где именно расходятся оценки.",
+   "date_published": "2026-11-09T15:00:00+03:00",
+   "date_modified": "2026-11-09T15:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/macbook-oled-2.jpg",
+   "_sources": [
+    {
+     "name": "Apple Newsroom — MacBook Pro with PROLED XDR Display",
+     "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/"
+    },
+    {
+     "name": "The Verge — MacBook Pro PROLED review",
+     "url": "https://www.theverge.com/tech/1026570/apple-macbook-pro-proled-xdr-display-review"
+    },
+    {
+     "name": "WIRED — Apple MacBook Pro OLED review",
+     "url": "https://www.wired.com/review/apple-macbook-pro-oled-2026/"
+    },
+    {
+     "name": "9to5Mac — review",
+     "url": "https://9to5mac.com/2026/11/05/macbook-pro-with-proled-xdr-display-touch-review/"
+    },
+    {
+     "name": "Ars Technica — hands-on",
+     "url": "https://arstechnica.com/apple/2026/10/touchscreen-macbook-pro-hands-on-oled-looks-great-on-a-mac"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-09-kassovye-hity-2026.html",
+   "url": "https://geekovski.ru/2026-11-09-kassovye-hity-2026.html",
+   "title": "Кассовые хиты 2026 года: «Одиссея», «Паук» и рекорд, которого не ждали",
+   "summary": "Прокат 2026 года собрал как в лучшие допандемийные времена: «Одиссея» Нолана и «Spider-Man: Brand New Day» в одиночку собрали больше, чем весь топ-3 кинопроката России за год. Разбираем цифры, которые уже не изменятся, и объясняем, откуда взялся рекорд.",
+   "date_published": "2026-11-09T12:00:00+03:00",
+   "date_modified": "2026-11-09T12:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/odyssey-premiere.jpg",
+   "_sources": [
+    {
+     "name": "Box Office Mojo — 2026 Worldwide Box Office",
+     "url": "https://www.boxofficemojo.com/year/world/2026/"
+    },
+    {
+     "name": "Variety — Box Office Hits and Flops of 2026",
+     "url": "https://variety.com/2026/film/box-office/box-office-hits-flops-michael-supergirl-1236809979"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-09-1000-ps5-za-300-vmesto-ps6.html",
    "url": "https://geekovski.ru/2026-11-09-1000-ps5-za-300-vmesto-ps6.html",
    "title": "Экс-босс PlayStation хочет PS5 за $300 вместо PS6",
