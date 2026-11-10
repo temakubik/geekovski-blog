@@ -8,6 +8,44 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-10-0800-prism-collection.html",
+   "url": "https://geekovski.ru/2026-11-10-0800-prism-collection.html",
+   "title": "Sony вернула прозрачный пластик: Prism Collection для PS5",
+   "summary": "Sony открывает предзаказы на Prism Collection — прозрачные DualSense и панели для PS5 в трёх цветах. Геймпад стоит $84.99, панели $74.99, в продаже с 4 февраля 2027 года. Разбираем, что важно знать до заказа: совместимость с PS5 Pro, оранжевый, который на фото выглядит красным, и почему прозрачный корпус дороже обычного.",
+   "date_published": "2026-11-10T08:00:00+03:00",
+   "date_modified": "2026-11-10T08:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/prism-collection-ps5.jpg",
+   "_sources": [
+    {
+     "name": "PlayStation Blog — анонс Prism Collection",
+     "url": "https://blog.playstation.com/2026/10/28/first-look-inside-the-prism-collection-with-three-new-transparent-designs-for-ps5-accessories/"
+    },
+    {
+     "name": "Hot Hardware — о совместимости панелей и PS5 Pro",
+     "url": "https://hothardware.com/news/sony-prism-ps5-controllers-fire-so-are-these-alternatives"
+    },
+    {
+     "name": "Kotaku — первый разбор коллекции",
+     "url": "https://kotaku.com/ps5-finally-gets-really-cool-looking-translucent-controllers-and-console-covers-2000750520"
+    },
+    {
+     "name": "PlayStation — страница панелей для PS5",
+     "url": "https://www.playstation.com/en-us/accessories/ps5-console-covers"
+    },
+    {
+     "name": "PlayStation Blog — 500 Million Limited Edition, 2018",
+     "url": "https://blog.playstation.com/2018/08/09/introducing-the-500-million-limited-edition-ps4-pro-commemorating-500-million-systems-sold/"
+    },
+    {
+     "name": "Eurogamer — прозрачный Ghost Cipher для Xbox",
+     "url": "https://www.eurogamer.net/xbox-unveils-ghost-cipher-special-edition-wireless-controller"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-09-top-smartfonov-noyabr.html",
    "url": "https://geekovski.ru/2026-11-09-top-smartfonov-noyabr.html",
    "title": "Топ смартфонов на ноябрь 2026: Galaxy S26 Ultra против iPhone 18 Pro",
