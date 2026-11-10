@@ -46,6 +46,60 @@
    ]
   },
   {
+   "id": "https://geekovski.ru/2026-11-09-modretro-chromatic-codex.html",
+   "url": "https://geekovski.ru/2026-11-09-modretro-chromatic-codex.html",
+   "title": "«Game Boy с ИИ»: что такое ModRetro Chromatic — Codex Edition",
+   "summary": "OpenAI выложила на Supply Co. карманную консоль ModRetro Chromatic за $200 — с ней Codex собирает игру по текстовому описанию и записывает её на настоящий картридж. Разбираем, что это за железо, как работает плагин, что было на DevDay и почему вокруг этого шума больше, чем вокруг самой консоли.",
+   "date_published": "2026-11-09T22:30:00+03:00",
+   "date_modified": "2026-11-09T22:30:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/modretro-codex-cover.jpg",
+   "_sources": [
+    {
+     "name": "OpenAI — Codex входит в тарифы ChatGPT",
+     "url": "https://developers.openai.com/codex/pricing"
+    },
+    {
+     "name": "OpenAI Supply Co. — ModRetro Chromatic: Codex Edition",
+     "url": "https://openai.com/supply/product/modretro-chromatic-codex-edition"
+    },
+    {
+     "name": "OpenAI Supply Co. — Co-Lab",
+     "url": "https://openai.com/supply/co-lab/chromatic/"
+    },
+    {
+     "name": "OpenAI Developers — сборник игр Codex",
+     "url": "https://developers.openai.com/modretro"
+    },
+    {
+     "name": "OpenAI Developers — гайд по плагину",
+     "url": "https://developers.openai.com/blog/build-a-game-with-modretro-chromatic"
+    },
+    {
+     "name": "The Verge — обзор Chromatic (2024)",
+     "url": "https://www.theverge.com/24303052/modretro-chromatic-review-game-boy-color-handheld-palmer-luckey"
+    },
+    {
+     "name": "TechRadar — обзор Chromatic",
+     "url": "https://www.techradar.com/gaming/modretro-chromatic-review"
+    },
+    {
+     "name": "ModRetro — каталог Chromatic",
+     "url": "https://modretro.com/collections/chromatic-consoles"
+    },
+    {
+     "name": "Generation Amiga — 13 игр на запуске",
+     "url": "https://generationamiga.com/2026/09/30/chromatic-gets-openai-codex-support-for-creating-game-boy-color-games"
+    },
+    {
+     "name": "TBPN Digest — интервью Кейси Найстата",
+     "url": "https://www.tbpndigest.com/story/2026-09-29/casey-neistat-on-modretros-chromatic-at-openai-devday-vibe-coded-games-and-why-hardwar"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-09-top-smartfonov-noyabr.html",
    "url": "https://geekovski.ru/2026-11-09-top-smartfonov-noyabr.html",
    "title": "Топ смартфонов на ноябрь 2026: Galaxy S26 Ultra против iPhone 18 Pro",
