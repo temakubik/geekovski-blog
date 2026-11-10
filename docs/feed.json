@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-10-1800-gta6-xbox-30fps.html",
+   "url": "https://geekovski.ru/2026-11-10-1800-gta6-xbox-30fps.html",
+   "title": "GTA 6 на Xbox: 30 fps, полдиска и облако",
+   "summary": "Rockstar официально подтвердила, что GTA 6 будет идти в 30 кадрах в секунду на PS5 и Xbox Series X|S и не получит режима производительности. На PS5 Pro игра предложит PSSR и трассированные тени, а владельцам Xbox One останется только облако с настройками Series S.",
+   "date_published": "2026-11-10T18:00:00+03:00",
+   "date_modified": "2026-11-10T18:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-xbox-30fps-cover.jpg",
+   "_sources": [
+    {
+     "name": "Rockstar Newswire — Pre-Load Grand Theft Auto VI Now",
+     "url": "https://www.rockstargames.com/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"
+    },
+    {
+     "name": "Rockstar Newswire — предзагрузка начнётся 10 ноября",
+     "url": "https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10"
+    },
+    {
+     "name": "Insider Gaming — Rockstar подтвердила 30 fps и функции PS5 Pro",
+     "url": "https://insider-gaming.com/rockstar-games-confirms-30-fps-on-console-all-ps5-pro-features/"
+    },
+    {
+     "name": "GamesRadar+ — 60 fps не будет даже на PS5 Pro",
+     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-wont-run-at-60fps-even-on-ps5-pro-but-sonys-console-does-have-an-exclusive-ray-traced-shadows-and-pssr/"
+    },
+    {
+     "name": "Push Square — функции PS5 Pro и цель в 30 fps",
+     "url": "https://www.pushsquare.com/news/2026/11/gta-6-ps5-pro-features-revealed-30fps-target-on-both-consoles"
+    },
+    {
+     "name": "VGC — время и размер предзагрузки",
+     "url": "https://www.videogameschronicle.com/news/rockstar-details-grand-theft-auto-6-pre-load-date-and-time-and-file-size/"
+    },
+    {
+     "name": "Pure Xbox — расписание предзагрузки по регионам",
+     "url": "https://www.purexbox.com/news/2026/11/gta-6-download-size-and-preload-times-officially-revealed-for-xbox-series-xs"
+    },
+    {
+     "name": "Kotaku — 212 ГБ и место на консолях",
+     "url": "https://kotaku.com/gta-6-pre-load-times-install-size-and-global-release-times-confirmed-2000752787"
+    },
+    {
+     "name": "Xbox — характеристики Series S",
+     "url": "https://www.xbox.com/en-US/consoles/xbox-series-s"
+    },
+    {
+     "name": "Insider Gaming — датамайн про 120 Гц и VRR",
+     "url": "https://insider-gaming.com/gta-6-datamine-reveals-possible-120hz-mode-but-no-vrr-support/"
+    },
+    {
+     "name": "Insider Gaming — Take-Two о PC-версии",
+     "url": "https://insider-gaming.com/gta-6-disc-and-pc-version-update-come-rockstar-take-two/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-10-1500-big-walk-ai-igf.html",
    "url": "https://geekovski.ru/2026-11-10-1500-big-walk-ai-igf.html",
    "title": "«Big Walk» признала ИИ: 10 строк кода и бунт жюри IGF",
