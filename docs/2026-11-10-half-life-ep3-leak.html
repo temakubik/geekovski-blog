@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Half-Life 2: Episode Three — утекли исходники отменённой игры</title>
+<meta name="description" content="В сеть попала часть исходного кода Half-Life 2: Episode Three — игры, которую Valve отменила больше десяти лет назад. Фанаты уже говорят о сборке играбельного демо. Разбираем, что именно утекло, откуда взялся архив и почему это не означает возвращения серии.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/2026-11-10-half-life-ep3-leak.html">
+<meta property="og:title" content="Half-Life 2: Episode Three — утекли исходники отменённой игры">
+<meta property="og:description" content="В сеть попала часть исходного кода Half-Life 2: Episode Three — игры, которую Valve отменила больше десяти лет назад. Фанаты уже говорят о сборке играбельного демо. Разбираем, что именно утекло, откуда взялся архив и почему это не означает возвращения серии.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/2026-11-10-half-life-ep3-leak.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/hl2-1.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="Half-Life 2: Episode Three — утекли исходники отменённой игры">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Half-Life 2: Episode Three — утекли исходники отменённой игры">
+<meta name="twitter:description" content="В сеть попала часть исходного кода Half-Life 2: Episode Three — игры, которую Valve отменила больше десяти лет назад. Фанаты уже говорят о сборке играбельного демо. Разбираем, что именно утекло, откуда взялся архив и почему это не означает возвращения серии.">
+<meta property="article:published_time" content="2026-11-10T22:00:00+03:00">
+<meta property="article:modified_time" content="2026-11-10T22:00:00+03:00">
+<meta property="article:section" content="PC-игры">
+<meta property="article:author" content="GEEKOVSKI">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0A0C0F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="yandex-verification" content="acc866b9b963f469">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BlogPosting","@id":"https://geekovski.ru/2026-11-10-half-life-ep3-leak.html#article","headline":"Half-Life 2: Episode Three — утекли исходники отменённой игры","description":"В сеть попала часть исходного кода Half-Life 2: Episode Three — игры, которую Valve отменила больше десяти лет назад. Фанаты уже говорят о сборке играбельного демо. Разбираем, что именно утекло, откуда взялся архив и почему это не означает возвращения серии.","datePublished":"2026-11-10T22:00:00+03:00","dateModified":"2026-11-10T22:00:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/2026-11-10-half-life-ep3-leak.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"PC-игры","keywords":["PC-игры","GEEKOVSKI"],"wordCount":677,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/hl2-1.jpg","width":1920,"height":1080}],"citation":["https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Three","https://www.theverge.com/games/986552/12tb-steam-leak-half-life-2-episode-3","https://www.pcguide.com/news/valves-canceled-half-life-2-episode-three-reportedly-leaks-online-","https://www.gamesradar.com/games/puzzle/valves-canceled-portal-follow-up-f-stop-is-now-fully-pl","https://kotaku.com/valves-cancelled-portal-prequel-f-stop-has-leaked-2000752082","https://ixbt.games/en/news/2026/09/02/432051-moddery-dobavili-v-half-life-2-oruzie-iz-episode-t"],"abstract":"Утечка — часть большого слива Steam-сборок Valve 2003–2013 годов, 12 ТБ, всплывшего в конце августа В Episode Three видны эксперименты с оружием и врагами, включая модель Weaponizer Фанаты хотят собрать демо; Valve официально не комментировала"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"PC-игры","item":"https://geekovski.ru/pc/"},{"@type":"ListItem","position":3,"name":"Half-Life 2: Episode Three — утекли исходники отменённой игры","item":"https://geekovski.ru/2026-11-10-half-life-ep3-leak.html"}]}]}</script>
+</head>
+<body class="t-editorial">
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(108)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(19)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(2)</span></a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <div class="top__actions">
+      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main class="wrap post-page">
+<div class="backrow"><a class="backlink" href="/pc/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<article class="post cat-pc">
+  <header class="post__head">
+    <div class="post__meta"><a class="chip chip--solid cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-10T22:00:00+03:00">10.11.2026, 22:00</time></div>
+    <h1>Half-Life 2: Episode Three — утекли исходники отменённой игры</h1>
+    <p class="post__lead">В сеть попала часть исходного кода Half-Life 2: Episode Three — игры, которую Valve отменила больше десяти лет назад. Фанаты уже говорят о сборке играбельного демо. Разбираем, что именно утекло, откуда взялся архив и почему это не означает возвращения серии.</p>
+  </header>
+  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Утечка — часть большого слива Steam-сборок Valve 2003–2013 годов, 12 ТБ, всплывшего в конце августа</li><li>В Episode Three видны эксперименты с оружием и врагами, включая модель Weaponizer</li><li>Фанаты хотят собрать демо; Valve официально не комментировала</li></ul></aside>
+  <figure class="post__cover"><img src="/assets/img/hl2-1.jpg" alt="Half-Life 2: Episode Three — утекли исходники отменённой игры"></figure>
+  <div class="post__body"><p>Проект, который Valve отменила больше десяти лет назад, снова в новостях: в сеть попала часть исходного кода <strong>Half-Life 2: Episode Three</strong>. Это не анонс и не возвращение серии — это утечка фрагментов отменённой игры, и вокруг неё уже выстроилась очередь из моддеров и фанатов.</p>
+<figure class="post__fig"><img src="/assets/img/hl2-1.jpg" alt="Кадр из Half-Life 2" loading="lazy"></figure>
+<h2>Что случилось</h2>
+<p>В начале этой недели в открытый доступ попали фрагменты исходников Episode Three и связанные с ними материалы. По описаниям тех, кто успел посмотреть, там видны эксперименты с оружием и врагами — то есть не только код, но и следы того, как Valve искала геймплей для третьего эпизода.</p>
+<p>Отдельно упоминается модель <strong>Weaponizer</strong> — оружия, которое превращает предметы окружения в боеприпасы. Это не новая находка: арсенал из эпизода всплывал и раньше, а в сентябре моддеры уже добавляли его в Half-Life 2.</p>
+<p>Самое важное: Valve ситуацию не комментировала. Ни подтверждения, ни опровержения, ни заявления о правовых мерах — на момент публикации тишина.</p>
+<h2>Откуда это взялось</h2>
+<p>Эпизод — часть гораздо более крупной истории. В конце августа 2026 года в сеть выложили архив <strong>примерно на 12 терабайт</strong>: сборки Steam-игр Valve, которые заливались с 2003 по 2013 год. The Verge тогда описал это как архив, включающий «практически все тайтлы, загруженные за десятилетие».</p>
+<p>Из этого же архива позже вытащили <strong>F-Stop</strong> — отменённый прототип Portal 2, где вместо портальной пушки была камера. Фанаты довели его до играбельного состояния: проект, который Valve бросила на стадии идеи, теперь запускается и проходится.</p>
+<p>То есть нынешняя утечка Episode Three — не отдельный взлом, а продолжение разбора одного огромного склада. Сначала оттуда вытащили Portal, теперь — Half-Life.</p>
+<figure class="post__fig"><img src="/assets/img/hl2-2.jpg" alt="Half-Life 2: кадр из игры" loading="lazy"></figure>
+<h2>Что такое Episode Three и почему это боль</h2>
+<p>Для контекста, если вы пропустили эту драму.</p>
+<p>Episode Three анонсировали в мае 2006 года с планом выпуска в 2007-м. Это должен был быть финальный эпизод трилогии, продолжающей Half-Life 2: действие в Арктике, корабль «Борей», ледяная пушка, враг-блоб, который делится и проходит сквозь решётки. Гейб Ньюэлл говорил, что трилогия эпизодов для него равна Half-Life 3.</p>
+<p>Дальше — ничего. Valve устала от Half-Life, не смогла определиться с направлением и в итоге отменила эпизод, а новые игры серии отложила до готовности движка Source 2. В 2011 году Wired назвал проект vaporware.</p>
+<p>В 2017-м сценарист Марк Лейдлоу, уже ушедший из Valve, выложил короткий рассказ, который журналисты прочитали как пересказ сюжета Episode Three. Фанаты тогда запустили несколько проектов по воссозданию игры — и вот теперь у них появились исходники.</p>
+<h2>Что будет дальше</h2>
+<p>Пока звучит только одно конкретное намерение: <strong>собрать играбельное демо</strong> из того, что утекло. Насколько это реально — вопрос открытый.</p>
+<p>Проблема в том, что фрагменты исходников — это не готовая игра. Между «есть код и модели» и «есть уровень, по которому можно пройти» лежат месяцы работы: собрать проект, починить зависимости, восстановить ассеты, которых может не быть, и заново придумать геймплей, который Valve так и не смогла придумать.</p>
+<p>Именно поэтому предыдущий опыт важен: F-Stop собрали, потому что там был цельный прототип. Episode Three — это, судя по всему, набор экспериментов, а не сборка.</p>
+<figure class="post__fig"><img src="/assets/img/hl2-3.jpg" alt="Half-Life 2: ещё один кадр" loading="lazy"></figure>
+<h2>Что это значит для серии</h2>
+<p>Ровно ничего — и это надо сказать прямо.</p>
+<p>Valve выпустила Half-Life: Alyx в 2020-м и с тех пор не анонсировала продолжение. Утечка не ускорит работу над игрой и не заставит компанию что-то рассказать: у Valve нет привычки комментировать сливы, а юридически преследовать фанатов за сборку демо из чужого архива — сомнительная реклама.</p>
+<p>Зато утечка даёт ответ на вопрос, который мучил фанатов семнадцать лет: <strong>сколько было сделано</strong>. Судя по фрагментам, работа шла — с оружием, врагами, механиками. Игра не была фантазией пресс-релиза: её пытались делать.</p>
+<h2>Кому это интересно</h2>
+<ul><li><strong>Моддерам и исследователям</strong> — это единственный шанс увидеть, как Valve строила Half-Life изнутри.</li><li><strong>Тем, кто ждал Episode Three</strong> — как исторический документ, не как игру.</li><li><strong>Всем остальным</strong> — вряд ли: без контекста это просто ещё один архив старых сборок.</li></ul>
+<p>Одна оговорка на будущее: если демо действительно соберут, у него будет сложная юридическая судьба. Valve обычно закрывает глаза на фанатские моды, но проект на утёкших исходниках — это другой разговор, и вполне возможно, что публичной сборки мы так и не увидим.</p></div>
+  
+  <section class="sources"><h2>Источники</h2><ol><li><a href="https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Three" rel="nofollow noopener" target="_blank">Wikipedia — Half-Life 2: Episode Three</a></li><li><a href="https://www.theverge.com/games/986552/12tb-steam-leak-half-life-2-episode-3" rel="nofollow noopener" target="_blank">The Verge — 12TB Steam leak</a></li><li><a href="https://www.pcguide.com/news/valves-canceled-half-life-2-episode-three-reportedly-leaks-online-" rel="nofollow noopener" target="_blank">PC Guide — Episode Three leak</a></li><li><a href="https://www.gamesradar.com/games/puzzle/valves-canceled-portal-follow-up-f-stop-is-now-fully-pl" rel="nofollow noopener" target="_blank">GamesRadar — F-Stop стал играбельным</a></li><li><a href="https://kotaku.com/valves-cancelled-portal-prequel-f-stop-has-leaked-2000752082" rel="nofollow noopener" target="_blank">Kotaku — утечка F-Stop</a></li><li><a href="https://ixbt.games/en/news/2026/09/02/432051-moddery-dobavili-v-half-life-2-oruzie-iz-episode-t" rel="nofollow noopener" target="_blank">iXBT Games — оружие из Episode Three в HL2</a></li></ol></section>
+  <section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-half-life-ep3-leak.html&text=Half-Life%202%3A%20Episode%20Three%20%E2%80%94%20%D1%83%D1%82%D0%B5%D0%BA%D0%BB%D0%B8%20%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8%20%D0%BE%D1%82%D0%BC%D0%B5%D0%BD%D1%91%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-half-life-ep3-leak.html&title=Half-Life%202%3A%20Episode%20Three%20%E2%80%94%20%D1%83%D1%82%D0%B5%D0%BA%D0%BB%D0%B8%20%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8%20%D0%BE%D1%82%D0%BC%D0%B5%D0%BD%D1%91%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://wa.me/?text=Half-Life%202%3A%20Episode%20Three%20%E2%80%94%20%D1%83%D1%82%D0%B5%D0%BA%D0%BB%D0%B8%20%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8%20%D0%BE%D1%82%D0%BC%D0%B5%D0%BD%D1%91%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%B8%D0%B3%D1%80%D1%8B%20https%3A%2F%2Fgeekovski.ru%2F2026-11-10-half-life-ep3-leak.html" target="_blank" rel="noopener nofollow">WhatsApp</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-half-life-ep3-leak.html&text=Half-Life%202%3A%20Episode%20Three%20%E2%80%94%20%D1%83%D1%82%D0%B5%D0%BA%D0%BB%D0%B8%20%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8%20%D0%BE%D1%82%D0%BC%D0%B5%D0%BD%D1%91%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-half-life-ep3-leak.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-10-half-life-ep3-leak-pin.jpg&description=Half-Life%202%3A%20Episode%20Three%20%E2%80%94%20%D1%83%D1%82%D0%B5%D0%BA%D0%BB%D0%B8%20%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8%20%D0%BE%D1%82%D0%BC%D0%B5%D0%BD%D1%91%D0%BD%D0%BD%D0%BE%D0%B9%20%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-10-half-life-ep3-leak.html">Скопировать ссылку</button>
+</section>
+</article>
+<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/big-walk-cover.jpg" alt="«Big Walk» признала ИИ: 10 строк кода и бунт жюри IGF" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-10T15:00:00+03:00">10.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-10-1500-big-walk-ai-igf.html">«Big Walk» признала ИИ: 10 строк кода и бунт жюри IGF</a></h3>
+    <p class="card__sum">House House подтвердила, что в финале разработки Big Walk использовала LLM для отладки кода — меньше 0,1 % исходников.</p>
+    <div class="card__foot"><a class="more" href="/2026-11-10-1500-big-walk-ai-igf.html">Читать →</a><span class="srcc">источников: 11</span></div>
+  </div>
+</article>
+<article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/nier-automata-366-gb.jpg" alt="NieR: Automata внезапно требует 366 ГБ" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-06T15:05:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-1505-nier-automata-366-gb.html">NieR: Automata внезапно требует 366 ГБ</a></h3>
+    <p class="card__sum">Первый за пять лет патч для Steam-версии NieR: Automata добавил корейский и два китайских языка, а заодно раздул требуемое…</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-1505-nier-automata-366-gb.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article>
+<article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/ea-25-klassik-v-steam.jpg" alt="EA вернула в Steam 25 классических игр" loading="lazy"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-06T14:06:00+03:00">06.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-06-1406-ea-25-klassik-v-steam.html">EA вернула в Steam 25 классических игр</a></h3>
+    <p class="card__sum">5 ноября EA выложила на Steam, GOG и в EA App 25 старых PC-игр, включая Ultima, Wing Commander, Crusader и Theme Hospital.</p>
+    <div class="card__foot"><a class="more" href="/2026-11-06-1406-ea-25-klassik-v-steam.html">Читать →</a><span class="srcc">источников: 4</span></div>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  localStorage.setItem('gv-mode', r.dataset.mode);
+});
+if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
+const route = location.pathname;
+const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+document.querySelector(active)?.classList.add('nav__link--active');
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>

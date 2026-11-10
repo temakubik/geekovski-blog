@@ -8,6 +8,130 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-10-cliff-booth-trailer.html",
+   "url": "https://geekovski.ru/2026-11-10-cliff-booth-trailer.html",
+   "title": "«Новые похождения Клиффа Бута»: Финчер, Питт и новый трейлер",
+   "summary": "Netflix показал второй трейлер спин-оффа «Однажды в Голливуде» — теперь сюжет яснее: 1977 год, Клифф Бут стал «решателем проблем» студий и влезает в чужую аферу. IMAX с 25 ноября, Netflix с 23 декабря, бюджет $200 млн.",
+   "date_published": "2026-11-10T22:30:00+03:00",
+   "date_modified": "2026-11-10T22:30:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/cliff-booth-1.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — новый трейлер",
+     "url": "https://deadline.com/2026/11/the-further-mis-adventures-of-cliff-booth-trailer-brad-pitt-1237101/"
+    },
+    {
+     "name": "Netflix Tudum — анонс",
+     "url": "https://www.netflix.com/tudum/articles/david-fincher-new-film-release-date"
+    },
+    {
+     "name": "Wikipedia — The Further Mis-Adventures of Cliff Booth",
+     "url": "https://en.wikipedia.org/wiki/The_Further_Mis-Adventures_of_Cliff_Booth"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-10-half-life-ep3-leak.html",
+   "url": "https://geekovski.ru/2026-11-10-half-life-ep3-leak.html",
+   "title": "Half-Life 2: Episode Three — утекли исходники отменённой игры",
+   "summary": "В сеть попала часть исходного кода Half-Life 2: Episode Three — игры, которую Valve отменила больше десяти лет назад. Фанаты уже говорят о сборке играбельного демо. Разбираем, что именно утекло, откуда взялся архив и почему это не означает возвращения серии.",
+   "date_published": "2026-11-10T22:00:00+03:00",
+   "date_modified": "2026-11-10T22:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/hl2-1.jpg",
+   "_sources": [
+    {
+     "name": "Wikipedia — Half-Life 2: Episode Three",
+     "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Three"
+    },
+    {
+     "name": "The Verge — 12TB Steam leak",
+     "url": "https://www.theverge.com/games/986552/12tb-steam-leak-half-life-2-episode-3"
+    },
+    {
+     "name": "PC Guide — Episode Three leak",
+     "url": "https://www.pcguide.com/news/valves-canceled-half-life-2-episode-three-reportedly-leaks-online-"
+    },
+    {
+     "name": "GamesRadar — F-Stop стал играбельным",
+     "url": "https://www.gamesradar.com/games/puzzle/valves-canceled-portal-follow-up-f-stop-is-now-fully-pl"
+    },
+    {
+     "name": "Kotaku — утечка F-Stop",
+     "url": "https://kotaku.com/valves-cancelled-portal-prequel-f-stop-has-leaked-2000752082"
+    },
+    {
+     "name": "iXBT Games — оружие из Episode Three в HL2",
+     "url": "https://ixbt.games/en/news/2026/09/02/432051-moddery-dobavili-v-half-life-2-oruzie-iz-episode-t"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-10-gemini-4-carbon.html",
+   "url": "https://geekovski.ru/2026-11-10-gemini-4-carbon.html",
+   "title": "Gemini 4 Carbon открыли для всех: что даёт агентный «рой»",
+   "summary": "Две недели Google держала Gemini 4 Carbon только для киберзащитников, а сегодня открыла модель разработчикам, бизнесу и подписчикам AI Ultra. Главная новость даже не в бенчмарках, а в режиме /swarm — команде агентов, которая правит код параллельно в изолированных ветках.",
+   "date_published": "2026-11-10T21:30:00+03:00",
+   "date_modified": "2026-11-10T21:30:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/gemini-4-carbon.jpg",
+   "_sources": [
+    {
+     "name": "Google — Gemini 4 Carbon is now available",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+    },
+    {
+     "name": "Google — Introducing Gemini 4 Carbon",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon"
+    },
+    {
+     "name": "The Verge — Google releases Gemini 4 Carbon",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-pu"
+    },
+    {
+     "name": "Antigravity — Gemini 4 Carbon and /swarm",
+     "url": "https://antigravity.google/blog/gemini-4-carbon-in-google-antigravity/"
+    },
+    {
+     "name": "NeuralTrust — бенчмарки и цены",
+     "url": "https://neuraltrust.ai/blog/gemini-4-carbon"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-10-ocharovannye-kinopoisk.html",
+   "url": "https://geekovski.ru/2026-11-10-ocharovannye-kinopoisk.html",
+   "title": "«Очарованные»: Кинопоиск выпускает славянское дарк-фэнтези",
+   "summary": "14 ноября на Кинопоиске стартует «Очарованные» — восемь серий о двух сёстрах-колдуньях, Калиновом мосту и девяти днях на спасение. Смотрим, что за проект, кто в касте и почему это не «наш ответ „Зачарованным“», как его уже успели назвать.",
+   "date_published": "2026-11-10T21:00:00+03:00",
+   "date_modified": "2026-11-10T21:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/ocharovannye-1.jpg",
+   "_sources": [
+    {
+     "name": "КП — «Очарованные», 1 сезон",
+     "url": "https://www.kp.ru/putevoditel/serialy/ocharovannye-1-sezon/"
+    },
+    {
+     "name": "Кино Mail — что известно о сериале",
+     "url": "https://kino.mail.ru/news/143721-chto-izvestno-o-1-sezone-seriala-ocharovannie/"
+    },
+    {
+     "name": "Работники ТВ — премьера 14 ноября",
+     "url": "https://www.rabotnikitv.com/2026/09/24/prikljuchencheskoe-fjentezi-ocharovannye-vyjde"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-10-1800-gta6-xbox-30fps.html",
    "url": "https://geekovski.ru/2026-11-10-1800-gta6-xbox-30fps.html",
    "title": "GTA 6 на Xbox: 30 fps, полдиска и облако",
