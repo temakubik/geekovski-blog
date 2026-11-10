@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-10-1500-big-walk-ai-igf.html",
+   "url": "https://geekovski.ru/2026-11-10-1500-big-walk-ai-igf.html",
+   "title": "«Big Walk» признала ИИ: 10 строк кода и бунт жюри IGF",
+   "summary": "House House подтвердила, что в финале разработки Big Walk использовала LLM для отладки кода — меньше 0,1 % исходников. Заявление вышло на следующий день после того, как 19 членов жюри IGF объявили, что не будут голосовать ни за одну игру с генеративным ИИ, включая код.",
+   "date_published": "2026-11-10T15:00:00+03:00",
+   "date_modified": "2026-11-10T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/big-walk-cover.jpg",
+   "_sources": [
+    {
+     "name": "Aftermath — полное заявление House House и разбор скандала",
+     "url": "https://aftermath.site/big-walk-ai-igf-jurors-controversy/"
+    },
+    {
+     "name": "Aftermath — письмо девятнадцати членов жюри IGF",
+     "url": "https://aftermath.site/igf-awards-2027-ai-statement-judges/"
+    },
+    {
+     "name": "GamesIndustry.biz — House House уточнила объём использования ИИ",
+     "url": "https://www.gamesindustry.biz/house-house-clarifies-use-of-ai-tools-in-big-walks-final-stage-of-development"
+    },
+    {
+     "name": "Eurogamer — студия раскрыла использование генеративного ИИ",
+     "url": "https://www.eurogamer.net/house-house-big-walk-generative-ai-development"
+    },
+    {
+     "name": "Vertical Slice — жюри требует от IGF анти-ИИ политику",
+     "url": "https://www.verticalslice.news/we-feel-responsible-to-push-past-defeatism-igf-jurors-call-on-award-organisers-to-adopt-anti-ai-policy/"
+    },
+    {
+     "name": "Big Walk — официальный FAQ студии",
+     "url": "https://bigwalk.game/faq/"
+    },
+    {
+     "name": "IGF — правила и даты приёма заявок 2027",
+     "url": "https://igf.com/submission-info/"
+    },
+    {
+     "name": "Game Informer — миллион копий за шесть дней",
+     "url": "https://gameinformer.com/2026/08/10/big-walk-sells-one-million-copies-in-less-than-a-week"
+    },
+    {
+     "name": "The Verge — почему Big Walk нет на Xbox",
+     "url": "https://theverge.com/games/1011785/big-walk-house-house-microsoft-xbox-bds-boycott"
+    },
+    {
+     "name": "Insider Gaming — реакция на заявление студии",
+     "url": "https://insider-gaming.com/big-walk-devs-issue-statement-regarding-ai-usage-following-award-controversy/"
+    },
+    {
+     "name": "Steam — страница Big Walk",
+     "url": "https://store.steampowered.com/app/1478500/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-10-1200-switch-2-jailbreak.html",
    "url": "https://geekovski.ru/2026-11-10-1200-switch-2-jailbreak.html",
    "title": "Nintendo закрыла джейлбрейк Switch 2 прошивкой 23.5.0",
