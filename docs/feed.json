@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-10-1000-dc-studios-latcham.html",
+   "url": "https://geekovski.ru/2026-11-10-1000-dc-studios-latcham.html",
+   "title": "DC Studios: Ганн ушёл, студию возглавил ветеран Marvel",
+   "summary": "Skydance объявила, что Джеймс Ганн и Питер Сафран покидают посты co-CEO DC Studios с 1 декабря, а вместо них студию возглавит бывший топ-менеджер Marvel Джереми Лэтчем. Разбираем, кто он такой, что будет с «Man of Tomorrow», «Бэтменом» и десятилетним планом, который остался без авторов.",
+   "date_published": "2026-11-10T10:00:00+03:00",
+   "date_modified": "2026-11-10T10:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/dc-studios-latcham.jpg",
+   "_sources": [
+    {
+     "name": "The Hollywood Reporter — Ганн и Сафран покидают DC Studios",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/dc-studios-shocker-james-gunn-peter-safran-stepping-1236750902"
+    },
+    {
+     "name": "Deadline — кадровые перестановки в DC Studios",
+     "url": "https://deadline.com/2026/11/dc-studios-james-gunn-peter-safran-leaving-1237217374"
+    },
+    {
+     "name": "Deadline — полное заявление Ганна",
+     "url": "https://deadline.com/2026/11/james-gunn-dc-studios-1237217532"
+    },
+    {
+     "name": "Associated Press — Skydance назначила Лэтчема",
+     "url": "https://abcnews.com/Entertainment/wireStory/shakeup-dc-studios-gunn-safran-skydance-appoints-marvel-137981538"
+    },
+    {
+     "name": "People — Ганна и Сафрана сменили после провала Supergirl",
+     "url": "https://people.com/james-gunn-peter-safran-ousted-as-dc-studio-heads-after-supergirl-12245077"
+    },
+    {
+     "name": "TheWrap — Лэтчем возглавил DC Studios",
+     "url": "https://www.thewrap.com/creative-content/movies/james-gunn-and-peter-safran-out-at-dc-studios-jeremy-latcham-named-new-president-and-chief-creative-officer/"
+    },
+    {
+     "name": "Business Insider — перестановка перед отчётом Skydance",
+     "url": "https://www.businessinsider.com/skydance-dc-studios-leadership-james-gunn-peter-safran-jeremy-latcham-2026-11"
+    },
+    {
+     "name": "TechCrunch — Paramount завершила сделку с Warner Bros. Discovery",
+     "url": "https://techcrunch.com/2026/10/06/paramount-closes-historic-warner-bros-merger-to-form-skydance"
+    },
+    {
+     "name": "IndieWire — старт Clayface в прокате",
+     "url": "https://indiewire.com/news/box-office/clayface-tops-box-office-24-million-dc-studios-reboot-james-gunn-1235223683"
+    },
+    {
+     "name": "ComingSoon — Clayface прошёл точку окупаемости",
+     "url": "https://comingsoon.net/movies/news/2219932-clayface-box-office-100-million-break-even-profitable"
+    },
+    {
+     "name": "Variety — производство The Batman Part II приостановлено",
+     "url": "https://au.variety.com/2026/film/news/the-batman-2-pauses-production-matt-reeves-steps-away-41001/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-10-0800-prism-collection.html",
    "url": "https://geekovski.ru/2026-11-10-0800-prism-collection.html",
    "title": "Sony вернула прозрачный пластик: Prism Collection для PS5",
