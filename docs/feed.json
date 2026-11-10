@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-10-1200-switch-2-jailbreak.html",
+   "url": "https://geekovski.ru/2026-11-10-1200-switch-2-jailbreak.html",
+   "title": "Nintendo закрыла джейлбрейк Switch 2 прошивкой 23.5.0",
+   "summary": "Прошивка 23.5.0 от 9 ноября закрывает системную уязвимость, на которой две недели держался первый джейлбрейк Switch 2, и готовит eShop к подаркам внутри семейной группы. В патчноутах про взлом ни слова — дыру нашёл сторонний исследователь, а не Nintendo.",
+   "date_published": "2026-11-10T12:00:00+03:00",
+   "date_modified": "2026-11-10T12:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/switch2-jailbreak-cover.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo Life — Switch 2 System Update 23.5.0",
+     "url": "https://nintendolife.com/news/2026/11/nintendo-switch-2-system-update-23-5-0-is-now-live-here-are-the-full-patch-notes"
+    },
+    {
+     "name": "TheGamer — Nintendo Has Swiftly Patched Switch 2 Jailbreak Exploit",
+     "url": "https://thegamer.com/nintendo-has-swiftly-patched-switch-2-jailbreak-exploit"
+    },
+    {
+     "name": "Ars Technica — Switch 2 jailbreak gives hackers new ways to run homebrew",
+     "url": "https://arstechnica.com/gaming/2026/10/switch-2-jailbreak-gives-hackers-new-ways-to-run-homebrew-and-mod-games"
+    },
+    {
+     "name": "Nintendo Everything — Nintendo has now fixed the Switch 2 jailbreak",
+     "url": "https://nintendoeverything.com/nintendo-has-now-fixed-the-switch-2-jailbreak"
+    },
+    {
+     "name": "OatmealDome — разбор 23.5.0",
+     "url": "https://x.com/OatmealDome/status/2119976839640690818"
+    },
+    {
+     "name": "Covergeek — eShop gifting feature",
+     "url": "https://covergeek.com/switch-2-eshop-gifting-update"
+    },
+    {
+     "name": "CNBC — Switch 2 sales plunge 41%",
+     "url": "https://cnbc.com/2026/11/05/nintendo-earnings-switch-2-sales.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-10-1000-dc-studios-latcham.html",
    "url": "https://geekovski.ru/2026-11-10-1000-dc-studios-latcham.html",
    "title": "DC Studios: Ганн ушёл, студию возглавил ветеран Marvel",
