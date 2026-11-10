@@ -86,6 +86,8 @@ Chromatic делает ModRetro — компания Палмера Лаки, т
 
 По публикациям, в коллекцию также вошли FlapGPT, Ash & Oath, Codex Land, Arc Pocket, Swarmfall и другие. Полный список — на сайте разработчиков OpenAI.
 
+![Codex Dance: ритм-игра с маскотом Codex](/assets/img/codex-dance.png)
+
 ![Hollow Descent: данжен-кроулер, собранный агентом](/assets/img/codex-hollow.png)
 
 ## Где подвох
