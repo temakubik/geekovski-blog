@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-11-1520-tsmc-doli-openai-anthropic.html",
+   "url": "https://geekovski.ru/2026-11-11-1520-tsmc-doli-openai-anthropic.html",
+   "title": "TSMC вложит до $1 млрд в OpenAI и Anthropic",
+   "summary": "Совет директоров TSMC одобрил до $500 млн на акции Anthropic по цене её IPO и до $500 млн на привилегированные акции OpenAI. Крупнейший контрактный производитель чипов впервые становится акционером двух главных AI-лабораторий — при том, что обе уже делают собственные чипы.",
+   "date_published": "2026-11-11T15:20:00+03:00",
+   "date_modified": "2026-11-11T15:20:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/tsmc-doli-openai-anthropic.jpg",
+   "_sources": [
+    {
+     "name": "TSMC — Board of Directors Meeting Resolutions",
+     "url": "https://pr.tsmc.com/english/news/3352"
+    },
+    {
+     "name": "Nikkei Asia — TSMC earmarks up to $1bn to buy Anthropic and OpenAI shares",
+     "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/tsmc-earmarks-up-to-1bn-to-buy-anthropic-and-openai-shares"
+    },
+    {
+     "name": "Reuters (CNA) — TSMC to invest up to $1 billion in Anthropic, OpenAI",
+     "url": "https://www.channelnewsasia.com/business/tsmc-invest-up-1-billion-in-anthropic-openai-6539881"
+    },
+    {
+     "name": "MacRumors — TSMC approves $1 billion AI investment",
+     "url": "https://www.macrumors.com/2026/11/11/tsmc-approves-ai-investment"
+    },
+    {
+     "name": "CNBC — OpenAI and Broadcom reveal Jalapeño",
+     "url": "https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html"
+    },
+    {
+     "name": "Anthropic — расширение сделки с Google и Broadcom",
+     "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+     "name": "CNBC — Broadcom расширяет сделки с Google и Anthropic",
+     "url": "https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html"
+    },
+    {
+     "name": "Silicon Republic — Anthropic рассматривает собственные чипы (слух)",
+     "url": "https://www.siliconrepublic.com/machines/anthropic-reportedly-mulls-designing-own-chips-amid-shortage"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-11-marvel-rivals-season-11.html",
    "url": "https://geekovski.ru/2026-11-11-marvel-rivals-season-11.html",
    "title": "Marvel Rivals: 11-й сезон «Doomsday» стартует 13 ноября с Ночным Змеем",
