@@ -8,6 +8,88 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-11-marvel-rivals-season-11.html",
+   "url": "https://geekovski.ru/2026-11-11-marvel-rivals-season-11.html",
+   "title": "Marvel Rivals: 11-й сезон «Doomsday» стартует 13 ноября с Ночным Змеем",
+   "summary": "NetEase открывает сезон «Doomsday» 13 ноября: Ночной Змей становится 55-м играбельным персонажем и первым стратегом-лекарем в ростере, а в конце трейлера показывают Дракулу — он придёт во второй половине сезона. Плюс режим 18 на 18 с 26 ноября и юбилейные награды.",
+   "date_published": "2026-11-11T15:00:00+03:00",
+   "date_modified": "2026-11-11T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/rivals-1.jpg",
+   "_sources": [
+    {
+     "name": "MonsterVine — детали сезона 11",
+     "url": "https://monstervine.com/2026/11/marvel-rivals-season-11-nightcrawler-dracula-18v18/"
+    },
+    {
+     "name": "Beebom — трейлер и подтверждение Дракулы",
+     "url": "https://beebom.com/marvel-rivals-debuts-season-11-trailer-with-nightcrawler-and-dracula/"
+    },
+    {
+     "name": "Rolling Out — что подтверждено",
+     "url": "https://rollingout.com/2026/11/10/marvel-rivals-season-11-nightcrawler"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-11-steam-deck-fps.html",
+   "url": "https://geekovski.ru/2026-11-11-steam-deck-fps.html",
+   "title": "Valve показала реальный FPS на Steam Deck — и значок Verified больше ничего не значит",
+   "summary": "Valve добавила в магазин Steam средний фреймрейт и гистограммы производительности для тысяч игр на Steam Deck. Данные собирают с согласия игроков с февраля. Теперь видно то, о чём раньше приходилось догадываться: «Verified» означает совместимость, а не плавность.",
+   "date_published": "2026-11-11T14:00:00+03:00",
+   "date_modified": "2026-11-11T14:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/steam-deck.jpg",
+   "_sources": [
+    {
+     "name": "Valve — Steam Deck Framerate (новость Steam)",
+     "url": "https://store.steampowered.com/news/app/593110/view/685269801333948419"
+    },
+    {
+     "name": "Ars Technica — разбор данных Valve",
+     "url": "https://arstechnica.com/gaming/2026/11/steam-deck-performance-gets-a-reality-check-with-valves-new-fps-data/"
+    },
+    {
+     "name": "PC Gamer — как это работает",
+     "url": "https://pcgamer.com/hardware/handheld-gaming-pcs/steam-now-lets-you-see-exactly-what-frame-rate"
+    },
+    {
+     "name": "VideoCardz — FPS на страницах магазина",
+     "url": "https://videocardz.com/newz/steam-now-shows-average-fps-for-thousands-of-steam-deck-games-desktop-pc-support-coming"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-11-h3vr2-quest3.html",
+   "url": "https://geekovski.ru/2026-11-11-h3vr2-quest3.html",
+   "title": "H3VR2 выходит на Quest 3: культовый оружейный симулятор возвращается",
+   "summary": "12 ноября на Quest 3 и 3S выходит Hot Dogs, Horseshoes & Hand Grenades 2 — сиквел самого подробного оружейного симулятора в VR. Сорок долларов, скидка 10% на предзаказ, новая структура «зайти, залутать, выбраться». Владельцам PC VR придётся ждать до второй половины 2027 года.",
+   "date_published": "2026-11-11T13:00:00+03:00",
+   "date_modified": "2026-11-11T13:00:00+03:00",
+   "tags": [
+    "VR"
+   ],
+   "image": "https://geekovski.ru/assets/img/h3vr2-1.jpg",
+   "_sources": [
+    {
+     "name": "RUST LTD. — пресс-кит H3VR2",
+     "url": "https://press.rustltd.com/h3vr2"
+    },
+    {
+     "name": "VRDB — дата, цена и режимы",
+     "url": "https://vrdb.app/blog/hot-dogs-horseshoes-hand-grenades-2-quest-3-launch"
+    },
+    {
+     "name": "Meta Horizon Store — страница игры",
+     "url": "https://www.meta.com/experiences/hot-dogs-horseshoes-hand-grenades-2/26291709480509388/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-11-1200-xbox-take-two-10-let.html",
    "url": "https://geekovski.ru/2026-11-11-1200-xbox-take-two-10-let.html",
    "title": "Xbox подписала с Take-Two партнёрство на 10 лет",
@@ -54,6 +136,62 @@
     {
      "name": "Игромания — GTA 6 стала самой предзаказываемой игрой",
      "url": "https://www.igromania.ru/news/169845/gta-6-stala-samoj-predzakazyvaemoj-igroj-v-playstation-store-i-microsoft-store/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-11-hunger-games-rassvet-zhatvy.html",
+   "url": "https://geekovski.ru/2026-11-11-hunger-games-rassvet-zhatvy.html",
+   "title": "«Голодные игры: Рассвет жатвы»: молодой Хеймитч и 48 трибутов",
+   "summary": "20 ноября выходит приквел «Голодных игр» — история 50-х Игр, где на арену выпускают вдвое больше детей. Хеймитча играет Джозеф Зада, Сноу — Рэйф Файнс, Цезаря Фликермана — Киран Калкин. Разбираем, что известно о фильме и почему это самая мрачная часть франшизы.",
+   "date_published": "2026-11-11T12:00:00+03:00",
+   "date_modified": "2026-11-11T12:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/hunger-games-1.jpg",
+   "_sources": [
+    {
+     "name": "Variety — трейлер и каст",
+     "url": "https://variety.com/2026/film/news/hunger-games-sunrise-on-the-reaping-trailer-joseph-zada-1236859/"
+    },
+    {
+     "name": "Rotten Tomatoes — карточка фильма",
+     "url": "https://www.rottentomatoes.com/m/the_hunger_games_sunrise_on_the_reaping"
+    },
+    {
+     "name": "Deadline — материалы о фильме",
+     "url": "https://deadline.com/feature/hunger-games-sunrise-on-the-reaping-movie-news-updates-123637"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-11-switch2-mariokart-bundle.html",
+   "url": "https://geekovski.ru/2026-11-11-switch2-mariokart-bundle.html",
+   "title": "Switch 2 с Mario Kart World вернётся 26 ноября — по $550",
+   "summary": "Nintendo объявила, что бандл Switch 2 с Mario Kart World снова поступит в продажу 26 ноября — за $549,99 с трёхмесячной подпиской. На фоне подорожания консоли до $500 и дефицита памяти это попытка удержать цену входа, а не скидка.",
+   "date_published": "2026-11-11T11:00:00+03:00",
+   "date_modified": "2026-11-11T11:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/switch2-mariokart-bundle.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo — бандл Switch 2 + Mario Kart World с 26 ноября",
+     "url": "https://www.nintendo.com/my/news/article/6tzi9SCJLAT6RkcwcUQts6"
+    },
+    {
+     "name": "Nintendo — Retail offers",
+     "url": "https://www.nintendo.com/us/retail-offers"
+    },
+    {
+     "name": "The Verge — Nintendo не планирует новое подорожание",
+     "url": "https://theverge.com/games/1027757/nintendo-switch-2-price-hike-plans-ram"
+    },
+    {
+     "name": "VGC — заявление Фурукавы",
+     "url": "https://videogameschronicle.com/news/nintendo-says-it-is-not-considering-a-switch-2-price-hike"
     }
    ]
   },
