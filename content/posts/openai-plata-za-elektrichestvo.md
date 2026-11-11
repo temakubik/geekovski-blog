@@ -6,7 +6,7 @@ summary: Через два дня после выборов, где избира
 tldr: OpenAI обещает платить за электричество и инфраструктуру всех дата-центров, которыми владеет и управляет | Обещаны финансовые гарантии клиентам энергокомпаний, если проект задержат или отменят | На выборах 3 ноября из 41 местного референдума в 10 штатах прошли ограничения почти везде — против высказались только в одном | Компания также просит законодателей закрепить такие обязательства в законах
 cover: /assets/img/openai-plata-za-elektrichestvo.jpg
 pin: /assets/img/openai-plata-za-elektrichestvo-pin.jpg
-credit: Обложка: GEEKOVSKI. Фото: Pexels / Brett Sayles
+credit: Обложка: GEEKOVSKI. Фото: Novoklimov / Wikimedia, CC BY 4.0
 sources: CNBC — OpenAI pledges to pay for data center power after election highlights AI concerns | https://www.cnbc.com/2026/11/05/openai-to-pay-for-data-center-power-after-election-shows-ai-concern.html; TechStartups — OpenAI promises to pay for AI data center electricity | https://techstartups.com/2026/11/05/openai-promises-to-pay-for-ai-data-center-electricity-as-voters-push-back-against-rising-power-bills
 ---
 

@@ -6,7 +6,7 @@ summary: «Godzilla Minus Zero» выходит в широкий прокат �
 tldr: Премьера в Японии 3 ноября собрала $5,7 млн за первый день — Toho называет это рекордом для игрового кино в стране | В США картина стартует 6 ноября на 3 254 экранах, прогноз Variety — $30 млн за уикенд | Deadline ждёт около $60 млн глобально за первый weekend: $25–30 млн в США и $30+ млн ещё в 23 странах | Первый японский фильм, снятый по стандарту «filmed for IMAX», и первый случай, когда Godzilla выходит в Японии и США на одной неделе
 cover: /assets/img/godzilla-minus-zero-start.jpg
 pin: /assets/img/godzilla-minus-zero-start-pin.jpg
-credit: Обложка: GEEKOVSKI. Фото: Pexels / Tima Miroshnichenko
+credit: Обложка: GEEKOVSKI. Фото: 康复 / Wikimedia, CC0
 sources: Variety — Box Office: "Godzilla Minus Zero" to Lead With $30 Million Opening Weekend | https://variety.com/2026/film/box-office/godzilla-minus-zero-box-office-opening-weekend-estimates-cat-in-the-hat-1236938885/; Deadline — "Godzilla Minus Zero" Stomping To $60M+ WW Opening | https://deadline.com/2026/11/godzilla-minus-zero-ramayana-cat-in-the-hat-box-office-1237213555; GKIDS — релизные даты в Северной Америке | https://gkids.com/2026/01/09/toho-and-gkids-unleash-godzilla-minus-zero-in-north-america-on-november-6-2026/; Anime News Network — рекордный первый день в Японии | https://animenewsnetwork.com/news/2026-11-04/godzilla-minus-zero-earns-highest-ever-opening-day-for-live-action-film-in-japan/.243535
 ---
 

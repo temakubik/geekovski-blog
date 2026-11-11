@@ -8,6 +8,7 @@
   python3 build.py --theme magazine --out /tmp/preview
 """
 import argparse
+import collections
 import html
 import json
 import os
@@ -1207,6 +1208,33 @@ def render_404(theme):
                 content, theme, robots="noindex,follow")
 
 
+def image_report(posts):
+    """Проверка повторов картинок до публикации.
+
+    Две проблемы, которые реально случались: обложка стояла ещё и первым
+    кадром в тексте, и один и тот же снимок уходил в две разные статьи.
+    Здесь ловим первое и точное совпадение имени — быстро и без зависимостей.
+    Визуально похожие кадры под разными именами ловит tools/imgcheck.py.
+    """
+    problems = []
+    owners = {}
+    for p in posts:
+        body = re.findall(r"!\[[^\]]*\]\((/assets/img/[^)]+)\)", p["body"])
+        ordered = ([p["cover"]] if p["cover"] else []) + body
+        for url in ordered:
+            if url and not (ROOT / "static" / url.replace("/assets/", "")).exists():
+                problems.append("нет файла: %s — %s" % (p["slug"], url))
+        for url, n in collections.Counter(u for u in ordered if u).items():
+            if n > 1:
+                problems.append("повтор в статье: %s — %s ×%d" % (p["slug"], url.split("/")[-1], n))
+        for url in set(u for u in ordered if u):
+            owners.setdefault(url.split("/")[-1], set()).add(p["slug"])
+    for name, slugs in owners.items():
+        if len(slugs) > 1:
+            problems.append("в разных статьях: %s — %s" % (name, ", ".join(sorted(slugs))))
+    return problems
+
+
 def build(theme, out_dir, content_dir=None):
     content = Path(content_dir) if content_dir else ROOT / "content"
     everything = [parse_post(p) for p in sorted((content / "posts").glob("*.md"))]
@@ -2110,7 +2138,18 @@ if __name__ == "__main__":
     ap.add_argument("--theme", default="editorial", choices=["editorial", "dashboard", "magazine"])
     ap.add_argument("--out", default=str(ROOT / "docs"))
     ap.add_argument("--content", default=None)
+    ap.add_argument("--strict-images", action="store_true",
+                    help="падать с кодом 1, если есть повторы или пропавшие картинки")
     a = ap.parse_args()
     ps = build(a.theme, a.out, a.content)
     print("theme=%s posts=%d -> %s" % (a.theme, len(ps), a.out))
+    problems = image_report(ps)
+    if problems:
+        print("\nкартинки: проблем %d" % len(problems))
+        for line in problems:
+            print("  ·", line)
+        if a.strict_images:
+            raise SystemExit(1)
+    else:
+        print("картинки: повторов нет")
 

@@ -11,7 +11,6 @@ sources: Monster Hunter Wilds — официальный сайт | https://www.
 ---
 Capcom не стала тянуть: демо Prologue доступно с 19–20 октября, предзаказы открыты, прогресс переносится в релизную версию 4 декабря.
 
-![Haekalhaekal](/assets/img/monster-hunter-wilds-switch-2.jpg)
 
 ## Почему это важно
 

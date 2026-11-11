@@ -6,7 +6,7 @@ summary: Индекс Nasdaq Composite упал на 5,52% и ушёл в кор
 tldr: Nasdaq Composite −5,52%, ниже октябрьского пика более чем на 10% — это коррекция | Philadelphia Semiconductor Index −12,2%, худший день с марта 2020 года | KOSPI падал на 8,8% с остановкой торгов, SK Hynix и Samsung — двузначное падение
 cover: /assets/img/obval-ai-akcii.jpg
 pin: /assets/img/obval-ai-akcii-pin.jpg
-credit: Обложка: GEEKOVSKI. Фото: Pexels / panumas nikhomkhai
+credit: Обложка: GEEKOVSKI. Фото: ehnmark / Wikimedia, CC BY 2.0
 sources: CNBC — Asian chip stocks tumble after Nasdaq sell-off | https://www.cnbc.com/2026/11/06/tech-stocks-sk-hynix-samsung-softbank.html; DW — Asian stocks slump after tech rout | https://www.dw.com/en/asian-stocks-slump-after-us-tech-rout-amid-ai-jitters/a-79871504; Bloomberg (via Swissinfo) — AI Slump Deepens as Taiwan Drops Most in a Year | https://www.swissinfo.ch/eng/ai-slump-deepens-as-taiwan-drops-most-in-a-year%3A-markets-wrap/92336450; Reuters (via The Star) — Tech-stock rout accelerates retreat from the AI trade | https://www.thestar.com.my/tech/tech-news/2026/11/06/tech-stock-rout-accelerates-retreat-from-the-ai-trade
 ---
 

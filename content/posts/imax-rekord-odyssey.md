@@ -6,7 +6,7 @@ summary: Выручка IMAX за третий квартал выросла н�
 tldr: Выручка IMAX за июль–сентябрь — $175 млн (+64%), чистая прибыль — $117,1 млн против $22,6 млн годом ранее | Квартальный бокс-офис сети — $712 млн (+94%) | «Одиссея» принесла $550 млн на экранах IMAX — это 30% от её мировых $1,8 млрд | Прогноз на год по мировому бокс-офису — рекордные $1,4 млрд, компания обещает его превысить
 cover: /assets/img/imax-rekord-odyssey.jpg
 pin: /assets/img/imax-rekord-odyssey-pin.jpg
-credit: Обложка: GEEKOVSKI. Фото: Pexels / Tima Miroshnichenko
+credit: Обложка: GEEKOVSKI. Фото: Judgefloro / Wikimedia, CC BY-SA 4.0
 sources: Variety — 'The Odyssey' Takes Imax to Biggest Quarterly Revenue to Date | https://variety.com/2026/film/news/imax-quarterly-revenue-record-the-odyssey-1236940229/; Deadline — 'The Odyssey' Powers Record Q3 For Imax, Stock Jumps | https://deadline.com/2026/11/the-odyssey-imax-quartelry-earnings-1237214226/
 ---
 

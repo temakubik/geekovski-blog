@@ -6,7 +6,7 @@ summary: На брифинге по итогам полугодия презид
 tldr: Фурукава: Nintendo продолжит выпускать фильмы и после Zelda и строит «структуру для постоянного производства» | Два фильма про Марио собрали в мире больше $2 млрд, один только The Super Mario Galaxy Movie — больше $1 млрд | Игровой фильм The Legend of Zelda выходит 30 апреля 2027, режиссёр — Уэс Болл, продюсеры — Миямото и Ави Арад
 cover: /assets/img/nintendo-kino-filmy.jpg
 pin: /assets/img/nintendo-kino-filmy-pin.jpg
-credit: Обложка: GEEKOVSKI. Фото: Pexels
+credit: Обложка: GEEKOVSKI. Фото: Dick Thomas Johnson / Wikimedia, CC BY 2.0
 sources: Nintendo Life — Nintendo To Continue Delivering Movies Beyond Live-Action Zelda | https://www.nintendolife.com/news/2026/11/nintendo-to-continue-delivering-movies-beyond-live-action-zelda-unsurprisingly; Nintendo Everything — Nintendo discusses success of the Mario movies | https://nintendoeverything.com/nintendo-discusses-success-of-the-mario-movies-still-teasing-more-movies-in-the-future/; Nintendo — пресс-релиз о фильме The Legend of Zelda | https://www.nintendo.co.jp/corporate/release/en/2026/260908.html
 ---
 
