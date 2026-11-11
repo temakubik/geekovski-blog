@@ -82,14 +82,14 @@
   {
    "id": "https://geekovski.ru/2026-11-11-steam-deck-fps.html",
    "url": "https://geekovski.ru/2026-11-11-steam-deck-fps.html",
-   "title": "Valve показала реальный FPS на Steam Deck — и значок Verified больше ничего не значит",
-   "summary": "Valve добавила в магазин Steam средний фреймрейт и гистограммы производительности для тысяч игр на Steam Deck. Данные собирают с согласия игроков с февраля. Теперь видно то, о чём раньше приходилось догадываться: «Verified» означает совместимость, а не плавность.",
+   "title": "Steam Deck и четыре попытки Valve: от провала Steam Machines до честных цифр FPS",
+   "summary": "Valve показала в магазине реальный FPS игр на Steam Deck — впервые можно увидеть, что значит значок Verified у конкретной игры. Это повод вспомнить всю историю железных попыток Valve: Steam Machines 2015 года, SteamOS и Proton, Deck 2022-го, OLED 2023-го, взлетевшие цены 2026-го и так и не вышедший Deck 2.",
    "date_published": "2026-11-11T14:00:00+03:00",
    "date_modified": "2026-11-11T14:00:00+03:00",
    "tags": [
     "PC-игры"
    ],
-   "image": "https://geekovski.ru/assets/img/steam-deck.jpg",
+   "image": "https://geekovski.ru/assets/img/steamdeck-oled.jpg",
    "_sources": [
     {
      "name": "Valve — Steam Deck Framerate (новость Steam)",
@@ -100,12 +100,24 @@
      "url": "https://arstechnica.com/gaming/2026/11/steam-deck-performance-gets-a-reality-check-with-valves-new-fps-data/"
     },
     {
-     "name": "PC Gamer — как это работает",
-     "url": "https://pcgamer.com/hardware/handheld-gaming-pcs/steam-now-lets-you-see-exactly-what-frame-rate"
+     "name": "BBC — подорожание Steam Deck на 40%",
+     "url": "https://www.bbc.com/news/articles/cz725d5d1x7o"
     },
     {
-     "name": "VideoCardz — FPS на страницах магазина",
-     "url": "https://videocardz.com/newz/steam-now-shows-average-fps-for-thousands-of-steam-deck-games-desktop-pc-support-coming"
+     "name": "IGN — Valve о планах на Steam Deck 2",
+     "url": "https://www.ign.com/articles/valve-says-ram-crisis-hasnt-affected-plans-for-steam-deck-2"
+    },
+    {
+     "name": "Wikipedia — Steam Deck",
+     "url": "https://en.wikipedia.org/wiki/Steam_Deck"
+    },
+    {
+     "name": "Wikipedia — Steam Machine",
+     "url": "https://en.wikipedia.org/wiki/Steam_Machine"
+    },
+    {
+     "name": "PC Gamer — что случилось со Steam Machines",
+     "url": "https://www.pcgamer.com/what-happened-to-steam-machines/"
     }
    ]
   },
