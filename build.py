@@ -1381,7 +1381,7 @@ PLATFORMS = {
     "switch2": ("Switch 2", "switch"), "switch": ("Switch", "switch"),
     "ps5": ("PS5", "playstation"), "ps4": ("PS4", "playstation"),
     "xbox": ("Xbox Series", "xbox"), "pc": ("PC", "pc"), "mac": ("Mac", "pc"),
-    "vr": ("VR", "vr"), "netflix": ("Netflix", "serialy"), "kino": ("Кино", "kino"),
+    "vr": ("VR", "vr"), "netflix": ("Netflix", "serialy"), "prime": ("Prime Video", "serialy"), "kino": ("Кино", "kino"),
     "tv": ("ТВ", "serialy"),
 }
 
