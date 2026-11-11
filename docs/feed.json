@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-11-0800-quest-kino-3d-imax.html",
+   "url": "https://geekovski.ru/2026-11-11-0800-quest-kino-3d-imax.html",
+   "title": "Quest превращается в кинотеатр: 3D-фильмы, Disney+ и IMAX",
+   "summary": "Meta 10 ноября начала продавать и сдавать в аренду 3D-фильмы в приложении TV на Quest 3 и 3S, а обновлённое приложение Disney+ получило больше 60 фильмов в 3D и три иммерсивные сцены. В тот же день IMAX объявила Meta VR Glasses первым в мире VR-устройством с сертификацией IMAX Enhanced.",
+   "date_published": "2026-11-11T08:00:00+03:00",
+   "date_modified": "2026-11-11T08:00:00+03:00",
+   "tags": [
+    "VR"
+   ],
+   "image": "https://geekovski.ru/assets/img/quest-kino-3d-imax.jpg",
+   "_sources": [
+    {
+     "name": "Engadget — приложение Disney+ на Quest получило 3D-фильмы",
+     "url": "https://www.engadget.com/2312296/the-disney-app-on-meta-quest-now-includes-3d-movies/"
+    },
+    {
+     "name": "UploadVR — Meta начала продавать 3D-фильмы на Quest",
+     "url": "https://www.uploadvr.com/meta-begins-listing-3d-movies-on-quest-could-become-a-horizon-benefit/"
+    },
+    {
+     "name": "IMAX — пресс-релиз о сертификации Meta VR Glasses, 10 ноября 2026",
+     "url": "https://www.imax.com/en/ca/pr/meta-vr-glasses-be-first-ever-imax-certified-vr-device"
+    },
+    {
+     "name": "Meta — анонс Meta VR Glasses",
+     "url": "https://www.meta.com/blog/meta-vr-glasses-announcement-meta-connect/"
+    },
+    {
+     "name": "Pixelworks — партнёрство с Meta по TrueCut Motion",
+     "url": "https://www.prnewswire.com/news-releases/pixelworks-partners-with-meta-to-bring-truecut-motion-cinematic-content-to-newly-launched-meta-vr-glasses-302934213.html"
+    },
+    {
+     "name": "Forbes — что даёт 3D в Disney+ на Quest",
+     "url": "https://www.forbes.com/sites/andrewwilliams/2026/11/10/disney-app-is-a-great-reason-to-dust-off-your-meta-quest-3/"
+    },
+    {
+     "name": "TechRadar — завершение поддержки Quest 2 и Quest Pro",
+     "url": "https://www.techradar.com/computing/virtual-reality-augmented-reality/meta-is-ending-support-for-the-quest-2-and-quest-2-pro-vr-headsets-as-it-promises-its-vr-glasses-will-be-another-leap-forward-for-users"
+    },
+    {
+     "name": "Meta Support — аренда и покупка видео в Horizon OS",
+     "url": "https://www.meta.com/help/quest/978038967947986/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-10-cliff-booth-trailer.html",
    "url": "https://geekovski.ru/2026-11-10-cliff-booth-trailer.html",
    "title": "«Новые похождения Клиффа Бута»: Финчер, Питт и новый трейлер",
