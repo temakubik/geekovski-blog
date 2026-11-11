@@ -11,7 +11,7 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 6 материалов
+- [Xbox](https://geekovski.ru/xbox/): 7 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 11 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 10 материалов
 - [PC-игры](https://geekovski.ru/pc/): 16 материалов
@@ -25,6 +25,7 @@
 
 ## Материалы
 
+- [Xbox подписала с Take-Two партнёрство на 10 лет](https://geekovski.ru/2026-11-11-1200-xbox-take-two-10-let.html): CEO Xbox Аша Шарма объявила о десятилетнем стратегическом партнёрстве с Take-Two. Первый его шаг — GTA VI в Xbox Cloud Gaming на Xbox One с 19 ноября и переезд GTA V с Red Dead Redemption 2 в облако; условий сделки не раскрыла ни одна из сторон. (11.11.2026)
 - [PS Plus в ноябре: Death Stranding 2 приходит, GTA V уходит](https://geekovski.ru/2026-11-11-1000-ps-plus-noyabr-katalog.html): Sony выложила ноябрьский каталог PS Plus для Extra и Premium — восемь игр, включая Death Stranding 2, Atomfall и Dragon Quest III HD-2D Remake. В тот же день, 17 ноября, подписку покидают GTA V и Red Dead Redemption 2 — за два дня до релиза GTA 6. (11.11.2026)
 - [Quest превращается в кинотеатр: 3D-фильмы, Disney+ и IMAX](https://geekovski.ru/2026-11-11-0800-quest-kino-3d-imax.html): Meta 10 ноября начала продавать и сдавать в аренду 3D-фильмы в приложении TV на Quest 3 и 3S, а обновлённое приложение Disney+ получило больше 60 фильмов в 3D и три иммерсивные сцены. В тот же день IMAX объявила Meta VR Glasses первым в мире VR-устройством с сертификацией IMAX Enhanced. (11.11.2026)
 - [«Новые похождения Клиффа Бута»: Финчер, Питт и новый трейлер](https://geekovski.ru/2026-11-10-cliff-booth-trailer.html): Netflix показал второй трейлер спин-оффа «Однажды в Голливуде» — теперь сюжет яснее: 1977 год, Клифф Бут стал «решателем проблем» студий и влезает в чужую аферу. IMAX с 25 ноября, Netflix с 23 декабря, бюджет $200 млн. (10.11.2026)

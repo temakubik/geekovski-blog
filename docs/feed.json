@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-11-1200-xbox-take-two-10-let.html",
+   "url": "https://geekovski.ru/2026-11-11-1200-xbox-take-two-10-let.html",
+   "title": "Xbox подписала с Take-Two партнёрство на 10 лет",
+   "summary": "CEO Xbox Аша Шарма объявила о десятилетнем стратегическом партнёрстве с Take-Two. Первый его шаг — GTA VI в Xbox Cloud Gaming на Xbox One с 19 ноября и переезд GTA V с Red Dead Redemption 2 в облако; условий сделки не раскрыла ни одна из сторон.",
+   "date_published": "2026-11-11T12:00:00+03:00",
+   "date_modified": "2026-11-11T12:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-grassrivers-2.jpg",
+   "_sources": [
+    {
+     "name": "Xbox — пост Аши Шармы",
+     "url": "https://x.com/asha_shar/status/2120181266318590366"
+    },
+    {
+     "name": "Pure Xbox — Xbox CEO Issues Statement On GTA 6 And New 10-Year Partnership",
+     "url": "https://www.purexbox.com/news/2026/11/xbox-ceo-issues-statement-on-gta-6-and-new-10-year-partnership-with-its-publisher"
+    },
+    {
+     "name": "Insider Gaming — Xbox CEO Reveals New 10-Year Take-Two Partnership",
+     "url": "https://insider-gaming.com/xbox-ceo-announces-10-year-take-two-partnership/"
+    },
+    {
+     "name": "Rockstar Newswire — Pre-Load Grand Theft Auto VI Now",
+     "url": "https://www.rockstargames.com/newswire/article/89834o94713o21/pre-load-grand-theft-auto-vi-now"
+    },
+    {
+     "name": "Pure Xbox — Take-Two Signs New Deal With Xbox",
+     "url": "https://www.purexbox.com/news/2026/10/take-two-signs-new-deal-with-xbox-but-theres-debate-about-how-important-it-actually-is"
+    },
+    {
+     "name": "Xbox Wire — Upcoming Changes to Xbox Cloud Gaming",
+     "url": "https://news.xbox.com/en-us/2026/09/03/xbox-cloud-gaming-changes/"
+    },
+    {
+     "name": "Sony Interactive Entertainment — Business Data & Sales",
+     "url": "https://sonyinteractive.com/en/our-company/business-data-sales/"
+    },
+    {
+     "name": "This Week in Video Games — PS5 lifetime shipments over 100 million",
+     "url": "https://thisweekinvideogames.com/news/playstation-5-lifetime-shipments-now-over-100-million-2-1-million-moved-in-october-2026"
+    },
+    {
+     "name": "Игромания — GTA 6 стала самой предзаказываемой игрой",
+     "url": "https://www.igromania.ru/news/169845/gta-6-stala-samoj-predzakazyvaemoj-igroj-v-playstation-store-i-microsoft-store/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-11-1000-ps-plus-noyabr-katalog.html",
    "url": "https://geekovski.ru/2026-11-11-1000-ps-plus-noyabr-katalog.html",
    "title": "PS Plus в ноябре: Death Stranding 2 приходит, GTA V уходит",
