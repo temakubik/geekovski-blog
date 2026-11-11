@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-11-2100-pixel-tag.html",
+   "url": "https://geekovski.ru/2026-11-11-2100-pixel-tag.html",
+   "title": "Pixel Tag: Google выпустила свой AirTag за $29,99",
+   "summary": "Google начала продавать первый собственный трекер Pixel Tag — $29,99 за штуку и $99,99 за четыре. Внутри UWB и Bluetooth Channel Sounding, поиск по сети из миллиарда Android-устройств и батарейка на год. Вместе с трекером вышло ноябрьское обновление Pixel Drop: генератор виджетов по текстовому запросу, Rambler и Gemini Intelligence на Pixel 10.",
+   "date_published": "2026-11-11T21:00:00+03:00",
+   "date_modified": "2026-11-11T21:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/pixel-tag.jpg",
+   "_sources": [
+    {
+     "name": "Google — Pixel Tag",
+     "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-tag/"
+    },
+    {
+     "name": "Google — ноябрьский Pixel Drop",
+     "url": "https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop/"
+    },
+    {
+     "name": "TechCrunch — Pixel Tag поступил в продажу",
+     "url": "https://techcrunch.com/2026/11/10/pixel-tag-googles-30-android-ready-answer-to-apples-airtag-is-now-available"
+    },
+    {
+     "name": "The Verge — Pixel Tag и Find Hub",
+     "url": "https://www.theverge.com/tech/978713/google-pixel-tag-uwb-bluetooth-channel-finding-news"
+    },
+    {
+     "name": "Tom's Guide — обзор Pixel Tag",
+     "url": "https://www.tomsguide.com/au/phones/google-pixel-tag-review"
+    },
+    {
+     "name": "Android Authority — характеристики Pixel Tag",
+     "url": "https://www.androidauthority.com/google-pixel-tag-released-3733213/"
+    },
+    {
+     "name": "MacRumors — AirTag 2 подешевел до $69,99",
+     "url": "https://www.macrumors.com/2026/11/11/airtag-2-record-low-black-friday/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-11-1800-kolca-vlasti-3-sezon.html",
    "url": "https://geekovski.ru/2026-11-11-1800-kolca-vlasti-3-sezon.html",
    "title": "Третий сезон «Колец власти»: Саурон вышел из тени",
