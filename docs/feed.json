@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-12-1000-metaphor-refantazio-switch-2.html",
+   "url": "https://geekovski.ru/2026-11-12-1000-metaphor-refantazio-switch-2.html",
+   "title": "Metaphor на Switch 2: отличная игра, неровный порт",
+   "summary": "12 ноября Metaphor: ReFantazio вышла на Switch 2 за $39,99 — на $30 дешевле, чем на PS5, Xbox и Steam. Сама игра не изменилась, а вот порт получился компромиссным: три режима графики, разблокированный кадровый темп без ограничителя и заметные просадки в городах.",
+   "date_published": "2026-11-12T10:00:00+03:00",
+   "date_modified": "2026-11-12T10:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/metaphor-switch2-cover.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo eShop — Metaphor: ReFantazio для Switch 2",
+     "url": "https://www.nintendo.com/us/store/products/metaphor-refantazio-switch-2/"
+    },
+    {
+     "name": "RPG Site — разбор версии для Switch 2 против PS5, PS4 и Steam Deck",
+     "url": "https://www.rpgsite.net/feature/21726-metaphor-refantazio-switch-2-review-full-game-vs-ps5-ps4-steam-deck-pc"
+    },
+    {
+     "name": "Nintendo Life — рецензия на версию для Switch 2",
+     "url": "https://www.nintendolife.com/reviews/nintendo-switch-2/metaphor-refantazio"
+    },
+    {
+     "name": "CBR — рецензия",
+     "url": "https://www.cbr.com/metaphor-refantazio-switch-2-review/"
+    },
+    {
+     "name": "RPGamer — впечатления от порта",
+     "url": "https://rpgamer.com/2026/11/metaphor-refantazio-switch-2-impression"
+    },
+    {
+     "name": "Pocket Tactics — рецензия",
+     "url": "https://www.pockettactics.com/metaphor-refantazio/review"
+    },
+    {
+     "name": "RPG Site — цены и издания на Switch 2",
+     "url": "https://www.rpgsite.net/news/21261-metaphor-refantazio-will-be-3999-on-nintendo-switch-2-35th-anniversary-edition-guidebook-edition-also-available"
+    },
+    {
+     "name": "Final Weapon — снижение цен на других платформах",
+     "url": "https://finalweapon.net/2026/11/06/metaphor-refantazio-major-price-drop-all-platforms-switch-2-release/"
+    },
+    {
+     "name": "GoNintendo — анонс версии и миллион копий в первый день",
+     "url": "https://gonintendo.com/contents/61676-metaphor-refantazio-launches-on-switch-2-nov-12th-2026-update"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-12-0800-nvidia-huang-otstavka.html",
    "url": "https://geekovski.ru/2026-11-12-0800-nvidia-huang-otstavka.html",
    "title": "У Nvidia нет второго Хуана",
