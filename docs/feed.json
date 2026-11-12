@@ -8,6 +8,76 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-12-sony-anime-imperiya.html",
+   "url": "https://geekovski.ru/2026-11-12-sony-anime-imperiya.html",
+   "title": "Sony строит аниме-империю на десятилетия: Aniplex, Crunchyroll и мечта о своём парке",
+   "summary": "Sony делает аниме главным драйвером роста и готова ждать десятилетиями. Председатель Aniplex Ацухиро Иваками рассказал, что «Клинок, рассекающий демонов» должен жить 50–100 лет, а ради этого Sony скупает права, строит студию Hayate и не исключает покупки доли в Shueisha — и даже собственного парка развлечений.",
+   "date_published": "2026-11-12T21:40:00+03:00",
+   "date_modified": "2026-11-12T21:40:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/sony-anime-akiba.jpg",
+   "_sources": [
+    {
+     "name": "The Business Times — интервью о ставке на аниме",
+     "url": "https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/sony-bets-homegrown-anime-fuel-decades-future-growth"
+    },
+    {
+     "name": "Anime News Network — Crunchyroll Storyworks и Hayate",
+     "url": "https://animenewsnetwork.com/news/2026-10-07/sony-pictures-entertainment-launches-crunchyroll-storyworks-division-for-anime-li"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-12-ps-store-hardware.html",
+   "url": "https://geekovski.ru/2026-11-12-ps-store-hardware.html",
+   "title": "PS Store начал продавать железо — но купить его с консоли нельзя, только QR-код",
+   "summary": "В PS Store на PS5 появилась вкладка Hardware: консоли, геймпады, Portal, наушники, PSVR2 и панели. Покупки внутри нет — каждая страница предлагает отсканировать QR-код телефоном и уводит в PlayStation Direct. Sony осторожно возвращается к продаже железа через свою витрину.",
+   "date_published": "2026-11-12T21:10:00+03:00",
+   "date_modified": "2026-11-12T21:10:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/ps-portal.jpg",
+   "_sources": [
+    {
+     "name": "Push Square — новая вкладка Hardware",
+     "url": "https://www.pushsquare.com/news/2026/11/ps-store-adds-ps5-hardware-tab-but-its-extremely-limited"
+    },
+    {
+     "name": "PlayStation — как купить железо",
+     "url": "https://www.playstation.com/en-gb/support/store/hardware-purchase-guide"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-12-gta6-yaponiya-cenzura.html",
+   "url": "https://geekovski.ru/2026-11-12-gta6-yaponiya-cenzura.html",
+   "title": "Японская GTA 6 легче мировой на 1,19 ГБ — игроки ищут цензуру, Rockstar молчит",
+   "summary": "Предзагрузка GTA 6 показала, что японская версия игры примерно на гигабайт меньше мировой, а в рейтинге CERO у неё нет пометки о сексуальном контенте. Фанаты требуют от Rockstar объяснений до релиза 19 ноября, но компания пока не подтвердила ни цензуру, ни её отсутствие.",
+   "date_published": "2026-11-12T20:40:00+03:00",
+   "date_modified": "2026-11-12T20:40:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-japan.jpg",
+   "_sources": [
+    {
+     "name": "AUTOMATON — разница в размере и вопросы о цензуре",
+     "url": "https://automaton-media.com/en/news/gta-6s-smaller-file-size-and-lack-of-sexual-content-disclaimer-in-japan-raises-concerns/"
+    },
+    {
+     "name": "GameSpark — размеры версий",
+     "url": "https://www.gamespark.jp/article/2026/11/10/174692.html"
+    },
+    {
+     "name": "GamingPromax — предзагрузка и данные",
+     "url": "https://gamingpromax.com/gta-6-japan-version-file-size-censorship-concerns/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-12-1800-disk-bolshe-ne-igra.html",
    "url": "https://geekovski.ru/2026-11-12-1800-disk-bolshe-ne-igra.html",
    "title": "Диск больше не игра: физику дописывают патчами",
