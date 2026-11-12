@@ -354,13 +354,15 @@ PAGE = """<!DOCTYPE html>
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
 {article_meta}
-<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
-<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<!-- ?v=2 — бренд-набор 2026-11-13: браузеры и Google держат favicon в своём кэше
+     неделями и max-age не уважают; при следующей замене знака номер поднять. -->
+<link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png?v=2">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png?v=2">
+<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0A0C0F">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -381,7 +383,7 @@ PAGE = """<!DOCTYPE html>
 <body class="t-{theme}">
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg?v=2" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg?v=2" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
     <nav class="nav" id="site-nav" aria-label="Основное меню">{nav}</nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
@@ -392,7 +394,7 @@ PAGE = """<!DOCTYPE html>
 {content}
 <footer class="foot">
   <div class="wrap foot__in">
-    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
+    <span class="foot__brand"><img src="/assets/img/favicon.svg?v=2" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
     <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
     <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
   </div>
