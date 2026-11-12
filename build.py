@@ -1883,7 +1883,7 @@ def render_style_guide(theme):
     palette = [
         ("ink", "#0A0C0F", "фон"), ("panel", "#11151A", "плашки"), ("line", "#1F252E", "разделители"),
         ("text", "#E9EBEE", "основной текст"), ("muted", "#8B939E", "второй план"),
-        ("accent", "#C9F24D", "акцент"),
+        ("accent", "#377BF0", "акцент (синий из логотипа)"),
     ]
     cats = [("Xbox", "#2FB344"), ("Nintendo Switch", "#E60012"), ("PlayStation", "#2F6DF6"),
             ("PC-игры", "#8B5CF6"), ("VR", "#A855F7"), ("Гаджеты", "#22D3EE"),

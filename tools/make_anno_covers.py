@@ -48,7 +48,7 @@ body{{width:1200px;height:675px;overflow:hidden;background:#0A0C0F;position:rela
 .ep{{font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:#8B939E}}
 .bottom{{display:flex;flex-direction:column;gap:18px}}
 .date{{font-size:34px;letter-spacing:.14em;text-transform:uppercase;color:#8B939E}}
-.date b{{color:#C9F24D}}
+.date b{{color:#7FA8F7}}
 h1{{font-size:{size}px;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;color:#E9EBEE;
   text-shadow:0 4px 30px rgba(0,0,0,.6)}}
 .plat{{font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:{c}}}
@@ -101,7 +101,7 @@ def records():
 def render(rec):
     title = rec["title"]
     cat = rec["category"]
-    color = CAT_COLOR.get(cat, "#C9F24D")
+    color = CAT_COLOR.get(cat, "#7FA8F7")
     y, m, d = rec["date"].split("-")
     size = 104 if len(title) <= 16 else (82 if len(title) <= 28 else 64)
     plats = " · ".join(PLAT.get(p, p.upper()) for p in rec.get("platforms", "").split())

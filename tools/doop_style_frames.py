@@ -29,7 +29,7 @@ COMMON = """
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0A0C0F;color:#E9EBEE;font-family:'Medeo Sans',sans-serif;padding:44px 52px;
      -webkit-font-smoothing:antialiased}
-.kicker{font-family:'Chava',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#C9F24D}
+.kicker{font-family:'Chava',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#7FA8F7}
 h2.sec{font-family:'RGS';font-style:italic;font-weight:900;font-size:34px;letter-spacing:-.025em;margin:6px 0 26px}
 .hint{font-family:'Medeo Mono',monospace;font-size:12px;color:#8B939E;letter-spacing:.02em}
 .label{font-family:'Chava',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8B939E}
@@ -83,7 +83,7 @@ def typography():
         "padding:20px 0;border-bottom:1px solid #1F252E'>"
         "<div><div class='label' style='color:#E9EBEE'>%s</div>"
         "<div class='hint' style='margin-top:6px'>%s</div>"
-        "<div class='hint' style='color:#C9F24D;margin-top:4px'>--fs-%s</div></div>"
+        "<div class='hint' style='color:#7FA8F7;margin-top:4px'>--fs-%s</div></div>"
         "<div>%s</div></div>" % (name, spec, tok, sample)
         for name, tok, spec, _c, sample in rows)
     body = ("<div class='kicker'>GEEKOVSKI · Style Guide</div>"
@@ -105,7 +105,7 @@ def palette():
                 % (hexv, name, hexv, note))
 
     base = [("ink", "#0A0C0F", "фон"), ("panel", "#11151A", "плашки"), ("line", "#1F252E", "разделители"),
-            ("text", "#E9EBEE", "текст"), ("muted", "#8B939E", "второй план"), ("accent", "#C9F24D", "акцент")]
+            ("text", "#E9EBEE", "текст"), ("muted", "#8B939E", "второй план"), ("accent", "#7FA8F7", "акцент")]
     body = ("<div class='kicker'>GEEKOVSKI · Style Guide</div><h2 class='sec'>Палитра</h2>"
             "<div style='display:grid;grid-template-columns:repeat(3,1fr);gap:12px'>"
             + "".join(sw(n, h, note) for n, h, note in base) + "</div>"
@@ -130,7 +130,7 @@ def tags_icons():
         "color:%s;border:1px solid %s;padding:4px 8px;border-radius:2px'>%s</span>" % (CAT_COLORS[c], CAT_COLORS[c], n)
         for c, n in CAT_NAMES)
     solid = ("<span style='font-family:\"Chava\",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;"
-             "background:#C9F24D;color:#0A0C0F;padding:4px 8px;border-radius:2px'>Дайджест</span>")
+             "background:#7FA8F7;color:#0A0C0F;padding:4px 8px;border-radius:2px'>Дайджест</span>")
     small = ("<span style='font-family:\"Chava\",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;"
              "color:#8B939E;border:1px solid #1F252E;padding:2px 6px;border-radius:2px'>chip--sm</span>")
     icons = "".join(

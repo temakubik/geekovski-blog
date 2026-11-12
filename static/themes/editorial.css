@@ -1,17 +1,23 @@
 /* GEEKOVSKI — тема «Редакция»: тёмный фон, крупная типографика, ленты рубрик */
+/* Акцент — синий из логотипа (#377BF0), раньше был лаймовый #c9f24d.
+   Контраст посчитан по WCAG 2.1 (порог AA для текста 4.5:1, для заливок и обводок 3:1):
+   · тёмная тема: #377bf0 на --bg 4.9:1, на --panel 4.58:1, краска --accent-ink на заливке 4.9:1;
+   · светлая тема: тот же синий на --bg даёт 3.86:1 — мало для текста, поэтому там
+     затемнённый брендовый #1d54b8: на --bg 6.73:1, белая краска на заливке 6.97:1.
+   Меняешь акцент — пересчитай эти пары, а не подбирай на глаз. */
 :root, .t-editorial {
   --bg: #0a0c0f;
   --panel: #11151a;
   --line: #1f252e;
   --text: #e9ebee;
   --muted: #8b939e;
-  --accent: #c9f24d;
+  --accent: #377bf0;
   --accent-ink: #0a0c0f;
   --radius: 4px;
 }
 [data-mode="light"] .t-editorial {
   --bg: #fbfbf9; --panel: #fff; --line: #e3e4df; --text: #14161a; --muted: #62676f;
-  --accent: #6d8f00; --accent-ink: #fff;
+  --accent: #1d54b8; --accent-ink: #fff;
 }
 
 * { box-sizing: border-box; }
@@ -169,7 +175,7 @@ a.chip:hover, a.chip:focus-visible { border-color: currentColor; }
 .ditem__meta { margin: 0 0 12px; }
 .ditem__title { font-family: var(--font-display); font-size: var(--fs-h2); line-height: 1.2; margin: 6px 0 8px; font-weight: var(--fw-display); font-style: italic; letter-spacing: -.015em; }
 .ditem__text { margin: 0 0 8px; color: var(--muted); font-size: var(--fs-small); line-height: 1.55; }
-.ditem__src { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--text); text-decoration: underline; text-underline-offset: 2px; opacity: .8; }
+.ditem__src { font-family: var(--font-mono); font-size: var(--fs-meta); color: color-mix(in srgb, var(--text) 82%, var(--bg)); text-decoration: underline; text-underline-offset: 2px; }
 .ditem__src:hover { color: var(--accent); }
 .chip--sm { padding: 2px 6px; }
 /* чипы рубрик: свой цвет у каждой — обводка и текст одним цветом */
@@ -458,7 +464,7 @@ a.anno:hover .anno__cover img { transform: scale(1.03); }
   .backrow { padding: 14px 0 2px; }
   .backlink { width: 100%; justify-content: center; padding: 12px 14px; }
 }
-a.tlink { color: var(--accent); text-decoration: none; border-bottom: 1px dashed rgba(201,242,77,.5); }
+a.tlink { color: var(--accent); text-decoration: none; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 55%, transparent); }
 a.tlink:hover { border-bottom-style: solid; }
 .mnews { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; margin-bottom: 8px;
   border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 4px;
@@ -479,8 +485,10 @@ a.tlink:hover { border-bottom-style: solid; }
 .cal-week .rubric__head, .cal-month .rubric__head, .cal-later .rubric__head { margin-bottom: 6px; }
 .cal-month { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line); }
 .cal-month .mrow:last-child { border-bottom: 0; }
-.cal-history { opacity: .82; }
+/* Прошедшие месяцы приглушаем цветом, а не opacity: прозрачность на блоке
+   гасит и акцентный заголовок (у #377bf0 на тёмном оставалось 3.6:1 вместо 4.9:1). */
 .mblock--past .mrow { color: var(--muted); }
+.mblock--past .mblock__h { color: var(--muted); }
 
 /* Таблицы в тексте статьи. На мобиле таблица не ломает вёрстку:
    .table-wrap скроллится по горизонтали, тело таблицы получает min-width,

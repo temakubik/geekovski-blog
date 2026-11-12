@@ -39,12 +39,12 @@ body{{width:1000px;height:1500px;overflow:hidden;background:#0A0C0F;position:rel
 .tint{{position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,{c}33 0%,transparent 55%);mix-blend-mode:screen}}
 .wrap{{position:absolute;inset:0;padding:56px 60px 64px;display:flex;flex-direction:column;justify-content:space-between;z-index:2}}
 .top{{display:flex;align-items:center;justify-content:space-between}}
-.brand{{font-family:'Chava',monospace;font-size:26px;letter-spacing:.22em;color:#C9F24D}}
+.brand{{font-family:'Chava',monospace;font-size:26px;letter-spacing:.22em;color:#7FA8F7}}
 .tag{{font-family:'Chava',monospace;font-size:24px;letter-spacing:.16em;color:{c};border:2px solid {c};padding:6px 14px}}
 .bottom{{display:flex;flex-direction:column;gap:22px}}
 h1{{font-family:'RGS';font-style:italic;font-weight:900;font-size:{size}px;line-height:1.02;letter-spacing:-.025em}}
 .meta{{font-family:'Chava',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#8B939E}}
-.meta b{{color:#C9F24D}}
+.meta b{{color:#7FA8F7}}
 </style></head><body>
 <div class="photo"></div><div class="tint"></div><div class="scrim"></div>
 <div class="wrap">
@@ -101,7 +101,7 @@ def photo_url(cover):
 
 def render(slug, meta):
     cat = meta.get("category", "ai")
-    color = CAT_COLOR.get(cat, "#C9F24D")
+    color = CAT_COLOR.get(cat, "#7FA8F7")
     title = meta.get("title", "").strip().rstrip(".")
     size = 92 if len(title) <= 40 else (76 if len(title) <= 60 else 62)
     day, month = "", ""
