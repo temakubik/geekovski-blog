@@ -8,6 +8,68 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-12-1500-golden-joystick-2026.html",
+   "url": "https://geekovski.ru/2026-11-12-1500-golden-joystick-2026.html",
+   "title": "Requiem — игра года, Capcom забрала Golden Joystick 2026",
+   "summary": "Вечером 11 ноября в Лондоне прошла 44-я церемония Golden Joystick Awards, где победителей в 25 категориях выбирали голосованием игроков. Ultimate Game of the Year досталась Resident Evil Requiem — 17% против 16% у Phantom Blade Zero и 15% у Crimson Desert, а всего у Capcom шесть статуэток. Главным сюрпризом ночи стала Meccha Chameleon: самодельная hide-and-seek игра забрала четыре награды.",
+   "date_published": "2026-11-12T15:00:00+03:00",
+   "date_modified": "2026-11-12T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/joystick-requiem-grace.jpg",
+   "_sources": [
+    {
+     "name": "GamesRadar+ — полный список победителей",
+     "url": "https://www.gamesradar.com/games/all-the-golden-joystick-awards-2026-winners-revealed/"
+    },
+    {
+     "name": "PC Gamer — Crimson Desert как PC-игра года",
+     "url": "https://www.pcgamer.com/games/crimson-desert-wins-pc-game-of-the-year-at-the-2026-golden-joystick-awards/"
+    },
+    {
+     "name": "Nintendo Life — Requiem и шесть наград Capcom",
+     "url": "https://www.nintendolife.com/news/2026/11/resident-evil-requiem-crowned-ultimate-game-of-the-year-at-the-golden-joysticks-awards"
+    },
+    {
+     "name": "VGTimes — цифры голосования и Лондон",
+     "url": "https://vgtimes.com/gaming-news/174309-resident-evil-requiem-wins-the-top-prize-at-golden-joystick-awards-2026.html"
+    },
+    {
+     "name": "Capcom — Platinum Titles, 8 млн копий Requiem",
+     "url": "https://www.capcom.co.jp/ir/english/business/million.html"
+    },
+    {
+     "name": "Capcom — пресс-релиз о 5 млн копий",
+     "url": "https://www.capcom.co.jp/ir/english/news/html/e260304.html"
+    },
+    {
+     "name": "Steam — страница MECCHA CHAMELEON",
+     "url": "https://store.steampowered.com/app/4704690/MECCHA_CHAMELEON/"
+    },
+    {
+     "name": "ITmedia — 20 млн копий за два месяца",
+     "url": "https://www.itmedia.co.jp/news/article/2608/12/2000000507/"
+    },
+    {
+     "name": "Automaton — Meccha Chameleon без рекламного бюджета",
+     "url": "https://automaton-media.com/en/news/japanese-viral-indie-hit-meccha-chameleon-sells-3-million-copies-in-a-week-as-creators-reveal-they-spent-nothing-on-advertising/"
+    },
+    {
+     "name": "GetRekt — Big Walk и ИИ-код",
+     "url": "https://www.getrekt.com/news/big-walk-ai-code-igf-jurors-house-house/"
+    },
+    {
+     "name": "Valheim — релиз 1.0",
+     "url": "https://www.valheimgame.com/news/valheim-1-0-has-arrived-/"
+    },
+    {
+     "name": "TechRadar — Steam Controller 2026",
+     "url": "https://www.techradar.com/computing/peripherals-accessories/valve-steam-controller-2026"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-12-redmagic-12-pro-linux.html",
    "url": "https://geekovski.ru/2026-11-12-redmagic-12-pro-linux.html",
    "title": "RedMagic 12 Pro — первый смартфон на Snapdragon с настоящим Linux-терминалом",

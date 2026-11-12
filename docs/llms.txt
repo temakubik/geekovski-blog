@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 8 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 13 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 11 материалов
-- [PC-игры](https://geekovski.ru/pc/): 18 материалов
+- [PC-игры](https://geekovski.ru/pc/): 19 материалов
 - [VR](https://geekovski.ru/vr/): 6 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 25 материалов
 - [Кино](https://geekovski.ru/kino/): 16 материалов
@@ -25,6 +25,7 @@
 
 ## Материалы
 
+- [Requiem — игра года, Capcom забрала Golden Joystick 2026](https://geekovski.ru/2026-11-12-1500-golden-joystick-2026.html): Вечером 11 ноября в Лондоне прошла 44-я церемония Golden Joystick Awards, где победителей в 25 категориях выбирали голосованием игроков. Ultimate Game of the Year досталась Resident Evil Requiem — 17% против 16% у Phantom Blade Zero и 15% у Crimson Desert, а всего у Capcom шесть статуэток. Главным сюрпризом ночи стала Meccha Chameleon: самодельная hide-and-seek игра забрала четыре награды. (12.11.2026)
 - [RedMagic 12 Pro — первый смартфон на Snapdragon с настоящим Linux-терминалом](https://geekovski.ru/2026-11-12-redmagic-12-pro-linux.html): RedMagic 12 Pro стал первым Android-смартфоном на Snapdragon, где заработал системный Linux Terminal — до этого он был только на Pixel и части Galaxy на Exynos. В терминале можно выделить до 10,6 ГБ памяти и 132 ГБ диска. Сам аппарат — игровой флагман с экраном 185 Гц и батареей 8400 мА·ч. (12.11.2026)
 - [«Мосгаз. Дело №12: Южный порт» — Черкасов против бывших коллег, 1984 и автомобильная мафия](https://geekovski.ru/2026-11-12-mosgaz-12-yuzhny-port.html): 16 ноября Первый канал начинает показ двенадцатого сезона «Мосгаза». Действие переносится в 1984 год, в Южный порт — крупнейший рынок подержанных машин в Москве, где зарождается автомобильная мафия. Отставной майор Черкасов берётся за частное расследование и оказывается конкурентом собственных бывших коллег из МУРа. (12.11.2026)
 - [«Project Hail Mary» вышла в VR: корабль появляется в вашей комнате, Рокки говорит голосом из фильма](https://geekovski.ru/2026-11-12-hail-mary-vr.html): 12 ноября на Quest 3, 3S и PICO вышла Project Hail Mary: Journey Among the Stars — приключение в смешанной реальности от Maze Theory по миру Энди Вейра. Игра рассказывает новую историю во время перелёта, а Рокки озвучивает тот же актёр, что и в фильме. $19,99, предзаказ был $17,99. (12.11.2026)
@@ -185,6 +186,7 @@
 - [Atomfall](https://geekovski.ru/titles/atomfall.html): 2025
 - [Big Walk](https://geekovski.ru/titles/big-walk.html): 2026
 - [Black Doves, сезон 2](https://geekovski.ru/titles/black-doves-sezon-2.html): 2026
+- [Crimson Desert](https://geekovski.ru/titles/crimson-desert.html): 2026
 - [CRYMELIGHT](https://geekovski.ru/titles/crymelight.html): 2026
 - [Death Stranding 2: On the Beach](https://geekovski.ru/titles/death-stranding-2.html): 2025
 - [John Wick: анимационный приквел](https://geekovski.ru/titles/dzhon-uik-animaciya.html)
@@ -198,9 +200,11 @@
 - [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
 - [Властелин колец: Кольца власти, сезон 3](https://geekovski.ru/titles/kolca-vlasti-3-sezon.html): 2026
 - [Marvel's Blade](https://geekovski.ru/titles/marvels-blade.html): 2027
+- [MECCHA CHAMELEON](https://geekovski.ru/titles/meccha-chameleon.html): 2026
 - [Metaphor: ReFantazio](https://geekovski.ru/titles/metaphor-refantazio.html): 2024
 - [NieR: Automata](https://geekovski.ru/titles/nier-automata.html): 2017
 - [The Odyssey / «Одиссея»](https://geekovski.ru/titles/odysseya-nolan.html): 2026
+- [Resident Evil Requiem](https://geekovski.ru/titles/resident-evil-requiem.html): 2026
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
