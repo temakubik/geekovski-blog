@@ -373,13 +373,15 @@ PAGE = """<!DOCTYPE html>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
+<link rel="stylesheet" href="/assets/brand.css">
+<script>try{{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}}catch(e){{}}</script>
 {metrika}
 {jsonld}
 </head>
 <body class="t-{theme}">
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="1152" height="256" loading="eager"></a>
+    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
     <nav class="nav" id="site-nav" aria-label="Основное меню">{nav}</nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
@@ -1903,9 +1905,20 @@ def render_style_guide(theme):
     icons = "".join('<div class="sg-icon"><span class="ditem__icon cat-%s">%s</span><span>%s</span></div>'
                     % (c, ICONS.get(c, ""), name) for c, name in CATS)
     icon_block = ('<section class="sg-block"><h2>Иконки рубрик</h2><div class="sg-icons">%s</div>'
-                  '<p class="sg-hint">Инлайн-SVG 24×24, цвет наследуется от рубрики. Иконки бренда: '
-                  '<img src="/assets/img/favicon.svg" alt="" width="18" height="18" style="vertical-align:middle"> favicon · '
-                  '<img src="/assets/img/logo.svg" alt="" width="18" height="18" style="vertical-align:middle"> лого.</p></section>') % icons
+                  '<p class="sg-hint">Инлайн-SVG 24×24, цвет наследуется от рубрики. Иконки бренда:</p>'
+                  '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:8px;'
+                  'font-size:var(--fs-meta);color:var(--muted)">'
+                  '<span style="display:flex;align-items:center;gap:6px">'
+                  '<img src="/assets/img/favicon.svg" alt="" width="18" height="18">favicon</span>'
+                  '<span style="display:flex;align-items:center;gap:6px">'
+                  '<img src="/assets/img/geekovski-icon.svg" alt="" width="18" height="18">знак</span>'
+                  '<span style="display:flex;align-items:center;gap:6px">'
+                  '<img src="/assets/img/geekovski-logo.svg" alt="" width="73" height="14" '
+                  'style="background:#0A0C0F;padding:3px 6px;border-radius:4px">лого на тёмном</span>'
+                  '<span style="display:flex;align-items:center;gap:6px">'
+                  '<img src="/assets/img/geekovski-logo-light.svg" alt="" width="73" height="14" '
+                  'style="background:#fff;padding:3px 6px;border-radius:4px">лого на светлом</span>'
+                  '</div></section>') % icons
 
     # --- компоненты
     card = card_sample = ("<article class=\"sg-card\"><div class=\"card__body\"><div class=\"card__meta\">"

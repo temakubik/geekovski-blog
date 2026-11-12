@@ -3,7 +3,7 @@
    запуск: HTML отдаём из сети (чтобы читатель всегда видел свежую версию),
    статику (шрифты, картинки, CSS) кэшируем надолго. */
 
-const VERSION = "geekovski-v1";
+const VERSION = "geekovski-v2";
 const STATIC_CACHE = `${VERSION}-static`;
 const PAGE_CACHE = `${VERSION}-pages`;
 
@@ -15,6 +15,7 @@ self.addEventListener("install", (event) => {
       cache.addAll([
         OFFLINE_URL,
         "/assets/theme.css",
+        "/assets/brand.css",
         "/assets/fonts.css",
         "/assets/img/app-icon-512.png",
         "/assets/img/favicon.svg",

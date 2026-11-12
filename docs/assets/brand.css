@@ -1,0 +1,9 @@
+/* GEEKOVSKI · бренд
+   Знак в шапке: белый вордмарк на тёмном фоне, чёрный — на светлом.
+   Две картинки вместо подмены src через JS: тема живёт классом на <html>,
+   так что браузер сам показывает нужную ещё до первой отрисовки. */
+
+.brand__logo--light { display: none; }
+
+[data-mode="light"] .brand__logo--dark { display: none; }
+[data-mode="light"] .brand__logo--light { display: block; }

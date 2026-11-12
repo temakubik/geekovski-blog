@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru"><head><meta charset="utf-8">
-<link rel="stylesheet" href="../static/fonts.css">
+<!-- Источник картинки og-default.png (1200×630). Собирается tools/make_og.py:
+     страница отдаётся локальным сервером, поэтому пути к ассетам абсолютные (/assets/…). -->
+<link rel="stylesheet" href="/assets/fonts.css">
 <style>
 *{box-sizing:border-box;margin:0}
 body{width:1200px;height:630px;background:#0A0C0F;color:#E9EBEE;position:relative;overflow:hidden;
      font-family:'Medeo Sans',-apple-system,'Segoe UI',sans-serif}
 body:before{content:'';position:absolute;inset:0;
-  background:radial-gradient(700px 460px at 84% 4%,rgba(201,242,77,.12),transparent 70%),
+  background:radial-gradient(700px 460px at 84% 4%,rgba(55,123,240,.16),transparent 70%),
              radial-gradient(500px 380px at 8% 96%,rgba(201,242,77,.06),transparent 70%)}
 .in{position:absolute;inset:0;padding:64px 72px;display:flex;flex-direction:column}
-.top{display:flex;align-items:center;gap:16px}
-.top img{width:56px;height:56px;display:block}
-/* display — тот же Random Grotesque Spacious, что в заголовках сайта */
-.word{font-family:'Random Grotesque Spacious','Medeo Sans',sans-serif;font-style:italic;font-weight:900;
-      font-size:34px;letter-spacing:-.01em;color:#E9EBEE}
+.top{display:flex;align-items:center}
+/* знак целиком — брендовый логотип: иконка + вордмарк, как в шапке сайта */
+.top img{height:56px;width:auto;display:block}
 .mid{margin-top:auto}
 .h{font-family:'Random Grotesque Spacious','Medeo Sans',sans-serif;font-style:italic;font-weight:900;
    font-size:58px;line-height:1.06;letter-spacing:-.025em;color:#E9EBEE;max-width:22ch}
@@ -26,8 +26,7 @@ body:before{content:'';position:absolute;inset:0;
 </style></head><body>
 <div class="in">
   <div class="top">
-    <img src="../static/img/geekovski-icon.svg" alt="" width="64" height="64" style="border-radius:10px">
-    <span class="word">GEEKOVSKI</span>
+    <img src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="293" height="56">
   </div>
   <div class="mid">
     <div class="h">Технологии, игры и кино <em>без маркетингового сиропа</em></div>
