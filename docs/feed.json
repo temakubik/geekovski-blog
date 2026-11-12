@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-12-1800-disk-bolshe-ne-igra.html",
+   "url": "https://geekovski.ru/2026-11-12-1800-disk-bolshe-ne-igra.html",
+   "title": "Диск больше не игра: физику дописывают патчами",
+   "summary": "На панели в Сеуле глава Too Kyo Games Кадзутака Кодака признал, что студия сдаёт в тираж сборки, в которые «никто не должен играть», а игру доводят патчем. Это не скандал, а честное описание того, как устроена физика в 2026 году: Sony прекращает печатать новые диски с января 2028-го, а часть картриджей Switch 2 вообще не содержит игры.",
+   "date_published": "2026-11-12T18:00:00+03:00",
+   "date_modified": "2026-11-12T18:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/disk-fizika-vitrina.jpg",
+   "_sources": [
+    {
+     "name": "Inven Global — панель в Сеуле, стенограмма",
+     "url": "https://www.invenglobal.com/articles/28387/6-developers-behind-global-hits-share-console-game-development-insights"
+    },
+    {
+     "name": "Kotaku — пересказ слов Кодаки",
+     "url": "https://kotaku.com/kazutaka-kodaka-danganronpa-physical-collectors-edition-2000755945"
+    },
+    {
+     "name": "Nintendo Life — реакция на признание",
+     "url": "https://www.nintendolife.com/news/2026/11/danganronpa-creator-says-physical-game-production-is-reliant-on-day-one-patches"
+    },
+    {
+     "name": "PlayStation Blog — конец производства дисков с января 2028",
+     "url": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/"
+    },
+    {
+     "name": "Reuters — Sony уходит с дисков",
+     "url": "https://www.reuters.com/world/asia-pacific/sony-end-discs-new-playstation-releases-gaming-shifts-online-2026-07-01"
+    },
+    {
+     "name": "Insider Gaming — «планов отказываться от физики нет», Nintendo",
+     "url": "https://insider-gaming.com/nintendo-has-no-plans-to-ditch-physical-games/"
+    },
+    {
+     "name": "Kotaku — Danganronpa 2×2 стала карточкой-ключом",
+     "url": "https://kotaku.com/danganronpa-2x2-switch-2-game-key-card-pre-order-cancel-2000728537"
+    },
+    {
+     "name": "d-russia.ru — PS Store отключили в России в 2022-м",
+     "url": "https://d-russia.ru/sony-prekratila-postavki-i-rabotu-playstation-store-v-rossii.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-12-1500-golden-joystick-2026.html",
    "url": "https://geekovski.ru/2026-11-12-1500-golden-joystick-2026.html",
    "title": "Requiem — игра года, Capcom забрала Golden Joystick 2026",
@@ -299,9 +345,9 @@
    "id": "https://geekovski.ru/2026-11-12-0800-nvidia-huang-otstavka.html",
    "url": "https://geekovski.ru/2026-11-12-0800-nvidia-huang-otstavka.html",
    "title": "У Nvidia нет второго Хуана",
-   "summary": "Ночь на 12 ноября дала сразу два удара: The New York Times рассказала о втором романе Дженсена Хуана — с вице-президентом Nvidia, которая подчиняется ему напрямую, а The Wall Street Journal сообщила, что совет директоров собрался решать вопрос о его отставке. Акции падали на 7–9 %, официального заявления совета пока нет.",
+   "summary": "Ночь на 12 ноября дала сразу два удара: The New York Times рассказала о втором романе Дженсена Хуана — с вице-президентом Nvidia, которая подчиняется ему напрямую, а The Wall Street Journal сообщила, что совет директоров собрался решать вопрос о его отставке. Акции падали на 7–9 %, а к вечеру 12 ноября совет отставку принял: Хуан ушёл, и. о. CEO стала финдиректор Колетт Кресс.",
    "date_published": "2026-11-12T08:00:00+03:00",
-   "date_modified": "2026-11-12T08:00:00+03:00",
+   "date_modified": "2026-11-12T18:00:00+03:00",
    "tags": [
     "AI"
    ],
@@ -354,6 +400,18 @@
     {
      "name": "NVIDIA Newsroom — Statement from NVIDIA Board of Directors",
      "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+    },
+    {
+     "name": "TechCrunch — Хуан ушёл в отставку, Кресс и.о. CEO",
+     "url": "https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/"
+    },
+    {
+     "name": "NVIDIA Newsroom — объявление о смене CEO",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+    },
+    {
+     "name": "SEC — форма 8-K от 11 ноября",
+     "url": "https://www.sec.gov/ix?doc=/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
     }
    ]
   },

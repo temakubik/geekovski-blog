@@ -806,23 +806,44 @@ def link_articles_to_titles(html_text):
     обрабатываются первыми и ссылки не вкладываются друг в друга."""
     if not TITLES:
         return html_text
-    pairs = []
+    # Уже готовые markdown-картинки и ссылки прячем в плейсхолдеры: иначе алиас
+    # тайтла в подписи картинки рвал синтаксис («!<a …>-switch-2-hp.jpg)»),
+    # и на странице появлялась битая картинка вместо кадра.
+    stash = []
+
+    def _stash(m):
+        stash.append(m.group(0))
+        return "\x00%d\x00" % (len(stash) - 1)
+
+    html_text = re.sub(r"!\[[^\]]*\]\([^)]*\)", _stash, html_text)
+    html_text = re.sub(r"\[[^\]]*\]\([^)]*\)", _stash, html_text)
+    # Один проход вместо цикла «найти и вставить»: во втором случае вставленный
+    # markdown-линк успевал попасть под следующий, более короткий алиас —
+    # «Stellar Blade» ловился алиасом «Blade» другого тайтла, и в href получалось
+    # /titles/stellar-[blade](/titles/marvels-blade.html. re.sub вставленный
+    # текст заново не сканирует, поэтому вложенных ссылок не бывает.
+    alias_map = {}
     for slug, t in TITLES.items():
         for name in _aliases(t):
-            pairs.append((name, slug, t["title"]))
-    pairs.sort(key=lambda x: len(x[0]), reverse=True)
+            alias_map.setdefault(name.lower(), (name, slug))
+    if not alias_map:
+        return html_text
+    names = sorted(alias_map, key=len, reverse=True)
+    pat = re.compile(r"(?<![\w\[/])(" + "|".join(re.escape(n) for n in names) + r")(?![\w\]])",
+                     re.IGNORECASE)
     done = set()
-    for name, slug, full in pairs:
+
+    def _rep(m):
+        name, slug = alias_map[m.group(1).lower()]
         if slug in done:
-            continue
-        pat = re.compile(r"(?<![\w\[/])(" + re.escape(name) + r")(?![\w\]])", re.IGNORECASE)
-        m = pat.search(html_text)
-        if not m:
-            continue
-        link = "[%s](/titles/%s.html)" % (m.group(1), slug)
-        html_text = html_text[:m.start()] + link + html_text[m.end():]
+            return m.group(1)
         done.add(slug)
-    return html_text
+        return "[%s](/titles/%s.html)" % (m.group(1), slug)
+
+    linked = pat.sub(_rep, html_text)
+    if stash:
+        linked = re.sub(r"\x00(\d+)\x00", lambda m: stash[int(m.group(1))], linked)
+    return linked
 
 
 def articles_for_title(slug):
