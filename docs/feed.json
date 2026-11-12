@@ -8,6 +8,132 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-12-redmagic-12-pro-linux.html",
+   "url": "https://geekovski.ru/2026-11-12-redmagic-12-pro-linux.html",
+   "title": "RedMagic 12 Pro — первый смартфон на Snapdragon с настоящим Linux-терминалом",
+   "summary": "RedMagic 12 Pro стал первым Android-смартфоном на Snapdragon, где заработал системный Linux Terminal — до этого он был только на Pixel и части Galaxy на Exynos. В терминале можно выделить до 10,6 ГБ памяти и 132 ГБ диска. Сам аппарат — игровой флагман с экраном 185 Гц и батареей 8400 мА·ч.",
+   "date_published": "2026-11-12T14:00:00+03:00",
+   "date_modified": "2026-11-12T14:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/redmagic-12-pro.jpg",
+   "_sources": [
+    {
+     "name": "9to5Google — Linux Terminal на Snapdragon",
+     "url": "https://9to5google.com/2026/11/04/the-first-snapdragon-phone-with-android-linux-terminal-s"
+    },
+    {
+     "name": "USB.ru — глобальный запуск и цены",
+     "url": "https://usb.ru/news/redmagic-12-pro-global-launch-2026/"
+    },
+    {
+     "name": "Notebookcheck — цена $949",
+     "url": "https://www.notebookcheck-ru.com/RedMagic-12-Pro-postupaet-v-prodazhu-po-cene-949-s-flagmanskoj-proizvoditelnostyu-i-podderzhkoj-igr-Steam"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-12-mosgaz-12-yuzhny-port.html",
+   "url": "https://geekovski.ru/2026-11-12-mosgaz-12-yuzhny-port.html",
+   "title": "«Мосгаз. Дело №12: Южный порт» — Черкасов против бывших коллег, 1984 и автомобильная мафия",
+   "summary": "16 ноября Первый канал начинает показ двенадцатого сезона «Мосгаза». Действие переносится в 1984 год, в Южный порт — крупнейший рынок подержанных машин в Москве, где зарождается автомобильная мафия. Отставной майор Черкасов берётся за частное расследование и оказывается конкурентом собственных бывших коллег из МУРа.",
+   "date_published": "2026-11-12T13:00:00+03:00",
+   "date_modified": "2026-11-12T13:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/mosgaz-car.jpg",
+   "_sources": [
+    {
+     "name": "InterMedia — премьера и состав",
+     "url": "https://www.intermedia.ru/news/408009"
+    },
+    {
+     "name": "КиноРяд — сюжет и дата",
+     "url": "https://kinoryad.ru/news/mosgaz-delo-12-yuzhnyy-port-data-vykhoda-seriala-132df"
+    },
+    {
+     "name": "TV Mag — объявление даты",
+     "url": "https://tvmag.ru/article/serials/2026-11-10-pervyy-kanal-obyavil-o-starte-v-efire-12-sezon"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-12-hail-mary-vr.html",
+   "url": "https://geekovski.ru/2026-11-12-hail-mary-vr.html",
+   "title": "«Project Hail Mary» вышла в VR: корабль появляется в вашей комнате, Рокки говорит голосом из фильма",
+   "summary": "12 ноября на Quest 3, 3S и PICO вышла Project Hail Mary: Journey Among the Stars — приключение в смешанной реальности от Maze Theory по миру Энди Вейра. Игра рассказывает новую историю во время перелёта, а Рокки озвучивает тот же актёр, что и в фильме. $19,99, предзаказ был $17,99.",
+   "date_published": "2026-11-12T12:10:00+03:00",
+   "date_modified": "2026-11-12T12:10:00+03:00",
+   "tags": [
+    "VR"
+   ],
+   "image": "https://geekovski.ru/assets/img/hail-mary-2.jpg",
+   "_sources": [
+    {
+     "name": "VRDB — дата, цена и платформы",
+     "url": "https://vrdb.app/blog/project-hail-mary-journey-among-the-stars-quest-3"
+    },
+    {
+     "name": "UploadVR — анонс даты",
+     "url": "https://www.uploadvr.com/project-hail-mary-journey-among-the-stars-gets-a-release-date/"
+    },
+    {
+     "name": "Maze Theory — страница игры",
+     "url": "https://www.maze-theory.com/our-games/projecthailmaryvr"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-12-xbox-cloud-free-ads.html",
+   "url": "https://geekovski.ru/2026-11-12-xbox-cloud-free-ads.html",
+   "title": "Xbox сделала облако бесплатным — с рекламой и сессией на полчаса",
+   "summary": "Xbox открыла бесплатный облачный уровень: игры, которые у вас есть, и free-to-play можно стримить без подписки, но перед каждой сессией показывают рекламу, а сессия длится около получаса. Одновременно подписчикам Game Pass ввели месячные лимиты — 5, 10 и 15 часов — и продают часы докупкой.",
+   "date_published": "2026-11-12T11:20:00+03:00",
+   "date_modified": "2026-11-12T11:20:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-cloud-free.jpg",
+   "_sources": [
+    {
+     "name": "Xbox Wire — изменения в облачном гейминге",
+     "url": "https://news.xbox.com/en-us/2026/09/03/xbox-cloud-gaming-changes/"
+    },
+    {
+     "name": "PowerUp — запуск бесплатного тарифа",
+     "url": "https://powerupgaming.co.uk/2026/11/12/xboxs-free-cloud-gaming-tier-rolls-out-as-game-pa"
+    },
+    {
+     "name": "Pure Xbox — бесплатный тариф для всех",
+     "url": "https://www.purexbox.com/news/2026/11/xbox-brings-its-free-tier-of-cloud-gaming-to-loads-more-players-today"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-12-ps-plus-pc-otkluchenie.html",
+   "url": "https://geekovski.ru/2026-11-12-ps-plus-pc-otkluchenie.html",
+   "title": "Sony отключает облачный PS Plus на ПК 10 декабря — им пользовались меньше 0,4%",
+   "summary": "Sony закрывает приложение PS Plus для Windows: 10 декабря стриминг игр на ПК прекратится. Компания объяснила решение тем, что этой функцией пользовались меньше 0,4% подписчиков Premium. Играть по облаку можно будет только на консоли и PlayStation Portal.",
+   "date_published": "2026-11-12T10:40:00+03:00",
+   "date_modified": "2026-11-12T10:40:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/ps-controller.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — приложение PS Plus для ПК закрывают",
+     "url": "https://www.theverge.com/games/1031144/sony-playstation-plus-windows-pc-app-shutting-down"
+    },
+    {
+     "name": "VGC — Sony объявила о конце стриминга на ПК",
+     "url": "https://videogameschronicle.com/news/playstation-announces-end-of-pc-streaming-in-december"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-12-1000-metaphor-refantazio-switch-2.html",
    "url": "https://geekovski.ru/2026-11-12-1000-metaphor-refantazio-switch-2.html",
    "title": "Metaphor на Switch 2: отличная игра, неровный порт",
