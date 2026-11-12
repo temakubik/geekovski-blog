@@ -8,6 +8,68 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-12-0800-nvidia-huang-otstavka.html",
+   "url": "https://geekovski.ru/2026-11-12-0800-nvidia-huang-otstavka.html",
+   "title": "У Nvidia нет второго Хуана",
+   "summary": "Ночь на 12 ноября дала сразу два удара: The New York Times рассказала о втором романе Дженсена Хуана — с вице-президентом Nvidia, которая подчиняется ему напрямую, а The Wall Street Journal сообщила, что совет директоров собрался решать вопрос о его отставке. Акции падали на 7–9 %, официального заявления совета пока нет.",
+   "date_published": "2026-11-12T08:00:00+03:00",
+   "date_modified": "2026-11-12T08:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/nvidia-huang-board.jpg",
+   "_sources": [
+    {
+     "name": "The Verge — Nvidia is reportedly preparing to fire Jensen Huang",
+     "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor"
+    },
+    {
+     "name": "CNBC — Nvidia board meets to decide CEO Jensen Huang's fate",
+     "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html"
+    },
+    {
+     "name": "The Straits Times (The New York Times) — Huang and Kimberly Powell",
+     "url": "https://www.straitstimes.com/world/united-states/nvidia-ceo-jensen-huang-had-an-affair-with-health-executive-at-firm-says-new-york-times"
+    },
+    {
+     "name": "Business Insider — Who Is Kimberly Powell",
+     "url": "https://www.businessinsider.com/kimberly-powell-nvidia-exec-tied-to-jensen-huang-2026-11"
+    },
+    {
+     "name": "BBC News — Nvidia shares plunge as board weighs ousting CEO",
+     "url": "https://www.bbc.com/news/live/c6zjry11v8w1t"
+    },
+    {
+     "name": "Reuters — Nvidia faces deepening scrutiny over China chip ties",
+     "url": "https://www.reuters.com/5f374b32b07b/world/china/nvidia-ceos-affair-aided-75-billion-chip-shipments-china-information-reports-2026-11-10/"
+    },
+    {
+     "name": "CNA — Nvidia board meets to decide CEO Huang's future",
+     "url": "https://www.channelnewsasia.com/world/nvidia-ceo-jensen-huang-oust-board-affair-6544031"
+    },
+    {
+     "name": "AP — Alleged spy plot targeting CEO Jensen Huang",
+     "url": "https://apnews.com/article/nvidia-jensen-huang-investigation-china-spy-4116755e690472eef677772ec55b856d"
+    },
+    {
+     "name": "Axios — Nvidia sinks after report implicates CEO in 2nd affair",
+     "url": "https://www.axios.com/2026/11/11/nvidia-jensen-huang-affair-shares"
+    },
+    {
+     "name": "CNBC — Jensen Huang affair rocks D.C.",
+     "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html"
+    },
+    {
+     "name": "NVIDIA Newsroom — Q3 FY2027 earnings call",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
+    },
+    {
+     "name": "NVIDIA Newsroom — Statement from NVIDIA Board of Directors",
+     "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-11-2100-pixel-tag.html",
    "url": "https://geekovski.ru/2026-11-11-2100-pixel-tag.html",
    "title": "Pixel Tag: Google выпустила свой AirTag за $29,99",
