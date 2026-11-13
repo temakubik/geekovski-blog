@@ -11,7 +11,7 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 9 материалов
+- [Xbox](https://geekovski.ru/xbox/): 10 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 14 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 13 материалов
 - [PC-игры](https://geekovski.ru/pc/): 22 материала
@@ -25,6 +25,7 @@
 
 ## Материалы
 
+- [Сбой Microsoft: Outlook лежит сутки, Xbox — под вопросом](https://geekovski.ru/2026-11-13-1500-sboi-microsoft-outlook-xbox.html): Microsoft почти сутки не может вернуть Exchange Online: Outlook, календари, приглашения и Copilot работают через раз, а компания уже признала, что первые попытки восстановления не дали результата. Страница состояния Xbox всё это время зелёная, но игроки жалуются на вход и облачные сохранения — Microsoft связь не подтверждает. (13.11.2026)
 - [ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck](https://geekovski.ru/2026-11-13-anr-apex-dlss.html): Apex Compute выпустила открытую бету ANR — генерации кадров, которая, по заявлениям компании, в 2,4 раза быстрее DLSS и работает на железе, где DLSS официально недоступен: Radeon RX 5000, GeForce GTX 16, Steam Deck и Intel Arc. Проверить это можно уже сейчас — бета ставится в игры через OptiScaler. (13.11.2026)
 - [Wolfenstein 3 официально: Бласковиц вернётся, Брайан Блум и Дебра Уилсон снова в ролях](https://geekovski.ru/2026-11-13-wolfenstein-3.html): Xbox подтвердила Wolfenstein 3 в производстве у MachineGames — анонс сделали на 25-летии Xbox в Сиэтле. Это первая новая часть серии за девять лет: после The New Colossus студия занималась Indiana Jones. Вернутся Брайан Блум (Бласковиц) и Дебра Уилсон (Грейс Уокер). (13.11.2026)
 - [Задний экран Xiaomi 18 Pro впервые едет в Европу](https://geekovski.ru/2026-11-13-1200-xiaomi-18-pro-back-display.html): Xiaomi подтвердила, что на глобальных Xiaomi 18 Pro и 18 Pro Max задний экран получит Google Maps, Spotify и YouTube Music. Это первый выход второго дисплея за пределы Китая: премьера мировых версий — 17 ноября в Париже, цены пока не объявлены. (13.11.2026)

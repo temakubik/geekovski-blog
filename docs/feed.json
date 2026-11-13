@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-13-1500-sboi-microsoft-outlook-xbox.html",
+   "url": "https://geekovski.ru/2026-11-13-1500-sboi-microsoft-outlook-xbox.html",
+   "title": "Сбой Microsoft: Outlook лежит сутки, Xbox — под вопросом",
+   "summary": "Microsoft почти сутки не может вернуть Exchange Online: Outlook, календари, приглашения и Copilot работают через раз, а компания уже признала, что первые попытки восстановления не дали результата. Страница состояния Xbox всё это время зелёная, но игроки жалуются на вход и облачные сохранения — Microsoft связь не подтверждает.",
+   "date_published": "2026-11-13T15:00:00+03:00",
+   "date_modified": "2026-11-13T15:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/sboi-microsoft-outage.jpg",
+   "_sources": [
+    {
+     "name": "DW (Reuters) — глобальный сбой сервисов Microsoft",
+     "url": "https://amp.dw.com/ru/v-rabote-servisov-microsoft-proizosel-globalnyj-sboj/a-79935973"
+    },
+    {
+     "name": "UC Today — Microsoft 365 outage: Teams held while Outlook stayed down",
+     "url": "https://uctoday.com/microsoft-365-outage-outlook-exchange-teams-copilot"
+    },
+    {
+     "name": "Microsoft 365 Status — сообщение об Exchange Online",
+     "url": "https://x.com/MSFT365Status/status/2120938282204688468"
+    },
+    {
+     "name": "Windows Central — Xbox затронут сбоем Microsoft",
+     "url": "https://www.windowscentral.com/gaming/xbox/xbox-has-been-affected-by-microsofts-ongoing-tech-outage-xbox-cloud-gaming-cloud-saves-and-account-sign-ins-are-reportedly-down"
+    },
+    {
+     "name": "Insider Gaming — Xbox и глобальный сбой Microsoft",
+     "url": "https://insider-gaming.com/microsoft-xbox-outage-global/"
+    },
+    {
+     "name": "PlayDay — Xbox services disrupted as outage continues",
+     "url": "https://playday.one/2026/11/13/xbox-services-disrupted-as-widespread-microsoft-outage-continues/"
+    },
+    {
+     "name": "Xbox Status — официальная страница состояния",
+     "url": "https://support.xbox.com/en-US/xbox-live-status"
+    },
+    {
+     "name": "StatusGator — история инцидентов Xbox Live",
+     "url": "https://statusgator.com/services/xbox-live"
+    },
+    {
+     "name": "IGN — сбой Xbox Network в сентябре 2026",
+     "url": "https://www.ign.com/articles/xbox-acknowledges-major-outage-as-sign-in-issues-hit-pc-and-consoles"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-13-anr-apex-dlss.html",
    "url": "https://geekovski.ru/2026-11-13-anr-apex-dlss.html",
    "title": "ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck",
