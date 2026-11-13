@@ -32,19 +32,5 @@
 /* Medeo Pixel и Pixelify Sans из fonts.css убраны 03.11.26: на сайте они нигде не
    использовались (типографика = Chava + RG Spacious + Medeo Sans/Mono). */
 
-/* Tiny5 — исходник для tools/make_logo.py (пиксельная «G») и старых артбордов.
-   В вёрстке сайта не используется. */
-@font-face {
-  font-family: 'Tiny5';
-  src: url('/assets/fonts/tiny5-cyrillic.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-@font-face {
-  font-family: 'Tiny5';
-  src: url('/assets/fonts/tiny5-latin.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
-}
+/* Tiny5 (пиксельная «G») убран 13.11.26 вместе со старым знаком — шрифт был нужен
+   только его генератору. */

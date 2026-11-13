@@ -145,7 +145,7 @@ def tags_icons():
             "<div class='hint' style='margin-top:10px'>Chava 12 px, uppercase, разрядка .08em. Цвет тега = цвет рубрики, не акцент.</div>"
             "<div class='label' style='margin:26px 0 12px'>Иконки рубрик · инлайн-SVG 24×24</div>"
             "<div style='display:grid;grid-template-columns:repeat(3,1fr);gap:10px'>" + icons + "</div>"
-            "<div class='hint' style='margin-top:16px'>Бренд: favicon.svg + logo.svg. Сюда же кладём новые иконки — "
+            "<div class='hint' style='margin-top:16px'>Бренд: favicon.svg + geekovski-logo.svg. Сюда же кладём новые иконки — "
             "они затем уходят в словарь ICONS в build.py и в дайджесты.</div>")
     return doc("", body, 1200, 0)
 

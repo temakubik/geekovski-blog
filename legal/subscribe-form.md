@@ -12,7 +12,7 @@
 .subscribe input[type=email] { width: 100%; padding: 11px 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 3px; color: var(--text); font: inherit; }
 .subscribe input[type=email]:focus { outline: none; border-color: var(--accent); }
 .subscribe .check { display: flex; gap: 9px; align-items: flex-start; margin-top: 12px; font-size: 12.5px; line-height: 1.45; color: var(--muted); }
-.subscribe .check input { margin-top: 3px; accent-color: #C9F24D; }
+.subscribe .check input { margin-top: 3px; accent-color: var(--accent); }
 .subscribe .check a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
 .subscribe button { margin-top: 16px; width: 100%; padding: 12px; border: 0; border-radius: 3px; background: var(--accent); color: #0A0C0F; font-family: "Medeo Mono", monospace; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
 .subscribe button:disabled { opacity: .5; cursor: not-allowed; }
