@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-13-1800-pyatnica-13-trinadcatyy-film.html",
+   "url": "https://geekovski.ru/2026-11-13-1800-pyatnica-13-trinadcatyy-film.html",
+   "title": "«Пятница, 13»: 13-й фильм франшизы выйдет в 2027 году",
+   "summary": "Horror, Inc. и Cineverse объявили новый полнометражный «Пятница, 13» — тринадцатый в серии и первый за почти двадцать лет. Режиссёром возвращается Стив Майнер, снявший вторую и третью части, а сам Джейсон остаётся единственным крупным слешером, у которого до сих пор нет современной кинофраншизы.",
+   "date_published": "2026-11-13T18:00:00+03:00",
+   "date_modified": "2026-11-13T18:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/pyatnica-13-ozero.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — эксклюзив об анонсе",
+     "url": "https://deadline.com/2026/11/new-friday-the-13th-movie-steve-miner-1237220585/"
+    },
+    {
+     "name": "Horror, Inc. и Cineverse — пресс-релиз",
+     "url": "https://investor.cineverse.com/news/news-details/2026/Jason-Voorhees-Heads-Back-to-Theaters-in-Historic-13th-Feature-Film/default.aspx"
+    },
+    {
+     "name": "Variety — рейтинги сериала Crystal Lake",
+     "url": "https://variety.com/2026/tv/news/crystal-lake-ratings-peacock-1236932312/"
+    },
+    {
+     "name": "Deadline — Crystal Lake стал четвёртым стартом Peacock",
+     "url": "https://deadline.com/2026/10/crystal-lake-premiere-viewership-peacock-1237206503/"
+    },
+    {
+     "name": "The Numbers — касса франшизы",
+     "url": "https://www.the-numbers.com/movies/franchise/Friday-the-13th"
+    },
+    {
+     "name": "Wikipedia — Friday the 13th Part III и маска",
+     "url": "https://en.wikipedia.org/wiki/Friday_the_13th_Part_III"
+    },
+    {
+     "name": "Collider — история иска за права",
+     "url": "https://collider.com/friday-the-13th-lawsuit-explained/"
+    },
+    {
+     "name": "Loeb & Loeb — Horror Inc. v. Miller",
+     "url": "https://www.loeb.com/en/insights/publications/2022/10/horror-inc-v-miller"
+    },
+    {
+     "name": "Wikipedia — Steve Miner",
+     "url": "https://en.wikipedia.org/wiki/Steve_Miner"
+    },
+    {
+     "name": "Smithsonian — лагерь No-Be-Bo-Sco как место съёмок",
+     "url": "https://www.smithsonianmag.com/travel/the-1980-slasher-movie-friday-the-13th-was-filmed-at-this-boy-scout-camp-in-new-jersey-180978933"
+    },
+    {
+     "name": "Media Play News — экономика Terrifier 3",
+     "url": "https://www.mediaplaynews.com/cineverse-posts-quarterly-fy-2025-profit-thanks-to-terrifier-3-largesse/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-13-1500-sboi-microsoft-outlook-xbox.html",
    "url": "https://geekovski.ru/2026-11-13-1500-sboi-microsoft-outlook-xbox.html",
    "title": "Сбой Microsoft: Outlook лежит сутки, Xbox — под вопросом",
