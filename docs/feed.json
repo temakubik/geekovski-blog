@@ -8,6 +8,136 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-13-anr-apex-dlss.html",
+   "url": "https://geekovski.ru/2026-11-13-anr-apex-dlss.html",
+   "title": "ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck",
+   "summary": "Apex Compute выпустила открытую бету ANR — генерации кадров, которая, по заявлениям компании, в 2,4 раза быстрее DLSS и работает на железе, где DLSS официально недоступен: Radeon RX 5000, GeForce GTX 16, Steam Deck и Intel Arc. Проверить это можно уже сейчас — бета ставится в игры через OptiScaler.",
+   "date_published": "2026-11-13T12:40:00+03:00",
+   "date_modified": "2026-11-13T12:40:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/anr-apex.jpg",
+   "_sources": [
+    {
+     "name": "Apex Compute — ANR",
+     "url": "https://apexcompute.com/neural-rendering"
+    },
+    {
+     "name": "VideoCardz — бетa, поддержка железа и замеры",
+     "url": "https://videocardz.com/newz/gamers-now-have-an-open-source-dlss-frame-generation-alternative-apex-claims-faster-performance-and-better-quality"
+    },
+    {
+     "name": "TechSpot — разбор заявлений",
+     "url": "https://www.techspot.com/news/114536-startup-frame-generation-beats-dlss-runs-gpus-old.htm"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-13-wolfenstein-3.html",
+   "url": "https://geekovski.ru/2026-11-13-wolfenstein-3.html",
+   "title": "Wolfenstein 3 официально: Бласковиц вернётся, Брайан Блум и Дебра Уилсон снова в ролях",
+   "summary": "Xbox подтвердила Wolfenstein 3 в производстве у MachineGames — анонс сделали на 25-летии Xbox в Сиэтле. Это первая новая часть серии за девять лет: после The New Colossus студия занималась Indiana Jones. Вернутся Брайан Блум (Бласковиц) и Дебра Уилсон (Грейс Уокер).",
+   "date_published": "2026-11-13T12:10:00+03:00",
+   "date_modified": "2026-11-13T12:10:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/wolfenstein-3.jpg",
+   "_sources": [
+    {
+     "name": "IGN — подтверждение разработки",
+     "url": "https://ign.com/articles/wolfenstein-3-confirmed-to-be-in-development-at-machinegames"
+    },
+    {
+     "name": "The Verge — детали анонса и актёры",
+     "url": "https://theverge.com/news/1032431/xbox-bethesda-wolfenstein-3"
+    },
+    {
+     "name": "Gematsu — анонс",
+     "url": "https://gematsu.com/2026/11/wolfenstein-3-announced"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-13-avengers-encore.html",
+   "url": "https://geekovski.ru/2026-11-13-avengers-encore.html",
+   "title": "«Мстители: Финал» Encore вышел на Disney+ — Локи ломает финал Стива и Пегги",
+   "summary": "Расширенная версия «Финала» вышла на Disney+ 13 ноября — за пять недель до «Судного дня». Это тот же монтаж, что показывали в кино в сентябре: 185 минут, новая цветокоррекция и сцены, которые меняют финал Стива Роджерса и объясняют, чей молот стучит в последнем кадре.",
+   "date_published": "2026-11-13T11:40:00+03:00",
+   "date_modified": "2026-11-13T11:40:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/avengers-encore.jpg",
+   "_sources": [
+    {
+     "name": "tbreak — дата и что изменилось",
+     "url": "https://tbreak.com/avengers-endgame-encore-disney-plus-release-date/"
+    },
+    {
+     "name": "IGN — дата релиза на Disney+",
+     "url": "https://www.ign.com/articles/avengers-endgame-encore-finally-gets-a-disney-release-date-and-its-real-soon"
+    },
+    {
+     "name": "Polygon — выход на стриминге",
+     "url": "https://www.polygon.com/avengers-endgame-encore-streaming-date-disney-plus-november-2026"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-13-tri-premery-pyatnica.html",
+   "url": "https://geekovski.ru/2026-11-13-tri-premery-pyatnica.html",
+   "title": "Три премьеры одной пятницы: «12 12 12» на Apple TV, «Тяжёлый люкс» на Wink и лиса в Okko",
+   "summary": "13 ноября сразу три платформы выпускают крупные премьеры. Apple TV открывает восьмисерийный триллер об ограблении «12 12 12» с Энтони Маки и Джейми Дорнаном, Wink — криминальную драму «Тяжёлый люкс» про рынок люксовых подделок, а Okko возвращает «Как приручить лису» вторым сезоном.",
+   "date_published": "2026-11-13T11:10:00+03:00",
+   "date_modified": "2026-11-13T11:10:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/premieres-13-noyabrya.jpg",
+   "_sources": [
+    {
+     "name": "Apple TV Press — премьера «12 12 12»",
+     "url": "https://www.apple.com/tv-pr/news/2026/11/apple-tv-celebrates-the-premiere-of-its-highly-anticipated-heist-drama-12-12-12-starring-and-executive-produced-by-anthony-mackie-and-jamie-dornan/"
+    },
+    {
+     "name": "Wink — «Тяжёлый люкс»",
+     "url": "https://wink.ru/blog/oni-postroyat-imperiyu-pali-kriminalnaya-drama-tyazhelyy-lyuks-na-w"
+    },
+    {
+     "name": "InterMedia — второй сезон «Как приручить лису»",
+     "url": "https://www.intermedia.ru/news/408049"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-13-pico-space-pro-utechka.html",
+   "url": "https://geekovski.ru/2026-11-13-pico-space-pro-utechka.html",
+   "title": "Pico Space Pro засветился за $2 899 до анонса: шлем класса Vision Pro выйдет 2 декабря",
+   "summary": "Американский реселлер случайно опубликовал страницу Pico Space Pro за $2 899 и по просьбе компании её удалил. Китайское издание сообщает, что премьера — 2 декабря, хотя Pico дату не подтверждала. Space Pro станет первым устройством на PICO OS 6 и ответом ByteDance на Vision Pro.",
+   "date_published": "2026-11-13T10:40:00+03:00",
+   "date_modified": "2026-11-13T10:40:00+03:00",
+   "tags": [
+    "VR"
+   ],
+   "image": "https://geekovski.ru/assets/img/pico-space-pro.jpg",
+   "_sources": [
+    {
+     "name": "Metaverse Watcher — дата 2 декабря",
+     "url": "https://www.metaversewatcher.io/pico-space-pro-december-2-launch-report"
+    },
+    {
+     "name": "VRCover — листинг за $2 899",
+     "url": "https://vrcover.com/news/imax-meta-vr-glasses-pico-space-pro-vr-news-2026-11-12"
+    },
+    {
+     "name": "VRcompare — характеристики",
+     "url": "https://vr-compare.com/headset/picospacepro"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-13-1000-alphaproof-signal.html",
    "url": "https://geekovski.ru/2026-11-13-1000-alphaproof-signal.html",
    "title": "DeepMind математически доказал безопасность Signal",
