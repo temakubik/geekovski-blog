@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-13-0800-ps5-100-million.html",
+   "url": "https://geekovski.ru/2026-11-13-0800-ps5-100-million.html",
+   "title": "PS5 разменяла 100 миллионов: восьмая консоль в истории",
+   "summary": "Sony обновила официальную страницу продаж: на 10 ноября отгружено больше 100 млн PlayStation 5. Это восьмая консоль в истории с таким тиражом и четвёртая у самой Sony — при том, что консоль за шесть лет подорожала на $200, а квартальные поставки падают на треть.",
+   "date_published": "2026-11-13T08:00:00+03:00",
+   "date_modified": "2026-11-13T08:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/ps5-100m-cover.jpg",
+   "_sources": [
+    {
+     "name": "Sony Interactive Entertainment — Business Data & Sales",
+     "url": "https://sonyinteractive.com/en/our-company/business-data-sales/"
+    },
+    {
+     "name": "VGC — PS5 officially clears 100 million consoles shipped",
+     "url": "https://www.videogameschronicle.com/news/playstation-5-officially-clears-100-million-consoles-shipped/"
+    },
+    {
+     "name": "IGN — PS5 hits 100 million units sold",
+     "url": "https://www.ign.com/articles/ps5-hits-100-million-units-sold-mark-6-years-after-launch-heres-how-it-compares-to-other-playstation-consoles"
+    },
+    {
+     "name": "GamesRadar+ — 100 million consoles shipped despite shortages and price hikes",
+     "url": "https://www.gamesradar.com/hardware/sony-confirms-the-ps5-is-closing-in-on-the-ps4-with-100-million-consoles-shipped-and-thats-despite-the-shortages-and-price-hikes"
+    },
+    {
+     "name": "PlayStation.Blog — новые цены с 2 апреля 2026",
+     "url": "https://blog.playstation.com/2026/03/27/new-price-changes-for-ps5-ps5-pro-and-playstation-portal-remote-player/"
+    },
+    {
+     "name": "Reuters — Sony поднимает цены на PS5 из-за памяти",
+     "url": "https://www.reuters.com/world/asia-pacific/sony-hike-playstation-5-prices-again-memory-chip-costs-surge-2026-03-27/"
+    },
+    {
+     "name": "VGC — Sony не решила, когда и по какой цене выйдет PS6",
+     "url": "https://www.videogameschronicle.com/news/sony-says-it-hasnt-yet-decided-on-ps6-release-date-and-price-will-consider-changing-business-models/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-12-sony-anime-imperiya.html",
    "url": "https://geekovski.ru/2026-11-12-sony-anime-imperiya.html",
    "title": "Sony строит аниме-империю на десятилетия: Aniplex, Crunchyroll и мечта о своём парке",
