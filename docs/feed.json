@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-14-0800-god-of-war-ps4.html",
+   "url": "https://geekovski.ru/2026-11-14-0800-god-of-war-ps4.html",
+   "title": "Sony снова вспомнила PS4: консоли 13 лет",
+   "summary": "God of War Sons of Sparta выходит на PS4 16 ноября — через девять месяцев после релиза на PS5 и через день после тринадцатилетия самой консоли. Вместе с версией для старой платформы Sony выпускает бесплатный патч с двумя режимами: спидран-режимом Hermes и «одна смерть» Erebus.",
+   "date_published": "2026-11-14T08:00:00+03:00",
+   "date_modified": "2026-11-14T08:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/god-of-war-ps4-cover.jpg",
+   "_sources": [
+    {
+     "name": "PlayStation Blog — God of War Sons of Sparta, new content and PS4 version arrive November 16",
+     "url": "https://blog.playstation.com/2026/02/13/god-of-war-sons-of-sparta-what-you-need-to-know/"
+    },
+    {
+     "name": "IGN — Sons of Sparta Coming to PS4 Next Week",
+     "url": "https://www.ign.com/articles/god-of-war-sons-of-sparta-coming-to-ps4-next-week-with-new-content"
+    },
+    {
+     "name": "Game Informer — Sons of Sparta Gets PS4 Version",
+     "url": "https://www.gameinformer.com/2026/11/13/god-of-war-sons-of-sparta-gets-ps4-version-and-new-content-next-monday"
+    },
+    {
+     "name": "PlayStation Blog — Greek trilogy remake in development, Sons of Sparta out now",
+     "url": "https://blog.playstation.com/2026/02/12/god-of-war-greek-trilogy-remake-in-development-god-of-war-sons-of-sparta-out-now/"
+    },
+    {
+     "name": "TheGamer — Sons of Sparta sales figures",
+     "url": "https://thegamer.com/god-of-war-sons-of-sparta-sales-figures-positive"
+    },
+    {
+     "name": "Metacritic — God of War Sons of Sparta",
+     "url": "https://www.metacritic.com/game/god-of-war-sons-of-sparta/"
+    },
+    {
+     "name": "Wikipedia — PlayStation 4, даты запуска",
+     "url": "https://en.wikipedia.org/wiki/PlayStation_4"
+    },
+    {
+     "name": "Digital Trends — PS4 final shipment numbers",
+     "url": "https://www.digitaltrends.com/gaming/playstation-4-final-shipment-numbers/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-13-2100-chatgpt-wallet.html",
    "url": "https://geekovski.ru/2026-11-13-2100-chatgpt-wallet.html",
    "title": "ChatGPT Wallet: агент платит картой после Face ID",

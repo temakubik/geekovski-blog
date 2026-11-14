@@ -13,7 +13,7 @@
 
 - [Xbox](https://geekovski.ru/xbox/): 10 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 14 материалов
-- [PlayStation](https://geekovski.ru/playstation/): 13 материалов
+- [PlayStation](https://geekovski.ru/playstation/): 14 материалов
 - [PC-игры](https://geekovski.ru/pc/): 22 материала
 - [VR](https://geekovski.ru/vr/): 7 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 26 материалов
@@ -25,6 +25,7 @@
 
 ## Материалы
 
+- [Sony снова вспомнила PS4: консоли 13 лет](https://geekovski.ru/2026-11-14-0800-god-of-war-ps4.html): God of War Sons of Sparta выходит на PS4 16 ноября — через девять месяцев после релиза на PS5 и через день после тринадцатилетия самой консоли. Вместе с версией для старой платформы Sony выпускает бесплатный патч с двумя режимами: спидран-режимом Hermes и «одна смерть» Erebus. (14.11.2026)
 - [ChatGPT Wallet: агент платит картой после Face ID](https://geekovski.ru/2026-11-13-2100-chatgpt-wallet.html): OpenAI запустила ChatGPT Wallet — кошелёк, через который её агенты dots сами доводят покупку до оплаты. Карта привязывается один раз, каждая покупка подтверждается биометрией, а магазин и агент видят не номер карты, а одноразовый токен. Пока это только США, только подписка Pro и только на сайтах, которые агентов не блокируют. (13.11.2026)
 - [«Пятница, 13»: 13-й фильм франшизы выйдет в 2027 году](https://geekovski.ru/2026-11-13-1800-pyatnica-13-trinadcatyy-film.html): Horror, Inc. и Cineverse объявили новый полнометражный «Пятница, 13» — тринадцатый в серии и первый за почти двадцать лет. Режиссёром возвращается Стив Майнер, снявший вторую и третью части, а сам Джейсон остаётся единственным крупным слешером, у которого до сих пор нет современной кинофраншизы. (13.11.2026)
 - [Сбой Microsoft: Outlook лежит сутки, Xbox — под вопросом](https://geekovski.ru/2026-11-13-1500-sboi-microsoft-outlook-xbox.html): Microsoft почти сутки не может вернуть Exchange Online: Outlook, календари, приглашения и Copilot работают через раз, а компания уже признала, что первые попытки восстановления не дали результата. Страница состояния Xbox всё это время зелёная, но игроки жалуются на вход и облачные сохранения — Microsoft связь не подтверждает. (13.11.2026)
@@ -215,6 +216,7 @@
 - [Эбенезер (Ebenezer)](https://geekovski.ru/titles/ebenezer.html): 2026
 - [Fragmentary Order](https://geekovski.ru/titles/fragmentary-order.html): 2026
 - [God of War Laufey](https://geekovski.ru/titles/god-of-war-laufey.html): 2027
+- [God of War Sons of Sparta](https://geekovski.ru/titles/god-of-war-sons-of-sparta.html): 2026
 - [Gods Don't Give Gifts](https://geekovski.ru/titles/gods-dont-give-gifts.html): 2026
 - [Godzilla: Destroy All Monsters Melee Remastered](https://geekovski.ru/titles/godzilla-destroy-all-monsters-melee-remastered.html): 2026
 - [Godzilla Minus Zero](https://geekovski.ru/titles/godzilla-minus-zero.html): 2026
