@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-14-1500-intel-70-desktopa.html",
+   "url": "https://geekovski.ru/2026-11-14-1500-intel-70-desktopa.html",
+   "title": "Intel отбила 70% десктопа у AMD: разбор цифры",
+   "summary": "Mercury Research посчитала третий квартал 2026-го: Intel вернула 70,1% поставок настольных x86-процессоров, AMD упала до 29,9% — минус пять пунктов за три месяца. Но дело не в том, что чипы Intel вдруг стали лучше.",
+   "date_published": "2026-11-14T15:00:00+03:00",
+   "date_modified": "2026-11-14T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/intel-70-desktopa.jpg",
+   "_sources": [
+    {
+     "name": "PC Gamer — Intel takes massive chunk out of AMD's desktop CPU market share",
+     "url": "https://www.pcgamer.com/hardware/processors/intel-takes-massive-chunk-out-of-amds-desktop-cpu-market-share-in-unexpected-turnaround-may-be-due-to-the-red-teams-dominance-in-gaming-chips-weirdly/"
+    },
+    {
+     "name": "TechPowerUp — AMD Loses Desktop CPU Share for the First Time in Months",
+     "url": "https://www.techpowerup.com/354824/amd-loses-desktop-cpu-share-for-the-first-time-in-months-intel-regains-ground"
+    },
+    {
+     "name": "3DNews — AMD неожиданно потеряла позиции на рынке настольных процессоров",
+     "url": "https://3dnews.ru/1151283"
+    },
+    {
+     "name": "3DNews — ИИ-бум топит ПК-бизнес Intel",
+     "url": "https://3dnews.ru/1150644"
+    },
+    {
+     "name": "3DNews — Intel перебрасывает мощности с обычных процессоров на серверные",
+     "url": "https://3dnews.ru/1150709"
+    },
+    {
+     "name": "AMD — Form 10-Q за III квартал 2026",
+     "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000191/0000002488-26-000191.pdf"
+    },
+    {
+     "name": "Intel — Form 10-Q за III квартал 2026",
+     "url": "https://www.intc.com/filings-reports/quarterly-reports/content/0000050863-26-000191/0000050863-26-000191.pdf"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-14-1200-xbox-x25-rasprodali.html",
    "url": "https://geekovski.ru/2026-11-14-1200-xbox-x25-rasprodali.html",
    "title": "Юбилейный Xbox за $900 смели за секунды",
