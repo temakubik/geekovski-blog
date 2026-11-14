@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-14-2100-meta-805-mln-gallereya.html",
+   "url": "https://geekovski.ru/2026-11-14-2100-meta-805-mln-gallereya.html",
+   "title": "Италия оштрафовала Meta на €805 млн за галерею",
+   "summary": "Итальянский Garante оштрафовал Meta Platforms Ireland на €805 млн за то, что Facebook для Android читал фото, видео и метаданные из галерей итальянских пользователей по одному общему разрешению, а функция подсказок из галереи была включена по умолчанию. Это крупнейший штраф в истории итальянского регулятора.",
+   "date_published": "2026-11-14T21:00:00+03:00",
+   "date_modified": "2026-11-14T21:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/meta-805-mln-gallereya.jpg",
+   "_sources": [
+    {
+     "name": "Garante per la protezione dei dati personali — Facebook: il Garante Privacy sanziona Meta per 805 milioni di euro",
+     "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080"
+    },
+    {
+     "name": "Reuters (via CNBC) — Italy fines Meta $887 million over Android users' data access",
+     "url": "https://www.cnbc.com/2026/11/14/italy-fines-meta-887-million-over-android-users-data-access.html"
+    },
+    {
+     "name": "Al Jazeera — Italy fines Meta $880m over photo privacy",
+     "url": "https://aljazeera.com/news/2026/11/14/italy-fines-meta-880m-over-photo-privacy"
+    },
+    {
+     "name": "ANSA — Garante: 805 milioni di multa a Meta per l'uso di foto su Fb senza consenso",
+     "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/garante-805-milioni-di-multa-a-meta-per-luso-di-foto-su-fb-senza-consenso_c28909e5-4d3b-4ec6-9d7c-e23ea349b64d.html"
+    },
+    {
+     "name": "Il Sole 24 Ore — Meta: Garante Privacy, multa da 805 mln per accesso di Facebook a foto e video",
+     "url": "https://www.ilsole24ore.com/art/meta-garante-privacy-multa-805-mln-accesso-facebook-foto-e-video-AJqYzjGC"
+    },
+    {
+     "name": "Data Protection Commission (Ирландия) — список решений и штрафов",
+     "url": "https://www.dataprotection.ie/en/dpc-guidance/decisions/fines"
+    },
+    {
+     "name": "EDPB — 1.2 billion euro fine for Facebook as a result of EDPB binding decision",
+     "url": "https://edpb.europa.eu/news/news/2023/12-billion-euro-fine-facebook-result-edpb-binding-decision_en"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-14-1800-sud-zamorozit-ii-isk.html",
    "url": "https://geekovski.ru/2026-11-14-1800-sud-zamorozit-ii-isk.html",
    "title": "Иск к OpenAI и Anthropic: заморозить самые сильные ИИ",
