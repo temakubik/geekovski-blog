@@ -101,12 +101,12 @@ Google вернулась на лицо человека. 12 ноября ком
 **Оценка, не факт.** Первое: это не «очки будущего», а хорошо упакованные наушники с камерой и ассистентом — и именно поэтому у них есть шанс. Второе: $395 за устройство, которое не работает без аккаунта из страны продаж, для читателя из России означает «посмотреть обзор и забыть»: серый импорт здесь не обходной путь, а тупик. Третье: главный вопрос не к Google, а к рынку — если очки с экраном придут в 2027-м по цене ниже $799, нынешнее поколение станет тем самым «первым блинком», каким когда-то была Glass. Разница в том, что теперь у Google есть два года чужого опыта, готовый ассистент и оптические бренды с магазинами на каждом углу.
 
 Источники:
-- Google — коллекции Intelligent Eyewear — https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order
+- Google — коллекции Intelligent Eyewear — https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/
 - Samsung Newsroom — релиз 10 декабря и спецификации — https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world
-- WIRED — первые впечатления и сравнение с Meta — https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses
+- WIRED — первые впечатления и сравнение с Meta — https://www.wired.com/story/google-samsung-intelligent-eyewear-launch-warby-parker-gentle-monster-smart-glasses/
 - IDC — доли рынка XR, Q2 2026 — https://www.idc.com/resource-center/blog/smart-glasses-growth-cools-to-35-as-meta-doubles-down-on-distribution/
 - Omdia — 4,2 млн AI-очков в первом полугодии 2026 — https://omdia.tech.informa.com/pr/2026/sep/global-ai-glasses-shipments-more-than-doubled-in-1h26-hitting-a-record-4point2-million
-- Meta — линейка Ray-Ban Meta и цены — https://www.meta.com/blog/ray-ban-meta-audio-and-deepest-ai-glasses-lineup
+- Meta — линейка Ray-Ban Meta и цены — https://www.meta.com/blog/ray-ban-meta-audio-and-deepest-ai-glasses-lineup/
 
 ---
 
