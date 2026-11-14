@@ -3,7 +3,7 @@ slug: studio
 name: Студия
 kind: location
 anchor: "a warm shared editorial studio: wooden shelves stacked with retro game consoles, cartridges and controllers, cardboard boxes and courier parcels with packing tape, coiled cables, plants, mugs, a laptop on a desk, warm tungsten lamp light and a string of warm lights"
-mascot: "a fluffy white cat with amber eyes and thin round glasses, sitting on the shelf among the consoles"
+mascot: "a white fluffy cat sitting on the shelf among the consoles, no glasses, no collar — a real cat, not a drawn mascot"
 style: "editorial 35mm film photograph, warm tungsten and afternoon window light, muted warm palette, subtle film grain, shallow depth of field, lived-in cozy room"
 negative: "no text, no letters, no readable screens or posters, no logos, no watermarks, no illustration, no 3d render, no cold blue light, no sterile showroom look"
 shots:
@@ -15,7 +15,7 @@ shots:
     scene: "wide view of the room with two facing desks and laptops, a wall of wooden shelves with consoles and film posters turned away, parcels on the floor, a guitar in the corner, big window with warm afternoon light"
   - id: cat
     ratio: "1:1"
-    scene: "portrait of the mascot: the fluffy white cat with amber eyes and thin round glasses sitting on a shelf, one paw on a stack of game cartridges, retro console and parcels blurred behind"
+    scene: "the white cat sits on a wooden shelf among an old game console, cartridge stacks and coiled cables, tail wrapped around its paws, warm lamp light, natural fur texture"
 ---
 
 # Студия и кот
@@ -26,7 +26,8 @@ shots:
 
 - **Тёплая и дружелюбная, а не «тёмное логово гика».** Тёплый свет ламп и строки гирлянды, растения, плед на стуле, кружки. Хлам есть, но он аккуратный: стопки коробок, свёрнутые кабели, коробки от посылок — а не мусор.
 - **Свет — тёплый.** Не холодный синий мониторный и не неон: студия должна читаться как «сюда приятно зайти».
-- **Кот всегда может быть в кадре.** Он не в каждой картинке, но его присутствие — подпись студии. Очки на нём — часть образа, не менять.
+- **Кот всегда может быть в кадре.** Он не в каждой картинке, но его присутствие — подпись студии. Кот настоящий: белый, пушистый, без очков и одежды — гиковость создаётся обстановкой (консоли, картриджи, коробки), а не аксессуарами на животном.
+
 - **Никакого текста в кадре.** Ни на коробках, ни на постерах, ни на экранах: подписи ставит шаблон.
 
 ## Готовые кадры
@@ -35,7 +36,8 @@ shots:
 |---|---|---|
 | Полки, посылки и кот (3:2) | `img/studio/studio.jpg` | https://doop.design/a/BgdcWWJ-Lc.webp |
 | Студия целиком (3:2) | `img/studio/wide.jpg` | https://doop.design/a/DEUJf0qPld.webp |
-| Кот-символ в очках (1:1) | `img/studio/cat.jpg` | https://doop.design/a/yTtQlA62OO.webp |
+| Кот сидит на полке (1:1) — символ канала | `img/studio/cat.jpg` | https://doop.design/a/jTv8q9VRqh.webp |
+| Кот лежит среди картриджей (1:1) | `img/studio/cat-shelf.jpg` | https://doop.design/a/denV08vT-M.webp |
 
 ## Промпт-формула для сцены
 

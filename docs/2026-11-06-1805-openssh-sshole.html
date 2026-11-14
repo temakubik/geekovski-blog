@@ -80,7 +80,7 @@
     <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T18:05:00+03:00">06.11.2026, 18:05</time></div>
     <h1>OpenSSH пускает в Alpine одним длинным паролем</h1>
     <p class="post__lead">В OpenSSH нашли дыру CVE-2026-123158: на musl-системах вроде Alpine любой пароль длиннее 256 символов открывает служебные аккаунты без пароля. Патч вышел 5 ноября, а через девять часов уязвимость уже пытались использовать вживую.</p>
-    <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="28" height="28" loading="lazy"><span>Ведёт рубрику <a href="/avtory/seva.html">Сева</a></span></p>
+    <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="36" height="36" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span><a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
   <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Уязвимы OpenSSH на musl-Linux (Alpine, OpenWrt, Buildroot, Yocto) без PAM — то есть конфигурация Alpine по умолчанию</li><li>Пароль на 257–1024 символа проходит как валидный для аккаунтов с «*» в /etc/shadow, включая root и пользователей «только по ключу»</li><li>Дыра живёт с 2016 года, патч — OpenSSH 10.6p2, Alpine закрыла 3.16–3.24 и edge; обновление требует перезапуска sshd</li></ul></aside>
   <figure class="post__cover"><img src="/assets/img/openssh-sshole.jpg" alt="OpenSSH пускает в Alpine одним длинным паролем"></figure>

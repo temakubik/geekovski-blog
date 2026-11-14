@@ -60,7 +60,7 @@ python3 tools/gen_persona.py --slug mark --shot desk --dry-run   # только 
 | Сева, 28 — железо | `img/seva/avatar.jpg` | `img/seva/desk.jpg` — за ноутбуком в студии |
 | Марк, 41 — игры, борода, лёгкая полнота | `img/mark/avatar.jpg` | `img/mark/desk.jpg` — дома за игрой, прибрано |
 | Аня, 30 — кино | `img/anya/avatar.jpg` | `img/anya/screening.jpg` — в зале на просмотре |
-| Студия и кот-символ | `img/studio/cat.jpg` | `img/studio/studio.jpg`, `img/studio/wide.jpg` |
+| Студия и кот-символ | `img/studio/cat.jpg` — кот на полке | `img/studio/studio.jpg`, `img/studio/wide.jpg`, `img/studio/cat-shelf.jpg` |
 
 Исходники в WebP лежат рядом (`*.webp`), JPG — для загрузки в ВК: платформа не принимает WebP при заливке фото.
 

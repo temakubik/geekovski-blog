@@ -941,9 +941,13 @@ def render_post(p, posts, theme):
     byline = ""
     _author = AUTHOR_BY_CAT.get(p["category"])
     if _author:
-        byline = ('<p class="byline"><img class="byline__pic" src="%s" alt="" width="28" height="28" loading="lazy">'
-                  '<span>Ведёт рубрику <a href="/avtory/%s.html">%s</a></span></p>'
-                  % (html.escape(_author["avatar"]), _author["slug"], html.escape(_author["name"])))
+        # подпись: аватар, слово «Автор» и полное имя капителью Chava — так же,
+        # как подписаны метки сайта, чтобы подпись не выглядела чужой врезкой
+        byline = ('<p class="byline"><img class="byline__pic" src="%s" alt="" width="36" height="36" loading="lazy">'
+                  '<span class="byline__text"><span class="byline__label">Автор</span>'
+                  '<a class="byline__name" href="/avtory/%s.html">%s</a></span></p>'
+                  % (html.escape(_author["avatar"]), _author["slug"],
+                     html.escape(_author["full_name"] or _author["name"])))
     content = """<main class="wrap post-page">
 {back}
 <article class="post cat-{cat}">
@@ -1087,9 +1091,9 @@ def own_studio_strip():
             '<p class="studio__label">Студия</p>'
             '<p class="studio__text">Общая комната, куда мы приходим работать: полки со старыми '
             'консолями, коробки от посылок с техникой, тёплый свет. На средней полке живёт кот — '
-            'белый, в очках, и он у нас за главного.</p>'
+            'белый, пушистый, и он у нас за главного.</p>'
             '<figure class="studio__cat"><img src="/assets/img/mascot-cat.jpg" alt="Белый кот студии '
-            'в круглых очках" loading="lazy"></figure>'
+            'сидит на полке рядом с консолями" loading="lazy"></figure>'
             '</div></section>')
 
 
