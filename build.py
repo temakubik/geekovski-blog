@@ -328,6 +328,8 @@ def nav(**counts):
             '<span class="nav__sep" aria-hidden="true"></span>'
             '<a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(%d)</span></a>'
             '<span class="nav__sep" aria-hidden="true"></span>'
+            '<a class="nav__link nav__link--authors" href="/avtory/">Авторы</a>'
+            '<span class="nav__sep" aria-hidden="true"></span>'
             '<details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(%d)</span></summary>'
             '<div class="nav__categories">'
             % (c["posts"], c["digests"], c["calendars"], c["rubrics"])
@@ -396,7 +398,7 @@ PAGE = """<!DOCTYPE html>
   <div class="wrap foot__in">
     <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
     <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
-    <span class="foot__links"><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+    <span class="foot__links"><a href="/avtory/">Авторы</a><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
   </div>
 </footer>
 <script>
@@ -899,10 +901,9 @@ def share_block(url, title, image=None):
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url={u}&text={t}" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url={u}&title={t}" target="_blank" rel="noopener nofollow">ВКонтакте</a>
-  <a class="share__btn" href="https://wa.me/?text={t}%20{u}" target="_blank" rel="noopener nofollow">WhatsApp</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url={u}&text={t}" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url={u}&media={i}&description={t}" target="_blank" rel="noopener nofollow">Pinterest</a>
-  <button class="share__btn share__btn--copy" type="button" data-copy="{u}">Скопировать ссылку</button>
+  <button class="share__btn share__btn--copy" type="button" data-copy="{u}">Пошерить</button>
 </section>""").format(u=u, t=tx, i=img)
 
 
@@ -935,6 +936,14 @@ def render_post(p, posts, theme):
     if related:
         rel = '<section class="related"><h2>По теме</h2><div class="grid grid--list">%s</div></section>' % "\n".join(
             card(x, theme) for x in related)
+    # подпись автора: страница редакции должна быть достижима из каждого материала,
+    # иначе она висит сиротой и в поиске не набирает вес
+    byline = ""
+    _author = AUTHOR_BY_CAT.get(p["category"])
+    if _author:
+        byline = ('<p class="byline"><img class="byline__pic" src="%s" alt="" width="28" height="28" loading="lazy">'
+                  '<span>Ведёт рубрику <a href="/avtory/%s.html">%s</a></span></p>'
+                  % (html.escape(_author["avatar"]), _author["slug"], html.escape(_author["name"])))
     content = """<main class="wrap post-page">
 {back}
 <article class="post cat-{cat}">
@@ -942,6 +951,7 @@ def render_post(p, posts, theme):
     <div class="post__meta"><a class="chip chip--solid cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
     <h1>{title}</h1>
     <p class="post__lead">{sum}</p>
+    {byline}
   </header>
   {tldr}
   {cover}
@@ -957,7 +967,7 @@ def render_post(p, posts, theme):
         title=html.escape(p["title"]),
         sum=html.escape(p["summary"]), cover=cover,
         body=body, srcs=srcs, rel=rel,
-        tldr=tldr,
+        tldr=tldr, byline=byline,
         credit_line=credit_line,
         back=back_link("Назад", "/%s/" % p["category"]),
         share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"],
@@ -1014,6 +1024,125 @@ def render_cat(slug, name, items, theme):
                               ld_breadcrumb([("Главная", "/"), (name, "/%s/" % slug)])))
 
 
+def load_authors(content_dir=None):
+    """Паспорта авторов из content/authors/*.md.
+
+    Тот же формат, что у простых страниц (frontmatter + markdown), поэтому
+    редактор правит автора обычной заметкой, а не кодом сборки.
+    """
+    base = (Path(content_dir) if content_dir else ROOT / "content") / "authors"
+    if not base.exists():
+        return []
+    out = []
+    for path in sorted(base.glob("*.md")):
+        meta, body = parse_page(path)
+        if not meta.get("name"):
+            continue
+        try:
+            order = int(meta.get("order") or 99)
+        except ValueError:
+            order = 99
+        out.append({
+            "slug": meta.get("slug") or path.stem,
+            "name": meta["name"],
+            "full_name": meta.get("full_name", ""),
+            "role": meta.get("role", ""),
+            "avatar": meta.get("avatar", ""),
+            "summary": meta.get("summary", ""),
+            "order": order,
+            "categories": (meta.get("categories") or "").split(),
+            "body": body,
+        })
+    out.sort(key=lambda a: (a["order"], a["name"]))
+    return out
+
+
+def _authcard(a):
+    return ('<a class="authcard" href="/avtory/%s.html">'
+            '<img class="authcard__pic" src="%s" alt="%s" width="72" height="72" loading="lazy">'
+            '<span class="authcard__text">'
+            '<span class="authcard__name">%s</span>'
+            '<span class="authcard__role">%s</span>'
+            '<span class="authcard__sum">%s</span>'
+            '</span></a>') % (
+        a["slug"], html.escape(a["avatar"]), html.escape(a["name"], quote=True),
+        html.escape(a["name"]), html.escape(a["role"]),
+        html.escape(a["summary"]))
+
+
+def render_authors_index(authors, theme):
+    """Страница /avtory/ — кто ведёт редакцию и что каждый закрывает."""
+    cards = "".join(_authcard(a) for a in authors)
+    n = len(authors)
+    lead = ("%d %s, которые ведут GEEKOVSKI: у каждого своя тема и свой голос. "
+            "Материалы в ленте подписаны — по подписи видно, кто отвечает за текст."
+            % (n, plural(n, "человек", "человека", "человек")))
+    content = ('<main class="wrap">%s<section class="lead"><h1>Редакция</h1><p>%s</p></section>'
+               '<div class="authors">%s</div></main>'
+               % (back_link("На главную", "/"), lead, cards))
+    url = SITE["url"] + "/avtory/"
+    desc = "Редакция GEEKOVSKI: кто пишет про железо, игры и кино — и за что отвечает."
+    return page("Редакция — кто пишет GEEKOVSKI", desc, content, theme, canonical=url,
+                og_alt="Редакция GEEKOVSKI",
+                jsonld=ldjson(ld_org(), ld_website(),
+                              {"@type": "CollectionPage", "@id": url + "#page", "url": url,
+                               "name": "Редакция GEEKOVSKI", "description": desc,
+                               "inLanguage": "ru-RU", "isPartOf": {"@id": WEBSITE_ID}},
+                              ld_breadcrumb([("Главная", "/"), ("Редакция", "/avtory/")])))
+
+
+def author_page(a, posts, theme):
+    """Страница автора: портрет, короткое описание и его материалы по рубрикам."""
+    cats = [c for c in a["categories"] if c in CAT_NAME]
+    items = [p for p in posts if p["category"] in cats][:12]
+    total = len([p for p in posts if p["category"] in cats])
+    name = html.escape(a["name"])
+    url = "%s/avtory/%s.html" % (SITE["url"], a["slug"])
+    if items:
+        body = ('<div class="grid grid--list">%s</div>'
+                % "\n".join(card(p, theme) for p in items))
+        head2 = ("Материалы: %s" % ", ".join(CAT_NAME[c] for c in cats))
+    else:
+        body = ('<p class="lead__empty">Материалов пока нет — свежие новости по этим темам '
+                'выходят в <a href="/digests/">дайджестах</a>.</p>')
+        head2 = "Материалы"
+    content = ('<main class="wrap">%s'
+               '<section class="author">'
+               '<img class="author__pic" src="%s" alt="%s" width="360" height="360">'
+               '<div class="author__about">'
+               '<h1>%s</h1>'
+               '<p class="author__role">%s</p>'
+               '<p class="author__lead">%s</p>'
+               '<div class="author__body">%s</div>'
+               '</div></section>'
+               '<section class="lead"><h2>%s</h2><p>%s</p></section>'
+               '%s</main>') % (
+        back_link("Все авторы", "/avtory/"),
+        html.escape(a["avatar"]), html.escape(a["name"], quote=True),
+        name, html.escape(a["role"]), html.escape(a["summary"]), md(a["body"]),
+        html.escape(head2),
+        ("%d %s" % (total, plural(total, "материал", "материала", "материалов"))) if total else "",
+        body)
+    desc = a["summary"] or plain(a["body"], 160)
+    return page(title_tag("%s — %s" % (a["name"], a["role"].replace(" · ", ", "))),
+                desc, content, theme, canonical=url, og_image=SITE["url"] + a["avatar"] if a["avatar"] else None,
+                og_alt=a["name"],
+                jsonld=ldjson(ld_org(), ld_website(),
+                              {"@type": "ProfilePage", "@id": url + "#page", "url": url,
+                               "name": "%s — %s" % (a["name"], a["role"]), "description": desc,
+                               "inLanguage": "ru-RU", "isPartOf": {"@id": WEBSITE_ID},
+                               "mainEntity": {"@type": "Person", "@id": url + "#person",
+                                              "name": a["full_name"] or a["name"],
+                                              "alternateName": a["name"],
+                                              "jobTitle": a["role"],
+                                              "description": a["summary"],
+                                              "image": SITE["url"] + a["avatar"] if a["avatar"] else None,
+                                              "url": url,
+                                              "worksFor": {"@id": ORG_ID}}},
+                              ld_breadcrumb([("Главная", "/"), ("Редакция", "/avtory/"),
+                                             (a["name"], "/avtory/%s.html" % a["slug"])])))
+
+
 def rss(posts, title=None, path=""):
     items = "".join("""<item><title>{t}</title><link>{u}/{p}{s}.html</link>
 <guid>{u}/{p}{s}.html</guid><pubDate>{d}</pubDate><description>{desc}</description></item>""".format(
@@ -1025,7 +1154,7 @@ def rss(posts, title=None, path=""):
         title=title or SITE["title"], url=SITE["url"], tag=SITE["tagline"], items=items)
 
 
-def sitemap(posts, digests=None, titles=None, with_calendar=False):
+def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None):
     """Sitemap с lastmod у каждой записи и картинками материалов.
 
     lastmod без него поисковики перекачивают всё подряд; image:image пускает обложки
@@ -1050,6 +1179,13 @@ def sitemap(posts, digests=None, titles=None, with_calendar=False):
     urls.append(entry(SITE["url"] + "/about.html"))
     if with_calendar:
         urls.append(entry(SITE["url"] + "/calendar/"))
+    # страницы редакции: люди, которые подписаны под материалами, — тоже точки входа
+    if authors:
+        urls.append(entry(SITE["url"] + "/avtory/"))
+        for a in authors:
+            urls.append(entry("%s/avtory/%s.html" % (SITE["url"], a["slug"]),
+                              image=SITE["url"] + a["avatar"] if a["avatar"] else None,
+                              caption=a["name"]))
     # страницы тайтлов (игры, фильмы, сериалы) — такие же точки входа, как материалы:
     # по ним ищут «<название> дата выхода», и из календаря на них ведут ссылки
     for slug in sorted(titles or {}):
@@ -1272,6 +1408,11 @@ def build(theme, out_dir, content_dir=None):
     CAL_ENTRIES[:] = cal_entries
     TITLES.clear()
     TITLES.update(load_titles())
+    AUTHORS[:] = load_authors(content)
+    AUTHOR_BY_CAT.clear()
+    for a in AUTHORS:
+        for c in a["categories"]:
+            AUTHOR_BY_CAT.setdefault(c, a)
     ALL_POSTS[:] = posts + digests
 
     out = Path(out_dir)
@@ -1329,6 +1470,12 @@ def build(theme, out_dir, content_dir=None):
         htmlp = title_page(slug, theme)
         if htmlp:
             (tdir / ("%s.html" % slug)).write_text(htmlp, encoding="utf-8")
+    if AUTHORS:
+        adir = out / "avtory"
+        adir.mkdir(exist_ok=True)
+        (adir / "index.html").write_text(render_authors_index(AUTHORS, theme), encoding="utf-8")
+        for a in AUTHORS:
+            (adir / ("%s.html" % a["slug"])).write_text(author_page(a, posts, theme), encoding="utf-8")
     # файл календаря живёт в content/posts, но собственной страницы у него нет:
     # его slug мог попасть в закладки и в поиск — отдаём редирект на общий раздел
     for c in calendars:
@@ -1372,7 +1519,8 @@ def build(theme, out_dir, content_dir=None):
     (out / "llms.txt").write_text(llms_txt(posts, digests, TITLES), encoding="utf-8")
     (out / "llms-full.txt").write_text(llms_full_txt(posts), encoding="utf-8")
     (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests"), encoding="utf-8")
-    (out / "sitemap.xml").write_text(sitemap(posts, digests, TITLES, with_calendar=bool(cal_entries)),
+    (out / "sitemap.xml").write_text(sitemap(posts, digests, TITLES, with_calendar=bool(cal_entries),
+                                            authors=AUTHORS),
                                      encoding="utf-8")
     (out / "feed.json").write_text(feed_json(posts), encoding="utf-8")
     ico = ROOT / "static" / "img" / "favicon.ico"
@@ -1682,6 +1830,8 @@ def title_slug(text):
 TITLES = {}
 ALL_POSTS = []   # все материалы и дайджесты: нужны для обратной перелинковки
 CAL_ENTRIES = []   # заполняется в build(): записи календаря для страниц тайтлов
+AUTHORS = []       # заполняется в build(): паспорта редакции из content/authors
+AUTHOR_BY_CAT = {}  # рубрика → паспорт автора, который её ведёт
 
 
 def load_titles():

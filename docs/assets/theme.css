@@ -583,3 +583,33 @@ a.tlink:hover { border-bottom-style: solid; }
   hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; text-wrap: pretty;
 }
 .post h1, .post h2, .post h3 { text-wrap: balance; hyphens: manual; }
+
+/* ---------- редакция: страницы авторов ----------
+   Имена классов общие для /avtory/ и /avtory/<slug>.html; подпись под статьёй
+   (.byline) держит тот же кегль, что метки карточки, чтобы не спорить с H1. */
+.authors { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 26px 0 12px; }
+.authcard { display: flex; gap: 16px; align-items: flex-start; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); transition: border-color .15s ease; }
+.authcard:hover { border-color: var(--accent); }
+.authcard__pic { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; background: var(--bg); }
+.authcard__text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.authcard__name { font-family: var(--font-display); font-style: italic; font-weight: var(--fw-display); font-size: var(--fs-h2); line-height: var(--lh-snug); letter-spacing: -.015em; color: var(--text); }
+.authcard__role { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.authcard__sum { color: var(--muted); font-size: var(--fs-small); line-height: 1.45; }
+
+.author { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: start; margin: 24px 0 38px; }
+.author__pic { width: 100%; height: auto; border-radius: 18px; display: block; background: var(--panel); }
+.author__role { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 10px 0 14px; }
+.author__lead { font-size: var(--fs-lead); line-height: 1.5; color: var(--text); margin: 0 0 16px; max-width: 62ch; }
+.author__body p { color: var(--muted); margin: 0 0 12px; max-width: 62ch; }
+.author__body p:last-child { margin-bottom: 0; }
+
+.byline { display: flex; align-items: center; gap: 10px; margin: 16px 0 0; padding-bottom: 4px; font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.byline__pic { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; background: var(--panel); }
+.byline a { color: var(--text); border-bottom: 1px solid var(--line); }
+.byline a:hover { color: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 640px) {
+  .author { grid-template-columns: 1fr; gap: 16px; }
+  .author__pic { width: 132px; }
+  .authors { grid-template-columns: 1fr; }
+}
