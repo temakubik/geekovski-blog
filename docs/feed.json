@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-14-1200-xbox-x25-rasprodali.html",
+   "url": "https://geekovski.ru/2026-11-14-1200-xbox-x25-rasprodali.html",
+   "title": "Юбилейный Xbox за $900 смели за секунды",
+   "summary": "Юбилейную Xbox Series X25 за $899,99 выложили в магазин в ночь на 13 ноября — и размели за секунды. GameStop на пике просил за неё $4 950, на eBay проданные экземпляры идут по $1 500–2 500. Дело не в цене консоли, а в схеме продажи «кто успел».",
+   "date_published": "2026-11-14T12:00:00+03:00",
+   "date_modified": "2026-11-14T12:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-x25.jpg",
+   "_sources": [
+    {
+     "name": "XBOX Wire — анонс коллекции X25",
+     "url": "https://news.xbox.com/en-us/2026/06/07/xbox-25th-anniversary-console-controller-x25-xbox-games-showcase-2026"
+    },
+    {
+     "name": "XBOX Wire — предзаказы и цена $899,99",
+     "url": "https://news.xbox.com/en-us/2026/08/26/pre-orders-begin-today-xbox-25th-anniversary-collection/"
+    },
+    {
+     "name": "XBOX Wire — повышение цен на консоли с 1 августа",
+     "url": "https://news.xbox.com/en-us/2026/06/25/xbox-console-price-update/"
+    },
+    {
+     "name": "Microsoft Store — карточка X25 Limited Edition",
+     "url": "https://www.microsoft.com/en-us/d/xbox-series-x25-limited-edition/8wg5vqp0x4h3"
+    },
+    {
+     "name": "IGN — тираж разошёлся за секунды, ярость фанатов",
+     "url": "https://www.ign.com/articles/xbox-25th-anniversary-console-stock-sells-out-in-seconds-sparking-fan-fury-over-scalping-and-limited-supply"
+    },
+    {
+     "name": "GameSpot — перезавоз распродан за секунды",
+     "url": "https://www.gamespot.com/articles/the-xbox-25th-anniversary-console-restock-sold-out-before-you-could-finish-reading-this-headline/"
+    },
+    {
+     "name": "TrueAchievements — анонс перезавоза",
+     "url": "https://www.trueachievements.com/news/xbox-series-x25-consoles-back-in-stock"
+    },
+    {
+     "name": "Make Tech Easier — расхождение дат у Microsoft",
+     "url": "https://maketecheasier.com/xbox-series-x25-restock/"
+    },
+    {
+     "name": "XBOX Wire — Halo: Campaign Evolved выходит 28 июля",
+     "url": "https://news.xbox.com/en-us/2026/06/07/halo-campaign-evolved-launch-preorder-xbox-games-showcase-2026"
+    },
+    {
+     "name": "IGN — Шарма о нехватке поставок",
+     "url": "https://www.ign.com/articles/asha-sharma-insists-theres-more-demand-than-consoles-available-as-xbox-hardware-sales-continue-to-plummet"
+    },
+    {
+     "name": "Microsoft Source — запуск Xbox 15 ноября 2001",
+     "url": "https://news.microsoft.com/source/2001/11/15/xbox-erupts-on-the-scene"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-14-1000-google-umnye-ochki.html",
    "url": "https://geekovski.ru/2026-11-14-1000-google-umnye-ochki.html",
    "title": "Google вернулась в умные очки: $395 без экрана",
