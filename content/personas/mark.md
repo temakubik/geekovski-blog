@@ -14,7 +14,7 @@ shots:
     scene: "chest-up portrait, headphones resting around his neck, caught halfway through a genuine laugh, plain black t-shirt, worn office chair in a dark room with a warm desk lamp glow behind him"
   - id: desk
     ratio: "3:2"
-    scene: "sitting in a worn office chair pulled close to a large monitor, gamepad resting in his hands on his stomach, face lit by the screen glow, focused half-smile, messy desk with cables and a mug, night, city lights out of focus in the window"
+    scene: "seen from a three-quarter back angle at his own tidy desk at home: soft grey knit sweater, playing on a large monitor that shows only a blur of colour, game cases lined up on a shelf, a family photo frame, a small plant, a mug on a coaster, cables neatly clipped, warm lamp light and evening window glow"
   - id: floor
     ratio: "3:2"
     scene: "sitting on the floor in front of a TV with a retro console and controllers scattered around, holding a controller up toward the screen, warm lamp light, cozy dim room"
@@ -63,6 +63,7 @@ shots:
 | Кадр | Файл | Источник |
 |---|---|---|
 | Аватар (1:1) — канон лица | `img/mark/avatar.jpg` | https://doop.design/a/xFVWbTuJJ2.webp |
-| За игрой, ночь (3:2) | `img/mark/desk.jpg` | см. `img/mark/desk.webp` |
+| Дома за игрой, прибрано (3:2) | `img/mark/desk.jpg` | https://doop.design/a/5Shvaa0isa.webp |
 
-**Канон лица — `avatar.jpg`.** Кадры прежнего, 26-летнего Марка (безбородого, спортивного) из канона выведены и заменены: автор попросил сделать персонажа старше и убрать модельную внешность.
+**Канон лица — `avatar.jpg`.** Кадр `desk.jpg` — три четверти со спины: лицо читается в профиль, борода и фигура совпадают с аватаркой. Атмосфера важнее портрета: у Марка дома порядок, а не «скуф-логово».
+

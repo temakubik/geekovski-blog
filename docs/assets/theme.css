@@ -613,3 +613,24 @@ a.tlink:hover { border-bottom-style: solid; }
   .author__pic { width: 132px; }
   .authors { grid-template-columns: 1fr; }
 }
+
+/* ---------- студия на /avtory/ и кадр-сцена автора ----------
+   Студия объясняет «место», из которого пишется канал: широкий кадр + кот-символ.
+   Высота кадра студии ограничена, чтобы блок не раздувал страницу под составом. */
+.studio { display: grid; grid-template-columns: 1.55fr 1fr; gap: 20px; align-items: start; margin: 30px 0 10px; }
+.studio__big { margin: 0; border-radius: 16px; overflow: hidden; background: var(--panel); }
+.studio__big img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; display: block; }
+.studio__side { display: flex; flex-direction: column; gap: 14px; }
+.studio__label { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0; }
+.studio__text { margin: 0; color: var(--muted); font-size: var(--fs-small); line-height: 1.5; max-width: 42ch; }
+.studio__cat { margin: 0; border-radius: 16px; overflow: hidden; background: var(--panel); width: 100%; max-width: 220px; }
+.studio__cat img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+
+.author__scene { margin: 0 0 34px; border-radius: 18px; overflow: hidden; background: var(--panel); }
+.author__scene img { width: 100%; height: auto; display: block; }
+
+@media (max-width: 760px) {
+  .studio { grid-template-columns: 1fr; }
+  .studio__big img { max-height: 260px; }
+  .studio__cat { max-width: 160px; }
+}

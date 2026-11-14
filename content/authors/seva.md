@@ -4,6 +4,7 @@ name: Сева
 full_name: Всеволод Гринёв
 role: Техред · железо и цифры
 avatar: /assets/img/author-seva.jpg
+scene: /assets/img/author-seva-scene.jpg
 categories: gadgets ai
 order: 1
 summary: Разбирает гаджеты по цифрам и ищет подвох в пресс-релизах. Если в статье «лёгкий» — значит, там будет вес в граммах.

@@ -4,6 +4,7 @@ name: Аня
 full_name: Аня Гладышева
 role: Кино и сериалы
 avatar: /assets/img/author-anya.jpg
+scene: /assets/img/author-anya-scene.jpg
 categories: kino serialy
 order: 3
 summary: Смотрит больше, чем успевает обсудить. Пишет про кино, сериалы и анимацию — без спойлеров и без «обязательно к просмотру».

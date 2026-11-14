@@ -4,6 +4,7 @@ name: Марк
 full_name: Марк Стрельцов
 role: Игры · консоли и инди
 avatar: /assets/img/author-mark.jpg
+scene: /assets/img/author-mark-scene.jpg
 categories: xbox switch playstation pc vr
 order: 2
 summary: Играет дольше, чем пишет, и считает, что оценка в баллах убивает разговор. Отвечает за игры, патчи и переносы релизов.

@@ -1048,6 +1048,7 @@ def load_authors(content_dir=None):
             "full_name": meta.get("full_name", ""),
             "role": meta.get("role", ""),
             "avatar": meta.get("avatar", ""),
+            "scene": meta.get("scene", ""),
             "summary": meta.get("summary", ""),
             "order": order,
             "categories": (meta.get("categories") or "").split(),
@@ -1070,6 +1071,28 @@ def _authcard(a):
         html.escape(a["summary"]))
 
 
+def own_studio_strip():
+    """Кадр студии и кот-символ под составом редакции.
+
+    Фотографий меньше, чем текста, поэтому студия — единственный блок ниже карточек:
+    она объясняет, почему у канала вообще есть «место», а не только три подписи.
+    """
+    wide, cat = ROOT / "static" / "img" / "studio.jpg", ROOT / "static" / "img" / "mascot-cat.jpg"
+    if not (wide.exists() and cat.exists()):
+        return ""
+    return ('<section class="studio">'
+            '<figure class="studio__big"><img src="/assets/img/studio.jpg" alt="Студия редакции: '
+            'полки с консолями, коробки и посылки" loading="lazy"></figure>'
+            '<div class="studio__side">'
+            '<p class="studio__label">Студия</p>'
+            '<p class="studio__text">Общая комната, куда мы приходим работать: полки со старыми '
+            'консолями, коробки от посылок с техникой, тёплый свет. На средней полке живёт кот — '
+            'белый, в очках, и он у нас за главного.</p>'
+            '<figure class="studio__cat"><img src="/assets/img/mascot-cat.jpg" alt="Белый кот студии '
+            'в круглых очках" loading="lazy"></figure>'
+            '</div></section>')
+
+
 def render_authors_index(authors, theme):
     """Страница /avtory/ — кто ведёт редакцию и что каждый закрывает."""
     cards = "".join(_authcard(a) for a in authors)
@@ -1078,8 +1101,8 @@ def render_authors_index(authors, theme):
             "Материалы в ленте подписаны — по подписи видно, кто отвечает за текст."
             % (n, plural(n, "человек", "человека", "человек")))
     content = ('<main class="wrap">%s<section class="lead"><h1>Редакция</h1><p>%s</p></section>'
-               '<div class="authors">%s</div></main>'
-               % (back_link("На главную", "/"), lead, cards))
+               '<div class="authors">%s</div>%s</main>'
+               % (back_link("На главную", "/"), lead, cards, own_studio_strip()))
     url = SITE["url"] + "/avtory/"
     desc = "Редакция GEEKOVSKI: кто пишет про железо, игры и кино — и за что отвечает."
     return page("Редакция — кто пишет GEEKOVSKI", desc, content, theme, canonical=url,
@@ -1115,11 +1138,14 @@ def author_page(a, posts, theme):
                '<p class="author__lead">%s</p>'
                '<div class="author__body">%s</div>'
                '</div></section>'
+               '%s'
                '<section class="lead"><h2>%s</h2><p>%s</p></section>'
                '%s</main>') % (
         back_link("Все авторы", "/avtory/"),
         html.escape(a["avatar"]), html.escape(a["name"], quote=True),
         name, html.escape(a["role"]), html.escape(a["summary"]), md(a["body"]),
+        ('<figure class="author__scene"><img src="%s" alt="%s"></figure>'
+         % (html.escape(a["scene"]), html.escape(a["name"], quote=True))) if a.get("scene") else "",
         html.escape(head2),
         ("%d %s" % (total, plural(total, "материал", "материала", "материалов"))) if total else "",
         body)

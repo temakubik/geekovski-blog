@@ -14,7 +14,7 @@ shots:
     scene: "chest-up portrait, looking slightly past the camera with a skeptical half-smile, charcoal hoodie, dark shelving with old game consoles and cardboard boxes blurred behind"
   - id: desk
     ratio: "3:2"
-    scene: "sitting at a worn wooden desk covered with gadgets, screwdrivers and a laptop showing an unreadable chart, holding a small device in both hands, warm desk lamp light in a dark room"
+    scene: "the shared editorial studio in the evening: he sits at a wooden desk with his back half-turned to the camera, typing on a laptop, charcoal hoodie, a tall shelf behind him loaded with old game consoles and cardboard boxes, courier parcels on the floor, mug and notebook on the desk, warm lamp light and a string of warm lights"
   - id: street
     ratio: "3:2"
     scene: "standing outside an electronics store at dusk, hands in the pockets of a worn denim jacket, neon reflections on wet pavement, looking into the window display"
@@ -64,7 +64,8 @@ shots:
 | Кадр | Файл | Источник |
 |---|---|---|
 | Аватар (1:1) — канон лица | `img/seva/avatar.jpg` | https://doop.design/a/3m0dZddb8Q.webp |
-| За работой (3:2) | `img/seva/desk.jpg` | https://doop.design/a/EOSvsVeNWd.webp |
+| В студии за ноутбуком (3:2) | `img/seva/desk.jpg` | https://doop.design/a/2agTFF6JT6.webp |
 
-**Канон лица — `avatar.jpg`.** Если следующий кадр рисует другое лицо, это брак генерации, а не новая версия персонажа: переделываем по аватарке как референсу.
+**Канон лица — `avatar.jpg`.** Кадр `desk.jpg` снят со спины и в профиль — лицо почти не читается, поэтому расхождение с аватаркой тут не мешает: это атмосферный кадр, а не портрет.
+
 
