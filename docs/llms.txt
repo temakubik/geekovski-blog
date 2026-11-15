@@ -184,6 +184,8 @@
 
 ## Дайджесты
 
+- [Что вышло 15 ноября: 5 статей](https://geekovski.ru/digests/2026-11-15-otchet.html): BLG взяла Worlds 2026, разбор шестикратной книги заявок на IPO Anthropic, QSSR на обычной PS5, провал второго уик-энда «Годзиллы минус ноль» и разделение ранкеда в Rainbow Six Siege.
+- [Вечер 15 ноября: Super Meat Boy возвращается, скидки на железо PlayStation, Claude переехала на AMD](https://geekovski.ru/digests/2026-11-15-vecher.html): Team Meat показала Super Meat Boy Again+ с новой графикой и музыкой, Sony раскрыла скидки Black Friday на аксессуары и PS VR2, а Anthropic в презентации к IPO заявила, что её модель за три дня перенесла Claude на GPU AMD MI355.
 - [Утро 15 ноября: SpaceX поймала Starship из орбиты, офис inXile обстреляли, «Годзилла» взяла мировой уикенд](https://geekovski.ru/digests/2026-11-15-utro.html): SpaceX впервые посадила корабль Starship на башню после 22 часов в орбите, офис студии inXile в Калифорнии обстреляли из проезжавшей машины — никто не пострадал, а «Годзилла: Минус ноль» собрала $63 млн в мире за премьерный уикенд.
 - [Что вышло 14 ноября: 5 статей](https://geekovski.ru/digests/2026-11-14-otchet.html): PS4-порт God of War Sons of Sparta, умные очки Google за $395, юбилейная Xbox X25 за $900, разбор доли Intel на десктопе и иск против пяти ИИ-лабораторий.
 - [Вечер 14 ноября: «Эбенезер» идёт к $20 млн, Netflix показала «Planeswalker», Зельник наехал на OpenAI](https://geekovski.ru/digests/2026-11-14-vecher.html): «Эбенезер» с Джонни Деппом собрал $6,7 млн в первый день и идёт к $20 млн за уикенд, Netflix раскрыла анимационный сериал по Magic: The Gathering, а глава Take-Two обвинил OpenAI и Anthropic в двойных стандартах по интеллектуальной собственности.
