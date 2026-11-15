@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-15-1200-qssr-ii-upskaling-ps5.html",
+   "url": "https://geekovski.ru/2026-11-15-1200-qssr-ii-upskaling-ps5.html",
+   "title": "QSSR на обычной PS5: апскейл без ИИ-блока",
+   "summary": "13 ноября Sony расширила список игр с QSSR до восьми — Spider-Man 2 уже обновилась, Control Resonant ждёт декабрьского патча, четырём другим обещали «ближайшие недели». Разбираем, как ИИ-апскейл работает на консоли без выделенного нейроблока и сколько кадрового времени он стоит.",
+   "date_published": "2026-11-15T12:00:00+03:00",
+   "date_modified": "2026-11-15T12:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/qssr-ps5-apu-die.jpg",
+   "_sources": [
+    {
+     "name": "PlayStation.Blog — QSSR приходит в Spider-Man 2, Control Resonant, The Finals, ARC Raiders и Hell Let Loose: Vietnam",
+     "url": "https://blog.playstation.com/2026/11/13/qssr-arrives-in-marvels-spider-man-2-control-resonant-the-finals-arc-raiders-and-hell-let-loose-vietnam/"
+    },
+    {
+     "name": "PlayStation.Blog — ИИ-апскейл приходит на PS5, анонс QSSR",
+     "url": "https://blog.playstation.com/2026/10/01/ai-upscaling-is-coming-to-ps5/"
+    },
+    {
+     "name": "Digital Foundry — Hands-On With QSSR: AI-Driven Upscaling for the Standard PS5",
+     "url": "https://www.digitalfoundry.net/news/2026/10/hands-on-with-qssr-ai-driven-upscaling-for-the-standard-ps5"
+    },
+    {
+     "name": "The Verge — Sony brings AI graphics upscaling to the regular PS5",
+     "url": "https://www.theverge.com/games/1003549/sony-ps5-quick-spectral-super-resolution-qssr"
+    },
+    {
+     "name": "TechRadar — разбор QSSR и выводов Digital Foundry",
+     "url": "https://www.techradar.com/gaming/sony-has-revealed-its-new-qssr-upscaling-tech-for-the-base-ps5-with-tech-analysts-confirming-an-exceptional-quality-boost-for-marvels-wolverine-while-ghost-of-yotei-saw-less-dramatic-improvements"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-15-1000-anthropic-ipo-shest-kopiy.html",
    "url": "https://geekovski.ru/2026-11-15-1000-anthropic-ipo-shest-kopiy.html",
    "title": "Anthropic перед Nasdaq: шесть копий книги заявок",
