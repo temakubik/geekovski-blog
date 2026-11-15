@@ -18,13 +18,14 @@
 - [VR](https://geekovski.ru/vr/): 7 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 28 материалов
 - [Кино](https://geekovski.ru/kino/): 20 материалов
-- [Сериалы](https://geekovski.ru/serialy/): 7 материалов
+- [Сериалы](https://geekovski.ru/serialy/): 8 материалов
 - [AI](https://geekovski.ru/ai/): 29 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Материалы
 
+- [«Virgin River» дожил до девятого сезона: рекорд Netflix](https://geekovski.ru/2026-11-15-2100-virgin-river-9-sezon.html): Netflix продлила «Virgin River» на девятый сезон за несколько месяцев до премьеры восьмого — это рекорд по числу сезонов среди сценарных сериалов сервиса и полмиллиарда просмотров. За те же три дня стриминг продлил ещё два «тихих» шоу, и это уже не случайность, а политика. (15.11.2026)
 - [Siege разделила ранкед: соло больше не против пятёрок](https://geekovski.ru/2026-11-15-1800-siege-vital-signal-ranked-3-0.html): Ubisoft показала на BLAST R6 Osaka Major финальный сезон 11-го года — Operation Vital Signal. Ранкед разделили на две очереди, четвёрки из рейтинга убрали, а Док получил монитор, которым лечит и поднимает тиммейтов через всю карту. (15.11.2026)
 - [«Годзилла минус ноль»: рекордный старт оказался вспышкой](https://geekovski.ru/2026-11-15-1500-godzilla-minus-zero-vtoroy-weekend.html): Второй уик-энд «Годзиллы минус ноль» падает на 74% после рекордного дебюта в $31,6 млн — три четверти кассы старта дали IMAX и большие форматы, а фанатская аудитория вышла в первую неделю. Первое место забирает «Эбенезер» с Джонни Деппом: около $20 млн и оценка A- от CinemaScore. (15.11.2026)
 - [QSSR на обычной PS5: апскейл без ИИ-блока](https://geekovski.ru/2026-11-15-1200-qssr-ii-upskaling-ps5.html): 13 ноября Sony расширила список игр с QSSR до восьми — Spider-Man 2 уже обновилась, Control Resonant ждёт декабрьского патча, четырём другим обещали «ближайшие недели». Разбираем, как ИИ-апскейл работает на консоли без выделенного нейроблока и сколько кадрового времени он стоит. (15.11.2026)
@@ -251,6 +252,7 @@
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
 - [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
+- [Virgin River](https://geekovski.ru/titles/virgin-river.html): 2019
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
 - [The Legend of Zelda: Ocarina of Time](https://geekovski.ru/titles/zelda-ocarina-2026.html): 2026
 - [Zero Parades: Director's Cut](https://geekovski.ru/titles/zero-parades-directors-cut.html): 2026
