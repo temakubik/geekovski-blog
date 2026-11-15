@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-15-1000-anthropic-ipo-shest-kopiy.html",
+   "url": "https://geekovski.ru/2026-11-15-1000-anthropic-ipo-shest-kopiy.html",
+   "title": "Anthropic перед Nasdaq: шесть копий книги заявок",
+   "summary": "Bloomberg сообщил, что заявок на IPO Anthropic в шесть раз больше, чем акций, — 825 млн бумаг по $70–78 дают до $64,4 млрд и оценку до $1,4 трлн. Цену обещают назвать 18 ноября, торги начнутся 19-го под тикером ANT. Разбираем, что стоит за спросом и где в сделке подвох.",
+   "date_published": "2026-11-15T10:00:00+03:00",
+   "date_modified": "2026-11-15T10:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/anthropic-ipo-amodei.jpg",
+   "_sources": [
+    {
+     "name": "Bloomberg — книга заявок переподписана примерно в шесть раз",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-12/anthropic-s-ipo-is-said-to-be-about-six-times-oversubscribed"
+    },
+    {
+     "name": "Anthropic — старт роуд-шоу и параметры предложения",
+     "url": "https://www.anthropic.com/news/roadshow-launch"
+    },
+    {
+     "name": "SEC — Amendment No. 2 к Form S-1",
+     "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm"
+    },
+    {
+     "name": "TechCrunch — диапазон $70–78, частное размещение и оценка $1,404 трлн",
+     "url": "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/"
+    },
+    {
+     "name": "CNBC — параметры IPO и финансовые результаты девяти месяцев",
+     "url": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html"
+    },
+    {
+     "name": "Semafor — спрос держится на фоне отката ИИ-акций",
+     "url": "https://www.semafor.com/article/11/13/2026/investors-are-hungry-for-anthropics-ipo-despite-tech-pullback"
+    },
+    {
+     "name": "CNBC — инвесторы готовились к оценке ниже, $1,5 трлн называли натяжкой",
+     "url": "https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html"
+    },
+    {
+     "name": "CNBC — Claude Fable 5.2 и Mythos 5.2, первые фронтирные модели после призыва притормозить",
+     "url": "https://www.cnbc.com/2026/11/09/anthropic-claude-fable-5-2-mythos-5-2.html"
+    },
+    {
+     "name": "Anthropic — оценка $965 млрд в майском раунде",
+     "url": "https://www.anthropic.com/news/series-h"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-15-0800-blg-worlds-2026.html",
    "url": "https://geekovski.ru/2026-11-15-0800-blg-worlds-2026.html",
    "title": "BLG впервые взяла Worlds, Riot готовит New Dawn",
