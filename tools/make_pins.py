@@ -42,7 +42,7 @@ body{{width:1000px;height:1500px;overflow:hidden;background:#0A0C0F;position:rel
 .brand{{font-family:'Chava',monospace;font-size:26px;letter-spacing:.22em;color:#7FA8F7}}
 .tag{{font-family:'Chava',monospace;font-size:24px;letter-spacing:.16em;color:{c};border:2px solid {c};padding:6px 14px}}
 .bottom{{display:flex;flex-direction:column;gap:22px}}
-h1{{font-family:'RGS';font-style:italic;font-weight:900;font-size:{size}px;line-height:1.02;letter-spacing:-.025em}}
+h1{{font-family:'Random Grotesque Spacious',serif;font-style:italic;font-weight:900;font-size:{size}px;line-height:1.02;letter-spacing:-.025em}}
 .meta{{font-family:'Chava',monospace;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:#8B939E}}
 .meta b{{color:#7FA8F7}}
 </style></head><body>
