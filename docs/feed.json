@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-15-0800-blg-worlds-2026.html",
+   "url": "https://geekovski.ru/2026-11-15-0800-blg-worlds-2026.html",
+   "title": "BLG впервые взяла Worlds, Riot готовит New Dawn",
+   "summary": "Bilibili Gaming обыграла Gen.G 3:1 в финале Worlds 2026 в Бруклине и принесла Китаю первый Кубок призывателей с 2021 года — по дороге выбив все четыре корейские команды турнира. Между играми финала Riot показала League of Legends: New Dawn — крупнейшее обновление 17-летней игры, которое выйдет в 2027-м.",
+   "date_published": "2026-11-15T08:00:00+03:00",
+   "date_modified": "2026-11-15T08:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/worlds-2026-final.jpg",
+   "_sources": [
+    {
+     "name": "Dot Esports — финал BLG против Gen.G",
+     "url": "https://dotesports.com/league-of-legends/news/blg-win-worlds-championship-2026"
+    },
+    {
+     "name": "GosuGamers — путь BLG и призовые",
+     "url": "https://www.gosugamers.net/lol/news/79501-bilibili-gaming-defeat-gen-g-to-be-crowned-worlds-2026-champions"
+    },
+    {
+     "name": "Strafe — счёт по играм финала",
+     "url": "https://strafe.com/news/read/blg-beat-geng-3-1-to-claim-first-worlds-title"
+    },
+    {
+     "name": "Insider Gaming — Knight MVP финала",
+     "url": "https://insider-gaming.com/knight-crowned-lol-worlds-2026-mvp-after-blg-victory/"
+    },
+    {
+     "name": "SBS News — реакция корейской стороны",
+     "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008846354"
+    },
+    {
+     "name": "PCGamesN — анонс New Dawn",
+     "url": "https://pcgamesn.com/league-of-legends/new-dawn-lol-next-reveal"
+    },
+    {
+     "name": "IGN — что показали в тизере",
+     "url": "https://www.ign.com/articles/league-of-legends-new-dawn-unveiled-with-debut-trailer-riot-announces-major-overhaul-coming-in-2027"
+    },
+    {
+     "name": "Polygon — Worlds 2026 и New Dawn",
+     "url": "https://www.polygon.com/league-of-legends-with-new-dawn-reveal-worlds-2026"
+    },
+    {
+     "name": "Dot Esports — календарь LoL Esports 2027",
+     "url": "https://dotesports.com/league-of-legends/news/lol-esports-2027-roadmap"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-14-2100-meta-805-mln-gallereya.html",
    "url": "https://geekovski.ru/2026-11-14-2100-meta-805-mln-gallereya.html",
    "title": "Италия оштрафовала Meta на €805 млн за галерею",

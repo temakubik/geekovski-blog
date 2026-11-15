@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 11 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 14 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 14 материалов
-- [PC-игры](https://geekovski.ru/pc/): 23 материала
+- [PC-игры](https://geekovski.ru/pc/): 24 материала
 - [VR](https://geekovski.ru/vr/): 7 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 28 материалов
 - [Кино](https://geekovski.ru/kino/): 19 материалов
@@ -25,6 +25,7 @@
 
 ## Материалы
 
+- [BLG впервые взяла Worlds, Riot готовит New Dawn](https://geekovski.ru/2026-11-15-0800-blg-worlds-2026.html): Bilibili Gaming обыграла Gen.G 3:1 в финале Worlds 2026 в Бруклине и принесла Китаю первый Кубок призывателей с 2021 года — по дороге выбив все четыре корейские команды турнира. Между играми финала Riot показала League of Legends: New Dawn — крупнейшее обновление 17-летней игры, которое выйдет в 2027-м. (15.11.2026)
 - [Италия оштрафовала Meta на €805 млн за галерею](https://geekovski.ru/2026-11-14-2100-meta-805-mln-gallereya.html): Итальянский Garante оштрафовал Meta Platforms Ireland на €805 млн за то, что Facebook для Android читал фото, видео и метаданные из галерей итальянских пользователей по одному общему разрешению, а функция подсказок из галереи была включена по умолчанию. Это крупнейший штраф в истории итальянского регулятора. (14.11.2026)
 - [Иск к OpenAI и Anthropic: заморозить самые сильные ИИ](https://geekovski.ru/2026-11-14-1800-sud-zamorozit-ii-isk.html): 12 ноября четыре некоммерческие организации подали в суд Сан-Франциско на Anthropic, Google, Meta, OpenAI и ИИ-подразделение SpaceX. Они требуют запретить разработку систем сильнее нынешних, пока компании не докажут, что держат их под контролем, — и строят иск на признаниях, которые лаборатории сделали сами. (14.11.2026)
 - [Intel отбила 70% десктопа у AMD: разбор цифры](https://geekovski.ru/2026-11-14-1500-intel-70-desktopa.html): Mercury Research посчитала третий квартал 2026-го: Intel вернула 70,1% поставок настольных x86-процессоров, AMD упала до 29,9% — минус пять пунктов за три месяца. Но дело не в том, что чипы Intel вдруг стали лучше. (14.11.2026)
@@ -231,6 +232,7 @@
 - [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
 - [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
 - [Властелин колец: Кольца власти, сезон 3](https://geekovski.ru/titles/kolca-vlasti-3-sezon.html): 2026
+- [League of Legends](https://geekovski.ru/titles/league-of-legends.html): 2009
 - [Marvel's Blade](https://geekovski.ru/titles/marvels-blade.html): 2027
 - [MECCHA CHAMELEON](https://geekovski.ru/titles/meccha-chameleon.html): 2026
 - [Metaphor: ReFantazio](https://geekovski.ru/titles/metaphor-refantazio.html): 2024
