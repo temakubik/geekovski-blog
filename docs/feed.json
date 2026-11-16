@@ -8,6 +8,68 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-16-1800-oppo-reno17-8000-mach.html",
+   "url": "https://geekovski.ru/2026-11-16-1800-oppo-reno17-8000-mach.html",
+   "title": "Oppo Reno17: 8000 мАч и перевёрнутая линейка",
+   "summary": "OPPO показала в Китае Reno17 и Reno17 Pro: 8000 мАч в корпусе толщиной 8,28 мм, 80 Вт, до 1 ТБ памяти и цены от 3599 юаней. Впервые за несколько поколений компактной стала дорогая модель, а не базовая, и теперь это главный аргумент линейки.",
+   "date_published": "2026-11-16T18:00:00+03:00",
+   "date_modified": "2026-11-16T18:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/oppo-reno17-cat-1.jpg",
+   "_sources": [
+    {
+     "name": "OPPO — Reno17, характеристики",
+     "url": "https://www.oppo.com/cn/smartphones/series-reno/reno17/specs/"
+    },
+    {
+     "name": "OPPO — Reno17 Pro, характеристики",
+     "url": "https://www.oppo.com/cn/smartphones/series-reno/reno17-pro/specs/"
+    },
+    {
+     "name": "GSMArena — Reno17 и Reno17 Pro официально",
+     "url": "https://www.gsmarena.com/oppo_reno17_and_reno17_pro_are_now_official_and_theyre_quite_familiar-news-75492.php"
+    },
+    {
+     "name": "Gizmochina — запуск, цены и версия с котом",
+     "url": "https://www.gizmochina.com/2026/11/16/oppo-launches-reno-17-and-reno-17-pro-with-200mp-camera-and-rather-large-8000mah-battery/"
+    },
+    {
+     "name": "Counterpoint Research — средняя ёмкость и доля 6000+ мАч",
+     "url": "https://counterpointresearch.com/en/insights/Six-of-Top-10-6000mAh-Battery-Capacity-Smartphones-Featured-SiC-in-January-2026-as-Chinese-OEMs-Dominated"
+    },
+    {
+     "name": "PhoneArena — 15 000 мАч у Honor и 12 000 мАч у Vivo",
+     "url": "https://www.phonearena.com/news/vivo-honor-phones-with-unbelievable-battery-life_id184705"
+    },
+    {
+     "name": "Android Authority — тест кремний-углеродной батареи OPPO",
+     "url": "https://www.androidauthority.com/silicon-carbon-battery-test-3719519"
+    },
+    {
+     "name": "Moneycontrol — Samsung и Xiaomi подняли цены с 16 ноября",
+     "url": "https://www.moneycontrol.com/technology/party-s-over-samsung-xiaomi-raise-smartphone-prices-by-up-to-19-after-diwali-article-14080794.html"
+    },
+    {
+     "name": "ZOL — цены в юанях и старт продаж 20 ноября",
+     "url": "https://mobile.zol.com.cn/1274/12741882.html"
+    },
+    {
+     "name": "Memeburn — плотность кремний-углеродных ячеек OPPO",
+     "url": "https://memeburn.com/why-10000mah-phones-are-getting-thinner-in-2026"
+    },
+    {
+     "name": "tbreak — камеры Reno17 и Reno17 Pro до презентации",
+     "url": "https://tbreak.com/oppo-reno17-pro-200mp-camera-chipsets/"
+    },
+    {
+     "name": "PhoneArena — кремний-углерод доходит до Galaxy S27",
+     "url": "https://phonearena.com/news/samsung-galaxy-phones-finally-getting-silicon-carbon-batteries-with-larger-capacities_id178547"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-16-1500-project-helix-konsol-ili-pk.html",
    "url": "https://geekovski.ru/2026-11-16-1500-project-helix-konsol-ili-pk.html",
    "title": "Project Helix: консоль, которая играет PC-игры",
