@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-16-1200-qwen4-max-zakrytye-vesa.html",
+   "url": "https://geekovski.ru/2026-11-16-1200-qwen4-max-zakrytye-vesa.html",
+   "title": "Alibaba выпустила Qwen4-Max — и закрыла веса",
+   "summary": "Alibaba показала флагман Qwen4-Max: 2,4 трлн параметров, 71 млрд активных на токен, контекст в миллион токенов и цены на 25% ниже прошлой модели. Главное в релизе — не бенчмарки, а то, что самая скачиваемая в мире линейка открытых весов впервые закрыла флагман.",
+   "date_published": "2026-11-16T12:00:00+03:00",
+   "date_modified": "2026-11-16T12:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/qwen4-max-alibaba-hq.jpg",
+   "_sources": [
+    {
+     "name": "Qwen — блог релиза Qwen4-Max",
+     "url": "https://qwen.ai/blog?id=qwen4-max"
+    },
+    {
+     "name": "QwenCloud — карточка модели, цены и лимиты",
+     "url": "https://www.qwencloud.com/models/qwen4-max"
+    },
+    {
+     "name": "Artificial Analysis — независимый индекс и цена Qwen4 Max",
+     "url": "https://artificialanalysis.ai/models/qwen4-max"
+    },
+    {
+     "name": "Bloomberg (via The Star) — флагман Qwen4-Max и закрытые веса",
+     "url": "https://thestar.com.my/tech/tech-news/2026/11/16/alibaba-unveils-new-flagship-ai-model-in-riposte-to-us-rivals"
+    },
+    {
+     "name": "Polylog — разбор цифр, независимые оценки и цены",
+     "url": "https://polylog.news/ai/2026-11-16/alibaba-s-qwen4-max-cuts-active-parameters-to-71-billion-and"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-16-1000-gpd-win-mini-ultra.html",
    "url": "https://geekovski.ru/2026-11-16-1000-gpd-win-mini-ultra.html",
    "title": "GPD перевела Win Mini на Intel — и потяжелела",
