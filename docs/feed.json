@@ -8,6 +8,44 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-16-1000-gpd-win-mini-ultra.html",
+   "url": "https://geekovski.ru/2026-11-16-1000-gpd-win-mini-ultra.html",
+   "title": "GPD перевела Win Mini на Intel — и потяжелела",
+   "summary": "GPD 16 ноября раскрыла характеристики WIN Mini Ultra: процессор Intel Arc G3 Extreme, экран 8 дюймов на 120 Гц и батарея на 56 Вт·ч. Расплата за апгрейд — 845 граммов вместо 555: складной карманный ПК окончательно стал мини-ноутбуком.",
+   "date_published": "2026-11-16T10:00:00+03:00",
+   "date_modified": "2026-11-16T10:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/gpd-win-mini-ultra.jpg",
+   "_sources": [
+    {
+     "name": "ITHome — официальный анонс WIN Mini Ultra",
+     "url": "https://www.ithome.com/1/027/532.htm"
+    },
+    {
+     "name": "Ifeng — конфигурация и размеры",
+     "url": "https://feng.ifeng.com/c/8y5zLa8cY8L"
+    },
+    {
+     "name": "DROIX — полная таблица характеристик и замеры GPD",
+     "url": "https://droix.net/blogs/gpd-win-mini-ultra-announced/"
+    },
+    {
+     "name": "TechPowerUp — GPD WIN Max 3 за $1750",
+     "url": "https://www.techpowerup.com/351768/gpd-win-max-3-handhelds-usd-1-750-is-the-best-price-which-we-can-provide"
+    },
+    {
+     "name": "Notebookcheck — предварительный обзор Win Mini Ultra",
+     "url": "https://www.notebookcheck.net/New-GPD-Win-Mini-Ultra-previewed-before-release-with-VRR-display-and-Intel-Arc-B390-graphics.1448794.0.html"
+    },
+    {
+     "name": "Хабр — GPD Win Mini 2025 и его цены",
+     "url": "https://habr.com/ru/articles/873780/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-16-0800-eshop-podarit-igru-seme.html",
    "url": "https://geekovski.ru/2026-11-16-0800-eshop-podarit-igru-seme.html",
    "title": "Nintendo разрешила дарить игры в eShop — внутри семьи",
