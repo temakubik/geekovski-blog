@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-16-2100-ssha-oblachnaya-lazejka.html",
+   "url": "https://geekovski.ru/2026-11-16-2100-ssha-oblachnaya-lazejka.html",
+   "title": "США закрыли облачную лазейку для чипов",
+   "summary": "Минторг США 16 ноября выпустил правило, которое впервые ограничивает не поставки железа, а аренду вычислений: лицензия нужна на ускорители и серверы для любого дата-центра в мире, если он может снабжать компании из D:5 — Китай, Россию, Иран, КНДР и ещё 18 стран. Порог — 12 млн TPP, это примерно мощность 750 H100/H200.",
+   "date_published": "2026-11-16T21:00:00+03:00",
+   "date_modified": "2026-11-16T21:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/ssha-oblachnaya-lazejka-cover.jpg",
+   "_sources": [
+    {
+     "name": "BIS — пресс-релиз о правиле удалённого доступа",
+     "url": "https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology"
+    },
+    {
+     "name": "AP — США ограничивают удалённый доступ к чипам",
+     "url": "https://apnews.com/article/nvidia-export-controls-chips-china-remote-access-60f868d3bb430b85a8657b27d421096e"
+    },
+    {
+     "name": "TechCrunch — детали правила, порог 12 млн TPP и 90 дней",
+     "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/"
+    },
+    {
+     "name": "Politico — правило и 60 дней на комментарии",
+     "url": "https://www.politico.com/news/2026/11/16/commerce-closes-chinas-backdoor-to-nvidia-chips-after-white-house-steps-in-01167199"
+    },
+    {
+     "name": "Axios — кто написал правило и как это связано с Латником",
+     "url": "https://www.axios.com/2026/11/16/trump-admin-moves-to-close-china-ai-chip-loophole"
+    },
+    {
+     "name": "Washington Post — контекст скандала вокруг Megaspeed",
+     "url": "https://www.washingtonpost.com/technology/2026/11/16/trump-officials-issue-rule-restrict-sales-ai-chips-china/"
+    },
+    {
+     "name": "CNN — отставка Дженсена Хуанга и Колетт Кресс как и. о.",
+     "url": "https://edition.cnn.com/2026/11/12/tech/jensen-huang-nvidia-resigns"
+    },
+    {
+     "name": "CBS News — оценка в 240 тысяч чипов у Megaspeed",
+     "url": "https://cbsnews.com/news/nvidia-ceo-jensen-huang-resigns"
+    },
+    {
+     "name": "Hugging Face — карточка модели LongCat-2.5 и таблица бенчмарков",
+     "url": "https://huggingface.co/meituan-longcat/LongCat-2.5"
+    },
+    {
+     "name": "LongCat — технический блог о LongCat-2.5",
+     "url": "https://longcat.ai/blog/longcat-2.5/"
+    },
+    {
+     "name": "THE DECODER — разбор релиза LongCat-2.5",
+     "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-16-1800-oppo-reno17-8000-mach.html",
    "url": "https://geekovski.ru/2026-11-16-1800-oppo-reno17-8000-mach.html",
    "title": "Oppo Reno17: 8000 мАч и перевёрнутая линейка",
