@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-16-1500-project-helix-konsol-ili-pk.html",
+   "url": "https://geekovski.ru/2026-11-16-1500-project-helix-konsol-ili-pk.html",
+   "title": "Project Helix: консоль, которая играет PC-игры",
+   "summary": "В юбилейном журнале Xbox вице-президент по next-gen Джейсон Рональд объяснил, чем Helix отличается от ПК, и назвал нейрорендинг ответом на кризис комплектующих. Даты и цены по-прежнему нет.",
+   "date_published": "2026-11-16T15:00:00+03:00",
+   "date_modified": "2026-11-16T15:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-helix-25-let.jpg",
+   "_sources": [
+    {
+     "name": "Xbox Wire — журнал к 25-летию Xbox",
+     "url": "https://news.xbox.com/en-us/2026/11/15/xbox-25th-anniversary-the-magazine/"
+    },
+    {
+     "name": "VGC — «консоль, которая играет PC-игры»",
+     "url": "https://videogameschronicle.com/news/xbox-says-project-helix-is-a-console-that-can-play-pc-games-not-a-pc-that-can-play-console-games/"
+    },
+    {
+     "name": "VideoCardz — нейрорендинг и цена Helix",
+     "url": "https://videocardz.com/newz/microsoft-says-neural-rendering-could-help-keep-xbox-project-helix-affordable"
+    },
+    {
+     "name": "Wccftech — цитаты Рональда и контекст",
+     "url": "https://wccftech.com/xbox-project-helix-console-pc-games-neural-rendering/"
+    },
+    {
+     "name": "Vice — альфа-железо у разработчиков в 2027",
+     "url": "https://www.vice.com/en/article/xbox-project-helix-details"
+    },
+    {
+     "name": "Wccftech — отчёт Fortune про конец 2028 и $1200–1800",
+     "url": "https://wccftech.com/xbox-project-helix-holiday-2028-1200-1800-price-fortune-report/"
+    },
+    {
+     "name": "Microsoft — пресс-релиз о запуске Xbox 15.11.2001",
+     "url": "https://news.microsoft.com/2001/11/15/xbox-erupts-on-the-scene/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-16-1200-qwen4-max-zakrytye-vesa.html",
    "url": "https://geekovski.ru/2026-11-16-1200-qwen4-max-zakrytye-vesa.html",
    "title": "Alibaba выпустила Qwen4-Max — и закрыла веса",
