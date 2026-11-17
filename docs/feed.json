@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-17-1800-playstation-isk-2-mlrd.html",
+   "url": "https://geekovski.ru/2026-11-17-1800-playstation-isk-2-mlrd.html",
+   "title": "PlayStation отбилась от иска на £2 млрд",
+   "summary": "Лондонский трибунал по конкуренции 17 ноября отклонил коллективный иск к Sony почти на £2 млрд — 12,2 млн британских покупателей цифрового контента требовали компенсацию за завышенные цены в PlayStation Store. Иск развалился на определении рынка: истцы не доказали, что цифровые игры для PlayStation — отдельный рынок, а запасного варианта у них не было.",
+   "date_published": "2026-11-17T18:00:00+03:00",
+   "date_modified": "2026-11-17T18:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/ps-store-sud-2-mlrd-cover.jpg",
+   "_sources": [
+    {
+     "name": "Competition Appeal Tribunal — решение [2026] CAT 86",
+     "url": "https://www.catribunal.org.uk/judgments/15277722-alex-neill-class-representative-limited-v-sony-interactive-entertainment-3"
+    },
+    {
+     "name": "Competition Appeal Tribunal — карточка дела 1527/7/7/22",
+     "url": "https://www.catribunal.org.uk/cases/15277722-alex-neill-class-representative-limited"
+    },
+    {
+     "name": "Reuters (через Channel NewsAsia) — Sony выиграла дело",
+     "url": "https://www.channelnewsasia.com/business/sony-defeats-ps2-billion-uk-claim-over-playstation-store-pricing-6559261"
+    },
+    {
+     "name": "TheGameBusiness — разбор решения трибунала",
+     "url": "https://www.thegamebusiness.com/p/playstation-defeats-26-billion-uk"
+    },
+    {
+     "name": "LawNews — сумма иска и состав класса",
+     "url": "https://lawnews.co.uk/legal-news/tribunal-rejects-playstation-class-action-against-sony-finding-infringement-not-established"
+    },
+    {
+     "name": "The Guardian — старт дела в 2022-м",
+     "url": "https://www.theguardian.com/technology/2022/aug/22/sony-could-face-5bn-in-legal-claims-over-playstation-game-charges"
+    },
+    {
+     "name": "Milberg London — сертификация иска в 2023-м",
+     "url": "https://milberg.co.uk/consumers-win-the-first-battle-against-sony-playstation-as-5bn-competition-claim-gets-the-go-ahead-to-proceed-to-trial"
+    },
+    {
+     "name": "PlayStation Blog — конец производства дисков с января 2028 года",
+     "url": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-17-1500-ostansya-shyamalan-treiler.html",
    "url": "https://geekovski.ru/2026-11-17-1500-ostansya-shyamalan-treiler.html",
    "title": "«Останься»: Шьямалан скрестил призрака с «Дневником памяти»",
