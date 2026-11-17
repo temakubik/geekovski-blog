@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-17-2100-meta-120-mln-vr-igry.html",
+   "url": "https://geekovski.ru/2026-11-17-2100-meta-120-mln-vr-igry.html",
+   "title": "Meta зарезервировала $120 млн под VR-игры",
+   "summary": "К 1 октября Meta закрепила договорами больше $120 млн на сторонние VR-игры, которые сейчас в разработке, — цифру 17 ноября вытащил Road to VR из блога директора по играм Криса Пруэтта. Обнадёживающая сумма вышла в одной публикации с признанием, что магазин Quest впервые живёт не с продаж игр, а со встроенных покупок, и что на очках VR Glasses игры вообще будут второстепенными.",
+   "date_published": "2026-11-17T21:00:00+03:00",
+   "date_modified": "2026-11-17T21:00:00+03:00",
+   "tags": [
+    "VR"
+   ],
+   "image": "https://geekovski.ru/assets/img/meta-120-mln-vr-igry-cover.jpg",
+   "_sources": [
+    {
+     "name": "Road to VR — $120 млн и ожидания от VR Glasses",
+     "url": "https://roadtovr.com/meta-commits-120m-vr-glasses-games/"
+    },
+    {
+     "name": "Meta for Developers — пост Криса Пруэтта о сезоне и планах",
+     "url": "https://developers.meta.com/vr/blog/what-to-expect-meta-vr-ecosystem-holiday-season-2027/"
+    },
+    {
+     "name": "VR.org — встроенные покупки обошли платные приложения",
+     "url": "https://vr.org/articles/meta-in-app-purchases-out-earn-premium-quest-sales-first-time-2026"
+    },
+    {
+     "name": "UploadVR — что это значит для платных игр",
+     "url": "https://www.uploadvr.com/meta-quest-in-app-purchases-now-bring-more-revenue-than-paid-apps/"
+    },
+    {
+     "name": "MIXED — разбор групп магазина и цифр",
+     "url": "https://mixed-news.com/en/meta-quest-in-app-purchases-overtake-paid-apps-2026/"
+    },
+    {
+     "name": "Road to VR — закрытие трёх VR-студий Meta",
+     "url": "https://roadtovr.com/meta-armature-twisted-pixel-sanzaru-vr-studio-closures/"
+    },
+    {
+     "name": "heise online — отмена VR-игр по Marvel и Harry Potter",
+     "url": "https://www.heise.de/en/news/Meta-turns-its-back-on-VR-games-Batman-sequel-and-Harry-Potter-VR-cancelled-11143834.html"
+    },
+    {
+     "name": "UploadVR — конкурс Meta VR Start на $1 млн",
+     "url": "https://www.uploadvr.com/meta-launches-1-million-competition-for-hands-first-apps-ahead-of-vr-glasses/"
+    },
+    {
+     "name": "Devpost — условия конкурса и дедлайн 18 ноября",
+     "url": "https://start-developer-competition-26.devpost.com/"
+    },
+    {
+     "name": "UploadVR — завершение поддержки Quest 2 и Quest Pro",
+     "url": "https://www.uploadvr.com/meta-is-winding-down-quest-2-quest-pro-support-next-year/"
+    },
+    {
+     "name": "VR.org — обзор шлемов и цены Steam Frame",
+     "url": "https://vr.org/upcoming-vr-headsets-2026"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-17-1800-playstation-isk-2-mlrd.html",
    "url": "https://geekovski.ru/2026-11-17-1800-playstation-isk-2-mlrd.html",
    "title": "PlayStation отбилась от иска на £2 млрд",
