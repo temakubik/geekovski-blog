@@ -1952,7 +1952,7 @@ def title_page(slug, theme):
         ment_block)
     content = content.replace('<main class="wrap"><article class="tp">',
                               '<main class="wrap">' + back_link("К календарю", "/calendar/") + '<article class="tp">', 1)
-    return page("%s — %s | %s" % (t["title"], "игра" if t["kind"] == "game" else "фильм",
+    return page("%s — %s | %s" % (t["title"], {"game": "игра", "series": "сериал"}.get(t["kind"], "фильм"),
                                   SITE["title"]),
                 plain(t["body"], 180), content, theme,
                 canonical=SITE["url"] + "/titles/%s.html" % slug,
