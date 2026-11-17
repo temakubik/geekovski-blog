@@ -8,6 +8,60 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-17-1500-ostansya-shyamalan-treiler.html",
+   "url": "https://geekovski.ru/2026-11-17-1500-ostansya-shyamalan-treiler.html",
+   "title": "«Останься»: Шьямалан скрестил призрака с «Дневником памяти»",
+   "summary": "Warner Bros. выпустила полный трейлер «Останься» — мистической драмы, которую М. Найт Шьямалан придумал вместе с Николасом Спарксом, автором «Дневника памяти». Главные роли у Джейка Джилленхола и Фиби Дайневор, премьера в США 5 февраля 2027 года, а на фестивале Beyond Fest фильм уже показали внезапно — и первые реакции называют его лучшим у Шьямалана за годы.",
+   "date_published": "2026-11-17T15:00:00+03:00",
+   "date_modified": "2026-11-17T15:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/ostansya-race-point.jpg",
+   "_sources": [
+    {
+     "name": "Warner Bros. Pictures — официальный трейлер Remain",
+     "url": "https://www.youtube.com/watch?v=Fso81Ypg9T4"
+    },
+    {
+     "name": "Bloody Disgusting — трейлер и детали проекта",
+     "url": "https://bloody-disgusting.com/movie/3975896/remain-final-trailer-m-night-shyamalans-supernatural-romance-gets-terrifying-at-night/"
+    },
+    {
+     "name": "The Hollywood Reporter — первые реакции после Beyond Fest",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/m-night-shyamalan-remain-first-reactions-jake-gyllenhaal-1236716931/"
+    },
+    {
+     "name": "Variety — реакции на внезапную премьеру",
+     "url": "https://variety.com/2026/film/news/m-night-shyamalan-remain-reactions-jake-gyllenhaal-incredible-1236893390/"
+    },
+    {
+     "name": "The Hollywood Reporter — Шьямалан о лучших тестовых показах в карьере",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/m-night-shyamalan-remain-highest-testing-movie-1236594851/"
+    },
+    {
+     "name": "Кадр — полный трейлер «Останься»",
+     "url": "https://www.thekadr.com/ru/news/ostansya-polnyi-treiler/"
+    },
+    {
+     "name": "Канонбу — трейлер и сюжет",
+     "url": "https://kanobu.ru/news/m-najt-shyamalan-predstavil-novyij-trejler-misticheskogo-trillera-ostansya-s-dzhejkom-dzhillenholom-516404/"
+    },
+    {
+     "name": "Wikipedia — Remain (film)",
+     "url": "https://en.wikipedia.org/wiki/Remain_(film)"
+    },
+    {
+     "name": "Wikipedia — фильмография М. Найта Шьямалана",
+     "url": "https://en.wikipedia.org/wiki/M._Night_Shyamalan_filmography"
+    },
+    {
+     "name": "Deadline — дата релиза Remain",
+     "url": "https://deadline.com/2026/02/m-night-shyamalan-remain-release-date-2-1236711274/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-17-1200-doom-slaughter-mode.html",
    "url": "https://geekovski.ru/2026-11-17-1200-doom-slaughter-mode.html",
    "title": "DOOM: The Dark Ages получила режим бесконечных волн",

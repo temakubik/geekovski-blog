@@ -17,7 +17,7 @@
 - [PC-игры](https://geekovski.ru/pc/): 27 материалов
 - [VR](https://geekovski.ru/vr/): 7 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 30 материалов
-- [Кино](https://geekovski.ru/kino/): 20 материалов
+- [Кино](https://geekovski.ru/kino/): 21 материал
 - [Сериалы](https://geekovski.ru/serialy/): 9 материалов
 - [AI](https://geekovski.ru/ai/): 31 материал
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
@@ -25,6 +25,7 @@
 
 ## Материалы
 
+- [«Останься»: Шьямалан скрестил призрака с «Дневником памяти»](https://geekovski.ru/2026-11-17-1500-ostansya-shyamalan-treiler.html): Warner Bros. выпустила полный трейлер «Останься» — мистической драмы, которую М. Найт Шьямалан придумал вместе с Николасом Спарксом, автором «Дневника памяти». Главные роли у Джейка Джилленхола и Фиби Дайневор, премьера в США 5 февраля 2027 года, а на фестивале Beyond Fest фильм уже показали внезапно — и первые реакции называют его лучшим у Шьямалана за годы. (17.11.2026)
 - [DOOM: The Dark Ages получила режим бесконечных волн](https://geekovski.ru/2026-11-17-1200-doom-slaughter-mode.html): 16 ноября id Software выпустила Update 5 для DOOM: The Dark Ages — в дополнении Revelations появился режим «Бойня» с бесконечными раундами, случайными аренами и боссами. Сам режим бесплатный, но только для владельцев аддона за $19.99, а вместе с ним в игру приехали FSR 4 на ПК и перебалансировка половины арсенала. (17.11.2026)
 - [Задний экран Xiaomi 18 Pro впервые выходит из Китая](https://geekovski.ru/2026-11-17-1000-xiaomi-18-pro-zadnij-ekran.html): Xiaomi показывает 18 Pro и 18 Pro Max в Париже 17 ноября — впервые второй экран на задней панели поедет на глобальный рынок, вместе с Google Maps, Spotify и YouTube Music. Главный вопрос к Европе не про экран, а про батареи: в реестре EPREL у глобальных версий на 1000–1450 мАч меньше, чем у китайских. (17.11.2026)
 - [Второй сезон «Задачи трёх тел» стартует 14 января](https://geekovski.ru/2026-11-17-0800-zadacha-treh-tel-2-sezon.html): Netflix назвал дату возвращения «Задачи трёх тел» — 14 января, спустя два года и десять месяцев после первого сезона. Тизер выходит сегодня, сезонов по-прежнему три, а снимали второй и третий подряд в Будапеште, чтобы сэкономить на налогах и не растерять актёров. (17.11.2026)
@@ -261,6 +262,7 @@
 - [Metaphor: ReFantazio](https://geekovski.ru/titles/metaphor-refantazio.html): 2024
 - [NieR: Automata](https://geekovski.ru/titles/nier-automata.html): 2017
 - [The Odyssey / «Одиссея»](https://geekovski.ru/titles/odysseya-nolan.html): 2026
+- [Останься](https://geekovski.ru/titles/ostansya.html): 2027
 - [Rainbow Six Siege](https://geekovski.ru/titles/rainbow-six-siege.html): 2015
 - [Resident Evil Requiem](https://geekovski.ru/titles/resident-evil-requiem.html): 2026
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
