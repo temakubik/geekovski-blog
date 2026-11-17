@@ -373,6 +373,7 @@ PAGE = """<!DOCTYPE html>
 <meta name="mobile-web-app-capable" content="yes">
 {verify}
 <link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — дайджесты" href="/feed.xml">
 <link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="stylesheet" href="/assets/fonts.css">
@@ -1173,15 +1174,118 @@ def author_page(a, posts, theme):
                                              (a["name"], "/avtory/%s.html" % a["slug"])])))
 
 
-def rss(posts, title=None, path=""):
-    items = "".join("""<item><title>{t}</title><link>{u}/{p}{s}.html</link>
-<guid>{u}/{p}{s}.html</guid><pubDate>{d}</pubDate><description>{desc}</description></item>""".format(
-        t=html.escape(p["title"]), u=SITE["url"], p=path, s=p["slug"], d=p["date"].strftime("%a, %d %b %Y %H:%M:%S +0300"),
-        desc=html.escape(p["summary"])) for p in posts[:40])
+RSS_NS = ('xmlns:atom="http://www.w3.org/2005/Atom" '
+          'xmlns:content="http://purl.org/rss/1.0/modules/content/" '
+          'xmlns:dc="http://purl.org/dc/elements/1.1/" '
+          'xmlns:media="http://search.yahoo.com/mrss/"')
+
+FEED_LIMIT = 40          # сколько материалов в ленте; в JSON-фиде — все
+# Полный текст в <content:encoded>. True — подписчик читает статью в читалке,
+# False — в ленте остаётся только summary со ссылкой (и трафик идёт на сайт).
+FEED_FULL_TEXT = True
+_MIME = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png",
+         ".webp": "image/webp", ".gif": "image/gif"}
+_DAYS = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+_MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def rfc822(dt):
+    """Дата в формате RFC 822 по-английски.
+
+    strftime("%a, %d %b %Y") печатает день и месяц на языке локали машины:
+    на русской локали в ленту уехало бы «Вт, 17 ноя 2026», и читалки
+    показали бы записи без даты.
+    """
+    return "%s, %02d %s %04d %02d:%02d:%02d +0300" % (
+        _DAYS[dt.weekday()], dt.day, _MONTHS[dt.month - 1], dt.year,
+        dt.hour, dt.minute, dt.second)
+
+
+def _feed_abs(fragment):
+    """«/assets/…» → абсолютный URL: читалка грузит картинку со своего домена,
+    и относительный путь там уходит в 404."""
+    return re.sub(r'\b(src|href)="/(?!/)', r'\1="%s/' % SITE["url"], fragment)
+
+
+def _feed_cover(p):
+    """<enclosure> и <media:content> обложки.
+
+    Без них лента выглядит списком строк: превью в Telegram-ботах и агрегаторах
+    (в том числе Дзен-РСС) строится из enclosure, а не из ссылки на статью.
+    """
+    if not p["cover"]:
+        return ""
+    path = ROOT / "static" / p["cover"].replace("/assets/", "", 1)
+    length = path.stat().st_size if path.exists() else 0
+    mime = _MIME.get(path.suffix.lower(), "image/jpeg")
+    url = html.escape(SITE["url"] + p["cover"], quote=True)
+    return ('<enclosure url="%s" length="%d" type="%s"/>'
+            '<media:content url="%s" medium="image" type="%s"/>' % (url, length, mime, url, mime))
+
+
+def _feed_html(p):
+    """Полный текст материала для <content:encoded>.
+
+    Подписчик читает статью в читалке и не возвращается на сайт ради одного
+    абзаца. Источники остаются в конце — то же правило, что на странице.
+    """
+    if not FEED_FULL_TEXT:
+        return ""
+    parts = []
+    if p["cover"]:
+        parts.append('<figure><img src="%s" alt="%s"></figure>'
+                     % (html.escape(SITE["url"] + p["cover"], quote=True),
+                        html.escape(p["title"], quote=True)))
+    if p.get("tldr"):
+        parts.append("<h2>Коротко</h2><ul>%s</ul>"
+                     % "".join("<li>%s</li>" % md_inline(x) for x in p["tldr"]))
+    body = p["body"].strip()
+    if body:
+        parts.append(_feed_abs(md(link_articles_to_titles(body))))
+    if p["sources"]:
+        parts.append("<h2>Источники</h2><ol>%s</ol>" % "".join(
+            '<li><a href="%s">%s</a></li>' % (html.escape(s["url"], quote=True), html.escape(s["name"]))
+            if s["url"] else "<li>%s</li>" % html.escape(s["name"]) for s in p["sources"]))
+    return "\n".join(x for x in parts if x)
+
+
+def rss(posts, title=None, path="", self_name="rss.xml"):
+    """RSS 2.0: канал сайта (rss.xml) и канал дайджестов (feed.xml).
+
+    self-ссылка, lastBuildDate, рубрика, автор и полный текст — минимум, по
+    которому лента считается живой и её берут агрегаторы.
+    """
+    items = []
+    for p in posts[:FEED_LIMIT]:
+        url = "%s/%s%s.html" % (SITE["url"], path, p["slug"])
+        author = AUTHOR_BY_CAT.get(p["category"])
+        byline = (author["full_name"] or author["name"]) if author else SITE["author"]
+        chunk = ['<title>%s</title>' % html.escape(p["title"]),
+                 "<link>%s</link>" % url,
+                 '<guid isPermaLink="true">%s</guid>' % url,
+                 "<pubDate>%s</pubDate>" % rfc822(p["date"]),
+                 "<dc:creator>%s</dc:creator>" % html.escape(byline),
+                 "<category>%s</category>" % html.escape(CAT_NAME.get(p["category"]) or p["category"]),
+                 "<description>%s</description>" % html.escape(p["summary"] or plain(p["body"], 300)),
+                 _feed_cover(p)]
+        full = _feed_html(p)
+        if full:
+            chunk.append("<content:encoded>%s</content:encoded>" % html.escape(full))
+        items.append("<item>%s</item>" % "".join(chunk))
+    newest = max([p["date"] for p in posts] or [datetime.now()])
     return """<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>{title}</title><link>{url}</link>
-<description>{tag}</description><language>ru</language>{items}</channel></rss>""".format(
-        title=title or SITE["title"], url=SITE["url"], tag=SITE["tagline"], items=items)
+<rss version="2.0" {ns}><channel><title>{title}</title><link>{url}/</link>
+<description>{tag}</description><language>ru</language>
+<copyright>© {title}</copyright>
+<lastBuildDate>{built}</lastBuildDate>
+<generator>GEEKOVSKI build.py</generator>
+<atom:link href="{url}/{self_name}" rel="self" type="application/rss+xml"/>
+<image><url>{url}/assets/img/icon-512.png</url><title>{title}</title><link>{url}/</link></image>
+{items}</channel></rss>""".format(
+        ns=RSS_NS, title=html.escape(title or SITE["title"]), url=SITE["url"],
+        tag=html.escape(SITE["tagline"]), built=rfc822(newest), self_name=self_name,
+        items="".join(items))
 
 
 def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None):
@@ -1548,7 +1652,8 @@ def build(theme, out_dir, content_dir=None):
     (out / "robots.txt").write_text(robots_txt(), encoding="utf-8")
     (out / "llms.txt").write_text(llms_txt(posts, digests, TITLES), encoding="utf-8")
     (out / "llms-full.txt").write_text(llms_full_txt(posts), encoding="utf-8")
-    (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests"), encoding="utf-8")
+    (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests",
+                                     self_name="feed.xml"), encoding="utf-8")
     (out / "sitemap.xml").write_text(sitemap(posts, digests, TITLES, with_calendar=bool(cal_entries),
                                             authors=AUTHORS),
                                      encoding="utf-8")
