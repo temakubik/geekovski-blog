@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 12 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 15 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 15 материалов
-- [PC-игры](https://geekovski.ru/pc/): 26 материалов
+- [PC-игры](https://geekovski.ru/pc/): 27 материалов
 - [VR](https://geekovski.ru/vr/): 7 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 30 материалов
 - [Кино](https://geekovski.ru/kino/): 20 материалов
@@ -25,6 +25,7 @@
 
 ## Материалы
 
+- [DOOM: The Dark Ages получила режим бесконечных волн](https://geekovski.ru/2026-11-17-1200-doom-slaughter-mode.html): 16 ноября id Software выпустила Update 5 для DOOM: The Dark Ages — в дополнении Revelations появился режим «Бойня» с бесконечными раундами, случайными аренами и боссами. Сам режим бесплатный, но только для владельцев аддона за $19.99, а вместе с ним в игру приехали FSR 4 на ПК и перебалансировка половины арсенала. (17.11.2026)
 - [Задний экран Xiaomi 18 Pro впервые выходит из Китая](https://geekovski.ru/2026-11-17-1000-xiaomi-18-pro-zadnij-ekran.html): Xiaomi показывает 18 Pro и 18 Pro Max в Париже 17 ноября — впервые второй экран на задней панели поедет на глобальный рынок, вместе с Google Maps, Spotify и YouTube Music. Главный вопрос к Европе не про экран, а про батареи: в реестре EPREL у глобальных версий на 1000–1450 мАч меньше, чем у китайских. (17.11.2026)
 - [Второй сезон «Задачи трёх тел» стартует 14 января](https://geekovski.ru/2026-11-17-0800-zadacha-treh-tel-2-sezon.html): Netflix назвал дату возвращения «Задачи трёх тел» — 14 января, спустя два года и десять месяцев после первого сезона. Тизер выходит сегодня, сезонов по-прежнему три, а снимали второй и третий подряд в Будапеште, чтобы сэкономить на налогах и не растерять актёров. (17.11.2026)
 - [США закрыли облачную лазейку для чипов](https://geekovski.ru/2026-11-16-2100-ssha-oblachnaya-lazejka.html): Минторг США 16 ноября выпустил правило, которое впервые ограничивает не поставки железа, а аренду вычислений: лицензия нужна на ускорители и серверы для любого дата-центра в мире, если он может снабжать компании из D:5 — Китай, Россию, Иран, КНДР и ещё 18 стран. Порог — 12 млн TPP, это примерно мощность 750 H100/H200. (16.11.2026)
@@ -242,6 +243,7 @@
 - [CRYMELIGHT](https://geekovski.ru/titles/crymelight.html): 2026
 - [Danganronpa 2×2](https://geekovski.ru/titles/danganronpa-2x2.html): 2027
 - [Death Stranding 2: On the Beach](https://geekovski.ru/titles/death-stranding-2.html): 2025
+- [DOOM: The Dark Ages](https://geekovski.ru/titles/doom-the-dark-ages.html): 2025
 - [John Wick: анимационный приквел](https://geekovski.ru/titles/dzhon-uik-animaciya.html)
 - [Эбенезер (Ebenezer)](https://geekovski.ru/titles/ebenezer.html): 2026
 - [Fragmentary Order](https://geekovski.ru/titles/fragmentary-order.html): 2026

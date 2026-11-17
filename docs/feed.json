@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-17-1200-doom-slaughter-mode.html",
+   "url": "https://geekovski.ru/2026-11-17-1200-doom-slaughter-mode.html",
+   "title": "DOOM: The Dark Ages получила режим бесконечных волн",
+   "summary": "16 ноября id Software выпустила Update 5 для DOOM: The Dark Ages — в дополнении Revelations появился режим «Бойня» с бесконечными раундами, случайными аренами и боссами. Сам режим бесплатный, но только для владельцев аддона за $19.99, а вместе с ним в игру приехали FSR 4 на ПК и перебалансировка половины арсенала.",
+   "date_published": "2026-11-17T12:00:00+03:00",
+   "date_modified": "2026-11-17T12:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/doom-slaughter-mode-cover.jpg",
+   "_sources": [
+    {
+     "name": "Bethesda Slayers Club — Revelations Slaughter Mode Update 5 Release Notes",
+     "url": "https://slayersclub.bethesda.net/en-US/news/doom-the-dark-ages-revelations-slaughter-mode-update-5-release-notes"
+    },
+    {
+     "name": "DTF — дополнение Revelations получило режим «Бойня»",
+     "url": "https://dtf.ru/games/5416278-rezhim-bojnya-v-dopolnenii-revelations-dlya-doom-the-dark-ages"
+    },
+    {
+     "name": "VideoGamer — Slaughter Mode lands today with endless waves and a risky gamble",
+     "url": "https://www.videogamer.com/news/doom-the-dark-ages-slaughter-mode-revelations-update/"
+    },
+    {
+     "name": "GamingOnLinux — DOOM: The Dark Ages gets a new Slaughter Mode along with AMD FSR 4",
+     "url": "https://www.gamingonlinux.com/2026/11/doom-the-dark-ages-gets-a-new-slaughter-mode-along-with-amd-fsr-4/"
+    },
+    {
+     "name": "Steam — DOOM: The Dark Ages",
+     "url": "https://store.steampowered.com/app/3017860/DOOM_The_Dark_Ages"
+    },
+    {
+     "name": "Steam — Revelations",
+     "url": "https://store.steampowered.com/app/3469450/"
+    },
+    {
+     "name": "Bethesda — Update 6.66 и Horde Mode в DOOM Eternal",
+     "url": "https://bethesda.net/en-US/news/doom-eternal-update-666-out-now"
+    },
+    {
+     "name": "GamesRadar — все победители Golden Joystick Awards 2026",
+     "url": "https://www.gamesradar.com/games/all-the-golden-joystick-awards-2026-winners-revealed"
+    },
+    {
+     "name": "TheGamer — победители Golden Joystick 2026 с долями голосов",
+     "url": "https://thegamer.com/golden-joystick-awards-2026-all-winners"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-17-1000-xiaomi-18-pro-zadnij-ekran.html",
    "url": "https://geekovski.ru/2026-11-17-1000-xiaomi-18-pro-zadnij-ekran.html",
    "title": "Задний экран Xiaomi 18 Pro впервые выходит из Китая",
