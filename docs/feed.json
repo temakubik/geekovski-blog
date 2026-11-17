@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-17-1000-xiaomi-18-pro-zadnij-ekran.html",
+   "url": "https://geekovski.ru/2026-11-17-1000-xiaomi-18-pro-zadnij-ekran.html",
+   "title": "Задний экран Xiaomi 18 Pro впервые выходит из Китая",
+   "summary": "Xiaomi показывает 18 Pro и 18 Pro Max в Париже 17 ноября — впервые второй экран на задней панели поедет на глобальный рынок, вместе с Google Maps, Spotify и YouTube Music. Главный вопрос к Европе не про экран, а про батареи: в реестре EPREL у глобальных версий на 1000–1450 мАч меньше, чем у китайских.",
+   "date_published": "2026-11-17T10:00:00+03:00",
+   "date_modified": "2026-11-17T10:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/xiaomi-18-pro-zadnij-ekran-cover.jpg",
+   "_sources": [
+    {
+     "name": "Xiaomi Global — страница запуска 17.11.2026",
+     "url": "https://www.mi.com/global/launch/xiaomi-launch-november-2026/"
+    },
+    {
+     "name": "GSMArena — 18 Pro и 18 Pro Max представлены в Китае",
+     "url": "https://www.gsmarena.com/xiaomi_18_pro_and_18_pro_max_arrive_with_latest_snapdragon_chips_privacy_displays_and_more_useful_re-news-74733.php"
+    },
+    {
+     "name": "GSMArena — дата и место глобального запуска",
+     "url": "https://www.gsmarena.com/its_official_the_xiaomi_18_pro_and_18_pro_max_are_launching_globally_next_week-news-75406.php"
+    },
+    {
+     "name": "GSMArena — утечка европейских цен и ёмкостей",
+     "url": "https://www.gsmarena.com/xiaomi_18_pro_and_xiaomi_18_pro_max_european_prices_and_battery_capacities_leak-news-75114.php"
+    },
+    {
+     "name": "tuttoandroid — приложения для заднего экрана и мини-приложения GenAI",
+     "url": "https://www.tuttoandroid.net/news/2026/11/16/xiaomi-18-pro-18-pro-max-lancio-globale-display-posteriore-1183058/"
+    },
+    {
+     "name": "PhoneArena — характеристики и ёмкости для ЕС",
+     "url": "https://www.phonearena.com/news/xiaomi-18-pro-18-pro-max-official-specs-features-prices_id183565"
+    },
+    {
+     "name": "Android Authority — что нового в линейке",
+     "url": "https://www.androidauthority.com/xiaomi-18-pro-max-launch-3714485"
+    },
+    {
+     "name": "Engadget — Mi 11 Ultra с задним экраном 1,1 дюйма",
+     "url": "https://www.engadget.com/xiaomi-mi-11-ultra-price-launch-date-134516642.html"
+    },
+    {
+     "name": "GSMArena — обзор Mi 11 Ultra",
+     "url": "https://m.gsmarena.com/xiaomi_mi_11_ultra-review-2259p5.php"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-17-0800-zadacha-treh-tel-2-sezon.html",
    "url": "https://geekovski.ru/2026-11-17-0800-zadacha-treh-tel-2-sezon.html",
    "title": "Второй сезон «Задачи трёх тел» стартует 14 января",
