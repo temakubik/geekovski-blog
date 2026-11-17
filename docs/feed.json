@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-17-0800-zadacha-treh-tel-2-sezon.html",
+   "url": "https://geekovski.ru/2026-11-17-0800-zadacha-treh-tel-2-sezon.html",
+   "title": "Второй сезон «Задачи трёх тел» стартует 14 января",
+   "summary": "Netflix назвал дату возвращения «Задачи трёх тел» — 14 января, спустя два года и десять месяцев после первого сезона. Тизер выходит сегодня, сезонов по-прежнему три, а снимали второй и третий подряд в Будапеште, чтобы сэкономить на налогах и не растерять актёров.",
+   "date_published": "2026-11-17T08:00:00+03:00",
+   "date_modified": "2026-11-17T08:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/zadacha-treh-tel-2-sezon.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — «3 Body Problem» Sets Season 2 Release Date At Netflix",
+     "url": "https://deadline.com/2026/11/3-body-problem-season-2-release-date-netflix-1237225311/"
+    },
+    {
+     "name": "The Hollywood Reporter — Netflix's «3 Body Problem» Gets Season 2 Premiere Date, Trailer Coming Tomorrow",
+     "url": "https://www.hollywoodreporter.com/tv/tv-news/3-body-problem-season-2-date-when-netflix-1236755059/"
+    },
+    {
+     "name": "Netflix Tudum — 3 Body Problem Begins Production on Season 2",
+     "url": "https://www.netflix.com/tudum/articles/3-body-problem-renewed"
+    },
+    {
+     "name": "What's on Netflix — Season 2 Confirmed to Have Reduced Episode Count",
+     "url": "https://www.whats-on-netflix.com/news/3-body-problem-season-2-confirmed-to-have-reduced-episode-count/"
+    },
+    {
+     "name": "Wikipedia — 3 Body Problem (TV series)",
+     "url": "https://en.wikipedia.org/wiki/3_Body_Problem_(TV_series)"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-16-2100-ssha-oblachnaya-lazejka.html",
    "url": "https://geekovski.ru/2026-11-16-2100-ssha-oblachnaya-lazejka.html",
    "title": "США закрыли облачную лазейку для чипов",
