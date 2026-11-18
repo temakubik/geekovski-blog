@@ -8,6 +8,110 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-18-infobar-zero.html",
+   "url": "https://geekovski.ru/2026-11-18-infobar-zero.html",
+   "title": "Infobar Zero: KDDI выпустила телефон без браузера и соцсетей за 32 780 иен",
+   "summary": "Японский оператор KDDI показал Infobar Zero — кнопочный телефон, который сознательно не умеет выходить в интернет и не поддерживает соцсети. Внутри 4G для звонков и SMS, камера на 2 Мп с «ретро»-обработкой, 1 ГБ памяти и разъём для проводных наушников. Цена — 32 780 иен, продажи с 25 декабря.",
+   "date_published": "2026-11-18T12:10:00+03:00",
+   "date_modified": "2026-11-18T12:10:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/infobar-zero.jpg",
+   "_sources": [
+    {
+     "name": "KDDI Newsroom — пресс-релиз",
+     "url": "https://newsroom.kddi.com/news/detail/kddi_nr-1245_4832.html"
+    },
+    {
+     "name": "ITmedia Mobile — характеристики и цена",
+     "url": "https://www.itmedia.co.jp/mobile/articles/2611/18/news058.html"
+    },
+    {
+     "name": "AV Watch — обзор анонса",
+     "url": "https://av.watch.impress.co.jp/docs/news/2157375.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-18-feige-secret-wars.html",
+   "url": "https://geekovski.ru/2026-11-18-feige-secret-wars.html",
+   "title": "Файги о «Секретных войнах»: финал саги будет «совсем другим жанром», чем «Судный день»",
+   "summary": "Кевин Файги в интервью Empire заявил, что «Мстители: Секретные войны» — «совсем другой жанр истории» по сравнению с «Судным днём». Братья Руссо обещают «по-настоящему уникальный мир», но ни жанр, ни сюжет не названы. «Судный день» выйдет 18 декабря 2026-го, «Секретные войны» — 17 декабря 2027-го.",
+   "date_published": "2026-11-18T11:40:00+03:00",
+   "date_modified": "2026-11-18T11:40:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/kevin-feige.jpg",
+   "_sources": [
+    {
+     "name": "tbreak — цитаты Файги и Руссо",
+     "url": "https://tbreak.com/avengers-secret-wars-different-genre-feige/"
+    },
+    {
+     "name": "The Playlist — разбор интервью Empire",
+     "url": "https://theplaylist.net/kevin-feige-joe-russo-avengers-secret-wars-20261116/"
+    },
+    {
+     "name": "Gizmodo — ранний тизер темы",
+     "url": "https://gizmodo.com/kevin-feige-drops-a-very-early-avengers-secret-wars-tease-2000840"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-18-3bp-season2.html",
+   "url": "https://geekovski.ru/2026-11-18-3bp-season2.html",
+   "title": "«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь",
+   "summary": "Netflix выпустил первый тизер второго сезона «Задачи трёх тел» и объявил дату — 14 января. В ролике Сан-Ти обращаются к человечеству с предложением мира, а шоураннеры говорят, что сезон будет не про тайну, а про то, как люди привыкают жить под угрозой.",
+   "date_published": "2026-11-18T11:10:00+03:00",
+   "date_modified": "2026-11-18T11:10:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/3bp-season2.jpg",
+   "_sources": [
+    {
+     "name": "Netflix Tudum — тизер и дата",
+     "url": "https://www.netflix.com/tudum/articles/3-body-problem-season-2-teaser"
+    },
+    {
+     "name": "Deadline — тизер и первые фото",
+     "url": "https://deadline.com/2026/11/3-body-problem-season-2-trailer-photos-netflix-123722652"
+    },
+    {
+     "name": "What's on Netflix — разбор тизера",
+     "url": "https://www.whats-on-netflix.com/news/3-body-problem-season-2-teaser-trailer-first-lo"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-18-apple-n50-ochki.html",
+   "url": "https://geekovski.ru/2026-11-18-apple-n50-ochki.html",
+   "title": "Apple N50: первые очки Apple покажут в июне 2027 — без экрана, но с Siri и камерами",
+   "summary": "По данным Bloomberg, Apple представит первые умные очки на WWDC в июне 2027 года и начнёт продажи до конца года. Внутреннее имя — N50: прототипы тоньше Ray-Ban Meta, камеры утоплены в оправу, дисплея нет — интерфейс строят вокруг Siri и приложений iPhone.",
+   "date_published": "2026-11-18T10:40:00+03:00",
+   "date_modified": "2026-11-18T10:40:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/apple-park.jpg",
+   "_sources": [
+    {
+     "name": "MacRumors — детали из отчёта Гурмана",
+     "url": "https://macrumors.com/2026/11/15/apple-smart-glasses-hinge-on-siri"
+    },
+    {
+     "name": "Bloomberg — Power On, 15 ноября",
+     "url": "https://www.bloomberg.com/news/newsletters/2026-11-15/apple-siri-ai-app-integrations-power-smart-glasses-iphone-duo-2-face-id-plan"
+    },
+    {
+     "name": "Tom's Guide — чем отличаются от Vision Pro",
+     "url": "https://tomsguide.com/computing/smart-glasses/apples-first-smart-glasses-are-finally"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html",
    "url": "https://geekovski.ru/2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html",
    "title": "OpenAI выпустила Astra, модели спорят ценой",
