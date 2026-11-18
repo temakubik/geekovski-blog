@@ -2422,6 +2422,111 @@ def render_digest(d, theme, next_d=None, prev_d=None):
                                              (head_title, "/digests/%s.html" % d["slug"])])))
 
 
+def _digest_calendar(digests):
+    """Календарь выпусков: сетка месяца, клик по дате — выпуски этого дня.
+
+    Список остаётся основным видом (он же индексируется), календарь — второй вид
+    поверх тех же данных. Данные кладём JSON-ом в страницу: сетку и переходы
+    между месяцами рисует маленький скрипт, без библиотек и внешних запросов.
+    """
+    data = []
+    for d in digests:
+        data.append({
+            "d": d["date"].strftime("%Y-%m-%d"),
+            "p": part_of_day(d["date"]).upper(),
+            "t": sentence_case(strip_prefix(d["title"])),
+            "s": d["summary"] or "",
+            "u": "/digests/%s.html" % d["slug"],
+            "n": len(d["items"]),
+        })
+    payload = json.dumps(data, ensure_ascii=False)
+    return """<div class="dcal" id="dcal">
+  <div class="dcal__bar">
+    <button class="dcal__nav" type="button" data-step="-1" aria-label="Предыдущий месяц">←</button>
+    <span class="dcal__month" id="dcalMonth"></span>
+    <button class="dcal__nav" type="button" data-step="1" aria-label="Следующий месяц">→</button>
+  </div>
+  <div class="dcal__grid" id="dcalGrid"></div>
+  <div class="dcal__panel" id="dcalPanel"></div>
+</div>
+<script>
+(function () {
+  var DATA = %s;
+  var grid = document.getElementById("dcalGrid");
+  var panel = document.getElementById("dcalPanel");
+  var label = document.getElementById("dcalMonth");
+  var byDate = {};
+  DATA.forEach(function (x) { (byDate[x.d] = byDate[x.d] || []).push(x); });
+  var dates = Object.keys(byDate).sort();
+  if (!dates.length) { document.getElementById("dcal").style.display = "none"; return; }
+  var cur = new Date(dates[dates.length - 1] + "T00:00:00");
+  var MONTHS = ["Январь","Февраль","Март","Апрель","Май","Июнь",
+                "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+  var WD = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
+  var MONTHS_GEN = ["января","февраля","марта","апреля","мая","июня",
+                    "июля","августа","сентября","октября","ноября","декабря"];
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function key(y, m, d) { return y + "-" + pad(m + 1) + "-" + pad(d); }
+
+  function renderPanel(iso) {
+    var items = byDate[iso] || [];
+    if (!items.length) { panel.innerHTML = ""; return; }
+    var d = new Date(iso + "T00:00:00");
+    var head = d.getDate() + " " + MONTHS_GEN[d.getMonth()] + " " + d.getFullYear();
+    var html = '<div class="dcal__ptitle">' + head + "</div>";
+    items.forEach(function (x) {
+      html += '<a class="dcal__item" href="' + x.u + '">' +
+              '<span class="dcal__part">' + x.p + '</span>' +
+              '<span class="dcal__name">' + x.t + '</span>' +
+              '<span class="dcal__count">' + x.n + "</span></a>";
+    });
+    panel.innerHTML = html;
+  }
+
+  function render() {
+    var y = cur.getFullYear(), m = cur.getMonth();
+    label.textContent = MONTHS[m] + " " + y;
+    var first = new Date(y, m, 1);
+    var start = (first.getDay() + 6) %% 7;   // понедельник — первый
+    var days = new Date(y, m + 1, 0).getDate();
+    var html = WD.map(function (w) { return '<span class="dcal__wd">' + w + "</span>"; }).join("");
+    for (var i = 0; i < start; i++) html += '<span class="dcal__empty"></span>';
+    for (var d = 1; d <= days; d++) {
+      var iso = key(y, m, d);
+      var has = byDate[iso];
+      html += '<button type="button" class="dcal__day' + (has ? " has" : "") +
+              '" data-date="' + iso + '"' + (has ? "" : " disabled") + ">" +
+              d + (has ? '<i class="dcal__dot">' + has.length + "</i>" : "") + "</button>";
+    }
+    grid.innerHTML = html;
+    grid.querySelectorAll(".dcal__day.has").forEach(function (b) {
+      b.addEventListener("click", function () {
+        grid.querySelectorAll(".dcal__day.active").forEach(function (x) { x.classList.remove("active"); });
+        b.classList.add("active");
+        renderPanel(b.dataset.date);
+      });
+    });
+    var monthKey = key(y, m, 1).slice(0, 7);
+    var last = dates.filter(function (x) { return x.slice(0, 7) === monthKey; }).pop();
+    if (last) {
+      var b = grid.querySelector('[data-date="' + last + '"]');
+      if (b) { b.classList.add("active"); renderPanel(last); return; }
+    }
+    panel.innerHTML = '<div class="dcal__ptitle">В этом месяце выпусков нет</div>';
+  }
+
+  document.querySelectorAll(".dcal__nav").forEach(function (b) {
+    b.addEventListener("click", function () {
+      cur = new Date(cur.getFullYear(), cur.getMonth() + Number(b.dataset.step), 1);
+      render();
+    });
+  });
+  render();
+})();
+</script>""" % payload
+
+
 def render_digests_index(digests, theme):
     rows = []
     for d in digests:
@@ -2440,7 +2545,23 @@ def render_digests_index(digests, theme):
                     tags=tags_html(d), count=news_count(len(d["items"]))))
     content = ('<main class="wrap">' + back_link("На главную", "/") + '<section class="lead"><h1>Дайджесты</h1>'
                '<p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p>'
-               '</section><div class="dlist">%s</div></main>') % ("".join(rows) or "<p>Пока пусто.</p>")
+               '</section>'
+               '<div class="dviews" id="dviews">'
+               '<div class="dviews__tabs" role="tablist">'
+               '<button type="button" class="dviews__tab is-on" data-view="list">Список</button>'
+               '<button type="button" class="dviews__tab" data-view="cal">Календарь</button>'
+               '</div>'
+               '<div class="dviews__pane" data-pane="list"><div class="dlist">%s</div></div>'
+               '<div class="dviews__pane" data-pane="cal" hidden>%s</div>'
+               '</div>'
+               '<script>(function(){var w=document.getElementById("dviews"),'
+               't=w.querySelectorAll(".dviews__tab"),p=w.querySelectorAll(".dviews__pane");'
+               'function set(v){t.forEach(function(b){b.classList.toggle("is-on",b.dataset.view===v)});'
+               'p.forEach(function(x){x.hidden=x.dataset.pane!==v});'
+               'try{localStorage.setItem("digestView",v)}catch(e){}}'
+               't.forEach(function(b){b.addEventListener("click",function(){set(b.dataset.view)})});'
+               'var saved="list";try{saved=localStorage.getItem("digestView")||"list"}catch(e){}set(saved);})();</script>'
+               '</main>') % ("".join(rows) or "<p>Пока пусто.</p>", _digest_calendar(digests))
     url = SITE["url"] + "/digests/"
     desc = ("Дайджесты GEEKOVSKI: короткие выпуски новостей игр, техники, кино и AI с ссылками "
             "на первоисточники. Выпусков в архиве: %d." % len(digests))

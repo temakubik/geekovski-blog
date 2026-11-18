@@ -247,10 +247,13 @@
 ## Тайтлы (страницы игр, фильмов и сериалов)
 
 - [Задача трёх тел](https://geekovski.ru/titles/3-body-problem.html): 2024
+- [«Задача трёх тел», сезон 2](https://geekovski.ru/titles/3-body-problem-2.html): 2027
 - [Angry Birds 3 в кино](https://geekovski.ru/titles/angry-birds-3-v-kino.html): 2026
 - [Atomfall](https://geekovski.ru/titles/atomfall.html): 2025
+- [«Мстители: Судный день»](https://geekovski.ru/titles/avengers-doomsday.html): 2026
 - [Big Walk](https://geekovski.ru/titles/big-walk.html): 2026
 - [Black Doves, сезон 2](https://geekovski.ru/titles/black-doves-sezon-2.html): 2026
+- [«Новые похождения Клиффа Бута»](https://geekovski.ru/titles/cliff-booth.html): 2026
 - [CONTROL Resonant](https://geekovski.ru/titles/control-resonant.html): 2026
 - [Crimson Desert](https://geekovski.ru/titles/crimson-desert.html): 2026
 - [CRYMELIGHT](https://geekovski.ru/titles/crymelight.html): 2026
@@ -266,7 +269,9 @@
 - [Godzilla: Destroy All Monsters Melee Remastered](https://geekovski.ru/titles/godzilla-destroy-all-monsters-melee-remastered.html): 2026
 - [Godzilla Minus Zero](https://geekovski.ru/titles/godzilla-minus-zero.html): 2026
 - [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
+- [Grand Theft Auto VI](https://geekovski.ru/titles/gta-6.html): 2026
 - [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
+- [«Голодные игры: Рассвет жатвы»](https://geekovski.ru/titles/hunger-games-rassvet-zhatvy.html): 2026
 - [Властелин колец: Кольца власти, сезон 3](https://geekovski.ru/titles/kolca-vlasti-3-sezon.html): 2026
 - [League of Legends](https://geekovski.ru/titles/league-of-legends.html): 2009
 - [Marvel's Blade](https://geekovski.ru/titles/marvels-blade.html): 2027
@@ -281,11 +286,15 @@
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
+- [«Три богатыря и гуси-лебеди»](https://geekovski.ru/titles/tri-bogatyrya-gusi-lebedi.html): 2026
 - [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
+- [«Вершина»](https://geekovski.ru/titles/vershina-film.html): 2026
 - [Virgin River](https://geekovski.ru/titles/virgin-river.html): 2019
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
+- [«Ёлки 13»](https://geekovski.ru/titles/yolki-13.html): 2026
 - [The Legend of Zelda: Ocarina of Time](https://geekovski.ru/titles/zelda-ocarina-2026.html): 2026
 - [Zero Parades: Director's Cut](https://geekovski.ru/titles/zero-parades-directors-cut.html): 2026
+- [«Зима в Простоквашино»](https://geekovski.ru/titles/zima-v-prostokvashino.html): 2026
 
 ## Служебное
 
