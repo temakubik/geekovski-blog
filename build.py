@@ -1252,14 +1252,16 @@ def _feed_html(p):
     return "\n".join(x for x in parts if x)
 
 
-def rss(posts, title=None, path="", self_name="rss.xml"):
+def rss(posts, title=None, path="", self_name="rss.xml", limit=None, with_content=None):
     """RSS 2.0: канал сайта (rss.xml) и канал дайджестов (feed.xml).
 
     self-ссылка, lastBuildDate, рубрика, автор и полный текст — минимум, по
     которому лента считается живой и её берут агрегаторы.
     """
+    limit = FEED_LIMIT if limit is None else limit
+    with_content = FEED_FULL_TEXT if with_content is None else with_content
     items = []
-    for p in posts[:FEED_LIMIT]:
+    for p in posts[:limit]:
         url = "%s/%s%s.html" % (SITE["url"], path, p["slug"])
         author = AUTHOR_BY_CAT.get(p["category"])
         byline = (author["full_name"] or author["name"]) if author else SITE["author"]
@@ -1271,7 +1273,7 @@ def rss(posts, title=None, path="", self_name="rss.xml"):
                  "<category>%s</category>" % html.escape(CAT_NAME.get(p["category"]) or p["category"]),
                  "<description>%s</description>" % html.escape(p["summary"] or plain(p["body"], 300)),
                  _feed_cover(p)]
-        full = _feed_html(p)
+        full = _feed_html(p) if with_content else ""
         if full:
             chunk.append("<content:encoded>%s</content:encoded>" % html.escape(full))
         items.append("<item>%s</item>" % "".join(chunk))
@@ -1288,6 +1290,57 @@ def rss(posts, title=None, path="", self_name="rss.xml"):
         ns=RSS_NS, title=html.escape(title or SITE["title"]), url=SITE["url"],
         tag=html.escape(SITE["tagline"]), built=rfc822(newest), self_name=self_name,
         items="".join(items))
+
+
+VK_PER_DAY = 3              # анонсов в сутки максимум
+VK_PER_CAT_PER_DAY = 1      # и не больше одного из рубрики за сутки
+VK_WINDOW_DAYS = 2          # окно фида: при первом включении импорта ВК
+                            # подтянет только эти записи, а не весь архив
+VK_FEED_LIMIT = 6
+
+
+def vk_selection(posts, now=None):
+    """Что из материалов уходит в ленту ВК.
+
+    Приоритет: `vk: true` в frontmatter — берём всегда, `vk: false` — не берём
+    никогда. Остальное добирает автоматика: свежие вперёд, не больше
+    VK_PER_CAT_PER_DAY из одной рубрики за сутки и не больше VK_PER_DAY за
+    сутки — стена молодого сообщества не должна читаться как спам.
+    """
+    now = now or datetime.now()
+    floor = now - timedelta(days=VK_WINDOW_DAYS)
+    picked, per_day, per_cat = [], collections.Counter(), collections.Counter()
+    for p in sorted(posts, key=lambda x: x["date"], reverse=True):
+        if p["kind"] != "post" or p["date"] < floor:
+            continue
+        flag = (p["meta"].get("vk") or "").strip().lower()
+        if flag in ("false", "no", "0", "нет"):
+            continue
+        if flag in ("true", "yes", "1", "да"):
+            picked.append(p)
+            continue
+        day = p["date"].date()
+        if per_day[day] >= VK_PER_DAY or per_cat[(day, p["category"])] >= VK_PER_CAT_PER_DAY:
+            continue
+        picked.append(p)
+        per_day[day] += 1
+        per_cat[(day, p["category"])] += 1
+    picked.sort(key=lambda x: x["date"], reverse=True)
+    return picked[:VK_FEED_LIMIT]
+
+
+def vk_feed(posts):
+    """vk.xml — лента для штатного «Импорта RSS» сообщества ВКонтакте.
+
+    ВК умеет сам переносить RSS на стену (Управление → Дополнительная
+    информация → Импорт RSS), но берёт из фида всё подряд, без пауз и выбора.
+    Поэтому для него собирается отдельный короткий фид: отбор делает сборка,
+    ВК только переносит. content:encoded здесь нет намеренно — в режиме
+    «Публиковать в виде статьи» ВК затащил бы на стену полный текст статьи
+    дублем, а нам нужен анонс со сниппетом и обложкой.
+    """
+    return rss(vk_selection(posts), title="%s — для ВКонтакте" % SITE["title"],
+               self_name="vk.xml", limit=VK_FEED_LIMIT, with_content=False)
 
 
 def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None):
@@ -1672,6 +1725,7 @@ def build(theme, out_dir, content_dir=None):
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(render_cat(c, name, [p for p in posts if p["category"] == c], theme), encoding="utf-8")
     (out / "rss.xml").write_text(rss(posts), encoding="utf-8")
+    (out / "vk.xml").write_text(vk_feed(posts), encoding="utf-8")
     dgdir = out / "digests"
     dgdir.mkdir(exist_ok=True)
     (dgdir / "index.html").write_text(render_digests_index(digests, theme), encoding="utf-8")
@@ -2675,6 +2729,8 @@ if __name__ == "__main__":
     a = ap.parse_args()
     ps = build(a.theme, a.out, a.content)
     print("theme=%s posts=%d -> %s" % (a.theme, len(ps), a.out))
+    vk_items = vk_selection(ps)
+    print("vk.xml: %d анонсов (%s)" % (len(vk_items), ", ".join(p["slug"] for p in vk_items)))
     problems = image_report(ps)
     if problems:
         print("\nкартинки: проблем %d" % len(problems))
