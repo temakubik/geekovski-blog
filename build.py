@@ -26,6 +26,9 @@ SITE = {
     "url": "https://geekovski.ru",
     "lang": "ru",
     "author": "GEEKOVSKI",
+    # сообщество ВК (screen_name из groups.getById): ссылка стоит в контактах
+    # внизу сайта и в sameAs организации — поисковики склеивают канал и группу
+    "vk": "https://vk.com/geekovskiread",
 }
 CATS = [
     ("xbox", "Xbox"),
@@ -381,6 +384,7 @@ PAGE = """<!DOCTYPE html>
 <link rel="stylesheet" href="/assets/brand.css">
 <script>try{{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}}catch(e){{}}</script>
 {metrika}
+{ga}
 {jsonld}
 {digest_css}
 </head>
@@ -400,7 +404,7 @@ PAGE = """<!DOCTYPE html>
   <div class="wrap foot__in">
     <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© {year} GEEKOVSKI</span>
     <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
-    <span class="foot__links"><a href="/avtory/">Авторы</a><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a></span>
+    <span class="foot__links"><a href="/avtory/">Авторы</a><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a><a class="foot__ext" href="{vk}" target="_blank" rel="noopener">ВКонтакте</a></span>
   </div>
 </footer>
 <script>
@@ -472,6 +476,21 @@ METRIKA_COUNTER = """<!-- Yandex.Metrika counter -->
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->"""
+
+
+# Счётчик Google Analytics 4 (gtag.js). Пустая строка = тега в разметке нет.
+# Порядок подключения: завести поток в GA4 → прислать G-XXXXXXXXXX → прописать
+# здесь → пересобрать сайт. Подставляется как значение {ga}.
+GA_ID = ""
+GA_TAG = "" if not GA_ID else """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '%s');
+</script>
+<!-- /Google tag -->""" % (GA_ID, GA_ID)
 
 
 # ---------- SEO / GEO ----------
@@ -572,6 +591,8 @@ def ld_org():
     return {
         "@type": "Organization", "@id": ORG_ID, "name": SITE["title"],
         "url": SITE["url"] + "/", "description": SITE["tagline"],
+        # каналы бренда: без sameAs поиск не связывает сайт и сообщество ВК
+        "sameAs": [SITE["vk"]],
         "logo": {"@type": "ImageObject", "url": SITE["url"] + "/assets/img/icon-512.png",
                  "width": 512, "height": 512},
     }
@@ -672,12 +693,13 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         ])
     return PAGE.format(
         theme=theme, title=html.escape(title), desc=html.escape(desc),
-        nav=nav(), content=content, year=datetime.now().year,
+        nav=nav(), content=content, year=datetime.now().year, vk=SITE["vk"],
         og_image_meta=og_image_meta(og_image, og_alt or title),
         og_url=og_url, canonical=canonical_tag, robots=robots, og_type=og_type,
         article_meta=article_meta, jsonld=jsonld,
         verify=verify_meta(),
         metrika=METRIKA_COUNTER if metrika is None else metrika,
+        ga=GA_TAG,
         digest_css=digest_css,
     )
 
@@ -1065,17 +1087,38 @@ def load_authors(content_dir=None):
     return out
 
 
+def _author_names(a):
+    """Имя и фамилия + короткое имя, которым автор подписан в текстах.
+
+    Паспорт автора держит оба: `full_name` — как человек подписан на странице
+    редакции («Всеволод Гринёв»), `name` — как подпись под статьёй («Сева»).
+    В карточке нужно первое, а второе — чтобы читатель связал одно с другим.
+    """
+    full = (a.get("full_name") or a.get("name") or "").strip()
+    nick = (a.get("name") or "").strip()
+    if nick == full:
+        nick = ""
+    role = (a.get("role") or "").strip()
+    meta = " · ".join(x for x in (nick, role) if x)
+    return full, nick, meta
+
+
 def _authcard(a):
+    """Карточка автора: круглый портрет, имя и фамилия капителью Chava,
+    ниже — короткое имя с ролью и одна фраза о том, чем человек занят."""
+    full, _nick, meta = _author_names(a)
     return ('<a class="authcard" href="/avtory/%s.html">'
-            '<img class="authcard__pic" src="%s" alt="%s" width="72" height="72" loading="lazy">'
-            '<span class="authcard__text">'
+            '<span class="authcard__head">'
+            '<img class="authcard__pic" src="%s" alt="%s" width="132" height="132" loading="lazy">'
+            '<span class="authcard__id">'
             '<span class="authcard__name">%s</span>'
             '<span class="authcard__role">%s</span>'
+            '</span></span>'
             '<span class="authcard__sum">%s</span>'
-            '</span></a>') % (
-        a["slug"], html.escape(a["avatar"]), html.escape(a["name"], quote=True),
-        html.escape(a["name"]), html.escape(a["role"]),
-        html.escape(a["summary"]))
+            '<span class="authcard__go">Профиль и материалы <span aria-hidden="true">→</span></span>'
+            '</a>') % (
+        a["slug"], html.escape(a["avatar"]), html.escape(full, quote=True),
+        html.escape(full), html.escape(meta), html.escape(a["summary"]))
 
 
 def own_studio_strip():
@@ -1084,7 +1127,7 @@ def own_studio_strip():
     Фотографий меньше, чем текста, поэтому студия — единственный блок ниже карточек:
     она объясняет, почему у канала вообще есть «место», а не только три подписи.
     """
-    wide, cat = ROOT / "static" / "img" / "studio.jpg", ROOT / "static" / "img" / "mascot-cat.jpg"
+    wide, cat = ROOT / "static" / "img" / "studio.jpg", ROOT / "static" / "img" / "mascot-cat-shelf.jpg"
     if not (wide.exists() and cat.exists()):
         return ""
     return ('<section class="studio">'
@@ -1095,8 +1138,8 @@ def own_studio_strip():
             '<p class="studio__text">Общая комната, куда мы приходим работать: полки со старыми '
             'консолями, коробки от посылок с техникой, тёплый свет. На средней полке живёт кот — '
             'белый, пушистый, и он у нас за главного.</p>'
-            '<figure class="studio__cat"><img src="/assets/img/mascot-cat.jpg" alt="Белый кот студии '
-            'сидит на полке рядом с консолями" loading="lazy"></figure>'
+            '<figure class="studio__cat"><img src="/assets/img/mascot-cat-shelf.jpg" alt="Белый кот '
+            'студии сидит на полке рядом с консолями" loading="lazy"></figure>'
             '</div></section>')
 
 
@@ -1122,11 +1165,13 @@ def render_authors_index(authors, theme):
 
 
 def author_page(a, posts, theme):
-    """Страница автора: портрет, короткое описание и его материалы по рубрикам."""
+    """Страница автора: круглый портрет, имя и фамилия капителью Chava,
+    короткое описание и его материалы по рубрикам."""
     cats = [c for c in a["categories"] if c in CAT_NAME]
     items = [p for p in posts if p["category"] in cats][:12]
     total = len([p for p in posts if p["category"] in cats])
-    name = html.escape(a["name"])
+    full, _nick, meta = _author_names(a)
+    name = html.escape(full)
     url = "%s/avtory/%s.html" % (SITE["url"], a["slug"])
     if items:
         body = ('<div class="grid grid--list">%s</div>'
@@ -1138,9 +1183,9 @@ def author_page(a, posts, theme):
         head2 = "Материалы"
     content = ('<main class="wrap">%s'
                '<section class="author">'
-               '<img class="author__pic" src="%s" alt="%s" width="360" height="360">'
+               '<img class="author__pic" src="%s" alt="%s" width="420" height="420">'
                '<div class="author__about">'
-               '<h1>%s</h1>'
+               '<h1 class="author__name">%s</h1>'
                '<p class="author__role">%s</p>'
                '<p class="author__lead">%s</p>'
                '<div class="author__body">%s</div>'
@@ -1149,23 +1194,23 @@ def author_page(a, posts, theme):
                '<section class="lead"><h2>%s</h2><p>%s</p></section>'
                '%s</main>') % (
         back_link("Все авторы", "/avtory/"),
-        html.escape(a["avatar"]), html.escape(a["name"], quote=True),
-        name, html.escape(a["role"]), html.escape(a["summary"]), md(a["body"]),
+        html.escape(a["avatar"]), html.escape(full, quote=True),
+        name, html.escape(meta), html.escape(a["summary"]), md(a["body"]),
         ('<figure class="author__scene"><img src="%s" alt="%s"></figure>'
-         % (html.escape(a["scene"]), html.escape(a["name"], quote=True))) if a.get("scene") else "",
+         % (html.escape(a["scene"]), html.escape(full, quote=True))) if a.get("scene") else "",
         html.escape(head2),
         ("%d %s" % (total, plural(total, "материал", "материала", "материалов"))) if total else "",
         body)
     desc = a["summary"] or plain(a["body"], 160)
-    return page(title_tag("%s — %s" % (a["name"], a["role"].replace(" · ", ", "))),
+    return page(title_tag("%s — %s" % (full, a["role"].replace(" · ", ", "))),
                 desc, content, theme, canonical=url, og_image=SITE["url"] + a["avatar"] if a["avatar"] else None,
-                og_alt=a["name"],
+                og_alt=full,
                 jsonld=ldjson(ld_org(), ld_website(),
                               {"@type": "ProfilePage", "@id": url + "#page", "url": url,
-                               "name": "%s — %s" % (a["name"], a["role"]), "description": desc,
+                               "name": "%s — %s" % (full, a["role"]), "description": desc,
                                "inLanguage": "ru-RU", "isPartOf": {"@id": WEBSITE_ID},
                                "mainEntity": {"@type": "Person", "@id": url + "#person",
-                                              "name": a["full_name"] or a["name"],
+                                              "name": full,
                                               "alternateName": a["name"],
                                               "jobTitle": a["role"],
                                               "description": a["summary"],
@@ -1173,7 +1218,7 @@ def author_page(a, posts, theme):
                                               "url": url,
                                               "worksFor": {"@id": ORG_ID}}},
                               ld_breadcrumb([("Главная", "/"), ("Редакция", "/avtory/"),
-                                             (a["name"], "/avtory/%s.html" % a["slug"])])))
+                                             (full, "/avtory/%s.html" % a["slug"])])))
 
 
 RSS_NS = ('xmlns:atom="http://www.w3.org/2005/Atom" '
@@ -1232,8 +1277,6 @@ def _feed_html(p):
     Подписчик читает статью в читалке и не возвращается на сайт ради одного
     абзаца. Источники остаются в конце — то же правило, что на странице.
     """
-    if not FEED_FULL_TEXT:
-        return ""
     parts = []
     if p["cover"]:
         parts.append('<figure><img src="%s" alt="%s"></figure>'
@@ -1292,6 +1335,12 @@ def rss(posts, title=None, path="", self_name="rss.xml", limit=None, with_conten
         items="".join(items))
 
 
+# Полный текст в фиде ВК. Выключено — ВК берёт только title + description
+# и собирает из этого огрызок статьи; включено — в <content:encoded> уходит
+# весь материал (с обложкой, «Коротко» и источниками), и статья на ВК
+# получается целиком. Цена — дубль текста на две площадки.
+VK_FEED_FULL_TEXT = True
+
 VK_PER_DAY = 3              # анонсов в сутки максимум
 VK_PER_CAT_PER_DAY = 1      # и не больше одного из рубрики за сутки
 VK_WINDOW_DAYS = 2          # окно фида: при первом включении импорта ВК
@@ -1340,7 +1389,8 @@ def vk_feed(posts):
     дублем, а нам нужен анонс со сниппетом и обложкой.
     """
     return rss(vk_selection(posts), title="%s — для ВКонтакте" % SITE["title"],
-               self_name="vk.xml", limit=VK_FEED_LIMIT, with_content=False)
+               self_name="vk.xml", limit=VK_FEED_LIMIT,
+               with_content=VK_FEED_FULL_TEXT)
 
 
 def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None):
