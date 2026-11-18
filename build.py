@@ -379,12 +379,14 @@ PAGE = """<!DOCTYPE html>
 <link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — дайджесты" href="/feed.xml">
 <link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+{head_extra}
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
 <script>try{{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}}catch(e){{}}</script>
 {metrika}
 {ga}
+{tmr}
 {jsonld}
 {digest_css}
 </head>
@@ -491,6 +493,25 @@ GA_TAG = "" if not GA_ID else """<!-- Google tag (gtag.js) -->
   gtag('config', '%s');
 </script>
 <!-- /Google tag -->""" % (GA_ID, GA_ID)
+
+
+# Счётчик Top.Mail.Ru (Рейтинг Mail.Ru, VK). Как и счётчик Метрики — отдельной
+# строкой, потому что код набит фигурными скобками и через str.format() не
+# проходит. Подставляется как значение {tmr}. Пустая строка = счётчика нет.
+TMR_COUNTER = """<!-- Top.Mail.Ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3816456;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+<!-- /Top.Mail.Ru counter -->"""
 
 
 # ---------- SEO / GEO ----------
@@ -679,7 +700,7 @@ def verify_meta():
 
 def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
          og_type="website", robots=ROBOTS_INDEX, article=None, og_alt=None,
-         metrika=None, digest_css=""):
+         metrika=None, digest_css="", tmr=None, head_extra=""):
     canonical_tag = '<link rel="canonical" href="%s">' % html.escape(canonical, quote=True) if canonical else ""
     og_url = '<meta property="og:url" content="%s">' % html.escape(canonical, quote=True) if canonical else ""
     article_meta = ""
@@ -700,7 +721,9 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         verify=verify_meta(),
         metrika=METRIKA_COUNTER if metrika is None else metrika,
         ga=GA_TAG,
+        tmr=TMR_COUNTER if tmr is None else tmr,
         digest_css=digest_css,
+        head_extra=head_extra,
     )
 
 
@@ -967,9 +990,12 @@ def render_post(p, posts, theme):
     _author = AUTHOR_BY_CAT.get(p["category"])
     if _author:
         # подпись: аватар, слово «Автор» и полное имя капителью Chava — так же,
-        # как подписаны метки сайта, чтобы подпись не выглядела чужой врезкой
-        byline = ('<p class="byline"><img class="byline__pic" src="%s" alt="" width="36" height="36" loading="lazy">'
-                  '<span class="byline__text"><span class="byline__label">Автор</span>'
+        # как подписаны метки сайта, чтобы подпись не выглядела чужой врезкой.
+        # Пробел между меткой и именем — для читалок и режимов без CSS: там спаны
+        # схлопываются в строку «АвторМарк Стрельцов», если пробела нет; во flex-
+        # колонке этот пробельный текстовый узел не рендерится.
+        byline = ('<p class="byline"><img class="byline__pic" src="%s" alt="" width="40" height="40" loading="lazy">'
+                  '<span class="byline__text"><span class="byline__label">Автор</span> '
                   '<a class="byline__name" href="/avtory/%s.html">%s</a></span></p>'
                   % (html.escape(_author["avatar"]), _author["slug"],
                      html.escape(_author["full_name"] or _author["name"])))
@@ -1151,8 +1177,13 @@ def render_authors_index(authors, theme):
             "Материалы в ленте подписаны — по подписи видно, кто отвечает за текст."
             % (n, plural(n, "человек", "человека", "человек")))
     content = ('<main class="wrap">%s<section class="lead"><h1>Редакция</h1><p>%s</p></section>'
-               '<div class="authors">%s</div>%s</main>'
-               % (back_link("На главную", "/"), lead, cards, own_studio_strip()))
+               '<div class="authors">%s</div>%s%s</main>'
+               % (back_link("На главную", "/"), lead, cards,
+                  ('<p class="authors__feeds">Ленты авторов: %s</p>'
+                   % " · ".join('<a href="/avtory/%s.xml">%s</a>'
+                                % (a["slug"], html.escape(a["name"])) for a in authors))
+                  if authors else "",
+                  own_studio_strip()))
     url = SITE["url"] + "/avtory/"
     desc = "Редакция GEEKOVSKI: кто пишет про железо, игры и кино — и за что отвечает."
     return page("Редакция — кто пишет GEEKOVSKI", desc, content, theme, canonical=url,
@@ -1164,14 +1195,40 @@ def render_authors_index(authors, theme):
                               ld_breadcrumb([("Главная", "/"), ("Редакция", "/avtory/")])))
 
 
+def author_posts(a, posts):
+    """Материалы автора: рубрики его паспорта, свежие вперёд.
+
+    Одна функция и для страницы автора, и для его ленты — иначе страница и фид
+    незаметно разъезжаются (в фиде остаётся рубрика, которую снял редактор).
+    """
+    cats = [c for c in a["categories"] if c in CAT_NAME]
+    return [p for p in posts if p["category"] in cats]
+
+
+def author_feed(a, posts):
+    """Лента автора: /avtory/<slug>.xml — та же RSS 2.0, что у сайта.
+
+    Нужна, чтобы читатель подписывался на одного человека, а не на весь канал:
+    у Севы железо, у Марка игры, у Ани кино, и мешать их в одной читалке незачем.
+    """
+    full, _nick, _meta = _author_names(a)
+    return rss(posts, title="%s — %s" % (SITE["title"], full),
+               self_name="avtory/%s.xml" % a["slug"],
+               desc="%s, %s. Материалы с сайта geekovski.ru." % (full, a["role"]))
+
+
 def author_page(a, posts, theme):
     """Страница автора: круглый портрет, имя и фамилия капителью Chava,
-    короткое описание и его материалы по рубрикам."""
+    короткое описание, его материалы по рубрикам и ссылка на его ленту."""
     cats = [c for c in a["categories"] if c in CAT_NAME]
-    items = [p for p in posts if p["category"] in cats][:12]
-    total = len([p for p in posts if p["category"] in cats])
+    mine = author_posts(a, posts)
+    # на странице автора — весь его архив, а не первые двенадцать: за этим
+    # страница и нужна (как рубрика, только по человеку). В ленте — FEED_LIMIT.
+    items = mine
+    total = len(mine)
     full, _nick, meta = _author_names(a)
     name = html.escape(full)
+    feed = "/avtory/%s.xml" % a["slug"]
     url = "%s/avtory/%s.html" % (SITE["url"], a["slug"])
     if items:
         body = ('<div class="grid grid--list">%s</div>'
@@ -1181,6 +1238,9 @@ def author_page(a, posts, theme):
         body = ('<p class="lead__empty">Материалов пока нет — свежие новости по этим темам '
                 'выходят в <a href="/digests/">дайджестах</a>.</p>')
         head2 = "Материалы"
+    count_line = ('%d %s · <a class="feed__link" href="%s">Лента автора (RSS)</a>'
+                  % (total, plural(total, "материал", "материала", "материалов"), feed)
+                  ) if total else ('<a class="feed__link" href="%s">Лента автора (RSS)</a>' % feed)
     content = ('<main class="wrap">%s'
                '<section class="author">'
                '<img class="author__pic" src="%s" alt="%s" width="420" height="420">'
@@ -1199,12 +1259,14 @@ def author_page(a, posts, theme):
         ('<figure class="author__scene"><img src="%s" alt="%s"></figure>'
          % (html.escape(a["scene"]), html.escape(full, quote=True))) if a.get("scene") else "",
         html.escape(head2),
-        ("%d %s" % (total, plural(total, "материал", "материала", "материалов"))) if total else "",
+        count_line,
         body)
     desc = a["summary"] or plain(a["body"], 160)
     return page(title_tag("%s — %s" % (full, a["role"].replace(" · ", ", "))),
                 desc, content, theme, canonical=url, og_image=SITE["url"] + a["avatar"] if a["avatar"] else None,
                 og_alt=full,
+                head_extra=('<link rel="alternate" type="application/rss+xml" title="%s — лента" href="%s">'
+                            % (html.escape(full, quote=True), feed)),
                 jsonld=ldjson(ld_org(), ld_website(),
                               {"@type": "ProfilePage", "@id": url + "#page", "url": url,
                                "name": "%s — %s" % (full, a["role"]), "description": desc,
@@ -1295,8 +1357,9 @@ def _feed_html(p):
     return "\n".join(x for x in parts if x)
 
 
-def rss(posts, title=None, path="", self_name="rss.xml", limit=None, with_content=None):
-    """RSS 2.0: канал сайта (rss.xml) и канал дайджестов (feed.xml).
+def rss(posts, title=None, path="", self_name="rss.xml", limit=None, with_content=None,
+        desc=None):
+    """RSS 2.0: канал сайта (rss.xml), канал дайджестов (feed.xml) и лента автора.
 
     self-ссылка, lastBuildDate, рубрика, автор и полный текст — минимум, по
     которому лента считается живой и её берут агрегаторы.
@@ -1331,7 +1394,7 @@ def rss(posts, title=None, path="", self_name="rss.xml", limit=None, with_conten
 <image><url>{url}/assets/img/icon-512.png</url><title>{title}</title><link>{url}/</link></image>
 {items}</channel></rss>""".format(
         ns=RSS_NS, title=html.escape(title or SITE["title"]), url=SITE["url"],
-        tag=html.escape(SITE["tagline"]), built=rfc822(newest), self_name=self_name,
+        tag=html.escape(desc or SITE["tagline"]), built=rfc822(newest), self_name=self_name,
         items="".join(items))
 
 
@@ -1799,6 +1862,10 @@ def build(theme, out_dir, content_dir=None):
         (adir / "index.html").write_text(render_authors_index(AUTHORS, theme), encoding="utf-8")
         for a in AUTHORS:
             (adir / ("%s.html" % a["slug"])).write_text(author_page(a, posts, theme), encoding="utf-8")
+        # лента автора лежит рядом с его страницей: /avtory/<slug>.xml
+        for a in AUTHORS:
+            (adir / ("%s.xml" % a["slug"])).write_text(
+                author_feed(a, author_posts(a, posts)), encoding="utf-8")
     # файл календаря живёт в content/posts, но собственной страницы у него нет:
     # его slug мог попасть в закладки и в поиск — отдаём редирект на общий раздел
     for c in calendars:
@@ -2428,7 +2495,7 @@ def render_style_guide(theme):
         type_block, palette_block, chip_block, icon_block, comp_block)
 
     return page("Style Guide — %s" % SITE["title"], "Типографика, цвета, компоненты и иконки GEEKOVSKI",
-                content, theme, robots=ROBOTS_NOINDEX, metrika="")
+                content, theme, robots=ROBOTS_NOINDEX, metrika="", tmr="")
 
 
 # ---------- дайджест: техническая мета и оформление ----------

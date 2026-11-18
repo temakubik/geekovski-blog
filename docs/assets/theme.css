@@ -585,34 +585,49 @@ a.tlink:hover { border-bottom-style: solid; }
 
 /* ---------- редакция: страницы авторов ----------
    Имена классов общие для /avtory/ и /avtory/<slug>.html; подпись под статьёй
-   (.byline) держит тот же кегль, что метки карточки, чтобы не спорить с H1. */
-.authors { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin: 26px 0 12px; }
-.authcard { display: flex; gap: 16px; align-items: flex-start; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); transition: border-color .15s ease; }
+   (.byline) держит тот же кегль, что метки карточки, чтобы не спорить с H1.
+   Имя и фамилия набраны капителью Chava — та же гарнитура, что подписывает
+   статьи в ленте, поэтому карточка и подпись читаются как один человек. */
+.authors { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); margin: 26px 0 12px; }
+.authcard { display: flex; flex-direction: column; gap: 14px; padding: 22px 22px 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); transition: border-color .15s ease, background .15s ease; }
 .authcard:hover { border-color: var(--accent); }
-.authcard__pic { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: 0 0 auto; background: var(--bg); }
-.authcard__text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-.authcard__name { font-family: var(--font-display); font-style: italic; font-weight: var(--fw-display); font-size: var(--fs-h2); line-height: var(--lh-snug); letter-spacing: -.015em; color: var(--text); }
-.authcard__role { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
-.authcard__sum { color: var(--muted); font-size: var(--fs-small); line-height: 1.45; }
+.authcard__head { display: flex; align-items: center; gap: 13px; min-width: 0; }
+.authcard__pic { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: center 22%; flex: 0 0 auto; background: var(--bg); box-shadow: 0 0 0 1px var(--line); }
+.authcard__id { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.authcard__name { font-family: var(--font-caps); font-weight: var(--fw-normal); font-style: normal; font-size: 17px; line-height: 1.25; letter-spacing: .04em; text-transform: uppercase; color: var(--text); hyphens: manual; overflow-wrap: break-word; text-wrap: balance; }
+.authcard__role { font-family: var(--font-caps); font-size: var(--fs-meta); line-height: 1.35; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); text-wrap: pretty; }
+.authcard__sum { color: var(--muted); font-size: var(--fs-small); line-height: 1.55; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 4 3; overflow-wrap: break-word; text-wrap: pretty; }
+.authcard__go { margin-top: auto; padding-top: 4px; font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); transition: color .15s ease; }
+.authcard:hover .authcard__go { color: var(--accent); }
 
-.author { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: start; margin: 24px 0 38px; }
-.author__pic { width: 100%; height: auto; border-radius: 18px; display: block; background: var(--panel); }
-.author__role { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 10px 0 14px; }
-.author__lead { font-size: var(--fs-lead); line-height: 1.5; color: var(--text); margin: 0 0 16px; max-width: 62ch; }
-.author__body p { color: var(--muted); margin: 0 0 12px; max-width: 62ch; }
+/* Ленты авторов: ссылки на /avtory/<slug>.xml — под карточками и на странице
+   автора. Отдельным классом, чтобы не тянуть в подвал стили ссылок. */
+.authors__feeds { margin: 0 0 6px; font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.authors__feeds a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--line); }
+.authors__feeds a:hover, .authors__feeds a:focus-visible { color: var(--accent); border-color: var(--accent); }
+.feed__link { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.feed__link:hover, .feed__link:focus-visible { border-color: var(--accent); }
+
+.author { display: grid; grid-template-columns: 190px 1fr; gap: 30px; align-items: start; margin: 24px 0 38px; }
+.author__pic { width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 50%; object-fit: cover; object-position: center 22%; display: block; background: var(--panel); box-shadow: 0 0 0 1px var(--line); }
+.author__name { font-family: var(--font-caps); font-weight: var(--fw-normal); font-style: normal; font-size: clamp(22px, 3.6vw, 32px); line-height: 1.12; letter-spacing: .03em; text-transform: uppercase; color: var(--text); margin: 0; hyphens: manual; overflow-wrap: break-word; text-wrap: balance; }
+.author__role { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 10px 0 14px; text-wrap: pretty; }
+.author__lead { font-size: var(--fs-lead); line-height: 1.5; color: var(--text); margin: 0 0 16px; max-width: 62ch; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; text-wrap: pretty; }
+.author__body p { color: var(--muted); margin: 0 0 12px; max-width: 62ch; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 7 4 3; overflow-wrap: break-word; text-wrap: pretty; }
 .author__body p:last-child { margin-bottom: 0; }
 
 .byline { display: flex; align-items: center; gap: 12px; margin: 18px 0 6px; }
-.byline__pic { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; background: var(--panel); flex: 0 0 auto; }
+.byline__pic { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 22%; background: var(--panel); flex: 0 0 auto; }
 .byline__text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .byline__label { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .byline__name { font-family: var(--font-caps); font-size: var(--fs-body); color: var(--text); border-bottom: 1px solid var(--line); align-self: flex-start; }
 .byline__name:hover { color: var(--accent); border-color: var(--accent); }
 
 @media (max-width: 640px) {
-  .author { grid-template-columns: 1fr; gap: 16px; }
-  .author__pic { width: 132px; }
+  .author { grid-template-columns: 1fr; gap: 18px; }
+  .author__pic { width: 112px; }
   .authors { grid-template-columns: 1fr; }
+  .authcard { padding: 18px; }
 }
 
 /* ---------- студия на /avtory/ и кадр-сцена автора ----------

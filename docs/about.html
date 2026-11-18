@@ -41,6 +41,7 @@
 <link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — дайджесты" href="/feed.xml">
 <link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
@@ -59,6 +60,20 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
+<!-- Top.Mail.Ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3816456;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+<!-- /Top.Mail.Ru counter -->
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","sameAs":["https://vk.com/geekovskiread"],"logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"AboutPage","@id":"https://geekovski.ru/about.html#page","url":"https://geekovski.ru/about.html","name":"О сайте","description":"GEEKOVSKI — блог о технологиях, играх и кино. Разбираем новости, отделяем факт от мнения и указываем источники.","inLanguage":"ru-RU","isPartOf":{"@id":"https://geekovski.ru/#website"},"publisher":{"@id":"https://geekovski.ru/#organization"},"author":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"О сайте","item":"https://geekovski.ru/about.html"}]}]}</script>
 
 </head>
@@ -79,9 +94,11 @@
 <h2>Как мы работаем</h2>
 <ol><li><strong>Факт отдельно, мнение отдельно.</strong> Проверяемое — в тексте со ссылкой на первоисточник, оценка автора помечена прямо в тексте как оценка.</li><li><strong>Источники в конце материала.</strong> Список ссылок — часть статьи, а не украшение: по нему можно проверить каждую цифру.</li><li><strong>Слух называется слухом.</strong> Инсайд, официальный анонс, утечка и подтверждённый релиз — разные слова, и мы их не смешиваем. Если что-то не подтверждено, так и написано.</li><li><strong>Дата важна.</strong> У материала есть дата публикации; статус инфоповода проверяется перед публикацией, а не берётся из старых заметок.</li></ol>
 <h2>Как читать</h2>
-<ul><li><strong>Блог</strong> — разборы и материалы по рубрикам, ссылки на рубрики есть в шапке сайта.</li><li><strong>Дайджесты</strong> — короткие выпуски новостей: что случилось и где об этом пишут.</li><li><strong>Ленты</strong> — <a href="/rss.xml">RSS</a> и <a href="/feed.json">JSON-фид</a>; <a href="/sitemap.xml">карта сайта</a> и <a href="/llms.txt">llms.txt</a> — для поисковых роботов и языковых моделей.</li></ul>
+<ul><li><strong>Блог</strong> — разборы и материалы по рубрикам, ссылки на рубрики есть в шапке сайта.</li><li><strong>Дайджесты</strong> — короткие выпуски новостей: что случилось и где об этом пишут.</li><li><strong>Ленты</strong> — <a href="/rss.xml">RSS</a> и <a href="/feed.json">JSON-фид</a>; <a href="/sitemap.xml">карта сайта</a> и <a href="/llms.txt">llms.txt</a> — для поисковых роботов и языковых моделей. Ленты отдельных авторов лежат рядом с их страницами: <code>/avtory/seva.xml</code>, <code>/avtory/mark.xml</code>, <code>/avtory/anya.xml</code>.</li></ul>
 <h2>Кто пишет</h2>
 <p>Материалы готовят трое: <strong><a href="/avtory/seva.html">Сева</a></strong> — железо и цифры, <strong><a href="/avtory/mark.html">Марк</a></strong> — игры и консоли, <strong><a href="/avtory/anya.html">Аня</a></strong> — кино и сериалы. Каждый пост в ленте подписан именем того, кто его ведёт, а страницы редакции — на <a href="/avtory/">/avtory/</a>.</p>
+<h2>Контакты</h2>
+<ul><li><strong>ВКонтакте</strong> — <a href="https://vk.com/geekovskiread">vk.com/geekovskiread</a>: короткие посты, обсуждения и ссылки на разборы. Заметили ошибку в цифре — напишите там, исправим и скажем спасибо.</li><li><strong>Ленты</strong> — <a href="/rss.xml">RSS</a> и <a href="/feed.json">JSON-фид</a>, если удобнее читать в своей читалке.</li></ul>
 <p>Тексты выходят под брендом канала; ссылки на первоисточники в каждой заметке позволяют проверить факты независимо от автора.</p></div></article></main>
 <footer class="foot">
   <div class="wrap foot__in">
