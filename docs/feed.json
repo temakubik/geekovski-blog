@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-18-1800-steam-tonet-v-igrah.html",
+   "url": "https://geekovski.ru/2026-11-18-1800-steam-tonet-v-igrah.html",
+   "title": "Steam тонет в играх: Valve не успевает проверять",
+   "summary": "Valve признала, что предрелизная проверка билдов в Steam растянулась с обычных 3–5 до 12 рабочих дней, и объяснила это повторными проверками. Причина на поверхности: по данным SteamDB на 18 ноября в Steam вышло 27 286 игр — больше, чем за весь прошлый год, а в октябре почти половина новинок шла с пометкой об ИИ.",
+   "date_published": "2026-11-18T18:00:00+03:00",
+   "date_modified": "2026-11-18T18:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/steam-tonet.jpg",
+   "_sources": [
+    {
+     "name": "Steamworks — обновление процесса предрелизной проверки",
+     "url": "https://store.steampowered.com/news/group/4145017/view/696528162820984745"
+    },
+    {
+     "name": "Steamworks — Review Process (документация)",
+     "url": "https://partner.steamgames.com/doc/store/review_process"
+    },
+    {
+     "name": "Steamworks — Steam Direct Fee",
+     "url": "https://partner.steamgames.com/doc/gettingstarted/appfee"
+    },
+    {
+     "name": "GamingOnLinux — Steam is officially drowning in game releases",
+     "url": "https://www.gamingonlinux.com/2026/11/steam-is-officially-drowning-in-game-releases/"
+    },
+    {
+     "name": "SteamDB — Game releases",
+     "url": "https://steamdb.info/stats/releases/"
+    },
+    {
+     "name": "Reddit r/Steam — почти половина октябрьских релизов с ИИ-пометкой",
+     "url": "https://www.reddit.com/r/Steam/comments/1xlexwi/almost_half_of_the_games_released_on_steam_in/"
+    },
+    {
+     "name": "Dexerto — Almost half of all new Steam games use AI now",
+     "url": "https://www.dexerto.com/gaming/almost-half-of-all-new-steam-games-use-ai-now-3423933/"
+    },
+    {
+     "name": "pcgame.com — AI on Steam in 2026",
+     "url": "https://www.pcgame.com/steam-ai-statistics"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-18-1500-gta6-recenziya-99-metacritic.html",
    "url": "https://geekovski.ru/2026-11-18-1500-gta6-recenziya-99-metacritic.html",
    "title": "GTA VI: 99 из 100 и рекорд Metacritic",
