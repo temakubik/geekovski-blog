@@ -1532,58 +1532,81 @@ def image_report(posts):
     return problems
 
 
+# У страницы /digests/ лид (.lead) идёт вплотную к переключателю, и его нижняя
+# граница читалась как непонятная линия без заголовка. Убираем рамку только тут.
+DIGEST_HIDE_LEAD = ".lead { border-bottom: 0; padding-bottom: 10px; margin-bottom: 14px; }"
+
 # Стили переключателя видов дайджестов и сетки календаря лежат здесь, а не в
 # editorial.css. Причина: в большом theme.css (50 КБ) Chromium переставал
 # применять правила, стоящие после тяжёлого блока (баг разбора: файл читался
 # целиком, а последние ~36 правил отбрасывались). Отдаём их отдельным
 # inline-<style> и проверяем страницу в браузере, а не только в CSS-файле.
-DIGEST_VIEW_CSS = """/* Дайджесты: переключатель «список / календарь» */
-.dviews__tabs { display: flex; gap: 8px; margin: 0 0 18px; }
+DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и две недели календарём. */
+.dviews { margin: 0 0 22px; }
+.dviews__tabs {
+  display: inline-flex; gap: 4px; padding: 4px; margin: 0 0 20px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--panel);
+}
 .dviews__tab {
   font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em;
   text-transform: uppercase; color: var(--muted); background: transparent;
-  border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer;
+  border: 0; border-radius: 8px; padding: 9px 20px; cursor: pointer;
+  transition: color .15s, background .15s;
 }
-.dviews__tab:hover { color: var(--text); border-color: var(--muted); }
-.dviews__tab.is-on { color: #0A0C0F; background: var(--accent); border-color: var(--accent); }
+.dviews__tab:hover { color: var(--text); }
+/* активный таб — тёмный с лаймовой рамкой: чёрный текст на синем не читался */
+.dviews__tab.is-on { color: var(--accent); background: rgba(55, 123, 240, .16); box-shadow: inset 0 0 0 1px var(--accent); }
 
-.dcal { border: 1px solid var(--line); border-radius: 6px; padding: 18px 18px 8px; background: var(--panel); margin-bottom: 26px; }
-.dcal__bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
-.dcal__month { font-family: var(--font-display); font-style: italic; font-size: var(--fs-h2); }
-.dcal__nav {
-  width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 4px;
-  background: transparent; color: var(--text); cursor: pointer; font-size: 16px; line-height: 1;
+.stripx { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; margin-bottom: 14px; }
+.stripx__range { font-family: var(--font-caps); font-size: var(--fs-small); letter-spacing: .12em; text-transform: uppercase; color: var(--text); }
+.stripx__wd { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.stripx__w { text-align: center; font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.stripx__row { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.stripx__cell {
+  position: relative; aspect-ratio: 4 / 3; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--muted);
+  display: grid; grid-template-rows: auto 1fr; align-items: start;
+  padding: 7px 9px 8px; cursor: default; transition: border-color .15s, background .15s;
 }
-.dcal__nav:hover { border-color: var(--accent); color: var(--accent); }
-.dcal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
-.dcal__wd { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-align: center; padding-bottom: 6px; }
-.dcal__empty { min-height: 44px; }
-.dcal__day {
-  position: relative; min-height: 44px; border: 1px solid transparent; border-radius: 4px;
-  background: transparent; color: var(--muted); font-size: var(--fs-small); cursor: default;
-}
-.dcal__day.has { color: var(--text); border-color: var(--line); cursor: pointer; }
-.dcal__day.has:hover { border-color: var(--accent); color: var(--accent); }
-.dcal__day.active { border-color: var(--accent); color: #0A0C0F; background: var(--accent); }
-.dcal__dot {
-  position: absolute; right: 4px; top: 3px; font-style: normal;
-  font-family: var(--font-mono); font-size: 10px; line-height: 1; color: var(--accent);
-}
-.dcal__day.active .dcal__dot { color: #0A0C0F; }
-.dcal__panel { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; }
-.dcal__ptitle { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-.dcal__item { display: grid; grid-template-columns: max-content 1fr auto; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
-.dcal__item:last-child { border-bottom: 0; }
-.dcal__item:hover .dcal__name { color: var(--accent); }
-.dcal__part { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.dcal__name { font-family: var(--font-display); font-style: italic; font-size: var(--fs-card); line-height: 1.25; }
-.dcal__count { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--muted); }
+.stripx__cell.has { color: var(--text); cursor: pointer; }
+.stripx__cell.has:hover { border-color: var(--accent); background: var(--panel); }
+.stripx__cell.today { box-shadow: inset 0 0 0 1px rgba(55, 123, 240, .55); }
+.stripx__cell.active { border-color: var(--accent); background: rgba(55, 123, 240, .16); }
+.stripx__n { font-family: var(--font-display); font-style: italic; font-size: var(--fs-card); line-height: 1; }
+/* «эта неделя» и «следующая»: вторая строка приглушена, первая — на панели */
+.stripx__cell.next { background: transparent; opacity: .72; }
+.stripx__cell.has .stripx__n { color: var(--text); }
+.stripx__cell.active .stripx__n { color: var(--accent); }
+.stripx__dots { align-self: end; display: flex; gap: 4px; }
+.stripx__dot { width: 7px; height: 7px; border-radius: 50%; background: #F5C518; }
 
-@media (max-width: 560px) {
-  .dcal { padding: 14px 10px 6px; }
-  .dcal__grid { gap: 4px; }
-  .dcal__day { min-height: 40px; }
-  .dcal__month { font-size: var(--fs-card); }
+.stripx__dot.is-evening { background: var(--part-eve, #A855F7); }
+.stripx__nav {
+  width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--panel); color: var(--text); cursor: pointer; font-size: 17px; line-height: 1;
+  transition: border-color .15s, color .15s, transform .1s;
+}
+.stripx__nav:hover { border-color: var(--accent); color: var(--accent); }
+.stripx__nav:active { transform: scale(.95); }
+.stripx__panel { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 4px; }
+.stripx__ptitle { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.stripx__item { display: grid; grid-template-columns: max-content 1fr auto; gap: 12px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.stripx__item:last-child { border-bottom: 0; }
+.stripx__item:hover .stripx__name { color: var(--accent); }
+.stripx__part { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.stripx__name { font-family: var(--font-display); font-style: italic; font-size: var(--fs-card); line-height: 1.25; }
+.stripx__count { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--muted); }
+
+@media (max-width: 640px) {
+  .dviews__tabs { display: flex; width: 100%; }
+  .dviews__tab { flex: 1 1 0; padding: 9px 10px; letter-spacing: .06em; }
+  .stripx { grid-template-columns: 1fr auto; gap: 10px; }
+  .stripx__wd { display: none; }
+  .stripx__range { grid-column: 1; }
+  .stripx__nav { grid-row: 1; }
+  .stripx__row { gap: 4px; }
+  .stripx__cell { padding: 6px; border-radius: 8px; }
+  .stripx__n { font-size: var(--fs-small); }
 }
 """
 
@@ -2481,11 +2504,11 @@ def render_digest(d, theme, next_d=None, prev_d=None):
 
 
 def _digest_calendar(digests):
-    """Календарь выпусков: сетка месяца, клик по дате — выпуски этого дня.
+    """Календарь выпусков на две недели: сегодня и шесть дней вперёд + следующая неделя.
 
-    Список остаётся основным видом (он же индексируется), календарь — второй вид
-    поверх тех же данных. Данные кладём JSON-ом в страницу: сетку и переходы
-    между месяцами рисует маленький скрипт, без библиотек и внешних запросов.
+    Квадратные ячейки 7×2, точки — выпуски (лайм — утренний, фиолетовый —
+    вечерний), клик по дню показывает этот день в панели под сеткой.
+    Стрелки листают окно на неделю. Данные — JSON в странице, без запросов.
     """
     data = []
     for d in digests:
@@ -2493,109 +2516,102 @@ def _digest_calendar(digests):
             "d": d["date"].strftime("%Y-%m-%d"),
             "p": part_of_day(d["date"]).upper(),
             "t": sentence_case(strip_prefix(d["title"])),
-            "s": d["summary"] or "",
             "u": "/digests/%s.html" % d["slug"],
             "n": len(d["items"]),
         })
     payload = json.dumps(data, ensure_ascii=False)
-    return """<div class="dcal" id="dcal">
-  <div class="dcal__bar">
-    <button class="dcal__nav" type="button" data-step="-1" aria-label="Предыдущий месяц">←</button>
-    <span class="dcal__month" id="dcalMonth"></span>
-    <button class="dcal__nav" type="button" data-step="1" aria-label="Следующий месяц">→</button>
-  </div>
-  <div class="dcal__grid" id="dcalGrid"></div>
-  <div class="dcal__panel" id="dcalPanel"></div>
+    return """<div class="stripx" id="dcal">
+  <button class="stripx__nav" type="button" id="sxPrev" aria-label="Предыдущая неделя">←</button>
+  <div class="stripx__range" id="sxRange"></div>
+  <button class="stripx__nav" type="button" id="sxNext" aria-label="Следующая неделя">→</button>
+  <div class="stripx__wd" id="sxWd"></div>
+  <div class="stripx__row" id="sxGrid"></div>
+  <div class="stripx__panel" id="sxPanel" style="grid-column:1/-1"></div>
 </div>
 <script>
 (function () {
   var DATA = %s;
-  var grid = document.getElementById("dcalGrid");
-  var panel = document.getElementById("dcalPanel");
-  var label = document.getElementById("dcalMonth");
+  var grid = document.getElementById("sxGrid");
+  var panel = document.getElementById("sxPanel");
+  var range = document.getElementById("sxRange");
+  var wdBox = document.getElementById("sxWd");
   var byDate = {};
   DATA.forEach(function (x) { (byDate[x.d] = byDate[x.d] || []).push(x); });
-  var dates = Object.keys(byDate).sort();
-  if (!dates.length) { document.getElementById("dcal").style.display = "none"; return; }
-  var cur = new Date(dates[dates.length - 1] + "T00:00:00");
-  var MONTHS = ["Январь","Февраль","Март","Апрель","Май","Июнь",
-                "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
-  var WD = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
-  var MONTHS_GEN = ["января","февраля","марта","апреля","мая","июня",
-                    "июля","августа","сентября","октября","ноября","декабря"];
+  var WD = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+  var MG = ["января", "февраля", "марта", "апреля", "мая", "июня",
+            "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+  wdBox.innerHTML = WD.map(function (w) { return '<span class="stripx__w">' + w + "</span>"; }).join("");
 
-  function pad(n) { return n < 10 ? "0" + n : "" + n; }
-  function key(y, m, d) { return y + "-" + pad(m + 1) + "-" + pad(d); }
+  function midnight(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function addDays(d, n) { var x = new Date(d.getTime()); x.setDate(x.getDate() + n); return midnight(x); }
+  function iso(d) { return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
 
-  function renderPanel(iso) {
-    var items = byDate[iso] || [];
-    if (!items.length) { panel.innerHTML = ""; return; }
-    var d = new Date(iso + "T00:00:00");
-    var head = d.getDate() + " " + MONTHS_GEN[d.getMonth()] + " " + d.getFullYear();
-    var html = '<div class="dcal__ptitle">' + head + "</div>";
+  var today = midnight(new Date());
+  var start = addDays(today, -((today.getDay() + 6) %% 7));
+
+  function rangeText(a, b) {
+    if (a.getMonth() === b.getMonth()) {
+      return a.getDate() + "–" + b.getDate() + " " + MG[b.getMonth()];
+    }
+    return a.getDate() + " " + MG[a.getMonth()] + " – " + b.getDate() + " " + MG[b.getMonth()];
+  }
+
+  function panelFor(isoDate) {
+    var items = byDate[isoDate] || [];
+    if (!items.length) { panel.innerHTML = ""; panel.style.display = "none"; return; }
+    var d = new Date(isoDate + "T00:00:00");
+    var html = '<div class="stripx__ptitle">' + d.getDate() + " " + MG[d.getMonth()] + "</div>";
     items.forEach(function (x) {
-      html += '<a class="dcal__item" href="' + x.u + '">' +
-              '<span class="dcal__part">' + x.p + '</span>' +
-              '<span class="dcal__name">' + x.t + '</span>' +
-              '<span class="dcal__count">' + x.n + "</span></a>";
+      html += '<a class="stripx__item" href="' + x.u + '">' +
+              '<span class="stripx__part">' + x.p + "</span>" +
+              '<span class="stripx__name">' + x.t + "</span>" +
+              '<span class="stripx__count">' + x.n + "</span></a>";
     });
     panel.innerHTML = html;
+    panel.style.display = "";
   }
 
-  function render() {
-    var y = cur.getFullYear(), m = cur.getMonth();
-    label.textContent = MONTHS[m] + " " + y;
-    var first = new Date(y, m, 1);
-    var start = (first.getDay() + 6) %% 7;   // понедельник — первый
-    var days = new Date(y, m + 1, 0).getDate();
-    var html = WD.map(function (w) { return '<span class="dcal__wd">' + w + "</span>"; }).join("");
-    for (var i = 0; i < start; i++) html += '<span class="dcal__empty"></span>';
-    for (var d = 1; d <= days; d++) {
-      var iso = key(y, m, d);
-      var has = byDate[iso];
-      html += '<button type="button" class="dcal__day' + (has ? " has" : "") +
-              '" data-date="' + iso + '"' + (has ? "" : " disabled") + ">" +
-              d + (has ? '<i class="dcal__dot">' + has.length + "</i>" : "") + "</button>";
+  function render(pick) {
+    range.textContent = rangeText(start, addDays(start, 13));
+    var html = "";
+    var lastHas = null;
+    for (var i = 0; i < 14; i++) {
+      var day = addDays(start, i), k = iso(day), items = byDate[k];
+      var cls = "stripx__cell" + (items ? " has" : "") +
+                (k === iso(today) ? " today" : "") + (i > 6 ? " next" : "");
+      var dots = "";
+      if (items) {
+        lastHas = k;
+        var morning = false, evening = false;
+        items.forEach(function (x) { if (x.p === "ВЕЧЕР") evening = true; else morning = true; });
+        if (morning) dots += '<i class="stripx__dot"></i>';
+        if (evening) dots += '<i class="stripx__dot is-evening"></i>';
+      }
+      html += '<button type="button" class="' + cls + '" data-date="' + k + '"' +
+              (items ? "" : " disabled") + '><span class="stripx__n">' + day.getDate() +
+              '</span><span class="stripx__dots">' + dots + "</span></button>";
     }
     grid.innerHTML = html;
-    grid.querySelectorAll(".dcal__day.has").forEach(function (b) {
+    grid.querySelectorAll(".stripx__cell.has").forEach(function (b) {
       b.addEventListener("click", function () {
-        grid.querySelectorAll(".dcal__day.active").forEach(function (x) { x.classList.remove("active"); });
+        grid.querySelectorAll(".stripx__cell.active").forEach(function (x) { x.classList.remove("active"); });
         b.classList.add("active");
-        renderPanel(b.dataset.date);
+        panelFor(b.dataset.date);
       });
     });
-    var monthKey = key(y, m, 1).slice(0, 7);
-    var last = dates.filter(function (x) { return x.slice(0, 7) === monthKey; }).pop();
-    if (last) {
-      var b = grid.querySelector('[data-date="' + last + '"]');
-      if (b) { b.classList.add("active"); renderPanel(last); return; }
+    var want = pick && byDate[pick] ? pick : lastHas;
+    if (want) {
+      var el = grid.querySelector('[data-date="' + want + '"]');
+      if (el) { el.classList.add("active"); panelFor(want); return; }
     }
-    panel.innerHTML = '<div class="dcal__ptitle">В этом месяце выпусков нет</div>';
+    panel.innerHTML = ""; panel.style.display = "none";
   }
 
-  document.querySelectorAll(".dcal__nav").forEach(function (b) {
-    b.addEventListener("click", function () {
-      cur = new Date(cur.getFullYear(), cur.getMonth() + Number(b.dataset.step), 1);
-      render();
-    });
-  });
-  render();
-
-  // Ссылка ?date=YYYY-MM-DD открывает нужный месяц и день — так календарём
-  // можно делиться (ископаемый архив не теряется).
+  document.getElementById("sxPrev").addEventListener("click", function () { start = addDays(start, -7); render(); });
+  document.getElementById("sxNext").addEventListener("click", function () { start = addDays(start, 7); render(); });
   var q = (location.search.match(/[?&]date=(\d{4}-\d{2}-\d{2})/) || [])[1];
-  if (q) {
-    var probe = new Date(q + "T00:00:00");
-    if (!isNaN(probe) && q.slice(0, 7) !== key(cur.getFullYear(), cur.getMonth(), 1).slice(0, 7)) {
-      cur = new Date(probe.getFullYear(), probe.getMonth(), 1);
-      render();
-    }
-    if (q.slice(0, 7) === key(cur.getFullYear(), cur.getMonth(), 1).slice(0, 7)) {
-      var el = grid.querySelector('[data-date="' + q + '"]');
-      if (el && el.classList.contains("has")) el.click();
-    }
-  }
+  if (q) { start = addDays(new Date(q + "T00:00:00"), -((new Date(q + "T00:00:00").getDay() + 6) %% 7)); }
+  render(q);
 })();
 </script>""" % payload
 
@@ -2640,7 +2656,7 @@ def render_digests_index(digests, theme):
             "на первоисточники. Выпусков в архиве: %d." % len(digests))
     return page("Дайджесты — короткие новости GEEKOVSKI", desc, content, theme,
                 canonical=url, og_alt="Дайджесты GEEKOVSKI",
-                digest_css="<style>%s</style>" % DIGEST_VIEW_CSS,
+                digest_css="<style>%s</style>\n<style>%s</style>" % (DIGEST_VIEW_CSS, DIGEST_HIDE_LEAD),
                 jsonld=ldjson(ld_org(), ld_website(),
                               {"@type": "CollectionPage", "@id": url + "#page", "url": url,
                                "name": "Дайджесты", "description": desc, "inLanguage": "ru-RU",
