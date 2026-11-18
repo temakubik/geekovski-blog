@@ -8,6 +8,60 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-18-0800-tga-2026-nominacii.html",
+   "url": "https://geekovski.ru/2026-11-18-0800-tga-2026-nominacii.html",
+   "title": "Nintendo обошла всех в номинациях The Game Awards",
+   "summary": "Шоу The Game Awards 17 ноября объявило номинантов 2026 года: Nintendo получила 12 номинаций на шесть игр и стала самым номинированным издателем, а Grand Theft Auto VI взяла восемь — за два дня до собственного релиза и до первых рецензий.",
+   "date_published": "2026-11-18T08:00:00+03:00",
+   "date_modified": "2026-11-18T08:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/tga-2026-nominacii-cover.jpg",
+   "_sources": [
+    {
+     "name": "VGC — номинации и счёт по издателям",
+     "url": "https://www.videogameschronicle.com/news/gta-6-is-the-most-nominated-game-at-the-game-awards-2026/"
+    },
+    {
+     "name": "Nintendo Life — что номинировали у Nintendo",
+     "url": "https://www.nintendolife.com/news/2026/11/ocarina-of-time-pokopia-fire-emblem-and-more-pick-up-the-game-awards-2026-nominations"
+    },
+    {
+     "name": "Epic Games Store — полный список категорий",
+     "url": "https://store.epicgames.com/news/the-game-awards-2026-nominees"
+    },
+    {
+     "name": "Deadline — восемь номинаций GTA VI",
+     "url": "https://deadline.com/2026/11/grand-theft-auto-vi-game-awards-nominations-1237227159"
+    },
+    {
+     "name": "The Game Awards — номинанты и голосование",
+     "url": "https://thegameawards.com/nominees"
+    },
+    {
+     "name": "Rockstar Games — релиз GTA VI 19 ноября",
+     "url": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026"
+    },
+    {
+     "name": "Nintendo — 5,2 млн копий Ocarina of Time за четыре дня",
+     "url": "https://www.nintendo.com/us/whatsnew/the-legend-of-zelda-ocarina-of-time-for-nintendo-switch-2-sells-over-5-2-million-units-worldwide-in-first-four-days"
+    },
+    {
+     "name": "Metacritic — оценки ремейка Ocarina of Time",
+     "url": "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/"
+    },
+    {
+     "name": "Wikipedia — правила допуска и итоги номинаций",
+     "url": "https://en.wikipedia.org/wiki/The_Game_Awards_2026"
+    },
+    {
+     "name": "Disney+ — трансляция 10 декабря, 19:30 ET",
+     "url": "https://press.disneyplus.com/news/the-game-awards"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-17-2100-meta-120-mln-vr-igry.html",
    "url": "https://geekovski.ru/2026-11-17-2100-meta-120-mln-vr-igry.html",
    "title": "Meta зарезервировала $120 млн под VR-игры",
