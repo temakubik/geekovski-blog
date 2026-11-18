@@ -382,6 +382,7 @@ PAGE = """<!DOCTYPE html>
 <script>try{{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}}catch(e){{}}</script>
 {metrika}
 {jsonld}
+{digest_css}
 </head>
 <body class="t-{theme}">
 <header class="top">
@@ -657,7 +658,7 @@ def verify_meta():
 
 def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
          og_type="website", robots=ROBOTS_INDEX, article=None, og_alt=None,
-         metrika=None):
+         metrika=None, digest_css=""):
     canonical_tag = '<link rel="canonical" href="%s">' % html.escape(canonical, quote=True) if canonical else ""
     og_url = '<meta property="og:url" content="%s">' % html.escape(canonical, quote=True) if canonical else ""
     article_meta = ""
@@ -677,6 +678,7 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         article_meta=article_meta, jsonld=jsonld,
         verify=verify_meta(),
         metrika=METRIKA_COUNTER if metrika is None else metrika,
+        digest_css=digest_css,
     )
 
 
@@ -1528,6 +1530,62 @@ def image_report(posts):
         if len(slugs) > 1:
             problems.append("в разных статьях: %s — %s" % (name, ", ".join(sorted(slugs))))
     return problems
+
+
+# Стили переключателя видов дайджестов и сетки календаря лежат здесь, а не в
+# editorial.css. Причина: в большом theme.css (50 КБ) Chromium переставал
+# применять правила, стоящие после тяжёлого блока (баг разбора: файл читался
+# целиком, а последние ~36 правил отбрасывались). Отдаём их отдельным
+# inline-<style> и проверяем страницу в браузере, а не только в CSS-файле.
+DIGEST_VIEW_CSS = """/* Дайджесты: переключатель «список / календарь» */
+.dviews__tabs { display: flex; gap: 8px; margin: 0 0 18px; }
+.dviews__tab {
+  font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer;
+}
+.dviews__tab:hover { color: var(--text); border-color: var(--muted); }
+.dviews__tab.is-on { color: #0A0C0F; background: var(--accent); border-color: var(--accent); }
+
+.dcal { border: 1px solid var(--line); border-radius: 6px; padding: 18px 18px 8px; background: var(--panel); margin-bottom: 26px; }
+.dcal__bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.dcal__month { font-family: var(--font-display); font-style: italic; font-size: var(--fs-h2); }
+.dcal__nav {
+  width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 4px;
+  background: transparent; color: var(--text); cursor: pointer; font-size: 16px; line-height: 1;
+}
+.dcal__nav:hover { border-color: var(--accent); color: var(--accent); }
+.dcal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.dcal__wd { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-align: center; padding-bottom: 6px; }
+.dcal__empty { min-height: 44px; }
+.dcal__day {
+  position: relative; min-height: 44px; border: 1px solid transparent; border-radius: 4px;
+  background: transparent; color: var(--muted); font-size: var(--fs-small); cursor: default;
+}
+.dcal__day.has { color: var(--text); border-color: var(--line); cursor: pointer; }
+.dcal__day.has:hover { border-color: var(--accent); color: var(--accent); }
+.dcal__day.active { border-color: var(--accent); color: #0A0C0F; background: var(--accent); }
+.dcal__dot {
+  position: absolute; right: 4px; top: 3px; font-style: normal;
+  font-family: var(--font-mono); font-size: 10px; line-height: 1; color: var(--accent);
+}
+.dcal__day.active .dcal__dot { color: #0A0C0F; }
+.dcal__panel { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; }
+.dcal__ptitle { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.dcal__item { display: grid; grid-template-columns: max-content 1fr auto; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.dcal__item:last-child { border-bottom: 0; }
+.dcal__item:hover .dcal__name { color: var(--accent); }
+.dcal__part { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.dcal__name { font-family: var(--font-display); font-style: italic; font-size: var(--fs-card); line-height: 1.25; }
+.dcal__count { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--muted); }
+
+@media (max-width: 560px) {
+  .dcal { padding: 14px 10px 6px; }
+  .dcal__grid { gap: 4px; }
+  .dcal__day { min-height: 40px; }
+  .dcal__month { font-size: var(--fs-card); }
+}
+"""
 
 
 def build(theme, out_dir, content_dir=None):
@@ -2523,6 +2581,21 @@ def _digest_calendar(digests):
     });
   });
   render();
+
+  // Ссылка ?date=YYYY-MM-DD открывает нужный месяц и день — так календарём
+  // можно делиться (ископаемый архив не теряется).
+  var q = (location.search.match(/[?&]date=(\d{4}-\d{2}-\d{2})/) || [])[1];
+  if (q) {
+    var probe = new Date(q + "T00:00:00");
+    if (!isNaN(probe) && q.slice(0, 7) !== key(cur.getFullYear(), cur.getMonth(), 1).slice(0, 7)) {
+      cur = new Date(probe.getFullYear(), probe.getMonth(), 1);
+      render();
+    }
+    if (q.slice(0, 7) === key(cur.getFullYear(), cur.getMonth(), 1).slice(0, 7)) {
+      var el = grid.querySelector('[data-date="' + q + '"]');
+      if (el && el.classList.contains("has")) el.click();
+    }
+  }
 })();
 </script>""" % payload
 
@@ -2567,6 +2640,7 @@ def render_digests_index(digests, theme):
             "на первоисточники. Выпусков в архиве: %d." % len(digests))
     return page("Дайджесты — короткие новости GEEKOVSKI", desc, content, theme,
                 canonical=url, og_alt="Дайджесты GEEKOVSKI",
+                digest_css="<style>%s</style>" % DIGEST_VIEW_CSS,
                 jsonld=ldjson(ld_org(), ld_website(),
                               {"@type": "CollectionPage", "@id": url + "#page", "url": url,
                                "name": "Дайджесты", "description": desc, "inLanguage": "ru-RU",

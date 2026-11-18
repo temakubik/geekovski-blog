@@ -11,7 +11,7 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 12 материалов
+- [Xbox](https://geekovski.ru/xbox/): 13 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 16 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 16 материалов
 - [PC-игры](https://geekovski.ru/pc/): 27 материалов
@@ -26,6 +26,7 @@
 ## Материалы
 
 - [Infobar Zero: KDDI выпустила телефон без браузера и соцсетей за 32 780 иен](https://geekovski.ru/2026-11-18-infobar-zero.html): Японский оператор KDDI показал Infobar Zero — кнопочный телефон, который сознательно не умеет выходить в интернет и не поддерживает соцсети. Внутри 4G для звонков и SMS, камера на 2 Мп с «ретро»-обработкой, 1 ГБ памяти и разъём для проводных наушников. Цена — 32 780 иен, продажи с 25 декабря. (18.11.2026)
+- [Game Pass с 18 ноября: девять игр, пять из них не новинки](https://geekovski.ru/2026-11-18-1200-game-pass-volna-premium.html): Microsoft расписала вторую ноябрьскую волну Game Pass — девять игр с 18 ноября по 1 декабря. Но у пяти из них стоит приписка «теперь и в Premium»: это переезд из каталога Ultimate, а не пополнение, и обе игры «дня выхода» проходят мимо среднего тарифа. (18.11.2026)
 - [Файги о «Секретных войнах»: финал саги будет «совсем другим жанром», чем «Судный день»](https://geekovski.ru/2026-11-18-feige-secret-wars.html): Кевин Файги в интервью Empire заявил, что «Мстители: Секретные войны» — «совсем другой жанр истории» по сравнению с «Судным днём». Братья Руссо обещают «по-настоящему уникальный мир», но ни жанр, ни сюжет не названы. «Судный день» выйдет 18 декабря 2026-го, «Секретные войны» — 17 декабря 2027-го. (18.11.2026)
 - [«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь](https://geekovski.ru/2026-11-18-3bp-season2.html): Netflix выпустил первый тизер второго сезона «Задачи трёх тел» и объявил дату — 14 января. В ролике Сан-Ти обращаются к человечеству с предложением мира, а шоураннеры говорят, что сезон будет не про тайну, а про то, как люди привыкают жить под угрозой. (18.11.2026)
 - [Apple N50: первые очки Apple покажут в июне 2027 — без экрана, но с Siri и камерами](https://geekovski.ru/2026-11-18-apple-n50-ochki.html): По данным Bloomberg, Apple представит первые умные очки на WWDC в июне 2027 года и начнёт продажи до конца года. Внутреннее имя — N50: прототипы тоньше Ray-Ban Meta, камеры утоплены в оправу, дисплея нет — интерфейс строят вокруг Siri и приложений iPhone. (18.11.2026)
@@ -249,6 +250,7 @@
 - [Задача трёх тел](https://geekovski.ru/titles/3-body-problem.html): 2024
 - [«Задача трёх тел», сезон 2](https://geekovski.ru/titles/3-body-problem-2.html): 2027
 - [Angry Birds 3 в кино](https://geekovski.ru/titles/angry-birds-3-v-kino.html): 2026
+- [Arkheron](https://geekovski.ru/titles/arkheron.html): 2026
 - [Atomfall](https://geekovski.ru/titles/atomfall.html): 2025
 - [«Мстители: Судный день»](https://geekovski.ru/titles/avengers-doomsday.html): 2026
 - [Big Walk](https://geekovski.ru/titles/big-walk.html): 2026
@@ -270,6 +272,7 @@
 - [Godzilla Minus Zero](https://geekovski.ru/titles/godzilla-minus-zero.html): 2026
 - [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
 - [Grand Theft Auto VI](https://geekovski.ru/titles/gta-6.html): 2026
+- [Hela: of Mice & Magic](https://geekovski.ru/titles/hela-of-mice-magic.html): 2026
 - [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
 - [«Голодные игры: Рассвет жатвы»](https://geekovski.ru/titles/hunger-games-rassvet-zhatvy.html): 2026
 - [Властелин колец: Кольца власти, сезон 3](https://geekovski.ru/titles/kolca-vlasti-3-sezon.html): 2026
