@@ -1725,7 +1725,11 @@ def build(theme, out_dir, content_dir=None):
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(render_cat(c, name, [p for p in posts if p["category"] == c], theme), encoding="utf-8")
     (out / "rss.xml").write_text(rss(posts), encoding="utf-8")
-    (out / "vk.xml").write_text(vk_feed(posts), encoding="utf-8")
+    # BOM перед декларацией: GitHub Pages отдаёт фид как application/xml без
+    # charset, и парсеры (в первую очередь импортёр ВКонтакте) сваливаются в
+    # windows-1251 — русские заголовки приезжают «РѕС‚Р±РёР»Р°СЃСЊ». BOM
+    # заставляет читать поток как UTF-8. Для обычных читалок он безвреден.
+    (out / "vk.xml").write_text("\ufeff" + vk_feed(posts), encoding="utf-8")
     dgdir = out / "digests"
     dgdir.mkdir(exist_ok=True)
     (dgdir / "index.html").write_text(render_digests_index(digests, theme), encoding="utf-8")
