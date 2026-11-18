@@ -1521,12 +1521,15 @@ def robots_txt():
     return "\n".join(lines)
 
 
-def llms_txt(posts, digests, titles=None):
+def llms_txt(posts, digests, titles=None, authors=None):
     """llms.txt по llmstxt.org: короткая карта сайта для языковых моделей.
 
     Не заменяет индексацию, но даёт LLM готовый список материалов со ссылками,
     датами и сутью — то, из чего собирается ответ со ссылкой на источник.
+    Авторы идут отдельным разделом со своими лентами: по ним модель может взять
+    материалы одного человека, а не весь канал целиком.
     """
+    authors = AUTHORS if authors is None else authors
     out = ["# %s" % SITE["title"],
            "",
            "> %s. Разборы новостей игровой индустрии, техники, кино и AI: проверяемые факты, "
@@ -1548,8 +1551,17 @@ def llms_txt(posts, digests, titles=None):
         out.append("- [%s](%s/%s/): %d %s" % (name, SITE["url"], c, len(items),
                                               plural(len(items), "материал", "материала", "материалов")))
     out += ["- [Дайджесты](%s/digests/): короткие выпуски новостей" % SITE["url"],
-            "- [Календарь анонсов](%s/calendar/): подтверждённые даты релизов игр, фильмов и сериалов" % SITE["url"],
-            "", "## Материалы", ""]
+            "- [Календарь анонсов](%s/calendar/): подтверждённые даты релизов игр, фильмов и сериалов" % SITE["url"]]
+    if authors:
+        out += ["", "## Авторы", ""]
+        for a in authors:
+            full, _nick, _meta = _author_names(a)
+            mine = author_posts(a, posts)
+            out.append("- [%s](%s/avtory/%s.html): %s. %d %s; лента автора — %s/avtory/%s.xml" % (
+                full, SITE["url"], a["slug"], a["role"], len(mine),
+                plural(len(mine), "материал", "материала", "материалов"),
+                SITE["url"], a["slug"]))
+    out += ["", "## Материалы", ""]
     for p in posts:
         out.append("- [%s](%s/%s.html): %s (%s)" % (
             p["title"], SITE["url"], p["slug"], (p["summary"] or plain(p["body"], 160)).replace("\n", " "),
@@ -1906,7 +1918,7 @@ def build(theme, out_dir, content_dir=None):
     shutil.copy(ROOT / "static" / "sw.js", out / "sw.js")
     (out / "offline.html").write_text(offline_page(theme), encoding="utf-8")
     (out / "robots.txt").write_text(robots_txt(), encoding="utf-8")
-    (out / "llms.txt").write_text(llms_txt(posts, digests, TITLES), encoding="utf-8")
+    (out / "llms.txt").write_text(llms_txt(posts, digests, TITLES, AUTHORS), encoding="utf-8")
     (out / "llms-full.txt").write_text(llms_full_txt(posts), encoding="utf-8")
     (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests",
                                      self_name="feed.xml"), encoding="utf-8")
