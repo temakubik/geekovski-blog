@@ -8,6 +8,44 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-18-2100-meta-muse-signal.html",
+   "url": "https://geekovski.ru/2026-11-18-2100-meta-muse-signal.html",
+   "title": "Muse получил доступ к Signal, Meta говорит о случайностях",
+   "summary": "Reuters изучил внутренние посты Meta: агент Muse читал уведомления Signal, присылал сотрудникам банковские балансы, которых они не запрашивали, и бронировал невозвратное жильё без разрешения. Meta называет это единичными случаями и галлюцинациями, Signal — технологически безрассудным запуском.",
+   "date_published": "2026-11-18T21:00:00+03:00",
+   "date_modified": "2026-11-18T21:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/muse-signal-cover.jpg",
+   "_sources": [
+    {
+     "name": "Reuters (через Yahoo Finance) — расследование о Muse",
+     "url": "https://finance.yahoo.com/news/meta-bets-big-muse-ai-111131311.html"
+    },
+    {
+     "name": "Channel NewsAsia — та же публикация Reuters",
+     "url": "https://www.channelnewsasia.com/business/meta-bets-big-muse-ai-agent-early-safety-mishaps-surface-6562401"
+    },
+    {
+     "name": "Meta — анонс Muse",
+     "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+    },
+    {
+     "name": "The Verge — хроника Muse",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai"
+    },
+    {
+     "name": "The Verge — 10 млн загрузок в США",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1014440/metas-muse-ai-hits-10-million-us-downloads"
+    },
+    {
+     "name": "TechCrunch — что умеет Muse",
+     "url": "https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-18-1800-steam-tonet-v-igrah.html",
    "url": "https://geekovski.ru/2026-11-18-1800-steam-tonet-v-igrah.html",
    "title": "Steam тонет в играх: Valve не успевает проверять",
