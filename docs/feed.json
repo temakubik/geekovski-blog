@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html",
+   "url": "https://geekovski.ru/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html",
+   "title": "Китай исчез из прогноза NVIDIA: H200 больше не возят",
+   "summary": "На звонке по итогам квартала и. о. гендиректора Колетт Кресс заявила, что NVIDIA больше не поставляет лицензионные Hopper в Китай, и в прогнозе на следующий квартал китайских чипов нет вообще. Причину остановки компания не назвала и не уточнила, постоянная ли она.",
+   "date_published": "2026-11-19T21:00:00+03:00",
+   "date_modified": "2026-11-19T21:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/nvidia-kitaj-gonkong-cover.jpg",
+   "_sources": [
+    {
+     "name": "NVIDIA — финрезультаты III квартала фискального 2027-го",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027"
+    },
+    {
+     "name": "Reuters — Nvidia прекратила поставки одобренных США чипов в Китай",
+     "url": "https://finance.yahoo.com/news/nvidia-stops-shipping-us-approved-091655590.html"
+    },
+    {
+     "name": "CBS News — Кресс о прекращении поставок Hopper",
+     "url": "https://www.cbsnews.com/news/nvidia-stops-shipping-hopper-chips-china/"
+    },
+    {
+     "name": "Yahoo Finance — оценка Jefferies и доля Китая в выручке",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidias-q3-beat-solid-view-134500511.html"
+    },
+    {
+     "name": "CNBC — реакция аналитиков на звонок",
+     "url": "https://www.cnbc.com/2026/11/17/nvidia-q3-earnings-analyst-reaction.html"
+    },
+    {
+     "name": "CNBC — разбор отчёта и новых правил",
+     "url": "https://www.cnbc.com/2026/11/18/nvidia-earnings-market-analysis.html"
+    },
+    {
+     "name": "Yahoo Finance — торги 18 ноября и показания в Конгрессе",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-quarterly-revenue-doubles-first-211751834.html"
+    },
+    {
+     "name": "The Verge — H200 и Китай",
+     "url": "https://theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-19-1800-mindseye-dolg-61-mln.html",
    "url": "https://geekovski.ru/2026-11-19-1800-mindseye-dolg-61-mln.html",
    "title": "«MindsEye»: £61,7 млн долга и надежда на иски",
