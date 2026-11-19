@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-19-1200-anthropic-ipo-83.html",
+   "url": "https://geekovski.ru/2026-11-19-1200-anthropic-ipo-83.html",
+   "title": "Anthropic оценили в $1,5 трлн на старте торгов",
+   "summary": "Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд. Оценка на полностью разводнённой базе — около $1,5 трлн, сегодня бумаги под тикером ANT начинают торговаться на Nasdaq.",
+   "date_published": "2026-11-19T12:00:00+03:00",
+   "date_modified": "2026-11-19T12:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/anthropic-ipo-ant-office.jpg",
+   "_sources": [
+    {
+     "name": "Reuters / The Jerusalem Post — цена, объём и оценка",
+     "url": "https://www.jpost.com/business-and-innovation/article-915417"
+    },
+    {
+     "name": "The Guardian — прямая трансляция размещения",
+     "url": "https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-stock-market-nasdaq-raises-81bn-record-ipo-latest-news-updates"
+    },
+    {
+     "name": "CNBC — параметры выпуска и ретейл-аллокация",
+     "url": "https://www.cnbc.com/2026/11/16/anthropic-ipo-date-price-range.html"
+    },
+    {
+     "name": "Investing Live — официальный релиз о цене",
+     "url": "https://investinglive.com/stocks/anthropic-confirms-83-ipo-price-on-980-million-shares-in-an-81-billion-deal/"
+    },
+    {
+     "name": "The Market MBA — сравнение с базой SpaceX",
+     "url": "https://www.themarketmba.com/2026/11/18/anthropic-ipo-pricing-83-above-range/"
+    },
+    {
+     "name": "Euronews — Nvidia и фон вокруг ИИ-акций",
+     "url": "https://www.euronews.com/2026/11/19/anthropics-record-ipo-lands-as-nvidia-suffers-its-worst-run-since-2008"
+    },
+    {
+     "name": "Anthropic — страница размещения",
+     "url": "https://ipo.anthropic.com/us/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-19-1000-the-altruists-ftx-serial.html",
    "url": "https://geekovski.ru/2026-11-19-1000-the-altruists-ftx-serial.html",
    "title": "«The Altruists»: Netflix снял FTX как историю любви",
