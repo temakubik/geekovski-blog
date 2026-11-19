@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-19-1500-hunger-games-kritiki.html",
+   "url": "https://geekovski.ru/2026-11-19-1500-hunger-games-kritiki.html",
+   "title": "«Рассвет жатвы»: критики разделились, прокат ждёт $100 млн",
+   "summary": "Рецензии на приквел «Голодных игр» вышли 17 ноября, и оценки разъехались от одной звезды в The Guardian до четырёх в Time Out — на Rotten Tomatoes это 75–76%, на Metacritic 56 из 100. В США премьера 20 ноября, аналитики Boxoffice Pro ждут $100–120 млн за первые выходные и первый стомиллионный старт с июля.",
+   "date_published": "2026-11-19T15:00:00+03:00",
+   "date_modified": "2026-11-19T15:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/hunger-games-2026-kritiki.jpg",
+   "_sources": [
+    {
+     "name": "Boxoffice Pro — прогноз уикенда 20–22 ноября",
+     "url": "https://www.boxofficepro.com/weekend-preview-hunger-games-sunrise-on-the-reaping-looking-at-100m-debut/"
+    },
+    {
+     "name": "Entertainment Weekly — обзор рецензий",
+     "url": "https://ew.com/the-hunger-games-sunrise-on-the-reaping-polarizes-critics-12261140"
+    },
+    {
+     "name": "NME — реакция критиков",
+     "url": "https://www.nme.com/news/film/hunger-games-prequel-sunrise-on-the-reaping-review-3976301"
+    },
+    {
+     "name": "Deadline — рецензия",
+     "url": "https://deadline.com/2026/11/the-hunger-games-sunrise-on-the-reaping-review-1237224967/"
+    },
+    {
+     "name": "CineSum — карточка фильма и даты релиза",
+     "url": "https://cinesum.com/films/the-hunger-games-sunrise-on-the-reaping-2026"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-19-1200-anthropic-ipo-83.html",
    "url": "https://geekovski.ru/2026-11-19-1200-anthropic-ipo-83.html",
    "title": "Anthropic оценили в $1,5 трлн на старте торгов",
