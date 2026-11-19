@@ -240,7 +240,17 @@ def main():
     ap.add_argument("--token", help="ключ доступа (по умолчанию VK_GROUP_TOKEN)")
     ap.add_argument("--force", action="store_true", help="публиковать, даже если слаг уже в posted.json")
     ap.add_argument("--from-file", help="текст поста из файла, без обращения к content/posts")
+    ap.add_argument("--photo", help="фото-вложение для поста (jpg/png); для ссылки строкой это обязательно")
+    ap.add_argument("--id", dest="pid", help="идентификатор поста для дедупа, если он не из content/posts")
     args = ap.parse_args()
+
+    # ключи профиля: в кроне окружение пустое, .env профиля само не подхватится
+    sys.path.insert(0, str(ROOT / "tools"))
+    try:
+        import vk_smm
+        vk_smm.load_profile_env()
+    except Exception:
+        pass
 
     if not args.slug and not args.from_file:
         die("нужен --slug или --from-file")
@@ -260,12 +270,32 @@ def main():
         slug = meta["slug"]
     else:
         text = pathlib.Path(args.from_file).read_text(encoding="utf-8").strip()
-        slug = pathlib.Path(args.from_file).stem
+        slug = args.pid or pathlib.Path(args.from_file).stem
         if not url:
             die("для --from-file нужен --url — иначе нечего прикладывать сниппетом")
 
     if not url:
         die("не удалось определить ссылку на статью")
+
+    # Ссылка вложением больше не работает (ВК: link_photo_sizing_rule), поэтому
+    # картинку грузим через сессию пользователя и она идёт attachment-ом, а URL —
+    # отдельной строкой в тексте поста.
+    photo = None
+    if args.photo:
+        pth = pathlib.Path(args.photo).expanduser()
+        if not pth.exists():
+            die("нет файла фото: %s" % pth)
+        if url not in text:
+            text = text.rstrip() + "\n\n" + url
+        sys.path.insert(0, str(ROOT / "tools"))
+        import vk_session
+        try:
+            photo = vk_session.upload_wall_photo(pth, community_id(
+                args.owner or os.environ.get("VK_GROUP_ID", "")), vk_session.token())
+        except Exception as exc:
+            die("не удалось загрузить фото: %s" % exc)
+    elif args.post:
+        die("пост в ВК ставится только с фото: передай --photo (иначе ВК отбивает вложение-ссылку)")
 
     state = load_state()
     done = state.get(slug)
@@ -278,7 +308,7 @@ def main():
         if (args.owner or os.environ.get("VK_GROUP_ID")) else None,
         "from_group": 1,
         "message": text,
-        "attachments": url,
+        "attachments": photo or url,
         # guid одинаков для одной и той же статьи: повторный вызов в течение часа
         # VK отбросит сам, дубля на стене не будет.
         "guid": hashlib.md5(f"geekovski:{slug}:{url}".encode()).hexdigest(),

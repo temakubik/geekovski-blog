@@ -128,6 +128,47 @@ def token(max_age=FRESH_SECONDS) -> str:
     return ""
 
 
+def upload_wall_photo(path, community_id: str, tok: str) -> str:
+    """Загружает фото в альбом сообщества и возвращает строку для attachments.
+
+    Ключ сообщества этого не умеет: фото уезжает в приватный альбом и к стене не
+    цепляется. Работает только с сессией пользователя — поэтому токен берём
+    выше, а не из VK_GROUP_TOKEN. Без access_key ВК выбрасывает фото из вложения.
+    """
+    import mimetypes
+    import urllib.parse
+
+    def call(method, params):
+        req = urllib.request.Request(
+            "https://api.vk.ru/method/" + method + "?v=5.199",
+            data=urllib.parse.urlencode(params).encode(),
+            headers={"Authorization": "Bearer " + tok,
+                     "Content-Type": "application/x-www-form-urlencoded"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            payload = json.loads(r.read().decode())
+        if "error" in payload:
+            raise RuntimeError("%s: %s" % (method, payload["error"].get("error_msg")))
+        return payload["response"]
+
+    path = pathlib.Path(path)
+    server = call("photos.getWallUploadServer", {"group_id": community_id})
+    boundary = "----geekovski%d" % int(time.time())
+    ctype = mimetypes.guess_type(path.name)[0] or "image/jpeg"
+    body = ("--%s\r\nContent-Disposition: form-data; name=\"photo\"; filename=\"%s\"\r\n"
+            "Content-Type: %s\r\n\r\n" % (boundary, path.name, ctype)).encode()
+    body += path.read_bytes() + ("\r\n--%s--\r\n" % boundary).encode()
+    req = urllib.request.Request(server["upload_url"], data=body,
+                                 headers={"Content-Type": "multipart/form-data; boundary=" + boundary})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        up = json.loads(r.read().decode())
+    if not up.get("photo"):
+        raise RuntimeError("ВК вернул пустое фото (сбой загрузки), повтори")
+    saved = call("photos.saveWallPhoto", {"group_id": community_id, "photo": up["photo"],
+                                          "server": up["server"], "hash": up["hash"]})
+    ph = saved[0]
+    return "photo%s_%s_%s" % (ph["owner_id"], ph["id"], ph["access_key"])
+
+
 if __name__ == "__main__":
     tok = token()
     if not tok:

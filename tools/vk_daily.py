@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""Утренний расклад постов в ВК: три отложки на день из свежих статей блога.
+"""Расклад постов в ВК: три отложки в день из свежих статей блога.
 
     python3 tools/vk_daily.py            # показать, что уйдёт и когда (ничего не ставит)
     python3 tools/vk_daily.py --apply    # поставить отложенные записи в ВК
 
 Логика: берём статьи блога, которых ещё нет в content/vk/posted.json, самые
-свежие — вперёд, и раскладываем по трём слотам. Дубли отсекает posted.json,
-фото собирается карточкой с логотипом (vk_publish.py --photo auto).
+свежие — вперёд, и раскладываем по трём слотам. Дубли отсекает posted.json.
+
+Картинка обязательна: ссылка вложением не работает (`link_photo_sizing_rule`),
+поэтому пост идёт фото-вложением (карточка 16:9 с логотипом) + URL строкой.
+Фото грузится сессией пользователя из браузерного профиля `vk` — ключ
+сообщества этого не умеет.
 """
 
 import argparse
@@ -47,6 +51,27 @@ def busy_slots(gid: str) -> list:
         return []
 
 
+
+def make_card(slug: str) -> pathlib.Path:
+    """Карточка 16:9 с логотипом из обложки статьи (tools/make_vk_post_card.py)."""
+    meta = frontmatter(POSTS / ("%s.md" % slug))
+    cover = (meta.get("cover") or "").strip()
+    if not cover:
+        raise SystemExit("у статьи %s нет cover — карточку не из чего собрать" % slug)
+    if cover.startswith("/Users/"):
+        img = pathlib.Path(cover)
+    else:
+        img = ROOT / "static" / cover.replace("/assets/", "", 1)
+    out = ROOT / "content" / "vk" / "img" / ("%s-card.jpg" % slug)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if out.exists() and out.stat().st_mtime >= img.stat().st_mtime:
+        return out
+    subprocess.run([sys.executable, str(ROOT / "tools" / "make_vk_post_card.py"),
+                    "--img", str(img), "--label", (meta.get("category") or "GEEKOVSKI").upper(),
+                    "--out", str(out)], check=True, capture_output=True, cwd=str(ROOT))
+    return out
+
+
 def frontmatter(path: pathlib.Path) -> dict:
     raw = path.read_text(encoding="utf-8")
     meta = {}
@@ -72,6 +97,9 @@ def candidates(posted: dict, days: int = 3) -> list:
         if slug in posted:
             continue
         if meta.get("status") == "draft":
+            continue
+        # дайджесты и календарь — не отдельные материалы: в ВК им нечего сказать
+        if meta.get("kind") in ("digest", "calendar"):
             continue
         stamp = meta.get("date", "")
         try:
@@ -126,8 +154,13 @@ def main() -> int:
         print("         %s" % slug)
         if not args.apply or late or busy:
             continue
+        try:
+            card = make_card(slug)
+        except SystemExit as exc:
+            print("         ✗ " + str(exc))
+            continue
         res = subprocess.run(
-            [sys.executable, str(PUBLISH), "--slug", slug, "--photo", "auto",
+            [sys.executable, str(PUBLISH), "--slug", slug, "--photo", str(card),
              "--publish-at", run_at.strftime("%Y-%m-%d %H:%M"), "--post"],
             capture_output=True, text=True, cwd=str(ROOT))
         tail = ((res.stdout or "").strip().splitlines() or [""])[-1]
