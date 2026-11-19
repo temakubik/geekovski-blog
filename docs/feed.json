@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-19-0800-flipper-one-kickstarter.html",
+   "url": "https://geekovski.ru/2026-11-19-0800-flipper-one-kickstarter.html",
+   "title": "Flipper One: карманный Linux-компьютер собрал $12 млн",
+   "summary": "Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и слотом M.2 под 5G. Первый миллион долларов кампания собрала за десять минут, к 18 ноября — больше $12 млн и 23 тысяч бэкеров. Поставки обещают в июле 2027 года.",
+   "date_published": "2026-11-19T08:00:00+03:00",
+   "date_modified": "2026-11-19T08:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/flipper-one-cover.jpg",
+   "_sources": [
+    {
+     "name": "Flipper — страница Flipper One",
+     "url": "https://flipper.net/pages/flipper-one"
+    },
+    {
+     "name": "Kickstarter — кампания Flipper One",
+     "url": "https://www.kickstarter.com/projects/flipper-devices/flipper-one"
+    },
+    {
+     "name": "XDA Developers — разбор железа и модулей",
+     "url": "https://www.xda-developers.com/flipper-one-launches-kickstarter-trading-nfc-rfid-linux/"
+    },
+    {
+     "name": "The Verge — предзаказ и характеристики",
+     "url": "https://www.theverge.com/tech/1034392/flipper-devices-one-zero-pocket-linux-computer-multi-tool-preorder-kickstarter"
+    },
+    {
+     "name": "rtl-sdr.com — 23 тысячи бэкеров и $12 млн",
+     "url": "https://www.rtl-sdr.com/flipper-one-launches-on-kickstarter-a-linux-multi-tool-with-an-optional-sdr-module-and-mt7921-wi-fi/"
+    },
+    {
+     "name": "heise online — ход кампании и сроки",
+     "url": "https://www.heise.de/en/news/Record-Breaking-Crowdfunding-Flipper-One-Available-to-Preorder-on-Kickstarter-11528918.html"
+    },
+    {
+     "name": "Rozetked — российский разбор анонса",
+     "url": "https://rozetked.me/news/49533-flipper-devices-nachala-sbor-sredstv-na-miniatyurnyy-arm-komp-yuter-flipper-one"
+    },
+    {
+     "name": "Flipper Docs — статус mainline-ядра",
+     "url": "https://docs.flipper.net/one/cpu-software/rk3576-mainlining"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-18-2100-meta-muse-signal.html",
    "url": "https://geekovski.ru/2026-11-18-2100-meta-muse-signal.html",
    "title": "Muse получил доступ к Signal, Meta говорит о случайностях",

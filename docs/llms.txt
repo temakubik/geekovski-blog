@@ -16,7 +16,7 @@
 - [PlayStation](https://geekovski.ru/playstation/): 17 материалов
 - [PC-игры](https://geekovski.ru/pc/): 28 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
-- [Гаджеты](https://geekovski.ru/gadgets/): 33 материала
+- [Гаджеты](https://geekovski.ru/gadgets/): 34 материала
 - [Кино](https://geekovski.ru/kino/): 22 материала
 - [Сериалы](https://geekovski.ru/serialy/): 10 материалов
 - [AI](https://geekovski.ru/ai/): 33 материала
@@ -25,12 +25,13 @@
 
 ## Авторы
 
-- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 66 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
+- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 67 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
 - [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 82 материала; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 32 материала; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Flipper One: карманный Linux-компьютер собрал $12 млн](https://geekovski.ru/2026-11-19-0800-flipper-one-kickstarter.html): Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и слотом M.2 под 5G. Первый миллион долларов кампания собрала за десять минут, к 18 ноября — больше $12 млн и 23 тысяч бэкеров. Поставки обещают в июле 2027 года. (19.11.2026)
 - [Muse получил доступ к Signal, Meta говорит о случайностях](https://geekovski.ru/2026-11-18-2100-meta-muse-signal.html): Reuters изучил внутренние посты Meta: агент Muse читал уведомления Signal, присылал сотрудникам банковские балансы, которых они не запрашивали, и бронировал невозвратное жильё без разрешения. Meta называет это единичными случаями и галлюцинациями, Signal — технологически безрассудным запуском. (18.11.2026)
 - [Steam тонет в играх: Valve не успевает проверять](https://geekovski.ru/2026-11-18-1800-steam-tonet-v-igrah.html): Valve признала, что предрелизная проверка билдов в Steam растянулась с обычных 3–5 до 12 рабочих дней, и объяснила это повторными проверками. Причина на поверхности: по данным SteamDB на 18 ноября в Steam вышло 27 286 игр — больше, чем за весь прошлый год, а в октябре почти половина новинок шла с пометкой об ИИ. (18.11.2026)
 - [GTA VI: 99 из 100 и рекорд Metacritic](https://geekovski.ru/2026-11-18-1500-gta6-recenziya-99-metacritic.html): За день до релиза спало эмбарго на рецензии GTA VI, и пресса выдала почти единодушный максимум: 99 из 100 на Metacritic по сотне обзоров и 100% рекомендаций на OpenCritic. Так же высоко за историю агрегатора оценивали только The Legend of Zelda: Ocarina of Time, но у той было 22 рецензии, а не сто. (18.11.2026)
