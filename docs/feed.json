@@ -8,6 +8,76 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-19-1000-the-altruists-ftx-serial.html",
+   "url": "https://geekovski.ru/2026-11-19-1000-the-altruists-ftx-serial.html",
+   "title": "«The Altruists»: Netflix снял FTX как историю любви",
+   "summary": "Netflix выложил все восемь эпизодов «The Altruists» — драмы о Сэме Бэнкман-Фриде и Кэролайн Эллисон, которые построили FTX и потеряли 8 млрд долларов чужих денег. Создал сериал оскаровский сценарист Грэм Мур, а продюсирует его компания Барака и Мишель Обамы.",
+   "date_published": "2026-11-19T10:00:00+03:00",
+   "date_modified": "2026-11-19T10:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/altruists-netflix-cover.jpg",
+   "_sources": [
+    {
+     "name": "Netflix Tudum — дата, каст и производство",
+     "url": "https://netflix.com/tudum/articles/the-altruists-cast-release-date-news"
+    },
+    {
+     "name": "Variety — дата премьеры и первые кадры",
+     "url": "https://variety.com/2026/tv/news/netflix-the-altruists-release-date-first-look-photos-1236833976/"
+    },
+    {
+     "name": "Variety — трейлер и официальный логлайн",
+     "url": "https://variety.com/2026/tv/news/the-altruists-trailer-netflix-sam-bankman-fried-caroline-ellison-1236905223"
+    },
+    {
+     "name": "Vanity Fair — интервью с Энтони Бойлом",
+     "url": "https://vanityfair.com/story/anthony-boyle-sam-bankman-fried-the-altruists"
+    },
+    {
+     "name": "Rotten Tomatoes — страница сериала",
+     "url": "https://www.rottentomatoes.com/tv/the_altruists/s01"
+    },
+    {
+     "name": "Metacritic — страница сериала",
+     "url": "https://www.metacritic.com/tv/the-altruists/"
+    },
+    {
+     "name": "Marin Independent Journal — обзор",
+     "url": "https://marinij.com/2026/11/18/what-to-watch-the-altruists-a-riveting-look-at-sam-bankman-fried-scandal"
+    },
+    {
+     "name": "CNBC — приговор Бэнкман-Фриду",
+     "url": "https://www.cnbc.com/2024/03/28/live-updates-ftx-founder-sam-bankman-fried-sentencing.html"
+    },
+    {
+     "name": "BBC — приговор Эллисон",
+     "url": "https://www.bbc.com/news/articles/cdd4e2931q3o"
+    },
+    {
+     "name": "The Guardian — выход Эллисон из тюрьмы",
+     "url": "https://www.theguardian.com/technology/2026/jan/22/ftx-crypto-executive-caroline-ellison-prison-release"
+    },
+    {
+     "name": "CNBC — приговор Гэри Вану",
+     "url": "https://www.cnbc.com/2024/11/20/ftx-co-founder-gary-wang-avoids-prison-time-for-role-in-crypto-fraud.html"
+    },
+    {
+     "name": "NBC News — приговор Нишаду Сингху",
+     "url": "https://www.nbcnews.com/tech/tech-news/ftxs-nishad-singh-gets-no-jail-time-role-crypto-fraud-rcna178120"
+    },
+    {
+     "name": "ABC News — хроника краха FTX",
+     "url": "https://abcnews.com/Business/timeline-cryptocurrency-exchange-ftxs-historic-collapse/story?id=93337035"
+    },
+    {
+     "name": "Wikipedia — эпизоды и режиссёры",
+     "url": "https://en.wikipedia.org/wiki/The_Altruists"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-19-0800-flipper-one-kickstarter.html",
    "url": "https://geekovski.ru/2026-11-19-0800-flipper-one-kickstarter.html",
    "title": "Flipper One: карманный Linux-компьютер собрал $12 млн",

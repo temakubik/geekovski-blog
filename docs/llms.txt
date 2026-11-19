@@ -18,7 +18,7 @@
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 34 материала
 - [Кино](https://geekovski.ru/kino/): 22 материала
-- [Сериалы](https://geekovski.ru/serialy/): 10 материалов
+- [Сериалы](https://geekovski.ru/serialy/): 11 материалов
 - [AI](https://geekovski.ru/ai/): 33 материала
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
@@ -27,10 +27,11 @@
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 67 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
 - [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 82 материала; лента автора — https://geekovski.ru/avtory/mark.xml
-- [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 32 материала; лента автора — https://geekovski.ru/avtory/anya.xml
+- [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 33 материала; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [«The Altruists»: Netflix снял FTX как историю любви](https://geekovski.ru/2026-11-19-1000-the-altruists-ftx-serial.html): Netflix выложил все восемь эпизодов «The Altruists» — драмы о Сэме Бэнкман-Фриде и Кэролайн Эллисон, которые построили FTX и потеряли 8 млрд долларов чужих денег. Создал сериал оскаровский сценарист Грэм Мур, а продюсирует его компания Барака и Мишель Обамы. (19.11.2026)
 - [Flipper One: карманный Linux-компьютер собрал $12 млн](https://geekovski.ru/2026-11-19-0800-flipper-one-kickstarter.html): Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и слотом M.2 под 5G. Первый миллион долларов кампания собрала за десять минут, к 18 ноября — больше $12 млн и 23 тысяч бэкеров. Поставки обещают в июле 2027 года. (19.11.2026)
 - [Muse получил доступ к Signal, Meta говорит о случайностях](https://geekovski.ru/2026-11-18-2100-meta-muse-signal.html): Reuters изучил внутренние посты Meta: агент Muse читал уведомления Signal, присылал сотрудникам банковские балансы, которых они не запрашивали, и бронировал невозвратное жильё без разрешения. Meta называет это единичными случаями и галлюцинациями, Signal — технологически безрассудным запуском. (18.11.2026)
 - [Steam тонет в играх: Valve не успевает проверять](https://geekovski.ru/2026-11-18-1800-steam-tonet-v-igrah.html): Valve признала, что предрелизная проверка билдов в Steam растянулась с обычных 3–5 до 12 рабочих дней, и объяснила это повторными проверками. Причина на поверхности: по данным SteamDB на 18 ноября в Steam вышло 27 286 игр — больше, чем за весь прошлый год, а в октябре почти половина новинок шла с пометкой об ИИ. (18.11.2026)
@@ -303,6 +304,7 @@
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
+- [The Altruists](https://geekovski.ru/titles/the-altruists.html): 2026
 - [«Три богатыря и гуси-лебеди»](https://geekovski.ru/titles/tri-bogatyrya-gusi-lebedi.html): 2026
 - [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
 - [«Вершина»](https://geekovski.ru/titles/vershina-film.html): 2026
