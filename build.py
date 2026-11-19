@@ -1836,6 +1836,17 @@ def build(theme, out_dir, content_dir=None):
             if img.is_file():
                 shutil.copy(img, out / "assets" / "img" / img.name)
 
+    # Готовые сторонние страницы, живущие в корне сайта как есть (своя вёрстка,
+    # свои шрифты, свой style.css). Кладём папку целиком: static/longreads/<slug>/
+    # → docs/<slug>/. В ленту, sitemap, llms.txt и фиды они не попадают — вход
+    # только по прямой ссылке; от индексации страницу держит её собственное
+    # <meta name="robots" content="noindex"> (в robots.txt не закрываем: иначе
+    # робот не прочитает noindex и покажет голый URL).
+    longreads_src = ROOT / "static" / "longreads"
+    if longreads_src.exists():
+        for lr in sorted(p for p in longreads_src.iterdir() if p.is_dir()):
+            shutil.copytree(lr, out / lr.name, dirs_exist_ok=True)
+
     open_rubrics.clear()
     for c, _n in CATS:
         open_rubrics[c] = len([p for p in posts if p["category"] == c])
