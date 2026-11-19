@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-19-1800-mindseye-dolg-61-mln.html",
+   "url": "https://geekovski.ru/2026-11-19-1800-mindseye-dolg-61-mln.html",
+   "title": "«MindsEye»: £61,7 млн долга и надежда на иски",
+   "summary": "Администраторы Build a Rocket Boy опубликовали отчёт: студия должна кредиторам £61,7 млн, из них £36,4 млн — NetEase. Главным активом, из которого можно расплатиться, администраторы называют иск против «саботажников», якобы обрушивших продажи MindsEye, — и этот иск ещё не выигран.",
+   "date_published": "2026-11-19T18:00:00+03:00",
+   "date_modified": "2026-11-19T18:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/mindseye-cover.jpg",
+   "_sources": [
+    {
+     "name": "Companies House — история отчётности Build a Rocket Boy",
+     "url": "https://find-and-update.company-information.service.gov.uk/company/SC537252/filing-history"
+    },
+    {
+     "name": "Eurogamer — разбор отчёта администраторов",
+     "url": "https://www.eurogamer.net/build-a-rocket-boy-mindseye-debt-administration-litigation"
+    },
+    {
+     "name": "Kotaku — иск против «саботажников» и $25 для OpenAI",
+     "url": "https://kotaku.com/build-a-rocket-boy-mindseye-debt-creditors-netease-legal-action-2000757975"
+    },
+    {
+     "name": "IGN — юридическое действие против «саботажников»",
+     "url": "https://www.ign.com/articles/build-a-rocket-boy-legal-action-against-mindseye-saboteurs-debts"
+    },
+    {
+     "name": "Gamereactor — цифры убытков и долг £61,7 млн",
+     "url": "https://www.gamereactor.eu/mindseye-developer-build-a-rocket-boy-owes-62m-and-its-biggest-asset-is-a-lawsuit"
+    },
+    {
+     "name": "BBC — студия на грани закрытия",
+     "url": "https://www.bbc.com/news/articles/cqpvewv3mpgko"
+    },
+    {
+     "name": "IGN — сокращения и будущее студии",
+     "url": "https://www.ign.com/articles/mindseye-developers-say-theyve-been-laid-off-amid-questions-over-build-a-rocket-boys-future"
+    },
+    {
+     "name": "Steam — страница MindsEye",
+     "url": "https://store.steampowered.com/app/3265250/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-19-1500-hunger-games-kritiki.html",
    "url": "https://geekovski.ru/2026-11-19-1500-hunger-games-kritiki.html",
    "title": "«Рассвет жатвы»: критики разделились, прокат ждёт $100 млн",
