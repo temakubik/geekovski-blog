@@ -277,6 +277,7 @@
 - [Danganronpa 2×2](https://geekovski.ru/titles/danganronpa-2x2.html): 2027
 - [Death Stranding 2: On the Beach](https://geekovski.ru/titles/death-stranding-2.html): 2025
 - [DOOM: The Dark Ages](https://geekovski.ru/titles/doom-the-dark-ages.html): 2025
+- [«Дюна: часть третья»](https://geekovski.ru/titles/dune-part-three.html): 2026
 - [John Wick: анимационный приквел](https://geekovski.ru/titles/dzhon-uik-animaciya.html)
 - [Эбенезер (Ebenezer)](https://geekovski.ru/titles/ebenezer.html): 2026
 - [Fragmentary Order](https://geekovski.ru/titles/fragmentary-order.html): 2026
@@ -295,9 +296,11 @@
 - [Marvel's Blade](https://geekovski.ru/titles/marvels-blade.html): 2027
 - [MECCHA CHAMELEON](https://geekovski.ru/titles/meccha-chameleon.html): 2026
 - [Metaphor: ReFantazio](https://geekovski.ru/titles/metaphor-refantazio.html): 2024
+- [Monster Hunter Wilds](https://geekovski.ru/titles/monster-hunter-wilds.html): 2025
 - [NieR: Automata](https://geekovski.ru/titles/nier-automata.html): 2017
 - [The Odyssey / «Одиссея»](https://geekovski.ru/titles/odysseya-nolan.html): 2026
 - [Останься](https://geekovski.ru/titles/ostansya.html): 2027
+- [Path of Exile 2](https://geekovski.ru/titles/path-of-exile-2.html): 2026
 - [Phantom Blade Zero](https://geekovski.ru/titles/phantom-blade-zero.html): 2026
 - [Rainbow Six Siege](https://geekovski.ru/titles/rainbow-six-siege.html): 2015
 - [Resident Evil Requiem](https://geekovski.ru/titles/resident-evil-requiem.html): 2026
