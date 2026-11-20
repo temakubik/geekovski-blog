@@ -8,6 +8,60 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-20-1000-huawei-osta-o1-pro.html",
+   "url": "https://geekovski.ru/2026-11-20-1000-huawei-osta-o1-pro.html",
+   "title": "Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro",
+   "summary": "Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м. Первая модель O1 Pro повторяет широкий корпус Pura X View: 6,39 дюйма при пропорции 16:9,5, Kirin 9030S, батарея 7000 мА·ч, до 16 ГБ памяти и 1 ТБ. Цену на старте не назвали, продажи в Китае — сегодня в 18:08 по Пекину.",
+   "date_published": "2026-11-20T10:00:00+03:00",
+   "date_modified": "2026-11-20T10:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/huawei-osta-o1-pro.jpg",
+   "_sources": [
+    {
+     "name": "ITHome — сводка характеристик OSTA O1 Pro",
+     "url": "https://www.ithome.com/1/029/873.htm"
+    },
+    {
+     "name": "ITHome — распаковка: зарядника в коробке нет",
+     "url": "https://www.ithome.com/1/028/209.htm"
+    },
+    {
+     "name": "ITHome — старт продаж на JD 20 ноября в 18:08",
+     "url": "https://www.ithome.com/1/028/657.htm"
+    },
+    {
+     "name": "GSMArena — дата презентации бренда OSTA",
+     "url": "https://www.gsmarena.com/huaweis_osta_subbrand_now_has_an_official_launch_date-news-75448.php"
+    },
+    {
+     "name": "GSMArena — цвета, памяти и старт предзаказов O1 Pro",
+     "url": "https://www.gsmarena.com/huawei_osta_o1_pro_design_and_color_options_officially_revealed-news-75512.php"
+    },
+    {
+     "name": "TechNode — позиционирование нового бренда",
+     "url": "https://technode.com/2026/11/18/huaweis-new-sub-brand-osta-set-to-launch-first-phone-reportedly-featuring-kirin-9030s-chip"
+    },
+    {
+     "name": "PChome — у O1 Pro нет сверхширокоугольника и спутниковой связи",
+     "url": "https://www.pchome.tech/article/news/huawei-osta-o1-pro-wide-bar-phone"
+    },
+    {
+     "name": "GSMArena — характеристики и цены Pura X View",
+     "url": "https://www.gsmarena.com/huawei_reveals_the_pura_x_views_full_specs_pricing_and_launch_date-news-74502.php"
+    },
+    {
+     "name": "Huawei Central — миллион Pura X View за 50 дней",
+     "url": "https://www.huaweicentral.com/huawei-pura-x-view-completes-1-million-sales-in-just-50-days"
+    },
+    {
+     "name": "IDC — рынок смартфонов Китая в третьем квартале 2026",
+     "url": "https://www.idc.com/resource-center/press-releases/china-smartphone-shipments-q3-2026"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-20-0800-ubisoft-motherbrain.html",
    "url": "https://geekovski.ru/2026-11-20-0800-ubisoft-motherbrain.html",
    "title": "Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек",
