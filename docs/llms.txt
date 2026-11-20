@@ -19,18 +19,19 @@
 - [Гаджеты](https://geekovski.ru/gadgets/): 35 материалов
 - [Кино](https://geekovski.ru/kino/): 23 материала
 - [Сериалы](https://geekovski.ru/serialy/): 11 материалов
-- [AI](https://geekovski.ru/ai/): 35 материалов
+- [AI](https://geekovski.ru/ai/): 36 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Авторы
 
-- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 70 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
+- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 71 материал; лента автора — https://geekovski.ru/avtory/seva.xml
 - [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 87 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 34 материала; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Уилл Райт возвращается с игрой из ваших воспоминаний](https://geekovski.ru/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html): Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из жизни, а генеративный ИИ превращает их в острова, памятники и аватаров знакомых. Релиз намечен на 2027 год, а движок персонажей Gallium купила у сторонней ИИ-компании после того, как в конце 2024-го у студии кончились деньги. (20.11.2026)
 - [Юбилейное издание Switch 2 вернётся в январе 2027](https://geekovski.ru/2026-11-20-1800-zelda-switch-2-yanvar.html): Nintendo подтвердила через страницу своего магазина, что тираж Zelda 40th Anniversary Edition приедет «в январе 2027» — то есть к праздникам консоли точно не будет. Издание за $519,99 раскупили за минуты, тематические аксессуары тоже ушли, а игра, ради которой его выпустили, продалась тиражом 5,2 млн копий за четыре дня. (20.11.2026)
 - [VK Play сдаёт консоли в аренду под GTA VI](https://geekovski.ru/2026-11-20-1500-vk-play-arenda-konsoli.html): «VK Play Облачный гейминг» открыл в тестовом режиме консольный тариф: можно забронировать время на удалённой приставке и играть в GTA VI с ПК или прямо в браузере — без покупки консоли и без покупки самой игры. В тарифе пока одна игра, а что происходит с прогрессом между бронированиями, VK не объяснила. (20.11.2026)
 - [GTA VI на консолях: 30 fps держится не везде](https://geekovski.ru/2026-11-20-1200-gta6-fps-na-konsolyah.html): Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в езде и долгих взрывах, Series X близка к PS5, а Series S выдаёт 720p и половину кадров — 20–27 вместо 30. (20.11.2026)
@@ -312,6 +313,7 @@
 - [Metaphor: ReFantazio](https://geekovski.ru/titles/metaphor-refantazio.html): 2024
 - [MindsEye](https://geekovski.ru/titles/mindseye.html): 2025
 - [Monster Hunter Wilds](https://geekovski.ru/titles/monster-hunter-wilds.html): 2025
+- [MyMems](https://geekovski.ru/titles/mymems.html): 2027
 - [NieR: Automata](https://geekovski.ru/titles/nier-automata.html): 2017
 - [The Odyssey / «Одиссея»](https://geekovski.ru/titles/odysseya-nolan.html): 2026
 - [Останься](https://geekovski.ru/titles/ostansya.html): 2027

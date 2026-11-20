@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html",
+   "url": "https://geekovski.ru/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html",
+   "title": "Уилл Райт возвращается с игрой из ваших воспоминаний",
+   "summary": "Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из жизни, а генеративный ИИ превращает их в острова, памятники и аватаров знакомых. Релиз намечен на 2027 год, а движок персонажей Gallium купила у сторонней ИИ-компании после того, как в конце 2024-го у студии кончились деньги.",
+   "date_published": "2026-11-20T21:00:00+03:00",
+   "date_modified": "2026-11-20T21:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg",
+   "_sources": [
+    {
+     "name": "Gallium Studios и Artificial Agency — пресс-релиз о партнёрстве",
+     "url": "https://www.artificial.agency/news/gallium"
+    },
+    {
+     "name": "The Verge — интервью Уилла Райта о MyMems",
+     "url": "https://www.theverge.com/games/1036140/will-wright-mymems-ai-game-interview"
+    },
+    {
+     "name": "Ars Technica — разбор анонса и истории Proxi",
+     "url": "https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/"
+    },
+    {
+     "name": "Gallium Studios — сайт MyMems и набор в ранний круг",
+     "url": "https://galliumstudios.com/"
+    },
+    {
+     "name": "YouTube — ролик анонса MyMems",
+     "url": "https://www.youtube.com/watch?v=QrhvFz_YzQg"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-20-1800-zelda-switch-2-yanvar.html",
    "url": "https://geekovski.ru/2026-11-20-1800-zelda-switch-2-yanvar.html",
    "title": "Юбилейное издание Switch 2 вернётся в январе 2027",
