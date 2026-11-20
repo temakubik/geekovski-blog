@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-20-1800-zelda-switch-2-yanvar.html",
+   "url": "https://geekovski.ru/2026-11-20-1800-zelda-switch-2-yanvar.html",
+   "title": "Юбилейное издание Switch 2 вернётся в январе 2027",
+   "summary": "Nintendo подтвердила через страницу своего магазина, что тираж Zelda 40th Anniversary Edition приедет «в январе 2027» — то есть к праздникам консоли точно не будет. Издание за $519,99 раскупили за минуты, тематические аксессуары тоже ушли, а игра, ради которой его выпустили, продалась тиражом 5,2 млн копий за четыре дня.",
+   "date_published": "2026-11-20T18:00:00+03:00",
+   "date_modified": "2026-11-20T18:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/zelda-40-switch-2-dok.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo Life — Zelda Switch 2 вернётся в наличии в январе 2027",
+     "url": "https://www.nintendolife.com/news/2026/11/zelda-switch-2-console-is-back-in-stock-soon-if-you-missed-out-us"
+    },
+    {
+     "name": "Polygon — распроданная юбилейная консоль возвращается",
+     "url": "https://www.polygon.com/zelda-40-anniversary-switch-2-coming-back-january-stock-nintendo/"
+    },
+    {
+     "name": "Polygon — что входит в издание и сколько стоит",
+     "url": "https://www.polygon.com/nintendo-switch-2-zelda-edition-release-date-pro-controller-price/"
+    },
+    {
+     "name": "Nintendo — 5,2 млн копий Ocarina of Time за четыре дня",
+     "url": "https://www.nintendo.com/us/whatsnew/the-legend-of-zelda-ocarina-of-time-for-nintendo-switch-2-sells-over-5-2-million-units-worldwide-in-first-four-days/"
+    },
+    {
+     "name": "Nintendo Life — Ocarina лучшая физическая игра 2026 года в США",
+     "url": "https://www.nintendolife.com/news/2026/11/zelda-ocarina-of-time-remake-crowned-2026s-best-selling-physical-video-game-in-the-us"
+    },
+    {
+     "name": "Nintendo Life — итоги Circana за октябрь",
+     "url": "https://www.nintendolife.com/news/2026/11/call-of-duty-modern-warfare-4-tops-best-selling-games-in-october-us"
+    },
+    {
+     "name": "Nintendo Life — японские чарты",
+     "url": "https://www.nintendolife.com/news/2026/11/japanese-charts-pikmin-4-makes-a-lukewarm-debut-on-switch-2-as-zelda-dominates"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-20-1500-vk-play-arenda-konsoli.html",
    "url": "https://geekovski.ru/2026-11-20-1500-vk-play-arenda-konsoli.html",
    "title": "VK Play сдаёт консоли в аренду под GTA VI",
