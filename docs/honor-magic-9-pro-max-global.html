@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/gadgets/">Гаджеты</a></li><li aria-current="page">Honor Magic 9 Pro Max: мировая версия с батареей поменьше</li></ol></nav>
 <article class="post cat-gadgets">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T11:12:00+03:00">05.11.2026, 11:12</time></div>
@@ -100,50 +100,42 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">4 ноября Honor открыла международный запуск серии Magic 9 с Гонконга. Флагман Magic 9 Pro Max там стоит от HK$10 999, но аккумулятор у гонконгской версии — 8000 мА·ч против 8800 мА·ч у китайской.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Гонконг — первая остановка мирового запуска серии Magic 9 после Китая, продажи с 19 ноября</li><li>Magic 9 Pro Max (12/512 ГБ) — HK$10 999, версия 16 ГБ/1 ТБ — HK$14 999</li><li>Аккумулятор у гонконгской версии 8000 мА·ч, у китайской — 8800 мА·ч: одно имя, разное железо</li><li>В Европе серию ждут в январе 2027, цены не объявлены</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/honor-magic-9-pro-max-global.jpg" alt="Honor Magic 9 Pro Max: мировая версия с батареей поменьше"></figure>
-  <div class="post__body"><p>4 ноября Honor провела в Гонконге презентацию серии Magic 9 — это первая остановка мирового запуска после Китая. Предзаказы открыты, продажи в Гонконге стартуют 19 ноября. В Китае вся тройка (Magic 9, Magic 9 Super Edition и Magic 9 Pro Max) продаётся с 28 сентября.</p>
+  <figure class="post__cover"><img src="/assets/img/honor-magic-9-pro-max-global.jpg" alt="Honor Magic 9 Pro Max: мировая версия с батареей поменьше" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout "><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Гонконг — первая остановка мирового запуска серии Magic 9 после Китая, продажи с 19 ноября</li><li>Magic 9 Pro Max (12/512 ГБ) — HK$10 999, версия 16 ГБ/1 ТБ — HK$14 999</li><li>Аккумулятор у гонконгской версии 8000 мА·ч, у китайской — 8800 мА·ч: одно имя, разное железо</li><li>В Европе серию ждут в январе 2027, цены не объявлены</li></ul></aside><div class="post__body"><p>4 ноября Honor провела в Гонконге презентацию серии Magic 9 — это первая остановка мирового запуска после Китая. Предзаказы открыты, продажи в Гонконге стартуют 19 ноября. В Китае вся тройка (Magic 9, Magic 9 Super Edition и Magic 9 Pro Max) продаётся с 28 сентября.</p>
 <p>Цены для Гонконга: Magic 9 Pro Max в версии 12/512 ГБ — HK$10 999, версия 16 ГБ/1 ТБ — HK$14 999. В Китае тот же Pro Max начинался с 6499 юаней, то есть примерно на четверть дешевле.</p>
 <figure class="post__fig"><img src="/assets/img/honor-magic-9-pro-max-global-2.jpg" alt="Honor Magic 9 Pro Max в зелёном цвете" loading="lazy"></figure>
 <p>По железу Pro Max — типичный флагман 2027 модельного года, только вышедший в 2026-м. Экран 6,8 дюйма LTPO OLED (1320 × 2868, 120 Гц, до 10 000 нит пиковой яркости), чип Snapdragon 8 Elite Extreme Gen 6, память LPDDR5X, MagicOS 11 на Android 17. Камеры: 200 Мп основная, 200 Мп перископ с 3,5-кратным оптическим зумом (до 200× цифрового) и 50 Мп ультраширокоугольная — блок сделан вместе с ARRI, отсюда и логотип на модуле. Спереди 55 Мп плюс датчик глубины для 3D-разблокировки. Защита заявлена по IP68, IP69 и IP69K, вес — 233 г.</p>
 <p>Главный нюанс не в камерах, а в аккумуляторе. У китайской версии 8800 мА·ч, у гонконгской — 8000 мА·ч. Зарядка одинаковая: 100 Вт по проводу, 80 Вт по беспроводной SuperCharge. Honor никак не подсвечивает разницу, а она реальна — почти 10 % ёмкости испаряются по дороге из Шэньчжэня в Гонконг. Что достанется Европе, станет понятно только к январю 2027: там серию ждут в начале года, цены не объявлены.</p>
-<p>Это тот случай, когда надо смотреть не на название модели, а на спецификацию конкретного рынка. Покупателям из России, которые повезут телефон серым импортом, разница в батарее важнее, чем разница в цвете корпуса. Оценка субъективная, но при 10 000 нит и 233 г запаса ёмкости лишними не бывают.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.ixbt.com/news/2026/11/05/akb-8000-mac-kamera-200-mp-200-kratnyi-zum-i-zariadka-100-vt-predstavlena-globalnaia-versiia-honor-magic-9-pro-max.html" rel="nofollow noopener" target="_blank">iXBT — представлена глобальная версия Honor Magic 9 Pro Max</a></li><li><a href="https://www.huaweicentral.com/honor-magic-9-pro-max-debuts-in-hong-kong/" rel="nofollow noopener" target="_blank">HuaweiCentral — Magic 9 Pro Max debuts in Hong Kong</a></li><li><a href="https://9to5google.com/2026/09/28/honor-magic-9-pro-max-battery-arri-cameras-official-specs/" rel="nofollow noopener" target="_blank">9to5Google — Honor Magic 9 Pro Max goes official (Китай, 28 сентября)</a></li><li><a href="https://www.phonedroid.net/blog/honor-magic-9-pro-max-specs/" rel="nofollow noopener" target="_blank">PhoneDroid — Honor Magic 9 Pro Max: цена, характеристики, Европа</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Это тот случай, когда надо смотреть не на название модели, а на спецификацию конкретного рынка. Покупателям из России, которые повезут телефон серым импортом, разница в батарее важнее, чем разница в цвете корпуса. Оценка субъективная, но при 10 000 нит и 233 г запаса ёмкости лишними не бывают.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.ixbt.com/news/2026/11/05/akb-8000-mac-kamera-200-mp-200-kratnyi-zum-i-zariadka-100-vt-predstavlena-globalnaia-versiia-honor-magic-9-pro-max.html" rel="nofollow noopener" target="_blank">iXBT — представлена глобальная версия Honor Magic 9 Pro Max</a></li><li><a href="https://www.huaweicentral.com/honor-magic-9-pro-max-debuts-in-hong-kong/" rel="nofollow noopener" target="_blank">HuaweiCentral — Magic 9 Pro Max debuts in Hong Kong</a></li><li><a href="https://9to5google.com/2026/09/28/honor-magic-9-pro-max-battery-arri-cameras-official-specs/" rel="nofollow noopener" target="_blank">9to5Google — Honor Magic 9 Pro Max goes official (Китай, 28 сентября)</a></li><li><a href="https://www.phonedroid.net/blog/honor-magic-9-pro-max-specs/" rel="nofollow noopener" target="_blank">PhoneDroid — Honor Magic 9 Pro Max: цена, характеристики, Европа</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fhonor-magic-9-pro-max-global.html&text=Honor%20Magic%209%20Pro%20Max%3A%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%20%D1%81%20%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D0%B5%D0%B9%20%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B5" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fhonor-magic-9-pro-max-global.html&title=Honor%20Magic%209%20Pro%20Max%3A%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%20%D1%81%20%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D0%B5%D0%B9%20%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B5" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fhonor-magic-9-pro-max-global.html&text=Honor%20Magic%209%20Pro%20Max%3A%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%20%D1%81%20%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D0%B5%D0%B9%20%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B5" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fhonor-magic-9-pro-max-global.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fhonor-magic-9-pro-max-global-pin.jpg&description=Honor%20Magic%209%20Pro%20Max%3A%20%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%20%D1%81%20%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D0%B5%D0%B9%20%D0%BF%D0%BE%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B5" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fhonor-magic-9-pro-max-global.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-20T10:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1000-huawei-osta-o1-pro.html">Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro</a></h3>
     <p class="card__sum">Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1000-huawei-osta-o1-pro.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="Flipper One: карманный Linux-компьютер собрал $12 млн" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-19T08:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-0800-flipper-one-kickstarter.html">Flipper One: карманный Linux-компьютер собрал $12 млн</a></h3>
     <p class="card__sum">Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-0800-flipper-one-kickstarter.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-18T14:20:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-yandex-pin-diktofon.html">«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября</a></h3>
     <p class="card__sum">Яндекс готовит носимый диктофон «Пин» — пластина размером с карту, которая записывает разговоры, отправляет их через телефон…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-yandex-pin-diktofon.html">Читать →</a><span class="srcc">источников: 4</span></div>
   </div>
 </article></div></section>
 </main>
@@ -158,9 +150,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -178,9 +169,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

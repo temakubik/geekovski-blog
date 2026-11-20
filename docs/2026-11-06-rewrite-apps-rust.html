@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/gadgets/">Гаджеты</a></li><li aria-current="page">Discord и Xbox переписывают приложения — и это заметно по памяти</li></ol></nav>
 <article class="post cat-gadgets">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-06T09:20:00+03:00">06.11.2026, 09:20</time></div>
@@ -100,60 +100,52 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Discord уходит с Electron на Rust, новый клиент занимает 290 МБ вместо гигабайта. Xbox параллельно выпустил переписанный PC-клиент Garrison, который запускается до 60% быстрее.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Discord переписывает десктопный клиент на Rust и убирает Electron</li><li>Ранняя сборка под Windows 11 занимает 290 МБ RAM вместо гигабайта</li><li>Xbox выпустил новый PC-клиент Garrison: запуск до 60 % быстрее, страницы до 50 %</li><li>Тренд общий: приложения возвращаются с веб-технологий на нативные движки</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/rewrite-apps-rust.jpg" alt="Discord и Xbox переписывают приложения — и это заметно по памяти"></figure>
-  <div class="post__body"><p>Год назад главным аргументом за Electron было «написано один раз, работает везде». В 2026-м два крупных продукта одновременно показали цену этого удобства — и оба решили платить меньше.</p>
-<h2>Discord: 290 МБ вместо гигабайта</h2>
+  <figure class="post__cover"><img src="/assets/img/rewrite-apps-rust.jpg" alt="Discord и Xbox переписывают приложения — и это заметно по памяти" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-discord-290-mb-vmesto-gigabayta">Discord: 290 МБ вместо гигабайта</a></li><li><a href="#section-xbox-garrison-vmesto-veb-obertki">Xbox: Garrison вместо веб-обёртки</a></li><li><a href="#section-pochemu-eto-proishodit-imenno-seychas">Почему это происходит именно сейчас</a></li><li><a href="#section-chto-eto-znachit-dlya-nas">Что это значит для нас</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Discord переписывает десктопный клиент на Rust и убирает Electron</li><li>Ранняя сборка под Windows 11 занимает 290 МБ RAM вместо гигабайта</li><li>Xbox выпустил новый PC-клиент Garrison: запуск до 60 % быстрее, страницы до 50 %</li><li>Тренд общий: приложения возвращаются с веб-технологий на нативные движки</li></ul></aside><div class="post__body"><p>Год назад главным аргументом за Electron было «написано один раз, работает везде». В 2026-м два крупных продукта одновременно показали цену этого удобства — и оба решили платить меньше.</p>
+<h2 id="section-discord-290-mb-vmesto-gigabayta">Discord: 290 МБ вместо гигабайта</h2>
 <p>Технический директор Discord Станислав Вишневский подтвердил, что десктопный клиент полностью переезжает на Rust. «Мы были ранними адоптерами Rust с 2018 года, многое в инфраструктуре и голосовых технологиях уже на нём, — написал он. — Святой Грааль был в том, чтобы перевести туда весь клиент. Это значит, что Electron уходит, а вместе с ним и React Native: мобильные приложения сохраняют нативный интерфейс, но делят код с десктопом через Rust».</p>
 <p>Он же показал скриншот ранней сборки под Windows 11: <strong>290 МБ оперативной памяти</strong>. Старый клиент на Electron при десятке серверов легко доходил до гигабайта и больше; на тяжёлых конфигурациях пользователи жаловались и на несколько гигабайт. Публичного релиза пока нет — компания обещает «скоро дать пощупать тестировщикам».</p>
-<h2>Xbox: Garrison вместо веб-обёртки</h2>
+<h2 id="section-xbox-garrison-vmesto-veb-obertki">Xbox: Garrison вместо веб-обёртки</h2>
 <p>У Microsoft свой заход. Новый PC-клиент, который внутри называли Garrison, вышел на тест для Xbox Insiders вместе с обновлением веб-версии и облачного стриминга. Вице-президент Xbox по продуктам Джейсон Бомонт приводит цифры: <strong>приложение запускается до 60 % быстрее, страницы Home, Store и Game Pass грузятся до 50 % быстрее, внутриоконные переходы — до 65 % быстрее</strong>.</p>
 <p>Важнее цифр — что именно поменяли. Приложение перестало ощущаться веб-страницей: навигация упрощена под геймпад, поиск больше не выскакивает сам при переключении разделов, друзья вынесены на главный экран, переработаны карточки игр и анимации. The Verge описывает новый клиент как смесь нативных и веб-элементов — то есть Microsoft не отказалась от веба целиком, а перенесла на нативный слой то, что тормозило больше всего.</p>
 <p>Заодно обновился веб-клиент облачного гейминга: появилась вкладка библиотеки, десктопный режим для больших экранов, тёмная и светлая темы и пять контрастных вариантов для доступности. На смарт-ТВ и VR-шлемах тот же дизайн приедет отдельно, с поправкой под конкретный экран.</p>
-<h2>Почему это происходит именно сейчас</h2>
+<h2 id="section-pochemu-eto-proishodit-imenno-seychas">Почему это происходит именно сейчас</h2>
 <p>Три причины складываются.</p>
 <p><strong>Железо перестало быть бесплатным.</strong> Электронный клиент на Chromium — это фактически отдельный браузер в каждом приложении. Пользователи с 16 ГБ памяти заметили это раньше, чем разработчики, а теперь ещё и цены на память растут: экономить мегабайты стало выгодно бизнесу, а не только перфекционистам.</p>
 <p><strong>Rust перестал быть экзотикой.</strong> У Discord на нём уже годы работает инфраструктура, у Microsoft — части Windows. Язык даёт скорость C++ без ручного управления памятью, и это снимает главный страх: «перепишем — получим утечки и краши».</p>
 <p><strong>Появились альтернативные оболочки.</strong> Tauri собирает нативное окно с системным веб-вьюером вместо встроенного Chromium, и приложения на нём занимают десятки мегабайт вместо сотен. Не всем подходит — веб-вьюер на разных системах ведёт себя по-разному, — но как способ поставить приложение на диету работает.</p>
-<h2>Что это значит для нас</h2>
+<h2 id="section-chto-eto-znachit-dlya-nas">Что это значит для нас</h2>
 <p>Практический вывод простой: <strong>приложения снова начинают соревноваться за память</strong>, а не только за функции. Если у тебя ноутбук на 8–16 ГБ, следующий год будет приятнее: сначала Discord, теперь Xbox, дальше потянутся остальные, у кого Electron висел на шее.</p>
-<p>Вторая мысль, менее утешительная: переписывание — это не «оптимизация», а полная замена фундамента. Discord пишет, что Rust у него с 2018 года, и только сейчас дошёл до полного клиента. Такие вещи не делаются за спринт, и обещать «станет быстрее к следующему обновлению» никто из них не стал.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.theverge.com/news/1027379/discord-ditching-electron-web-app" rel="nofollow noopener" target="_blank">The Verge — Discord is ditching Electron</a></li><li><a href="https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign" rel="nofollow noopener" target="_blank">The Verge — Xbox overhauls its PC, web, and cloud apps</a></li><li><a href="https://news.xbox.com/en-us/2026/11/05/a-faster-simpler-xbox-experience-is-coming-to-pc-web-and-cloud/" rel="nofollow noopener" target="_blank">Xbox Wire — A Faster, Simpler Xbox Experience</a></li><li><a href="https://www.windowscentral.com/gaming/xbox/hands-on-xboxs-brand-new-pc-app-offers-big-performance-improvements" rel="nofollow noopener" target="_blank">Windows Central — hands-on нового PC-клиента</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Вторая мысль, менее утешительная: переписывание — это не «оптимизация», а полная замена фундамента. Discord пишет, что Rust у него с 2018 года, и только сейчас дошёл до полного клиента. Такие вещи не делаются за спринт, и обещать «станет быстрее к следующему обновлению» никто из них не стал.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.theverge.com/news/1027379/discord-ditching-electron-web-app" rel="nofollow noopener" target="_blank">The Verge — Discord is ditching Electron</a></li><li><a href="https://www.theverge.com/news/1027353/microsoft-new-xbox-pc-app-redesign" rel="nofollow noopener" target="_blank">The Verge — Xbox overhauls its PC, web, and cloud apps</a></li><li><a href="https://news.xbox.com/en-us/2026/11/05/a-faster-simpler-xbox-experience-is-coming-to-pc-web-and-cloud/" rel="nofollow noopener" target="_blank">Xbox Wire — A Faster, Simpler Xbox Experience</a></li><li><a href="https://www.windowscentral.com/gaming/xbox/hands-on-xboxs-brand-new-pc-app-offers-big-performance-improvements" rel="nofollow noopener" target="_blank">Windows Central — hands-on нового PC-клиента</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&text=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&title=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&text=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-06-rewrite-apps-rust-pin.jpg&description=Discord%20%D0%B8%20Xbox%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%8E%D1%82%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%B8%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%20%D0%BF%D0%BE%20%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-06-rewrite-apps-rust.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-20T10:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1000-huawei-osta-o1-pro.html">Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro</a></h3>
     <p class="card__sum">Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1000-huawei-osta-o1-pro.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="Flipper One: карманный Linux-компьютер собрал $12 млн" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-19T08:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-0800-flipper-one-kickstarter.html">Flipper One: карманный Linux-компьютер собрал $12 млн</a></h3>
     <p class="card__sum">Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-0800-flipper-one-kickstarter.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-18T14:20:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-yandex-pin-diktofon.html">«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября</a></h3>
     <p class="card__sum">Яндекс готовит носимый диктофон «Пин» — пластина размером с карту, которая записывает разговоры, отправляет их через телефон…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-yandex-pin-diktofon.html">Читать →</a><span class="srcc">источников: 4</span></div>
   </div>
 </article></div></section>
 </main>
@@ -168,9 +160,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -188,9 +179,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

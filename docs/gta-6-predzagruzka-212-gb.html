@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/playstation/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/playstation/">PlayStation</a></li><li aria-current="page">GTA VI: предзагрузка с 10 ноября и 212 ГБ</li></ol></nav>
 <article class="post cat-playstation">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-04T09:05:00+03:00">04.11.2026, 09:05</time></div>
@@ -100,59 +100,51 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Rockstar официально подтвердила размер GTA VI — до 212 ГБ, а предзагрузка стартует не 12 ноября, как говорили раньше, а на два дня раньше. В коробочных изданиях диска не будет.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Предзагрузка стартует 10 ноября, файлы займут до 212 ГБ в зависимости от консоли</li><li>Стандартное издание стоит $79.99, Ultimate — $99.99, релиз 19 ноября</li><li>В коробочных изданиях вместо диска будет код на загрузку</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/gta-6-predzagruzka-212-gb.jpg" alt="GTA VI: предзагрузка с 10 ноября и 212 ГБ"></figure>
-  <div class="post__body"><p>Rockstar 3 ноября выложила на Newswire пост «Pre-Load Begins on November 10» и обновила страницу поддержки по <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a>. Главное оттуда: скачивание начнётся 10 ноября, файлы предзагрузки займут до 212 ГБ в зависимости от консоли. Это официальное подтверждение издателя, а не утечка.</p>
-<h2>Что именно объявили</h2>
+  <figure class="post__cover"><img src="/assets/img/gta-6-predzagruzka-212-gb.jpg" alt="GTA VI: предзагрузка с 10 ноября и 212 ГБ" width="2400" height="1350" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-obyavili">Что именно объявили</a></li><li><a href="#section-pochemu-12-noyabrya-stalo-10-m">Почему 12 ноября стало 10-м</a></li><li><a href="#section-diska-v-korobke-net">Диска в коробке нет</a></li><li><a href="#section-s-chem-eto-sravnivat">С чем это сравнивать</a></li><li><a href="#section-ocenka">Оценка</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Предзагрузка стартует 10 ноября, файлы займут до 212 ГБ в зависимости от консоли</li><li>Стандартное издание стоит $79.99, Ultimate — $99.99, релиз 19 ноября</li><li>В коробочных изданиях вместо диска будет код на загрузку</li></ul></aside><div class="post__body"><p>Rockstar 3 ноября выложила на Newswire пост «Pre-Load Begins on November 10» и обновила страницу поддержки по <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a>. Главное оттуда: скачивание начнётся 10 ноября, файлы предзагрузки займут до 212 ГБ в зависимости от консоли. Это официальное подтверждение издателя, а не утечка.</p>
+<h2 id="section-chto-imenno-obyavili">Что именно объявили</h2>
 <ul><li>На PS5 предзагрузка стартует в полночь по местному времени 10 ноября;</li><li>на Xbox Series X|S — одновременно для всего мира, в 00:00 по GMT 10 ноября;</li><li>объём — «до 212 ГБ в зависимости от устройства»;</li><li>релиз не трогали: 19 ноября, только PS5 и Xbox Series X|S, стандартное издание $79.99, Ultimate $99.99. Даты ПК-версии Rockstar до сих пор не называла.</li></ul>
 <p>Цифра закрывает неделю догадок. 27 октября аккаунт PlayStation Game Size насчитал в базе PS Store 210 ГБ, и до вчерашнего дня это был слух с пометкой «официально не подтверждено». Теперь 212 ГБ — верхняя граница от самой Rockstar.</p>
-<h2>Почему 12 ноября стало 10-м</h2>
+<h2 id="section-pochemu-12-noyabrya-stalo-10-m">Почему 12 ноября стало 10-м</h2>
 <p>Прежняя дата предзагрузки — 12 ноября — гуляла по всем пересказам и успела стать «фактом». Новое объявление сдвинуло старт на два дня раньше, дату релиза не тронуло. Между загрузкой и запуском остаётся девять дней — запас даже для тех, у кого интернет далёк от гигабитного. Привязка к местному времени на PS5 значит, что первыми начнут Океания и Восточная Азия, а Северная Америка подключится последней.</p>
-<h2>Диска в коробке нет</h2>
+<h2 id="section-diska-v-korobke-net">Диска в коробке нет</h2>
 <p>Физические издания появятся 12 ноября, и внутри будет код на загрузку, а не носитель. Печатной карты Леониды в комплекте тоже не окажется: 19 ноября Rockstar выложит бесплатный файл с обложкой и картой для печати, а двусторонний печатный постер чуть позже появится в Rockstar Store за $0.99 или бесплатно с другой покупкой.</p>
 <figure class="post__fig"><img src="/assets/img/gta-6-vice-city-street.jpg" alt="Ночной Майами-Бич: эстетика, из которой вырос Вайс-Сити" loading="lazy"></figure>
-<h2>С чем это сравнивать</h2>
+<h2 id="section-s-chem-eto-sravnivat">С чем это сравнивать</h2>
 <p>Для контекста: Red Dead Redemption 2 на ПК просила около 150 ГБ — и казалась тогда неприлично тяжёлой. По подсчётам Shazoo, у Xbox Series S из 512 ГБ пользователю доступно примерно 364 ГБ, так что GTA VI съест больше половины свободного места.</p>
 <figure class="post__fig"><img src="/assets/img/gta-6-ps5-konsol.jpg" alt="PS5 на столе: 212 ГБ — заметная часть терабайта" loading="lazy"></figure>
-<h2>Оценка</h2>
+<h2 id="section-ocenka">Оценка</h2>
 <p>Размер 212 ГБ удивляет меньше, чем тихая правка даты: Rockstar сдвинула предзагрузку и нигде не объяснила, зачем. Логика понятная — снизить нагрузку на собственные серверы в день запуска и дать людям время на переустановку игр ради места. Но тем, кто планировал освободить диск 12-го, теперь придётся делать это раньше, и пост в Newswire об этом сообщает как о само собой разумеющемся.</p>
-<p>Оценка: отдельная неловкость — коробка без диска. Продавать «физическое издание» кодом внутри законно, но для коллекционеров это уже не покупка, а предоплата загрузки с красивой обёрткой.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10" rel="nofollow noopener" target="_blank">Rockstar Newswire — GTA VI: Pre-Load Begins on November 10</a></li><li><a href="https://support.rockstargames.com/articles/7nPqOA2uCbpEQHXx7KVrYd/grand-theft-auto-vi-pre-load-faq" rel="nofollow noopener" target="_blank">Rockstar Support — Grand Theft Auto VI Pre-Load FAQ</a></li><li><a href="https://videocardz.com/newz/gta-vi-preload-begins-november-10-requires-up-to-212gb-of-storage" rel="nofollow noopener" target="_blank">VideoCardz — GTA VI preload begins November 10, up to 212GB</a></li><li><a href="https://shazoo.ru/2026/11/03/193484/predzagruzka-gta-6-startuet-na-dva-dnya-ranse-i-potrebuet-212-gb" rel="nofollow noopener" target="_blank">Shazoo — предзагрузка GTA 6 стартует на два дня раньше</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Оценка: отдельная неловкость — коробка без диска. Продавать «физическое издание» кодом внутри законно, но для коллекционеров это уже не покупка, а предоплата загрузки с красивой обёрткой.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10" rel="nofollow noopener" target="_blank">Rockstar Newswire — GTA VI: Pre-Load Begins on November 10</a></li><li><a href="https://support.rockstargames.com/articles/7nPqOA2uCbpEQHXx7KVrYd/grand-theft-auto-vi-pre-load-faq" rel="nofollow noopener" target="_blank">Rockstar Support — Grand Theft Auto VI Pre-Load FAQ</a></li><li><a href="https://videocardz.com/newz/gta-vi-preload-begins-november-10-requires-up-to-212gb-of-storage" rel="nofollow noopener" target="_blank">VideoCardz — GTA VI preload begins November 10, up to 212GB</a></li><li><a href="https://shazoo.ru/2026/11/03/193484/predzagruzka-gta-6-startuet-na-dva-dnya-ranse-i-potrebuet-212-gb" rel="nofollow noopener" target="_blank">Shazoo — предзагрузка GTA 6 стартует на два дня раньше</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fgta-6-predzagruzka-212-gb.html&text=GTA%20VI%3A%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D1%81%2010%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F%20%D0%B8%20212%20%D0%93%D0%91" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fgta-6-predzagruzka-212-gb.html&title=GTA%20VI%3A%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D1%81%2010%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F%20%D0%B8%20212%20%D0%93%D0%91" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fgta-6-predzagruzka-212-gb.html&text=GTA%20VI%3A%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D1%81%2010%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F%20%D0%B8%20212%20%D0%93%D0%91" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fgta-6-predzagruzka-212-gb.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fgta-6-predzagruzka-212-gb-pin.jpg&description=GTA%20VI%3A%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D1%81%2010%20%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F%20%D0%B8%20212%20%D0%93%D0%91" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fgta-6-predzagruzka-212-gb.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="GTA VI на консолях: 30 fps держится не везде" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-playstation">
+  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-20T12:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">GTA VI на консолях: 30 fps держится не везде</a></h3>
     <p class="card__sum">Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">Читать →</a><span class="srcc">источников: 9</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="GTA VI: 99 из 100 и рекорд Metacritic" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-18T15:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">GTA VI: 99 из 100 и рекорд Metacritic</a></h3>
     <p class="card__sum">За день до релиза спало эмбарго на рецензии GTA VI, и пресса выдала почти единодушный максимум: 99 из 100 на Metacritic по…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">Читать →</a><span class="srcc">источников: 11</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="PlayStation отбилась от иска на £2 млрд" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-17T18:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-1800-playstation-isk-2-mlrd.html">PlayStation отбилась от иска на £2 млрд</a></h3>
     <p class="card__sum">Лондонский трибунал по конкуренции 17 ноября отклонил коллективный иск к Sony почти на £2 млрд — 12,2 млн британских…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-1800-playstation-isk-2-mlrd.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article></div></section>
 </main>
@@ -167,9 +159,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -187,9 +178,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

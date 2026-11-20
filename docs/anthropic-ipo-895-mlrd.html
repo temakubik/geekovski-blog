@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/ai/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/ai/">AI</a></li><li aria-current="page">Anthropic перед IPO: счёт за чипы на $895 млрд</li></ol></nav>
 <article class="post cat-ai">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-ai" href="/ai/">AI</a><time datetime="2026-11-03T18:00:00+03:00">03.11.2026, 18:00</time></div>
@@ -100,60 +100,52 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Обновлённый проспект S-1: выручка $17 млрд за квартал, но обязательства по вычислениям в семь раз больше запаса кэша.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Обновлённый проспект S-1/A подан в SEC 2 ноября, выручка III квартала — $16,96 млрд</li><li>Обязательства по вычислениям и аренде — $895,4 млрд против около $132 млрд кэша</li><li>Тикер ANT на Nasdaq, СМИ ждут оценку в $1,5–2 трлн, цена акций пока не названа</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/anthropic-ipo-895.jpg" alt="Anthropic перед IPO: счёт за чипы на $895 млрд"></figure>
-  <div class="post__body"><p>2 ноября Anthropic подала в SEC обновлённый проспект к IPO — форму S-1/A, где впервые появились результаты за третий квартал, июль–сентябрь. Самое интересное в этом документе не выручка, а счёт за железо.</p>
-<h2>Квартал на $17 млрд</h2>
+  <figure class="post__cover"><img src="/assets/img/anthropic-ipo-895.jpg" alt="Anthropic перед IPO: счёт за чипы на $895 млрд" width="2400" height="1350" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-kvartal-na-17-mlrd">Квартал на $17 млрд</a></li><li><a href="#section-schet-na-895-mlrd">Счёт на $895 млрд</a></li><li><a href="#section-chto-s-etoy-vyruchkoy-ne-tak-ocenka">Что с этой выручкой не так — оценка</a></li><li><a href="#section-kogda-ipo">Когда IPO</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Обновлённый проспект S-1/A подан в SEC 2 ноября, выручка III квартала — $16,96 млрд</li><li>Обязательства по вычислениям и аренде — $895,4 млрд против около $132 млрд кэша</li><li>Тикер ANT на Nasdaq, СМИ ждут оценку в $1,5–2 трлн, цена акций пока не названа</li></ul></aside><div class="post__body"><p>2 ноября Anthropic подала в SEC обновлённый проспект к IPO — форму S-1/A, где впервые появились результаты за третий квартал, июль–сентябрь. Самое интересное в этом документе не выручка, а счёт за железо.</p>
+<h2 id="section-kvartal-na-17-mlrd">Квартал на $17 млрд</h2>
 <p>Выручка за квартал — $16,96 млрд, это рост на 1 127 % год к году. За девять месяцев — $33,24 млрд при чистом убытке $104 млрд: основная часть убытка приходится на переоценку конвертируемых нот и деривативов, а не на денежные расходы (CNBC).</p>
 <p>Темпы при этом замедляются: +132 % к предыдущему кварталу в первом, +144 % во втором и около +47 % в третьем (расчёт по цифрам из проспекта).</p>
 <figure class="post__fig"><img src="/assets/img/anthropic-datacenter.jpg" alt="Стойки в дата-центре: почти все обязательства Anthropic — вычисления и инфраструктура" loading="lazy"></figure>
 <p>Отдельно про прибыльность. Во втором квартале компания впервые показала операционную прибыль — $974 млн, а в третьем ушла в операционный убыток $567 млн. В проспекте это объясняют закупкой $5 млрд краткосрочных вычислений, которые «значительно дороже» долгосрочных контрактов, и $2 млрд неденежного списания по программе матчинга донатов (Yahoo Finance).</p>
-<h2>Счёт на $895 млрд</h2>
+<h2 id="section-schet-na-895-mlrd">Счёт на $895 млрд</h2>
 <p>Суммарные обязательства по закупкам и аренде — $895,4 млрд, почти все они про вычисления и дата-центры. Около $70 млрд нужно закрыть в течение года, примерно $450 млрд — до конца 2030-го (Yahoo Finance).</p>
 <p>Для сравнения: кэша и краткосрочных инвестиций на конец сентября было около $132 млрд, то есть счёт почти в семь раз больше.</p>
 <p>Кому платить: Broadcom — около $161 млрд за лизинг оборудования, Google — примерно $121 млрд, ИИ-подразделение SpaceX — до $120,5 млрд, Amazon — $110 млрд, Microsoft — не менее $44,9 млрд до 2033 года (Yahoo Finance, проспект).</p>
 <figure class="post__fig"><img src="/assets/img/anthropic-chips.jpg" alt="Память SK hynix на плате: чипы и стойки под этими контрактами оплачены на годы вперёд" loading="lazy"></figure>
-<h2>Что с этой выручкой не так — оценка</h2>
+<h2 id="section-chto-s-etoy-vyruchkoy-ne-tak-ocenka">Что с этой выручкой не так — оценка</h2>
 <p>Дальше — моя оценка, не факты из документа. Anthropic поставила на то, что спрос на Claude будет расти быстрее, чем придут счета за вычисления. Против играет замедление: 47 % квартального роста после 144 % — уже торможение, а обязательства зафиксированы на годы.</p>
 <p>Второй вопрос — качество выручки. Компания сама оценивает, что 5–7 % выручки за девять месяцев принесли клиенты, нарушавшие правила использования, и предупреждает, что ужесточение может замедлить рост. Скидки и новые модели срезали в третьем квартале ещё около $600 млн (Yahoo Finance). $17 млрд — цифра настоящая, но с оговорками, которые компания вынесла в проспект сама.</p>
-<h2>Когда IPO</h2>
-<p>Тикер — ANT, площадка — Nasdaq. Цена и количество акций в проспекте пустые: их определят на переговорах с андеррайтерами. СМИ ждут оценку в $1,5–2 трлн (Fortune), часть бумаг пойдёт частникам через Schwab, Fidelity, Robinhood, SoFi и E*Trade (Yahoo Finance).</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html" rel="nofollow noopener" target="_blank">CNBC — обновлённый проспект S-1/A</a></li><li><a href="https://finance.yahoo.com/markets/article/anthropics-new-ipo-filing-puts-its-computing-bill-near-900-billion-151830444.html" rel="nofollow noopener" target="_blank">Yahoo Finance — счёт за вычисления</a></li><li><a href="https://www.cnbc.com/2026/10/30/anthropic-ipo-s1-revenue-compute.html" rel="nofollow noopener" target="_blank">CNBC — разбор первичного S-1</a></li><li><a href="https://fortune.com/2026/10/26/anthropics-s-1/" rel="nofollow noopener" target="_blank">Fortune — первичный проспект и ожидаемая оценка</a></li></ol></section>
-  <section class="share" data-share-root>
+<h2 id="section-kogda-ipo">Когда IPO</h2>
+<p>Тикер — ANT, площадка — Nasdaq. Цена и количество акций в проспекте пустые: их определят на переговорах с андеррайтерами. СМИ ждут оценку в $1,5–2 трлн (Fortune), часть бумаг пойдёт частникам через Schwab, Fidelity, Robinhood, SoFi и E*Trade (Yahoo Finance).</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html" rel="nofollow noopener" target="_blank">CNBC — обновлённый проспект S-1/A</a></li><li><a href="https://finance.yahoo.com/markets/article/anthropics-new-ipo-filing-puts-its-computing-bill-near-900-billion-151830444.html" rel="nofollow noopener" target="_blank">Yahoo Finance — счёт за вычисления</a></li><li><a href="https://www.cnbc.com/2026/10/30/anthropic-ipo-s1-revenue-compute.html" rel="nofollow noopener" target="_blank">CNBC — разбор первичного S-1</a></li><li><a href="https://fortune.com/2026/10/26/anthropics-s-1/" rel="nofollow noopener" target="_blank">Fortune — первичный проспект и ожидаемая оценка</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fanthropic-ipo-895-mlrd.html&text=Anthropic%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%20IPO%3A%20%D1%81%D1%87%D1%91%D1%82%20%D0%B7%D0%B0%20%D1%87%D0%B8%D0%BF%D1%8B%20%D0%BD%D0%B0%20%24895%20%D0%BC%D0%BB%D1%80%D0%B4" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fanthropic-ipo-895-mlrd.html&title=Anthropic%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%20IPO%3A%20%D1%81%D1%87%D1%91%D1%82%20%D0%B7%D0%B0%20%D1%87%D0%B8%D0%BF%D1%8B%20%D0%BD%D0%B0%20%24895%20%D0%BC%D0%BB%D1%80%D0%B4" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fanthropic-ipo-895-mlrd.html&text=Anthropic%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%20IPO%3A%20%D1%81%D1%87%D1%91%D1%82%20%D0%B7%D0%B0%20%D1%87%D0%B8%D0%BF%D1%8B%20%D0%BD%D0%B0%20%24895%20%D0%BC%D0%BB%D1%80%D0%B4" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fanthropic-ipo-895-mlrd.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fanthropic-ipo-895-mlrd-pin.jpg&description=Anthropic%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%20IPO%3A%20%D1%81%D1%87%D1%91%D1%82%20%D0%B7%D0%B0%20%D1%87%D0%B8%D0%BF%D1%8B%20%D0%BD%D0%B0%20%24895%20%D0%BC%D0%BB%D1%80%D0%B4" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fanthropic-ipo-895-mlrd.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Уилл Райт возвращается с игрой из ваших воспоминаний</a></h3>
     <p class="card__sum">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Китай исчез из прогноза NVIDIA: H200 больше не возят</a></h3>
     <p class="card__sum">На звонке по итогам квартала и.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T12:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1200-anthropic-ipo-83.html">Anthropic оценили в $1,5 трлн на старте торгов</a></h3>
     <p class="card__sum">Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1200-anthropic-ipo-83.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article></div></section>
 </main>
@@ -168,9 +160,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -188,9 +179,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

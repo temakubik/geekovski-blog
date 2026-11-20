@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/pc/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/pc/">PC-игры</a></li><li aria-current="page">AMD: рекордный квартал, но рынок ПК падает</li></ol></nav>
 <article class="post cat-pc">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-05T10:05:00+03:00">05.11.2026, 10:05</time></div>
@@ -100,56 +100,48 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">AMD закрыла третий квартал с рекордной выручкой $13,4 млрд, но на 2027 год сама себе прогнозирует двузначное падение мировых поставок ПК из-за подорожавшей памяти.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Выручка Q3 — $13,4 млрд, рекорд; дата-центры дали $8,5 млрд, это +97 % к прошлому году</li><li>Клиентский сегмент — $2,95 млрд (+7 % год к году), игровой просел на 40 % до $773 млн</li><li>На 2027 год AMD ждёт двузначного снижения поставок ПК на рынке</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/amd-pk-padenie-2027.jpg" alt="AMD: рекордный квартал, но рынок ПК падает"></figure>
-  <div class="post__body"><p>AMD отчиталась за третий квартал 2026 года: выручка $13,4 млрд, и это рекорд за всю историю компании. Лиза Су на звонке с аналитиками назвала квартал «крупнейшим и самым прибыльным в нашей истории» — и следующий она же обещает на уровне $17 млрд. Неприятная часть отчёта в другом: на 2027 год AMD планирует исходить из того, что мировой рынок ПК сократится на двузначный процент.</p>
+  <figure class="post__cover"><img src="/assets/img/amd-pk-padenie-2027.jpg" alt="AMD: рекордный квартал, но рынок ПК падает" width="2400" height="1350" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-kuda-uehali-dengi">Куда уехали деньги</a></li><li><a href="#section-pochemu-pk-prosedayut">Почему ПК проседают</a></li><li><a href="#section-ocenka">Оценка</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Выручка Q3 — $13,4 млрд, рекорд; дата-центры дали $8,5 млрд, это +97 % к прошлому году</li><li>Клиентский сегмент — $2,95 млрд (+7 % год к году), игровой просел на 40 % до $773 млн</li><li>На 2027 год AMD ждёт двузначного снижения поставок ПК на рынке</li></ul></aside><div class="post__body"><p>AMD отчиталась за третий квартал 2026 года: выручка $13,4 млрд, и это рекорд за всю историю компании. Лиза Су на звонке с аналитиками назвала квартал «крупнейшим и самым прибыльным в нашей истории» — и следующий она же обещает на уровне $17 млрд. Неприятная часть отчёта в другом: на 2027 год AMD планирует исходить из того, что мировой рынок ПК сократится на двузначный процент.</p>
 <figure class="post__fig"><img src="/assets/img/amd-pk-padenie-2027-chip.jpg" alt="Процессор на плате: потребительский сегмент у AMD растёт медленнее, чем серверный" loading="lazy"></figure>
-<h2>Куда уехали деньги</h2>
+<h2 id="section-kuda-uehali-dengi">Куда уехали деньги</h2>
 <p>Всё, что заработано, принесли дата-центры: $8,5 млрд выручки, 64 % от общей, рост на 97 % год к году. Годом ранее это направление давало 47 %. AMD подняла прогноз и теперь ждёт, что в 2027-м серверная выручка удвоится, а на дата-центры придётся больше 80 % всех доходов компании.</p>
 <p>Клиентский сегмент, то есть те самые процессоры для домашних и офисных ПК, принёс $2,95 млрд: +7 % год к году, но минус 4 % к предыдущему кварталу. Игровое направление — $773 млн, падение на 40 % год к году. Причина та же, что и у всей индустрии: полузаказные чипы для консолей продаются хуже, потому что PS5 и Xbox Series вышли в 2020-м и находятся на спаде цикла.</p>
-<h2>Почему ПК проседают</h2>
+<h2 id="section-pochemu-pk-prosedayut">Почему ПК проседают</h2>
 <p>Формулировка Лизы Су предельно прямая:</p>
 <blockquote><p>К концу квартала продажи персональных компьютеров замедлились, поскольку более высокие цены на память и другие компоненты начали оказывать давление на спрос. В 2027 году мы ожидаем двузначного процентного снижения поставок ПК на рынке.</p></blockquote>
 <p>Подорожавшая память бьёт в первую очередь по потребительскому сегменту, который чувствителен к цене готовой системы. AMD рассчитывает выступить лучше рынка за счёт Ryzen и корпоративных закупок, но это стратегия «упасть меньше остальных», а не рост.</p>
 <p>Картина не уникальная для AMD: Intel днями ранее тоже предупредила о слабом спросе и разочаровывающем прогнозе на четвёртый квартал, после чего её акции обвалились почти на 29 %. При этом бумаги самой AMD после отчёта выросли примерно на 5 % — рынок смотрит на дата-центры, а не на ПК.</p>
-<h2>Оценка</h2>
-<p>Для покупателя железа это значит одно: дешёвые сборки никуда не вернутся. Если производители сами закладывают двузначное падение поставок из-за цен на память, то скидок на готовые системы и комплектующие ждать не стоит — скорее наоборот. А вот консольный сегмент показательнее: минус 40 % у полузаказных чипов — это не сезонное колебание, а честный сигнал, что нынешнее поколение выдохлось. Когда Sony и Microsoft объявят следующие консоли, вопрос «на чьих чипах» станет одним из главных, и у AMD тут пока преимущество.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results" rel="nofollow noopener" target="_blank">AMD Investor Relations — Third Quarter 2026 Financial Results</a></li><li><a href="https://www.theverge.com/tech/1026148/amd-earnings-q3-2026-data-center-pc" rel="nofollow noopener" target="_blank">The Verge — AMD rides data center riches to &#x27;largest and most profitable&#x27; quarter in history</a></li><li><a href="https://www.club386.com/amd-predicts-double-digit-pc-sales-decline/" rel="nofollow noopener" target="_blank">Club386 — AMD predicts double-digit PC sales decline</a></li><li><a href="https://ixbt.games/news/2026/11/05/prodazi-pk-prodolzat-padat-amd-predupredila-o-dvuznacnom-snizenii-rynka.html" rel="nofollow noopener" target="_blank">iXBT Games — Продажи ПК продолжат падать</a></li><li><a href="https://www.benzinga.com/markets/earnings/26/11/62851331/amd-lisa-su-memory-costs-pc-demand-intel-double-digit-decline-2027" rel="nofollow noopener" target="_blank">Benzinga — AMD Sees PC Market Drop in 2027 as Memory Costs Bite</a></li></ol></section>
-  <section class="share" data-share-root>
+<h2 id="section-ocenka">Оценка</h2>
+<p>Для покупателя железа это значит одно: дешёвые сборки никуда не вернутся. Если производители сами закладывают двузначное падение поставок из-за цен на память, то скидок на готовые системы и комплектующие ждать не стоит — скорее наоборот. А вот консольный сегмент показательнее: минус 40 % у полузаказных чипов — это не сезонное колебание, а честный сигнал, что нынешнее поколение выдохлось. Когда Sony и Microsoft объявят следующие консоли, вопрос «на чьих чипах» станет одним из главных, и у AMD тут пока преимущество.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results" rel="nofollow noopener" target="_blank">AMD Investor Relations — Third Quarter 2026 Financial Results</a></li><li><a href="https://www.theverge.com/tech/1026148/amd-earnings-q3-2026-data-center-pc" rel="nofollow noopener" target="_blank">The Verge — AMD rides data center riches to &#x27;largest and most profitable&#x27; quarter in history</a></li><li><a href="https://www.club386.com/amd-predicts-double-digit-pc-sales-decline/" rel="nofollow noopener" target="_blank">Club386 — AMD predicts double-digit PC sales decline</a></li><li><a href="https://ixbt.games/news/2026/11/05/prodazi-pk-prodolzat-padat-amd-predupredila-o-dvuznacnom-snizenii-rynka.html" rel="nofollow noopener" target="_blank">iXBT Games — Продажи ПК продолжат падать</a></li><li><a href="https://www.benzinga.com/markets/earnings/26/11/62851331/amd-lisa-su-memory-costs-pc-demand-intel-double-digit-decline-2027" rel="nofollow noopener" target="_blank">Benzinga — AMD Sees PC Market Drop in 2027 as Memory Costs Bite</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Famd-pk-padenie-2027.html&text=AMD%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%2C%20%D0%BD%D0%BE%20%D1%80%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%9F%D0%9A%20%D0%BF%D0%B0%D0%B4%D0%B0%D0%B5%D1%82" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Famd-pk-padenie-2027.html&title=AMD%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%2C%20%D0%BD%D0%BE%20%D1%80%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%9F%D0%9A%20%D0%BF%D0%B0%D0%B4%D0%B0%D0%B5%D1%82" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Famd-pk-padenie-2027.html&text=AMD%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%2C%20%D0%BD%D0%BE%20%D1%80%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%9F%D0%9A%20%D0%BF%D0%B0%D0%B4%D0%B0%D0%B5%D1%82" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Famd-pk-padenie-2027.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Famd-pk-padenie-2027-pin.jpg&description=AMD%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%2C%20%D0%BD%D0%BE%20%D1%80%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%9F%D0%9A%20%D0%BF%D0%B0%D0%B4%D0%B0%D0%B5%D1%82" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Famd-pk-padenie-2027.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="VK Play сдаёт консоли в аренду под GTA VI" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T15:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1500-vk-play-arenda-konsoli.html">VK Play сдаёт консоли в аренду под GTA VI</a></h3>
     <p class="card__sum">«VK Play Облачный гейминг» открыл в тестовом режиме консольный тариф: можно забронировать время на удалённой приставке и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1500-vk-play-arenda-konsoli.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T08:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-0800-ubisoft-motherbrain.html">Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек</a></h3>
     <p class="card__sum">Полугодие Ubisoft закрыла с убытком €155,9 млн по non-IFRS и падением бронирований на 16,5%, а команду, сделавшую её первую…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-0800-ubisoft-motherbrain.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="«MindsEye»: £61,7 млн долга и надежда на иски" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-19T18:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1800-mindseye-dolg-61-mln.html">«MindsEye»: £61,7 млн долга и надежда на иски</a></h3>
     <p class="card__sum">Администраторы Build a Rocket Boy опубликовали отчёт: студия должна кредиторам £61,7 млн, из них £36,4 млн — NetEase.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1800-mindseye-dolg-61-mln.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article></div></section>
 </main>
@@ -164,9 +156,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -184,9 +175,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

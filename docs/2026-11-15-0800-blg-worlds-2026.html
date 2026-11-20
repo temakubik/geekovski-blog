@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/pc/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/pc/">PC-игры</a></li><li aria-current="page">BLG впервые взяла Worlds, Riot готовит New Dawn</li></ol></nav>
 <article class="post cat-pc">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-15T08:00:00+03:00">15.11.2026, 08:00</time></div>
@@ -100,77 +100,69 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Bilibili Gaming обыграла Gen.G 3:1 в финале Worlds 2026 в Бруклине и принесла Китаю первый Кубок призывателей с 2021 года — по дороге выбив все четыре корейские команды турнира. Между играми финала Riot показала League of Legends: New Dawn — крупнейшее обновление 17-летней игры, которое выйдет в 2027-м.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>BLG выиграла Worlds 2026 со счётом 3:1 и стала первой командой LPL с титулом с 2021 года, прервав четырёхлетнюю серию побед Кореи</li><li>По пути BLG выбила все четыре корейские команды — HLE, DK, T1 и Gen.G; MVP финала признали мидера Knight</li><li>Riot анонсировала League of Legends: New Dawn: новый клиент, переработанный Summoner's Rift и руны, полный показ в январе 2027 года</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/worlds-2026-final.jpg" alt="BLG впервые взяла Worlds, Riot готовит New Dawn"></figure>
-  <div class="post__body"><p>Финал Worlds 2026 отыграли в ночь с 14 на 15 ноября по Москве в Barclays Center в Бруклине. Bilibili Gaming взяла серию у Gen.G со счётом 3:1: проиграла первую игру, а потом выиграла три подряд. Это первый Кубок призывателей в истории организации и первый титул LPL с 2021 года, когда побеждала EDward Gaming. Заодно прервалась серия из четырёх чемпионств подряд, которую Корея держала с 2022-го.</p>
+  <figure class="post__cover"><img src="/assets/img/worlds-2026-final.jpg" alt="BLG впервые взяла Worlds, Riot готовит New Dawn" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-kak-proshel-final">Как прошёл финал</a></li><li><a href="#section-doroga-cherez-chetyre-koreyskie-komandy">Дорога через четыре корейские команды</a></li><li><a href="#section-knight-pervyy-kitayskiy-mvp-finala">Knight: первый китайский MVP финала</a></li><li><a href="#section-gen-g-vosmoy-worlds-i-pervyy-final">Gen.G: восьмой Worlds и первый финал</a></li><li><a href="#section-new-dawn-chto-riot-voobsche-menyaet">New Dawn: что Riot вообще меняет</a></li><li><a href="#section-kalendar-2027-kitay-ispaniya-yaponiya">Календарь 2027: Китай, Испания, Япония</a></li><li><a href="#section-chto-eto-znachit">Что это значит</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>BLG выиграла Worlds 2026 со счётом 3:1 и стала первой командой LPL с титулом с 2021 года, прервав четырёхлетнюю серию побед Кореи</li><li>По пути BLG выбила все четыре корейские команды — HLE, DK, T1 и Gen.G; MVP финала признали мидера Knight</li><li>Riot анонсировала League of Legends: New Dawn: новый клиент, переработанный Summoner's Rift и руны, полный показ в январе 2027 года</li></ul></aside><div class="post__body"><p>Финал Worlds 2026 отыграли в ночь с 14 на 15 ноября по Москве в Barclays Center в Бруклине. Bilibili Gaming взяла серию у Gen.G со счётом 3:1: проиграла первую игру, а потом выиграла три подряд. Это первый Кубок призывателей в истории организации и первый титул LPL с 2021 года, когда побеждала EDward Gaming. Заодно прервалась серия из четырёх чемпионств подряд, которую Корея держала с 2022-го.</p>
 <p>Между второй и третьей игрой Riot показала тизер <a class="tlink" href="/titles/league-of-legends.html">League of Legends</a>: New Dawn — того самого «большого обновления», которое раньше называли League Next. Полный разбор обещан в январе 2027-го, а сам апдейт выйдет в течение следующего года. Один вечер, два инфоповода: уходит эпоха корейского доминирования и заканчивается эпоха игры в её нынешнем виде.</p>
-<h2>Как прошёл финал</h2>
+<h2 id="section-kak-proshel-final">Как прошёл финал</h2>
 <p>Gen.G забрала первую игру за 38 минут 56 секунд с разгромным счётом по убийствам 19:4. Chovy на Syndra ставил станы в командных драках, Ruler на Corki закончил игру 7/0/8, и даже потеря всех элементальных драконов корейцам не помешала: они выиграли решающий бой за старшего дракона и снесли Nexus.</p>
 <p>Вторая игра стала самой длинной на всём турнире — 53 минуты. Обе команды пришли с необычными драфтами: Gen.G поставила Vayne на верх и Cho'Gath в лес, BLG ответила связкой Ziggs и Camille на нижней линии. Gen.G вела, Canyon вытащил старшего дракона, уже будучи пойманным, но BLG нашла пики внутри вражеской базы и сравняла счёт.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Игра</th><th style="text-align:left">Победитель</th><th style="text-align:center">Длительность</th><th style="text-align:right">Убийства</th></tr></thead><tbody><tr><td style="text-align:left">1</td><td style="text-align:left">Gen.G</td><td style="text-align:center">38:56</td><td style="text-align:right">19:4</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">BLG</td><td style="text-align:center">53:00</td><td style="text-align:right">—</td></tr><tr><td style="text-align:left">3</td><td style="text-align:left">BLG</td><td style="text-align:center">37:35</td><td style="text-align:right">20:8</td></tr><tr><td style="text-align:left">4</td><td style="text-align:left">BLG</td><td style="text-align:center">≈43:00</td><td style="text-align:right">21:11</td></tr></tbody></table></div>
 <p>Третью игру BLG вытащила через ON на Alistar, который раз за разом ломал корейские заготовки, а четвёртую довела до конца без нервов: около десяти тысяч золота преимущества к финалу, Bin на Gwen — 8/2/9.</p>
 <figure class="post__fig"><img src="/assets/img/worlds-2026-kubok.jpg" alt="Кубок призывателей на сцене Worlds — трофей, который в 2026 году впервые уехал в организацию Bilibili Gaming" loading="lazy"></figure>
-<h2>Дорога через четыре корейские команды</h2>
+<h2 id="section-doroga-cherez-chetyre-koreyskie-komandy">Дорога через четыре корейские команды</h2>
 <p>Старт у BLG был хуже некуда. В первом раунде швейцарки китайцы проиграли Movistar KOI — в тот день все команды LPL проиграли свои матчи. Дальше были победы над Team Liquid и Karmine Corp, потом поражение от Top Esports после реверс-свипа 1:2, и в решающем матче за выход в плей-офф BLG «всухую» выбила Hanwha Life Esports.</p>
 <p>Дальше началось то, что корейская пресса называет «смертью от LPL»: в четвертьфинале BLG смела Dplus KIA 3:0, в полуфинале выбила действующих чемпионов T1 — 3:1, а в финале добралась до Gen.G. Четыре корейские команды на одном турнире, все четыре — за спиной у одной организации.</p>
 <figure class="post__fig"><img src="/assets/img/worlds-2026-stsena.jpg" alt="Команды Fnatic и EDward Gaming на сцене четвертьфинала Worlds 2015 — так выглядит сцена турнира, на которой разыгрывается Кубок призывателей" loading="lazy"></figure>
-<h2>Knight: первый китайский MVP финала</h2>
+<h2 id="section-knight-pervyy-kitayskiy-mvp-finala">Knight: первый китайский MVP финала</h2>
 <p>Приз самого ценного игрока финала получил мидер BLG Чжо «Knight» Дин. Insider Gaming отмечает, что он стал первым китайским мидером, который выиграл и Worlds, и MVP финала. Его вклад считали не по KDA: Cassiopeia давила на карте, Viktor разрывал командные драки, а в решающей игре он поймал соперников на Twisted Fate.</p>
 <p>Сам Knight после награды сказал прямее некуда (цитата на английском, как в оригинале): «Maybe before the game, a lot of people underrated us. They think I can't win against Chovy, BLG can't win against Gen.G. But we made it. So, finally, I can say to the world… we are the strongest team, we are the best».</p>
 <p>Ещё одна деталь для понимания масштаба: Park «Viper» Do-hyeon взял второй титул в карьере, а Bin, Xun, Knight и ON — первый.</p>
-<h2>Gen.G: восьмой Worlds и первый финал</h2>
+<h2 id="section-gen-g-vosmoy-worlds-i-pervyy-final">Gen.G: восьмой Worlds и первый финал</h2>
 <p>Gen.G приехала на турнир первым сеяным LCK, выиграв LCK Cup 2026 в марте и LCK 2026 Season в сентябре. Для организации это восьмой Worlds — и первый финал за всё время: до этого четыре раза команда останавливалась в шаге от решающего матча, на 3–4 месте (2021, 2022, 2024, 2025).</p>
 <p>Кубок Gen.G снова не достался. Утешительный приз — $800 тыс. из общего призового фонда турнира в $5 млн, победителю достался $1 млн. Против корейской команды сыграло и драфтовое поражение: в решающей игре BLG разобрала заготовки соперника раньше, чем те успели сработать, и ни Kiin, ни Canyon, ни Chovy не смогли переломить ход серии.</p>
-<h2>New Dawn: что Riot вообще меняет</h2>
+<h2 id="section-new-dawn-chto-riot-voobsche-menyaet">New Dawn: что Riot вообще меняет</h2>
 <p>Анонс вставили в трансляцию финала — между второй и третьей игрой, когда счёт был 1:1 и на арене стояла пауза. Формально это был тизер на полторы минуты, но список изменений Riot назвала прямо в эфире.</p>
 <ul><li><strong>Новый клиент.</strong> Последний крупный ребилд архитектуры клиента был в 2016 году, и с тех пор он оброс костылями. Исполнительный продюсер League Пол «Pabro» Bellezza: следующий год — «modernized client».</li><li><strong>Summoner's Rift.</strong> Переработанные визуал и звук главной карты: в тизере видно логово дракона с двумя входами вместо одного, обновлённых крипов и Барона.</li><li><strong>Руны и геймплей.</strong> В кадрах мелькнула руна, которой в текущей системе нет, — Riot обещает, что руны будут влиять на игру сильнее, чем сейчас. Как именно — не сказали.</li><li><strong>Визуал чемпионов.</strong> Blitzcrank в тизере выглядит как модель из проекта Project F 2019 года; в промо также попали Lux, Leona, Sett, Poppy, Volibear, Riven, Jhin и Ahri.</li><li><strong>League Classic.</strong> Режим со старыми патчами заканчивает работу в январе 2027 года — в тот же месяц, когда обещан полный показ New Dawn. Вернётся ли он в изменённом виде, Riot не подтверждала.</li></ul>
 <p>Глава LoL Studio Андрей «Meddler» ван Рун сформулировал цель так: «We want League to stand the test of time and be a game that's here for many years to come». Это не League 2 и не отдельный клиент — аккаунты, чемпионы и скины остаются, меняется оболочка и правила вокруг них.</p>
-<h2>Календарь 2027: Китай, Испания, Япония</h2>
+<h2 id="section-kalendar-2027-kitay-ispaniya-yaponiya">Календарь 2027: Китай, Испания, Япония</h2>
 <p>За день до финала Riot выкатила роадмап следующего сезона — и он выглядит как попытка заново развести турниры по карте мира.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Турнир</th><th style="text-align:left">Где</th><th style="text-align:left">Что известно</th></tr></thead><tbody><tr><td style="text-align:left">First Stand: All In</td><td style="text-align:left">Китай</td><td style="text-align:left">Разовое расширенное издание, Riot называет его крупнейшей площадкой в своей истории; формат и отбор — в январе</td></tr><tr><td style="text-align:left">MSI</td><td style="text-align:left">Feria Valencia, Испания</td><td style="text-align:left">Впервые в Испании; даты и билеты обещаны позже</td></tr><tr><td style="text-align:left">Worlds 2027</td><td style="text-align:left">Нагоя → Сувон → Сеул</td><td style="text-align:left">Swiss-этап впервые в Японии, плей-офф в Корее, финал в новой Seoul Arena</td></tr></tbody></table></div>
 <p>Отдельно Riot подтвердила, что обычный First Stand вернётся в Юго-Восточную Азию в 2028-м, а также что рассматривает Demacia Cup как замену стадии Play-In на Worlds 2027 — решения пока нет.</p>
 <figure class="post__fig"><img src="/assets/img/worlds-2026-nagoya.jpg" alt="Замок Нагоя: в 2027 году город примет швейцарский этап Worlds — первый этап чемпионата мира, который пройдёт в Японии" loading="lazy"></figure>
-<h2>Что это значит</h2>
+<h2 id="section-chto-eto-znachit">Что это значит</h2>
 <p>Оценка, не факт: у этого финала два разных смысла. Для сцены — LPL вернулась после пятилетнего перерыва и сделала это максимально громко, выбив по дороге всех корейских фаворитов, включая действующих чемпионов. Для игры — Riot признала, что 17-летний клиент и карта, которую все знают наизусть, дальше сами себя не вытянут.</p>
 <p>Второе интереснее. Перезапуск клиента и смена рун — это не косметика, а передел баланса, после которого часть привычных стратегий умрёт. И тут же важная деталь: League Classic, куда можно было сбежать от любых изменений, закрывается ровно в тот месяц, когда New Dawn покажут целиком. Игрокам, которым нравился старый League, оставляют только новый — и это самый спорный пункт всего плана.</p>
 <p>Ещё один риск — календарь. First Stand: All In в Китае, MSI в Испании, Worlds в Японии и Корее: логистика для команд и болельщиков растягивается на три континента за сезон. Riot обещает, что расширенный турнир даст больше слотов командам из второстепенных регионов, но пока это только обещание из пресс-релиза.</p>
-<p>Что точно известно на сегодня: чемпион 2026 года — Bilibili Gaming, MVP финала — Knight, а следующая большая премьера Riot — январь 2027-го.</p></div>
-  <p class="imgcredit">Изображения: Wikimedia Commons — Barclays Center (CityLimitsJunction, CC0), кубок и сцена Worlds (Bruce Liu, CC BY-SA 3.0), замок Нагоя (Noodle snacks, CC BY-SA 3.0)</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://dotesports.com/league-of-legends/news/blg-win-worlds-championship-2026" rel="nofollow noopener" target="_blank">Dot Esports — финал BLG против Gen.G</a></li><li><a href="https://www.gosugamers.net/lol/news/79501-bilibili-gaming-defeat-gen-g-to-be-crowned-worlds-2026-champions" rel="nofollow noopener" target="_blank">GosuGamers — путь BLG и призовые</a></li><li><a href="https://strafe.com/news/read/blg-beat-geng-3-1-to-claim-first-worlds-title" rel="nofollow noopener" target="_blank">Strafe — счёт по играм финала</a></li><li><a href="https://insider-gaming.com/knight-crowned-lol-worlds-2026-mvp-after-blg-victory/" rel="nofollow noopener" target="_blank">Insider Gaming — Knight MVP финала</a></li><li><a href="https://news.sbs.co.kr/english/article.do?news_id=N1008846354" rel="nofollow noopener" target="_blank">SBS News — реакция корейской стороны</a></li><li><a href="https://pcgamesn.com/league-of-legends/new-dawn-lol-next-reveal" rel="nofollow noopener" target="_blank">PCGamesN — анонс New Dawn</a></li><li><a href="https://www.ign.com/articles/league-of-legends-new-dawn-unveiled-with-debut-trailer-riot-announces-major-overhaul-coming-in-2027" rel="nofollow noopener" target="_blank">IGN — что показали в тизере</a></li><li><a href="https://www.polygon.com/league-of-legends-with-new-dawn-reveal-worlds-2026" rel="nofollow noopener" target="_blank">Polygon — Worlds 2026 и New Dawn</a></li><li><a href="https://dotesports.com/league-of-legends/news/lol-esports-2027-roadmap" rel="nofollow noopener" target="_blank">Dot Esports — календарь LoL Esports 2027</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Что точно известно на сегодня: чемпион 2026 года — Bilibili Gaming, MVP финала — Knight, а следующая большая премьера Riot — январь 2027-го.</p></div><p class="imgcredit">Изображения: Wikimedia Commons — Barclays Center (CityLimitsJunction, CC0), кубок и сцена Worlds (Bruce Liu, CC BY-SA 3.0), замок Нагоя (Noodle snacks, CC BY-SA 3.0)</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://dotesports.com/league-of-legends/news/blg-win-worlds-championship-2026" rel="nofollow noopener" target="_blank">Dot Esports — финал BLG против Gen.G</a></li><li><a href="https://www.gosugamers.net/lol/news/79501-bilibili-gaming-defeat-gen-g-to-be-crowned-worlds-2026-champions" rel="nofollow noopener" target="_blank">GosuGamers — путь BLG и призовые</a></li><li><a href="https://strafe.com/news/read/blg-beat-geng-3-1-to-claim-first-worlds-title" rel="nofollow noopener" target="_blank">Strafe — счёт по играм финала</a></li><li><a href="https://insider-gaming.com/knight-crowned-lol-worlds-2026-mvp-after-blg-victory/" rel="nofollow noopener" target="_blank">Insider Gaming — Knight MVP финала</a></li><li><a href="https://news.sbs.co.kr/english/article.do?news_id=N1008846354" rel="nofollow noopener" target="_blank">SBS News — реакция корейской стороны</a></li><li><a href="https://pcgamesn.com/league-of-legends/new-dawn-lol-next-reveal" rel="nofollow noopener" target="_blank">PCGamesN — анонс New Dawn</a></li><li><a href="https://www.ign.com/articles/league-of-legends-new-dawn-unveiled-with-debut-trailer-riot-announces-major-overhaul-coming-in-2027" rel="nofollow noopener" target="_blank">IGN — что показали в тизере</a></li><li><a href="https://www.polygon.com/league-of-legends-with-new-dawn-reveal-worlds-2026" rel="nofollow noopener" target="_blank">Polygon — Worlds 2026 и New Dawn</a></li><li><a href="https://dotesports.com/league-of-legends/news/lol-esports-2027-roadmap" rel="nofollow noopener" target="_blank">Dot Esports — календарь LoL Esports 2027</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-0800-blg-worlds-2026.html&text=BLG%20%D0%B2%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D0%B2%D0%B7%D1%8F%D0%BB%D0%B0%20Worlds%2C%20Riot%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D1%82%20New%20Dawn" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-0800-blg-worlds-2026.html&title=BLG%20%D0%B2%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D0%B2%D0%B7%D1%8F%D0%BB%D0%B0%20Worlds%2C%20Riot%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D1%82%20New%20Dawn" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-0800-blg-worlds-2026.html&text=BLG%20%D0%B2%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D0%B2%D0%B7%D1%8F%D0%BB%D0%B0%20Worlds%2C%20Riot%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D1%82%20New%20Dawn" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-0800-blg-worlds-2026.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-15-0800-blg-worlds-2026-pin.jpg&description=BLG%20%D0%B2%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B5%20%D0%B2%D0%B7%D1%8F%D0%BB%D0%B0%20Worlds%2C%20Riot%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D1%82%20New%20Dawn" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-15-0800-blg-worlds-2026.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="VK Play сдаёт консоли в аренду под GTA VI" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T15:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1500-vk-play-arenda-konsoli.html">VK Play сдаёт консоли в аренду под GTA VI</a></h3>
     <p class="card__sum">«VK Play Облачный гейминг» открыл в тестовом режиме консольный тариф: можно забронировать время на удалённой приставке и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1500-vk-play-arenda-konsoli.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T08:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-0800-ubisoft-motherbrain.html">Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек</a></h3>
     <p class="card__sum">Полугодие Ubisoft закрыла с убытком €155,9 млн по non-IFRS и падением бронирований на 16,5%, а команду, сделавшую её первую…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-0800-ubisoft-motherbrain.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="«MindsEye»: £61,7 млн долга и надежда на иски" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-19T18:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1800-mindseye-dolg-61-mln.html">«MindsEye»: £61,7 млн долга и надежда на иски</a></h3>
     <p class="card__sum">Администраторы Build a Rocket Boy опубликовали отчёт: студия должна кредиторам £61,7 млн, из них £36,4 млн — NetEase.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1800-mindseye-dolg-61-mln.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article></div></section>
 </main>
@@ -185,9 +177,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -205,9 +196,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

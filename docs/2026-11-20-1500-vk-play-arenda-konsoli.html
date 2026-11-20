@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/pc/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/pc/">PC-игры</a></li><li aria-current="page">VK Play сдаёт консоли в аренду под GTA VI</li></ol></nav>
 <article class="post cat-pc">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T15:00:00+03:00">20.11.2026, 15:00</time></div>
@@ -100,70 +100,62 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">«VK Play Облачный гейминг» открыл в тестовом режиме консольный тариф: можно забронировать время на удалённой приставке и играть в GTA VI с ПК или прямо в браузере — без покупки консоли и без покупки самой игры. В тарифе пока одна игра, а что происходит с прогрессом между бронированиями, VK не объяснила.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Консольный тариф VK Play запущен в тестовом режиме, и единственная игра в нём — GTA VI</li><li>Аккаунт и копия игры не передаются, оплачивается доступ к сессии на удалённой приставке; сетку цен VK официально не публиковала — в пересказах релиза называют 169–559 ₽ за бронь</li><li>Сколько длится слот и сохраняется ли прогресс между сессиями, в сообщении о запуске не сказано</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="VK Play сдаёт консоли в аренду под GTA VI"></figure>
-  <div class="post__body"><p>20 ноября «VK Play Облачный гейминг» открыл консольный тариф — пока в тестовом режиме. Смысл простой: вы не покупаете приставку и не покупаете игру, вы бронируете время на чужой консоли, которая стоит в дата-центре VK, и играете с домашнего компьютера или прямо из браузера. Единственная игра в тарифе на старте — <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a>, вышедшая сутки назад.</p>
-<h2>Что именно арендуют</h2>
+  <figure class="post__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="VK Play сдаёт консоли в аренду под GTA VI" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-arenduyut">Что именно арендуют</a></li><li><a href="#section-kak-eto-rabotaet-po-shagam">Как это работает по шагам</a></li><li><a href="#section-skolko-stoit">Сколько стоит</a></li><li><a href="#section-tri-sposoba-poigrat-bez-pristavki">Три способа поиграть без приставки</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-otkuda-vzyalis-sami-konsoli">Откуда взялись сами консоли</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Консольный тариф VK Play запущен в тестовом режиме, и единственная игра в нём — GTA VI</li><li>Аккаунт и копия игры не передаются, оплачивается доступ к сессии на удалённой приставке; сетку цен VK официально не публиковала — в пересказах релиза называют 169–559 ₽ за бронь</li><li>Сколько длится слот и сохраняется ли прогресс между сессиями, в сообщении о запуске не сказано</li></ul></aside><div class="post__body"><p>20 ноября «VK Play Облачный гейминг» открыл консольный тариф — пока в тестовом режиме. Смысл простой: вы не покупаете приставку и не покупаете игру, вы бронируете время на чужой консоли, которая стоит в дата-центре VK, и играете с домашнего компьютера или прямо из браузера. Единственная игра в тарифе на старте — <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a>, вышедшая сутки назад.</p>
+<h2 id="section-chto-imenno-arenduyut">Что именно арендуют</h2>
 <p>Не игру и не аккаунт с ней. Генеральный директор VK Play Александр Михеев сформулировал это в комментарии Computerra прямо: «Мы даем не игру и не аккаунт с ней, а возможность запустить игру на сервере». То есть оплачивается сессия на удалённой приставке, а копия GTA VI уже стоит на ней.</p>
 <p>Для российского игрока это принципиальная разница. GTA VI официально в стране не продаётся: Take-Two приостановила продажи в марте 2022-го, в российском PlayStation Store новых покупок нет. Обычный путь — аккаунт другого региона и пополнение через посредников; по данным DTF, на PS5 готовый предзаказ на маркетплейсах начинается примерно от 8,2 тыс. ₽, плюс к этому нужна сама консоль. В консольном тарифе ни того, ни другого не требуется.</p>
-<h2>Как это работает по шагам</h2>
+<h2 id="section-kak-eto-rabotaet-po-shagam">Как это работает по шагам</h2>
 <p>Порядок описан в пресс-релизе и одинаков для обеих платформ:</p>
 <ol><li>Зайти в раздел облачного гейминга и выбрать «Консольный тариф».</li><li>Выбрать приставку, дату и время сессии, забронировать слот.</li><li>Оплатить бронирование.</li><li>В назначенное время запустить игру — через «Игровой Центр» на Windows 7 и новее или macOS High Sierra и новее, либо в браузере. Поддерживаются Chrome, «Яндекс», Edge, Opera и Safari.</li><li>Все брони лежат в разделе «Мои брони».</li></ol>
 <p>Покупка игры и отдельная авторизация в магазине не нужны — это VK подчёркивает в описании тарифа отдельно.</p>
 <figure class="post__fig"><img src="/assets/img/vk-play-konsol-gejmpad.jpg" alt="DualSense: единственное, что понадобится от вас — геймпад, и тот необязателен" loading="lazy"></figure>
-<h2>Сколько стоит</h2>
+<h2 id="section-skolko-stoit">Сколько стоит</h2>
 <p>Официальной сетки тарифов VK не публиковала: в релизе цен нет, а страница облачного гейминга — приложение, где стоимость видна только внутри интерфейса бронирования. В пересказах пресс-релиза, вышедших 20 ноября, фигурирует диапазон от 169 до 559 ₽ за бронь; разброс там объясняют три вещи — время сессии, модель приставки и географическое расположение. Проверить эти цифры на самой странице тарифа мы не смогли: кабинет требует входа. Так что к диапазону стоит относиться как к пересказу, а не как к опубликованной цене.</p>
 <p>Сколько именно длится слот, за который берут эти деньги, в сообщении о запуске тоже не указано — это первое, что стоит посмотреть в самом кабинете перед оплатой.</p>
-<h2>Три способа поиграть без приставки</h2>
+<h2 id="section-tri-sposoba-poigrat-bez-pristavki">Три способа поиграть без приставки</h2>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Способ</th><th style="text-align:left">Что нужно</th><th style="text-align:left">Цена</th><th style="text-align:left">Ограничения</th></tr></thead><tbody><tr><td style="text-align:left">VK Play, консольный тариф</td><td style="text-align:left">ПК или браузер, больше ничего</td><td style="text-align:left">официально не объявлена; в пересказах 169–559 ₽ за слот</td><td style="text-align:left">одна игра, тестовый режим, длительность слота не раскрыта</td></tr><tr><td style="text-align:left">Xbox Cloud Gaming</td><td style="text-align:left">учётная запись Xbox и Game Pass либо докупленные часы</td><td style="text-align:left">по тарифу подписки</td><td style="text-align:left">GTA VI стримится с настройками Series S; подписка с месячным лимитом часов, оплата из России — отдельная задача</td></tr><tr><td style="text-align:left">Своя PS5 и копия игры</td><td style="text-align:left">приставка плюс игра с зарубежного аккаунта</td><td style="text-align:left">консоль и от ~8,2 тыс. ₽ за игру у посредников</td><td style="text-align:left">самая дорогая точка входа, зато без брони и расписания</td></tr></tbody></table></div>
 <p>Третий вариант в таблице — не конкурент, а то, от чего консольный тариф уводит. Первые два различаются природой: у Xbox вы платите за подписку и играете в свою копию, у VK — за железо по расписанию и играете в чужую.</p>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p>Дыр в этой схеме хватает, и часть из них VK пока не закрыла даже на словах.</p>
 <ul><li><strong>Одна игра.</strong> Тариф запущен под GTA VI, и это не «каталог на старте», а буквально единственный проект. Формально сервис обещает расширение, но когда — не говорит.</li><li><strong>Тестовый режим.</strong> Цены, доступность слотов и сам формат могут поменяться без долгого предупреждения. Это не подписка, на которую можно рассчитывать месяцами.</li><li><strong>Прогресс между сессиями.</strong> Главный практический вопрос. В описании сказано, что аккаунт не передаётся и игрок получает доступ к сессии. Сохраняется ли прохождение к следующей брони, выдадут ли ту же приставку с тем же профилем — в пресс-релизе ответа нет. Для игры с кампанией на десятки часов это решающая деталь: если каждая сессия начинается с чистого профиля, тариф годится на вечер, а не на прохождение.</li><li><strong>Расписание вместо «когда захочу».</strong> Играть можно в забронированное окно, а не в любой момент. Для облачного гейминга это необычно: там обычно платят за доступ, а не за слот.</li><li><strong>Пинг.</strong> Поток идёт с серверов VK, и качество картинки зависит от расстояния до конкретной приставки. Что цена привязана к региону, косвенно говорит о нескольких площадках, но в каких городах они стоят, компания не сообщала. Проверять надо опытом, а не обещаниями.</li></ul>
 <figure class="post__fig"><img src="/assets/img/vk-play-konsol-stiki.jpg" alt="Стики DualSense: в облаке важнее не они, а задержка между нажатием и картинкой" loading="lazy"></figure>
-<h2>Откуда взялись сами консоли</h2>
+<h2 id="section-otkuda-vzyalis-sami-konsoli">Откуда взялись сами консоли</h2>
 <p>Облачный гейминг обычно строится на серверных видеокартах: один мощный ПК режется на виртуальные машины. Здесь схема другая — арендуется физическая приставка, то есть чей-то реальный PlayStation или Xbox стоит в стойке и работает на одного игрока за раз.</p>
 <p>Откуда VK берёт железо, официально не раскрывается. Косвенная подсказка: раньше сервис искал партнёров, готовых подключить к облаку собственную консоль и получать деньги за оплаченные минуты, — об этом писал автор Habr, разбиравший такое объявление. Если модель та же, «дата-центр VK» может оказаться распределённой сетью чужих приставок, и тогда число слотов упирается не в закупки, а в желающих сдавать своё железо.</p>
-<h2>Что дальше</h2>
+<h2 id="section-chto-dalshe">Что дальше</h2>
 <p>Михеев называет запуск важным шагом для облачного гейминга VK Play и надеется расширить список проектов. Пока это скорее эксперимент, чем сервис: одна игра, слоты по расписанию, непрояснённая судьба сохранений.</p>
 <p>Моя оценка: консольный тариф — не «Netflix от игр», а почасовая аренда железа, и для одного открытого мира на сотню часов такая модель упирается именно в прогресс. Если VK сделает сохранения постоянными и продлит сессию до вечера, это станет самым дешёвым способом увидеть GTA VI в России: пара сотен рублей за слот против восьми тысяч за игру плюс стоимость приставки. Если нет — тариф останется способом посмотреть Вице-Сити на чужом экране и закрыть вкладку.</p>
-<p>Перед бронированием стоит уточнить три вещи в самом кабинете: сколько длится слот, что будет с прогрессом при повторной брони и какие площадки обслуживают ваш город. Ответы на них в пресс-релизе отсутствуют, а без них тариф покупается вслепую.</p></div>
-  <p class="imgcredit">Изображения: коллаж GEEKOVSKI; фото PlayStation 5 и DualSense — Soberian (ретушь) / Osh33m / Wikimedia Commons, CC BY-SA 4.0. Кадры в тексте — Chris Woodrich / Wikimedia Commons, CC BY-SA 4.0.</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.cnews.ru/news/line/2026-11-20_vk_play_zapustil_konsolnyj" rel="nofollow noopener" target="_blank">CNews — VK Play запустил консольный тариф с доступом к GTA VI</a></li><li><a href="https://computerra.ru/376314/vk-play-zapustil-konsolnyj-tarif-s-dostupom-k-gta-vi" rel="nofollow noopener" target="_blank">Computerra — тариф, механика брони и цитата Александра Михеева</a></li><li><a href="https://pcnews.ru/news/gta_vi_na_obycnom_pk_vk_play_zapustil_arendu_konsolej_cerez_oblako-1858048.html" rel="nofollow noopener" target="_blank">PCNews — тариф не передаёт аккаунт и копию игры</a></li><li><a href="https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19" rel="nofollow noopener" target="_blank">Xbox Wire — GTA VI в Xbox Cloud Gaming с 19 ноября</a></li><li><a href="https://dtf.ru/gta/5417403-gde-kupit-gta-6-v-rossii" rel="nofollow noopener" target="_blank">DTF — как купить GTA VI в России и цены у посредников</a></li><li><a href="https://habr.com/ru/articles/1099934" rel="nofollow noopener" target="_blank">Habr — объявление VK Play о поиске партнёров со своими консолями</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Перед бронированием стоит уточнить три вещи в самом кабинете: сколько длится слот, что будет с прогрессом при повторной брони и какие площадки обслуживают ваш город. Ответы на них в пресс-релизе отсутствуют, а без них тариф покупается вслепую.</p></div><p class="imgcredit">Изображения: коллаж GEEKOVSKI; фото PlayStation 5 и DualSense — Soberian (ретушь) / Osh33m / Wikimedia Commons, CC BY-SA 4.0. Кадры в тексте — Chris Woodrich / Wikimedia Commons, CC BY-SA 4.0.</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.cnews.ru/news/line/2026-11-20_vk_play_zapustil_konsolnyj" rel="nofollow noopener" target="_blank">CNews — VK Play запустил консольный тариф с доступом к GTA VI</a></li><li><a href="https://computerra.ru/376314/vk-play-zapustil-konsolnyj-tarif-s-dostupom-k-gta-vi" rel="nofollow noopener" target="_blank">Computerra — тариф, механика брони и цитата Александра Михеева</a></li><li><a href="https://pcnews.ru/news/gta_vi_na_obycnom_pk_vk_play_zapustil_arendu_konsolej_cerez_oblako-1858048.html" rel="nofollow noopener" target="_blank">PCNews — тариф не передаёт аккаунт и копию игры</a></li><li><a href="https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19" rel="nofollow noopener" target="_blank">Xbox Wire — GTA VI в Xbox Cloud Gaming с 19 ноября</a></li><li><a href="https://dtf.ru/gta/5417403-gde-kupit-gta-6-v-rossii" rel="nofollow noopener" target="_blank">DTF — как купить GTA VI в России и цены у посредников</a></li><li><a href="https://habr.com/ru/articles/1099934" rel="nofollow noopener" target="_blank">Habr — объявление VK Play о поиске партнёров со своими консолями</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1500-vk-play-arenda-konsoli.html&text=VK%20Play%20%D1%81%D0%B4%D0%B0%D1%91%D1%82%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8%20%D0%B2%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%83%20%D0%BF%D0%BE%D0%B4%20GTA%20VI" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1500-vk-play-arenda-konsoli.html&title=VK%20Play%20%D1%81%D0%B4%D0%B0%D1%91%D1%82%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8%20%D0%B2%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%83%20%D0%BF%D0%BE%D0%B4%20GTA%20VI" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1500-vk-play-arenda-konsoli.html&text=VK%20Play%20%D1%81%D0%B4%D0%B0%D1%91%D1%82%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8%20%D0%B2%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%83%20%D0%BF%D0%BE%D0%B4%20GTA%20VI" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1500-vk-play-arenda-konsoli.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-20-1500-vk-play-arenda-konsoli-pin.jpg&description=VK%20Play%20%D1%81%D0%B4%D0%B0%D1%91%D1%82%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8%20%D0%B2%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%83%20%D0%BF%D0%BE%D0%B4%20GTA%20VI" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1500-vk-play-arenda-konsoli.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T08:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-0800-ubisoft-motherbrain.html">Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек</a></h3>
     <p class="card__sum">Полугодие Ubisoft закрыла с убытком €155,9 млн по non-IFRS и падением бронирований на 16,5%, а команду, сделавшую её первую…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-0800-ubisoft-motherbrain.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="«MindsEye»: £61,7 млн долга и надежда на иски" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-19T18:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1800-mindseye-dolg-61-mln.html">«MindsEye»: £61,7 млн долга и надежда на иски</a></h3>
     <p class="card__sum">Администраторы Build a Rocket Boy опубликовали отчёт: студия должна кредиторам £61,7 млн, из них £36,4 млн — NetEase.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1800-mindseye-dolg-61-mln.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/steam-tonet.jpg" alt="Steam тонет в играх: Valve не успевает проверять" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/steam-tonet.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-18T18:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-1800-steam-tonet-v-igrah.html">Steam тонет в играх: Valve не успевает проверять</a></h3>
     <p class="card__sum">Valve признала, что предрелизная проверка билдов в Steam растянулась с обычных 3–5 до 12 рабочих дней, и объяснила это…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-1800-steam-tonet-v-igrah.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article></div></section>
 </main>
@@ -178,9 +170,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -198,9 +189,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/playstation/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/playstation/">PlayStation</a></li><li aria-current="page">У Sony 97,9 млн PS5 и PS6 по графику</li></ol></nav>
 <article class="post cat-playstation">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-05T13:05:00+03:00">05.11.2026, 13:05</time></div>
@@ -100,50 +100,42 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Sony отчиталась за квартал: PS5 дошла до 97,9 млн, а игровое подразделение дало лучшую операционную прибыль за два года.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>За июль–сентябрь поставлено 2,6 млн PS5 против 4,0 млн годом ранее — минус 35 %</li><li>Продажи софта 88,2 млн копий за квартал, 78 % из них цифровые, активных пользователей 127 млн</li><li>Прогноз на год повышен: выручка сегмента до ¥4,83 трлн, операционная прибыль до ¥700 млрд</li><li>Про PS6: разработка «идёт по графику», инвестиции в новую платформу — со следующего финансового года</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/sony-otchet-ps5-97-9-mln.jpg" alt="У Sony 97,9 млн PS5 и PS6 по графику"></figure>
-  <div class="post__body"><p>5 ноября Sony опубликовала отчёт за второй квартал финансового года (июль–сентябрь 2026-го). Это официальные данные компании, а не оценки аналитиков.</p>
+  <figure class="post__cover"><img src="/assets/img/sony-otchet-ps5-97-9-mln.jpg" alt="У Sony 97,9 млн PS5 и PS6 по графику" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout "><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>За июль–сентябрь поставлено 2,6 млн PS5 против 4,0 млн годом ранее — минус 35 %</li><li>Продажи софта 88,2 млн копий за квартал, 78 % из них цифровые, активных пользователей 127 млн</li><li>Прогноз на год повышен: выручка сегмента до ¥4,83 трлн, операционная прибыль до ¥700 млрд</li><li>Про PS6: разработка «идёт по графику», инвестиции в новую платформу — со следующего финансового года</li></ul></aside><div class="post__body"><p>5 ноября Sony опубликовала отчёт за второй квартал финансового года (июль–сентябрь 2026-го). Это официальные данные компании, а не оценки аналитиков.</p>
 <p>Главная цифра: 97,9 млн проданных PS5 с июня 2020-го. За квартал отгружено 2,6 млн консолей против 4,0 млн за тот же период годом ранее — падение на 35 %. За первое полугодие — 4,2 млн против 6,5 млн. Поставки падают, выручка от железа при этом почти не просела: ¥219,7 млрд (−4,8 %), разницу съели цены и слабая иена.</p>
 <p>Игровое подразделение (Game &amp; Network Services) при этом отчиталось о выручке ¥1,208 трлн — это +8,6 % год к году, операционная прибыль ¥220,1 млрд, +83 %. Wccftech честно оговаривает: в прошлом году квартал тянули разовые списания на ¥49,8 млрд, из которых ¥31,5 млрд — обесценивание активов Bungie, так что «чистый» рост скромнее, около 29 %. Но и это лучший квартал для сегмента за два предыдущих финансовых года.</p>
 <p>Деньги приносит софт и сервисы. За квартал продано 88,2 млн копий игр PS5 и PS4 (+7,9 млн год к году), из них 8,2 млн — собственные студии Sony (+30 %). Доля цифровых покупок полных версий выросла с 72 % до 78 %. Выручка PlayStation Plus и рекламы — ¥218,3 млрд, +19,5 %. Активных пользователей PSN в сентябре 127 млн — рекорд для этого месяца. Marvel's Wolverine к 4 ноября разошлась тиражом 2,4 млн копий за 50 дней после релиза 15 сентября. Прогноз на год Sony повысила: выручка сегмента с ¥4,54 трлн до ¥4,83 трлн, операционная прибыль с ¥660 млрд до ¥700 млрд.</p>
 <p>Про следующее поколение сказано ровно столько, сколько сказано. Финансовый директор Sony Линь Тао на звонке: разработка новой платформы «идёт по графику», а в следующем финансовом году (с апреля 2027-го) компания намерена сделать «существенный прогресс» в подготовке к ней и начать инвестиции в новую платформу. Дату релиза Sony не называет — гендиректор Хирокадзу Тотоки ещё раньше говорил, что решения по срокам нет. Аналитики ждут консоль в 2028-м, после отказа PlayStation от дисков с января 2028 года. Отдельно Sony подтвердила, что законтрактовала память под прогноз продаж следующего финансового года и ждёт прибыльность железа на уровне прошлого года.</p>
-<p>Мнение: PlayStation окончательно стала бизнесом про софт и подписку, и отчёт это фиксирует лучше любых заявлений — консолей продано на треть меньше, а прибыли вдвое больше. Плохая новость в том, что 2,6 млн в квартал при <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a> на носу (19 ноября) — это не спрос, а предложение: консоли просто не доехали до полок. Если Sony не закроет дефицит к праздникам, GTA VI продастся на том, что есть, а не на том, что могло бы быть.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.sony.com/en/SonyInfo/IR/library/er/pdf/26q2_supplement.pdf" rel="nofollow noopener" target="_blank">Sony — финансовый отчёт и таблица Q2 FY2026</a></li><li><a href="https://www.videogameschronicle.com/news/sony-says-playstation-6-development-is-progressing-as-scheduled-as-ps5-sales-hit-97-9m/" rel="nofollow noopener" target="_blank">VGC — Sony says PlayStation 6 development is &quot;progressing as scheduled&quot;, as PS5 sales hit 97.9m</a></li><li><a href="https://www.gematsu.com/2026/11/ps5-shipments-top-97-9-million-marvels-wolverine-tops-2-4-million" rel="nofollow noopener" target="_blank">Gematsu — PS5 shipments top 97.9 million, Marvel&#x27;s Wolverine tops 2.4 million</a></li><li><a href="https://wccftech.com/playstation-profit-record-quarter-ps5-shipments-drop/" rel="nofollow noopener" target="_blank">Wccftech — PlayStation Posts Its Strongest Quarter In Years</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Мнение: PlayStation окончательно стала бизнесом про софт и подписку, и отчёт это фиксирует лучше любых заявлений — консолей продано на треть меньше, а прибыли вдвое больше. Плохая новость в том, что 2,6 млн в квартал при <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a> на носу (19 ноября) — это не спрос, а предложение: консоли просто не доехали до полок. Если Sony не закроет дефицит к праздникам, GTA VI продастся на том, что есть, а не на том, что могло бы быть.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.sony.com/en/SonyInfo/IR/library/er/pdf/26q2_supplement.pdf" rel="nofollow noopener" target="_blank">Sony — финансовый отчёт и таблица Q2 FY2026</a></li><li><a href="https://www.videogameschronicle.com/news/sony-says-playstation-6-development-is-progressing-as-scheduled-as-ps5-sales-hit-97-9m/" rel="nofollow noopener" target="_blank">VGC — Sony says PlayStation 6 development is &quot;progressing as scheduled&quot;, as PS5 sales hit 97.9m</a></li><li><a href="https://www.gematsu.com/2026/11/ps5-shipments-top-97-9-million-marvels-wolverine-tops-2-4-million" rel="nofollow noopener" target="_blank">Gematsu — PS5 shipments top 97.9 million, Marvel&#x27;s Wolverine tops 2.4 million</a></li><li><a href="https://wccftech.com/playstation-profit-record-quarter-ps5-shipments-drop/" rel="nofollow noopener" target="_blank">Wccftech — PlayStation Posts Its Strongest Quarter In Years</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fsony-otchet-ps5-97-9-mln.html&text=%D0%A3%20Sony%2097%2C9%20%D0%BC%D0%BB%D0%BD%20PS5%20%D0%B8%20PS6%20%D0%BF%D0%BE%20%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D1%83" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fsony-otchet-ps5-97-9-mln.html&title=%D0%A3%20Sony%2097%2C9%20%D0%BC%D0%BB%D0%BD%20PS5%20%D0%B8%20PS6%20%D0%BF%D0%BE%20%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D1%83" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fsony-otchet-ps5-97-9-mln.html&text=%D0%A3%20Sony%2097%2C9%20%D0%BC%D0%BB%D0%BD%20PS5%20%D0%B8%20PS6%20%D0%BF%D0%BE%20%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D1%83" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fsony-otchet-ps5-97-9-mln.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fsony-otchet-ps5-97-9-mln-pin.jpg&description=%D0%A3%20Sony%2097%2C9%20%D0%BC%D0%BB%D0%BD%20PS5%20%D0%B8%20PS6%20%D0%BF%D0%BE%20%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D1%83" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fsony-otchet-ps5-97-9-mln.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="GTA VI на консолях: 30 fps держится не везде" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-playstation">
+  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-20T12:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">GTA VI на консолях: 30 fps держится не везде</a></h3>
     <p class="card__sum">Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">Читать →</a><span class="srcc">источников: 9</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="GTA VI: 99 из 100 и рекорд Metacritic" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-18T15:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">GTA VI: 99 из 100 и рекорд Metacritic</a></h3>
     <p class="card__sum">За день до релиза спало эмбарго на рецензии GTA VI, и пресса выдала почти единодушный максимум: 99 из 100 на Metacritic по…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">Читать →</a><span class="srcc">источников: 11</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="PlayStation отбилась от иска на £2 млрд" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-17T18:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-1800-playstation-isk-2-mlrd.html">PlayStation отбилась от иска на £2 млрд</a></h3>
     <p class="card__sum">Лондонский трибунал по конкуренции 17 ноября отклонил коллективный иск к Sony почти на £2 млрд — 12,2 млн британских…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-1800-playstation-isk-2-mlrd.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article></div></section>
 </main>
@@ -158,9 +150,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -178,9 +169,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

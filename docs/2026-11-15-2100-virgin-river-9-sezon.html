@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/serialy/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/serialy/">Сериалы</a></li><li aria-current="page">«Virgin River» дожил до девятого сезона: рекорд Netflix</li></ol></nav>
 <article class="post cat-serialy">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-15T21:00:00+03:00">15.11.2026, 21:00</time></div>
@@ -100,74 +100,66 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Netflix продлила «Virgin River» на девятый сезон за несколько месяцев до премьеры восьмого — это рекорд по числу сезонов среди сценарных сериалов сервиса и полмиллиарда просмотров. За те же три дня стриминг продлил ещё два «тихих» шоу, и это уже не случайность, а политика.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-anya.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/anya.html">Аня Гладышева</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Девятый сезон «Virgin River» заказали раньше, чем вышел восьмой: десять серий доведут сериал до 94 эпизодов и сделают его самым долгим по числу сезонов в истории Netflix</li><li>Первые семь сезонов набрали полмиллиарда просмотров, сериал провёл 28 недель в глобальном топ-10 и попадал в топ-10 более чем в 80 странах</li><li>За те же три дня Netflix продлила «Nobody Wants This» (через две недели после третьего сезона) и «Hollywood Arts» (через месяц после первого)</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/virgin-river-s9-netflix.jpg" alt="«Virgin River» дожил до девятого сезона: рекорд Netflix"></figure>
-  <div class="post__body"><p>В пятницу Netflix продлила «<a class="tlink" href="/titles/virgin-river.html">Virgin River</a>» на девятый сезон — за несколько месяцев до премьеры восьмого, который выйдет только в 2027-м. Формально это строчка в ленте новостей стриминга. По факту — рекорд: тихая романтическая драма про городок в калифорнийских секвойях стала самым долгим сценарным сериалом в истории сервиса по числу сезонов. И ещё один признак того, что Netflix давно считает успех не так, как принято думать.</p>
-<h2>Что именно продлили</h2>
+  <figure class="post__cover"><img src="/assets/img/virgin-river-s9-netflix.jpg" alt="«Virgin River» дожил до девятого сезона: рекорд Netflix" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-prodlili">Что именно продлили</a></li><li><a href="#section-pochemu-zhivet-imenno-etot-serial">Почему живёт именно этот сериал</a></li><li><a href="#section-tri-prodleniya-za-tri-dnya">Три продления за три дня</a></li><li><a href="#section-kak-netflix-schitaet-eti-polmilliarda">Как Netflix считает эти полмиллиарда</a></li><li><a href="#section-kogo-pri-etom-zakryvayut">Кого при этом закрывают</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Девятый сезон «Virgin River» заказали раньше, чем вышел восьмой: десять серий доведут сериал до 94 эпизодов и сделают его самым долгим по числу сезонов в истории Netflix</li><li>Первые семь сезонов набрали полмиллиарда просмотров, сериал провёл 28 недель в глобальном топ-10 и попадал в топ-10 более чем в 80 странах</li><li>За те же три дня Netflix продлила «Nobody Wants This» (через две недели после третьего сезона) и «Hollywood Arts» (через месяц после первого)</li></ul></aside><div class="post__body"><p>В пятницу Netflix продлила «<a class="tlink" href="/titles/virgin-river.html">Virgin River</a>» на девятый сезон — за несколько месяцев до премьеры восьмого, который выйдет только в 2027-м. Формально это строчка в ленте новостей стриминга. По факту — рекорд: тихая романтическая драма про городок в калифорнийских секвойях стала самым долгим сценарным сериалом в истории сервиса по числу сезонов. И ещё один признак того, что Netflix давно считает успех не так, как принято думать.</p>
+<h2 id="section-chto-imenno-prodlili">Что именно продлили</h2>
 <p>Объявление сделали 13 ноября. Девятый сезон снова будет из десяти часовых эпизодов — это доведёт сериал до 94 серий. Шоураннером и исполнительным продюсером остаётся Патрик Шон Смит.</p>
 <p>Восьмой сезон уже снят: производство закончили в августе, премьера — в 2027-м. Дату Netflix не называла, но Deadline считает, что дело идёт к поздней весне.</p>
 <p>По числу сезонов «Virgin River» обошёл испанскую «Элиту», у которой их было восемь. По числу эпизодов — сравнялся с «Грейс и Фрэнки»: та тоже закончилась на 94 сериях, но каждая была получасовой, а не часовой.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Сериал</th><th style="text-align:center">Сезонов</th><th style="text-align:center">Всего эпизодов</th><th style="text-align:left">Формат</th></tr></thead><tbody><tr><td style="text-align:left">Virgin River (с девятым сезоном)</td><td style="text-align:center">9</td><td style="text-align:center">94</td><td style="text-align:left">час</td></tr><tr><td style="text-align:left">Grace and Frankie</td><td style="text-align:center">7</td><td style="text-align:center">94</td><td style="text-align:left">полчаса</td></tr><tr><td style="text-align:left">Elite</td><td style="text-align:center">8</td><td style="text-align:center">—</td><td style="text-align:left">час</td></tr></tbody></table></div>
 <figure class="post__fig"><img src="/assets/img/virgin-river-redwoods.jpg" alt="Гигантские секвойи в калифорнийском лесу" loading="lazy"></figure>
-<h2>Почему живёт именно этот сериал</h2>
+<h2 id="section-pochemu-zhivet-imenno-etot-serial">Почему живёт именно этот сериал</h2>
 <p>Объяснение у Deadline экономическое, а не художественное. У шоу удобная предпосылка: не сериал с большим сюжетом, а жизнь маленького городка с постоянными героями. Снимают в Канаде, на нескольких основных площадках, почти без трюков и графики. Бюджет поэтому остаётся разумным — а для стриминга, который платит за каждый час экрана, это половина дела.</p>
 <p>Второй механизм — ранние продления. Netflix решает вопрос о следующем сезоне до того, как выйдет предыдущий, и поэтому шоу держит ровный ритм: новый сезон каждые 11–13 месяцев. Паузы между сезонами у стриминговых шоу растягиваются на годы, и интерес за это время остывает — поэтому Netflix старается решать судьбу сериала заранее.</p>
 <p>Третье — тип зрителя. Это «уютный» сериал, который смотрят фоном, не всматриваясь в детали: понятная эмоция, красивые пейзажи, никакого напряжения. Первые семь сезонов набрали полмиллиарда просмотров, сериал провёл 28 недель в глобальном топ-10 Netflix и попадал в топ-10 более чем в 80 странах. Для подписки, из которой люди уходят не из-за плохого контента, а из-за «нечего смотреть по вечерам», это ровно то, что нужно.</p>
 <figure class="post__fig"><img src="/assets/img/virgin-river-mel.jpg" alt="Александра Брекенридж, исполнительница роли Мелинды Монро" loading="lazy"></figure>
-<h2>Три продления за три дня</h2>
+<h2 id="section-tri-prodleniya-za-tri-dnya">Три продления за три дня</h2>
 <p>Само по себе одно продление — не новость. Новостью оно становится в контексте: за 13 и 14 ноября Netflix продлила три сериала, и все три — недорогие, уже проверенные, без громких имён в промо.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Сериал</th><th style="text-align:left">Когда продлили</th><th style="text-align:left">Сколько ждали</th><th style="text-align:left">Цифры</th></tr></thead><tbody><tr><td style="text-align:left">Virgin River</td><td style="text-align:left">13 ноября</td><td style="text-align:left">до премьеры 8-го сезона</td><td style="text-align:left">9 сезонов, 94 эпизода, полмиллиарда просмотров</td></tr><tr><td style="text-align:left">Nobody Wants This</td><td style="text-align:left">та же неделя</td><td style="text-align:left">две недели после 3-го сезона</td><td style="text-align:left">13,4 млн просмотров за две недели, топ-10 в 89 странах</td></tr><tr><td style="text-align:left">Hollywood Arts</td><td style="text-align:left">14 ноября</td><td style="text-align:left">месяц после премьеры</td><td style="text-align:left">заказ на 26 эпизодов, в первом сезоне вышло 12</td></tr></tbody></table></div>
 <p>«Nobody Wants This» — ромком с Кристен Белл и Адамом Броуди, третий сезон вышел 22 октября. За две первые недели он набрал 13,4 млн просмотров, обе недели держался в глобальном топ-10, а по совокупности — 78,5 млн просмотров и топ-10 в 89 странах. Формально это лучший старт возвращающейся комедии Netflix в этом году. Правда, у него есть неприятная деталь: стартовые недели трёх сезонов шли по нисходящей — 10,3, 8,6 и 6,2 млн просмотров по подсчёту What's on Netflix. Минус 28 % за сезон, но продление всё равно пришло за две недели.</p>
 <p>«Hollywood Arts» — спин-офф «Викториуса» про школу искусств, премьера 15 октября. Второй сезон подтвердили 14 ноября, через месяц. Тут всё проще: сериал изначально лицензировали с заказом на 26 эпизодов, в первом сезоне показали 12, так что второй, скорее всего, будет из 14.</p>
 <figure class="post__fig"><img src="/assets/img/netflix-hq-los-gatos.jpg" alt="Офис Netflix в Лос-Гатосе" loading="lazy"></figure>
-<h2>Как Netflix считает эти полмиллиарда</h2>
+<h2 id="section-kak-netflix-schitaet-eti-polmilliarda">Как Netflix считает эти полмиллиарда</h2>
 <p>Важная оговорка, без которой цифры читаются неверно. Netflix считает «просмотры» как общее число часов просмотра, делённое на хронометраж сезона. То есть полмиллиарда просмотров «Virgin River» — это не полмиллиарда людей: один зритель, прошедший сезон целиком, даёт столько «просмотров», сколько в сезоне серий. Метрика удобна для отчётов и неудобна для сравнения с телевизионными рейтингами — независимо её никто не проверяет.</p>
 <p>Поэтому в тексте про рекорд стоит держать в голове две вещи. Первая: 94 эпизода и девять сезонов — проверяемый факт, он есть в самом заказе. Вторая: «полмиллиарда» — цифра самой компании, и означает она суммарные часы, а не аудиторию.</p>
 <figure class="post__fig"><img src="/assets/img/nobody-wants-this-kristen-bell.jpg" alt="Кристен Белл, звезда «Nobody Wants This»" loading="lazy"></figure>
-<h2>Кого при этом закрывают</h2>
+<h2 id="section-kogo-pri-etom-zakryvayut">Кого при этом закрывают</h2>
 <p>Соблазн вывести из трёх продлений правило «Netflix перестала закрывать сериалы» велик, и он неверен. По сводке What's on Netflix, в этом году стриминг закрыл «The Boroughs», «Bandi» и «Strip Law», а дорогие экшн-драмы висят без решения месяцами — «Man on Fire» с Яхьей Абдул-Матин II ждёт вердикта около полугода после приличного старта. Причина, которую называют издания, та же экономика: многосерийный экшн с международными съёмками стоит как три «Virgin River», а удержание подписки даёт примерно такое же.</p>
 <p>Так что продления получают не самые громкие, а самые дешёвые в пересчёте на час удержания внимания. Девятый сезон «Virgin River» — не награда за качество, а нормальная бухгалтерия.</p>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <ul><li><strong>Восьмого сезона пока нет в календаре.</strong> «Поздняя весна» — оценка Deadline, а не анонс. До официальной даты любые числа — догадки.</li><li><strong>Из основы ушли два актёра.</strong> В восьмом сезоне не будет Марко Граццини (Майк) и Лорен Хаммерсли (Шармейн). Взамен появится Наташа Калис в роли доктора Астрид — с опцией стать постоянной актрисой в девятом сезоне. Для сериала, который держится на привычных лицах, это риск.</li><li><strong>Падение интереса к возвращающимся шоу — общий тренд, а не беда одного сериала.</strong> У «Nobody Wants This» старты падают третий сезон подряд: 10,3, 8,6 и 6,2 млн просмотров за первые дни. Netflix раскрывает такие цифры только когда сериал попадает в недельный топ-10 — по «Virgin River» публичных данных в том же виде нет.</li><li><strong>В России Netflix официально не работает.</strong> Для читателя из РФ это новость про индустрию, а не про вечерний просмотр: посмотреть девятый сезон легальным способом внутри страны нельзя.</li></ul>
-<h2>Что дальше</h2>
+<h2 id="section-chto-dalshe">Что дальше</h2>
 <p>Восьмой сезон выйдет в 2027-м и начнётся с того, что Мел и Джек стали родителями, а их приёмный ребёнок борется за жизнь. Девятый — десять серий, снова с Патриком Шоном Смитом. Решение о нём принимала Джинни Хау, глава отдела сценарных сериалов США и Канады, — через месяц после того, как главным контент-директором Netflix стал Питер Райс. Для нового руководителя это удобный сигнал: курс на дешёвые долгожители не меняется.</p>
-<p>Мой вывод, уже как оценка: «Virgin River» дожил до девяти сезонов не потому, что стал лучше, а потому, что стриминг научился считать не «сколько посмотрели», а «сколько не отписались». Долгая жизнь тут — свойство экономики, а не искусства. И пока подписка держится на привычке, таких сериалов будет становиться больше.</p></div>
-  <p class="imgcredit">Изображения: Ellin Beltz / Wikimedia Commons, CC BY-SA 3.0 (Ферндейл, Калифорния); Kevin Casper / Wikimedia Commons, CC0 (секвойи); Red Carpet Report on Mingle Media TV / Wikimedia Commons, CC BY-SA 2.0 (Александра Брекенридж); Coolcaesar / Wikimedia Commons, CC BY-SA 4.0 (офис Netflix в Лос-Гатосе); Myles Kalus Anak Jihem / Wikimedia Commons, CC BY-SA 4.0 (Кристен Белл)</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://deadline.com/2026/11/virgin-river-renewed-season-9-netflix-longest-running-1237222568/" rel="nofollow noopener" target="_blank">Deadline — девятый сезон и рекорд Netflix</a></li><li><a href="https://variety.com/2026/tv/news/virgin-river-renewed-season-9-netflix-longest-series-1236946923" rel="nofollow noopener" target="_blank">Variety — продление и методика подсчёта просмотров</a></li><li><a href="https://whats-on-netflix.com/news/netflix-renews-virgin-river-season-9-early" rel="nofollow noopener" target="_blank">What&#x27;s on Netflix — дата объявления, 94 эпизода, график сезонов</a></li><li><a href="https://deadline.com/2026/11/nobody-wants-this-renewed-season-4-netflix-1237215560/" rel="nofollow noopener" target="_blank">Deadline — четвёртый сезон «Nobody Wants This»</a></li><li><a href="https://www.justjared.com/2026/11/15/hollywood-arts-season-2-victorious-sequel-series-future-on-netflix-revealed" rel="nofollow noopener" target="_blank">Just Jared — второй сезон «Hollywood Arts» и заказ на 26 эпизодов</a></li><li><a href="https://whats-on-netflix.com/news/netflix-shows-still-awaiting-renewal-or-cancelation-as-of-late-2026-and-our-predictions" rel="nofollow noopener" target="_blank">What&#x27;s on Netflix — продления и отмены конца 2026-го</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Мой вывод, уже как оценка: «Virgin River» дожил до девяти сезонов не потому, что стал лучше, а потому, что стриминг научился считать не «сколько посмотрели», а «сколько не отписались». Долгая жизнь тут — свойство экономики, а не искусства. И пока подписка держится на привычке, таких сериалов будет становиться больше.</p></div><p class="imgcredit">Изображения: Ellin Beltz / Wikimedia Commons, CC BY-SA 3.0 (Ферндейл, Калифорния); Kevin Casper / Wikimedia Commons, CC0 (секвойи); Red Carpet Report on Mingle Media TV / Wikimedia Commons, CC BY-SA 2.0 (Александра Брекенридж); Coolcaesar / Wikimedia Commons, CC BY-SA 4.0 (офис Netflix в Лос-Гатосе); Myles Kalus Anak Jihem / Wikimedia Commons, CC BY-SA 4.0 (Кристен Белл)</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://deadline.com/2026/11/virgin-river-renewed-season-9-netflix-longest-running-1237222568/" rel="nofollow noopener" target="_blank">Deadline — девятый сезон и рекорд Netflix</a></li><li><a href="https://variety.com/2026/tv/news/virgin-river-renewed-season-9-netflix-longest-series-1236946923" rel="nofollow noopener" target="_blank">Variety — продление и методика подсчёта просмотров</a></li><li><a href="https://whats-on-netflix.com/news/netflix-renews-virgin-river-season-9-early" rel="nofollow noopener" target="_blank">What&#x27;s on Netflix — дата объявления, 94 эпизода, график сезонов</a></li><li><a href="https://deadline.com/2026/11/nobody-wants-this-renewed-season-4-netflix-1237215560/" rel="nofollow noopener" target="_blank">Deadline — четвёртый сезон «Nobody Wants This»</a></li><li><a href="https://www.justjared.com/2026/11/15/hollywood-arts-season-2-victorious-sequel-series-future-on-netflix-revealed" rel="nofollow noopener" target="_blank">Just Jared — второй сезон «Hollywood Arts» и заказ на 26 эпизодов</a></li><li><a href="https://whats-on-netflix.com/news/netflix-shows-still-awaiting-renewal-or-cancelation-as-of-late-2026-and-our-predictions" rel="nofollow noopener" target="_blank">What&#x27;s on Netflix — продления и отмены конца 2026-го</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-2100-virgin-river-9-sezon.html&text=%C2%ABVirgin%20River%C2%BB%20%D0%B4%D0%BE%D0%B6%D0%B8%D0%BB%20%D0%B4%D0%BE%20%D0%B4%D0%B5%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Netflix" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-2100-virgin-river-9-sezon.html&title=%C2%ABVirgin%20River%C2%BB%20%D0%B4%D0%BE%D0%B6%D0%B8%D0%BB%20%D0%B4%D0%BE%20%D0%B4%D0%B5%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Netflix" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-2100-virgin-river-9-sezon.html&text=%C2%ABVirgin%20River%C2%BB%20%D0%B4%D0%BE%D0%B6%D0%B8%D0%BB%20%D0%B4%D0%BE%20%D0%B4%D0%B5%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Netflix" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-15-2100-virgin-river-9-sezon.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-15-2100-virgin-river-9-sezon-pin.jpg&description=%C2%ABVirgin%20River%C2%BB%20%D0%B4%D0%BE%D0%B6%D0%B8%D0%BB%20%D0%B4%D0%BE%20%D0%B4%D0%B5%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%3A%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Netflix" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-15-2100-virgin-river-9-sezon.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/altruists-netflix-cover.jpg" alt="«The Altruists»: Netflix снял FTX как историю любви" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-serialy">
+  <div class="card__cover"><img src="/assets/img/altruists-netflix-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-19T10:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1000-the-altruists-ftx-serial.html">«The Altruists»: Netflix снял FTX как историю любви</a></h3>
     <p class="card__sum">Netflix выложил все восемь эпизодов «The Altruists» — драмы о Сэме Бэнкман-Фриде и Кэролайн Эллисон, которые построили FTX и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1000-the-altruists-ftx-serial.html">Читать →</a><span class="srcc">источников: 14</span></div>
   </div>
 </article>
 <article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/3bp-season2.jpg" alt="«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/3bp-season2.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-18T11:10:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-3bp-season2.html">«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь</a></h3>
     <p class="card__sum">Netflix выпустил первый тизер второго сезона «Задачи трёх тел» и объявил дату — 14 января.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-3bp-season2.html">Читать →</a><span class="srcc">источников: 3</span></div>
   </div>
 </article>
 <article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/zadacha-treh-tel-2-sezon.jpg" alt="Второй сезон «Задачи трёх тел» стартует 14 января" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/zadacha-treh-tel-2-sezon.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-17T08:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-0800-zadacha-treh-tel-2-sezon.html">Второй сезон «Задачи трёх тел» стартует 14 января</a></h3>
     <p class="card__sum">Netflix назвал дату возвращения «Задачи трёх тел» — 14 января, спустя два года и десять месяцев после первого сезона.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-0800-zadacha-treh-tel-2-sezon.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article></div></section>
 </main>
@@ -182,9 +174,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -202,9 +193,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

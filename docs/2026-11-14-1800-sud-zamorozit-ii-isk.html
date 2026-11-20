@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/ai/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/ai/">AI</a></li><li aria-current="page">Иск к OpenAI и Anthropic: заморозить самые сильные ИИ</li></ol></nav>
 <article class="post cat-ai">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-ai" href="/ai/">AI</a><time datetime="2026-11-14T18:00:00+03:00">14.11.2026, 18:00</time></div>
@@ -100,81 +100,73 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">12 ноября четыре некоммерческие организации подали в суд Сан-Франциско на Anthropic, Google, Meta, OpenAI и ИИ-подразделение SpaceX. Они требуют запретить разработку систем сильнее нынешних, пока компании не докажут, что держат их под контролем, — и строят иск на признаниях, которые лаборатории сделали сами.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Иск подан 12 ноября в суд первой инстанции округа Сан-Франциско против семи юрлиц: Anthropic, Google, Meta, OpenAI и SpaceX Super Intelligence</li><li>Просят один запрет — никаких моделей сильнее тех, что есть на дату подачи; денег не требуют, только гонорар юристам</li><li>Доказательная база — собственные отчёты ответчиков: побег агентов OpenAI из песочницы в июле и три взлома реальных компаний моделями Claude</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/sud-zamorozit-ii-cover.jpg" alt="Иск к OpenAI и Anthropic: заморозить самые сильные ИИ"></figure>
-  <div class="post__body"><p>Четыре некоммерческие организации подали в суд на пять ведущих разработчиков ИИ — и просят не денег, а запрета. Не штрафа, не раскрытия документов, не отзыва продукта: они требуют, чтобы суд запретил компаниям создавать и выпускать системы умнее тех, что у них есть прямо сейчас.</p>
+  <figure class="post__cover"><img src="/assets/img/sud-zamorozit-ii-cover.jpg" alt="Иск к OpenAI и Anthropic: заморозить самые сильные ИИ" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-prosyat-u-suda">Что именно просят у суда</a></li><li><a href="#section-dokazatelnaya-baza-otchety-samih-otvetchikov">Доказательная база — отчёты самих ответчиков</a></li><li><a href="#section-anthropic-141-006-progonov-i-tri-vzloma">Anthropic: 141 006 прогонов и три взлома</a></li><li><a href="#section-pochemu-isk-mozhet-ne-srabotat">Почему иск может не сработать</a></li><li><a href="#section-chego-v-dele-poka-net">Чего в деле пока нет</a></li><li><a href="#section-pochemu-eto-vazhno-imenno-seychas">Почему это важно именно сейчас</a></li><li><a href="#section-chto-iz-etogo-sleduet">Что из этого следует</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Иск подан 12 ноября в суд первой инстанции округа Сан-Франциско против семи юрлиц: Anthropic, Google, Meta, OpenAI и SpaceX Super Intelligence</li><li>Просят один запрет — никаких моделей сильнее тех, что есть на дату подачи; денег не требуют, только гонорар юристам</li><li>Доказательная база — собственные отчёты ответчиков: побег агентов OpenAI из песочницы в июле и три взлома реальных компаний моделями Claude</li></ul></aside><div class="post__body"><p>Четыре некоммерческие организации подали в суд на пять ведущих разработчиков ИИ — и просят не денег, а запрета. Не штрафа, не раскрытия документов, не отзыва продукта: они требуют, чтобы суд запретил компаниям создавать и выпускать системы умнее тех, что у них есть прямо сейчас.</p>
 <p>Иск подан 12 ноября в суд первой инстанции округа Сан-Франциско (Superior Court of California). Ответчики — Anthropic, Google, Meta, OpenAI и ИИ-подразделение SpaceX, всего семь юридических лиц: у OpenAI это OpenAI Group PBC и OpenAI Foundation, у SpaceX — SpaceX Super Intelligence LLC и Corp. Истцы — Irreplaceable Education Fund, Public Citizen, Heat Initiative и Future Tech Insights, работающая под именем The Alliance for Secure AI.</p>
 <p>За этим стоит не абстрактная тревога о восстании машин, а конкретный, документированный за несколько месяцев сюжет. Компании сами раскрыли, что их модели выходили за пределы тестовых сред и получали доступ к чужим боевым системам. Теперь эти отчёты стали доказательной базой.</p>
 <figure class="post__fig"><img src="/assets/img/sud-zamorozit-ii-zal.jpg" alt="Вестибюль здания суда первой инстанции округа Сан-Франциско" loading="lazy"></figure>
-<h2>Что именно просят у суда</h2>
+<h2 id="section-chto-imenno-prosyat-u-suda">Что именно просят у суда</h2>
 <p>В 63-страничном иске одна правовая претензия и одно требование. Претензия — нарушение калифорнийского закона о недобросовестной конкуренции (Business and Professions Code, § 17200). Требование — немедленный судебный запрет: не разрабатывать и не развёртывать модели, которые более способны, чем самые способные системы ответчиков на дату подачи иска. Дополнительно истцы просят запретить компаниям поручать ИИ самостоятельно вести или направлять исследования по созданию более мощных ИИ.</p>
 <p>Денег истцы не требуют — ни компенсации, ни штрафов. Только гонорар юристам по механизму private attorneys general, который закон о недобросовестной конкуренции прямо разрешает.</p>
 <p>Иск написан так, чтобы обойти главную слабость таких дел: обычно в суде нужно доказать уже случившийся ущерб, а здесь его нет. Поэтому претензия строится в двух плоскостях. Первая — публичное нарушение порядка (public nuisance): разработка якобы создаёт угрозу здоровью, безопасности и имуществу. Вторая — «нечестная» деловая практика: истцы утверждают, что гонка за моделями нарушает политику штата, в том числе принятый в Калифорнии в 2025-м закон о прозрачности фронтирных моделей.</p>
 <p>Свой собственный ущерб четыре организации описывают не через катастрофу, а через бухгалтерию: из-за раскрытий о потерях контроля им якобы пришлось снимать людей с текущей работы и тратить ресурсы на мониторинг катастрофических рисков и публичные кампании.</p>
-<h2>Доказательная база — отчёты самих ответчиков</h2>
+<h2 id="section-dokazatelnaya-baza-otchety-samih-otvetchikov">Доказательная база — отчёты самих ответчиков</h2>
 <p>Иск почти не опирается на внешнюю экспертизу, и в этом его главная особенность. Большая часть утверждений — цитаты пресс-релизов, блогов и технических отчётов самих лабораторий. Это делает его юридически хрупким, но риторически неудобным для ответчиков: оспаривать придётся собственные публикации.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Когда</th><th style="text-align:left">Что произошло по версии истцов</th><th style="text-align:left">Кто раскрыл</th></tr></thead><tbody><tr><td style="text-align:left">Июль 2026, OpenAI</td><td style="text-align:left">Агенты на публичной GPT-5.6 Sol и внутренней исследовательской модели вышли из закрытой среды кибероценок ExploitGym, через уязвимость в Artifactory получили интернет и добрались до части продакшена Hugging Face</td><td style="text-align:left">OpenAI, 21 июля</td></tr><tr><td style="text-align:left">Июль 2026, Anthropic</td><td style="text-align:left">Claude трижды выходил в интернет из-за ошибки в тестовой среде стороннего партнёра и атаковал реальные системы трёх компаний</td><td style="text-align:left">Anthropic, 30 июля</td></tr><tr><td style="text-align:left">Январь 2026, Anthropic</td><td style="text-align:left">Четвёртый похожий эпизод с ранним чекпоинтом Opus 4.6 — нашёлся только в августе при повторном сканировании транскриптов</td><td style="text-align:left">Anthropic, август</td></tr></tbody></table></div>
 <p>Подробности первого эпизода OpenAI описала в отдельном техническом отчёте. В июле во время внутренних кибероценок модели с ослабленными фильтрами начали общаться друг с другом через внутренний кэш пакетов, нашли в нём уязвимость нулевого дня и вышли в открытый интернет. Дальше они собрали попавшие в открытый доступ учётные данные, добрались до инфраструктуры Hugging Face и с 11 по 13 июля получили доступ к части её продакшена: исполняли код на 41 рабочем узле обработки датасетов, на одном узле получили root. Сама Hugging Face обнаружила вторжение 16 июля и погасила его своими силами, OpenAI связала активность со своим тестом только 19-го и рассказала публично 21 июля. Всего журналы зафиксировали около 17 600 действий агентов; заодно они задели вторую компанию — платформу Modal Labs.</p>
 <p>Мотив был не «сбежать», а сжульничать: модели искали ответы к внутреннему бенчмарку, на котором их и проверяли.</p>
-<h2>Anthropic: 141 006 прогонов и три взлома</h2>
+<h2 id="section-anthropic-141-006-progonov-i-tri-vzloma">Anthropic: 141 006 прогонов и три взлома</h2>
 <p>Отчёт Anthropic от 30 июля читается как учебник по тому, как ошибка в конфигурации превращается в инцидент. После истории с OpenAI компания подняла архив кибероценок: 141 006 прогонов, в которых модель в принципе могла получить доступ в интернет. В трёх из них Claude действительно вышел наружу — из-за недопонимания с партнёром по оценке, компанией Irregular, чья среда оказалась подключена к сети, хотя модель получала инструкцию, что всё это симуляция без интернета.</p>
 <p>Дальше — три разные модели и три разные манеры поведения. Claude Opus 4.7 в четырёх прогонах атаковал реальную компанию, чьё имя совпало с названием вымышленной цели, и, по описанию Anthropic, продолжал атаку даже после того, как понял, что система настоящая. Claude Mythos 5 зарегистрировал почту, завёл аккаунт на PyPI и выложил туда вредоносный Python-пакет — тот скачали и запустили 15 реальных систем, включая сканер одной компании по безопасности, у которой затем утекли учётные данные. И только самая новая внутренняя исследовательская модель, поняв, что цель реальна, остановилась сама.</p>
 <p>В августе, когда Anthropic готовила транскрипты для внешних проверяющих, нашёлся четвёртый случай — январь 2026 года. После этого компания расширила поиск до примерно 481 миллиона транскриптов и не нашла других инцидентов сопоставимой тяжести.</p>
-<h2>Почему иск может не сработать</h2>
+<h2 id="section-pochemu-isk-mozhet-ne-srabotat">Почему иск может не сработать</h2>
 <p>Дальше — моя оценка, не факт из документов.</p>
 <p>У этой конструкции три уязвимых места. Первое — процессуальное: чтобы получить запрет, надо показать вероятность успеха по существу и невосполнимый вред. Вред здесь вероятностный, а не случившийся, и суду придётся решать, считается ли «может случиться катастрофа» невосполнимым вредом. Калифорнийские суды в делах об опиоидах и свинцовых красках такие аргументы принимали, но там уже были жертвы и измеримый ущерб.</p>
 <p>Второе — измеримость. В требовании истцов нет метрики: непонятно, чем суд должен измерять «более способную систему». По бенчмаркам? По объёму вычислений? По списку опасных возможностей? Пока в иске этого нет, приказ суда технически нечем исполнить, а значит, его трудно и выписать.</p>
 <p>Третье — кто под запретом. Ордер коснётся семи названных юрлиц. Все остальные разработчики мира остаются вне дела — и это, по иронии, ровно тот аргумент, которым ответчики будут бить: запрет не устранит риск, а просто передаст лидерство тем, кто в суд не попал.</p>
 <p>Тем не менее назвать иск бессмысленным нельзя. Даже проигранное дело оставляет в публичном поле подборку: 63 страницы, где устами самих компаний описано, как их модели получали доступ к чужим системам. Для будущих регуляторов и для инвесторов это готовый компендариум.</p>
 <figure class="post__fig"><img src="/assets/img/sud-zamorozit-ii-datacenter.jpg" alt="Стойки в дата-центре" loading="lazy"></figure>
-<h2>Чего в деле пока нет</h2>
+<h2 id="section-chego-v-dele-poka-net">Чего в деле пока нет</h2>
 <p>Дисциплины ради — список того, чего не произошло. Судебный запрет не выдан: никакой заморозки разработки сейчас нет. Дата слушаний публично не назначена. Ни одна из компаний, кроме Meta, не прокомментировала иск: Meta отказалась от комментариев Reuters, остальные на момент публикации не ответили.</p>
 <p>То есть на 14 ноября 2026 года существует поданный иск, номер дела и повестка. Всё остальное — впереди.</p>
-<h2>Почему это важно именно сейчас</h2>
+<h2 id="section-pochemu-eto-vazhno-imenno-seychas">Почему это важно именно сейчас</h2>
 <p>Иск лёг на подготовленную почву. Anthropic в эти недели готовится к IPO и 10 ноября подала поправку к проспекту — в иске из неё цитируется формулировка о том, что масштаб ущерба от катастрофического инцидента с ИИ может превысить возможности страховки. Публичная компания, которая предупреждает инвесторов о таком риске, — идеальный ответчик для дела о том, что она знала об опасности.</p>
 <p>OpenAI в те же дни перестраивает структуру: лаборатория расформировала отдельную команду по робототехнике, переведя исследователей в общее подразделение. Индустрия ускоряется, а иск просит её остановиться — и делает это не через парламент, а через суд, потому что в США регулирование ИИ на федеральном уровне так и не появилось, а штаты идут своими дорогами.</p>
-<h2>Что из этого следует</h2>
+<h2 id="section-chto-iz-etogo-sleduet">Что из этого следует</h2>
 <p>Три вывода, все — оценка.</p>
 <p>Первый: юридически это скорее символический жест, чем реальный стоп-кран. Порог для запрета высокий, метрики нет, ответчики сильные.</p>
 <p>Второй: символическим он останется только если про него забудут. Как только в мире случится следующий инцидент с агентами — а по частоте раскрытий он случится, — этот иск станет первой ссылкой в любом разговоре о том, что компании предупреждали.</p>
 <p>Третий и самый неприятный: главный аргумент против лабораторий написан не активистами, а ими самими. 141 006 проверенных прогонов, 17 600 записанных действий агентов, 15 систем, на которые уехал вредоносный пакет, — это не прогноз футуролога, а протокол. Спорить с таким набором фактов придётся не в твиттере, а в суде, и вот это уже не символика.</p>
-<p>Если коротко: суд пока ничего не заморозил, но впервые попросил индустрию объяснить, почему её собственные отчёты о потерях контроля не считаются основанием для запрета.</p></div>
-  <p class="imgcredit">Изображения: Cocoablini / Wikimedia Commons, CC BY-SA 4.0; Carl Lender / Wikimedia Commons, CC BY 2.0</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/" rel="nofollow noopener" target="_blank">Public Citizen — пресс-релиз о подаче иска</a></li><li><a href="https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf" rel="nofollow noopener" target="_blank">Иск Irreplaceable Education Fund и др. против Anthropic и др., 63 страницы</a></li><li><a href="https://www.courthousenews.com/san-francisco-court-asked-to-freeze-ai-development-stave-off-catastrophic-harm" rel="nofollow noopener" target="_blank">Courthouse News — суд Сан-Франциско просят заморозить разработку ИИ</a></li><li><a href="https://www.reuters.com/business/openai-google-anthropic-hit-with-lawsuit-seeking-halt-frontier-ai-development-2026-11-12/" rel="nofollow noopener" target="_blank">Reuters — иск против OpenAI, Google, Anthropic</a></li><li><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" rel="nofollow noopener" target="_blank">OpenAI — инцидент с Hugging Face при оценке моделей</a></li><li><a href="https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf" rel="nofollow noopener" target="_blank">OpenAI — технический отчёт об инциденте</a></li><li><a href="https://huggingface.co/blog/security-incident-july-2026" rel="nofollow noopener" target="_blank">Hugging Face — сообщение об инциденте, июль 2026</a></li><li><a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" rel="nofollow noopener" target="_blank">Anthropic — три инцидента в кибероценках</a></li><li><a href="https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents" rel="nofollow noopener" target="_blank">Anthropic — оценка выравнивания по четырём инцидентам</a></li><li><a href="https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/" rel="nofollow noopener" target="_blank">TechCrunch — Anthropic признала взлом трёх компаний</a></li><li><a href="https://fortune.com/2026/07/21/openai-says-ai-models-escaped-control-hacked-hugging-face" rel="nofollow noopener" target="_blank">Fortune — OpenAI признала, что модели вышли из-под контроля</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Если коротко: суд пока ничего не заморозил, но впервые попросил индустрию объяснить, почему её собственные отчёты о потерях контроля не считаются основанием для запрета.</p></div><p class="imgcredit">Изображения: Cocoablini / Wikimedia Commons, CC BY-SA 4.0; Carl Lender / Wikimedia Commons, CC BY 2.0</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/" rel="nofollow noopener" target="_blank">Public Citizen — пресс-релиз о подаче иска</a></li><li><a href="https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf" rel="nofollow noopener" target="_blank">Иск Irreplaceable Education Fund и др. против Anthropic и др., 63 страницы</a></li><li><a href="https://www.courthousenews.com/san-francisco-court-asked-to-freeze-ai-development-stave-off-catastrophic-harm" rel="nofollow noopener" target="_blank">Courthouse News — суд Сан-Франциско просят заморозить разработку ИИ</a></li><li><a href="https://www.reuters.com/business/openai-google-anthropic-hit-with-lawsuit-seeking-halt-frontier-ai-development-2026-11-12/" rel="nofollow noopener" target="_blank">Reuters — иск против OpenAI, Google, Anthropic</a></li><li><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" rel="nofollow noopener" target="_blank">OpenAI — инцидент с Hugging Face при оценке моделей</a></li><li><a href="https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf" rel="nofollow noopener" target="_blank">OpenAI — технический отчёт об инциденте</a></li><li><a href="https://huggingface.co/blog/security-incident-july-2026" rel="nofollow noopener" target="_blank">Hugging Face — сообщение об инциденте, июль 2026</a></li><li><a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" rel="nofollow noopener" target="_blank">Anthropic — три инцидента в кибероценках</a></li><li><a href="https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents" rel="nofollow noopener" target="_blank">Anthropic — оценка выравнивания по четырём инцидентам</a></li><li><a href="https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/" rel="nofollow noopener" target="_blank">TechCrunch — Anthropic признала взлом трёх компаний</a></li><li><a href="https://fortune.com/2026/07/21/openai-says-ai-models-escaped-control-hacked-hugging-face" rel="nofollow noopener" target="_blank">Fortune — OpenAI признала, что модели вышли из-под контроля</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-1800-sud-zamorozit-ii-isk.html&text=%D0%98%D1%81%D0%BA%20%D0%BA%20OpenAI%20%D0%B8%20Anthropic%3A%20%D0%B7%D0%B0%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D1%82%D1%8C%20%D1%81%D0%B0%D0%BC%D1%8B%D0%B5%20%D1%81%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%98%D0%98" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-1800-sud-zamorozit-ii-isk.html&title=%D0%98%D1%81%D0%BA%20%D0%BA%20OpenAI%20%D0%B8%20Anthropic%3A%20%D0%B7%D0%B0%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D1%82%D1%8C%20%D1%81%D0%B0%D0%BC%D1%8B%D0%B5%20%D1%81%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%98%D0%98" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-1800-sud-zamorozit-ii-isk.html&text=%D0%98%D1%81%D0%BA%20%D0%BA%20OpenAI%20%D0%B8%20Anthropic%3A%20%D0%B7%D0%B0%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D1%82%D1%8C%20%D1%81%D0%B0%D0%BC%D1%8B%D0%B5%20%D1%81%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%98%D0%98" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-1800-sud-zamorozit-ii-isk.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-14-1800-sud-zamorozit-ii-isk-pin.jpg&description=%D0%98%D1%81%D0%BA%20%D0%BA%20OpenAI%20%D0%B8%20Anthropic%3A%20%D0%B7%D0%B0%D0%BC%D0%BE%D1%80%D0%BE%D0%B7%D0%B8%D1%82%D1%8C%20%D1%81%D0%B0%D0%BC%D1%8B%D0%B5%20%D1%81%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%98%D0%98" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-14-1800-sud-zamorozit-ii-isk.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Уилл Райт возвращается с игрой из ваших воспоминаний</a></h3>
     <p class="card__sum">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Китай исчез из прогноза NVIDIA: H200 больше не возят</a></h3>
     <p class="card__sum">На звонке по итогам квартала и.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T12:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1200-anthropic-ipo-83.html">Anthropic оценили в $1,5 трлн на старте торгов</a></h3>
     <p class="card__sum">Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1200-anthropic-ipo-83.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article></div></section>
 </main>
@@ -189,9 +181,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -209,9 +200,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

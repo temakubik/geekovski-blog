@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/ai/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/ai/">AI</a></li><li aria-current="page">Уилл Райт возвращается с игрой из ваших воспоминаний</li></ol></nav>
 <article class="post cat-ai">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11.2026, 21:00</time></div>
@@ -100,81 +100,73 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из жизни, а генеративный ИИ превращает их в острова, памятники и аватаров знакомых. Релиз намечен на 2027 год, а движок персонажей Gallium купила у сторонней ИИ-компании после того, как в конце 2024-го у студии кончились деньги.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Gallium Studios Уилла Райта подключила Behavior Engine от Artificial Agency и целится в релиз MyMems в 2027 году</li><li>Игрок наговаривает воспоминания в телефон, игра генерирует из них объекты на карте и ИИ-аватаров реальных людей</li><li>Свою модель поведения MemDNA разработчики описывают как локальную, но независимой проверки приватности пока нет</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний"></figure>
-  <div class="post__body"><p>После Spore 2008 года и ухода из EA у Уилла Райта не было крупных релизов — полтора десятилетия он занимался проектами, которые до полки не доехали. Возвращается он не с SimCity 5 и не с третьими «Симами», а с мобильной игрой, где материалом для мира служит ваша собственная биография.</p>
+  <figure class="post__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-voobsche-proizoshlo">Что вообще произошло</a></li><li><a href="#section-kak-eto-igraetsya">Как это играется</a></li><li><a href="#section-chem-mymems-otlichaetsya-ot-predyduschih-simulyatorov-rayta">Чем MyMems отличается от предыдущих симуляторов Райта</a></li><li><a href="#section-chto-pod-kapotom">Что под капотом</a></li><li><a href="#section-otkuda-vzyalsya-proekt">Откуда взялся проект</a></li><li><a href="#section-my-ne-delaem-shlak-razgovor-pro-ii">«Мы не делаем шлак»: разговор про ИИ</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Gallium Studios Уилла Райта подключила Behavior Engine от Artificial Agency и целится в релиз MyMems в 2027 году</li><li>Игрок наговаривает воспоминания в телефон, игра генерирует из них объекты на карте и ИИ-аватаров реальных людей</li><li>Свою модель поведения MemDNA разработчики описывают как локальную, но независимой проверки приватности пока нет</li></ul></aside><div class="post__body"><p>После Spore 2008 года и ухода из EA у Уилла Райта не было крупных релизов — полтора десятилетия он занимался проектами, которые до полки не доехали. Возвращается он не с SimCity 5 и не с третьими «Симами», а с мобильной игрой, где материалом для мира служит ваша собственная биография.</p>
 <p>Игра называется <a class="tlink" href="/titles/mymems.html">MyMems</a>. Формально новостью этой недели стало не она сама, а техническая сделка: 18 ноября студия Райта Gallium Studios объявила, что берёт Behavior Engine от канадской Artificial Agency как «базовую технологию» для персонажей. Практический смысл простой — Gallium не собирается строить собственный ИИ-отдел, а покупает готовый движок агентного поведения у подрядчика.</p>
-<h2>Что вообще произошло</h2>
+<h2 id="section-chto-voobsche-proizoshlo">Что вообще произошло</h2>
 <p>Пресс-релиз от 18 ноября датирован Сан-Франциско и Эдмонтоном — там сидят Gallium и Artificial Agency соответственно. В тексте перечислены заслуги Райта (SimCity, The Sims, Spore, суммарные продажи больше $5 млрд) и цель: «живой релиз для сообщества» в 2027 году. Точной даты нет, слова «релиз» в смысле «готово и в магазинах» тоже нет — на сайте MyMems висит формулировка «Powering up in 2027» и форма заявки в «ранний круг» для небольшой группы игроков.</p>
 <p>Платформа — мобильная: The Verge описывает MyMems как мобильную игру, и весь интерфейс в промо-материалах телефонный. Про консоли, ПК и VR в анонсе не сказано ничего.</p>
-<h2>Как это играется</h2>
+<h2 id="section-kak-eto-igraetsya">Как это играется</h2>
 <p>Механика, насколько её можно понять по ролику и интервью, такая. Вы наговариваете в телефон короткую историю из жизни — как ездили с отцом на рыбалку на Аляску, как бабушка жарила котлеты. Игра разбирает текст, вытаскивает оттуда людей, места и события и превращает их в объекты на карте: домик, причал, качели, шар с фотографией.</p>
 <p>Дальше — по словам Райта, «карта вашей психики», сравнение с мультфильмом Inside Out он приводит сам. В мире появляются ИИ-аватары, изображающие реальных знакомых, и они начинают разговаривать: друг с другом, с вами, с предметами. Миры можно держать закрытыми или открывать для семьи и друзей.</p>
 <figure class="post__fig"><img src="/assets/img/mymems-prototip-ostrov.jpg" alt="Прототип MyMems: остров с шарами-воспоминаниями и аватаром игрока" loading="lazy"></figure>
 <p>Исполнительный продюсер и генменеджер Gallium Вирджиния Макартур описывает жанр аккуратно: «уютный конструктор миров с очень глубокой социальной симуляцией под низом». Продакт-менеджер Энтони Майтц оговаривается, что это не мемуары: «Это не обязательно должен быть дневник вашего наследия. Это скорее то, с чем просто интересно возиться». Цель игрока он называет «прокси» себя — от этого слова, судя по всему, и произошло прежнее название проекта, Proxi.</p>
 <figure class="post__fig"><img src="/assets/img/mymems-bolshoj-kanon.jpg" alt="Семья на смотровой площадке Большого каньона — кадр из промо-материалов MyMems" loading="lazy"></figure>
 <p>Честная оговорка от The Verge, которую стоит передать: обозреватель издания признаётся, что концепцию до конца не понял и что без контроллера в руках такое не оценивается. Я смотрю на это так же — пока это не игра, а описание игры.</p>
-<h2>Чем MyMems отличается от предыдущих симуляторов Райта</h2>
+<h2 id="section-chem-mymems-otlichaetsya-ot-predyduschih-simulyatorov-rayta">Чем MyMems отличается от предыдущих симуляторов Райта</h2>
 <p>Разница не в масштабе, а в том, что именно моделируется. У Райта всегда был сдвиг от мира к человеку, и MyMems — логичное продолжение.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Игра</th><th style="text-align:left">Год</th><th style="text-align:left">Что моделирует</th><th style="text-align:left">Роль игрока</th></tr></thead><tbody><tr><td style="text-align:left">SimCity</td><td style="text-align:left">1989</td><td style="text-align:left">город: зоны, трафик, бюджет</td><td style="text-align:left">градостроитель снаружи</td></tr><tr><td style="text-align:left">The Sims</td><td style="text-align:left">2000</td><td style="text-align:left">быт и отношения выдуманных людей</td><td style="text-align:left">наблюдатель-режиссёр</td></tr><tr><td style="text-align:left">Spore</td><td style="text-align:left">2008</td><td style="text-align:left">эволюцию от клетки до галактики</td><td style="text-align:left">творец вида</td></tr><tr><td style="text-align:left">MyMems</td><td style="text-align:left">2027 (план)</td><td style="text-align:left">вашу память о реальных людях</td><td style="text-align:left">автор собственной биографии</td></tr></tbody></table></div>
 <p>Сам Райт объясняет переход так: в The Sims игроки массово воссоздавали собственные семьи, и это было интересно — люди сами пытались натянуть игрушку на свою жизнь. MyMems, по его словам, «доводит это до конца»: «Мы хотим взять вашу автобиографию и превратить её в игрушечный мир».</p>
-<h2>Что под капотом</h2>
+<h2 id="section-chto-pod-kapotom">Что под капотом</h2>
 <p>Behavior Engine от Artificial Agency — это набор небольших моделей, обученных под конкретную игру, плюс «рефлексная» архитектура: мгновенные реакции вроде «поймать брошенный предмет» обрабатываются без обращения к большой модели, а решения, требующие рассуждения, уходят в более тяжёлый контур. Смысл в деньгах и задержке: если каждый персонаж на карте дёргает фронтирную модель по любому поводу, игра на миллионы игроков разоряется на инференсе.</p>
 <p>Своя часть Gallium называется MemDNA: «персональная модель поведения», которая строится по воспоминаниям игрока и дополняется графом знаний — кто кому родственник, где что происходило. Райт прямо говорит, что партнёрство нужно было, чтобы не превращаться в ИИ-исследовательскую компанию и не платить за «очень дорогие» модели там, где хватает дешёвых.</p>
 <figure class="post__fig"><img src="/assets/img/mymems-prototip-dolina.jpg" alt="Ранний прототип: долина с озёрами и шарами воспоминаний" loading="lazy"></figure>
-<h2>Откуда взялся проект</h2>
+<h2 id="section-otkuda-vzyalsya-proekt">Откуда взялся проект</h2>
 <p>MyMems — не свежая идея, а перезапуск. Как пишет Ars Technica, прототип под названием Proxi был анонсирован ещё в 2018 году как «игра о самопознании, где мы находим скрытого вас». Шли годы предпроизводства, а в конце 2024-го у Gallium закончились деньги: небольшую команду массово сократили, будущее проекта повисло. Подробную историю этого периода в этом году выпустило издание Vulture.</p>
 <p>Возродился проект именно на чужой технологии. До сих пор Artificial Agency делала «виртуальных игроков» — ботов для плейтестов и напарников для живых игроков; теперь её движок отвечает за характеры в игре про личные воспоминания. В компании работают люди из Google DeepMind и ветераны AAA-студий, среди инвесторов — Radical Ventures и Toyota Ventures.</p>
 <figure class="post__fig"><img src="/assets/img/mymems-uill-rajt.jpg" alt="Уилл Райт в ролике анонса MyMems" loading="lazy"></figure>
 <p>Первая игра, по релизу, должна стать фундаментом платформы: Gallium хочет потом наращивать на тех же системах памяти и персонажей другие, связанные с ней проекты. Это заявка на сервис, а не на одну игру, и она объясняет, почему студии так важен дешёвый инференс.</p>
-<h2>«Мы не делаем шлак»: разговор про ИИ</h2>
+<h2 id="section-my-ne-delaem-shlak-razgovor-pro-ii">«Мы не делаем шлак»: разговор про ИИ</h2>
 <p>Самая интересная часть интервью The Verge — не про технологии, а про отношение к ним. Райт говорит, что у него трое сыновей и все они относятся к ИИ «довольно негативно». Причину он видит в вопросах смысла искусства, авторства и указания авторов и называет такие опасения «обоснованными». Тут же добавляет: ИИ — «удивительный инструмент».</p>
 <p>Макартур формулирует короче: «Мы не делаем шлак». Майтц рассказывает, что команда боялась негативной реакции, но выяснила: игроки спокойно принимают генерацию в духе Scribblenauts, когда игра по просьбе строит школу. А тестовое приложение с редактором персонажей, по его словам, вызывало настоящую зависимость — в том числе у его дочери, которая ИИ «ненавидит». Вывод команды: если игрок сам шаг за шагом собирает мир, ощущения обмана не возникает.</p>
 <figure class="post__fig"><img src="/assets/img/mymems-nochnaya-progulka.jpg" alt="Ночная прогулка — промо-кадр из мира MyMems" loading="lazy"></figure>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p>Оценка — моя, факты выше. Проблем тут несколько, и они серьёзнее обычных предрелизных.</p>
 <p><strong>Воспоминания — самый чувствительный класс данных, который вообще можно собрать об человеке.</strong> Gallium и Artificial Agency обещают, что MemDNA учится «локально и только с вашего разрешения», а маркетинговый слоган компании звучит так: «Meta знает, по чему вы кликаете. Netflix знает, что вы смотрите. Никто не знает, что вы помните». Красиво — и ровно поэтому это надо проверять: локальное обучение не отменяет того, что происходит при шаринге миров, а независимого аудита обещаний пока нет ни у кого.</p>
 <p><strong>Игроков просят оцифровать живых и умерших людей.</strong> В ролике Райт сам перечисляет будущие «зоны» мира: спорт, отпуска, травмы, похороны. Аватар родственника, который отвечает не так, как отвечал бы он, — это не баг, это жанр, и как люди это переживут, никто пока не знает.</p>
 <p><strong>Настоящего геймплея не показали.</strong> В ролике — «ранний прототип» с подписями, а всё остальное — концепт-арт и разговоры. Ни интерфейса, ни сессии, ни цен, ни модели монетизации (мобильная игра с постоянными ИИ-персонажами почти наверняка не бесплатна в эксплуатации, но как это монетизируют — не объявлено).</p>
 <p><strong>Проект один раз уже кончился деньгами.</strong> 2027 год — цель студии из пресс-релиза, а не обещание издателя с бюджетом. И конкурентов хватает: Krafton с inZOI и Nintendo с Tomodachi Life: Living the Dream уже заняли нишу уютных социальных симуляторов. Правда, ни у одной из них нет силы бренда The Sims — а это, как показывает история, главный актив Райта.</p>
-<h2>Что дальше</h2>
-<p>Пока известен только следующий шаг: набор в «ранний круг» на сайте Gallium. Карточка игры с характеристиками — на <a class="tlink" href="/titles/mymems.html">странице MyMems</a>. Дальше — тесты, отзывы и, если всё пойдёт по плану, релиз в 2027-м. Следить стоит хотя бы потому, что это первый большой проект, где ИИ отвечает не за текстуры и не за деревья, а за поведение людей — и не выдуманных, а тех, кого игрок знает лично.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.artificial.agency/news/gallium" rel="nofollow noopener" target="_blank">Gallium Studios и Artificial Agency — пресс-релиз о партнёрстве</a></li><li><a href="https://www.theverge.com/games/1036140/will-wright-mymems-ai-game-interview" rel="nofollow noopener" target="_blank">The Verge — интервью Уилла Райта о MyMems</a></li><li><a href="https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/" rel="nofollow noopener" target="_blank">Ars Technica — разбор анонса и истории Proxi</a></li><li><a href="https://galliumstudios.com/" rel="nofollow noopener" target="_blank">Gallium Studios — сайт MyMems и набор в ранний круг</a></li><li><a href="https://www.youtube.com/watch?v=QrhvFz_YzQg" rel="nofollow noopener" target="_blank">YouTube — ролик анонса MyMems</a></li></ol></section>
-  <section class="share" data-share-root>
+<h2 id="section-chto-dalshe">Что дальше</h2>
+<p>Пока известен только следующий шаг: набор в «ранний круг» на сайте Gallium. Карточка игры с характеристиками — на <a class="tlink" href="/titles/mymems.html">странице MyMems</a>. Дальше — тесты, отзывы и, если всё пойдёт по плану, релиз в 2027-м. Следить стоит хотя бы потому, что это первый большой проект, где ИИ отвечает не за текстуры и не за деревья, а за поведение людей — и не выдуманных, а тех, кого игрок знает лично.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.artificial.agency/news/gallium" rel="nofollow noopener" target="_blank">Gallium Studios и Artificial Agency — пресс-релиз о партнёрстве</a></li><li><a href="https://www.theverge.com/games/1036140/will-wright-mymems-ai-game-interview" rel="nofollow noopener" target="_blank">The Verge — интервью Уилла Райта о MyMems</a></li><li><a href="https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/" rel="nofollow noopener" target="_blank">Ars Technica — разбор анонса и истории Proxi</a></li><li><a href="https://galliumstudios.com/" rel="nofollow noopener" target="_blank">Gallium Studios — сайт MyMems и набор в ранний круг</a></li><li><a href="https://www.youtube.com/watch?v=QrhvFz_YzQg" rel="nofollow noopener" target="_blank">YouTube — ролик анонса MyMems</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html&text=%D0%A3%D0%B8%D0%BB%D0%BB%20%D0%A0%D0%B0%D0%B9%D1%82%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D1%81%20%D0%B8%D0%B3%D1%80%D0%BE%D0%B9%20%D0%B8%D0%B7%20%D0%B2%D0%B0%D1%88%D0%B8%D1%85%20%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html&title=%D0%A3%D0%B8%D0%BB%D0%BB%20%D0%A0%D0%B0%D0%B9%D1%82%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D1%81%20%D0%B8%D0%B3%D1%80%D0%BE%D0%B9%20%D0%B8%D0%B7%20%D0%B2%D0%B0%D1%88%D0%B8%D1%85%20%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html&text=%D0%A3%D0%B8%D0%BB%D0%BB%20%D0%A0%D0%B0%D0%B9%D1%82%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D1%81%20%D0%B8%D0%B3%D1%80%D0%BE%D0%B9%20%D0%B8%D0%B7%20%D0%B2%D0%B0%D1%88%D0%B8%D1%85%20%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij-pin.jpg&description=%D0%A3%D0%B8%D0%BB%D0%BB%20%D0%A0%D0%B0%D0%B9%D1%82%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D1%81%20%D0%B8%D0%B3%D1%80%D0%BE%D0%B9%20%D0%B8%D0%B7%20%D0%B2%D0%B0%D1%88%D0%B8%D1%85%20%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Китай исчез из прогноза NVIDIA: H200 больше не возят</a></h3>
     <p class="card__sum">На звонке по итогам квартала и.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T12:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1200-anthropic-ipo-83.html">Anthropic оценили в $1,5 трлн на старте торгов</a></h3>
     <p class="card__sum">Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1200-anthropic-ipo-83.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="Muse получил доступ к Signal, Meta говорит о случайностях" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-18T21:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-2100-meta-muse-signal.html">Muse получил доступ к Signal, Meta говорит о случайностях</a></h3>
     <p class="card__sum">Reuters изучил внутренние посты Meta: агент Muse читал уведомления Signal, присылал сотрудникам банковские балансы, которых…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-2100-meta-muse-signal.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article></div></section>
 </main>
@@ -189,9 +181,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -209,9 +200,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

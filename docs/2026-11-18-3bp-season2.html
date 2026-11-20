@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/serialy/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/serialy/">Сериалы</a></li><li aria-current="page">«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь</li></ol></nav>
 <article class="post cat-serialy">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-18T11:10:00+03:00">18.11.2026, 11:10</time></div>
@@ -100,67 +100,59 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Netflix выпустил первый тизер второго сезона «Задачи трёх тел» и объявил дату — 14 января. В ролике Сан-Ти обращаются к человечеству с предложением мира, а шоураннеры говорят, что сезон будет не про тайну, а про то, как люди привыкают жить под угрозой.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-anya.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/anya.html">Аня Гладышева</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Премьера второго сезона — 14 января; тизер вышел 17 ноября</li><li>«Мы знаем, что есть враждебная цивилизация, и она летит к нам» — Дэвид Бениофф</li><li>В каст возвращаются Джован Адепо, Лиам Каннингем, Эйза Гонсалес, Джесс Хонг, Бенедикт Вонг</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/3bp-season2.jpg" alt="«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь"></figure>
-  <div class="post__body"><p>Netflix показал первый тизер <strong>второго сезона «Задачи трёх тел»</strong> и назвал дату премьеры — <strong>14 января</strong>. Ролик начинается с обращения Сан-Ти: «Мы давно с вами не говорили. Но мы наблюдали».</p>
+  <figure class="post__cover"><img src="/assets/img/3bp-season2.jpg" alt="«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-o-chem-budet-sezon">О чём будет сезон</a></li><li><a href="#section-kto-vernulsya">Кто вернулся</a></li><li><a href="#section-pochemu-vtoroy-sezon-slozhnee-pervogo">Почему второй сезон сложнее первого</a></li><li><a href="#section-chto-izvestno-o-date-i-formate">Что известно о дате и формате</a></li><li><a href="#section-stoit-li-zhdat">Стоит ли ждать</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Премьера второго сезона — 14 января; тизер вышел 17 ноября</li><li>«Мы знаем, что есть враждебная цивилизация, и она летит к нам» — Дэвид Бениофф</li><li>В каст возвращаются Джован Адепо, Лиам Каннингем, Эйза Гонсалес, Джесс Хонг, Бенедикт Вонг</li></ul></aside><div class="post__body"><p>Netflix показал первый тизер <strong>второго сезона «Задачи трёх тел»</strong> и назвал дату премьеры — <strong>14 января</strong>. Ролик начинается с обращения Сан-Ти: «Мы давно с вами не говорили. Но мы наблюдали».</p>
 <p>Дальше — главная мысль сезона: «Война была бы разрушительной для обоих наших народов. Поэтому мы послали вам…»</p>
-<h2>О чём будет сезон</h2>
+<h2 id="section-o-chem-budet-sezon">О чём будет сезон</h2>
 <p>Первый сезон был детективом: что происходит, кто стоит за странностями в науке, почему физика перестала работать. Второй, судя по словам шоураннеров, — совсем другая история.</p>
 <p>«В первом сезоне многое построено на тайне происходящего, — говорит <strong>Дэвид Бениофф</strong>. — К началу второго мы знаем гораздо больше. Мы знаем, что существует враждебная инопланетная цивилизация, Сан-Ти, что они летят к нам и хотят нашу планету себе».</p>
 <p>Но знать и понимать, что с этим делать, — разные вещи. Александр Ву формулирует вопрос сезона иначе: «Люди привыкли? Некоторые начали это рационализировать, а кто-то даже принял?»</p>
 <p>То есть Netflix переключается с «загадки» на «жизнь под приговором». Это сложнее: саспенс тайны уходит, остаётся вопрос, как общество ломается медленно, а не сразу.</p>
-<h2>Кто вернулся</h2>
+<h2 id="section-kto-vernulsya">Кто вернулся</h2>
 <p>В тизере и первых кадрах — знакомые лица:</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Актёр</th><th style="text-align:left">Роль</th></tr></thead><tbody><tr><td style="text-align:left">Джован Адепо</td><td style="text-align:left">Сол Дюран</td></tr><tr><td style="text-align:left">Лиам Каннингем</td><td style="text-align:left">Томас Уэйд</td></tr><tr><td style="text-align:left">Эйза Гонсалес</td><td style="text-align:left">Огги Салазар</td></tr><tr><td style="text-align:left">Джесс Хонг</td><td style="text-align:left">Джин Ченг</td></tr><tr><td style="text-align:left">Бенедикт Вонг</td><td style="text-align:left">Да Ши</td></tr><tr><td style="text-align:left">Си Шимука</td><td style="text-align:left">Софон</td></tr><tr><td style="text-align:left">Марло Келли</td><td style="text-align:left">Татьяна Хаас</td></tr><tr><td style="text-align:left">Самер Усмани</td><td style="text-align:left">Радж Варма</td></tr></tbody></table></div>
 <p>Шоураннеры — те же: Дэвид Бениофф, Д. Б. Уайсс и Александр Ву. Для первых двух это уже второй большой проект после «Игры престолов», где они снова адаптируют книги с очень сложной структурой.</p>
-<h2>Почему второй сезон сложнее первого</h2>
+<h2 id="section-pochemu-vtoroy-sezon-slozhnee-pervogo">Почему второй сезон сложнее первого</h2>
 <p>Первая книга Лю Цысиня (и первый сезон) — это загадка с ответом. Вторая — про то, как человечество реагирует на ответ, и там нет единого сюжета: есть политика, паника, отрицание, попытки договориться.</p>
 <p>Это классическая проблема экранизации «Тёмного леса»: книга держится на концепциях, а не на событиях, и переносить её в сериал труднее, чем первую часть. Именно поэтому многие фанаты считают второй сезон главным тестом для проекта.</p>
-<h2>Что известно о дате и формате</h2>
+<h2 id="section-chto-izvestno-o-date-i-formate">Что известно о дате и формате</h2>
 <p><strong>14 января</strong> — премьера. Netflix не уточняет, выйдет ли сезон целиком или по сериям; в первом сезоне все восемь эпизодов появились сразу.</p>
 <p>Второй сезон снимали с задержками: производство стартовало ещё в 2024-м, но часть сцен переносили. Судя по тизеру, визуально сезон стал масштабнее — больше космоса, больше массовых сцен.</p>
-<h2>Стоит ли ждать</h2>
+<h2 id="section-stoit-li-zhdat">Стоит ли ждать</h2>
 <p><strong>Да, если</strong> вы смотрели первый сезон. Это прямое продолжение, и без первого половина сцен не сработает.</p>
 <p><strong>Да, если</strong> вы читали «Тёмный лес». Интересно, как именно шоураннеры решат главную проблему книги — её центральная идея плохо ложится в картинку.</p>
 <p><strong>Осторожно, если</strong> вам нужен быстрый темп. Второй сезон обещает быть медленнее: разговорный, политический, про людей в комнатах, а не про битвы в космосе.</p>
 <p><strong>Нет, если</strong> вы не любите научную фантастику с физикой в центре. Здесь её будет больше, а не меньше: Сан-Ти — не «злые пришельцы», а цивилизация с собственной логикой.</p>
-<p>Одна оговорка: в тизере нет ни одного кадра масштабного вторжения, только разговоры и лица. Это может быть маркетинговой сдержанностью, а может — честным намёком на то, что сезон будет камерным. Узнаем 14 января.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.netflix.com/tudum/articles/3-body-problem-season-2-teaser" rel="nofollow noopener" target="_blank">Netflix Tudum — тизер и дата</a></li><li><a href="https://deadline.com/2026/11/3-body-problem-season-2-trailer-photos-netflix-123722652" rel="nofollow noopener" target="_blank">Deadline — тизер и первые фото</a></li><li><a href="https://www.whats-on-netflix.com/news/3-body-problem-season-2-teaser-trailer-first-lo" rel="nofollow noopener" target="_blank">What&#x27;s on Netflix — разбор тизера</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Одна оговорка: в тизере нет ни одного кадра масштабного вторжения, только разговоры и лица. Это может быть маркетинговой сдержанностью, а может — честным намёком на то, что сезон будет камерным. Узнаем 14 января.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.netflix.com/tudum/articles/3-body-problem-season-2-teaser" rel="nofollow noopener" target="_blank">Netflix Tudum — тизер и дата</a></li><li><a href="https://deadline.com/2026/11/3-body-problem-season-2-trailer-photos-netflix-123722652" rel="nofollow noopener" target="_blank">Deadline — тизер и первые фото</a></li><li><a href="https://www.whats-on-netflix.com/news/3-body-problem-season-2-teaser-trailer-first-lo" rel="nofollow noopener" target="_blank">What&#x27;s on Netflix — разбор тизера</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-3bp-season2.html&text=%C2%AB%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%20%D1%82%D1%80%D1%91%D1%85%20%D1%82%D0%B5%D0%BB%C2%BB%3A%20Netflix%20%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D1%82%D0%B8%D0%B7%D0%B5%D1%80%20%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B0%D0%BD-%D0%A2%D0%B8%20%D1%83%D0%B6%D0%B5%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-3bp-season2.html&title=%C2%AB%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%20%D1%82%D1%80%D1%91%D1%85%20%D1%82%D0%B5%D0%BB%C2%BB%3A%20Netflix%20%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D1%82%D0%B8%D0%B7%D0%B5%D1%80%20%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B0%D0%BD-%D0%A2%D0%B8%20%D1%83%D0%B6%D0%B5%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-3bp-season2.html&text=%C2%AB%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%20%D1%82%D1%80%D1%91%D1%85%20%D1%82%D0%B5%D0%BB%C2%BB%3A%20Netflix%20%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D1%82%D0%B8%D0%B7%D0%B5%D1%80%20%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B0%D0%BD-%D0%A2%D0%B8%20%D1%83%D0%B6%D0%B5%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-3bp-season2.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-18-3bp-season2-pin.jpg&description=%C2%AB%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0%20%D1%82%D1%80%D1%91%D1%85%20%D1%82%D0%B5%D0%BB%C2%BB%3A%20Netflix%20%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D1%82%D0%B8%D0%B7%D0%B5%D1%80%20%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B3%D0%BE%20%D1%81%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%94%20%D0%A1%D0%B0%D0%BD-%D0%A2%D0%B8%20%D1%83%D0%B6%D0%B5%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-18-3bp-season2.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/altruists-netflix-cover.jpg" alt="«The Altruists»: Netflix снял FTX как историю любви" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-serialy">
+  <div class="card__cover"><img src="/assets/img/altruists-netflix-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-19T10:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1000-the-altruists-ftx-serial.html">«The Altruists»: Netflix снял FTX как историю любви</a></h3>
     <p class="card__sum">Netflix выложил все восемь эпизодов «The Altruists» — драмы о Сэме Бэнкман-Фриде и Кэролайн Эллисон, которые построили FTX и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1000-the-altruists-ftx-serial.html">Читать →</a><span class="srcc">источников: 14</span></div>
   </div>
 </article>
 <article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/zadacha-treh-tel-2-sezon.jpg" alt="Второй сезон «Задачи трёх тел» стартует 14 января" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/zadacha-treh-tel-2-sezon.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-17T08:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-0800-zadacha-treh-tel-2-sezon.html">Второй сезон «Задачи трёх тел» стартует 14 января</a></h3>
     <p class="card__sum">Netflix назвал дату возвращения «Задачи трёх тел» — 14 января, спустя два года и десять месяцев после первого сезона.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-0800-zadacha-treh-tel-2-sezon.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/virgin-river-s9-netflix.jpg" alt="«Virgin River» дожил до девятого сезона: рекорд Netflix" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/virgin-river-s9-netflix.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-15T21:00:00+03:00">15.11</time></div>
     <h3 class="card__title"><a href="/2026-11-15-2100-virgin-river-9-sezon.html">«Virgin River» дожил до девятого сезона: рекорд Netflix</a></h3>
     <p class="card__sum">Netflix продлила «Virgin River» на девятый сезон за несколько месяцев до премьеры восьмого — это рекорд по числу сезонов…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-15-2100-virgin-river-9-sezon.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article></div></section>
 </main>
@@ -175,9 +167,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -195,9 +186,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/ai/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/ai/">AI</a></li><li aria-current="page">Anthropic оценили в $1,5 трлн на старте торгов</li></ol></nav>
 <article class="post cat-ai">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T12:00:00+03:00">19.11.2026, 12:00</time></div>
@@ -100,67 +100,59 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд. Оценка на полностью разводнённой базе — около $1,5 трлн, сегодня бумаги под тикером ANT начинают торговаться на Nasdaq.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>980 млн акций по $83 выше диапазона $70–78 — IPO принёс $81,3 млрд, а с частным размещением на $26 млрд вся сделка тянет на $107,3 млрд</li><li>Оценка до $1,5 трлн на разводнённой базе и $1,1 трлн по обычным акциям против $965 млрд в майском раунде</li><li>Годовой темп выручки на 31 октября — $81 млрд, но операционный убыток III квартала $567 млн и около $900 млрд обязательств по вычислениям</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов"></figure>
-  <div class="post__body"><p>Вчера вечером Anthropic закрыла книгу заявок и назвала цену: $83 за акцию класса A. Это на $5 выше верхней границы диапазона $70–78, который компания объявила 10 ноября. Размещение при этом увеличили: вместо 825 млн бумаг продают 980 млн. По базовой сделке выходит $81,3 млрд — больше, чем собрала SpaceX в июне ($75 млрд), поэтому Reuters называет IPO Anthropic крупнейшим в истории биржевых размещений. The Guardian пишет «второе»: у SpaceX с опционом андеррайтеров в итоге вышло $85,7 млрд. Считать по базовой сделке или по финальной сумме — вот и вся разница в заголовках.</p>
+  <figure class="post__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-prodali">Что именно продали</a></li><li><a href="#section-pochemu-cenu-podnyali-vyshe-diapazona">Почему цену подняли выше диапазона</a></li><li><a href="#section-chto-pokupayut-za-1-5-trln">Что покупают за $1,5 трлн</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-chto-budet-segodnya">Что будет сегодня</a></li><li><a href="#section-ocenka">Оценка</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>980 млн акций по $83 выше диапазона $70–78 — IPO принёс $81,3 млрд, а с частным размещением на $26 млрд вся сделка тянет на $107,3 млрд</li><li>Оценка до $1,5 трлн на разводнённой базе и $1,1 трлн по обычным акциям против $965 млрд в майском раунде</li><li>Годовой темп выручки на 31 октября — $81 млрд, но операционный убыток III квартала $567 млн и около $900 млрд обязательств по вычислениям</li></ul></aside><div class="post__body"><p>Вчера вечером Anthropic закрыла книгу заявок и назвала цену: $83 за акцию класса A. Это на $5 выше верхней границы диапазона $70–78, который компания объявила 10 ноября. Размещение при этом увеличили: вместо 825 млн бумаг продают 980 млн. По базовой сделке выходит $81,3 млрд — больше, чем собрала SpaceX в июне ($75 млрд), поэтому Reuters называет IPO Anthropic крупнейшим в истории биржевых размещений. The Guardian пишет «второе»: у SpaceX с опционом андеррайтеров в итоге вышло $85,7 млрд. Считать по базовой сделке или по финальной сумме — вот и вся разница в заголовках.</p>
 <p>Сегодня бумаги под тикером ANT начинают торговаться на Nasdaq Global Select. Дарьо Амодеи и соучредители откроют сессию звонком в 17:30 мск, но первая сделка случится позже: у больших IPO цену открытия собирают на аукционе, и на это уходят часы. До аукциона единственный ориентир — та самая цена размещения $83.</p>
-<h2>Что именно продали</h2>
+<h2 id="section-chto-imenno-prodali">Что именно продали</h2>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Параметр</th><th style="text-align:left">Значение</th></tr></thead><tbody><tr><td style="text-align:left">Цена</td><td style="text-align:left">$83 за акцию класса A (диапазон был $70–78)</td></tr><tr><td style="text-align:left">Бумаг в базовой сделке</td><td style="text-align:left">980 млн: 956,4 млн от компании, 23,6 млн от акционеров</td></tr><tr><td style="text-align:left">Привлечено в IPO</td><td style="text-align:left">$81,3 млрд</td></tr><tr><td style="text-align:left">Опцион андеррайтеров</td><td style="text-align:left">до 147 млн акций, 30 дней</td></tr><tr><td style="text-align:left">Частное размещение</td><td style="text-align:left">$26 млрд по цене IPO</td></tr><tr><td style="text-align:left">Объём всей сделки</td><td style="text-align:left">$107,3 млрд</td></tr><tr><td style="text-align:left">Оценка</td><td style="text-align:left">около $1,5 трлн с разводнением, $1,1 трлн без</td></tr><tr><td style="text-align:left">Биржа и тикер</td><td style="text-align:left">Nasdaq Global Select, ANT</td></tr></tbody></table></div>
 <p>Акционеры продают небольшую часть — 23,6 млн бумаг из 980 млн, и денег за них Anthropic не получит. Ещё 147 млн акций, то есть 15 % базовой сделки, андеррайтеры могут докупить в течение месяца — тогда итоговая сумма вырастет. Закрыть сделку планируют 20 ноября.</p>
 <p>Отдельно идёт частное размещение на $26 млрд по той же цене $83; по данным CNBC, в нём участвуют Google, Microsoft, Nvidia и AMD. С ним общий объём сделки Reuters оценивает в $107,3 млрд, а саму компанию — примерно в $1,5 трлн на полностью разводнённой базе и $1,1 трлн по обычным акциям. В майском раунде Anthropic стоила $965 млрд, то есть за полгода цена выросла в полтора раза.</p>
-<h2>Почему цену подняли выше диапазона</h2>
+<h2 id="section-pochemu-cenu-podnyali-vyshe-diapazona">Почему цену подняли выше диапазона</h2>
 <p>Цена выше диапазона — это сигнал, что спрос перекрыл предложение и банкам не пришлось оставлять «дешёвые» бумаги на столе. Ведут размещение Goldman Sachs и Morgan Stanley, всего в синдикате 22 банка. Рознице закладывали до 20 % выпуска — вчетверо больше обычных 5–10 %. После объявления цены фьючерсы на Nasdaq прибавили около процента (Bloomberg). Но общий фон для ИИ-акций всё равно тяжёлый: азиатские техкомпании утром торговались в минусе, а Nvidia идёт к седьмой подряд неделе падения — худшей серии с 2008 года.</p>
 <figure class="post__fig"><img src="/assets/img/anthropic-ipo-ant-amodei.jpg" alt="Дарьо Амодеи, соучредитель и генеральный директор Anthropic" loading="lazy"></figure>
-<h2>Что покупают за $1,5 трлн</h2>
+<h2 id="section-chto-pokupayut-za-1-5-trln">Что покупают за $1,5 трлн</h2>
 <p>Anthropic — пятилетняя компания, которая в 2021 году отпочковалась от OpenAI. За девять месяцев 2026-го она показала $33,24 млрд выручки, в двенадцать раз больше, чем годом ранее. Годовой темп (run-rate) на 31 октября — $81 млрд, на $10 млрд больше, чем месяцем ранее. Клиентов, которые платят от $100 тыс. в год, стало 11 900 против примерно 1 500 в конце прошлого года. Основной драйвер — Claude Code, агент для программистов, на котором компания и выехала в корпоративный сегмент.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Показатель</th><th style="text-align:left">Значение</th></tr></thead><tbody><tr><td style="text-align:left">Выручка III квартала</td><td style="text-align:left">$16,96 млрд, +47 % ко II кварталу</td></tr><tr><td style="text-align:left">Операционный результат III квартала</td><td style="text-align:left">−$567 млн (кварталом ранее +$974 млн)</td></tr><tr><td style="text-align:left">Чистый убыток III квартала</td><td style="text-align:left">$23,3 млрд (было $66,3 млрд)</td></tr><tr><td style="text-align:left">Годовой темп выручки</td><td style="text-align:left">$81 млрд на 31 октября</td></tr><tr><td style="text-align:left">Клиенты с чеком от $100 тыс. в год</td><td style="text-align:left">11 900 на 30 сентября</td></tr><tr><td style="text-align:left">Вычисления в III квартале</td><td style="text-align:left">около $5 млрд, 58 % выручки</td></tr><tr><td style="text-align:left">Обязательства по вычислениям</td><td style="text-align:left">около $900 млрд</td></tr></tbody></table></div>
 <p>Чистый убыток в $23,3 млрд выглядит страшнее, чем бизнес: он почти целиком из бухгалтерской переоценки конвертируемых нот, а не из операций. Операционный убыток квартала — $567 млн, и он честно показывает главное: быстрый рост пока оплачивается из кармана инвесторов.</p>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p>Первое — обязательства. Anthropic законтрактовала почти $900 млрд расходов на вычисления и инфраструктуру, в основном у Amazon и Google. Это примерно в одиннадцать раз больше её годовой выручки. В проспекте компания сама предупреждает: её поставщики и партнёры по инфраструктуре зависят от стороннего финансирования и кредитной поддержки под закупку чипов и стройку дата-центров, и если это финансирование подорожает или исчезнет, законтрактованные мощности могут задержаться, подорожать или не приехать вовсе. Для покупателя акций это значит, что план роста висит на чужом кредитном плече.</p>
 <p>Второе — экономика. В III квартале вычисления съели 58 % выручки; годом ранее они стоили в полтора раза дороже выручки, так что направление правильное, но запас всё ещё тонкий. Третье — конкуренция. По данным платформы корпоративных расходов Ramp, на GPT-6 Astra приходится около 13 % трат компаний на ИИ, на Claude Fable — около 8 %. Опрос Capgemini показывает, что 59 % руководителей крупных компаний собираются наращивать использование открытых моделей, потому что счёты за ИИ выходят за бюджеты. А Meta, один из крупнейших клиентов Anthropic, по данным Reuters ищет способ меньше зависеть от чужих моделей и наращивает свои.</p>
 <p>Третье с половиной — юридическая форма. Anthropic — public benefit corporation: у совета директоров по уставу есть обязанность взвешивать миссию наравне с доходностью акционера. Для инвестора это не катастрофа, но это ещё одна переменная, которой нет у обычной корпорации.</p>
-<h2>Что будет сегодня</h2>
+<h2 id="section-chto-budet-segodnya">Что будет сегодня</h2>
 <p>Цена открытия скажет не столько об Anthropic, сколько о том, готов ли рынок и дальше платить за фронтир. Если ANT откроется заметно выше $83, это поддержит весь сектор и облегчит выход OpenAI, который, как ожидает Reuters, может пойти на биржу уже в следующем году. Если бумага уйдёт под цену размещения — разговор сместится к тому, что $1,5 трлн были ценой хайпа, а не выручки.</p>
 <figure class="post__fig"><img src="/assets/img/anthropic-ipo-ant-nasdaq.jpg" alt="Башня Nasdaq на Таймс-сквер в Нью-Йорке" loading="lazy"></figure>
-<h2>Оценка</h2>
+<h2 id="section-ocenka">Оценка</h2>
 <p>Моя оценка, отдельно от фактов выше: размещение выше диапазона при падающем Nvidia и ужесточении экспорта чипов — сильный сигнал, что деньги ищут не «ИИ вообще», а конкретного лидера. Anthropic продаёт не модель, а подписку на работу: Claude Code — это не демо, а инструмент, за который платят ежемесячно, и именно поэтому выручка растёт на $10 млрд в месяц.</p>
-<p>При этом $1,5 трлн — это не сегодняшние $81 млрд годового темпа, а ставка на то, что через несколько лет фронтир останется за Anthropic. Ставка крупная: $900 млрд обязательств и открытый вопрос, кто будет платить за следующий дата-центр. Сегодняшние торги — первый честный опрос рынка на эту тему, но настоящая проверка придёт с первым публичным квартальным отчётом, когда сравнивать придётся не с прогнозами аналитиков, а с собственными обещаниями из проспекта.</p></div>
-  <p class="imgcredit">Изображения: Department for Science, Innovation and Technology / Alecsandra Dragoi, CC BY 2.0; UK Prime Minister, CC BY 2.0; Roman Suzuki, CC BY 3.0 — Wikimedia Commons</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.jpost.com/business-and-innovation/article-915417" rel="nofollow noopener" target="_blank">Reuters / The Jerusalem Post — цена, объём и оценка</a></li><li><a href="https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-stock-market-nasdaq-raises-81bn-record-ipo-latest-news-updates" rel="nofollow noopener" target="_blank">The Guardian — прямая трансляция размещения</a></li><li><a href="https://www.cnbc.com/2026/11/16/anthropic-ipo-date-price-range.html" rel="nofollow noopener" target="_blank">CNBC — параметры выпуска и ретейл-аллокация</a></li><li><a href="https://investinglive.com/stocks/anthropic-confirms-83-ipo-price-on-980-million-shares-in-an-81-billion-deal/" rel="nofollow noopener" target="_blank">Investing Live — официальный релиз о цене</a></li><li><a href="https://www.themarketmba.com/2026/11/18/anthropic-ipo-pricing-83-above-range/" rel="nofollow noopener" target="_blank">The Market MBA — сравнение с базой SpaceX</a></li><li><a href="https://www.euronews.com/2026/11/19/anthropics-record-ipo-lands-as-nvidia-suffers-its-worst-run-since-2008" rel="nofollow noopener" target="_blank">Euronews — Nvidia и фон вокруг ИИ-акций</a></li><li><a href="https://ipo.anthropic.com/us/" rel="nofollow noopener" target="_blank">Anthropic — страница размещения</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>При этом $1,5 трлн — это не сегодняшние $81 млрд годового темпа, а ставка на то, что через несколько лет фронтир останется за Anthropic. Ставка крупная: $900 млрд обязательств и открытый вопрос, кто будет платить за следующий дата-центр. Сегодняшние торги — первый честный опрос рынка на эту тему, но настоящая проверка придёт с первым публичным квартальным отчётом, когда сравнивать придётся не с прогнозами аналитиков, а с собственными обещаниями из проспекта.</p></div><p class="imgcredit">Изображения: Department for Science, Innovation and Technology / Alecsandra Dragoi, CC BY 2.0; UK Prime Minister, CC BY 2.0; Roman Suzuki, CC BY 3.0 — Wikimedia Commons</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.jpost.com/business-and-innovation/article-915417" rel="nofollow noopener" target="_blank">Reuters / The Jerusalem Post — цена, объём и оценка</a></li><li><a href="https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-stock-market-nasdaq-raises-81bn-record-ipo-latest-news-updates" rel="nofollow noopener" target="_blank">The Guardian — прямая трансляция размещения</a></li><li><a href="https://www.cnbc.com/2026/11/16/anthropic-ipo-date-price-range.html" rel="nofollow noopener" target="_blank">CNBC — параметры выпуска и ретейл-аллокация</a></li><li><a href="https://investinglive.com/stocks/anthropic-confirms-83-ipo-price-on-980-million-shares-in-an-81-billion-deal/" rel="nofollow noopener" target="_blank">Investing Live — официальный релиз о цене</a></li><li><a href="https://www.themarketmba.com/2026/11/18/anthropic-ipo-pricing-83-above-range/" rel="nofollow noopener" target="_blank">The Market MBA — сравнение с базой SpaceX</a></li><li><a href="https://www.euronews.com/2026/11/19/anthropics-record-ipo-lands-as-nvidia-suffers-its-worst-run-since-2008" rel="nofollow noopener" target="_blank">Euronews — Nvidia и фон вокруг ИИ-акций</a></li><li><a href="https://ipo.anthropic.com/us/" rel="nofollow noopener" target="_blank">Anthropic — страница размещения</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1200-anthropic-ipo-83.html&text=Anthropic%20%D0%BE%D1%86%D0%B5%D0%BD%D0%B8%D0%BB%D0%B8%20%D0%B2%20%241%2C5%20%D1%82%D1%80%D0%BB%D0%BD%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B5%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1200-anthropic-ipo-83.html&title=Anthropic%20%D0%BE%D1%86%D0%B5%D0%BD%D0%B8%D0%BB%D0%B8%20%D0%B2%20%241%2C5%20%D1%82%D1%80%D0%BB%D0%BD%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B5%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1200-anthropic-ipo-83.html&text=Anthropic%20%D0%BE%D1%86%D0%B5%D0%BD%D0%B8%D0%BB%D0%B8%20%D0%B2%20%241%2C5%20%D1%82%D1%80%D0%BB%D0%BD%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B5%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1200-anthropic-ipo-83.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-19-1200-anthropic-ipo-83-pin.jpg&description=Anthropic%20%D0%BE%D1%86%D0%B5%D0%BD%D0%B8%D0%BB%D0%B8%20%D0%B2%20%241%2C5%20%D1%82%D1%80%D0%BB%D0%BD%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B5%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1200-anthropic-ipo-83.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Уилл Райт возвращается с игрой из ваших воспоминаний</a></h3>
     <p class="card__sum">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Китай исчез из прогноза NVIDIA: H200 больше не возят</a></h3>
     <p class="card__sum">На звонке по итогам квартала и.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="Muse получил доступ к Signal, Meta говорит о случайностях" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-18T21:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-2100-meta-muse-signal.html">Muse получил доступ к Signal, Meta говорит о случайностях</a></h3>
     <p class="card__sum">Reuters изучил внутренние посты Meta: агент Muse читал уведомления Signal, присылал сотрудникам банковские балансы, которых…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-2100-meta-muse-signal.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article></div></section>
 </main>
@@ -175,9 +167,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -195,9 +186,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

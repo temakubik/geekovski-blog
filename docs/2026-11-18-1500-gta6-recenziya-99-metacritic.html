@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/playstation/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/playstation/">PlayStation</a></li><li aria-current="page">GTA VI: 99 из 100 и рекорд Metacritic</li></ol></nav>
 <article class="post cat-playstation">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-18T15:00:00+03:00">18.11.2026, 15:00</time></div>
@@ -100,79 +100,71 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">За день до релиза спало эмбарго на рецензии GTA VI, и пресса выдала почти единодушный максимум: 99 из 100 на Metacritic по сотне обзоров и 100% рекомендаций на OpenCritic. Так же высоко за историю агрегатора оценивали только The Legend of Zelda: Ocarina of Time, но у той было 22 рецензии, а не сто.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Metacritic — 99 из 100 по 100 рецензиям, все положительные; столько же за историю агрегатора было только у Ocarina of Time</li><li>Ругают почти за одно и то же: фиксированные 30 fps без режима производительности даже на PS5 Pro, провисающий темп и долгие поездки между миссиями</li><li>Кампания — 60–80 часов, полное прохождение за 300; до релиза Sensor Tower насчитала 15,88 млн копий и $1,54 млрд</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/gta6rev-17.jpg" alt="GTA VI: 99 из 100 и рекорд Metacritic"></figure>
-  <div class="post__body"><p>Эмбарго на рецензии <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a> спало 18 ноября около 14:00 по Москве — за сутки с небольшим до старта продаж. К 15:00 картина на агрегаторах выглядела так, как не выглядела ни у одной игры за последние десятилетия: на Metacritic у версии для PS5 стояло 99 из 100 по сотне рецензий, и все они положительные.</p>
+  <figure class="post__cover"><img src="/assets/img/gta6rev-17.jpg" alt="GTA VI: 99 из 100 и рекорд Metacritic" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-99-iz-100-i-vsego-odna-takaya-ocenka-v-istorii">99 из 100 — и всего одна такая оценка в истории</a></li><li><a href="#section-kto-chto-postavil">Кто что поставил</a></li><li><a href="#section-chto-hvalyat-ne-masshtab-a-plotnost">Что хвалят: не масштаб, а плотность</a></li><li><a href="#section-chto-rugayut-30-fps-i-temp">Что ругают: 30 fps и темп</a></li><li><a href="#section-skolko-eto-dlitsya">Сколько это длится</a></li><li><a href="#section-dengi-kotorye-uzhe-poschitali">Деньги, которые уже посчитали</a></li><li><a href="#section-popytka-obvalit-reyting-ne-udalas">Попытка обвалить рейтинг не удалась</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li><li><a href="#section-mnenie">Мнение</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Metacritic — 99 из 100 по 100 рецензиям, все положительные; столько же за историю агрегатора было только у Ocarina of Time</li><li>Ругают почти за одно и то же: фиксированные 30 fps без режима производительности даже на PS5 Pro, провисающий темп и долгие поездки между миссиями</li><li>Кампания — 60–80 часов, полное прохождение за 300; до релиза Sensor Tower насчитала 15,88 млн копий и $1,54 млрд</li></ul></aside><div class="post__body"><p>Эмбарго на рецензии <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a> спало 18 ноября около 14:00 по Москве — за сутки с небольшим до старта продаж. К 15:00 картина на агрегаторах выглядела так, как не выглядела ни у одной игры за последние десятилетия: на Metacritic у версии для PS5 стояло 99 из 100 по сотне рецензий, и все они положительные.</p>
 <p>Это не «одна восторженная рецензия и десяток сдержанных». Сотня изданий, включая тех, кого трудно заподозрить в любви к Rockstar, поставила максимум или около него.</p>
-<h2>99 из 100 — и всего одна такая оценка в истории</h2>
+<h2 id="section-99-iz-100-i-vsego-odna-takaya-ocenka-v-istorii">99 из 100 — и всего одна такая оценка в истории</h2>
 <p>По данным Insider Gaming и Shazoo, Metascore держался на 99 при 100 рецензиях. На OpenCritic — те же 99 и 100 % критиков, рекомендующих игру. Англоязычные сводки в первые часы фиксировали 98 при 50–60 обзорах: агрегаторы считают среднее на лету, и каждая новая оценка двигает цифру. Так что 99 — снимок на середину дня 18 ноября, а не вечная константа.</p>
 <p>Важнее другое. За всю историю Metacritic 99 баллов было только у <a class="tlink" href="/titles/zelda-ocarina-2026.html">The Legend of Zelda: Ocarina of Time</a> — и там речь о 22 рецензиях 1998 года. Здесь — сто рецензий, включая немецкие, японские и корейские издания. Держать такой средний на выборке в сто текстов куда труднее, чем на двадцати двух.</p>
 <figure class="post__fig"><img src="/assets/img/gta6rev-15.jpg" alt="Джейсон и Лусия в магазине, который как раз грабят" loading="lazy"></figure>
-<h2>Кто что поставил</h2>
+<h2 id="section-kto-chto-postavil">Кто что поставил</h2>
 <p>Полные десятки пришли почти от всех крупных изданий. Ниже — те, что успели опубликоваться к моменту эмбарго.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Издание</th><th style="text-align:left">Оценка</th></tr></thead><tbody><tr><td style="text-align:left">GameSpot</td><td style="text-align:left">100</td></tr><tr><td style="text-align:left">Game Informer</td><td style="text-align:left">100</td></tr><tr><td style="text-align:left">GamesRadar+</td><td style="text-align:left">100 (5/5)</td></tr><tr><td style="text-align:left">Edge</td><td style="text-align:left">100</td></tr><tr><td style="text-align:left">Push Square</td><td style="text-align:left">100</td></tr><tr><td style="text-align:left">Destructoid</td><td style="text-align:left">100</td></tr><tr><td style="text-align:left">Forbes</td><td style="text-align:left">100</td></tr><tr><td style="text-align:left">IGN Deutschland</td><td style="text-align:left">100</td></tr><tr><td style="text-align:left">The Guardian</td><td style="text-align:left">5/5</td></tr><tr><td style="text-align:left">VGC</td><td style="text-align:left">5/5</td></tr><tr><td style="text-align:left">Giant Bomb</td><td style="text-align:left">5/5</td></tr><tr><td style="text-align:left">Wccftech</td><td style="text-align:left">96</td></tr><tr><td style="text-align:left">The New York Times</td><td style="text-align:left">90</td></tr><tr><td style="text-align:left">IGN Japan</td><td style="text-align:left">90</td></tr><tr><td style="text-align:left">Noisy Pixel, TheSixthAxis, Slant, Digitally Downloaded</td><td style="text-align:left">90</td></tr></tbody></table></div>
 <p>Сдержанные оценки — это не разгром, а придирки по делу: 90 у NYT и IGN Japan, 96 у Wccftech с формулировкой, что игра не революционна. The Verge балл не ставил вовсе, но заголовок рецензии Эндрю Уэбстера говорит сам за себя: по его формулировке, игра делает невозможное и оправдывает хайп.</p>
-<h2>Что хвалят: не масштаб, а плотность</h2>
+<h2 id="section-chto-hvalyat-ne-masshtab-a-plotnost">Что хвалят: не масштаб, а плотность</h2>
 <p>Общий знаменатель почти всех рецензий — не размер карты, а то, насколько густо она населена. GamesRadar+ называет Леониду самой детализированной песочницей из существующих и отдельно отмечает почти полное отсутствие экранов загрузки и скорость переключения между героями при чудовищной плотности населения.</p>
 <p>Game Informer строит разбор вокруг деталей: у Люсии волосы треплются на ветру и она сама убирает прядь за ухо, после тренировки на коже блестит пот, а в наркопритоне лежит мусор, который никто не рисовал «для галочки». По мнению издания, это и есть главный аргумент: обычные занятия — рыбалка, кофе, спортзал, танцы в клубе — работают не хуже криминальных миссий.</p>
 <p>Вторая тема, которую поднимают все, — отношения Джейсона и Лусии. Game Informer называет их роман самым проработанным и убедительным в истории видеоигр, а GamesRadar+ — самым взрослым: забота сближает героев, равнодушие отдаляет, и это не галочка в меню, а следствие ежедневных действий игрока. В GTA VI напарницу можно взять за руку — в GTA V та же кнопка умела только целиться.</p>
 <figure class="post__fig"><img src="/assets/img/gta6rev-16.jpg" alt="Джейсон и Лусия на надувных кругах в море" loading="lazy"></figure>
-<h2>Что ругают: 30 fps и темп</h2>
+<h2 id="section-chto-rugayut-30-fps-i-temp">Что ругают: 30 fps и темп</h2>
 <p>Главная претензия одна и она техническая: Rockstar целилась в 30 кадров в секунду на всех платформах, и режима производительности нет даже на PS5 Pro. На Pro при этом есть PSSR и трассировка теней, то есть железо используется, но не для плавности. Push Square, отыгравший больше 150 часов на PS5 Pro, отмечает: несмотря на 30 fps, управление отзывчивое. Тем не менее это 2026 год и консоли за $599–899.</p>
 <p>Дальше идут вещи помягче:</p>
 <ul><li>на базовой PS5 встречаются технические шероховатости и просадки производительности;</li><li>местами провисает темп, а долгие поездки между миссиями ослабляют погружение;</li><li>основные миссии консервативны по дизайну, рукопашный бой упрощён, QTE-сцены однообразны;</li><li>немецкой озвучки нет — на это отдельно указали немецкоязычные издания.</li></ul>
 <p>Показательно, что даже эти замечания не сбили средний балл: критики сочли их ценой за то, что получилось.</p>
-<h2>Сколько это длится</h2>
+<h2 id="section-skolko-eto-dlitsya">Сколько это длится</h2>
 <p>Тут цифры расходятся сильнее, чем оценки. Основная кампания — от 60 до 80 с лишним часов. Рецензент The Verge провёл в игре почти 80 часов, прошёл сюжет и увидел меньше 60 % контента. GamesRadar+ отыграл больше 100 часов и признал, что северная граница Леониды для него всё ещё загадка. Digital Spy провёл за игрой больше 200 часов и продолжал находить новое.</p>
 <figure class="post__fig"><img src="/assets/img/gta6rev-18.jpg" alt="Джейсон и Лусия у горящего грузовика на фоне силосов" loading="lazy"></figure>
-<h2>Деньги, которые уже посчитали</h2>
+<h2 id="section-dengi-kotorye-uzhe-poschitali">Деньги, которые уже посчитали</h2>
 <p>К 17 ноября, за два дня до релиза, Sensor Tower оценивала продажи в 15,88 млн копий и $1,54 млрд выручки — примерно за неделю до этого было 12,13 млн копий и $1,18 млрд. Около 75 % приходится на PlayStation, остальное на Xbox. Средний чек выше базового, потому что, по оценке Sensor Tower, 87 % покупателей выбрали Ultimate за $99,99 вместо стандартного издания за $79,99.</p>
 <p>Аналитики Circana и Wedbush ждут, что запуск станет крупнейшим в истории развлечений, а к концу года игра подойдёт к $3 млрд и 30 млн копий. Это прогнозы, а не факт: Take-Two официальных цифр продаж не публиковала, только говорила на отчётной звонке, что предзаказы идут куда выше ожиданий.</p>
 <figure class="post__fig"><img src="/assets/img/gta6rev-45.jpg" alt="Сцена ограбления: трое героев за столом с документами" loading="lazy"></figure>
-<h2>Попытка обвалить рейтинг не удалась</h2>
+<h2 id="section-popytka-obvalit-reyting-ne-udalas">Попытка обвалить рейтинг не удалась</h2>
 <p>За сутки до снятия эмбарго на Metacritic появился пользовательский рейтинг — 6,5 из 10. Проблема была в выборке: пять оценок у игры, которая ещё не вышла. Сообщество предположило, что это не игроки, а фанаты ремейка Ocarina of Time, которым не понравилось, что GTA VI может отобрать у их игры звание самой высокооценённой. Администрация Metacritic отзывы вычистила, и на момент публикации пользовательских оценок у игры снова нет.</p>
-<h2>Что дальше</h2>
+<h2 id="section-chto-dalshe">Что дальше</h2>
 <p>Релиз — 19 ноября на PS5 и Xbox Series X|S, только в цифре, без дисков. Русские субтитры заявлены. Версию для ПК Rockstar не анонсировала. А восемь номинаций The Game Awards игра получила ещё до рецензий — теперь понятно, на чём стояли эти номинации.</p>
-<h2>Мнение</h2>
+<h2 id="section-mnenie">Мнение</h2>
 <p>99 из 100 — это не «идеальная игра». Это консенсус ста изданий, что ничего сопоставимого в этом поколении не выходило. Оговорки у всех одни и те же и они честные: 30 кадров в секунду в 2026 году на консоли за $700 — это выбор Rockstar в пользу картинки, и каждый покупатель вправе решить, устраивает ли он его.</p>
 <p>Мой главный скепсис не в оценках, а в том, что мы увидим через месяц. Первые сто рецензий писались по кодам от издателя, в режиме марафона, с доступом к пресс-материалам. Насколько игра держит в обычном темпе — по два часа вечером, с онлайн-составляющей, которой пока нет, — станет ясно только по пользовательским оценкам после релиза. Именно там GTA V и RDR 2 теряли часть восторга прессы.</p>
-<p>Но одно можно сказать уже сейчас: сто рецензий без единой отрицательной — это не хайп, который разгоняют маркетингом. Такой консенсус не покупается.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.metacritic.com/game/grand-theft-auto-vi/" rel="nofollow noopener" target="_blank">Metacritic — Grand Theft Auto VI</a></li><li><a href="https://opencritic.com/game/15398/grand-theft-auto-vi" rel="nofollow noopener" target="_blank">OpenCritic — Grand Theft Auto VI</a></li><li><a href="https://shazoo.ru/2026/11/18/194274/gta-6-polucila-99-ballov-na-metacritic-i-100-polozitelnyx-recenzii" rel="nofollow noopener" target="_blank">Shazoo — 99 баллов и 100% положительных рецензий</a></li><li><a href="https://insider-gaming.com/gta-6-gets-a-99-in-early-metacritic-review-scores/" rel="nofollow noopener" target="_blank">Insider Gaming — GTA 6 gets a 99 in early Metacritic scores</a></li><li><a href="https://www.theverge.com/games/1035801/grand-theft-auto-6-review" rel="nofollow noopener" target="_blank">The Verge — рецензия</a></li><li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-review/" rel="nofollow noopener" target="_blank">GamesRadar+ — рецензия</a></li><li><a href="https://gameinformer.com/review/grand-theft-auto-vi/outrageous-fortune" rel="nofollow noopener" target="_blank">Game Informer — рецензия</a></li><li><a href="https://finance.yahoo.com/media-advertising/articles/gta-6-preorders-hit-estimated-215511423.html" rel="nofollow noopener" target="_blank">Yahoo Finance (Reuters) — предзаказы на $1,54 млрд</a></li><li><a href="https://ixbt.games/en/news/2026/11/17/ne-sedevr-polzovateli-uze-slili-reiting-gta-vi-na-metacritic.html" rel="nofollow noopener" target="_blank">IXBT Games — попытка обвалить рейтинг на Metacritic</a></li><li><a href="https://www.championat.com/cybersport/news-6673612-obzory-gta-6-vyjdut-18-noyabrya-za-den-do-reliza-igry.html" rel="nofollow noopener" target="_blank">«Чемпионат» — русские субтитры и дата обзоров</a></li><li><a href="https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026" rel="nofollow noopener" target="_blank">Rockstar Newswire — дата релиза</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Но одно можно сказать уже сейчас: сто рецензий без единой отрицательной — это не хайп, который разгоняют маркетингом. Такой консенсус не покупается.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.metacritic.com/game/grand-theft-auto-vi/" rel="nofollow noopener" target="_blank">Metacritic — Grand Theft Auto VI</a></li><li><a href="https://opencritic.com/game/15398/grand-theft-auto-vi" rel="nofollow noopener" target="_blank">OpenCritic — Grand Theft Auto VI</a></li><li><a href="https://shazoo.ru/2026/11/18/194274/gta-6-polucila-99-ballov-na-metacritic-i-100-polozitelnyx-recenzii" rel="nofollow noopener" target="_blank">Shazoo — 99 баллов и 100% положительных рецензий</a></li><li><a href="https://insider-gaming.com/gta-6-gets-a-99-in-early-metacritic-review-scores/" rel="nofollow noopener" target="_blank">Insider Gaming — GTA 6 gets a 99 in early Metacritic scores</a></li><li><a href="https://www.theverge.com/games/1035801/grand-theft-auto-6-review" rel="nofollow noopener" target="_blank">The Verge — рецензия</a></li><li><a href="https://www.gamesradar.com/games/grand-theft-auto/gta-6-review/" rel="nofollow noopener" target="_blank">GamesRadar+ — рецензия</a></li><li><a href="https://gameinformer.com/review/grand-theft-auto-vi/outrageous-fortune" rel="nofollow noopener" target="_blank">Game Informer — рецензия</a></li><li><a href="https://finance.yahoo.com/media-advertising/articles/gta-6-preorders-hit-estimated-215511423.html" rel="nofollow noopener" target="_blank">Yahoo Finance (Reuters) — предзаказы на $1,54 млрд</a></li><li><a href="https://ixbt.games/en/news/2026/11/17/ne-sedevr-polzovateli-uze-slili-reiting-gta-vi-na-metacritic.html" rel="nofollow noopener" target="_blank">IXBT Games — попытка обвалить рейтинг на Metacritic</a></li><li><a href="https://www.championat.com/cybersport/news-6673612-obzory-gta-6-vyjdut-18-noyabrya-za-den-do-reliza-igry.html" rel="nofollow noopener" target="_blank">«Чемпионат» — русские субтитры и дата обзоров</a></li><li><a href="https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026" rel="nofollow noopener" target="_blank">Rockstar Newswire — дата релиза</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1500-gta6-recenziya-99-metacritic.html&text=GTA%20VI%3A%2099%20%D0%B8%D0%B7%20100%20%D0%B8%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Metacritic" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1500-gta6-recenziya-99-metacritic.html&title=GTA%20VI%3A%2099%20%D0%B8%D0%B7%20100%20%D0%B8%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Metacritic" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1500-gta6-recenziya-99-metacritic.html&text=GTA%20VI%3A%2099%20%D0%B8%D0%B7%20100%20%D0%B8%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Metacritic" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1500-gta6-recenziya-99-metacritic.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-18-1500-gta6-recenziya-99-metacritic-pin.jpg&description=GTA%20VI%3A%2099%20%D0%B8%D0%B7%20100%20%D0%B8%20%D1%80%D0%B5%D0%BA%D0%BE%D1%80%D0%B4%20Metacritic" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1500-gta6-recenziya-99-metacritic.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="GTA VI на консолях: 30 fps держится не везде" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-playstation">
+  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-20T12:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">GTA VI на консолях: 30 fps держится не везде</a></h3>
     <p class="card__sum">Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">Читать →</a><span class="srcc">источников: 9</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="PlayStation отбилась от иска на £2 млрд" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-17T18:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-1800-playstation-isk-2-mlrd.html">PlayStation отбилась от иска на £2 млрд</a></h3>
     <p class="card__sum">Лондонский трибунал по конкуренции 17 ноября отклонил коллективный иск к Sony почти на £2 млрд — 12,2 млн британских…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-1800-playstation-isk-2-mlrd.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/qssr-ps5-apu-die.jpg" alt="QSSR на обычной PS5: апскейл без ИИ-блока" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/qssr-ps5-apu-die.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-15T12:00:00+03:00">15.11</time></div>
     <h3 class="card__title"><a href="/2026-11-15-1200-qssr-ii-upskaling-ps5.html">QSSR на обычной PS5: апскейл без ИИ-блока</a></h3>
     <p class="card__sum">13 ноября Sony расширила список игр с QSSR до восьми — Spider-Man 2 уже обновилась, Control Resonant ждёт декабрьского…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-15-1200-qssr-ii-upskaling-ps5.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article></div></section>
 </main>
@@ -187,9 +179,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -207,9 +198,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

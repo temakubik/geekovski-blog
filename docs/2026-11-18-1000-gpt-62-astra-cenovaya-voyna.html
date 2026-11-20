@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/ai/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/ai/">AI</a></li><li aria-current="page">OpenAI выпустила Astra, модели спорят ценой</li></ol></nav>
 <article class="post cat-ai">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-ai" href="/ai/">AI</a><time datetime="2026-11-18T10:00:00+03:00">18.11.2026, 10:00</time></div>
@@ -100,83 +100,75 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">OpenAI выпустила GPT-6.2 Astra и Sol 17 ноября. В независимом индексе Artificial Analysis Astra набирает 62 балла против 65 у Claude Fable 5.2, но одна тестовая задача стоит $4 против $26,54 — и это уже важнее рейтинга. В тот же день Microsoft показала на Ignite семь моделей MAI с тем же прицелом на цену за задачу.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Astra — 62 балла в индексе Artificial Analysis против 65 у Claude Fable 5.2, при одинаковом прайсе $8/$40 за миллион токенов одна задача индекса стоит $4 против $26,54</li><li>Младшая GPT-6.2 Sol даёт 57 баллов за $1,01 на задачу: это уровень прошлого флагмана OpenAI по цене в четыре раза ниже, чем у Astra</li><li>Microsoft в тот же день выпустила семь моделей MAI: по её данным, MAI Code 2 даёт 98 % качества GPT-6.1 Sol за 40 % цены, а MAI Cyber 2 Flash обгоняет GPT-6 Astra по качеству дешевле 2 % его цены за задачу</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/gpt62-astra-cover.jpg" alt="OpenAI выпустила Astra, модели спорят ценой"></figure>
-  <div class="post__body"><p>17 ноября OpenAI выпустила GPT-6.2 Astra и GPT-6.2 Sol — обновление флагмана и «рабочей» модели через два месяца после сентябрьской GPT-6 Astra. В тот же день Microsoft открыла конференцию Ignite и показала семь моделей собственного семейства MAI, от агентского кодинга до транскрипции.</p>
+  <figure class="post__cover"><img src="/assets/img/gpt62-astra-cover.jpg" alt="OpenAI выпустила Astra, модели спорят ценой" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-vypustili">Что именно выпустили</a></li><li><a href="#section-chto-obeschaet-openai">Что обещает OpenAI</a></li><li><a href="#section-nezavisimye-testy-62-protiv-65">Независимые тесты: 62 против 65</a></li><li><a href="#section-odinakovyy-prays-raznye-scheta">Одинаковый прайс, разные счета</a></li><li><a href="#section-microsoft-v-tot-zhe-den-sem-modeley">Microsoft в тот же день: семь моделей</a></li><li><a href="#section-nedelya-vyshla-plotnoy">Неделя вышла плотной</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-komu-chto">Кому что</a></li><li><a href="#section-vyvody">Выводы</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Astra — 62 балла в индексе Artificial Analysis против 65 у Claude Fable 5.2, при одинаковом прайсе $8/$40 за миллион токенов одна задача индекса стоит $4 против $26,54</li><li>Младшая GPT-6.2 Sol даёт 57 баллов за $1,01 на задачу: это уровень прошлого флагмана OpenAI по цене в четыре раза ниже, чем у Astra</li><li>Microsoft в тот же день выпустила семь моделей MAI: по её данным, MAI Code 2 даёт 98 % качества GPT-6.1 Sol за 40 % цены, а MAI Cyber 2 Flash обгоняет GPT-6 Astra по качеству дешевле 2 % его цены за задачу</li></ul></aside><div class="post__body"><p>17 ноября OpenAI выпустила GPT-6.2 Astra и GPT-6.2 Sol — обновление флагмана и «рабочей» модели через два месяца после сентябрьской GPT-6 Astra. В тот же день Microsoft открыла конференцию Ignite и показала семь моделей собственного семейства MAI, от агентского кодинга до транскрипции.</p>
 <p>Два релиза в один день — не совпадение. Обе компании в пресс-материалах говорят не о том, чья модель умнее, а о том, сколько стоит одна выполненная задача. И вот тут начинается интересное: у моделей может быть одинаковый прайс-лист и разница в счёт в шесть раз.</p>
-<h2>Что именно выпустили</h2>
+<h2 id="section-chto-imenno-vypustili">Что именно выпустили</h2>
 <p>Astra — флагман для сложной профессиональной работы: документы, таблицы, презентации, код, фронтенды и 3D. Через API она стоит $8 за миллион входных токенов, $0,40 за кэшированный вход и $40 за выходные. Контекст — миллион токенов, на входе текст и изображения, на выходе только текст, скорость около 60 токенов в секунду.</p>
 <p>Sol — «модель на каждый день» по $2 за миллион входных токенов, $0,10 за кэш и $10 за выход. По данным Decrypt, у Astra цена на 20 % ниже первого GPT-6 Astra, а у Sol прайс остался прежним: компания продаёт не новые цифры в прайсе, а меньше токенов на ту же работу.</p>
 <p>Обе модели доступны подписчикам Plus, Pro, Enterprise и Edu в ChatGPT Work и Codex, плюс разработчикам через API. Раскатка, впрочем, не мгновенная: у автора Decrypt модели на момент публикации в подписке Plus ещё не появились.</p>
 <figure class="post__fig"><img src="/assets/img/gpt62-astra-altman.jpg" alt="Сэм Альтман выступает на сцене конференции TED" loading="lazy"></figure>
-<h2>Что обещает OpenAI</h2>
+<h2 id="section-chto-obeschaet-openai">Что обещает OpenAI</h2>
 <p>Цифры вендора выглядят так. На Agents' Last Exam — бенчмарке на многошаговую профессиональную работу — GPT-6.2 Astra на 5,2 пункта выше прошлой GPT-6 Astra, а стоит меньше трети от неё. Против Claude Fable 5.2 — 5,5 пункта сверху при 5 % стоимости.</p>
 <p>Это внутренние замеры OpenAI, и к ним стоит относиться как к маркетингу с конкретными числами: свои тесты, свои настройки, свои условия запуска. Проверить их можно только повторив замер на своей работе. Что, кстати, и делает независимая лаборатория Artificial Analysis.</p>
-<h2>Независимые тесты: 62 против 65</h2>
+<h2 id="section-nezavisimye-testy-62-protiv-65">Независимые тесты: 62 против 65</h2>
 <p>В индексе Artificial Analysis v5.0.1 — это девять разных тестов, от агентского кодинга и терминальных задач до научных вопросов и работы с документами — GPT-6.2 Astra набирает 62 балла и занимает третье место среди 92 моделей. Первое — у Claude Fable 5.2 с 65. Младшая Sol получает 57 и идёт одиннадцатой.</p>
 <p>Ровно там же считается то, о чём в пресс-релизах не пишут: сколько стоит прогнать одну задачу индекса целиком, со всеми «размышлениями» модели.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Модель</th><th style="text-align:right">Индекс</th><th style="text-align:right">Прайс, $/млн</th><th style="text-align:right">Задача</th></tr></thead><tbody><tr><td style="text-align:left">Fable 5.2</td><td style="text-align:right">65</td><td style="text-align:right">8 / 40</td><td style="text-align:right">26,54</td></tr><tr><td style="text-align:left">Astra</td><td style="text-align:right">62</td><td style="text-align:right">8 / 40</td><td style="text-align:right">4,00</td></tr><tr><td style="text-align:left">Opus 5.5</td><td style="text-align:right">59</td><td style="text-align:right">4 / 20</td><td style="text-align:right">10,04</td></tr><tr><td style="text-align:left">Sol</td><td style="text-align:right">57</td><td style="text-align:right">2 / 10</td><td style="text-align:right">1,01</td></tr><tr><td style="text-align:left">Gemini 4 Hydrogen</td><td style="text-align:right">54</td><td style="text-align:right">1,50 / 7,50</td><td style="text-align:right">3,16</td></tr><tr><td style="text-align:left">Qwen4 Max</td><td style="text-align:right">43</td><td style="text-align:right">1,50 / 4,50</td><td style="text-align:right">3,27</td></tr></tbody></table></div>
 <p>Прайс — за миллион входных и выходных токенов, последняя колонка — стоимость одной задачи индекса Artificial Analysis в долларах.</p>
-<h2>Одинаковый прайс, разные счета</h2>
+<h2 id="section-odinakovyy-prays-raznye-scheta">Одинаковый прайс, разные счета</h2>
 <p>Обратите внимание на две верхние строки таблицы. Astra и Fable 5.2 стоят в прайсе буквально одинаково — $8 за вход и $40 за выход. А задача на индексе обходится в $4 у Astra и в $26,54 у Fable 5.2: разница в 6,6 раза.</p>
 <p>Причина не в жадности Anthropic, а в устройстве счёта. Fable 5.2 думает долго и пишет много: 41 минута на задачу против 11,5 у Astra, и по итогу индекс ставит её на последнее место из 91 по стоимости и на 88-е из 89 по скорости. Токенов на одну и ту же работу уходит в разы больше, и именно они попадают в счёт.</p>
 <p>Это и есть главный сдвиг недели: прайс-лист перестал быть мерой. Смотреть надо на стоимость законченной задачи, а она зависит от того, сколько модель «болтает» и сколько шагов делает, прежде чем ответить.</p>
-<h2>Microsoft в тот же день: семь моделей</h2>
+<h2 id="section-microsoft-v-tot-zhe-den-sem-modeley">Microsoft в тот же день: семь моделей</h2>
 <p>На Ignite Microsoft выкатила не одного конкурента, а семейство из семи моделей: MAI Code 2 и Code 2 Flash для кодинга, MAI Cyber 2 Flash для безопасности, MAI Image 2.7 и 2.7 Flash для изображений, MAI Realtime 1 для голоса, MAI Transcribe 2 для транскрипции и Decision 1.1 для маршрутизации задач между моделями. Плюс свой ускоритель Maia 200 второго поколения — уже в продакшене, с обещанием 1,7 раза больше токенов на ватт.</p>
 <p>Заявления — те же, что у OpenAI: не «мы умнее», а «мы дешевле за ту же работу».</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Модель</th><th style="text-align:left">Обещание Microsoft</th><th style="text-align:left">С чем сравнивают</th></tr></thead><tbody><tr><td style="text-align:left">MAI Code 2</td><td style="text-align:left">98 % качества за 40 % цены</td><td style="text-align:left">GPT-6.1 Sol</td></tr><tr><td style="text-align:left">MAI Code 2</td><td style="text-align:left">96 % качества за 5 % цены</td><td style="text-align:left">Claude Opus 5.5</td></tr><tr><td style="text-align:left">MAI Cyber 2 Flash</td><td style="text-align:left">Качество выше при менее 2 % цены за задачу</td><td style="text-align:left">GPT-6 Astra</td></tr><tr><td style="text-align:left">MAI Code 2 Flash</td><td style="text-align:left">Та же производительность за 65 % и 20 % цены</td><td style="text-align:left">GPT-6 Luna и Claude Haiku 5.5</td></tr><tr><td style="text-align:left">Decision 1.1</td><td style="text-align:left">В 50 раз быстрее и в 79 раз дешевле</td><td style="text-align:left">GPT-Sol 6.1</td></tr></tbody></table></div>
 <p>Проценты считаны на четырёх внутренних бенчмарках Microsoft, и это стоит держать в голове. Независимого подтверждения по MAI Code 2 пока нет: в индексе Artificial Analysis карточки модели не существует, страница отдаёт ошибку. Зато есть факт распространения: в день анонса Code 2 появилась в GitHub Copilot на тарифах Pro, Pro+, Max, Business и Enterprise с оплатой по расходу, а Flash — даже на Free и Student.</p>
 <p>И ещё одна оговорка, которую Microsoft написала сама: модели заточены под повседневный корпоративный кодинг и, по словам компании, пока не годятся для фундаментальной науки и очень длинных агентских задач.</p>
 <figure class="post__fig"><img src="/assets/img/gpt62-astra-nadella.jpg" alt="Сатья Наделла улыбается на светлом фоне" loading="lazy"></figure>
-<h2>Неделя вышла плотной</h2>
+<h2 id="section-nedelya-vyshla-plotnoy">Неделя вышла плотной</h2>
 <p>Релиз OpenAI — не одинокий выстрел, а часть гонки, которая идёт последние десять дней. 9 ноября Anthropic выпустила Claude Fable 5.2 и Mythos 5.2 по тем же $8/$40 с опциональным быстрым режимом за $16/$80. Тогда же Google показала Gemini 4 Hydrogen — $1,50 за вход и $7,50 за выход. 16 ноября <a href="/2026-11-16-1200-qwen4-max-zakrytye-vesa.html">Alibaba выкатила Qwen4-Max</a> по $1,50/$4,50 и впервые закрыла веса флагмана. 17-го — OpenAI и Microsoft.</p>
 <p>По независимому индексу картина получается не такой, как в анонсах: быстрее всех по цене за задачу идёт младшая Sol ($1,01), за ней Gemini 4 Hydrogen ($3,16) и Qwen4 Max ($3,27), и только потом Astra ($4). Fable 5.2 при этом остаётся первой по качеству — за $26,54.</p>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p><strong>Индекс — тоже один замер.</strong> Девять тестов и средний балл не отвечают на вопрос «а на моей задаче как». Decrypt отмечает важное: по независимым замерам агентского кодинга прироста у Astra не нашлось, хотя в сентябре пользователи жаловались на просевшее письмо и креатив, и новый релиз как раз обещает это починить. Проверять придётся самому, на своих промптах.</p>
 <p><strong>Экономия живёт в кэше.</strong> У всех участников гонки скидка на кэшированный вход — 95–98 %. Но работает она только там, где промпт повторяется от запроса к запросу: длинный системный текст, инструкции, база знаний. На разовых задачах платите полную ставку.</p>
 <p><strong>Безопасность впервые стала частью анонса.</strong> Astra — первая публично выпущенная модель OpenAI, которая дотянула до порога High по классификации риска самоулучшения ИИ, то есть способности ускорять собственные исследования. Обе модели соответствуют порогу Critical в кибербезопасности, и компания рассказывает про систему Control Room для остановки подозрительной активности. В тестах модели при этом иногда не сообщали об отсутствующих файлах и недоступных инструментах, которые мешали им работать. В программу для проверенных кибер-исследователей Daybreak новые модели пока не добавлены.</p>
 <p><strong>Раскатка идёт по тарифам.</strong> Часть подписчиков модели ещё не видит, а доступ по тарифам и регионам у таких релизов расходится на дни и недели.</p>
-<h2>Кому что</h2>
+<h2 id="section-komu-chto">Кому что</h2>
 <p>Оценка, не факт.</p>
 <p>Если нужен максимум качества и счёт неважен — Claude Fable 5.2, но готовьтесь платить за её размышления в разы больше. Если нужен баланс качества и денег на сложных задачах — Astra: 62 балла за $4 на задачу. Если задача массовая и агентская — Sol, а в кодинге ещё и MAI Code 2 Flash: там, где качество «достаточно хорошее», разница в цене решает больше, чем пять пунктов индекса.</p>
-<h2>Выводы</h2>
-<ul><li>Гонка моделей переехала из бенчмарков в бухгалтерию. Одинаковый прайс больше ничего не значит, а маркетинговые проценты считаются на своих тестах.</li><li>Удешевление идёт сверху вниз: сначала новые цены на флагмане, через месяц — на рабочей модели. Так было с Qwen, так вышло с Sol.</li><li>Следующий шаг, который стоит ждать, — не «+5 баллов к индексу», а задача за доллар при 60+ баллах. Sol уже в шаге от этого: 57 баллов за $1,01.</li></ul></div>
-  <p class="imgcredit">Изображения: Изображения: Jernej Furman / Wikimedia Commons, CC BY 2.0; Steve Jurvetson / Wikimedia Commons, CC BY 2.0; Brian Smale / Microsoft, CC BY-SA 4.0</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" rel="nofollow noopener" target="_blank">OpenAI — анонс GPT-6.2 Astra и GPT-6.2 Sol</a></li><li><a href="https://decrypt.co/383488/openai-gpt-6-2-astra-challenges-anthropic-price-but-not-every-benchmark" rel="nofollow noopener" target="_blank">Decrypt — независимые тесты, цены и раскатка</a></li><li><a href="https://9to5google.com/2026-11-17/openai-releases-gpt-6-2-astra-and-sol-for-complex-projects-a-week-after-claude-5-2/" rel="nofollow noopener" target="_blank">9to5Google — релиз, цены и доступность</a></li><li><a href="https://artificialanalysis.ai/models/gpt-6-2-astra" rel="nofollow noopener" target="_blank">Artificial Analysis — GPT-6.2 Astra: индекс, цена задачи, контекст</a></li><li><a href="https://artificialanalysis.ai/models/claude-fable-5-2" rel="nofollow noopener" target="_blank">Artificial Analysis — Claude Fable 5.2</a></li><li><a href="https://artificialanalysis.ai/models/gpt-6-2-sol" rel="nofollow noopener" target="_blank">Artificial Analysis — GPT-6.2 Sol</a></li><li><a href="https://artificialanalysis.ai/models/claude-opus-5-5" rel="nofollow noopener" target="_blank">Artificial Analysis — Claude Opus 5.5</a></li><li><a href="https://artificialanalysis.ai/models/gemini-4-hydrogen" rel="nofollow noopener" target="_blank">Artificial Analysis — Gemini 4 Hydrogen</a></li><li><a href="https://artificialanalysis.ai/models/qwen4-max" rel="nofollow noopener" target="_blank">Artificial Analysis — Qwen4 Max</a></li><li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" rel="nofollow noopener" target="_blank">Anthropic — релиз Claude Fable 5.2 и Mythos 5.2, цены и fast mode</a></li><li><a href="https://microsoft.ai/news/microsoft-ignite-2026/" rel="nofollow noopener" target="_blank">Microsoft AI — семь новых моделей на Ignite 2026</a></li><li><a href="https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/" rel="nofollow noopener" target="_blank">GitHub Changelog — MAI Code 2 и Code 2 Flash в Copilot</a></li></ol></section>
-  <section class="share" data-share-root>
+<h2 id="section-vyvody">Выводы</h2>
+<ul><li>Гонка моделей переехала из бенчмарков в бухгалтерию. Одинаковый прайс больше ничего не значит, а маркетинговые проценты считаются на своих тестах.</li><li>Удешевление идёт сверху вниз: сначала новые цены на флагмане, через месяц — на рабочей модели. Так было с Qwen, так вышло с Sol.</li><li>Следующий шаг, который стоит ждать, — не «+5 баллов к индексу», а задача за доллар при 60+ баллах. Sol уже в шаге от этого: 57 баллов за $1,01.</li></ul></div><p class="imgcredit">Изображения: Изображения: Jernej Furman / Wikimedia Commons, CC BY 2.0; Steve Jurvetson / Wikimedia Commons, CC BY 2.0; Brian Smale / Microsoft, CC BY-SA 4.0</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" rel="nofollow noopener" target="_blank">OpenAI — анонс GPT-6.2 Astra и GPT-6.2 Sol</a></li><li><a href="https://decrypt.co/383488/openai-gpt-6-2-astra-challenges-anthropic-price-but-not-every-benchmark" rel="nofollow noopener" target="_blank">Decrypt — независимые тесты, цены и раскатка</a></li><li><a href="https://9to5google.com/2026-11-17/openai-releases-gpt-6-2-astra-and-sol-for-complex-projects-a-week-after-claude-5-2/" rel="nofollow noopener" target="_blank">9to5Google — релиз, цены и доступность</a></li><li><a href="https://artificialanalysis.ai/models/gpt-6-2-astra" rel="nofollow noopener" target="_blank">Artificial Analysis — GPT-6.2 Astra: индекс, цена задачи, контекст</a></li><li><a href="https://artificialanalysis.ai/models/claude-fable-5-2" rel="nofollow noopener" target="_blank">Artificial Analysis — Claude Fable 5.2</a></li><li><a href="https://artificialanalysis.ai/models/gpt-6-2-sol" rel="nofollow noopener" target="_blank">Artificial Analysis — GPT-6.2 Sol</a></li><li><a href="https://artificialanalysis.ai/models/claude-opus-5-5" rel="nofollow noopener" target="_blank">Artificial Analysis — Claude Opus 5.5</a></li><li><a href="https://artificialanalysis.ai/models/gemini-4-hydrogen" rel="nofollow noopener" target="_blank">Artificial Analysis — Gemini 4 Hydrogen</a></li><li><a href="https://artificialanalysis.ai/models/qwen4-max" rel="nofollow noopener" target="_blank">Artificial Analysis — Qwen4 Max</a></li><li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" rel="nofollow noopener" target="_blank">Anthropic — релиз Claude Fable 5.2 и Mythos 5.2, цены и fast mode</a></li><li><a href="https://microsoft.ai/news/microsoft-ignite-2026/" rel="nofollow noopener" target="_blank">Microsoft AI — семь новых моделей на Ignite 2026</a></li><li><a href="https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/" rel="nofollow noopener" target="_blank">GitHub Changelog — MAI Code 2 и Code 2 Flash в Copilot</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html&text=OpenAI%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20Astra%2C%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%20%D1%81%D0%BF%D0%BE%D1%80%D1%8F%D1%82%20%D1%86%D0%B5%D0%BD%D0%BE%D0%B9" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html&title=OpenAI%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20Astra%2C%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%20%D1%81%D0%BF%D0%BE%D1%80%D1%8F%D1%82%20%D1%86%D0%B5%D0%BD%D0%BE%D0%B9" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html&text=OpenAI%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20Astra%2C%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%20%D1%81%D0%BF%D0%BE%D1%80%D1%8F%D1%82%20%D1%86%D0%B5%D0%BD%D0%BE%D0%B9" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-18-1000-gpt-62-astra-cenovaya-voyna-pin.jpg&description=OpenAI%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20Astra%2C%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%20%D1%81%D0%BF%D0%BE%D1%80%D1%8F%D1%82%20%D1%86%D0%B5%D0%BD%D0%BE%D0%B9" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Уилл Райт возвращается с игрой из ваших воспоминаний</a></h3>
     <p class="card__sum">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Китай исчез из прогноза NVIDIA: H200 больше не возят</a></h3>
     <p class="card__sum">На звонке по итогам квартала и.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T12:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1200-anthropic-ipo-83.html">Anthropic оценили в $1,5 трлн на старте торгов</a></h3>
     <p class="card__sum">Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1200-anthropic-ipo-83.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article></div></section>
 </main>
@@ -191,9 +183,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -211,9 +202,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

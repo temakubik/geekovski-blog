@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/switch/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/switch/">Nintendo Switch</a></li><li aria-current="page">Слух о Switch 2 Lite: почему он не сходится</li></ol></nav>
 <article class="post cat-switch">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-09T21:00:00+03:00">09.11.2026, 21:00</time></div>
@@ -100,69 +100,61 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Samsung готовит 8LPU+ — техпроцесс на 12 % быстрее и на 15 % экономнее прежнего 8 нм, на котором сделан чип Switch 2. Из этого уже вывели «дешёвую Switch 2 Lite за $299 в 2027 году». Digital Foundry разобрал версию по частям и говорит: цифры процесса не превращаются в характеристики консоли, а памяти в мире всё равно не хватает.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Samsung 8LPU+ даёт +12 % производительности, −15 % потребления и −8 % площади логики — но это параметры процесса, а не будущей консоли</li><li>Чип Switch 2 — кастомный гибрид 8 и 10 нм от NVIDIA, перенос на новый узел требует перепроектирования, а не копипаста</li><li>Switch 2 продаётся на 37,4 % хуже прошлого года, цена выросла на $50 из-за памяти, и это главный аргумент против дешёвой модели</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/switch-2-lite-cover.jpg" alt="Слух о Switch 2 Lite: почему он не сходится"></figure>
-  <div class="post__body"><p>Слух о Switch 2 Lite живёт в сети давно, но в этот раз у него появилась технологическая опора: Samsung показывает новый техпроцесс 8LPU+, и он выглядит логичным кандидатом для более дешёвой портативной консоли. Цепочка рассуждений простая: чип Switch 2 сделан на 8-нанометровом узле Samsung, значит, улучшенная версия того же узла может дать более дешёвую ревизию. На этой неделе Digital Foundry разобрал версию по частям и пришёл к выводу, что звенья этой цепочки держатся не все.</p>
-<h2>Что за слух и откуда он взялся</h2>
+  <figure class="post__cover"><img src="/assets/img/switch-2-lite-cover.jpg" alt="Слух о Switch 2 Lite: почему он не сходится" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-za-sluh-i-otkuda-on-vzyalsya">Что за слух и откуда он взялся</a></li><li><a href="#section-chto-obeschaet-8lpu">Что обещает 8LPU+</a></li><li><a href="#section-pochemu-chip-nelzya-prosto-perevesti-na-novyy-uzel">Почему чип нельзя просто «перевести на новый узел»</a></li><li><a href="#section-problema-ne-tolko-v-chipe-pamyat">Проблема не только в чипе: память</a></li><li><a href="#section-chto-realno-mozhet-vyyti">Что реально может выйти</a></li><li><a href="#section-kogda-stanet-yasno">Когда станет ясно</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Samsung 8LPU+ даёт +12 % производительности, −15 % потребления и −8 % площади логики — но это параметры процесса, а не будущей консоли</li><li>Чип Switch 2 — кастомный гибрид 8 и 10 нм от NVIDIA, перенос на новый узел требует перепроектирования, а не копипаста</li><li>Switch 2 продаётся на 37,4 % хуже прошлого года, цена выросла на $50 из-за памяти, и это главный аргумент против дешёвой модели</li></ul></aside><div class="post__body"><p>Слух о Switch 2 Lite живёт в сети давно, но в этот раз у него появилась технологическая опора: Samsung показывает новый техпроцесс 8LPU+, и он выглядит логичным кандидатом для более дешёвой портативной консоли. Цепочка рассуждений простая: чип Switch 2 сделан на 8-нанометровом узле Samsung, значит, улучшенная версия того же узла может дать более дешёвую ревизию. На этой неделе Digital Foundry разобрал версию по частям и пришёл к выводу, что звенья этой цепочки держатся не все.</p>
+<h2 id="section-chto-za-sluh-i-otkuda-on-vzyalsya">Что за слух и откуда он взялся</h2>
 <p>Отправная точка — презентация Samsung на IEEE IEDM 14 декабря 2026 года. Компания представит 8LPU+, второе поколение своего 8-нанометрового семейства. Заявленные улучшения к предыдущему 8LPU: до 12 % прироста производительности <strong>или</strong> до 15 % снижения энергопотребления, на 8 % меньше площадь логики и примерно на 10 % — площадь блоков ввода-вывода, плюс меньшие утечки в ждущем режиме. Узел только на DUV-литографии, и Samsung адресует его автомобильной электронике, робототехнике и edge-AI.</p>
 <p>Сам слух запустил проект Nintendo Patents Watch в октябре: он заметил, что 8LPU+ — очевидный кандидат для будущего чипа Switch 2 Lite, потому что нынешний NVIDIA T239 выпускается на Samsung 8 нм. Дальше подключились профильные издания, а вместе с ними пошли и цифры, которых в первоисточнике не было: 7,1-дюймовый экран, цена $299, релиз в 2027 году. Это уже не утечка, а догадка, собранная вокруг названия техпроцесса.</p>
 <p>Статус инфоповода называем прямо: <strong>официально Switch 2 Lite не существует</strong>. Nintendo её не анонсировала, в материалах Samsung нет ни слова про Nintendo и NVIDIA, а все «спецификации» — пересказ форумных ожиданий. Единственный твёрдый факт — сам техпроцесс и дата его презентации.</p>
-<h2>Что обещает 8LPU+</h2>
+<h2 id="section-chto-obeschaet-8lpu">Что обещает 8LPU+</h2>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Параметр</th><th style="text-align:left">Изменение к 8LPU</th></tr></thead><tbody><tr><td style="text-align:left">Производительность</td><td style="text-align:left">до +12 %</td></tr><tr><td style="text-align:left">Энергопотребление</td><td style="text-align:left">до −15 %</td></tr><tr><td style="text-align:left">Площадь логики</td><td style="text-align:left">−8 %</td></tr><tr><td style="text-align:left">Площадь ввода-вывода</td><td style="text-align:left">около −10 %</td></tr><tr><td style="text-align:left">Публичная презентация</td><td style="text-align:left">14 декабря 2026, IEDM</td></tr></tbody></table></div>
 <p>Читать таблицу надо медленно, потому что именно на ней ломается большинство новостей про «Switch 2 Lite станет на 12 % быстрее». Во-первых, это цифры техпроцесса, а не устройства: они описывают, насколько лучше становится сама пластина при тех же правилах проектирования. Во-вторых, Samsung даёт <strong>либо</strong> производительность, <strong>либо</strong> экономию — не одновременно, и выбирать будет тот, кто заказывает чип. Для портативной консоли интересна вторая колонка: 15 % меньше энергопотребления процессора — приятно, но это не тот скачок, который переписывает время работы от батареи.</p>
-<h2>Почему чип нельзя просто «перевести на новый узел»</h2>
+<h2 id="section-pochemu-chip-nelzya-prosto-perevesti-na-novyy-uzel">Почему чип нельзя просто «перевести на новый узел»</h2>
 <p>Switch 2 работает на NVIDIA T239: восемь ядер ARM Cortex-A78C, графика Ampere на 1536 CUDA-ядрах, площадь кристалла около 207 мм². И вот первая техническая проблема: это не стоковый Samsung-чип, а кастомный гибрид с элементами 8 и 10 нм. Такой кристалл проектировался под конкретный набор правил, и перенос на 8LPU+ — это не смена строки в заказе, а перепроектирование: маски, трассировка, верификация, новые тесты. Даже если правила проектирования совместимы частично, экономия на пластине может съесться стоимостью работы инженеров.</p>
 <p>Второй аргумент Digital Foundry — исторический. Успешные ревизии консолей Nintendo всегда опирались на крупный технологический шаг, а не на итерацию внутри одного класса. Когда оригинальный Switch перевели с 20 нм на 16 нм, энергопотребление системы в докованном режиме упало примерно вдвое — и именно это позволило выпустить Switch Lite с приемлемой автономностью. Переход внутри 8-нанометрового семейства такого выигрыша не даёт. Чтобы повторить историю, нужен шаг на 5 нм, а это уже другие деньги и другой чип.</p>
 <figure class="post__fig"><img src="/assets/img/switch-2-lite-sluh-chip.jpg" alt="Техпроцесс решает не всё: кристалл Tegra X1, с которого начинался оригинальный Switch" loading="lazy"></figure>
-<h2>Проблема не только в чипе: память</h2>
+<h2 id="section-problema-ne-tolko-v-chipe-pamyat">Проблема не только в чипе: память</h2>
 <p>Главное возражение против дешёвой Switch 2 Lite — не техпроцесс, а экономика. Nintendo 5 ноября отчиталась за первое полугодие финансового года: Switch 2 разошлась тиражом 26,35 млн с запуска, но за полугодие продано 6,49 млн — на 37,4 % меньше, чем годом ранее, а в одном только квартале — 2,67 млн, падение на 41 %. Операционная прибыль упала на 16 %, до 73,9 млрд иен, выручка — на 15 %.</p>
 <p>И это происходит на фоне подорожания памяти: в сентябре Nintendo подняла цену Switch 2 на $50, объяснив это именно ценами на память, а Samsung, по данным TechPowerUp, летом поднял цены на 8-нанометровые пластины почти на 10 % для новых заказов. Президент Nintendo Сюнтаро Фурукава при этом заявил Reuters, что компании хватит памяти на прогноз в 16,5 млн консолей до марта 2027 года и дальнейшего повышения цены она не планирует.</p>
 <p>Из этой картины следует неприятная для слуха вещь: сделать «дешёвую» консоль в момент, когда дорожает каждый компонент, — значит либо урезать железо сильнее, чем это делала Switch Lite, либо потерять маржу. Switch Lite в 2019-м стоила $199,99 при основной модели за $299: экономия шла за счёт 5,5-дюймового экрана 720p, несъёмных контроллеров и отсутствия выхода на телевизор. У Switch 2 таких запасов меньше: экран уже 1080p, а память — самая дорогая часть платы.</p>
 <figure class="post__fig"><img src="/assets/img/switch-2-lite-sluh.jpg" alt="Switch 2 в доке: именно эту модель слухи предлагают «удешевить»" loading="lazy"></figure>
-<h2>Что реально может выйти</h2>
+<h2 id="section-chto-realno-mozhet-vyyti">Что реально может выйти</h2>
 <p>Если отбросить спекуляции, остаются три сценария, и ни один из них не похож на «Switch 2 Lite в 2027-м за $299».</p>
 <p><strong>Первый — тихая ревизия.</strong> Та же консоль с переработанной платой и, возможно, более экономичным чипом внутри. Nintendo так уже делала: в 2019-м обновлённый Switch выглядел как обычный, а батарея жила заметно дольше. Для такой ревизии 8LPU+ действительно подходит — но это не новая модель и не новая цена.</p>
 <p><strong>Второй — OLED-версия.</strong> Слухи о ней ходят давно и выглядят логичнее: премиальная модель проще с точки зрения маржи, чем дешёвая, особенно когда дорожают компоненты. Правда, цены на панели тоже растут.</p>
 <p><strong>Третий — ничего.</strong> По оценке Digital Foundry, это и есть самый вероятный сценарий на ближайшие год-два: слухи о Lite циклически всплывают с 2025 года, но ни один надёжный источник не подтверждал, что Nintendo готовит урезанную консоль. Один новый техпроцесс сам по себе не запускает производство — он лишь снимает один из барьеров.</p>
-<h2>Когда станет ясно</h2>
+<h2 id="section-kogda-stanet-yasno">Когда станет ясно</h2>
 <p>Формальная точка — 14 декабря, когда Samsung покажет 8LPU+ на IEDM. Там будут технические детали, но не будет ни слова про Nintendo: даже если узел окажется идеальным для портативной консоли, решение о новой модели принимает не Samsung. Следующая возможность что-то узнать — финансовые отчёты Nintendo и слухи о производственных заказах, которые обычно просачиваются за несколько месяцев до анонса.</p>
-<p><strong>Оценка (не факт):</strong> слух о Switch 2 Lite сейчас — это упражнение в чтении техпроцессов, а не новость о железе. Технически 8LPU+ действительно похож на то, что могло бы лечь в основу более дешёвой ревизии, но каждый следующий шаг — перепроектирование чипа, экономия на памяти, новая цена в мире дорожающих компонентов — делает историю менее вероятной, а не более. Если Switch 2 Lite и появится, ждать её стоит не в 2027-м, а ближе к моменту, когда цены на DRAM пойдут вниз. Пока же правильный вывод для покупателя простой: нынешняя Switch 2 дешевле не станет, а ждать «версию за $299» в этом сезоне бессмысленно.</p></div>
-  <p class="imgcredit">Изображения: Изображения: Crisco 1492 / Wikimedia Commons, CC BY-SA 4.0; DYVER / Wikimedia Commons, CC BY-SA 4.0; Fritzchens Fritz / Wikimedia Commons, CC0.</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://digitalfoundry.net/news/2026/11/is-switch-2-lite-possible-thanks-to-new-samsung-chip-technology" rel="nofollow noopener" target="_blank">Digital Foundry — возможно ли Switch 2 Lite на новом чипе Samsung</a></li><li><a href="https://www.nintendolife.com/news/2026/11/rumour-samsungs-new-chip-process-kicks-off-nintendo-switch-2-lite-speculation" rel="nofollow noopener" target="_blank">Nintendo Life — слух о Switch 2 Lite и разбор Digital Foundry</a></li><li><a href="https://www.techpowerup.com/354201/samsung-8lpu-gets-floated-as-the-node-for-a-future-switch-2-lite" rel="nofollow noopener" target="_blank">TechPowerUp — 8LPU+ как узел для будущей Switch 2 Lite</a></li><li><a href="https://videocardz.com/newz/nintendo-switch-2-lite-rumored-to-feature-samsungs-new-8lpu-process" rel="nofollow noopener" target="_blank">VideoCardz — параметры чипа T239 и узла 8LPU+</a></li><li><a href="https://www.notebookcheck.net/Switch-2-Lite-rumored-with-cheaper-Samsung-chip-process-benefiting-Nintendo-console.1431129.0.html" rel="nofollow noopener" target="_blank">NotebookCheck — слух о Switch 2 Lite на 8LPU+</a></li><li><a href="https://www.nintendo.co.jp/ir/pdf/2026/261105_3e.pdf" rel="nofollow noopener" target="_blank">Nintendo — финансовый отчёт за первое полугодие FY2027</a></li><li><a href="https://www.ign.com/articles/nintendo-rules-out-further-switch-2-price-rises-as-console-sales-and-profit-fall" rel="nofollow noopener" target="_blank">IGN — Nintendo исключает дальнейшее повышение цены Switch 2</a></li><li><a href="https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=368" rel="nofollow noopener" target="_blank">IEDM 2026 — сессия Samsung по 8LPU+</a></li></ol></section>
-  <section class="share" data-share-root>
+<p><strong>Оценка (не факт):</strong> слух о Switch 2 Lite сейчас — это упражнение в чтении техпроцессов, а не новость о железе. Технически 8LPU+ действительно похож на то, что могло бы лечь в основу более дешёвой ревизии, но каждый следующий шаг — перепроектирование чипа, экономия на памяти, новая цена в мире дорожающих компонентов — делает историю менее вероятной, а не более. Если Switch 2 Lite и появится, ждать её стоит не в 2027-м, а ближе к моменту, когда цены на DRAM пойдут вниз. Пока же правильный вывод для покупателя простой: нынешняя Switch 2 дешевле не станет, а ждать «версию за $299» в этом сезоне бессмысленно.</p></div><p class="imgcredit">Изображения: Изображения: Crisco 1492 / Wikimedia Commons, CC BY-SA 4.0; DYVER / Wikimedia Commons, CC BY-SA 4.0; Fritzchens Fritz / Wikimedia Commons, CC0.</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://digitalfoundry.net/news/2026/11/is-switch-2-lite-possible-thanks-to-new-samsung-chip-technology" rel="nofollow noopener" target="_blank">Digital Foundry — возможно ли Switch 2 Lite на новом чипе Samsung</a></li><li><a href="https://www.nintendolife.com/news/2026/11/rumour-samsungs-new-chip-process-kicks-off-nintendo-switch-2-lite-speculation" rel="nofollow noopener" target="_blank">Nintendo Life — слух о Switch 2 Lite и разбор Digital Foundry</a></li><li><a href="https://www.techpowerup.com/354201/samsung-8lpu-gets-floated-as-the-node-for-a-future-switch-2-lite" rel="nofollow noopener" target="_blank">TechPowerUp — 8LPU+ как узел для будущей Switch 2 Lite</a></li><li><a href="https://videocardz.com/newz/nintendo-switch-2-lite-rumored-to-feature-samsungs-new-8lpu-process" rel="nofollow noopener" target="_blank">VideoCardz — параметры чипа T239 и узла 8LPU+</a></li><li><a href="https://www.notebookcheck.net/Switch-2-Lite-rumored-with-cheaper-Samsung-chip-process-benefiting-Nintendo-console.1431129.0.html" rel="nofollow noopener" target="_blank">NotebookCheck — слух о Switch 2 Lite на 8LPU+</a></li><li><a href="https://www.nintendo.co.jp/ir/pdf/2026/261105_3e.pdf" rel="nofollow noopener" target="_blank">Nintendo — финансовый отчёт за первое полугодие FY2027</a></li><li><a href="https://www.ign.com/articles/nintendo-rules-out-further-switch-2-price-rises-as-console-sales-and-profit-fall" rel="nofollow noopener" target="_blank">IGN — Nintendo исключает дальнейшее повышение цены Switch 2</a></li><li><a href="https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=368" rel="nofollow noopener" target="_blank">IEDM 2026 — сессия Samsung по 8LPU+</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-09-2100-switch-2-lite-sluh.html&text=%D0%A1%D0%BB%D1%83%D1%85%20%D0%BE%20Switch%202%20Lite%3A%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%BD%20%D0%BD%D0%B5%20%D1%81%D1%85%D0%BE%D0%B4%D0%B8%D1%82%D1%81%D1%8F" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-09-2100-switch-2-lite-sluh.html&title=%D0%A1%D0%BB%D1%83%D1%85%20%D0%BE%20Switch%202%20Lite%3A%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%BD%20%D0%BD%D0%B5%20%D1%81%D1%85%D0%BE%D0%B4%D0%B8%D1%82%D1%81%D1%8F" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-09-2100-switch-2-lite-sluh.html&text=%D0%A1%D0%BB%D1%83%D1%85%20%D0%BE%20Switch%202%20Lite%3A%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%BD%20%D0%BD%D0%B5%20%D1%81%D1%85%D0%BE%D0%B4%D0%B8%D1%82%D1%81%D1%8F" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-09-2100-switch-2-lite-sluh.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-09-2100-switch-2-lite-sluh-pin.jpg&description=%D0%A1%D0%BB%D1%83%D1%85%20%D0%BE%20Switch%202%20Lite%3A%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%BD%20%D0%BD%D0%B5%20%D1%81%D1%85%D0%BE%D0%B4%D0%B8%D1%82%D1%81%D1%8F" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-09-2100-switch-2-lite-sluh.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-switch">
-  <div class="card__cover"><img src="/assets/img/zelda-40-switch-2-dok.jpg" alt="Юбилейное издание Switch 2 вернётся в январе 2027" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-switch">
+  <div class="card__cover"><img src="/assets/img/zelda-40-switch-2-dok.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-20T18:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1800-zelda-switch-2-yanvar.html">Юбилейное издание Switch 2 вернётся в январе 2027</a></h3>
     <p class="card__sum">Nintendo подтвердила через страницу своего магазина, что тираж Zelda 40th Anniversary Edition приедет «в январе 2027» — то…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1800-zelda-switch-2-yanvar.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article>
 <article class="card card-- cat-switch">
-  <div class="card__cover"><img src="/assets/img/tga-2026-nominacii-cover.jpg" alt="Nintendo обошла всех в номинациях The Game Awards" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/tga-2026-nominacii-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-18T08:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-0800-tga-2026-nominacii.html">Nintendo обошла всех в номинациях The Game Awards</a></h3>
     <p class="card__sum">Шоу The Game Awards 17 ноября объявило номинантов 2026 года: Nintendo получила 12 номинаций на шесть игр и стала самым…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-0800-tga-2026-nominacii.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-switch">
-  <div class="card__cover"><img src="/assets/img/eshop-podarit-igru.jpg" alt="Nintendo разрешила дарить игры в eShop — внутри семьи" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/eshop-podarit-igru.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-16T08:00:00+03:00">16.11</time></div>
     <h3 class="card__title"><a href="/2026-11-16-0800-eshop-podarit-igru-seme.html">Nintendo разрешила дарить игры в eShop — внутри семьи</a></h3>
     <p class="card__sum">Nintendo включила в eShop на Switch и Switch 2 цифровые подарки: игру, DLC или набор обновления до Switch 2 Edition можно…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-16-0800-eshop-podarit-igru-seme.html">Читать →</a><span class="srcc">источников: 11</span></div>
   </div>
 </article></div></section>
 </main>
@@ -177,9 +169,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -197,9 +188,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

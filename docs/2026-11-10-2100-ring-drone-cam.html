@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/gadgets/">Гаджеты</a></li><li aria-current="page">Ring выпустила летающую камеру для дома — за $249,99</li></ol></nav>
 <article class="post cat-gadgets">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-10T21:00:00+03:00">10.11.2026, 21:00</time></div>
@@ -100,77 +100,69 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Amazon открыла направление Ring Robotics и показала два устройства: дрон-камеру Ring Drone Cam за $249,99, которая летает по дому по расписанию и на сигнал датчиков, и робота Ring Rover Cam за $999,99 для патрулирования складов и магазинов. Разбираем характеристики, историю шестилетних обещаний и то, где здесь подвох.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Drone Cam — $249,99, отгрузка в США с 27 января 2027 года; полёт 8–10 минут, восемь минут зарядки дают минуту полёта</li><li>Rover Cam — $999,99, предзаказ открыт, отгрузка 16 декабря 2026 года; камера до 4K, выдвижная «перископная» мачта, сирена</li><li>Дрон ещё не получил разрешение FCC, продаётся только в США; о поставках в другие страны не сообщалось</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/ring-drone-cam-1.jpg" alt="Ring выпустила летающую камеру для дома — за $249,99"></figure>
-  <div class="post__body"><p>Ring — та самая компания с дверными звонками, которую Amazon купила в 2018-м, — объявила о создании направления <strong>Ring Robotics</strong> и показала сразу два устройства: летающую камеру Ring Drone Cam для дома и колёсного робота Ring Rover Cam для бизнеса. Официальный анонс вышел 10 ноября, и это не концепт с выставки: у дрона есть цена и дата отгрузки, у робота — открытый предзаказ.</p>
+  <figure class="post__cover"><img src="/assets/img/ring-drone-cam-1.jpg" alt="Ring выпустила летающую камеру для дома — за $249,99" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-dva-ustroystva-odna-navigaciya">Два устройства, одна навигация</a></li><li><a href="#section-dron-vosem-minut-na-patrul">Дрон: восемь минут на патруль</a></li><li><a href="#section-rover-tot-samyy-astro-no-deshevle">Rover: тот самый Astro, но дешевле</a></li><li><a href="#section-shest-let-obeschaniy">Шесть лет обещаний</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-komu-eto">Кому это</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Drone Cam — $249,99, отгрузка в США с 27 января 2027 года; полёт 8–10 минут, восемь минут зарядки дают минуту полёта</li><li>Rover Cam — $999,99, предзаказ открыт, отгрузка 16 декабря 2026 года; камера до 4K, выдвижная «перископная» мачта, сирена</li><li>Дрон ещё не получил разрешение FCC, продаётся только в США; о поставках в другие страны не сообщалось</li></ul></aside><div class="post__body"><p>Ring — та самая компания с дверными звонками, которую Amazon купила в 2018-м, — объявила о создании направления <strong>Ring Robotics</strong> и показала сразу два устройства: летающую камеру Ring Drone Cam для дома и колёсного робота Ring Rover Cam для бизнеса. Официальный анонс вышел 10 ноября, и это не концепт с выставки: у дрона есть цена и дата отгрузки, у робота — открытый предзаказ.</p>
 <p>Дрон стоит <strong>$249,99</strong> и поедет к покупателям в США <strong>27 января 2027 года</strong>. Робот — <strong>$999,99</strong>, предзаказ уже принимают, отгрузка <strong>16 декабря 2026-го</strong>. Оба устройства работают через приложение Ring и через новую систему навигации AI Pilot, о которой ниже.</p>
-<h2>Два устройства, одна навигация</h2>
+<h2 id="section-dva-ustroystva-odna-navigaciya">Два устройства, одна навигация</h2>
 <p>AI Pilot — это связка камер, бортовых датчиков и облачной обработки. Ring описывает её так: система сама строит план помещения, предлагает точки для патруля и обходит мебель и стеллажи. Дрон для построения карты достаточно пронести по квартире на руках, робот размечает пространство сам, пока катается.</p>
 <p>Дальше начинается эксплуатация: вы ставите маршруты, расписание и получаете видео в приложении. Именно эта часть решает, будет ли устройство полезным или окажется дорогой игрушкой, поэтому к ней стоит присмотреться внимательно.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left"></th><th style="text-align:left">Ring Drone Cam</th><th style="text-align:left">Ring Rover Cam</th></tr></thead><tbody><tr><td style="text-align:left">Цена</td><td style="text-align:left">$249,99</td><td style="text-align:left">$999,99</td></tr><tr><td style="text-align:left">Отгрузка в США</td><td style="text-align:left">27 января 2027</td><td style="text-align:left">16 декабря 2026</td></tr><tr><td style="text-align:left">Видео</td><td style="text-align:left">2K, 1920×1920, 148 °</td><td style="text-align:left">до 4K, 152 ° по диагонали</td></tr><tr><td style="text-align:left">Габариты</td><td style="text-align:left">172×137×33 мм, док 270×234×78 мм</td><td style="text-align:left">424×250×440 мм</td></tr><tr><td style="text-align:left">Вес</td><td style="text-align:left">165 г</td><td style="text-align:left">9,35 кг</td></tr><tr><td style="text-align:left">Для кого</td><td style="text-align:left">дом</td><td style="text-align:left">бизнес</td></tr></tbody></table></div>
 <figure class="post__fig"><img src="/assets/img/ring-drone-rover-1.jpg" alt="Ring Rover Cam в цеху и Ring Drone Cam в гостиной" loading="lazy"></figure>
-<h2>Дрон: восемь минут на патруль</h2>
+<h2 id="section-dron-vosem-minut-na-patrul">Дрон: восемь минут на патруль</h2>
 <p>Drone Cam — маленький квадрокоптер весом 165 граммов, по габаритам примерно с книгу. Сверху спереди камера 2K с полем зрения 148 °, снизу — дополнительный модуль на 1080p, плюс два светодиода, которые включаются в темноте. Ring прямо называет их средством устрашения: летающие по тёмному дому огни должны напоминать охранника с фонарём.</p>
 <p>Летает дрон по заранее заданным маршрутам, на расписании или по команде из приложения. В характеристиках на сайте Ring указано, что задать можно <strong>два маршрута</strong> и частоту полётов. Второй сценарий — реакция на тревогу: если сработал датчик движения, протечки или звонок в дверь, дрон сам летит к заранее отмеченной точке и снимает, что там происходит. Управлять им можно и через Alexa Home Map — трёхмерную карту дома, которую Amazon показывала в октябре: тыкаешь в комнату на карте, дрон прокладывает курс сам.</p>
 <p>Самое интересное — арифметика полёта. По данным Engadget, батареи хватает на <strong>8–10 минут</strong> в зависимости от высоты маршрута, а CNBC называет потолком восемь минут. Восемь минут зарядки в доке дают <strong>одну минуту</strong> полёта. То есть патрулирование — это короткие вылазки, а не непрерывное дежурство: большую часть времени устройство лежит на доке на полу.</p>
 <p>Зато с приватностью в доке всё честно: пока дрон стоит, он не снимает — это прямо указано на странице товара. Условия эксплуатации тоже указаны без прикрас: только внутри дома, от 5 до 35 °C. Для неотапливаемой дачи зимой не подойдёт.</p>
-<h2>Rover: тот самый Astro, но дешевле</h2>
+<h2 id="section-rover-tot-samyy-astro-no-deshevle">Rover: тот самый Astro, но дешевле</h2>
 <p>Rover Cam — робот на колёсах ростом около 44 см и весом 9,35 кг, с выдвижной «перископной» мачтой: она поднимается, чтобы заглянуть за стеллаж или стойку, и запоминает высоту для каждой точки маршрута. Камера снимает до 4K с углом 152 ° по диагонали, на корпусе сирена и световая башня, есть двусторонняя связь — можно поговорить с тем, кого робот нашёл в цеху.</p>
 <p>Заявленное покрытие — до 5000 кв. футов (около 465 кв. м) без дополнительных камер. Батарея заряжается примерно за 45 минут, патруль длится около получаса, потом робот сам возвращается на док. В режиме приватности мачта складывается, а световые индикаторы показывают, когда идёт запись.</p>
 <p>По сути это перезапуск Astro for Business — робота Amazon за $2350, который представили в ноябре 2023-го, а меньше чем через год закрыли и отключили уже проданные экземпляры. Ring этого не скрывает: в пресс-релизе сказано, что Rover вырос из отзывов владельцев Astro, которым нравилась именно патрулирующая функция. Формулировка компании — «не домашний робот, который заодно охраняет, а робот, сделанный именно для охраны».</p>
 <figure class="post__fig"><img src="/assets/img/ring-rover-cam-1.jpg" alt="Ring Rover Cam: выдвижная камера, сирена и световая башня" loading="lazy"></figure>
-<h2>Шесть лет обещаний</h2>
+<h2 id="section-shest-let-obeschaniy">Шесть лет обещаний</h2>
 <p>Нынешний анонс выглядит как дебют, но история тут длинная. Первый Ring Always Home Cam показали в сентябре 2020 года — по той же цене $249,99. Тогда это подавалось как «камера, которая летает по дому вместо шести стационарных», и вокруг неё сразу возник спор о приватности: дрон с камерой внутри жилья.</p>
 <p>Дальше были годы тишины и переносов. Основатель Ring Джейми Симофф говорит, что концепт дрона у компании с 2016 года, то есть ещё до покупки Amazon. По его словам, первые партии устройств даже упаковали в коробки, но так и не отправили покупателям, потому что работали они недостаточно хорошо. Вторая попытка провалилась в 2025-м: не хватало датчиков и вычислительной мощности, а это тянуло за собой вес и цену. Симофф отдельно объясняет, что собрать всё нужное в одном устройстве «по-честному» стоило бы больше $5000 — и тогда это было бы не для обычного покупателя. Помогло облако: часть обработки уехала на серверы, и железо стало проще.</p>
 <p>Так что шесть лет назад это выглядело как забавный концепт из разряда «Чёрного зеркала». Теперь он продаётся. Оценка: сам по себе этот сдвиг интереснее, чем любые цифры в характеристиках, — именно так беспилотные штуки и переходят из мемов в товар на полке.</p>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p>Начнём с формальностей: <strong>дрон ещё не получил разрешение FCC</strong>. Amazon в мелком шрифте признаёт, что устройство не может продаваться, пока регулятор не даст добро, поэтому предзаказа на Drone Cam нет — только подписка на письма. Дату 27 января 2027 года называют и Amazon, и Engadget, но она держится на честном слове до сертификации.</p>
 <p>Со странами тоже узко: обе карточки прямо говорят, что <strong>в Канаду не отгружают</strong>, о европейских и российских поставках не сообщалось вообще. Для читателя из России это значит «в лучшем случае серая параллель», и цену в рублях никто не называл.</p>
 <p>Дальше — подписка. Ring пишет, что для просмотра сохранённых записей нужен совместимый тариф Ring Protect: Solo за $4,99 в месяц, Multi за $9,99, Pro за $19,99. Какие именно функции дрона и робота завязаны на тариф, компания не расшифровала — это придётся выяснять уже владельцам. Локального хранения, судя по описанию, нет: видео уходит в облако, и шифрование по умолчанию — TAK-E, «выбрось ключ», то есть даже Ring не может расшифровать записи. Хорошо для безопасности, плохо для тех, кто хочет хранить видео у себя.</p>
 <p>Третий подвох — бытовой. Восемь минут полёта при зарядке восемь минут за минуту полёта означают, что дрон будет работать рывками. Плюс шум пропеллеров, свет в темноте и животные, которые на летающую камеру отреагируют раньше, чем вы. Для дома с низкими потолками и люстрами это отдельный вид спорта.</p>
 <p>Четвёртый — репутационный. Ring уже проходила через скандалы вокруг доступа к записям, а теперь предлагает камеру, которая сама летает по спальням. Объяснение «в доке не снимаю» снимает часть вопросов, но не все: гости не подписывались на съёмку, а договориться с ними об этом придётся вам. Это оценка, а не факт из пресс-релиза, но именно она определит, как устройство примут в семьях.</p>
 <p>И последнее: прецедент Astro. Amazon умеет выпустить робота, а через год отключить серверы — с бизнес-версией так и вышло, покупателям вернули деньги, устройства превратились в кирпичи. Для Rover Cam, который стоит тысячу долларов и работает только через облако, это не абстрактный риск.</p>
-<h2>Кому это</h2>
+<h2 id="section-komu-eto">Кому это</h2>
 <p>Дрон — для тех, у кого большой дом, много комнат и уже стоит экосистема Ring: датчики, звонок, камеры. Тогда $249,99 выглядят разумной доплатой за возможность заглянуть туда, где камеры нет. Как единственная камера за эти деньги он бессмысленен: восемь минут и док на полу не заменят два стационарных устройства.</p>
 <p>Rover — история для бизнеса: склад, магазин, цех, где нужно обходить помещения ночью. Тысяча долларов против стоимости проводки камер по всем углам выглядит уже не так страшно, но и тут всё упирается в подписку и в то, насколько хорошо AI Pilot отработает на реальных стеллажах, а не в ролике.</p>
-<h2>Что дальше</h2>
-<p>Ждём разрешения FCC — без него дрон не продаётся. Дальше первая волна отзывов в конце января, и вот по ним будет видно главное: сколько реально длится полёт в обычной квартире, как дрон ведёт себя с людьми и животными и не окажется ли «автономный патруль» красивым словом для трёхминутного облёта гостиной. Официальной даты поставок за пределами США по-прежнему нет.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot" rel="nofollow noopener" target="_blank">Amazon — Ring announces Ring Robotics</a></li><li><a href="https://ring.com/products/drone-cam" rel="nofollow noopener" target="_blank">Ring — Drone Cam, характеристики и цена</a></li><li><a href="https://ring.com/products/rover-cam" rel="nofollow noopener" target="_blank">Ring — Rover Cam</a></li><li><a href="https://www.engadget.com/2311630/amazon-finally-launches-the-250-ring-drone-cam-and-also-the-ring-rover-cam" rel="nofollow noopener" target="_blank">Engadget — Amazon finally launches the $250 Ring Drone Cam</a></li><li><a href="https://www.cnbc.com/2026/11/10/amazons-ring-unveils-flying-drone-robot-to-patrol-homes-businesses.html" rel="nofollow noopener" target="_blank">CNBC — Ring unveils flying drone and robot</a></li><li><a href="https://www.wired.com/story/ring-robotics-drone-cam-rover-cam" rel="nofollow noopener" target="_blank">Wired — Ring&#x27;s Indoor Drone Camera Is Back</a></li><li><a href="https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot" rel="nofollow noopener" target="_blank">TechCrunch — Ring launches a home security drone</a></li><li><a href="https://www.notebookcheck.net/Amazon-unveils-flying-security-camera-and-autonomous-robot.1447150.0.html" rel="nofollow noopener" target="_blank">Notebookcheck — Amazon unveils flying security camera</a></li><li><a href="https://www.theverge.com/2020/9/24/21453709/ring-always-home-cam-indoor-drone-security-camera-price-specs-features-amazon" rel="nofollow noopener" target="_blank">The Verge, 2020 — Ring Always Home Cam</a></li><li><a href="https://ring.com/plans" rel="nofollow noopener" target="_blank">Ring — тарифы Ring Protect</a></li></ol></section>
-  <section class="share" data-share-root>
+<h2 id="section-chto-dalshe">Что дальше</h2>
+<p>Ждём разрешения FCC — без него дрон не продаётся. Дальше первая волна отзывов в конце января, и вот по ним будет видно главное: сколько реально длится полёт в обычной квартире, как дрон ведёт себя с людьми и животными и не окажется ли «автономный патруль» красивым словом для трёхминутного облёта гостиной. Официальной даты поставок за пределами США по-прежнему нет.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot" rel="nofollow noopener" target="_blank">Amazon — Ring announces Ring Robotics</a></li><li><a href="https://ring.com/products/drone-cam" rel="nofollow noopener" target="_blank">Ring — Drone Cam, характеристики и цена</a></li><li><a href="https://ring.com/products/rover-cam" rel="nofollow noopener" target="_blank">Ring — Rover Cam</a></li><li><a href="https://www.engadget.com/2311630/amazon-finally-launches-the-250-ring-drone-cam-and-also-the-ring-rover-cam" rel="nofollow noopener" target="_blank">Engadget — Amazon finally launches the $250 Ring Drone Cam</a></li><li><a href="https://www.cnbc.com/2026/11/10/amazons-ring-unveils-flying-drone-robot-to-patrol-homes-businesses.html" rel="nofollow noopener" target="_blank">CNBC — Ring unveils flying drone and robot</a></li><li><a href="https://www.wired.com/story/ring-robotics-drone-cam-rover-cam" rel="nofollow noopener" target="_blank">Wired — Ring&#x27;s Indoor Drone Camera Is Back</a></li><li><a href="https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot" rel="nofollow noopener" target="_blank">TechCrunch — Ring launches a home security drone</a></li><li><a href="https://www.notebookcheck.net/Amazon-unveils-flying-security-camera-and-autonomous-robot.1447150.0.html" rel="nofollow noopener" target="_blank">Notebookcheck — Amazon unveils flying security camera</a></li><li><a href="https://www.theverge.com/2020/9/24/21453709/ring-always-home-cam-indoor-drone-security-camera-price-specs-features-amazon" rel="nofollow noopener" target="_blank">The Verge, 2020 — Ring Always Home Cam</a></li><li><a href="https://ring.com/plans" rel="nofollow noopener" target="_blank">Ring — тарифы Ring Protect</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-2100-ring-drone-cam.html&text=Ring%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B0%D1%8E%D1%89%D1%83%D1%8E%20%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%83%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BC%D0%B0%20%E2%80%94%20%D0%B7%D0%B0%20%24249%2C99" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-2100-ring-drone-cam.html&title=Ring%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B0%D1%8E%D1%89%D1%83%D1%8E%20%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%83%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BC%D0%B0%20%E2%80%94%20%D0%B7%D0%B0%20%24249%2C99" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-2100-ring-drone-cam.html&text=Ring%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B0%D1%8E%D1%89%D1%83%D1%8E%20%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%83%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BC%D0%B0%20%E2%80%94%20%D0%B7%D0%B0%20%24249%2C99" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-10-2100-ring-drone-cam.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-10-2100-ring-drone-cam-pin.jpg&description=Ring%20%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B0%D1%8E%D1%89%D1%83%D1%8E%20%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%83%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BC%D0%B0%20%E2%80%94%20%D0%B7%D0%B0%20%24249%2C99" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-10-2100-ring-drone-cam.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-20T10:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1000-huawei-osta-o1-pro.html">Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro</a></h3>
     <p class="card__sum">Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1000-huawei-osta-o1-pro.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="Flipper One: карманный Linux-компьютер собрал $12 млн" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-19T08:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-0800-flipper-one-kickstarter.html">Flipper One: карманный Linux-компьютер собрал $12 млн</a></h3>
     <p class="card__sum">Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-0800-flipper-one-kickstarter.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-18T14:20:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-yandex-pin-diktofon.html">«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября</a></h3>
     <p class="card__sum">Яндекс готовит носимый диктофон «Пин» — пластина размером с карту, которая записывает разговоры, отправляет их через телефон…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-yandex-pin-diktofon.html">Читать →</a><span class="srcc">источников: 4</span></div>
   </div>
 </article></div></section>
 </main>
@@ -185,9 +177,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -205,9 +196,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

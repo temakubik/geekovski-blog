@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/xbox/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/xbox/">Xbox</a></li><li aria-current="page">Project Helix: консоль, которая играет PC-игры</li></ol></nav>
 <article class="post cat-xbox">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-xbox" href="/xbox/">Xbox</a><time datetime="2026-11-16T15:00:00+03:00">16.11.2026, 15:00</time></div>
@@ -100,73 +100,65 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">В юбилейном журнале Xbox вице-президент по next-gen Джейсон Рональд объяснил, чем Helix отличается от ПК, и назвал нейрорендинг ответом на кризис комплектующих. Даты и цены по-прежнему нет.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Helix — консоль с доступом к PC-играм, а не ПК с консольными играми</li><li>Четыре поколения библиотеки и прогресс переносятся целиком</li><li>Нейрорендинг должен дать картинку без роста вычислений и памяти</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/xbox-helix-25-let.jpg" alt="Project Helix: консоль, которая играет PC-игры"></figure>
-  <div class="post__body"><p>15 ноября 2001 года Xbox поступила в продажу в Северной Америке: Билл Гейтс лично продал первую консоль в полночь, а в первую неделю на прилавках лежало девятнадцать игр. Ровно 25 лет спустя, 15 ноября 2026-го, Microsoft выложила бесплатный цифровой журнал «XBOX — The 25th Anniversary Magazine». Самое важное для будущего лежит там не на обложке, а в интервью с Джейсоном Рональдом, вице-президентом Xbox по next-gen. Материал называется «The soul of Project Helix».</p>
+  <figure class="post__cover"><img src="/assets/img/xbox-helix-25-let.jpg" alt="Project Helix: консоль, которая играет PC-игры" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-ne-pk-kotoryy-umeet-v-konsolnye-igry">«Не ПК, который умеет в консольные игры»</a></li><li><a href="#section-biblioteka-chetyreh-pokoleniy-vmeste-s-progressom">Библиотека четырёх поколений — вместе с прогрессом</a></li><li><a href="#section-neyrorending-eto-ne-pro-krasotu-a-pro-cenu">Нейрорендинг — это не про красоту, а про цену</a></li><li><a href="#section-chto-podtverzhdeno-a-chto-net">Что подтверждено, а что нет</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Helix — консоль с доступом к PC-играм, а не ПК с консольными играми</li><li>Четыре поколения библиотеки и прогресс переносятся целиком</li><li>Нейрорендинг должен дать картинку без роста вычислений и памяти</li></ul></aside><div class="post__body"><p>15 ноября 2001 года Xbox поступила в продажу в Северной Америке: Билл Гейтс лично продал первую консоль в полночь, а в первую неделю на прилавках лежало девятнадцать игр. Ровно 25 лет спустя, 15 ноября 2026-го, Microsoft выложила бесплатный цифровой журнал «XBOX — The 25th Anniversary Magazine». Самое важное для будущего лежит там не на обложке, а в интервью с Джейсоном Рональдом, вице-президентом Xbox по next-gen. Материал называется «The soul of Project Helix».</p>
 <p>Ни трейлера, ни даты релиза, ни слайдов с терафлопсами — только формулировки. Но именно в них впервые сказано прямым текстом то, чего не хватало после GDC 2026, где Microsoft объявила: следующая консоль будет запускать и игры для ПК.</p>
 <p>Дальше цитаты — из этого интервью, на английском, как их приводят VGC и Wccftech. Русские формулировки рядом — пересказ, а не слова Рональда.</p>
-<h2>«Не ПК, который умеет в консольные игры»</h2>
+<h2 id="section-ne-pk-kotoryy-umeet-v-konsolnye-igry">«Не ПК, который умеет в консольные игры»</h2>
 <p>Дизайн-цель Рональд сформулировал так, что перечитать двояко не получится: «Helix is designed to be a console that is also capable of playing games from your PC. It is not a PC that can also play console games». То есть консоль, которая умеет в PC-игры, а не ПК, который умеет в консольные.</p>
 <p>Логика, которую он проговаривает: консольность — это не отсутствие возможностей, а отсутствие бытовой рутины. Включил, и играет, без обновлений операционной системы, без драйверов, без меню настроек перед каждым запуском. При этом «hardcore gamer or a power user» обещают доступ к тонкой настройке — «you can absolutely go do it».</p>
 <p>По сути это компромисс, на котором Microsoft пытается усидеть: снаружи приставка, внутри — доступ к PC-библиотеке, и выбор глубины погружения оставлен игроку. Насколько это технически возможно без «ПК под телевизором» — пока вопрос: Рональд говорит про опыт, а не про архитектуру.</p>
-<h2>Библиотека четырёх поколений — вместе с прогрессом</h2>
+<h2 id="section-biblioteka-chetyreh-pokoleniy-vmeste-s-progressom">Библиотека четырёх поколений — вместе с прогрессом</h2>
 <p>Ещё одна цитата, которую стоит разобрать по частям: «My entire library is accessible to me. I'm able to bring four generations of my XBOX library and progression with me and have it available instantly».</p>
 <p>Четыре поколения — это оригинальная Xbox, 360, One и Series. Обратную совместимость Microsoft обещала и раньше, а вот слово «progression» здесь новое: речь не только о том, что старые диски и цифровые покупки запустятся, но и о переносе сохранений и прогресса. Второе технически тяжелее: библиотека — это лицензии на аккаунте, а прогресс — данные, часть которых живёт на серверах издателей, а не Microsoft.</p>
 <figure class="post__fig"><img src="/assets/img/xbox-series-x-2020.jpg" alt="Xbox Series X: текущее поколение, чью библиотеку и прогресс Helix обещает перенести целиком" loading="lazy"></figure>
 <p>Что из этого заработает на старте — не сказано. Как и то, что будет с играми, у которых издатель сменил серверы или закрылся.</p>
-<h2>Нейрорендинг — это не про красоту, а про цену</h2>
+<h2 id="section-neyrorending-eto-ne-pro-krasotu-a-pro-cenu">Нейрорендинг — это не про красоту, а про цену</h2>
 <p>Второй сюжет интервью — кризис комплектующих. Рональд говорит о нём как о вызове, который одновременно и возможность: «It's definitely a challenging time, but as a system and a platform designer, it's also one of the most exciting times, because we have to invent entirely new technology».</p>
 <p>Ответ Microsoft — нейрорендинг. «This is a big reason why we're really focused on advancements like neural rendering, because it's an entirely new way to generate a frame without requiring more computational horsepower, additional memory, and things like that» — то есть кадр, собранный не грубой силой, а моделью, которой не нужны лишние гигагерцы и лишние гигабайты.</p>
 <p>Контекст, без которого цитата читается неверно:</p>
 <ul><li>Термин широкий. Нейрорендингом называют и апскейл, и генерацию кадров, и реконструкцию лучей — то есть всё, где модель достраивает пиксели.</li><li>Репутация у слова подмочена: DLSS 5 от Nvidia в этом году обсуждали в основном из-за того, как он меняет внешний вид персонажей.</li><li>Железо тоже названо: кастомный чип AMD, который делают вместе с DirectX следующего поколения и FSR (Microsoft раньше говорила про FSR Next и машинное обучение прямо в графическом конвейере). Конкретных цифр по производительности и памяти нет ни у Microsoft, ни у AMD.</li></ul>
 <p>Отдельная реплика Рональда объясняет, почему в пресс-релизах не будет погони за 8K и 240 Гц: следующее поколение, по его словам, определяют не традиционные метрики, а новые типы игр и глубина погружения.</p>
-<h2>Что подтверждено, а что нет</h2>
+<h2 id="section-chto-podtverzhdeno-a-chto-net">Что подтверждено, а что нет</h2>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Вопрос</th><th style="text-align:left">Что известно</th><th style="text-align:left">Статус</th></tr></thead><tbody><tr><td style="text-align:left">Позиционирование</td><td style="text-align:left">консоль с доступом к PC-играм, не ПК с консольными</td><td style="text-align:left">официально, слова вице-президента Xbox</td></tr><tr><td style="text-align:left">Чип</td><td style="text-align:left">кастомный AMD SoC, вместе с DirectX и FSR следующего поколения</td><td style="text-align:left">подтверждено Microsoft ранее</td></tr><tr><td style="text-align:left">Библиотека</td><td style="text-align:left">четыре поколения Xbox плюс прогресс</td><td style="text-align:left">обещание из интервью</td></tr><tr><td style="text-align:left">Магазины PC-игр</td><td style="text-align:left">не названы</td><td style="text-align:left">не раскрыто</td></tr><tr><td style="text-align:left">Железо у разработчиков</td><td style="text-align:left">альфа-версии — в 2027 году</td><td style="text-align:left">по данным Vice</td></tr><tr><td style="text-align:left">Дата релиза</td><td style="text-align:left">не объявлена; отчёт Fortune — конец 2028 года</td><td style="text-align:left">отчёт издания, Xbox не подтверждала</td></tr><tr><td style="text-align:left">Цена</td><td style="text-align:left">не объявлена; Fortune — внутренняя оценка $1200–1800 без субсидии</td><td style="text-align:left">отчёт издания, не подтверждено</td></tr></tbody></table></div>
 <p>Про 2028-й и $1200–1800 стоит проговорить отдельно, потому что эти цифры уже разошлись по заголовкам. Их принесла не Microsoft, а материал Fortune от 20 октября о гендиректоре Xbox Аше Шарме: там утверждается, что семейство Helix целится в праздничный сезон 2028 года, а внутренняя оценка стоимости — от 1200 до 1800 долларов, если компания не станет субсидировать консоль. Это отчёт издания со ссылкой на источники, а не анонс. В том же тексте говорится, что в 2027 году выйдет не консоль, а портатив следующего поколения.</p>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p><strong>Цена.</strong> Если оценка Fortune верна, Helix окажется в ценовой категории, где консоли раньше не жили. Аргумент «нейрорендинг сэкономит железо» звучит разумно, но это обещание без сметы: Microsoft не назвала ни экономии, ни целевой цены. Напомню, как рынок ведёт себя в дорогом сегменте: <a href="/2026-11-14-1200-xbox-x25-rasprodali.html">юбилейный Xbox за $900 смели за секунды</a>, но это была ограниченная партия для коллекционеров, а не массовый продукт.</p>
 <p><strong>Магазины.</strong> «Играть в PC-игры» может означать две очень разные вещи: полноценный доступ к Steam, Epic и GOG или только собственный магазин Microsoft. Рональд этот вопрос не уточнил. Если второе — библиотека будет узкой, и вся конструкция «убираем границы между консолью и ПК» превратится в маркетинг.</p>
 <p><strong>Сроки.</strong> Альфа-железо у разработчиков в 2027-м — это почти наверняка релиз 2028-го, а не 2027-го, на который раньше указывали инсайдеры по железу. То есть текущему поколению предстоит ещё два года, а конкуренту — <a href="/2026-11-13-0800-ps5-100-million.html">PS5, которая недавно разменяла 100 миллионов проданных консолей</a>, — ещё два года форы.</p>
 <p><strong>Перенос прогресса.</strong> Библиотеку перенести проще, чем сохранения: часть прогресса привязана к аккаунтам издателей и их серверам. Ни списка игр, ни механики переноса пока нет.</p>
-<h2>Что дальше</h2>
+<h2 id="section-chto-dalshe">Что дальше</h2>
 <p>В юбилейном пакете, помимо интервью, есть и обычные новости: бесплатный зимний апдейт с кооперативным режимом Firefight для Halo, Wolfenstein 3 в производстве у MachineGames, 25 игр оригинальной Xbox на ПК с достижениями. Но для будущего платформы важнее другое — Helix впервые описан не как «самая мощная консоль», а как машина, которая стирает границу между двумя библиотеками.</p>
-<p>Моя оценка, а не факт: пока это обещание на уровне формулировок. Проверить его можно двумя вещами — списком магазинов на старте и ценой. Ни того, ни другого Microsoft не назвала, так что до 2028 года любой разговор про Helix остаётся разговором о намерениях.</p></div>
-  <p class="imgcredit">Изображения: Изображение: Der. Bellemer / Wikimedia Commons, CC BY-SA 4.0</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://news.xbox.com/en-us/2026/11/15/xbox-25th-anniversary-the-magazine/" rel="nofollow noopener" target="_blank">Xbox Wire — журнал к 25-летию Xbox</a></li><li><a href="https://videogameschronicle.com/news/xbox-says-project-helix-is-a-console-that-can-play-pc-games-not-a-pc-that-can-play-console-games/" rel="nofollow noopener" target="_blank">VGC — «консоль, которая играет PC-игры»</a></li><li><a href="https://videocardz.com/newz/microsoft-says-neural-rendering-could-help-keep-xbox-project-helix-affordable" rel="nofollow noopener" target="_blank">VideoCardz — нейрорендинг и цена Helix</a></li><li><a href="https://wccftech.com/xbox-project-helix-console-pc-games-neural-rendering/" rel="nofollow noopener" target="_blank">Wccftech — цитаты Рональда и контекст</a></li><li><a href="https://www.vice.com/en/article/xbox-project-helix-details" rel="nofollow noopener" target="_blank">Vice — альфа-железо у разработчиков в 2027</a></li><li><a href="https://wccftech.com/xbox-project-helix-holiday-2028-1200-1800-price-fortune-report/" rel="nofollow noopener" target="_blank">Wccftech — отчёт Fortune про конец 2028 и $1200–1800</a></li><li><a href="https://news.microsoft.com/2001/11/15/xbox-erupts-on-the-scene/" rel="nofollow noopener" target="_blank">Microsoft — пресс-релиз о запуске Xbox 15.11.2001</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Моя оценка, а не факт: пока это обещание на уровне формулировок. Проверить его можно двумя вещами — списком магазинов на старте и ценой. Ни того, ни другого Microsoft не назвала, так что до 2028 года любой разговор про Helix остаётся разговором о намерениях.</p></div><p class="imgcredit">Изображения: Изображение: Der. Bellemer / Wikimedia Commons, CC BY-SA 4.0</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://news.xbox.com/en-us/2026/11/15/xbox-25th-anniversary-the-magazine/" rel="nofollow noopener" target="_blank">Xbox Wire — журнал к 25-летию Xbox</a></li><li><a href="https://videogameschronicle.com/news/xbox-says-project-helix-is-a-console-that-can-play-pc-games-not-a-pc-that-can-play-console-games/" rel="nofollow noopener" target="_blank">VGC — «консоль, которая играет PC-игры»</a></li><li><a href="https://videocardz.com/newz/microsoft-says-neural-rendering-could-help-keep-xbox-project-helix-affordable" rel="nofollow noopener" target="_blank">VideoCardz — нейрорендинг и цена Helix</a></li><li><a href="https://wccftech.com/xbox-project-helix-console-pc-games-neural-rendering/" rel="nofollow noopener" target="_blank">Wccftech — цитаты Рональда и контекст</a></li><li><a href="https://www.vice.com/en/article/xbox-project-helix-details" rel="nofollow noopener" target="_blank">Vice — альфа-железо у разработчиков в 2027</a></li><li><a href="https://wccftech.com/xbox-project-helix-holiday-2028-1200-1800-price-fortune-report/" rel="nofollow noopener" target="_blank">Wccftech — отчёт Fortune про конец 2028 и $1200–1800</a></li><li><a href="https://news.microsoft.com/2001/11/15/xbox-erupts-on-the-scene/" rel="nofollow noopener" target="_blank">Microsoft — пресс-релиз о запуске Xbox 15.11.2001</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-16-1500-project-helix-konsol-ili-pk.html&text=Project%20Helix%3A%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D1%8F%20%D0%B8%D0%B3%D1%80%D0%B0%D0%B5%D1%82%20PC-%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-16-1500-project-helix-konsol-ili-pk.html&title=Project%20Helix%3A%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D1%8F%20%D0%B8%D0%B3%D1%80%D0%B0%D0%B5%D1%82%20PC-%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-16-1500-project-helix-konsol-ili-pk.html&text=Project%20Helix%3A%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D1%8F%20%D0%B8%D0%B3%D1%80%D0%B0%D0%B5%D1%82%20PC-%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-16-1500-project-helix-konsol-ili-pk.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-16-1500-project-helix-konsol-ili-pk-pin.jpg&description=Project%20Helix%3A%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8C%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D1%8F%20%D0%B8%D0%B3%D1%80%D0%B0%D0%B5%D1%82%20PC-%D0%B8%D0%B3%D1%80%D1%8B" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-16-1500-project-helix-konsol-ili-pk.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-xbox">
-  <div class="card__cover"><img src="/assets/img/2026-11-18-1200-game-pass-volna-premium.jpg" alt="Game Pass с 18 ноября: девять игр, пять из них не новинки" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-xbox">
+  <div class="card__cover"><img src="/assets/img/2026-11-18-1200-game-pass-volna-premium.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-xbox" href="/xbox/">Xbox</a><time datetime="2026-11-18T12:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-1200-game-pass-volna-premium.html">Game Pass с 18 ноября: девять игр, пять из них не новинки</a></h3>
     <p class="card__sum">Microsoft расписала вторую ноябрьскую волну Game Pass — девять игр с 18 ноября по 1 декабря.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-1200-game-pass-volna-premium.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article>
 <article class="card card-- cat-xbox">
-  <div class="card__cover"><img src="/assets/img/xbox-x25.jpg" alt="Юбилейный Xbox за $900 смели за секунды" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/xbox-x25.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-xbox" href="/xbox/">Xbox</a><time datetime="2026-11-14T12:00:00+03:00">14.11</time></div>
     <h3 class="card__title"><a href="/2026-11-14-1200-xbox-x25-rasprodali.html">Юбилейный Xbox за $900 смели за секунды</a></h3>
     <p class="card__sum">Юбилейную Xbox Series X25 за $899,99 выложили в магазин в ночь на 13 ноября — и размели за секунды.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-14-1200-xbox-x25-rasprodali.html">Читать →</a><span class="srcc">источников: 11</span></div>
   </div>
 </article>
 <article class="card card-- cat-xbox">
-  <div class="card__cover"><img src="/assets/img/sboi-microsoft-outage.jpg" alt="Сбой Microsoft: Outlook лежит сутки, Xbox — под вопросом" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/sboi-microsoft-outage.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-xbox" href="/xbox/">Xbox</a><time datetime="2026-11-13T15:00:00+03:00">13.11</time></div>
     <h3 class="card__title"><a href="/2026-11-13-1500-sboi-microsoft-outlook-xbox.html">Сбой Microsoft: Outlook лежит сутки, Xbox — под вопросом</a></h3>
     <p class="card__sum">Microsoft почти сутки не может вернуть Exchange Online: Outlook, календари, приглашения и Copilot работают через раз, а…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-13-1500-sboi-microsoft-outlook-xbox.html">Читать →</a><span class="srcc">источников: 9</span></div>
   </div>
 </article></div></section>
 </main>
@@ -181,9 +173,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -201,9 +192,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

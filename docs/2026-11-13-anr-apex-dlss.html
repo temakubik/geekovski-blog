@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/pc/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/pc/">PC-игры</a></li><li aria-current="page">ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck</li></ol></nav>
 <article class="post cat-pc">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-13T12:40:00+03:00">13.11.2026, 12:40</time></div>
@@ -100,72 +100,64 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Apex Compute выпустила открытую бету ANR — генерации кадров, которая, по заявлениям компании, в 2,4 раза быстрее DLSS и работает на железе, где DLSS официально недоступен: Radeon RX 5000, GeForce GTX 16, Steam Deck и Intel Arc. Проверить это можно уже сейчас — бета ставится в игры через OptiScaler.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>ANR — набор из генерации кадров, суперразрешения и реконструкции лучей; в бете пока только генерация кадров</li><li>Заявлено до 2,4× быстрее DLSS Frame Generation и лучше по качеству; в собственных замерах Apex на RTX 5090 — 0,34 против 0,81 в режиме 2X</li><li>Поддержка: RTX 20–50, GTX 16, RX 5000–9000, Steam Deck, Arc A и B, Apple M1 и новее</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/anr-apex.jpg" alt="ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck"></figure>
-  <div class="post__body"><p>Стартап <strong>Apex Compute</strong> 11 ноября выкатил <strong>ANR — Apex Neural Rendering</strong>. Это набор технологий апскейла, генерации кадров и реконструкции лучей. Генерация кадров уже доступна в открытой бете, остальное — «в обучении».</p>
+  <figure class="post__cover"><img src="/assets/img/anr-apex.jpg" alt="ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-zayavlyayut">Что заявляют</a></li><li><a href="#section-pochemu-eto-interesno">Почему это интересно</a></li><li><a href="#section-spisok-podderzhivaemogo-zheleza">Список поддерживаемого железа</a></li><li><a href="#section-kak-poprobovat">Как попробовать</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-stoit-li-probovat">Стоит ли пробовать</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>ANR — набор из генерации кадров, суперразрешения и реконструкции лучей; в бете пока только генерация кадров</li><li>Заявлено до 2,4× быстрее DLSS Frame Generation и лучше по качеству; в собственных замерах Apex на RTX 5090 — 0,34 против 0,81 в режиме 2X</li><li>Поддержка: RTX 20–50, GTX 16, RX 5000–9000, Steam Deck, Arc A и B, Apple M1 и новее</li></ul></aside><div class="post__body"><p>Стартап <strong>Apex Compute</strong> 11 ноября выкатил <strong>ANR — Apex Neural Rendering</strong>. Это набор технологий апскейла, генерации кадров и реконструкции лучей. Генерация кадров уже доступна в открытой бете, остальное — «в обучении».</p>
 <p>Главное в анонсе не качество картинки, а список видеокарт. ANR работает там, где NVIDIA официально не даёт DLSS: на <strong>Radeon RX 5000</strong>, <strong>GeForce GTX 16</strong>, <strong>Steam Deck</strong> и встроенной графике Apple.</p>
 <figure class="post__fig"><img src="/assets/img/anr-apex-2.jpg" alt="Второй кадр сравнения ANR на The Last of Us Part II Remastered" loading="lazy"></figure>
-<h2>Что заявляют</h2>
+<h2 id="section-chto-zayavlyayut">Что заявляют</h2>
 <p>Apex говорит прямо: ANR даёт <strong>до 2,4 раза большую производительность</strong> и <strong>лучшее качество</strong>, чем DLSS от NVIDIA. Это маркетинговое утверждение, и к нему стоит относиться соответственно — но компания хотя бы даёт цифры и возможность проверить.</p>
 <p>В собственном замере на <strong>RTX 5090</strong> в 4K показатели ANR в режимах 2X / 3X / 4X — <strong>0,34 / 0,53 / 1,13</strong> против <strong>0,81 / 1,08 / 1,27</strong> у DLSS Frame Generation. В режиме 2X разница и даёт те самые 2,4 раза.</p>
 <p>Отдельно Apex публикует сравнение с <strong>FSR 3.1</strong> на Radeon RX 7800 XT, Arc B580 и Arc A770 — и заявляет, что обходит его во всех перечисленных режимах.</p>
-<h2>Почему это интересно</h2>
+<h2 id="section-pochemu-eto-interesno">Почему это интересно</h2>
 <p>Три причины.</p>
 <p><strong>Открытый исходный код.</strong> DLSS — закрытая технология с закрытыми моделями. ANR выложен открыто, и это меняет правила игры: сообщество может проверить, как он работает, а разработчики — встроить его без лицензии.</p>
 <p><strong>Старое железо.</strong> Официально генерация кадров DLSS доступна только на RTX 40 и 50. Владельцы RX 5000, GTX 16 или Steam Deck до сих пор были лишены этой функции в принципе — не потому, что их карты не справляются, а потому что NVIDIA так решила. ANR обещает закрыть этот разрыв.</p>
 <p><strong>Кроссплатформенность.</strong> Бета работает на Windows и Linux через Proton — то есть и на Steam Deck. Плюс заявлена поддержка Apple M1 и новее с macOS 26.</p>
-<h2>Список поддерживаемого железа</h2>
+<h2 id="section-spisok-podderzhivaemogo-zheleza">Список поддерживаемого железа</h2>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Производитель</th><th style="text-align:left">Что поддерживается</th></tr></thead><tbody><tr><td style="text-align:left">NVIDIA</td><td style="text-align:left">RTX 20, 30, 40, 50; GTX 16</td></tr><tr><td style="text-align:left">AMD</td><td style="text-align:left">Radeon RX 5000, 6000, 7000, 9000</td></tr><tr><td style="text-align:left">Intel</td><td style="text-align:left">Arc A-серия и B-серия</td></tr><tr><td style="text-align:left">Valve</td><td style="text-align:left">Steam Deck</td></tr><tr><td style="text-align:left">Apple</td><td style="text-align:left">M1 и новее, macOS 26+</td></tr></tbody></table></div>
 <p>Это почти весь рынок за последние семь лет. Именно широта списка, а не проценты прироста, — главный аргумент ANR.</p>
-<h2>Как попробовать</h2>
+<h2 id="section-kak-poprobovat">Как попробовать</h2>
 <p>Бета ставится в игры через <strong>OptiScaler</strong> — утилиту, которая подменяет апскейлер в игре на выбранный. То есть вы можете включить ANR там, где разработчик её не поддерживает, и сравнить с DLSS или FSR на своём железе.</p>
 <p>Способ неофициальный: возможны артефакты, вылеты и конфликты с античитом в онлайн-играх. Для тестов в одиночных проектах — нормально, для повседневной игры — на свой риск.</p>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p><strong>Замеры сделаны самой компанией.</strong> Независимых тестов пока нет — бета вышла два дня назад. Цифры «2,4×» относятся к конкретному сценарию на конкретной карте, а не к среднему по библиотеке.</p>
 <p><strong>Только генерация кадров.</strong> Суперразрешение и реконструкция лучей ещё обучаются. То есть сравнивать ANR с полным набором DLSS (DLAA + FG + RR) пока нельзя — только с компонентом FG.</p>
 <p><strong>Открытый код не равен качеству.</strong> У FSR тоже открытая реализация, и это не сделало её лучше DLSS. Вопрос в том, как модель ведёт себя на движущихся объектах, в дыму и на мелких деталях — а это покажут только независимые тесты.</p>
-<h2>Стоит ли пробовать</h2>
+<h2 id="section-stoit-li-probovat">Стоит ли пробовать</h2>
 <p><strong>Да, если</strong> у вас Radeon RX 5000/6000 или GTX 16. Вам генерация кадров официально недоступна, и ANR — единственный способ её получить.</p>
 <p><strong>Да, если</strong> вы любите копаться. OptiScaler, сравнение скриншотов, замеры — это отдельное хобби, и ANR даёт для него новый материал.</p>
 <p><strong>Нет, если</strong> вы играете в онлайн-шутеры. Подмена DLL и античит — плохая комбинация, риск бана не оправдан.</p>
 <p><strong>Нет, если</strong> вам нужна стабильность. Бета есть бета: ждите как минимум пары месяцев и независимых обзоров.</p>
-<p>Одна честная оговорка: всё выше — из материалов самой Apex и разбора VideoCardz. Я не запускал ANR на своём железе, поэтому не могу подтвердить ни прирост, ни качество картинки. Когда появятся независимые тесты, картина станет понятнее.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://apexcompute.com/neural-rendering" rel="nofollow noopener" target="_blank">Apex Compute — ANR</a></li><li><a href="https://videocardz.com/newz/gamers-now-have-an-open-source-dlss-frame-generation-alternative-apex-claims-faster-performance-and-better-quality" rel="nofollow noopener" target="_blank">VideoCardz — бетa, поддержка железа и замеры</a></li><li><a href="https://www.techspot.com/news/114536-startup-frame-generation-beats-dlss-runs-gpus-old.htm" rel="nofollow noopener" target="_blank">TechSpot — разбор заявлений</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Одна честная оговорка: всё выше — из материалов самой Apex и разбора VideoCardz. Я не запускал ANR на своём железе, поэтому не могу подтвердить ни прирост, ни качество картинки. Когда появятся независимые тесты, картина станет понятнее.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://apexcompute.com/neural-rendering" rel="nofollow noopener" target="_blank">Apex Compute — ANR</a></li><li><a href="https://videocardz.com/newz/gamers-now-have-an-open-source-dlss-frame-generation-alternative-apex-claims-faster-performance-and-better-quality" rel="nofollow noopener" target="_blank">VideoCardz — бетa, поддержка железа и замеры</a></li><li><a href="https://www.techspot.com/news/114536-startup-frame-generation-beats-dlss-runs-gpus-old.htm" rel="nofollow noopener" target="_blank">TechSpot — разбор заявлений</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-13-anr-apex-dlss.html&text=ANR%20%D0%BE%D1%82%20Apex%20Compute%3A%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82%20DLSS%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%8B%D1%85%20Radeon%20%D0%B8%20Steam%20Deck" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-13-anr-apex-dlss.html&title=ANR%20%D0%BE%D1%82%20Apex%20Compute%3A%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82%20DLSS%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%8B%D1%85%20Radeon%20%D0%B8%20Steam%20Deck" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-13-anr-apex-dlss.html&text=ANR%20%D0%BE%D1%82%20Apex%20Compute%3A%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82%20DLSS%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%8B%D1%85%20Radeon%20%D0%B8%20Steam%20Deck" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-13-anr-apex-dlss.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-13-anr-apex-dlss-pin.jpg&description=ANR%20%D0%BE%D1%82%20Apex%20Compute%3A%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82%20DLSS%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%B0%D1%80%D1%8B%D1%85%20Radeon%20%D0%B8%20Steam%20Deck" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-13-anr-apex-dlss.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="VK Play сдаёт консоли в аренду под GTA VI" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-pc">
+  <div class="card__cover"><img src="/assets/img/vk-play-konsol-arenda.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T15:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1500-vk-play-arenda-konsoli.html">VK Play сдаёт консоли в аренду под GTA VI</a></h3>
     <p class="card__sum">«VK Play Облачный гейминг» открыл в тестовом режиме консольный тариф: можно забронировать время на удалённой приставке и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1500-vk-play-arenda-konsoli.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ubisoft-otchet-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-20T08:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-0800-ubisoft-motherbrain.html">Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек</a></h3>
     <p class="card__sum">Полугодие Ubisoft закрыла с убытком €155,9 млн по non-IFRS и падением бронирований на 16,5%, а команду, сделавшую её первую…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-0800-ubisoft-motherbrain.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="«MindsEye»: £61,7 млн долга и надежда на иски" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/mindseye-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-19T18:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1800-mindseye-dolg-61-mln.html">«MindsEye»: £61,7 млн долга и надежда на иски</a></h3>
     <p class="card__sum">Администраторы Build a Rocket Boy опубликовали отчёт: студия должна кредиторам £61,7 млн, из них £36,4 млн — NetEase.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1800-mindseye-dolg-61-mln.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article></div></section>
 </main>
@@ -180,9 +172,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -200,9 +191,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

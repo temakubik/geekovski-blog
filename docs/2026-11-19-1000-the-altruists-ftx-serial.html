@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/serialy/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/serialy/">Сериалы</a></li><li aria-current="page">«The Altruists»: Netflix снял FTX как историю любви</li></ol></nav>
 <article class="post cat-serialy">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-19T10:00:00+03:00">19.11.2026, 10:00</time></div>
@@ -100,79 +100,71 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Netflix выложил все восемь эпизодов «The Altruists» — драмы о Сэме Бэнкман-Фриде и Кэролайн Эллисон, которые построили FTX и потеряли 8 млрд долларов чужих денег. Создал сериал оскаровский сценарист Грэм Мур, а продюсирует его компания Барака и Мишель Обамы.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-anya.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/anya.html">Аня Гладышева</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Netflix выпустил все восемь эпизодов сразу 19 ноября: это не документалка, а драма о романе Бэнкман-Фрида и Эллисон, вокруг которого рухнула биржа</li><li>Шоураннер — Грэм Мур («Игра в имитацию»), в продюсерах Higher Ground четы Обамы, в основе — репортажи New York Magazine</li><li>Настоящие итоги: 25 лет тюрьмы Бэнкман-Фриду, 24 месяца Эллисон (отсидела 14 и вышла в январе 2026) и 8 млрд долларов украденных клиентских денег</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/altruists-netflix-cover.jpg" alt="«The Altruists»: Netflix снял FTX как историю любви"></figure>
-  <div class="post__body"><p>Сегодня Netflix выложил разом все восемь эпизодов «<a class="tlink" href="/titles/the-altruists.html">The Altruists</a>» — сериала о том, как два очень умных человека построили криптобиржу на чужих деньгах, а потом смотрели, как она складывается. Проект ждали с прошлой зимы, и главный вопрос к нему не «покажут ли мошенничество», а «кого в этой истории сделают главным злодеем».</p>
-<h2>Восемь эпизодов, все сразу</h2>
+  <figure class="post__cover"><img src="/assets/img/altruists-netflix-cover.jpg" alt="«The Altruists»: Netflix снял FTX как историю любви" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-vosem-epizodov-vse-srazu">Восемь эпизодов, все сразу</a></li><li><a href="#section-syuzhet-dva-cheloveka-i-odno-opravdanie">Сюжет: два человека и одно оправдание</a></li><li><a href="#section-chto-bylo-na-samom-dele">Что было на самом деле</a></li><li><a href="#section-kto-kogo-igraet">Кто кого играет</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-pochemu-imenno-seychas">Почему именно сейчас</a></li><li><a href="#section-smotret-ili-net">Смотреть или нет</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Netflix выпустил все восемь эпизодов сразу 19 ноября: это не документалка, а драма о романе Бэнкман-Фрида и Эллисон, вокруг которого рухнула биржа</li><li>Шоураннер — Грэм Мур («Игра в имитацию»), в продюсерах Higher Ground четы Обамы, в основе — репортажи New York Magazine</li><li>Настоящие итоги: 25 лет тюрьмы Бэнкман-Фриду, 24 месяца Эллисон (отсидела 14 и вышла в январе 2026) и 8 млрд долларов украденных клиентских денег</li></ul></aside><div class="post__body"><p>Сегодня Netflix выложил разом все восемь эпизодов «<a class="tlink" href="/titles/the-altruists.html">The Altruists</a>» — сериала о том, как два очень умных человека построили криптобиржу на чужих деньгах, а потом смотрели, как она складывается. Проект ждали с прошлой зимы, и главный вопрос к нему не «покажут ли мошенничество», а «кого в этой истории сделают главным злодеем».</p>
+<h2 id="section-vosem-epizodov-vse-srazu">Восемь эпизодов, все сразу</h2>
 <p>Netflix не растягивает историю на недели: все восемь эпизодов доступны с 19 ноября, рейтинг — TV-MA. Дата подтверждена и пресс-службой платформы в Tudum, и страницей сериала на Rotten Tomatoes.</p>
 <p>Создатель, автор сценария и шоураннер — Грэм Мур, тот самый, что получил «Оскара» за адаптированный сценарий «Игры в имитацию». Вместе с ним шоураннит Жаклин Хойт, работавшая над «Оставленными». В продюсерах — Higher Ground, компания Барака и Мишель Обамы, которая уже несколько лет делает проекты для Netflix; оба имени стоят в титрах исполнительных продюсеров.</p>
 <p>Основа — не книга и не чьи-то мемуары, а репортажи New York Magazine о взлёте и падении FTX. Это важно: сериал опирается на журналистскую реконструкцию, а не на версию самих фигурантов.</p>
-<h2>Сюжет: два человека и одно оправдание</h2>
+<h2 id="section-syuzhet-dva-cheloveka-i-odno-opravdanie">Сюжет: два человека и одно оправдание</h2>
 <p>Официальный логлайн звучит так: двое сверхумных, амбициозных и очень молодых идеалистов попытались в мгновение ока переделать мировую финансовую систему — прежде чем их обвинили в краже 8 млрд долларов.</p>
 <p>Сериал строит эту историю не вокруг биржи, а вокруг пары. Сэм Бэнкман-Фрид, сын профессоров права из Стэнфорда, выпускник MIT, и Кэролайн Эллисон — математический вундеркинд, которая возглавила его первый трейдинговый фонд Alameda Research и какое-то время была его девушкой. Драма переключается между их романом, ранними днями арбитража на мелких монетах, взрывным ростом FTX и обвалом, когда всё вскрылось.</p>
 <p>По первым рецензиям, движок сериала — именно отношения: двое людей, которые понимали друг друга лучше, чем кого-либо ещё, и подначивали друг друга идти дальше. Marin Independent Journal в обзоре от 18 ноября оценил сериал в 3 балла из 4 и отметил, что создатели сосредоточились на «интенсивном романе и последующем предательстве в деловом партнёрстве», не потеряв при этом масштаба мошенничества.</p>
 <figure class="post__fig"><img src="/assets/img/altruists-sbf-monitory.jpg" alt="Сэм Бэнкман-Фрид в исполнении Энтони Бойла: терминалы с графиками — рабочий инструмент, а не декорация" loading="lazy"></figure>
 <p>Энтони Бойл играет Бэнкман-Фрида, Джулия Гарнер — Эллисон. В Vanity Fair Бойл рассказывает, что пришёл на первую встречу с создателями в дешёвом чёрном свитере, измазанном соусом от лапши, и с взлохмаченными волосами — то есть роль строилась от узнаваемой небрежности, а не от глянца. Про свою героиню он говорит, что история «смешная и больше про отношения с Кэролайн», чем про деньги.</p>
-<h2>Что было на самом деле</h2>
+<h2 id="section-chto-bylo-na-samom-dele">Что было на самом деле</h2>
 <p>Сериал позволяет себе драматургию. Реальные события выглядят так — это проверяемая хроника по материалам CNBC, BBC, The Guardian и ABC News.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Дата</th><th style="text-align:left">Что произошло</th></tr></thead><tbody><tr><td style="text-align:left">2 ноября 2022</td><td style="text-align:left">CoinDesk публикует разбор баланса Alameda: большая часть активов — токены, выпущенные самой FTX</td></tr><tr><td style="text-align:left">11 ноября 2022</td><td style="text-align:left">FTX и около 130 связанных компаний подают на банкротство; Бэнкман-Фрид уходит с поста CEO</td></tr><tr><td style="text-align:left">12 декабря 2022</td><td style="text-align:left">Арест на Багамах по обвинению прокуратуры Южного округа Нью-Йорка</td></tr><tr><td style="text-align:left">2 ноября 2023</td><td style="text-align:left">Присяжные признают виновным по семи пунктам — мошенничество и отмывание</td></tr><tr><td style="text-align:left">28 марта 2024</td><td style="text-align:left">Приговор: 25 лет тюрьмы и конфискация 11 млрд долларов</td></tr><tr><td style="text-align:left">28 мая 2024</td><td style="text-align:left">Райан Саламе, экс-глава FTX Digital Markets, — 7,5 года за нарушения финансирования кампаний</td></tr><tr><td style="text-align:left">24 сентября 2024</td><td style="text-align:left">Эллисон получает 24 месяца и конфискацию 11 млрд — за сотрудничество со следствием</td></tr><tr><td style="text-align:left">30 октября 2024</td><td style="text-align:left">Нишад Сингх — без тюрьмы, три года надзора</td></tr><tr><td style="text-align:left">20 ноября 2024</td><td style="text-align:left">Гэри Ван, сооснователь FTX, — тоже без тюрьмы, три года надзора</td></tr><tr><td style="text-align:left">22 января 2026</td><td style="text-align:left">Эллисон выходит на свободу, отсидев около 14 месяцев из двух лет</td></tr></tbody></table></div>
 <p>Ключевая цифра для контекста: на пике FTX оценивали в 32 млрд долларов, а клиенты потеряли около 8 млрд. Бэнкман-Фрид отбывает срок в федеральной тюрьме низкой безопасности в районе Лос-Анджелеса и в прошлом году добивался помилования у Дональда Трампа — включая интервью из тюрьмы для Такера Карлсона, писал The Guardian.</p>
-<h2>Кто кого играет</h2>
+<h2 id="section-kto-kogo-igraet">Кто кого играет</h2>
 <p>Если вы помните реальные лица по новостям, а не по сериалу, вот соответствия из официального объявления Netflix.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Актёр</th><th style="text-align:left">Персонаж</th><th style="text-align:left">Кто это в реальности</th></tr></thead><tbody><tr><td style="text-align:left">Энтони Бойл</td><td style="text-align:left">Сэм Бэнкман-Фрид</td><td style="text-align:left">основатель FTX, приговор — 25 лет</td></tr><tr><td style="text-align:left">Джулия Гарнер</td><td style="text-align:left">Кэролайн Эллисон</td><td style="text-align:left">CEO Alameda Research, приговор — 24 месяца</td></tr><tr><td style="text-align:left">Карен Сони</td><td style="text-align:left">Нишад Сингх</td><td style="text-align:left">директор по инженерии FTX, без срока</td></tr><tr><td style="text-align:left">Мэтт Риф</td><td style="text-align:left">Райан Саламе</td><td style="text-align:left">глава FTX Digital Markets, 7,5 года</td></tr><tr><td style="text-align:left">Юджин Янг</td><td style="text-align:left">Гэри Ван</td><td style="text-align:left">сооснователь и техдиректор FTX, без срока</td></tr><tr><td style="text-align:left">Алекс Лоутер</td><td style="text-align:left">Сэм Трабакко</td><td style="text-align:left">трейдер Alameda</td></tr><tr><td style="text-align:left">Наоми Окада</td><td style="text-align:left">Клэр Ватанабе</td><td style="text-align:left">сотрудница FTX</td></tr><tr><td style="text-align:left">Мэдисон Ху</td><td style="text-align:left">Констанс Ван</td><td style="text-align:left">сотрудница FTX</td></tr></tbody></table></div>
 <p>Режиссёры разошлись по эпизодам: первый снял Джеймс Понсолдт, второй и третий — Кайл Патрик Альварес, четвёртый и пятый — Марзи Альмас, шестой — сам Грэм Мур, финальные два — Сильвер Три.</p>
 <figure class="post__fig"><img src="/assets/img/altruists-bagamy-yahta.jpg" alt="Багамская штаб-квартира: в сериале FTX живёт на вилле с яхтой на горизонте" loading="lazy"></figure>
-<h2>Где подвох</h2>
+<h2 id="section-gde-podvoh">Где подвох</h2>
 <p>Главная претензия к проекту — не факты, а оптика. Часть критиков считает, что, превратив историю кражи в историю любви, авторы невольно извиняют главного героя: он, дескать, хотел как лучше, просто отвлёкся на девушку. Marin Independent Journal назвал это «простительным преступлением» в «хорошо сыгранном, хорошо сделанном сериале» — то есть претензия сформулирована, но вердикт скорее положительный.</p>
 <p>Вторая вещь, которую надо держать в голове: у сериала пока нет консенсуса критиков. На утро 19 ноября Metacritic показывал «рецензии недоступны», у Rotten Tomatoes — ноль обзоров и ноль зрительских оценок. Первые отзывы появляются по мере выхода, и цифры будут меняться весь день.</p>
 <p>Третье — путаница с датой у одного из изданий: Marin Independent Journal пишет, что сериал «выходит 21 ноября». Netflix, Rotten Tomatoes и Wikipedia называют 19 ноября, эта же дата подтверждена официальным анонсом. Держимся первоисточника.</p>
-<h2>Почему именно сейчас</h2>
+<h2 id="section-pochemu-imenno-seychas">Почему именно сейчас</h2>
 <p>Netflix выпускает «The Altruists» в момент, когда Голливуд массово переснимает биографию техмиллиардеров. Vanity Fair перечисляет соседей по волне: байопик про Сэма Альтмана «Artificial», документалку про Илона Маска от Алекса Гибни, продолжение «Социальной сети» от Аарона Соркина и фильм про Элизабет Холмс «You Can See Everything». FTX в этом ряду — самая быстрая история: от оценки в 30 с лишним миллиардов до банкротства прошло меньше двух недель.</p>
 <p>Для Netflix это ещё и проверка формата «настоящее преступление без трупов»: в отличие от «Оленёнка» или «Inventing Anna», здесь нет жертвы-одиночки, которой можно сопереживать. Есть миллион клиентов, размазанных по абзацу в пресс-релизе.</p>
 <figure class="post__fig"><img src="/assets/img/altruists-krovat.jpg" alt="Кэролайн Эллисон — вторая половина истории и главный свидетель обвинения" loading="lazy"></figure>
-<h2>Смотреть или нет</h2>
+<h2 id="section-smotret-ili-net">Смотреть или нет</h2>
 <p>Моя оценка, не факт: смотреть стоит как драму о паре, а не как документальную реконструкцию. Если вы ждёте разбора схемы — лучше взять репортажи New York Magazine или материалы следствия: сериал идёт от чувств, а не от бухгалтерии.</p>
 <p>Главный риск — тот самый перекос в симпатию. Он уже виден в рецензиях, и он будет главным аргументом спорщиков в комментариях. Так что включайте с поправкой: это история о том, как хорошие намерения оказались удобным оправданием, а не о том, как они подвели хороших людей.</p>
 <figure class="post__fig"><img src="/assets/img/altruists-pliazh.jpg" alt="Пляж на закате — та самая «идиллия до обвала», которой в сериале отведена целая линия" loading="lazy"></figure>
-<h2>Что дальше</h2>
+<h2 id="section-chto-dalshe">Что дальше</h2>
 <p>Следующая остановка этой истории — апелляция Бэнкман-Фрида по приговору и его попытки добиться помилования. Пока суды идут, Netflix будет продавать сериал как развлекательный продукт, а реальные фигуранты — как предупреждение. Обе версии правдивы ровно наполовину, и это, пожалуй, лучшее, что можно сказать о самой истории FTX.</p>
-<figure class="post__fig"><img src="/assets/img/altruists-ofis.jpg" alt="Офис FTX в сериале: открытое пространство, мониторы и люди, которые не задают вопросов" loading="lazy"></figure></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://netflix.com/tudum/articles/the-altruists-cast-release-date-news" rel="nofollow noopener" target="_blank">Netflix Tudum — дата, каст и производство</a></li><li><a href="https://variety.com/2026/tv/news/netflix-the-altruists-release-date-first-look-photos-1236833976/" rel="nofollow noopener" target="_blank">Variety — дата премьеры и первые кадры</a></li><li><a href="https://variety.com/2026/tv/news/the-altruists-trailer-netflix-sam-bankman-fried-caroline-ellison-1236905223" rel="nofollow noopener" target="_blank">Variety — трейлер и официальный логлайн</a></li><li><a href="https://vanityfair.com/story/anthony-boyle-sam-bankman-fried-the-altruists" rel="nofollow noopener" target="_blank">Vanity Fair — интервью с Энтони Бойлом</a></li><li><a href="https://www.rottentomatoes.com/tv/the_altruists/s01" rel="nofollow noopener" target="_blank">Rotten Tomatoes — страница сериала</a></li><li><a href="https://www.metacritic.com/tv/the-altruists/" rel="nofollow noopener" target="_blank">Metacritic — страница сериала</a></li><li><a href="https://marinij.com/2026/11/18/what-to-watch-the-altruists-a-riveting-look-at-sam-bankman-fried-scandal" rel="nofollow noopener" target="_blank">Marin Independent Journal — обзор</a></li><li><a href="https://www.cnbc.com/2024/03/28/live-updates-ftx-founder-sam-bankman-fried-sentencing.html" rel="nofollow noopener" target="_blank">CNBC — приговор Бэнкман-Фриду</a></li><li><a href="https://www.bbc.com/news/articles/cdd4e2931q3o" rel="nofollow noopener" target="_blank">BBC — приговор Эллисон</a></li><li><a href="https://www.theguardian.com/technology/2026/jan/22/ftx-crypto-executive-caroline-ellison-prison-release" rel="nofollow noopener" target="_blank">The Guardian — выход Эллисон из тюрьмы</a></li><li><a href="https://www.cnbc.com/2024/11/20/ftx-co-founder-gary-wang-avoids-prison-time-for-role-in-crypto-fraud.html" rel="nofollow noopener" target="_blank">CNBC — приговор Гэри Вану</a></li><li><a href="https://www.nbcnews.com/tech/tech-news/ftxs-nishad-singh-gets-no-jail-time-role-crypto-fraud-rcna178120" rel="nofollow noopener" target="_blank">NBC News — приговор Нишаду Сингху</a></li><li><a href="https://abcnews.com/Business/timeline-cryptocurrency-exchange-ftxs-historic-collapse/story?id=93337035" rel="nofollow noopener" target="_blank">ABC News — хроника краха FTX</a></li><li><a href="https://en.wikipedia.org/wiki/The_Altruists" rel="nofollow noopener" target="_blank">Wikipedia — эпизоды и режиссёры</a></li></ol></section>
-  <section class="share" data-share-root>
+<figure class="post__fig"><img src="/assets/img/altruists-ofis.jpg" alt="Офис FTX в сериале: открытое пространство, мониторы и люди, которые не задают вопросов" loading="lazy"></figure></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://netflix.com/tudum/articles/the-altruists-cast-release-date-news" rel="nofollow noopener" target="_blank">Netflix Tudum — дата, каст и производство</a></li><li><a href="https://variety.com/2026/tv/news/netflix-the-altruists-release-date-first-look-photos-1236833976/" rel="nofollow noopener" target="_blank">Variety — дата премьеры и первые кадры</a></li><li><a href="https://variety.com/2026/tv/news/the-altruists-trailer-netflix-sam-bankman-fried-caroline-ellison-1236905223" rel="nofollow noopener" target="_blank">Variety — трейлер и официальный логлайн</a></li><li><a href="https://vanityfair.com/story/anthony-boyle-sam-bankman-fried-the-altruists" rel="nofollow noopener" target="_blank">Vanity Fair — интервью с Энтони Бойлом</a></li><li><a href="https://www.rottentomatoes.com/tv/the_altruists/s01" rel="nofollow noopener" target="_blank">Rotten Tomatoes — страница сериала</a></li><li><a href="https://www.metacritic.com/tv/the-altruists/" rel="nofollow noopener" target="_blank">Metacritic — страница сериала</a></li><li><a href="https://marinij.com/2026/11/18/what-to-watch-the-altruists-a-riveting-look-at-sam-bankman-fried-scandal" rel="nofollow noopener" target="_blank">Marin Independent Journal — обзор</a></li><li><a href="https://www.cnbc.com/2024/03/28/live-updates-ftx-founder-sam-bankman-fried-sentencing.html" rel="nofollow noopener" target="_blank">CNBC — приговор Бэнкман-Фриду</a></li><li><a href="https://www.bbc.com/news/articles/cdd4e2931q3o" rel="nofollow noopener" target="_blank">BBC — приговор Эллисон</a></li><li><a href="https://www.theguardian.com/technology/2026/jan/22/ftx-crypto-executive-caroline-ellison-prison-release" rel="nofollow noopener" target="_blank">The Guardian — выход Эллисон из тюрьмы</a></li><li><a href="https://www.cnbc.com/2024/11/20/ftx-co-founder-gary-wang-avoids-prison-time-for-role-in-crypto-fraud.html" rel="nofollow noopener" target="_blank">CNBC — приговор Гэри Вану</a></li><li><a href="https://www.nbcnews.com/tech/tech-news/ftxs-nishad-singh-gets-no-jail-time-role-crypto-fraud-rcna178120" rel="nofollow noopener" target="_blank">NBC News — приговор Нишаду Сингху</a></li><li><a href="https://abcnews.com/Business/timeline-cryptocurrency-exchange-ftxs-historic-collapse/story?id=93337035" rel="nofollow noopener" target="_blank">ABC News — хроника краха FTX</a></li><li><a href="https://en.wikipedia.org/wiki/The_Altruists" rel="nofollow noopener" target="_blank">Wikipedia — эпизоды и режиссёры</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1000-the-altruists-ftx-serial.html&text=%C2%ABThe%20Altruists%C2%BB%3A%20Netflix%20%D1%81%D0%BD%D1%8F%D0%BB%20FTX%20%D0%BA%D0%B0%D0%BA%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8E%20%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1000-the-altruists-ftx-serial.html&title=%C2%ABThe%20Altruists%C2%BB%3A%20Netflix%20%D1%81%D0%BD%D1%8F%D0%BB%20FTX%20%D0%BA%D0%B0%D0%BA%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8E%20%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1000-the-altruists-ftx-serial.html&text=%C2%ABThe%20Altruists%C2%BB%3A%20Netflix%20%D1%81%D0%BD%D1%8F%D0%BB%20FTX%20%D0%BA%D0%B0%D0%BA%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8E%20%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1000-the-altruists-ftx-serial.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-19-1000-the-altruists-ftx-serial-pin.jpg&description=%C2%ABThe%20Altruists%C2%BB%3A%20Netflix%20%D1%81%D0%BD%D1%8F%D0%BB%20FTX%20%D0%BA%D0%B0%D0%BA%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8E%20%D0%BB%D1%8E%D0%B1%D0%B2%D0%B8" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-19-1000-the-altruists-ftx-serial.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/3bp-season2.jpg" alt="«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-serialy">
+  <div class="card__cover"><img src="/assets/img/3bp-season2.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-18T11:10:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-3bp-season2.html">«Задача трёх тел»: Netflix показал тизер второго сезона — Сан-Ти уже здесь</a></h3>
     <p class="card__sum">Netflix выпустил первый тизер второго сезона «Задачи трёх тел» и объявил дату — 14 января.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-3bp-season2.html">Читать →</a><span class="srcc">источников: 3</span></div>
   </div>
 </article>
 <article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/zadacha-treh-tel-2-sezon.jpg" alt="Второй сезон «Задачи трёх тел» стартует 14 января" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/zadacha-treh-tel-2-sezon.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-17T08:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-0800-zadacha-treh-tel-2-sezon.html">Второй сезон «Задачи трёх тел» стартует 14 января</a></h3>
     <p class="card__sum">Netflix назвал дату возвращения «Задачи трёх тел» — 14 января, спустя два года и десять месяцев после первого сезона.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-0800-zadacha-treh-tel-2-sezon.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-serialy">
-  <div class="card__cover"><img src="/assets/img/virgin-river-s9-netflix.jpg" alt="«Virgin River» дожил до девятого сезона: рекорд Netflix" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/virgin-river-s9-netflix.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-serialy" href="/serialy/">Сериалы</a><time datetime="2026-11-15T21:00:00+03:00">15.11</time></div>
     <h3 class="card__title"><a href="/2026-11-15-2100-virgin-river-9-sezon.html">«Virgin River» дожил до девятого сезона: рекорд Netflix</a></h3>
     <p class="card__sum">Netflix продлила «Virgin River» на девятый сезон за несколько месяцев до премьеры восьмого — это рекорд по числу сезонов…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-15-2100-virgin-river-9-sezon.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article></div></section>
 </main>
@@ -187,9 +179,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -207,9 +198,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

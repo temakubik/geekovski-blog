@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/playstation/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/playstation/">PlayStation</a></li><li aria-current="page">God of War: Ragnarök — $1,4 млрд выручки, оценка аналитиков</li></ol></nav>
 <article class="post cat-playstation">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-05T10:15:00+03:00">05.11.2026, 10:15</time></div>
@@ -100,56 +100,48 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Alinea Analytics оценила продажи Ragnarök в 21,6 млн копий и $1,4 млрд выручки — это самый прибыльный эксклюзив PlayStation Studios нынешнего поколения. Официальных цифр Sony не публиковала.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>21,6 млн копий и около $1,4 млрд выручки — оценка Alinea Analytics, а не данные Sony</li><li>75,2 % консольных продаж пришлось на PS5, физические копии — 27,5 %</li><li>В 2026 году игра продалась ещё 1,1 млн раз и принесла около $60 млн</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/god-of-war-ragnarok-1-4-mlrd.jpg" alt="God of War: Ragnarök — $1,4 млрд выручки, оценка аналитиков"></figure>
-  <div class="post__body"><p>4 ноября 2022 года Кратос вернулся, а спустя четыре года аналитическая фирма Alinea Analytics подсчитала, во что это обошлось и что принесло. По её оценке, God of War: Ragnarök продалась в 21,6 млн копий и сгенерировала около $1,4 млрд выручки — больше, чем любой другой эксклюзив PlayStation Studios на PS5.</p>
+  <figure class="post__cover"><img src="/assets/img/god-of-war-ragnarok-1-4-mlrd.jpg" alt="God of War: Ragnarök — $1,4 млрд выручки, оценка аналитиков" width="2400" height="1350" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-otkuda-1-4-mlrd">Откуда $1,4 млрд</a></li><li><a href="#section-pochemu-ona-do-sih-por-prodaetsya">Почему она до сих пор продаётся</a></li><li><a href="#section-ocenka">Оценка</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>21,6 млн копий и около $1,4 млрд выручки — оценка Alinea Analytics, а не данные Sony</li><li>75,2 % консольных продаж пришлось на PS5, физические копии — 27,5 %</li><li>В 2026 году игра продалась ещё 1,1 млн раз и принесла около $60 млн</li></ul></aside><div class="post__body"><p>4 ноября 2022 года Кратос вернулся, а спустя четыре года аналитическая фирма Alinea Analytics подсчитала, во что это обошлось и что принесло. По её оценке, God of War: Ragnarök продалась в 21,6 млн копий и сгенерировала около $1,4 млрд выручки — больше, чем любой другой эксклюзив PlayStation Studios на PS5.</p>
 <p>Сразу оговорка по статусу: это оценка сторонней аналитики, а не отчёт Sony. Sony Interactive Entertainment официальных цифр по Ragnarök не публиковала с 2023 года, так что все числа ниже — расчёт Alinea, а не бухгалтерия издателя.</p>
 <figure class="post__fig"><img src="/assets/img/god-of-war-ragnarok-1-4-mlrd-axe.jpg" alt="Северный воин с топорами: Ragnarök остаётся в продаже спустя четыре года после релиза" loading="lazy"></figure>
-<h2>Откуда $1,4 млрд</h2>
+<h2 id="section-otkuda-1-4-mlrd">Откуда $1,4 млрд</h2>
 <p>Раскладка по платформам: около 20,1 млн копий на консолях PlayStation и 1,6 млн в Steam. Внутри консольных продаж 75,2 % приходится на PS5 — то есть примерно 15,1 млн копий, остальные 5 млн — на PS4. Версия для прошлого поколения принесла около $300 млн, примерно пятую часть всей выручки.</p>
 <p>Физические копии — 27,5 % продаж на PlayStation. Для игры, которая вышла одновременно в цифре и на дисках, это высокая доля: спустя годы игроки всё ещё покупают коробки.</p>
-<h2>Почему она до сих пор продаётся</h2>
+<h2 id="section-pochemu-ona-do-sih-por-prodaetsya">Почему она до сих пор продаётся</h2>
 <p>В 2026 году Ragnarök купили ещё 1,1 млн раз, это около $60 млн, и 68 % суммы пришло с платформ PlayStation. Игра обогнала по продажам свежие релизы вроде Gears of War: E-Day и Saros — для эксклюзива четырёхлетней давности результат показательный.</p>
 <p>Отдельная строка — подписка. Ragnarök живёт в каталоге PlayStation Plus Extra примерно два года, и через сервис в неё сыграли около 6,7 млн человек. На продажи это, судя по цифрам, не повлияло: те, кому игра нужна в библиотеке, всё равно покупают.</p>
 <p>Для сравнения: Marvel's Spider-Man 2 аналитики оценивают в $1,3 млрд, Gran Turismo 7 — примерно в $840 млн.</p>
-<h2>Оценка</h2>
-<p>Самое интересное здесь — не первое место в списке, а 27,5 % физических копий. Sony с января 2028 года прекращает выпуск дисков для новых игр на своих консолях, и Ragnarök — наглядный пример того, сколько денег уходит вместе с полкой в магазине. Это не аргумент «диски спасут индустрию», но честная иллюстрация: спрос на коробки есть даже у игры, которой четыре года и которая лежит в подписке.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://ixbt.games/en/news/2026/11/05/god-of-war-ragnarok-stala-samoi-pribylnoi-igroi-playstation-studios-dlia-ps5-analitiki.html" rel="nofollow noopener" target="_blank">iXBT Games — God of War: Ragnarok стала самой прибыльной игрой PlayStation Studios</a></li><li><a href="https://vgtimes.com/gaming-news/173491-god-of-war-ragnark-has-sold-21-6-million-copies-alinea-analytics-estimates.html" rel="nofollow noopener" target="_blank">VGTimes — God of War Ragnarök Has Sold 21.6 Million Copies, Alinea Analytics Estimates</a></li><li><a href="https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/" rel="nofollow noopener" target="_blank">PlayStation Blog — Physical disc production ending in January 2028</a></li></ol></section>
-  <section class="share" data-share-root>
+<h2 id="section-ocenka">Оценка</h2>
+<p>Самое интересное здесь — не первое место в списке, а 27,5 % физических копий. Sony с января 2028 года прекращает выпуск дисков для новых игр на своих консолях, и Ragnarök — наглядный пример того, сколько денег уходит вместе с полкой в магазине. Это не аргумент «диски спасут индустрию», но честная иллюстрация: спрос на коробки есть даже у игры, которой четыре года и которая лежит в подписке.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://ixbt.games/en/news/2026/11/05/god-of-war-ragnarok-stala-samoi-pribylnoi-igroi-playstation-studios-dlia-ps5-analitiki.html" rel="nofollow noopener" target="_blank">iXBT Games — God of War: Ragnarok стала самой прибыльной игрой PlayStation Studios</a></li><li><a href="https://vgtimes.com/gaming-news/173491-god-of-war-ragnark-has-sold-21-6-million-copies-alinea-analytics-estimates.html" rel="nofollow noopener" target="_blank">VGTimes — God of War Ragnarök Has Sold 21.6 Million Copies, Alinea Analytics Estimates</a></li><li><a href="https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/" rel="nofollow noopener" target="_blank">PlayStation Blog — Physical disc production ending in January 2028</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fgod-of-war-ragnarok-1-4-mlrd.html&text=God%20of%20War%3A%20Ragnar%C3%B6k%20%E2%80%94%20%241%2C4%20%D0%BC%D0%BB%D1%80%D0%B4%20%D0%B2%D1%8B%D1%80%D1%83%D1%87%D0%BA%D0%B8%2C%20%D0%BE%D1%86%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fgod-of-war-ragnarok-1-4-mlrd.html&title=God%20of%20War%3A%20Ragnar%C3%B6k%20%E2%80%94%20%241%2C4%20%D0%BC%D0%BB%D1%80%D0%B4%20%D0%B2%D1%8B%D1%80%D1%83%D1%87%D0%BA%D0%B8%2C%20%D0%BE%D1%86%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fgod-of-war-ragnarok-1-4-mlrd.html&text=God%20of%20War%3A%20Ragnar%C3%B6k%20%E2%80%94%20%241%2C4%20%D0%BC%D0%BB%D1%80%D0%B4%20%D0%B2%D1%8B%D1%80%D1%83%D1%87%D0%BA%D0%B8%2C%20%D0%BE%D1%86%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fgod-of-war-ragnarok-1-4-mlrd.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fgod-of-war-ragnarok-1-4-mlrd-pin.jpg&description=God%20of%20War%3A%20Ragnar%C3%B6k%20%E2%80%94%20%241%2C4%20%D0%BC%D0%BB%D1%80%D0%B4%20%D0%B2%D1%8B%D1%80%D1%83%D1%87%D0%BA%D0%B8%2C%20%D0%BE%D1%86%D0%B5%D0%BD%D0%BA%D0%B0%20%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%BE%D0%B2" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fgod-of-war-ragnarok-1-4-mlrd.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="GTA VI на консолях: 30 fps держится не везде" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-playstation">
+  <div class="card__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-20T12:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">GTA VI на консолях: 30 fps держится не везде</a></h3>
     <p class="card__sum">Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1200-gta6-fps-na-konsolyah.html">Читать →</a><span class="srcc">источников: 9</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="GTA VI: 99 из 100 и рекорд Metacritic" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-18T15:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">GTA VI: 99 из 100 и рекорд Metacritic</a></h3>
     <p class="card__sum">За день до релиза спало эмбарго на рецензии GTA VI, и пресса выдала почти единодушный максимум: 99 из 100 на Metacritic по…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">Читать →</a><span class="srcc">источников: 11</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="PlayStation отбилась от иска на £2 млрд" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-17T18:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-1800-playstation-isk-2-mlrd.html">PlayStation отбилась от иска на £2 млрд</a></h3>
     <p class="card__sum">Лондонский трибунал по конкуренции 17 ноября отклонил коллективный иск к Sony почти на £2 млрд — 12,2 млн британских…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-1800-playstation-isk-2-mlrd.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article></div></section>
 </main>
@@ -164,9 +156,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -184,9 +175,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

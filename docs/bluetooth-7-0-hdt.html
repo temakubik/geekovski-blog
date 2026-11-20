@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/gadgets/">Гаджеты</a></li><li aria-current="page">Bluetooth 7.0: 7,5 Мбит/с и путь к lossless-звуку</li></ol></nav>
 <article class="post cat-gadgets">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T17:05:00+03:00">05.11.2026, 17:05</time></div>
@@ -100,51 +100,43 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Bluetooth SIG утвердила High Data Throughput — до 7,5 Мбит/с по Bluetooth LE, почти вчетверо быстрее прежнего режима. Это опциональная часть спецификации Core 7.0, а первым флагманским применением в 2027 году станет беспроводной звук без потерь.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>HDT поднимает максимальный битрейт Bluetooth LE с 2 до 7,5 Мбит/с</li><li>Функция опциональна: поддержка нужна и в источнике, и в наушниках</li><li>Первое флагманское применение — стандартизированное аудио без потерь, ожидается в 2027 году</li><li>В Core 7.0 вошли ещё четыре изменения: IPU, EKS, TAK и EPD</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/bluetooth-7-0-hdt.jpg" alt="Bluetooth 7.0: 7,5 Мбит/с и путь к lossless-звуку"></figure>
-  <div class="post__body"><p>4 ноября Bluetooth Special Interest Group объявила об утверждении High Data Throughput (HDT) — это опциональная функция в спецификации Bluetooth Core 7.0, которую совет директоров SIG принял 2 ноября. Главная цифра: максимальный поддерживаемый битрейт Bluetooth LE вырос с 2 Мбит/с до 7,5 Мбит/с, то есть почти вчетверо. Технически это новый физический уровень с более устойчивыми схемами модуляции, а не надстройка над старым.</p>
+  <figure class="post__cover"><img src="/assets/img/bluetooth-7-0-hdt.jpg" alt="Bluetooth 7.0: 7,5 Мбит/с и путь к lossless-звуку" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout "><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>HDT поднимает максимальный битрейт Bluetooth LE с 2 до 7,5 Мбит/с</li><li>Функция опциональна: поддержка нужна и в источнике, и в наушниках</li><li>Первое флагманское применение — стандартизированное аудио без потерь, ожидается в 2027 году</li><li>В Core 7.0 вошли ещё четыре изменения: IPU, EKS, TAK и EPD</li></ul></aside><div class="post__body"><p>4 ноября Bluetooth Special Interest Group объявила об утверждении High Data Throughput (HDT) — это опциональная функция в спецификации Bluetooth Core 7.0, которую совет директоров SIG принял 2 ноября. Главная цифра: максимальный поддерживаемый битрейт Bluetooth LE вырос с 2 Мбит/с до 7,5 Мбит/с, то есть почти вчетверо. Технически это новый физический уровень с более устойчивыми схемами модуляции, а не надстройка над старым.</p>
 <p>SIG продаёт HDT не как «ещё быстрее», а как четыре улучшения сразу. Данных за то же время проходит больше; за счёт спектральной эффективности в тех же радиоресурсах помещается больше трафика; энергоэффективность растёт, потому что радио быстрее отдаёт своё и уходит в режим пониженного потребления; надёжность тоже заявлена в списке — устойчивость связи в более шумной обстановке.</p>
 <p>Первое флагманское применение HDT — стандартизированное премиальное беспроводное аудио, и выйдет оно, по оценке SIG, в 2027 году. Речь именно о стандарте передачи звука без потерь и в высоком разрешении, плюс многоканальный объёмный и пространственный звук: сейчас lossless по Bluetooth — это набор проприетарных режимов у отдельных производителей, HDT должен дать общий.</p>
 <figure class="post__fig"><img src="/assets/img/bluetooth-7-0-hdt-hp.jpg" alt="Беспроводные наушники с подсветкой" loading="lazy"></figure>
 <p>«Bluetooth HDT выводит производительность Bluetooth на новый уровень, расширяя роль технологии на потребительском, коммерческом и промышленном рынках», — говорит гендиректор SIG Невилл Мейерс (перевод). Samsung и Nordic Semiconductor в пресс-релизе поддерживают: Джунсук Ким из Samsung называет выигрыш «больше, чем скоростью», а Эйвинд Стрём из Nordic приводит примеры — часы, которые синхронизируют тренировочные данные за секунды, очки с ИИ, которые быстрее отдают данные на обработку смартфону, и умный дом, где прошивка обновляется без заметного простоя.</p>
 <p>Оговорки важнее скорости. HDT — опция, а не обязательная часть Core 7.0, так что поддерживать её будут не все новые устройства; работать она должна с обеих сторон, в источнике и в приёмнике. Нынешние наушники получат её обновлением только если производитель об этом объявит. И 7,5 Мбит/с — это битрейт физического уровня, а не полезная пропускная способность приложения: реальная скорость всегда ниже, и до Wi-Fi HDT всё равно не дотягивает. В Core 7.0 помимо HDT вошли обновление параметров изохронной передачи (IPU), новая схема расписания ключей шифрования (EKS), временный ключ приложения (TAK) и отладка шифрования (EPD).</p>
-<p>Оценка: это одна из тех новостей, где цифра в заголовке врёт о сроках. 7,5 Мбит/с звучит как «завтра», но до первых устройств — 2027 год, до массовых наушников — ещё дольше, и всё это время рынок будет жить на LDAC, aptX и проприетарных lossless-режимах. Зато сама планка теперь общая: если HDT приживётся, выбирать наушники можно будет по звуку, а не по совместимости с телефоном.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.bluetooth.com/press/bluetooth-high-data-throughput-opens-a-new-chapter-in-wireless-performance/" rel="nofollow noopener" target="_blank">Bluetooth SIG — Bluetooth High Data Throughput opens a new chapter in wireless performance</a></li><li><a href="https://www.bluetooth.com/bluetooth-core-7-0-feature-overview/" rel="nofollow noopener" target="_blank">Bluetooth SIG — Bluetooth Core 7.0 feature overview</a></li><li><a href="https://www.computerra.ru/373259/bluetooth-poluchit-novyj-rezhim-peredachi-dannyh-so-skorostyu-do-7-5-mbit-s/" rel="nofollow noopener" target="_blank">Компьютерра — Bluetooth получит новый режим передачи данных со скоростью до 7,5 Мбит/с</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Оценка: это одна из тех новостей, где цифра в заголовке врёт о сроках. 7,5 Мбит/с звучит как «завтра», но до первых устройств — 2027 год, до массовых наушников — ещё дольше, и всё это время рынок будет жить на LDAC, aptX и проприетарных lossless-режимах. Зато сама планка теперь общая: если HDT приживётся, выбирать наушники можно будет по звуку, а не по совместимости с телефоном.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.bluetooth.com/press/bluetooth-high-data-throughput-opens-a-new-chapter-in-wireless-performance/" rel="nofollow noopener" target="_blank">Bluetooth SIG — Bluetooth High Data Throughput opens a new chapter in wireless performance</a></li><li><a href="https://www.bluetooth.com/bluetooth-core-7-0-feature-overview/" rel="nofollow noopener" target="_blank">Bluetooth SIG — Bluetooth Core 7.0 feature overview</a></li><li><a href="https://www.computerra.ru/373259/bluetooth-poluchit-novyj-rezhim-peredachi-dannyh-so-skorostyu-do-7-5-mbit-s/" rel="nofollow noopener" target="_blank">Компьютерра — Bluetooth получит новый режим передачи данных со скоростью до 7,5 Мбит/с</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fbluetooth-7-0-hdt.html&text=Bluetooth%207.0%3A%207%2C5%20%D0%9C%D0%B1%D0%B8%D1%82%2F%D1%81%20%D0%B8%20%D0%BF%D1%83%D1%82%D1%8C%20%D0%BA%20lossless-%D0%B7%D0%B2%D1%83%D0%BA%D1%83" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fbluetooth-7-0-hdt.html&title=Bluetooth%207.0%3A%207%2C5%20%D0%9C%D0%B1%D0%B8%D1%82%2F%D1%81%20%D0%B8%20%D0%BF%D1%83%D1%82%D1%8C%20%D0%BA%20lossless-%D0%B7%D0%B2%D1%83%D0%BA%D1%83" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fbluetooth-7-0-hdt.html&text=Bluetooth%207.0%3A%207%2C5%20%D0%9C%D0%B1%D0%B8%D1%82%2F%D1%81%20%D0%B8%20%D0%BF%D1%83%D1%82%D1%8C%20%D0%BA%20lossless-%D0%B7%D0%B2%D1%83%D0%BA%D1%83" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fbluetooth-7-0-hdt.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fbluetooth-7-0-hdt-pin.jpg&description=Bluetooth%207.0%3A%207%2C5%20%D0%9C%D0%B1%D0%B8%D1%82%2F%D1%81%20%D0%B8%20%D0%BF%D1%83%D1%82%D1%8C%20%D0%BA%20lossless-%D0%B7%D0%B2%D1%83%D0%BA%D1%83" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fbluetooth-7-0-hdt.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-20T10:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1000-huawei-osta-o1-pro.html">Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro</a></h3>
     <p class="card__sum">Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1000-huawei-osta-o1-pro.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="Flipper One: карманный Linux-компьютер собрал $12 млн" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-19T08:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-0800-flipper-one-kickstarter.html">Flipper One: карманный Linux-компьютер собрал $12 млн</a></h3>
     <p class="card__sum">Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-0800-flipper-one-kickstarter.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-18T14:20:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-yandex-pin-diktofon.html">«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября</a></h3>
     <p class="card__sum">Яндекс готовит носимый диктофон «Пин» — пластина размером с карту, которая записывает разговоры, отправляет их через телефон…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-yandex-pin-diktofon.html">Читать →</a><span class="srcc">источников: 4</span></div>
   </div>
 </article></div></section>
 </main>
@@ -159,9 +151,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -179,9 +170,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

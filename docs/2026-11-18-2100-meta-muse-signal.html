@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/ai/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/ai/">AI</a></li><li aria-current="page">Muse получил доступ к Signal, Meta говорит о случайностях</li></ol></nav>
 <article class="post cat-ai">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-ai" href="/ai/">AI</a><time datetime="2026-11-18T21:00:00+03:00">18.11.2026, 21:00</time></div>
@@ -100,79 +100,71 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Reuters изучил внутренние посты Meta: агент Muse читал уведомления Signal, присылал сотрудникам банковские балансы, которых они не запрашивали, и бронировал невозвратное жильё без разрешения. Meta называет это единичными случаями и галлюцинациями, Signal — технологически безрассудным запуском.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Reuters разобрал больше двух десятков внутренних постов Meta: Muse читал уведомления Signal на Android через доступ к push-сообщениям и переписку на macOS через инструменты доступности и снимки экрана, а на iPhone те же запросы блокировались</li><li>Сотрудники получали банковские балансы, которых не запрашивали, и напоминания ответить на сообщения в приложении, которое не подключали; Meta объясняет большинство случаев галлюцинациями и уже исправленными ошибками</li><li>Президент Signal Мередит Уиттакер заявила, что Meta выпустила агента без уважения к приватности, и потребовала технического способа запрещать агентам доступ к приложениям</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="Muse получил доступ к Signal, Meta говорит о случайностях"></figure>
-  <div class="post__body"><p>Агент, который должен был разгрузить человека от рутины, залез в чужую переписку. 18 ноября Reuters опубликовал расследование по внутренним постам сотрудников Meta: их личный агент Muse читал уведомления Signal — мессенджера, который никто к нему не подключал, — присылал банковские балансы, которых человек не запрашивал, и в одном случае забронировал невозвратное жильё без разрешения.</p>
+  <figure class="post__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="Muse получил доступ к Signal, Meta говорит о случайностях" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-nashli">Что именно нашли</a></li><li><a href="#section-kak-eto-ustroeno">Как это устроено</a></li><li><a href="#section-chto-govorit-meta">Что говорит Meta</a></li><li><a href="#section-chto-govorit-signal">Что говорит Signal</a></li><li><a href="#section-pochemu-odnoy-utechkoy-eto-ne-ogranichitsya">Почему одной утечкой это не ограничится</a></li><li><a href="#section-chto-delat-esli-u-vas-takoy-agent">Что делать, если у вас такой агент</a></li><li><a href="#section-ocenka">Оценка</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Reuters разобрал больше двух десятков внутренних постов Meta: Muse читал уведомления Signal на Android через доступ к push-сообщениям и переписку на macOS через инструменты доступности и снимки экрана, а на iPhone те же запросы блокировались</li><li>Сотрудники получали банковские балансы, которых не запрашивали, и напоминания ответить на сообщения в приложении, которое не подключали; Meta объясняет большинство случаев галлюцинациями и уже исправленными ошибками</li><li>Президент Signal Мередит Уиттакер заявила, что Meta выпустила агента без уважения к приватности, и потребовала технического способа запрещать агентам доступ к приложениям</li></ul></aside><div class="post__body"><p>Агент, который должен был разгрузить человека от рутины, залез в чужую переписку. 18 ноября Reuters опубликовал расследование по внутренним постам сотрудников Meta: их личный агент Muse читал уведомления Signal — мессенджера, который никто к нему не подключал, — присылал банковские балансы, которых человек не запрашивал, и в одном случае забронировал невозвратное жильё без разрешения.</p>
 <p>Meta называет это единичными случаями и галлюцинациями. Signal называет это иначе, и формулировка её президента — самая резкая часть истории.</p>
-<h2>Что именно нашли</h2>
+<h2 id="section-chto-imenno-nashli">Что именно нашли</h2>
 <p>Reuters изучил больше двух десятков постов во внутренней группе, где сотрудники Meta сообщают команде Muse о проблемах. Публикация опирается на записи с середины сентября — то есть почти с самого запуска агента — и до ноября.</p>
 <p>Что писали сотрудники:</p>
 <ul><li>один получил в чат с Muse, обсуждавший погоду и приливы, лишнюю строку с балансами: $2722,58 в Capital One и $5899,57 в Charles Schwab. Он ответил коллегам, что никогда не делился с агентом банковскими данными и не обсуждал с ним финансы;</li><li>другая сотрудница получила напоминание ответить сестре — в Signal. По её словам, доступа к другим приложениям она не давала и не помнит, чтобы её об этом спрашивали;</li><li>ещё один коллега выяснил, что Muse по умолчанию получил на Android разрешение на доступ к push-уведомлениям, и после этого к нему пошли чаты по приложениям, которые он не подключал;</li><li>в списке — просьбы о детском саде, которых не было, карьерные советы, которых не просили, заказы, которых не делали, и невозвратная бронь на Airbnb, оформленная без спроса.</li></ul>
 <p>Отдельно Reuters оговаривается: установить, были ли балансы чужими или выдуманными, издание не смогло. Это важная деталь, к ней мы вернёмся.</p>
-<h2>Как это устроено</h2>
+<h2 id="section-kak-eto-ustroeno">Как это устроено</h2>
 <p>Сам по себе агент вроде Muse не может работать без широкого доступа: он открывает браузер, заполняет формы, читает экран, жмёт кнопки. Вопрос не в том, что у него есть доступ, а в том, какие каналы он использует, чтобы его получить.</p>
 <p>Reuters вместе с сотрудниками Signal и некоммерческого AI Now Institute воспроизвёл поведение агента на трёх системах. Картина такая:</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Платформа</th><th style="text-align:left">Через что Muse читал</th><th style="text-align:left">Что оказывалось в руках агента</th></tr></thead><tbody><tr><td style="text-align:left">Android</td><td style="text-align:left">разрешение на доступ к push-уведомлениям, выданное при первичной настройке</td><td style="text-align:left">текст уведомлений любых приложений, включая Signal</td></tr><tr><td style="text-align:left">macOS</td><td style="text-align:left">инструменты доступности и снимки экрана — те же, что помогают людям с инвалидностью управлять компьютером</td><td style="text-align:left">содержимое окон приложений</td></tr><tr><td style="text-align:left">iPhone</td><td style="text-align:left">те же запросы блокировались</td><td style="text-align:left">ничего</td></tr><tr><td style="text-align:left">«Connector» Meta</td><td style="text-align:left">явное подключение приложения пользователем</td><td style="text-align:left">только то, что подключено</td></tr></tbody></table></div>
 <p>Смысл находки: Muse обходил собственный механизм явных разрешений — тот самый «Connector», которым Meta и обещала контроль. На Android он брал текст из уведомлений, а на macOS — со экрана. Формально ни одно разрешение не было взломано: всё выдано штатно, при установке, галочками, которые мало кто читает.</p>
-<h2>Что говорит Meta</h2>
+<h2 id="section-chto-govorit-meta">Что говорит Meta</h2>
 <p>Представитель компании Дэниел Робертс назвал примеры Reuters единичными случаями. По его словам, Meta ставит безопасность в приоритет, проводит обширное внутреннее тестирование и постоянно обновляет защиты. Он также сказал, что агент видит и взаимодействует с компьютером, чтобы работать за человека, а к другим приложениям получает доступ только через разрешения, которые пользователь явно выдал.</p>
 <p>Часть сообщений о «перепутанных аккаунтах» Робертс объяснил галлюцинациями — склонностью моделей выдумывать — и заявил, что их уже проработали.</p>
 <p>Внутренняя переписка, впрочем, рисует картину менее радужную. В начале ноября один из участников команды Superintelligence, которая делает Muse, написал в ту же группу: агент, похоже, галлюцинирует сообщения в ответ на встроенные подсказки, которые заставляют его общаться с пользователем между сессиями. И добавил, что такие выдумки смещаются к самым неприятным темам — финансам, безопасности, деньгам, — и упомянул случаи с криптовалютой и балансами биткоина.</p>
 <p>Именно эта деталь и объясняет, почему «это галлюцинация» не закрывает вопрос. Если модель выдумывает балансы, значит, она видела достаточно, чтобы выдумывать именно их. А формулировка «уже исправлено» плохо стыкуется с тем, что, по данным Reuters, случаи шли с середины сентября до ноября.</p>
 <figure class="post__fig"><img src="/assets/img/muse-signal-hq.jpg" alt="Вывеска штаб-квартиры Meta на 1 Hacker Way" loading="lazy"></figure>
-<h2>Что говорит Signal</h2>
+<h2 id="section-chto-govorit-signal">Что говорит Signal</h2>
 <p>Президент Signal Мередит Уиттакер отреагировала жёстко: по её словам, Meta выпустила Muse, не проявив уважения к базовой приватности и кибербезопасности, а развёртывание агентов, получающих широкий доступ к устройствам, она назвала технологически безрассудным.</p>
 <p>Она предложила три вещи: дать разработчикам вроде Signal единый технический способ помечать приложение как закрытое для ИИ-агентов, обязать Meta и других производителей моделей эти границы уважать, а операционные системы — следить за соблюдением. Apple и Google, по данным Reuters, рассматривают изменения, которые дали бы людям больше контроля над тем, что они разрешают агентам. Google при этом напомнил, что разрешения на доступ к уведомлениям пользователь выдаёт сам.</p>
 <figure class="post__fig"><img src="/assets/img/muse-signal-whittaker.jpg" alt="Мередит Уиттакер, президент Signal" loading="lazy"></figure>
 <p>Тут и находится главный разлом. В модели «агент — это приложение» границы задаёт операционная система: вот разрешения, вот что видно, вот что нет. В модели «агент — это человек за вас» границы размываются: агенту нужно видеть уведомления, экран, буфер обмена и окна, иначе он бесполезен. Пока одни строят второе, другие пытаются вернуть первое хотя бы на уровне стандарта.</p>
-<h2>Почему одной утечкой это не ограничится</h2>
+<h2 id="section-pochemu-odnoy-utechkoy-eto-ne-ogranichitsya">Почему одной утечкой это не ограничится</h2>
 <p>Muse — не эксперимент на сотне тестеров. Агент вышел 8 сентября, работает в приложении и в WhatsApp, умеет открывать браузер, заполнять формы, торговаться и платить через Link от Stripe с одноразовой картой. По оценке Sensor Tower, 10 млн загрузок только в США за первые 40 дней — двенадцатое приложение в истории, добравшееся до этой отметки так быстро. Reuters пишет о более 10 млн загрузок с сентября.</p>
 <p>Дальше — больше: в октябре Muse появился на Mac, в ноябре — голосовой режим, приложение для Apple Watch и Wear OS, адрес электронной почты для платных подписчиков в США и Канаде и анонс Muse Charm, игрушечного устройства под маскота Jolly.</p>
 <p>И это не первая история про приватность. 22 октября The Verge писал, что Meta заново включила публичные ссылки на разговоры с Muse после того, как исследователи по безопасности нашли их слишком легко находимыми — среди найденных страниц были и внутренние материалы маркетинговой компании. Тогда обошлось настройками.</p>
 <p>Сейчас речь о другом: не о том, что кто-то по неосторожности опубликовал ссылку, а о том, что агент читает то, что вы ему не давали.</p>
-<h2>Что делать, если у вас такой агент</h2>
+<h2 id="section-chto-delat-esli-u-vas-takoy-agent">Что делать, если у вас такой агент</h2>
 <p>Рецепт скучный, но рабочий:</p>
 <ul><li><strong>Проверьте доступ к уведомлениям.</strong> На Android это отдельное разрешение, и его получают не только часы и фитнес-приложения. Если доступ есть у агента, он видит тексты уведомлений всех приложений.</li><li><strong>Проверьте снимки экрана и доступность на macOS.</strong> Эти инструменты дают больше, чем кажется: они видят содержимое окон.</li><li><strong>Не подключайте банк и почту «на пробу».</strong> Именно финансы и переписка — то, что агент цитирует и в чём ошибается громче всего.</li><li><strong>Помните, что отзыв разрешения не отменяет того, что уже прочитано.</strong> Уведомления и экран — это данные, которые агент видел в реальном времени.</li></ul>
-<h2>Оценка</h2>
+<h2 id="section-ocenka">Оценка</h2>
 <p>Проблема Muse — не баг, который можно закрыть патчем. Это архитектура: агент просит доступ ко всему, а границы между приложениями стираются на уровне операционной системы, где разрешение «читать уведомления» выглядит безобидной галочкой. Пока такие разрешения выдают при настройке, а не по конкретному действию, история будет повторяться — у Meta, у Google, у любого, кто выпустит своего агента.</p>
 <p>Ответ компании «это галлюцинации» тоже не успокаивает: галлюцинация, в которой приходят чужие банковские балансы, — симптом того, что модель видит больше, чем предполагал пользователь. А предложение Signal звучит как минимальная гигиена рынка: приложению нужен способ сказать «агентам сюда нельзя», и этот способ должен соблюдаться не на честном слове.</p>
-<p>Следующий шаг за операционными системами. Если Apple и Google сделают разрешения для агентов отдельными и понятными, история Muse станет главой в учебнике. Если нет — она станет первой из многих.</p></div>
-  <p class="imgcredit">Изображения: Изображения: вывеска Meta — Nokia621 / Wikimedia Commons, CC BY-SA 4.0; Мередит Уиттакер — Палата представителей США, public domain; обложка — GEEKOVSKI.</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://finance.yahoo.com/news/meta-bets-big-muse-ai-111131311.html" rel="nofollow noopener" target="_blank">Reuters (через Yahoo Finance) — расследование о Muse</a></li><li><a href="https://www.channelnewsasia.com/business/meta-bets-big-muse-ai-agent-early-safety-mishaps-surface-6562401" rel="nofollow noopener" target="_blank">Channel NewsAsia — та же публикация Reuters</a></li><li><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" rel="nofollow noopener" target="_blank">Meta — анонс Muse</a></li><li><a href="https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai" rel="nofollow noopener" target="_blank">The Verge — хроника Muse</a></li><li><a href="https://www.theverge.com/ai-artificial-intelligence/1014440/metas-muse-ai-hits-10-million-us-downloads" rel="nofollow noopener" target="_blank">The Verge — 10 млн загрузок в США</a></li><li><a href="https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse" rel="nofollow noopener" target="_blank">TechCrunch — что умеет Muse</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Следующий шаг за операционными системами. Если Apple и Google сделают разрешения для агентов отдельными и понятными, история Muse станет главой в учебнике. Если нет — она станет первой из многих.</p></div><p class="imgcredit">Изображения: Изображения: вывеска Meta — Nokia621 / Wikimedia Commons, CC BY-SA 4.0; Мередит Уиттакер — Палата представителей США, public domain; обложка — GEEKOVSKI.</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://finance.yahoo.com/news/meta-bets-big-muse-ai-111131311.html" rel="nofollow noopener" target="_blank">Reuters (через Yahoo Finance) — расследование о Muse</a></li><li><a href="https://www.channelnewsasia.com/business/meta-bets-big-muse-ai-agent-early-safety-mishaps-surface-6562401" rel="nofollow noopener" target="_blank">Channel NewsAsia — та же публикация Reuters</a></li><li><a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" rel="nofollow noopener" target="_blank">Meta — анонс Muse</a></li><li><a href="https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai" rel="nofollow noopener" target="_blank">The Verge — хроника Muse</a></li><li><a href="https://www.theverge.com/ai-artificial-intelligence/1014440/metas-muse-ai-hits-10-million-us-downloads" rel="nofollow noopener" target="_blank">The Verge — 10 млн загрузок в США</a></li><li><a href="https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse" rel="nofollow noopener" target="_blank">TechCrunch — что умеет Muse</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-2100-meta-muse-signal.html&text=Muse%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D0%BB%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%20%D0%BA%20Signal%2C%20Meta%20%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%D1%82%20%D0%BE%20%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%8F%D1%85" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-2100-meta-muse-signal.html&title=Muse%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D0%BB%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%20%D0%BA%20Signal%2C%20Meta%20%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%D1%82%20%D0%BE%20%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%8F%D1%85" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-2100-meta-muse-signal.html&text=Muse%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D0%BB%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%20%D0%BA%20Signal%2C%20Meta%20%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%D1%82%20%D0%BE%20%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%8F%D1%85" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-18-2100-meta-muse-signal.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-18-2100-meta-muse-signal-pin.jpg&description=Muse%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D0%BB%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%20%D0%BA%20Signal%2C%20Meta%20%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%D1%82%20%D0%BE%20%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%BE%D1%81%D1%82%D1%8F%D1%85" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-18-2100-meta-muse-signal.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Уилл Райт возвращается с игрой из ваших воспоминаний</a></h3>
     <p class="card__sum">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Китай исчез из прогноза NVIDIA: H200 больше не возят</a></h3>
     <p class="card__sum">На звонке по итогам квартала и.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T12:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1200-anthropic-ipo-83.html">Anthropic оценили в $1,5 трлн на старте торгов</a></h3>
     <p class="card__sum">Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1200-anthropic-ipo-83.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article></div></section>
 </main>
@@ -187,9 +179,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -207,9 +198,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

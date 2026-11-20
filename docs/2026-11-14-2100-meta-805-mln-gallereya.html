@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/gadgets/">Гаджеты</a></li><li aria-current="page">Италия оштрафовала Meta на €805 млн за галерею</li></ol></nav>
 <article class="post cat-gadgets">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-14T21:00:00+03:00">14.11.2026, 21:00</time></div>
@@ -100,11 +100,9 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Итальянский Garante оштрафовал Meta Platforms Ireland на €805 млн за то, что Facebook для Android читал фото, видео и метаданные из галерей итальянских пользователей по одному общему разрешению, а функция подсказок из галереи была включена по умолчанию. Это крупнейший штраф в истории итальянского регулятора.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>€805 млн (около $887 млн) — это 0,47 % мирового оборота Meta и крупнейший штраф, который когда-либо выписывал итальянский регулятор</li><li>Нарушение не по GDPR, а по ePrivacy: незаконными признаны одно разрешение на всё приложение и включённая по умолчанию функция подсказок из галереи</li><li>У Meta есть 60 дней, чтобы спрашивать отдельное согласие и держать функцию выключенной у всех — включая тех, кто доступ уже разрешил</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/meta-805-mln-gallereya.jpg" alt="Италия оштрафовала Meta на €805 млн за галерею"></figure>
-  <div class="post__body"><p>Итальянское управление по защите персональных данных (Garante per la protezione dei dati personali) в субботу, 14 ноября, <a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080">оштрафовало</a> Meta Platforms Ireland Limited на 805 миллионов евро — по курсу Reuters это около 887 миллионов долларов. Формально претензия звучит почти буднично: приложение Facebook для Android получало доступ к фотографиям, видеозаписям и связанным с ними метаданным на смартфонах итальянских пользователей, «не получив конкретного согласия и не проинформировав их должным образом».</p>
+  <figure class="post__cover"><img src="/assets/img/meta-805-mln-gallereya.jpg" alt="Италия оштрафовала Meta на €805 млн за галерею" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-ne-ponravilos-regulyatoru">Что именно не понравилось регулятору</a></li><li><a href="#section-pochemu-eprivacy-a-ne-gdpr">Почему ePrivacy, а не GDPR</a></li><li><a href="#section-chto-teper-dolzhna-sdelat-meta">Что теперь должна сделать Meta</a></li><li><a href="#section-chego-v-dele-net-vopros-pro-ii-otlozhen">Чего в деле нет: вопрос про ИИ отложен</a></li><li><a href="#section-gde-etot-shtraf-sredi-prochih">Где этот штраф среди прочих</a></li><li><a href="#section-chto-proverit-u-sebya-v-telefone">Что проверить у себя в телефоне</a></li><li><a href="#section-nasha-ocenka">Наша оценка</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>€805 млн (около $887 млн) — это 0,47 % мирового оборота Meta и крупнейший штраф, который когда-либо выписывал итальянский регулятор</li><li>Нарушение не по GDPR, а по ePrivacy: незаконными признаны одно разрешение на всё приложение и включённая по умолчанию функция подсказок из галереи</li><li>У Meta есть 60 дней, чтобы спрашивать отдельное согласие и держать функцию выключенной у всех — включая тех, кто доступ уже разрешил</li></ul></aside><div class="post__body"><p>Итальянское управление по защите персональных данных (Garante per la protezione dei dati personali) в субботу, 14 ноября, <a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080">оштрафовало</a> Meta Platforms Ireland Limited на 805 миллионов евро — по курсу Reuters это около 887 миллионов долларов. Формально претензия звучит почти буднично: приложение Facebook для Android получало доступ к фотографиям, видеозаписям и связанным с ними метаданным на смартфонах итальянских пользователей, «не получив конкретного согласия и не проинформировав их должным образом».</p>
 <p>Так выглядит главный пункт: дело не в том, что снимки куда-то уехали, а в том, как именно приложение получило ключи от галереи. Штраф — примерно 0,47 % мирового оборота группы, и это крупнейшая сумма, которую итальянский регулятор когда-либо взыскивал. Meta* на момент публикации релиза не комментировала решение; право на апелляцию у компании есть.</p>
-<h2>Что именно не понравилось регулятору</h2>
+<h2 id="section-chto-imenno-ne-ponravilos-regulyatoru">Что именно не понравилось регулятору</h2>
 <p>Речь о функции «Ottieni suggerimenti dalla galleria quando navighi su Facebook» — «получать подсказки из галереи, пока листаешь ленту». Она появилась в 2023 году: во время просмотра Facebook приложение подсовывает фотографии и видео из памяти телефона как идеи для публикации. Сама по себе механика безобидная — беда в том, как её включили.</p>
 <p>Garante перечисляет три вещи, которые в сумме и стали нарушением:</p>
 <ul><li>доступ к галерее запрашивался <strong>одним разрешением на всё приложение</strong>, хотя внутри Facebook живут разные функции с разными потребностями;</li><li>перед этим разрешением показывали общее предупреждение «abilitare altre funzioni» — «включить другие функции», из которого человек не мог понять, что заодно разрешает и подсказки из галереи;</li><li>сама функция была <strong>включена по умолчанию</strong>.</li></ul>
@@ -112,64 +110,58 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <figure class="post__fig"><img src="/assets/img/meta-805-mln-gallereya-foto.jpg" alt="Смартфон в руках: приложение для Android просит доступ к галерее одним общим разрешением, а не отдельным для каждой функции" loading="lazy"></figure>
 <p>История началась не с проверки ради галочки: в июле 2025 года в Garante пожаловался Centro Tutela Consumatori Utenti — центр защиты потребителей из Больцано. Регулятор провёл собственную техническую экспертизу и в итоге оценил число затронутых пользователей примерно в 20 миллионов — это практически все Android-устройства в Италии, где установлен Facebook.</p>
 <figure class="post__fig"><img src="/assets/img/meta-805-mln-gallereya-rim.jpg" alt="Рим: штаб-квартира итальянского регулятора по защите персональных данных находится на площади Венеция" loading="lazy"></figure>
-<h2>Почему ePrivacy, а не GDPR</h2>
+<h2 id="section-pochemu-eprivacy-a-ne-gdpr">Почему ePrivacy, а не GDPR</h2>
 <p>Тут начинается юридическая тонкость, из-за которой дело и оказалось в Риме, а не в Дублине. Обычно по GDPR Meta разбирает ирландский Data Protection Commission: европейская штаб-квартира компании в Ирландии, а регламент работает по принципу «одного окна» — одна ведущая надзорная инстанция на всю Европу.</p>
 <p>Но нарушение здесь не по GDPR, а по статье 122 итальянского Кодекса о защите данных, которая переносит европейскую директиву ePrivacy. Логика директивы другая: смартфон — часть личной сферы человека, и любой доступ к хранящейся в нём информации требует <strong>свободного и осознанного согласия</strong>. Независимо от того, передавались ли данные на серверы и был ли доказан вред. По той же логике ePrivacy не знает механизма «одного окна» — поэтому Meta не удалось перевести разговор в ирландское русло: Garante прямо отклонил возражение компании о своей некомпетентности.</p>
 <p>Разница на практике огромна. По GDPR надо доказать неправомерную обработку и оценить ущерб; по ePrivacy достаточно показать, что приложение получило доступ к содержимому устройства без отдельного, конкретного и понятного согласия. Именно поэтому штраф не попадёт в рейтинги «самых больших GDPR-штрафов» — он из другой категории.</p>
-<h2>Что теперь должна сделать Meta</h2>
+<h2 id="section-chto-teper-dolzhna-sdelat-meta">Что теперь должна сделать Meta</h2>
 <p>Предписание расписано по срокам:</p>
 <ul><li><strong>60 дней</strong> — переделать согласие: отдельный запрос именно на подсказки из галереи, с внятным объяснением, зачем это нужно, что это означает доступ к галерее и как функцию отключить. Держать её выключенной по умолчанию — в том числе у тех, кто разрешение уже дал. Если срок пройдёт без изменений, включать функцию пользователям без действительного согласия будет нельзя;</li><li><strong>30 дней</strong> — сообщить регулятору, какие шаги уже предприняты;</li><li><strong>90 дней</strong> — отчитаться о принятых мерах.</li></ul>
 <p>Размер штрафа регулятор объяснил четырьмя факторами: охват (около 20 миллионов человек), длительность нарушения (для тех, кто не обновил приложение или выдал полный доступ, оно продолжается), предыдущее решение против компании 2019 года и, как выразился Garante, слабое сотрудничество в ходе разбирательства. В пользу Meta зачли изменения, внесённые после жалобы, — но признали их запоздалыми и действующими только для тех, кто обновляет приложение.</p>
-<h2>Чего в деле нет: вопрос про ИИ отложен</h2>
+<h2 id="section-chego-v-dele-net-vopros-pro-ii-otlozhen">Чего в деле нет: вопрос про ИИ отложен</h2>
 <p>Отдельно стоит сказать, чего в решении <strong>не</strong> было, потому что именно это чаще всего домысливают. Проверка не касалась возможного использования фотографий и видео для обучения моделей искусственного интеллекта — Meta это отрицает, и регулятор не стал делать выводов на этот счёт.</p>
 <p>Зато Garante оставил за собой право отдельно разобраться с новой функцией, запущенной в 2026 году: она позволяет обрабатывать содержимое галереи <strong>в облаке</strong>. Это уже другой разговор — с потенциально другими последствиями, и именно там сходятся приватность и обучение моделей.</p>
-<h2>Где этот штраф среди прочих</h2>
+<h2 id="section-gde-etot-shtraf-sredi-prochih">Где этот штраф среди прочих</h2>
 <p>По деньгам 805 миллионов евро — второй по величине эпизод в истории претензий ЕС к Meta, но первый, который прошёл не по GDPR. Для сравнения — крупнейшие решения против компании за последние годы:</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Дата</th><th style="text-align:left">Регулятор</th><th style="text-align:left">Сумма</th><th style="text-align:left">За что</th></tr></thead><tbody><tr><td style="text-align:left">Сентябрь 2021</td><td style="text-align:left">DPC (Ирландия)</td><td style="text-align:left">€225 млн</td><td style="text-align:left">WhatsApp: непрозрачное информирование о передаче данных</td></tr><tr><td style="text-align:left">Сентябрь 2022</td><td style="text-align:left">DPC (Ирландия)</td><td style="text-align:left">€405 млн</td><td style="text-align:left">Instagram: данные подростков, публичность аккаунтов по умолчанию</td></tr><tr><td style="text-align:left">Январь 2023</td><td style="text-align:left">DPC (Ирландия)</td><td style="text-align:left">€390 млн</td><td style="text-align:left">Facebook и Instagram: нет законного основания для рекламы на данных</td></tr><tr><td style="text-align:left">Май 2023</td><td style="text-align:left">DPC (Ирландия)</td><td style="text-align:left">€1,2 млрд</td><td style="text-align:left">Передача данных пользователей из ЕС в США после Schrems II</td></tr><tr><td style="text-align:left">Ноябрь 2026</td><td style="text-align:left">Garante (Италия)</td><td style="text-align:left">€805 млн</td><td style="text-align:left">Facebook для Android: доступ к галерее без отдельного согласия</td></tr></tbody></table></div>
 <p>Обратите внимание на пропорции: 1,2 миллиарда в 2023-м не остановили ни передачу данных, ни рекламную механику — Meta просто сменила юридические обоснования и продолжила. Штрафы такого размера компания проходит как расходную статью. А вот предписание поменять конкретный интерфейс — это то, что видит пользователь. И именно оно здесь главное.</p>
-<h2>Что проверить у себя в телефоне</h2>
+<h2 id="section-chto-proverit-u-sebya-v-telefone">Что проверить у себя в телефоне</h2>
 <p>В России Facebook заблокирован с 2022 года, а сама Meta* признана экстремистской организацией и запрещена, так что описанная история напрямую касается итальянских пользователей. Но механика — универсальная, и проверять её стоит на любом Android:</p>
 <ul><li><strong>Разрешения приложения.</strong> «Настройки» → «Приложения» → нужная программа → «Разрешения» → «Фото и видео». С Android 13 можно выдать доступ не ко всей галерее, а только к выбранным снимкам — если приложение просит «все фото», это повод задуматься, зачем ему весь архив;</li><li><strong>Функции «по умолчанию».</strong> Почти в каждом крупном приложении есть разделы вроде «подсказок из галереи», «умных подборок» и «автозагрузки» — они включены с момента установки. Искать их надо в настройках приватности, а не ждать, пока о них напишут в релизе;</li><li><strong>Общее разрешение на всё.</strong> Формулировка «разрешить другие функции» — типичный способ получить доступ к большему, чем человек имел в виду. Если согласие непонятно сформулировано, ответ «нет» ничего не стоит.</li></ul>
-<h2>Наша оценка</h2>
+<h2 id="section-nasha-ocenka">Наша оценка</h2>
 <p>Это оценка, а не факт: 805 миллионов евро звучат громко, но 0,47 % оборота — сумма, которую Meta переживёт без пересмотра стратегии, и почти наверняка компания будет апеллировать. Интереснее другое. Впервые так внятно, на уровне национального регулятора, зафиксировано: <strong>одно разрешение на всё приложение плюс функция, включённая по умолчанию, — уже нарушение</strong>, даже если ничего не утекло и никто не пострадал. Это ровно та схема, по которой десятилетиями работают сотни приложений — от соцсетей до простых фонариков.</p>
 <p>И ещё один нюанс, который стоит держать в голове: вопрос про использование снимков для обучения ИИ в этом деле не рассматривался, хотя именно он беспокоит людей больше всего. Ответ на него отложен — и, судя по формулировкам Garante, не забыт.</p>
-<p>Meta (Facebook, Instagram) признана экстремистской организацией и запрещена в РФ.</p></div>
-  <p class="imgcredit">Изображения: Nokia621 / Wikimedia Commons, CC BY-SA 4.0. Фото в тексте: Shixart1985 / Wikimedia Commons, CC BY 2.0; Paolo Costa Baldi / Wikimedia Commons, CC BY-SA 3.0.</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080" rel="nofollow noopener" target="_blank">Garante per la protezione dei dati personali — Facebook: il Garante Privacy sanziona Meta per 805 milioni di euro</a></li><li><a href="https://www.cnbc.com/2026/11/14/italy-fines-meta-887-million-over-android-users-data-access.html" rel="nofollow noopener" target="_blank">Reuters (via CNBC) — Italy fines Meta $887 million over Android users&#x27; data access</a></li><li><a href="https://aljazeera.com/news/2026/11/14/italy-fines-meta-880m-over-photo-privacy" rel="nofollow noopener" target="_blank">Al Jazeera — Italy fines Meta $880m over photo privacy</a></li><li><a href="https://www.ansa.it/sito/notizie/politica/2026/11/14/garante-805-milioni-di-multa-a-meta-per-luso-di-foto-su-fb-senza-consenso_c28909e5-4d3b-4ec6-9d7c-e23ea349b64d.html" rel="nofollow noopener" target="_blank">ANSA — Garante: 805 milioni di multa a Meta per l&#x27;uso di foto su Fb senza consenso</a></li><li><a href="https://www.ilsole24ore.com/art/meta-garante-privacy-multa-805-mln-accesso-facebook-foto-e-video-AJqYzjGC" rel="nofollow noopener" target="_blank">Il Sole 24 Ore — Meta: Garante Privacy, multa da 805 mln per accesso di Facebook a foto e video</a></li><li><a href="https://www.dataprotection.ie/en/dpc-guidance/decisions/fines" rel="nofollow noopener" target="_blank">Data Protection Commission (Ирландия) — список решений и штрафов</a></li><li><a href="https://edpb.europa.eu/news/news/2023/12-billion-euro-fine-facebook-result-edpb-binding-decision_en" rel="nofollow noopener" target="_blank">EDPB — 1.2 billion euro fine for Facebook as a result of EDPB binding decision</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Meta (Facebook, Instagram) признана экстремистской организацией и запрещена в РФ.</p></div><p class="imgcredit">Изображения: Nokia621 / Wikimedia Commons, CC BY-SA 4.0. Фото в тексте: Shixart1985 / Wikimedia Commons, CC BY 2.0; Paolo Costa Baldi / Wikimedia Commons, CC BY-SA 3.0.</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080" rel="nofollow noopener" target="_blank">Garante per la protezione dei dati personali — Facebook: il Garante Privacy sanziona Meta per 805 milioni di euro</a></li><li><a href="https://www.cnbc.com/2026/11/14/italy-fines-meta-887-million-over-android-users-data-access.html" rel="nofollow noopener" target="_blank">Reuters (via CNBC) — Italy fines Meta $887 million over Android users&#x27; data access</a></li><li><a href="https://aljazeera.com/news/2026/11/14/italy-fines-meta-880m-over-photo-privacy" rel="nofollow noopener" target="_blank">Al Jazeera — Italy fines Meta $880m over photo privacy</a></li><li><a href="https://www.ansa.it/sito/notizie/politica/2026/11/14/garante-805-milioni-di-multa-a-meta-per-luso-di-foto-su-fb-senza-consenso_c28909e5-4d3b-4ec6-9d7c-e23ea349b64d.html" rel="nofollow noopener" target="_blank">ANSA — Garante: 805 milioni di multa a Meta per l&#x27;uso di foto su Fb senza consenso</a></li><li><a href="https://www.ilsole24ore.com/art/meta-garante-privacy-multa-805-mln-accesso-facebook-foto-e-video-AJqYzjGC" rel="nofollow noopener" target="_blank">Il Sole 24 Ore — Meta: Garante Privacy, multa da 805 mln per accesso di Facebook a foto e video</a></li><li><a href="https://www.dataprotection.ie/en/dpc-guidance/decisions/fines" rel="nofollow noopener" target="_blank">Data Protection Commission (Ирландия) — список решений и штрафов</a></li><li><a href="https://edpb.europa.eu/news/news/2023/12-billion-euro-fine-facebook-result-edpb-binding-decision_en" rel="nofollow noopener" target="_blank">EDPB — 1.2 billion euro fine for Facebook as a result of EDPB binding decision</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-2100-meta-805-mln-gallereya.html&text=%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F%20%D0%BE%D1%88%D1%82%D1%80%D0%B0%D1%84%D0%BE%D0%B2%D0%B0%D0%BB%D0%B0%20Meta%20%D0%BD%D0%B0%20%E2%82%AC805%20%D0%BC%D0%BB%D0%BD%20%D0%B7%D0%B0%20%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-2100-meta-805-mln-gallereya.html&title=%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F%20%D0%BE%D1%88%D1%82%D1%80%D0%B0%D1%84%D0%BE%D0%B2%D0%B0%D0%BB%D0%B0%20Meta%20%D0%BD%D0%B0%20%E2%82%AC805%20%D0%BC%D0%BB%D0%BD%20%D0%B7%D0%B0%20%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-2100-meta-805-mln-gallereya.html&text=%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F%20%D0%BE%D1%88%D1%82%D1%80%D0%B0%D1%84%D0%BE%D0%B2%D0%B0%D0%BB%D0%B0%20Meta%20%D0%BD%D0%B0%20%E2%82%AC805%20%D0%BC%D0%BB%D0%BD%20%D0%B7%D0%B0%20%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-14-2100-meta-805-mln-gallereya.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-14-2100-meta-805-mln-gallereya-pin.jpg&description=%D0%98%D1%82%D0%B0%D0%BB%D0%B8%D1%8F%20%D0%BE%D1%88%D1%82%D1%80%D0%B0%D1%84%D0%BE%D0%B2%D0%B0%D0%BB%D0%B0%20Meta%20%D0%BD%D0%B0%20%E2%82%AC805%20%D0%BC%D0%BB%D0%BD%20%D0%B7%D0%B0%20%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D1%8E" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-14-2100-meta-805-mln-gallereya.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-20T10:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1000-huawei-osta-o1-pro.html">Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro</a></h3>
     <p class="card__sum">Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1000-huawei-osta-o1-pro.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="Flipper One: карманный Linux-компьютер собрал $12 млн" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-19T08:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-0800-flipper-one-kickstarter.html">Flipper One: карманный Linux-компьютер собрал $12 млн</a></h3>
     <p class="card__sum">Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-0800-flipper-one-kickstarter.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-18T14:20:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-yandex-pin-diktofon.html">«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября</a></h3>
     <p class="card__sum">Яндекс готовит носимый диктофон «Пин» — пластина размером с карту, которая записывает разговоры, отправляет их через телефон…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-yandex-pin-diktofon.html">Читать →</a><span class="srcc">источников: 4</span></div>
   </div>
 </article></div></section>
 </main>
@@ -184,9 +176,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -204,9 +195,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

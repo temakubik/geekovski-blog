@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/ai/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/ai/">AI</a></li><li aria-current="page">Китай исчез из прогноза NVIDIA: H200 больше не возят</li></ol></nav>
 <article class="post cat-ai">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11.2026, 21:00</time></div>
@@ -100,71 +100,63 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">На звонке по итогам квартала и. о. гендиректора Колетт Кресс заявила, что NVIDIA больше не поставляет лицензионные Hopper в Китай, и в прогнозе на следующий квартал китайских чипов нет вообще. Причину остановки компания не назвала и не уточнила, постоянная ли она.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>За квартал лицензионные Hopper дали в Китае $2,4 млрд, около 2 % выручки, но в прогнозе на IV квартал китайских ускорителей уже нет — Кресс: поставок больше не будет</li><li>Выручка квартала — $115,8 млрд (+103 % год к году), дата-центры — $107,6 млрд (+110 %), прогноз на IV квартал — $130 млрд без Китая; цель роста на фискальный 2028-й поднята с 70 % до 75 %</li><li>Причины остановки не объяснили; Jefferies считает, что новые правила США стоят $44–62 млрд выручки дата-центров в следующем году, а SEC, по данным WSJ, ведёт проверку компании</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят"></figure>
-  <div class="post__body"><p>17 ноября NVIDIA впервые отчиталась без Дженсена Хуанга: основатель ушёл с поста гендиректора 12 ноября, и компанию на звонке представляла финансистка Колетт Кресс, ставшая и. о. гендиректора. Цифры получились такими, что акционерам можно было выдохнуть: выручка квартала $115,84 млрд, вдвое больше, чем год назад, прибыль на акцию выше ожиданий, прогноз на следующий квартал тоже выше консенсуса.</p>
+  <figure class="post__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="Китай исчез из прогноза NVIDIA: H200 больше не возят" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-chto-imenno-skazala-kress">Что именно сказала Кресс</a></li><li><a href="#section-dver-kotoruyu-otkryval-huang">Дверь, которую открывал Хуанг</a></li><li><a href="#section-pochemu-pekin-sam-ne-beret">Почему Пекин сам не берёт</a></li><li><a href="#section-kvartal-kotoryy-ne-zametil-poteri">Квартал, который не заметил потери</a></li><li><a href="#section-gde-nastoyaschiy-risk-ne-kitay-a-singapur">Где настоящий риск: не Китай, а Сингапур</a></li><li><a href="#section-chto-eto-znachit">Что это значит</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>За квартал лицензионные Hopper дали в Китае $2,4 млрд, около 2 % выручки, но в прогнозе на IV квартал китайских ускорителей уже нет — Кресс: поставок больше не будет</li><li>Выручка квартала — $115,8 млрд (+103 % год к году), дата-центры — $107,6 млрд (+110 %), прогноз на IV квартал — $130 млрд без Китая; цель роста на фискальный 2028-й поднята с 70 % до 75 %</li><li>Причины остановки не объяснили; Jefferies считает, что новые правила США стоят $44–62 млрд выручки дата-центров в следующем году, а SEC, по данным WSJ, ведёт проверку компании</li></ul></aside><div class="post__body"><p>17 ноября NVIDIA впервые отчиталась без Дженсена Хуанга: основатель ушёл с поста гендиректора 12 ноября, и компанию на звонке представляла финансистка Колетт Кресс, ставшая и. о. гендиректора. Цифры получились такими, что акционерам можно было выдохнуть: выручка квартала $115,84 млрд, вдвое больше, чем год назад, прибыль на акцию выше ожиданий, прогноз на следующий квартал тоже выше консенсуса.</p>
 <p>Но главная новость была не в таблицах. В самом конце Кресс сказала, что NVIDIA прекратила поставлять в Китай лицензионные ускорители Hopper — те самые H200, за право продавать которые компания боролась несколько лет и которые ещё в январе Вашингтон разрешил отправлять одобренным покупателям. Китай убрали из прогноза целиком.</p>
-<h2>Что именно сказала Кресс</h2>
+<h2 id="section-chto-imenno-skazala-kress">Что именно сказала Кресс</h2>
 <p>Формулировка из звонка, дословно: «Our guidance does not have any licenced Hopper data centre products included, and we are no longer shipping licenced Hopper data centre products to China». В переводе на простой язык: в прогнозе на текущий квартал китайских Hopper нет ни на доллар, и отгрузок туда тоже больше нет.</p>
 <p>Дальше — важные оговорки, которые компания не сделала. Причину остановки Кресс не назвала. Постоянное ли это решение, не уточнила. Планирует ли NVIDIA ещё какой-то бизнес в Китае, тоже не сказала. Reuters прямо отмечает: объяснений не было ни одного.</p>
 <p>Что известно числами: за квартал, закончившийся 25 октября, лицензионные Hopper принесли в Китае $2,4 млрд — примерно 2 % выручки. Для сравнения, вдумчивые критики компании годами говорили, что до 20 % выручки так или иначе связано с китайским спросом, а New Street Research оценивал прямую и косвенную долю Китая в 10 %. Даже если верить нижней оценке, $2,4 млрд — это не тот масштаб, ради которого стоило терпеть политический скандал.</p>
-<h2>Дверь, которую открывал Хуанг</h2>
+<h2 id="section-dver-kotoruyu-otkryval-huang">Дверь, которую открывал Хуанг</h2>
 <p>Схема с H200 была личным проектом Хуанга. Именно он лоббировал её у Дональда Трампа после саммита с Си Цзиньпином, и в январе Минторг США смягчил лицензионную политику: заявки стали рассматривать индивидуально, при условии, что чипы идут через территорию США — так Вашингтон получал 25-процентную пошлину на каждую партию. Разрешение получили десять китайских компаний, включая Alibaba, Tencent и ByteDance.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Когда</th><th style="text-align:left">Что произошло</th></tr></thead><tbody><tr><td style="text-align:left">2022</td><td style="text-align:left">США вводят экспортный контроль на продвинутые ускорители, Китай отрезан от топовых чипов</td></tr><tr><td style="text-align:left">2025</td><td style="text-align:left">После саммита Трампа и Си разрешение на H200 для одобренных китайских покупателей</td></tr><tr><td style="text-align:left">Январь 2026</td><td style="text-align:left">Минторг США смягчает лицензирование H200; схема с провозом через США и пошлиной 25 %</td></tr><tr><td style="text-align:left">Осень 2026</td><td style="text-align:left">Пекин задерживает разрешения на крупный импорт: около 600 тысяч H200 стоят в Гонконге, крупные интернет-компании получили примерно по 10 тысяч чипов</td></tr><tr><td style="text-align:left">16 ноября 2026</td><td style="text-align:left">Новые правила США: лицензии для поставок в Сингапур, Малайзию, Индонезию, Таиланд и Бразилию, плюс контроль удалённого доступа</td></tr><tr><td style="text-align:left">17 ноября 2026</td><td style="text-align:left">Кресс объявляет: лицензионных Hopper в Китай больше не поставляем, в прогнозе их нет</td></tr></tbody></table></div>
 <p>Дверь закрылась с двух сторон. С американской — потому что новые правила 16 ноября сделали саму схему почти бессмысленной: лицензия теперь нужна дата-центрам в третьих странах, если они могут давать мощность китайским клиентам, а поставки в пять стран Юго-Восточной Азии и Бразилию требуют отдельного разрешения. С китайской — потому что Пекин ещё раньше перестал пускать H200 внутрь: по данным Reuters, разрешения на крупный импорт не выдавали, и чипы копились в гонконгском порту.</p>
 <figure class="post__fig"><img src="/assets/img/nvidia-kitaj-tsmc.jpg" alt="Фабрика TSMC Fab 12B ночью: H200 для NVIDIA выпускает TSMC на Тайване" loading="lazy"></figure>
-<h2>Почему Пекин сам не берёт</h2>
+<h2 id="section-pochemu-pekin-sam-ne-beret">Почему Пекин сам не берёт</h2>
 <p>Ответ на вопрос «зачем отказываться от самых быстрых чипов в мире» не технический, а промышленный. Китай целенаправленно пересаживает свои компании на домашнее железо, даже когда оно слабее, — чтобы не зависеть от американского экспортного контроля. Несколько крупных интернет-компаний всё же получили примерно по десять тысяч H200 в последние месяцы, но это скорее исключение, чем правило.</p>
 <p>Показательный пример мы разбирали три дня назад: Meituan выложила в открытый доступ модель LongCat-2.5 на 1,6 трлн параметров, обученную на 194 ускорителях Huawei Ascend, вообще без NVIDIA. Если такая модель существует и работает, аргумент «без H200 китайский AI встанет» перестаёт быть аргументом — и Вашингтону, и Пекину становится проще разойтись.</p>
-<h2>Квартал, который не заметил потери</h2>
+<h2 id="section-kvartal-kotoryy-ne-zametil-poteri">Квартал, который не заметил потери</h2>
 <p>Самое интересное в отчёте: бизнес вырос так, будто Китая и не было. Кресс говорит об этом прямо — спрос в остальном мире съест потерю, а про Vera Rubin, новую платформу, сказала: «Vera Rubin is off to an explosive start, our roadmap is on track». Ускорители NVL72 на Vera Rubin уже отгружаются.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Показатель</th><th style="text-align:left">III квартал FY2027</th><th style="text-align:left">Как это читать</th></tr></thead><tbody><tr><td style="text-align:left">Выручка</td><td style="text-align:left">$115,84 млрд, +103 % год к году</td><td style="text-align:left">Выше консенсуса примерно на $6 млрд</td></tr><tr><td style="text-align:left">Выручка дата-центров</td><td style="text-align:left">$107,6 млрд, +110 % год к году</td><td style="text-align:left">Это 93 % всей выручки компании</td></tr><tr><td style="text-align:left">Маржа</td><td style="text-align:left">74,8 % GAAP</td><td style="text-align:left">В IV квартале компания ждёт 71–72 %: дорожает память</td></tr><tr><td style="text-align:left">Прибыль на акцию</td><td style="text-align:left">$2,70 GAAP, $2,68 non-GAAP</td><td style="text-align:left">Ожидали $2,47</td></tr><tr><td style="text-align:left">Прогноз на IV квартал</td><td style="text-align:left">$130 млрд ±3 %</td><td style="text-align:left">Включает лишнюю неделю квартала; её вклад Melius Research оценивает в $9–10 млрд</td></tr><tr><td style="text-align:left">Китай в прогнозе</td><td style="text-align:left">Ноль выручки дата-центров</td><td style="text-align:left">Обещание, что потерю закроют другие рынки</td></tr><tr><td style="text-align:left">Рост на фискальный 2028-й</td><td style="text-align:left">Около 75 % вместо 70 %</td><td style="text-align:left">Главная цифра для Уолл-стрит</td></tr><tr><td style="text-align:left">Обязательства по поставкам</td><td style="text-align:left">$390 млрд против $279 млрд кварталом ранее</td><td style="text-align:left">В основном многолетние закупки памяти</td></tr></tbody></table></div>
 <figure class="post__fig"><img src="/assets/img/nvidia-kitaj-datacenter.jpg" alt="Стойки в дата-центре: выручка направления выросла на 110% год к году и дала 93% всей выручки NVIDIA" loading="lazy"></figure>
 <p>Плюс компания увеличила программу выкупа акций на $150 млрд и вернула акционерам $28,1 млрд за квартал. На первый взгляд — идеальный отчёт: рекорд, beat-and-raise, спрос выше предложения. Но рынок отреагировал не по-праздничному.</p>
-<h2>Где настоящий риск: не Китай, а Сингапур</h2>
+<h2 id="section-gde-nastoyaschiy-risk-ne-kitay-a-singapur">Где настоящий риск: не Китай, а Сингапур</h2>
 <p>Акции NVIDIA в среду, 18 ноября, закрылись падением на 2,9 % и торговались примерно на 36 % ниже рекорда 6 октября. При этом консенсус по скорректированной чистой прибыли на следующий год, наоборот, вырос — с $380 млрд до $393 млрд, а средняя целевая цена упала с $265,70 до $251,74. То есть аналитики верят в бизнес, но переоценивают его вниз: неопределённость вокруг нового гендиректора, расследование SEC (о нём сообщила The Wall Street Journal), проверка того, как именно запрещённые чипы попадали в Китай.</p>
 <p>Математика новых правил выглядит так. Jefferies оценивает, что ограничения на удалённый доступ и поставки в третьи страны могут стоить NVIDIA $44–62 млрд выручки дата-центров в следующем году. Это в разы больше, чем весь китайский Hopper-бизнес. Кресс на это отвечает, что прогноз уже учитывает актуальный экспортный контроль, а спрос на Vera Rubin перекрывает потери, — но часть аналитиков считает, что удар придёт не сразу, а в фискальном 2028-м, когда недостроятся neocloud-мощности в Сингапуре и Малайзии.</p>
-<h2>Что это значит</h2>
+<h2 id="section-chto-eto-znachit">Что это значит</h2>
 <p>Три вывода, и все три — оценка, а не факт из отчёта.</p>
 <p>Первый: NVIDIA отказалась от схемы, которую сама же и продавила. Компания, которая годами доказывала, что Китай ей нужен, теперь строит прогноз с нулём по Китаю и не объясняет, почему передумала. Самое правдоподобное объяснение — арифметика: $2,4 млрд не стоят ни расследования SEC, ни слушаний в Конгрессе, куда Хуанга и главного юриста Тима Тетера вызвали в начале декабря.</p>
 <p>Второй: «Китай как рынок» в отчётности NVIDIA стал политической категорией, а не географической. Ушёл не спрос — ушла возможность его обслуживать легально.</p>
-<p>Третий: самый уязвимый пункт в отчёте — не Китай, а новые лицензии для Юго-Восточной Азии. Именно там сидят заказчики, которые формально не китайские, а фактически обучают модели для китайских компаний. Если правила начнут применять строго, $44–62 млрд Джеффрис может оказаться не страшилкой, а первым приближением.</p></div>
-  <p class="imgcredit">Изображения: ystsoi / Wikimedia Commons, CC BY 2.0; Carl Lender / Wikimedia Commons, CC BY 2.0; 曾成訓 (Tseng Cheng-Hsun) / Wikimedia Commons, CC BY 2.0</p>
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027" rel="nofollow noopener" target="_blank">NVIDIA — финрезультаты III квартала фискального 2027-го</a></li><li><a href="https://finance.yahoo.com/news/nvidia-stops-shipping-us-approved-091655590.html" rel="nofollow noopener" target="_blank">Reuters — Nvidia прекратила поставки одобренных США чипов в Китай</a></li><li><a href="https://www.cbsnews.com/news/nvidia-stops-shipping-hopper-chips-china/" rel="nofollow noopener" target="_blank">CBS News — Кресс о прекращении поставок Hopper</a></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/nvidias-q3-beat-solid-view-134500511.html" rel="nofollow noopener" target="_blank">Yahoo Finance — оценка Jefferies и доля Китая в выручке</a></li><li><a href="https://www.cnbc.com/2026/11/17/nvidia-q3-earnings-analyst-reaction.html" rel="nofollow noopener" target="_blank">CNBC — реакция аналитиков на звонок</a></li><li><a href="https://www.cnbc.com/2026/11/18/nvidia-earnings-market-analysis.html" rel="nofollow noopener" target="_blank">CNBC — разбор отчёта и новых правил</a></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/nvidia-quarterly-revenue-doubles-first-211751834.html" rel="nofollow noopener" target="_blank">Yahoo Finance — торги 18 ноября и показания в Конгрессе</a></li><li><a href="https://theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling" rel="nofollow noopener" target="_blank">The Verge — H200 и Китай</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Третий: самый уязвимый пункт в отчёте — не Китай, а новые лицензии для Юго-Восточной Азии. Именно там сидят заказчики, которые формально не китайские, а фактически обучают модели для китайских компаний. Если правила начнут применять строго, $44–62 млрд Джеффрис может оказаться не страшилкой, а первым приближением.</p></div><p class="imgcredit">Изображения: ystsoi / Wikimedia Commons, CC BY 2.0; Carl Lender / Wikimedia Commons, CC BY 2.0; 曾成訓 (Tseng Cheng-Hsun) / Wikimedia Commons, CC BY 2.0</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027" rel="nofollow noopener" target="_blank">NVIDIA — финрезультаты III квартала фискального 2027-го</a></li><li><a href="https://finance.yahoo.com/news/nvidia-stops-shipping-us-approved-091655590.html" rel="nofollow noopener" target="_blank">Reuters — Nvidia прекратила поставки одобренных США чипов в Китай</a></li><li><a href="https://www.cbsnews.com/news/nvidia-stops-shipping-hopper-chips-china/" rel="nofollow noopener" target="_blank">CBS News — Кресс о прекращении поставок Hopper</a></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/nvidias-q3-beat-solid-view-134500511.html" rel="nofollow noopener" target="_blank">Yahoo Finance — оценка Jefferies и доля Китая в выручке</a></li><li><a href="https://www.cnbc.com/2026/11/17/nvidia-q3-earnings-analyst-reaction.html" rel="nofollow noopener" target="_blank">CNBC — реакция аналитиков на звонок</a></li><li><a href="https://www.cnbc.com/2026/11/18/nvidia-earnings-market-analysis.html" rel="nofollow noopener" target="_blank">CNBC — разбор отчёта и новых правил</a></li><li><a href="https://finance.yahoo.com/markets/stocks/articles/nvidia-quarterly-revenue-doubles-first-211751834.html" rel="nofollow noopener" target="_blank">Yahoo Finance — торги 18 ноября и показания в Конгрессе</a></li><li><a href="https://theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling" rel="nofollow noopener" target="_blank">The Verge — H200 и Китай</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html&text=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%20%D0%B8%D1%81%D1%87%D0%B5%D0%B7%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D0%B0%20NVIDIA%3A%20H200%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5%20%D0%BD%D0%B5%20%D0%B2%D0%BE%D0%B7%D1%8F%D1%82" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html&title=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%20%D0%B8%D1%81%D1%87%D0%B5%D0%B7%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D0%B0%20NVIDIA%3A%20H200%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5%20%D0%BD%D0%B5%20%D0%B2%D0%BE%D0%B7%D1%8F%D1%82" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html&text=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%20%D0%B8%D1%81%D1%87%D0%B5%D0%B7%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D0%B0%20NVIDIA%3A%20H200%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5%20%D0%BD%D0%B5%20%D0%B2%D0%BE%D0%B7%D1%8F%D1%82" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza-pin.jpg&description=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%20%D0%B8%D1%81%D1%87%D0%B5%D0%B7%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D0%B0%20NVIDIA%3A%20H200%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5%20%D0%BD%D0%B5%20%D0%B2%D0%BE%D0%B7%D1%8F%D1%82" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="Уилл Райт возвращается с игрой из ваших воспоминаний" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Уилл Райт возвращается с игрой из ваших воспоминаний</a></h3>
     <p class="card__sum">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="Anthropic оценили в $1,5 трлн на старте торгов" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/anthropic-ipo-ant-office.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T12:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-1200-anthropic-ipo-83.html">Anthropic оценили в $1,5 трлн на старте торгов</a></h3>
     <p class="card__sum">Anthropic продала 980 млн акций по $83 — выше диапазона $70–78 — и привлекла $81,3 млрд.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-1200-anthropic-ipo-83.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="Muse получил доступ к Signal, Meta говорит о случайностях" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/muse-signal-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-18T21:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-2100-meta-muse-signal.html">Muse получил доступ к Signal, Meta говорит о случайностях</a></h3>
     <p class="card__sum">Reuters изучил внутренние посты Meta: агент Muse читал уведомления Signal, присылал сотрудникам банковские балансы, которых…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-2100-meta-muse-signal.html">Читать →</a><span class="srcc">источников: 6</span></div>
   </div>
 </article></div></section>
 </main>
@@ -179,9 +171,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -199,9 +190,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

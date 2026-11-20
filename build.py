@@ -42,6 +42,17 @@ CATS = [
     ("ai", "AI"),
 ]
 CAT_NAME = dict(CATS)
+CAT_DESCRIPTION = {
+    "xbox": "Новости Xbox, Game Pass и студий Microsoft. Релизы, обновления консолей и изменения в подписке.",
+    "switch": "Игры для Nintendo Switch и Switch 2, обновления консолей и новости Nintendo.",
+    "playstation": "Игры для PlayStation, обновления PS5 и PS5 Pro, новости студий Sony и подписки PS Plus.",
+    "pc": "Новости PC-игр, Steam и игровых студий. Релизы, обновления и системные требования.",
+    "vr": "Игры в виртуальной реальности, шлемы VR и устройства для смешанной реальности.",
+    "gadgets": "Смартфоны, портативные консоли и другая техника. Характеристики, цены и даты выхода.",
+    "kino": "Трейлеры, премьеры, кассовые сборы и новости о том, как снимают кино.",
+    "serialy": "Премьеры сериалов, новые сезоны и новости стриминговых сервисов.",
+    "ai": "Новости об искусственном интеллекте, языковых моделях и том, как ИИ меняет игры и технику.",
+}
 # старые слаги заметок → новые рубрики
 CAT_ALIAS = {"igry": "switch", "techno": "ai"}
 
@@ -321,9 +332,17 @@ NAV_COUNTS = {"posts": 0, "digests": 0, "rubrics": 0, "calendars": 0}
 open_rubrics = {}   # заполняется в build(): слаг -> число материалов
 
 
-def nav(**counts):
+def nav(theme, canonical):
     """Шапка. Цифры в скобках — сколько статей, дайджестов и рубрик на сайте."""
-    c = dict(NAV_COUNTS, **counts)
+    if theme == "editorial":
+        links = [("/", "Главная"), ("/archive/", "Архив"), ("/digests/", "Дайджесты"),
+                 ("/calendar/", "Календарь"), ("/avtory/", "Авторы")]
+        primary = "".join(nav_link(path, label, canonical) for path, label in links)
+        categories = "".join(nav_link(f"/{slug}/", name, canonical, " nav__link--sm")
+                             for slug, name in CATS)
+        return (primary + '<details class="nav__rubrics"><summary class="nav__link">Рубрики</summary>'
+                f'<div class="nav__categories">{categories}</div></details>')
+    c = dict(NAV_COUNTS)
     c["rubrics"] = sum(1 for k, _ in CATS if open_rubrics.get(k))
     return ('<a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(%d)</span></a>'
             '<span class="nav__sep" aria-hidden="true"></span>'
@@ -338,6 +357,11 @@ def nav(**counts):
             % (c["posts"], c["digests"], c["calendars"], c["rubrics"])
             + "".join('<a class="nav__link nav__link--sm" href="/{slug}/">{name}</a>'.format(slug=k, name=n)
                       for k, n in CATS) + '</div></details>')
+
+
+def nav_link(path, label, canonical, modifier=""):
+    current = ' aria-current="page"' if canonical == SITE["url"] + path else ""
+    return f'<a class="nav__link{modifier}" href="{path}"{current}>{label}</a>'
 
 PAGE = """<!DOCTYPE html>
 <html lang="ru" data-theme="{theme}">
@@ -369,7 +393,7 @@ PAGE = """<!DOCTYPE html>
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="{theme_color}">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -383,7 +407,7 @@ PAGE = """<!DOCTYPE html>
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}}catch(e){{}}</script>
+<script>document.documentElement.dataset.js='';try{{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}}catch(e){{}}</script>
 {metrika}
 {ga}
 {tmr}
@@ -413,9 +437,8 @@ PAGE = """<!DOCTYPE html>
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {{
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try {{ localStorage.setItem('gv-mode', r.dataset.mode); }} catch (e) {{}}
 }});
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {{
@@ -433,9 +456,11 @@ siteNav?.addEventListener('click', (event) => {{ if (event.target.closest('a')) 
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => {{ if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; }});
 document.addEventListener('keydown', (event) => {{ if (event.key === 'Escape') {{ closeMenu(); if (rubrics) rubrics.open = false; }} }});
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {{
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}}
 </script>
 <script>
 (() => {{
@@ -461,6 +486,7 @@ if ('serviceWorker' in navigator) {{
 
 
 DEFAULT_OG = SITE["url"] + "/assets/img/og-default.png"
+THEME_COLORS = {"editorial": "#18131F"}
 
 # Счётчик Яндекс.Метрики. Отдельной строкой, а не внутри PAGE: код счётчика
 # набит фигурными скобками, а PAGE собирается через str.format() — в шаблоне
@@ -568,7 +594,8 @@ def _jpeg_size(data):
 
 def image_size(path: Path):
     try:
-        head = path.read_bytes()[:262144]
+        with path.open("rb") as source:
+            head = source.read(262144)
     except OSError:
         return None
     if head[:8] == b"\x89PNG\r\n\x1a\n":
@@ -584,6 +611,16 @@ def local_image(url):
     if url and url.startswith(prefix):
         return ROOT / "static" / "img" / url[len(prefix):]
     return None
+
+
+def image_tag(src, alt="", priority=False):
+    if not src:
+        return ""
+    path = local_image(urllib.parse.urljoin(SITE["url"], src))
+    size = image_size(path) if path else None
+    dimensions = ' width="%d" height="%d"' % size if size else ""
+    loading = 'fetchpriority="high"' if priority else 'loading="lazy" decoding="async"'
+    return f'<img src="{html.escape(src)}" alt="{html.escape(alt)}"{dimensions} {loading}>'
 
 
 def og_image_meta(url, alt):
@@ -638,18 +675,30 @@ def ld_breadcrumb(crumbs):
     }
 
 
+def breadcrumbs(crumbs):
+    links = "".join(f'<li><a href="{path}">{html.escape(name)}</a></li>' for name, path in crumbs[:-1])
+    current = html.escape(crumbs[-1][0])
+    return (f'<nav class="breadcrumbs" aria-label="Путь к странице"><ol>{links}'
+            f'<li aria-current="page">{current}</li></ol></nav>')
+
+
 def ld_itemlist(posts, name):
     return {
         "@type": "ItemList", "name": name, "numberOfItems": len(posts),
         "itemListElement": [
             {"@type": "ListItem", "position": i + 1,
-             "url": SITE["url"] + "/" + p["slug"] + ".html", "name": p["title"]}
+             "url": SITE["url"] + publication_path(p), "name": p["title"]}
             for i, p in enumerate(posts)
         ],
     }
 
 
-def ld_article(p, url, image_url=None):
+def publication_path(p):
+    directory = "/digests/" if p["kind"] == "digest" else "/"
+    return f"{directory}{p['slug']}.html"
+
+
+def ld_article(p, url, image_url=None, headline=None):
     """BlogPosting для материалов, Article для дайджестов.
 
     citation со ссылками на первоисточники — сигнал проверяемости: на такие страницы
@@ -659,7 +708,7 @@ def ld_article(p, url, image_url=None):
     obj = {
         "@type": "Article" if p["kind"] == "digest" else "BlogPosting",
         "@id": url + "#article",
-        "headline": p["title"],
+        "headline": headline or p["title"],
         "description": p["summary"] or plain(body_text, 160),
         "datePublished": iso(p["date"]),
         "dateModified": iso(p.get("updated") or p["date"]),
@@ -713,8 +762,8 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
             '<meta property="article:author" content="GEEKOVSKI">',
         ])
     return PAGE.format(
-        theme=theme, title=html.escape(title), desc=html.escape(desc),
-        nav=nav(), content=content, year=datetime.now().year, vk=SITE["vk"],
+        theme=theme, theme_color=THEME_COLORS.get(theme, "#0A0C0F"), title=html.escape(title), desc=html.escape(desc),
+        nav=nav(theme, canonical), content=content, year=datetime.now().year, vk=SITE["vk"],
         og_image_meta=og_image_meta(og_image, og_alt or title),
         og_url=og_url, canonical=canonical_tag, robots=robots, og_type=og_type,
         article_meta=article_meta, jsonld=jsonld,
@@ -741,30 +790,26 @@ def first_sentence(text, limit=170):
     return sent
 
 
-def card(p, theme, big=False, h1=False, summary=True):
+def card(p, theme, big=False, summary=True, heading="h3"):
     cat = p["category"]
-    head_tag = "h1" if h1 else "h3"
-    # обложка получает alt из заголовка: пустой alt оставляем только декоративным плашкам
-    cover = ('<div class="card__cover"><img src="%s" alt="%s" loading="lazy"></div>'
-             % (p["cover"], html.escape(p["title"], quote=True))) if p["cover"] else ""
+    cover = ('<div class="card__cover">%s</div>' % image_tag(p["cover"])) if p["cover"] else ""
     # чип рубрики — ссылка: даёт краулеру путь из каждой карточки в раздел
     return """<article class="card card--{cls} cat-{cat}">
-  {cover}
-  <div class="card__body">
+{cover}  <div class="card__body">
     <div class="card__meta"><a class="chip cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
     <{head_tag} class="card__title"><a href="/{slug}.html">{title}</a></{head_tag}>
-    {sum_block}
-    <div class="card__foot"><a class="more" href="/{slug}.html">Читать →</a>{src}</div>
-  </div>
+{sum_block}{footer}  </div>
 </article>""".format(
-        cls="big" if big else "", cat=cat, catname=CAT_NAME.get(cat, cat), head_tag=head_tag,
+        cls="big" if big else "", cat=cat, catname=CAT_NAME.get(cat, cat), head_tag=heading,
         date=p["date"].strftime("%d.%m"), isodt=iso(p["date"]),
         slug=p["slug"], title=html.escape(p["title"]),
-        sum_block=('<p class="card__sum">%s</p>'
+        sum_block=('    <p class="card__sum">%s</p>\n'
                    % html.escape(first_sentence(p["summary"] or plain(p["body"], 130),
                                                 limit=125 if not big else 170))) if summary else "",
-        cover=cover,
-        src=('<span class="srcc">источников: %d</span>' % len(p["sources"])) if p["sources"] else "",
+        cover=f'  {cover}\n' if cover else "",
+        footer=('    <div class="card__foot"><a class="more" href="/%s.html">Читать →</a>%s</div>\n'
+                % (p["slug"], '<span class="srcc">источников: %d</span>' % len(p["sources"])
+                   if p["sources"] else "")) if theme != "editorial" else "",
     )
 
 
@@ -791,56 +836,127 @@ def hero(p):
 HOME_TITLE = "GEEKOVSKI — игры, технологии и кино: разборы и новости"
 HOME_DESC = ("Разборы новостей игровой индустрии, техники, кино и AI: проверяемые факты, "
              "источники и даты. Xbox, PlayStation, Nintendo Switch, PC, VR и гаджеты.")
+HOME_POST_LIMIT = 11
+
+
+def rubric_links(current=None):
+    canonical = f"{SITE['url']}/{current}/" if current else None
+    links = "".join(nav_link(f"/{slug}/", name, canonical) for slug, name in CATS)
+    return f'<nav class="topic-nav" aria-label="Рубрики блога">{links}</nav>'
+
+
+def editorial_front(posts, digests, cal_entries):
+    intro = ('<header class="home-intro"><h1>Игры, технологии и кино</h1>'
+             '<p>Новости и разборы с источниками.<br> Без маркетингового сиропа.</p></header>')
+    if not posts:
+        return f'<main class="wrap home">{intro}{rubric_links()}<p>Публикаций пока нет.</p></main>'
+
+    lead = posts[0]
+    image = image_tag(lead["cover"], lead["meta"].get("cover_alt", ""), priority=True)
+    feature = f'''<article class="front-story">
+  {image}
+  <div class="front-story__copy">
+    <p class="front-story__meta"><span>{CAT_NAME[lead['category']]}</span>
+      <time datetime="{iso(lead['date'])}">{ru_date(lead['date'])}</time></p>
+    <h2><a href="{publication_path(lead)}">{html.escape(lead['title'])}</a></h2>
+    <span class="front-story__action" aria-hidden="true">Читать материал <b>↗</b></span>
+  </div>
+</article>'''
+    rail = ""
+    if len(posts) > 1:
+        latest = "\n".join(card(p, "editorial", summary=False) for p in posts[1:5])
+        rail = (f'<section class="home-rail" aria-labelledby="rail-title"><h2 id="rail-title">В ленте</h2>'
+                f'<div class="home-rail__cards">{latest}</div></section>')
+
+    digest = ""
+    if digests:
+        latest = digests[0]
+        digest = (f'<section class="home-digest"><div class="rubric__head"><h2>Дайджест</h2>'
+                  f'<a class="rubric__all" href="/digests/">Все выпуски ↗</a></div>'
+                  f'<a class="home-digest__item" href="{publication_path(latest)}">'
+                  f'<time datetime="{iso(latest["date"])}">{ru_date(latest["date"])} · '
+                  f'{latest["date"]:%H:%M}</time><strong>{html.escape(strip_prefix(latest["title"]))}</strong></a></section>')
+    calendar = calendar_strip(cal_entries, "editorial", limit=2)
+    side_sections = f'<div class="home-services">{digest}{calendar}</div>' if digest or calendar else ""
+    more = ""
+    if len(posts) > 5:
+        cards = "\n".join(card(p, "editorial", summary=False) for p in posts[5:HOME_POST_LIMIT])
+        more = (f'<section class="home-more" aria-labelledby="more-title"><div class="section-head">'
+                f'<h2 id="more-title">Последние материалы</h2><a href="/archive/">Весь архив ↗</a></div>'
+                f'<div class="editorial-grid">{cards}</div></section>')
+    return (f'<main class="wrap home">{intro}{rubric_links()}'
+            f'<div class="home-edition">{feature}{rail}</div>{side_sections}{more}'
+            f'<a class="archive-door" href="/archive/">Архив публикаций <span aria-hidden="true">↗</span></a></main>')
 
 
 def render_index(posts, theme, digests=None, cal_entries=None):
+    if theme == "editorial":
+        return page(HOME_TITLE, HOME_DESC, editorial_front(posts, digests or [], cal_entries or []), theme,
+                    canonical=SITE["url"] + "/", og_alt="GEEKOVSKI — игры, технологии и кино",
+                    jsonld=ldjson(ld_org(), ld_website(),
+                                  ld_itemlist(posts[:HOME_POST_LIMIT], "Свежие материалы GEEKOVSKI") if posts else None))
     if not posts:
         return page(HOME_TITLE, HOME_DESC, '<main class="wrap"><p>Пусто.</p></main>', theme,
                     canonical=SITE["url"] + "/", jsonld=ldjson(ld_org(), ld_website()))
-    if theme == "magazine":
-        head = hero(posts[0])
-        cards = "\n".join(card(p, theme, big=(i < 2)) for i, p in enumerate(posts[1:]))
-        content = '<main class="wrap"><div class="hero-wrap">%s</div><div class="grid grid--mag">%s</div></main>' % (head, cards)
-    elif theme == "dashboard":
-        cards = "\n".join(card(p, theme) for p in posts)
-        content = ('<main class="wrap"><section class="lead"><h1>Последнее</h1><p>%s</p></section>'
-                   '<div class="grid grid--cards">%s</div></main>') % (SITE["tagline"], cards)
-    if theme == "editorial":
-        dg = locals().get("digests") or []
-        dblock = ""
-        if dg:
-            latest = dg[0]
-            dblock = ('<section class="rubric rubric--digest"><div class="rubric__head"><h2>Дайджесты</h2>'
-                      '<a class="rubric__all" href="/digests/">Все дайджесты →</a></div>'
-                      '<a class="dteaser" href="/digests/%s.html"><span class="dteaser__date">%s</span>'
-                      '<strong>%s</strong><span class="dteaser__count">%d новостей</span></a></section>') % (
-                latest["slug"], latest["date"].strftime("%d.%m, %H:%M"), html.escape(strip_prefix(latest["title"])), len(latest["items"]))
-        # Одна лента: сверху два закреплённых больших материала, дальше сетка по четыре,
-        # всё сортировано по дате — без группировки по рубрикам, которая оставляла дырки.
-        lead2 = posts[:2]
-        rest = posts[2:]
-        top = ('<section class="lead-two">%s</section>'
-               % "\n".join(card(p, theme, big=True, h1=(i == 0), summary=False)
-                            for i, p in enumerate(lead2))) if lead2 else ""
-        # автор просил на главной только заголовки: описания остаются на страницах
-        # рубрик и в поиске, а в ленте от них рябило и карточки разъезжались по высоте
-        feed_rows = "\n".join(card(p, theme, summary=False) for p in rest)
-        feed = ('<section class="feed-block"><div class="rubric__head"><h2>Все материалы</h2>'
-                '<span class="rubric__all">%d %s</span></div>'
-                '<div class="grid grid--feed">%s</div></section>'
-                % (len(posts), plural(len(posts), "материал", "материала", "материалов"), feed_rows)) if rest else ""
-        cstrip = calendar_strip(cal_entries or [], theme)
-        content = '<main class="wrap">%s%s%s%s</main>' % (dblock, cstrip, top, feed)
-    else:  # magazine
-        head = hero(posts[0])
-        cards = "\n".join(card(p, theme) for p in posts[1:])
-        content = '<main class="wrap"><div class="hero-wrap">%s</div><div class="grid grid--mag">%s</div></main>' % (head, cards)
+    head = hero(posts[0])
+    cards = "\n".join(card(p, theme) for p in posts[1:])
+    content = '<main class="wrap"><div class="hero-wrap">%s</div><div class="grid grid--mag">%s</div></main>' % (head, cards)
     return page(HOME_TITLE, HOME_DESC, content, theme,
                 canonical=SITE["url"] + "/",
                 og_alt="GEEKOVSKI — игры, технологии и кино",
                 jsonld=ldjson(ld_org(), ld_website(),
                               ld_itemlist(posts[:12], "Свежие материалы GEEKOVSKI")))
 
+
+ARCHIVE_CRUMBS = [("Главная", "/"), ("Архив", "/archive/")]
+
+
+def archive_months(posts):
+    months = collections.defaultdict(list)
+    for post in posts:
+        months[post["date"].strftime("%Y-%m")].append(post)
+    return dict(sorted(months.items(), reverse=True))
+
+
+def archive_month_path(key):
+    return f"/archive/{key}/"
+
+
+def archive_month_name(key):
+    year, month = key.split("-")
+    return f"{MONTHS_NOM[int(month) - 1]} {year}"
+
+
+def archive_page(theme, heading, description, body, crumbs, items=None):
+    url = SITE["url"] + crumbs[-1][1]
+    content = (f'<main class="wrap archive-page">{breadcrumbs(crumbs)}'
+               f'<header class="collection-head"><h1>{heading}</h1><p>{description}</p></header>'
+               f'{body}</main>')
+    return page(title_tag(heading), description, content, theme, canonical=url,
+                jsonld=ldjson(ld_org(), ld_website(), ld_breadcrumb(crumbs),
+                              {"@type": "CollectionPage", "@id": url + "#page", "url": url,
+                               "name": heading, "description": description, "inLanguage": "ru-RU",
+                               "isPartOf": {"@id": WEBSITE_ID}},
+                              ld_itemlist(items, heading) if items else None))
+
+
+def render_archive(months, theme):
+    links = "".join(f'<li><a href="{archive_month_path(key)}">{archive_month_name(key)} '
+                    f'<span>{len(items)} {plural(len(items), "материал", "материала", "материалов")}</span>'
+                    f'</a></li>' for key, items in months.items())
+    body = f'<ul class="archive-list archive-list--months">{links}</ul>' if links else '<p>Публикаций пока нет.</p>'
+    return archive_page(theme, "Архив публикаций", "Новости и разборы GEEKOVSKI по месяцам.", body, ARCHIVE_CRUMBS)
+
+
+def render_archive_month(key, items, theme):
+    name = archive_month_name(key)
+    description = f"{name}. Новости и разборы об играх, технологиях и кино в архиве GEEKOVSKI."
+    rows = "".join(f'<li><time datetime="{iso(p["date"])}">{p["date"]:%d.%m}</time>'
+                   f'<a href="{publication_path(p)}">{html.escape(p["title"])}</a>'
+                   f'<span>{CAT_NAME[p["category"]]}</span></li>' for p in items)
+    body = f'<ul class="archive-list">{rows}</ul>'
+    return archive_page(theme, name, description, body,
+                        ARCHIVE_CRUMBS + [(name, archive_month_path(key))], items)
 
 
 # ---------- перелинковка: тайтл ↔ статьи ----------
@@ -955,6 +1071,30 @@ def share_block(url, title, image=None):
 </section>""").format(u=u, t=tx, i=img)
 
 
+def article_contents(body):
+    headings = list(re.finditer(r"<h2>(.*?)</h2>", body, re.S))
+    if len(headings) < 3:
+        return body, ""
+    used = set()
+    links = []
+    parts, end = [], 0
+    for heading in headings:
+        label = re.sub(r"<[^>]+>", "", heading[1])
+        base = "section-" + title_slug(html.unescape(label))
+        anchor, suffix = base, 1
+        while anchor in used:
+            suffix += 1
+            anchor = f"{base}-{suffix}"
+        used.add(anchor)
+        parts.extend([body[end:heading.start()], f'<h2 id="{anchor}">{heading[1]}</h2>'])
+        end = heading.end()
+        links.append(f'<li><a href="#{anchor}">{label}</a></li>')
+    items = "".join(links)
+    toc = (f'<nav class="article-toc" aria-label="Содержание статьи">'
+           f'<p>Содержание</p><ol>{items}</ol></nav>')
+    return "".join(parts) + body[end:], toc
+
+
 def render_post(p, posts, theme):
     related = [x for x in posts if x["category"] == p["category"] and x["slug"] != p["slug"]][:3]
     p = dict(p, body=link_articles_to_titles(p["body"]))
@@ -964,6 +1104,10 @@ def render_post(p, posts, theme):
             '<li><a href="%s" rel="nofollow noopener" target="_blank">%s</a></li>' % (html.escape(s["url"]), html.escape(s["name"]))
             if s["url"] else "<li>%s</li>" % html.escape(s["name"]) for s in p["sources"])
     body = md(p["body"])
+    editorial = theme == "editorial"
+    toc = ""
+    if editorial:
+        body, toc = article_contents(body)
     # «Коротко»: список фактов из frontmatter tldr — то, что можно процитировать
     # в ответе, не пересказывая статью.
     tldr = ""
@@ -972,8 +1116,8 @@ def render_post(p, posts, theme):
                 % "".join("<li>%s</li>" % md_inline(x) for x in p["tldr"]))
     cover = ""
     if p["cover"]:
-        cover = ('<figure class="post__cover"><img src="%s" alt="%s"></figure>'
-                 % (p["cover"], html.escape(p["title"], quote=True)))
+        cover = ('<figure class="post__cover">%s</figure>' %
+                 image_tag(p["cover"], p["meta"].get("cover_alt") or p["title"], priority=True))
     # CC BY / CC BY-SA требуют указания автора и лицензии: держим их мелкой строкой в конце,
     # а не подписью под картинкой. CC0 и public domain — без упоминания.
     credit_line = ""
@@ -982,7 +1126,8 @@ def render_post(p, posts, theme):
                        % html.escape(p["credit"].replace("Обложка: ", "")))
     rel = ""
     if related:
-        rel = '<section class="related"><h2>По теме</h2><div class="grid grid--list">%s</div></section>' % "\n".join(
+        grid = 'editorial-grid' if editorial else 'grid grid--list'
+        rel = f'<section class="related"><h2>По теме</h2><div class="{grid}">%s</div></section>' % "\n".join(
             card(x, theme) for x in related)
     # подпись автора: страница редакции должна быть достижима из каждого материала,
     # иначе она висит сиротой и в поиске не набирает вес
@@ -999,45 +1144,45 @@ def render_post(p, posts, theme):
                   '<a class="byline__name" href="/avtory/%s.html">%s</a></span></p>'
                   % (html.escape(_author["avatar"]), _author["slug"],
                      html.escape(_author["full_name"] or _author["name"])))
+    path = publication_path(p)
+    catname = CAT_NAME[p["category"]]
+    crumbs = [("Главная", "/"), (catname, f'/{p["category"]}/'), (p["title"], path)]
+    share = share_block(SITE["url"] + path, p["title"],
+                        SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None)
+    reading = f'<div class="post__body">{body}</div>{credit_line}{srcs}{share}'
+    if editorial:
+        layout = "reading-layout--toc" if toc else ""
+        reading = f'{cover}<div class="reading-layout {layout}">{toc}<div class="reading-text">{tldr}{reading}</div></div>'
+    else:
+        reading = f'{tldr}{cover}{reading}'
     content = """<main class="wrap post-page">
 {back}
 <article class="post cat-{cat}">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
     <h1>{title}</h1>
-    <p class="post__lead">{sum}</p>
+    {lead}
     {byline}
   </header>
-  {tldr}
-  {cover}
-  <div class="post__body">{body}</div>
-  {credit_line}
-  {srcs}
-  {share}
+  {reading}
 </article>
 {rel}
 </main>""".format(
-        cat=p["category"], catname=CAT_NAME.get(p["category"], p["category"]),
+        cat=p["category"], catname=catname,
         date=p["date"].strftime("%d.%m.%Y, %H:%M"), isodt=iso(p["date"]),
         title=html.escape(p["title"]),
-        sum=html.escape(p["summary"]), cover=cover,
-        body=body, srcs=srcs, rel=rel,
-        tldr=tldr, byline=byline,
-        credit_line=credit_line,
-        back=back_link("Назад", "/%s/" % p["category"]),
-        share=share_block(SITE["url"] + "/" + p["slug"] + ".html", p["title"],
-                          SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None),
+        lead=f'<p class="post__lead">{html.escape(p["summary"])}</p>' if p["summary"] else "",
+        reading=reading, rel=rel, byline=byline,
+        back=breadcrumbs(crumbs) if editorial else back_link("Назад", f'/{p["category"]}/'),
     )
     og = SITE["url"] + p["cover"] if p["cover"] else None
-    url = SITE["url"] + "/" + p["slug"] + ".html"
-    catname = CAT_NAME.get(p["category"], p["category"])
+    url = SITE["url"] + path
     return page(title_tag(p["title"]),
                 p["summary"] or plain(p["body"], 160),
                 content, theme, og_image=og, canonical=url, og_type="article",
                 article=p, og_alt=p["title"],
                 jsonld=ldjson(ld_org(), ld_website(), ld_article(p, url),
-                              ld_breadcrumb([("Главная", "/"), (catname, "/%s/" % p["category"]),
-                                             (p["title"], "/%s.html" % p["slug"])])))
+                              ld_breadcrumb(crumbs)))
 
 
 def title_tag(text, brand=SITE["title"], limit=68):
@@ -1053,30 +1198,37 @@ def title_tag(text, brand=SITE["title"], limit=68):
 
 
 def render_cat(slug, name, items, theme):
-    cards = "\n".join(card(p, theme) for p in items)
+    editorial = theme == "editorial"
+    cards = "\n".join(card(p, theme, heading="h2") for p in items)
     count = "%d %s" % (len(items), plural(len(items), "материал", "материала", "материалов"))
+    desc = CAT_DESCRIPTION[slug]
     if items:
-        body = '<div class="grid grid--%s">%s</div>' % ("cards" if theme == "dashboard" else "list", cards)
-        desc = ("%s: %s — разборы новостей с источниками и датами. %s"
-                % (name, count, SITE["tagline"]))
+        grid = "editorial-grid" if editorial else ("grid grid--cards" if theme == "dashboard" else "grid grid--list")
+        body = f'<div class="{grid}">{cards}</div>'
     else:
         # пустая рубрика не должна выглядеть сломанной: говорим прямо и уводим в дайджесты
         body = ('<p class="lead__empty">Здесь пока пусто — рубрика только открылась. '
                 'Свежие новости по всем направлениям выходят в <a href="/digests/">дайджестах</a>, '
                 'а разборы появляются на главной.</p>')
-        desc = "%s: рубрика открыта — материалы с разбором новостей и ссылками на источники. %s" % (name, SITE["tagline"])
-    content = ('<main class="wrap">%s<section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
-               % (back_link("На главную", "/"), html.escape(name),
-                  count if items else "рубрика открыта", body))
-    url = SITE["url"] + "/%s/" % slug
+    path = f"/{slug}/"
+    crumbs = [("Главная", "/"), (name, path)]
+    if editorial:
+        content = (f'<main class="wrap category-page">{breadcrumbs(crumbs)}'
+                   f'<header class="collection-head"><h1>{html.escape(name)}</h1><p>{desc}</p></header>'
+                   f'{rubric_links(slug)}{body}</main>')
+    else:
+        content = ('<main class="wrap">%s<section class="lead"><h1>%s</h1><p>%s</p></section>%s</main>'
+                   % (back_link("На главную", "/"), html.escape(name),
+                      count if items else "рубрика открыта", body))
+    url = SITE["url"] + path
     return page("%s — новости и разборы | %s" % (name, SITE["title"]), desc, content, theme,
                 canonical=url, og_alt="%s — GEEKOVSKI" % name,
                 jsonld=ldjson(ld_org(), ld_website(),
                               {"@type": "CollectionPage", "@id": url + "#page", "url": url,
                                "name": name, "description": desc, "inLanguage": "ru-RU",
                                "isPartOf": {"@id": WEBSITE_ID}},
-                              ld_itemlist(items, name) or None,
-                              ld_breadcrumb([("Главная", "/"), (name, "/%s/" % slug)])))
+                              ld_itemlist(items, name) if items else None,
+                              ld_breadcrumb(crumbs)))
 
 
 def load_authors(content_dir=None):
@@ -1456,23 +1608,25 @@ def vk_feed(posts):
                with_content=VK_FEED_FULL_TEXT)
 
 
-def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None):
+def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None, archive_keys=()):
     """Sitemap с lastmod у каждой записи и картинками материалов.
 
     lastmod без него поисковики перекачивают всё подряд; image:image пускает обложки
     в поиск по картинкам (в Яндексе это отдельная выдача).
     """
     def entry(loc, lastmod=None, image=None, caption=None):
-        parts = ["<loc>%s</loc>" % loc]
+        parts = ["<loc>%s</loc>" % html.escape(loc)]
         if lastmod:
             parts.append("<lastmod>%s</lastmod>" % lastmod)
         if image:
             parts.append('<image:image><image:loc>%s</image:loc>%s</image:image>'
-                         % (image, "<image:title>%s</image:title>" % html.escape(caption) if caption else ""))
+                         % (html.escape(image), "<image:title>%s</image:title>" % html.escape(caption) if caption else ""))
         return "<url>%s</url>" % "".join(parts)
 
-    newest = max([p["date"] for p in posts] or [datetime.now()])
-    urls = [entry(SITE["url"] + "/", newest.strftime("%Y-%m-%d"))]
+    urls = [entry(SITE["url"] + "/")]
+    if archive_keys:
+        urls.append(entry(SITE["url"] + "/archive/"))
+        urls.extend(entry(SITE["url"] + archive_month_path(key)) for key in archive_keys)
     for c, _ in CATS:
         items = [p for p in posts if p["category"] == c]
         urls.append(entry(SITE["url"] + "/%s/" % c,
@@ -1493,7 +1647,7 @@ def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None)
     for slug in sorted(titles or {}):
         urls.append(entry(SITE["url"] + "/titles/" + slug + ".html"))
     for d in (digests or []):
-        urls.append(entry("%s/digests/%s.html" % (SITE["url"], d["slug"]), d["date"].strftime("%Y-%m-%d")))
+        urls.append(entry(SITE["url"] + publication_path(d), (d.get("updated") or d["date"]).strftime("%Y-%m-%d")))
     for p in posts:
         urls.append(entry("%s/%s.html" % (SITE["url"], p["slug"]),
                           (p.get("updated") or p["date"]).strftime("%Y-%m-%d"),
@@ -1795,6 +1949,7 @@ def build(theme, out_dir, content_dir=None):
     everything = [p for p in everything if not p["draft"]]
     everything.sort(key=lambda p: p["date"], reverse=True)
     posts = [p for p in everything if p["kind"] == "post"]
+    months = archive_months(posts)
     digests = [p for p in everything if p["kind"] == "digest"]
     calendars = [p for p in everything if p["kind"] == "calendar"]
     cal_entries = calendar_entries(calendars)
@@ -1854,6 +2009,13 @@ def build(theme, out_dir, content_dir=None):
     NAV_COUNTS["digests"] = len(digests)
     NAV_COUNTS["calendars"] = sum(1 for e in cal_entries if e["day"] >= datetime.now().date())
     (out / "index.html").write_text(render_index(posts, theme, digests, cal_entries), encoding="utf-8")
+    archive_dir = out / "archive"
+    archive_dir.mkdir(exist_ok=True)
+    (archive_dir / "index.html").write_text(render_archive(months, theme), encoding="utf-8")
+    for key, items in months.items():
+        month_dir = archive_dir / key
+        month_dir.mkdir(exist_ok=True)
+        (month_dir / "index.html").write_text(render_archive_month(key, items, theme), encoding="utf-8")
     for p in posts:
         (out / ("%s.html" % p["slug"])).write_text(render_post(p, posts, theme), encoding="utf-8")
     for c, name in CATS:
@@ -1918,8 +2080,8 @@ def build(theme, out_dir, content_dir=None):
         "scope": "/",
         "display": "standalone",
         "orientation": "portrait",
-        "background_color": "#0A0C0F",
-        "theme_color": "#0A0C0F",
+        "background_color": THEME_COLORS.get(theme, "#0A0C0F"),
+        "theme_color": THEME_COLORS.get(theme, "#0A0C0F"),
         "icons": [
             {"src": "/assets/img/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
             {"src": "/assets/img/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
@@ -1934,7 +2096,7 @@ def build(theme, out_dir, content_dir=None):
     (out / "feed.xml").write_text(rss(digests, title="%s — дайджесты" % SITE["title"], path="digests",
                                      self_name="feed.xml"), encoding="utf-8")
     (out / "sitemap.xml").write_text(sitemap(posts, digests, TITLES, with_calendar=bool(cal_entries),
-                                            authors=AUTHORS),
+                                            authors=AUTHORS, archive_keys=months),
                                      encoding="utf-8")
     (out / "feed.json").write_text(feed_json(posts), encoding="utf-8")
     ico = ROOT / "static" / "img" / "favicon.ico"
@@ -2696,7 +2858,7 @@ def render_digest(d, theme, next_d=None, prev_d=None):
     url = "%s/digests/%s.html" % (SITE["url"], d["slug"])
     return page(title_tag(head_title), d["summary"] or meta, content, theme,
                 canonical=url, og_type="article", article=d, og_alt=head_title,
-                jsonld=ldjson(ld_org(), ld_website(), ld_article(d, url),
+                jsonld=ldjson(ld_org(), ld_website(), ld_article(d, url, headline=head_title),
                               ld_breadcrumb([("Главная", "/"), ("Дайджесты", "/digests/"),
                                              (head_title, "/digests/%s.html" % d["slug"])])))
 

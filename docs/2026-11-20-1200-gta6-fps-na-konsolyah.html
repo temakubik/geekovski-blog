@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/playstation/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/playstation/">PlayStation</a></li><li aria-current="page">GTA VI на консолях: 30 fps держится не везде</li></ol></nav>
 <article class="post cat-playstation">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-20T12:00:00+03:00">20.11.2026, 12:00</time></div>
@@ -100,79 +100,71 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в езде и долгих взрывах, Series X близка к PS5, а Series S выдаёт 720p и половину кадров — 20–27 вместо 30.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Все четыре версии рендерятся в 2560×1440, кроме Series S с её 720p, и все целятся в 30 fps — режима на 40 или 60 кадров нет нигде</li><li>PS5 Pro за 50 с лишним часов не дала ни одной заметной просадки, минимум в стресс-тесте — 24 fps; обычная PS5 дёргается на скорости и надолго уходит к 25 fps в перестрелках со взрывами</li><li>Series S получает кадры в районе 25–27 в обычной игре и около 20 в худших сценах; Digital Foundry советует играть в GTA VI на другой консоли</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="GTA VI на консолях: 30 fps держится не везде"></figure>
-  <div class="post__body"><p>Rockstar выпустила <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a> в 30 кадрах в секунду — и споры про «почему не 60» на этом обычно заканчиваются. 18 ноября, за день до релиза, Digital Foundry выложила два технических разбора: сначала PS5 и PS5 Pro, потом Xbox Series X|S. Главный вывод не в том, что игра медленная, а в том, что одна и та же цифра «30» на четырёх консолях означает четыре разных ощущения.</p>
+  <figure class="post__cover"><img src="/assets/img/gta6-fps-cover.jpg" alt="GTA VI на консолях: 30 fps держится не везде" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout reading-layout--toc"><nav class="article-toc" aria-label="Содержание статьи"><p>Содержание</p><ol><li><a href="#section-korotko-chto-s-razresheniem-i-kadrami">Коротко: что с разрешением и кадрами</a></li><li><a href="#section-ps5-pro-kadry-kotorye-ne-dergayutsya">PS5 Pro: кадры, которые не дёргаются</a></li><li><a href="#section-obychnaya-ps5-myagche-kartinka-zametnee-prosadki">Обычная PS5: мягче картинка, заметнее просадки</a></li><li><a href="#section-series-x-rovno-poka-ne-nachnetsya-pogonya">Series X: ровно, пока не начнётся погоня</a></li><li><a href="#section-series-s-720p-i-dvadcat-kadrov">Series S: 720p и двадцать кадров</a></li><li><a href="#section-pochemu-60-fps-net-ni-u-kogo">Почему 60 fps нет ни у кого</a></li><li><a href="#section-lovushka-vrr-o-kotoroy-stoit-znat">Ловушка VRR, о которой стоит знать</a></li><li><a href="#section-chto-eto-znachit-esli-vy-vybiraete-konsol">Что это значит, если вы выбираете консоль</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ol></nav><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Все четыре версии рендерятся в 2560×1440, кроме Series S с её 720p, и все целятся в 30 fps — режима на 40 или 60 кадров нет нигде</li><li>PS5 Pro за 50 с лишним часов не дала ни одной заметной просадки, минимум в стресс-тесте — 24 fps; обычная PS5 дёргается на скорости и надолго уходит к 25 fps в перестрелках со взрывами</li><li>Series S получает кадры в районе 25–27 в обычной игре и около 20 в худших сценах; Digital Foundry советует играть в GTA VI на другой консоли</li></ul></aside><div class="post__body"><p>Rockstar выпустила <a class="tlink" href="/titles/grand-theft-auto-vi.html">GTA VI</a> в 30 кадрах в секунду — и споры про «почему не 60» на этом обычно заканчиваются. 18 ноября, за день до релиза, Digital Foundry выложила два технических разбора: сначала PS5 и PS5 Pro, потом Xbox Series X|S. Главный вывод не в том, что игра медленная, а в том, что одна и та же цифра «30» на четырёх консолях означает четыре разных ощущения.</p>
 <p>Это уже не слух и не датамайн: игра вышла 19 ноября, аналитики наиграли десятки часов, цифры замерены на розничных консолях. Ниже — что именно они намерили и как это читать, если вы ещё выбираете, на чём играть.</p>
-<h2>Коротко: что с разрешением и кадрами</h2>
+<h2 id="section-korotko-chto-s-razresheniem-i-kadrami">Коротко: что с разрешением и кадрами</h2>
 <p>Все версии, кроме младшей Xbox, рендерятся в базовых 2560×1440 — динамического разрешения Digital Foundry не зафиксировала. Дальше пути расходятся: на PS5 Pro картинку собирает ИИ-апскейлер PSSR, на обычной PS5 и Series X работает пространственное масштабирование силами собственного TAA-решения Rockstar, а Series S стартует с 720p.</p>
 <div class="table-wrap"><table><thead><tr><th style="text-align:left">Консоль</th><th style="text-align:left">Внутреннее разрешение</th><th style="text-align:left">Апскейл</th><th style="text-align:left">Обычная игра</th><th style="text-align:left">Худшие сцены</th></tr></thead><tbody><tr><td style="text-align:left">PS5 Pro</td><td style="text-align:left">2560×1440</td><td style="text-align:left">PSSR до 4K</td><td style="text-align:left">стабильные 30</td><td style="text-align:left">24 fps в стресс-тесте, быстро возвращается к 30</td></tr><tr><td style="text-align:left">PS5</td><td style="text-align:left">2560×1440</td><td style="text-align:left">пространственный до 4K</td><td style="text-align:left">30 с мелкими просадками</td><td style="text-align:left">около 25 fps, пока длится разрушение</td></tr><tr><td style="text-align:left">Xbox Series X</td><td style="text-align:left">2560×1440</td><td style="text-align:left">пространственный до 4K</td><td style="text-align:left">30 почти всегда</td><td style="text-align:left">около 20 fps в плотных перестрелках</td></tr><tr><td style="text-align:left">Xbox Series S</td><td style="text-align:left">720p</td><td style="text-align:left">FSR 4 примерно до 1080p</td><td style="text-align:left">25–27</td><td style="text-align:left">около 20 fps</td></tr></tbody></table></div>
 <p>Ограничение в 30 кадров стоит на всех четырёх платформах, и режима производительности нет ни у кого — ни 40, ни 60 fps. Это подтверждено ещё до релиза и с тех пор не менялось.</p>
-<h2>PS5 Pro: кадры, которые не дёргаются</h2>
+<h2 id="section-ps5-pro-kadry-kotorye-ne-dergayutsya">PS5 Pro: кадры, которые не дёргаются</h2>
 <p>Джон Линнеман наиграл на PS5 Pro больше 50 часов и, по его словам, за это время не увидел ни одной заметной просадки вне искусственных стресс-тестов. Формулировка из разбора: «практически безупречные 30 кадров», идеальный темп вывода кадров, ровные катсцены — в отличие от прошлых игр Rockstar на старте.</p>
 <p>Проверяли пределом: подрывали машины одну за другой, пока район не начинал разваливаться. На Pro кадры проседали до 24 fps, но быстро возвращались. На глаз это читается как короткий рывок, а не как «слайд-шоу».</p>
 <p>Картинка тоже другая. База у обеих PlayStation одинаковая — 1440p, но PSSR восстанавливает изображение так, что оно убедительно имитирует нативное 4K, а обычная PS5 вытягивает тот же кадр обычным апскейлом: мягче, мельче детали вдали. Плюс на Pro есть тени с трассировкой лучей, на базовой консоли — обычные карты теней.</p>
-<h2>Обычная PS5: мягче картинка, заметнее просадки</h2>
+<h2 id="section-obychnaya-ps5-myagche-kartinka-zametnee-prosadki">Обычная PS5: мягче картинка, заметнее просадки</h2>
 <p>Вот здесь начинается неприятное, потому что именно на этой консоли играет большинство. По данным Deadline со ссылкой на Sensor Tower, за первые сутки разошлось 24,59 млн копий, и примерно 75 % из них пришлись на PlayStation.</p>
 <p>Линнеман формулирует аккуратно, но прямо: PS5 «на самом деле чаще, чем ожидалось, не удерживает 30 кадров». Просадки небольшие — во время быстрой езды по городу, на перекрёстках с плотным потоком, — но заметные, особенно если рядом стоит Pro. В обычном исследовании мира консоль держит целевые 30, в стресс-тесте с серией взрывов частота уходит к 25 и держится там, пока игрок не уедет из района.</p>
 <p>При этом это самая ровная GTA на старте: в прошлых частях на релизе было хуже. Оценка Линнемана — «всё равно хотелось бы, чтобы это вычистили к релизу».</p>
-<h2>Series X: ровно, пока не начнётся погоня</h2>
+<h2 id="section-series-x-rovno-poka-ne-nachnetsya-pogonya">Series X: ровно, пока не начнётся погоня</h2>
 <p>Оливер Маккензи прошёл на Series X всю сюжетку, около 45 часов, и его вывод спокойнее: большую часть времени игра действительно держит 33 мс на кадр — и в перестрелках, и в обычном перемещении. Ломается всё там же, где у PS5: погони, аварии, перестрелки в плотных местах. В самых тяжёлых сценах на переполненных перекрёстках он замерял падения примерно до 20 fps.</p>
 <p>Ключевая разница с PlayStation — не в кадрах, а в опции. Xbox умеет держать игру в 120-герцевом контейнере VRR на уровне системы, и это даёт чуть более гладкую картинку без всякой возни с настройками. У PlayStation такого варианта нет.</p>
 <p>Ещё одна деталь из разбора: Series X отдаёт картинку мягче, чем можно было бы ждать от 1440p, — Rockstar не использует временной апскейл вроде FSR, только свой пространственный.</p>
-<h2>Series S: 720p и двадцать кадров</h2>
+<h2 id="section-series-s-720p-i-dvadcat-kadrov">Series S: 720p и двадцать кадров</h2>
 <p>Младшая Xbox — единственная версия, которую Digital Foundry прямо не рекомендует. Внутри там 720p с апскейлом через FSR 4 примерно до 1080p: это, по словам Маккензи, первый вышедший проект на консолях Xbox с новым апскейлером. Финальная картинка выглядит лучше, чем можно ждать от 720p, но разница с Series X всё равно большая: мягче свет, грубее отражения, грязнее тени и облака, заметнее подгрузка объектов.</p>
 <p>С производительностью хуже. Медленная езда держит игру в районе 26–28 кадров подолгу, обычные бои — стабильно в середине двадцатых, а в тяжёлых сценах счётчик опускается примерно до 20. Маккензи подозревает, что виновата не только производительность, но и 10 ГБ сравнительно медленной памяти Series S, хотя окончательно это не доказано.</p>
 <figure class="post__fig"><img src="/assets/img/gta6-fps-klub.jpg" alt="Клубная сцена: тяжёлое освещение и трассированные отражения — то, на чём версии для разных консолей расходятся сильнее всего" loading="lazy"></figure>
 <p>Его вердикт звучит жёстко: «пока что я советовал бы играть в эту игру на других консолях». Это оценка аналитика, а не официальная позиция, но она совпадает с тем, что видно по цифрам: Series S не «чуть хуже», а принципиально другой опыт.</p>
-<h2>Почему 60 fps нет ни у кого</h2>
+<h2 id="section-pochemu-60-fps-net-ni-u-kogo">Почему 60 fps нет ни у кого</h2>
 <p>Rockstar объясняла это ещё до релиза, и объяснение держится на процессоре. Базовая версия использует трассированные отражения и глобальное освещение, на PS5 Pro к ним добавляются трассированные тени и PSSR — но частота кадров остаётся той же. Причина в том, что мир Леониды упирается не в графический чип, а в вычисления: симуляция трафика, пешеходов и их поведения.</p>
 <p>В разборе Digital Foundry отдельно отмечает волосы: физика прядей работает не только у главных героев, но у всех прохожих, и реагирует на ветер и воду. Такая плотность и объясняет, почему 30 кадров — не маркетинговое ограничение, а цена за симуляцию. Попытка поднять частоту до 40 или 60 кадров сокращает бюджет кадра с 33 мс до 25 и 16,7 мс соответственно — и на нынешних консолях это даёт не стабильные кадры, а рваный темп вывода.</p>
 <figure class="post__fig"><img src="/assets/img/gta6-fps-mashina.jpg" alt="Вице-Сити: городская сцена, на которой видно, сколько геометрии, отражений и света игра тянет одновременно" loading="lazy"></figure>
-<h2>Ловушка VRR, о которой стоит знать</h2>
+<h2 id="section-lovushka-vrr-o-kotoroy-stoit-znat">Ловушка VRR, о которой стоит знать</h2>
 <p>Владельцы PS5 могут решить, что VRR решит проблему просадок. Не решит: системный VRR на PlayStation включается только выше 48 кадров и не поддерживает компенсацию на низкой частоте, поэтому в игре с 30 fps он не делает ничего. На Xbox тот же механизм работает иначе — через контейнер 120 Гц, и там эффект есть.</p>
-<h2>Что это значит, если вы выбираете консоль</h2>
+<h2 id="section-chto-eto-znachit-esli-vy-vybiraete-konsol">Что это значит, если вы выбираете консоль</h2>
 <p>Оценка: разница между консолями в этой игре меньше, чем разница в цене, но она есть и она предсказуемая. Если играете на телевизоре 4K и готовы платить за Pro, это единственная версия, где 30 кадров выглядят как «так и задумано»: ровный темп и заметно более чёткая картинка. Обычная PS5 и Series X дают примерно равный опыт — с поправкой на чуть более гладкую картинку на Xbox за счёт VRR-контейнера.</p>
 <p>Series S — история про компромисс, который в этом конкретном релизе зашёл слишком далеко: 720p и двадцать с лишним кадров в бою. Если выбора нет, играть можно, но это худший способ увидеть Леониду.</p>
-<h2>Что дальше</h2>
+<h2 id="section-chto-dalshe">Что дальше</h2>
 <p>Официальной даты выхода версии для ПК Take-Two не называла, и это отдельная интрига: стабильные 30 fps на железе 2020 года PC Gamer считает хорошим знаком для будущего порта — если консольный бюджет кадра такой ровный, то на десктопе с запасом по процессору шансы на 60+ fps выглядят реалистично. Но это прогноз, а не обещание: подтверждённой даты нет.</p>
-<p>Пока что факт один: GTA VI вышла, работает на всех четырёх консолях, и «30 fps» — это не одна цифра, а четыре разных опыта. Самый ровный из них — на самой дорогой консоли, самый проблемный — на самой дешёвой.</p></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://digitalfoundry.net/features/gta-6-ps5-vs-ps5-pro-xbox-series-x-and-series-s-which-console-plays-best" rel="nofollow noopener" target="_blank">Digital Foundry — GTA 6: PS5 vs PS5 Pro, Xbox Series X and Series S</a></li><li><a href="https://digitalfoundry.net/reviews/grand-theft-auto-6-a-landmark-achievement-that-redefines-a-console-generation" rel="nofollow noopener" target="_blank">Digital Foundry — технический разбор GTA 6</a></li><li><a href="https://videogameschronicle.com/news/gta-6-base-ps5-performance-analysis-shows-struggle-to-maintain-30-fps-at-all-times" rel="nofollow noopener" target="_blank">VGC — разбор версии для PS5</a></li><li><a href="https://videogameschronicle.com/news/gta-6-xbox-series-s-performance-analysis-admires-the-effort-but-says-significant-frame-drops-are-a-problem" rel="nofollow noopener" target="_blank">VGC — разбор версии для Xbox Series S</a></li><li><a href="https://www.pushsquare.com/news/2026/11/ps5-pro-is-not-powerful-enough-to-run-gta-6-at-60fps-rockstar-explains-frame-rate-decision" rel="nofollow noopener" target="_blank">Push Square — Rockstar объяснила решение про 30 fps</a></li><li><a href="https://dtf.ru/games/5418300-gta-6-na-ps5-pro-ogranichenie-v-30-fps" rel="nofollow noopener" target="_blank">DTF — разбор DF о процессорном ограничении</a></li><li><a href="https://shazoo.ru/2026/11/18/194300/digital-foundry-razobrala-gta-6-1440p-30-fps-i-vozmozno-lucsaia-trassirovka-lucei-v-igrax" rel="nofollow noopener" target="_blank">Shazoo — пересказ технического разбора</a></li><li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-looks-gorgeous-and-seeing-it-run-at-a-stable-30-fps-on-ageing-ps5-pro-hardware-makes-me-hopeful-for-pc-performance/" rel="nofollow noopener" target="_blank">PC Gamer — что стабильные 30 fps значат для будущей версии на ПК</a></li><li><a href="https://deadline.com/2026/11/gta-6-sales-launch-day-surge-videogame-1237229514/" rel="nofollow noopener" target="_blank">Deadline — предзаказы и первые сутки продаж</a></li></ol></section>
-  <section class="share" data-share-root>
+<p>Пока что факт один: GTA VI вышла, работает на всех четырёх консолях, и «30 fps» — это не одна цифра, а четыре разных опыта. Самый ровный из них — на самой дорогой консоли, самый проблемный — на самой дешёвой.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://digitalfoundry.net/features/gta-6-ps5-vs-ps5-pro-xbox-series-x-and-series-s-which-console-plays-best" rel="nofollow noopener" target="_blank">Digital Foundry — GTA 6: PS5 vs PS5 Pro, Xbox Series X and Series S</a></li><li><a href="https://digitalfoundry.net/reviews/grand-theft-auto-6-a-landmark-achievement-that-redefines-a-console-generation" rel="nofollow noopener" target="_blank">Digital Foundry — технический разбор GTA 6</a></li><li><a href="https://videogameschronicle.com/news/gta-6-base-ps5-performance-analysis-shows-struggle-to-maintain-30-fps-at-all-times" rel="nofollow noopener" target="_blank">VGC — разбор версии для PS5</a></li><li><a href="https://videogameschronicle.com/news/gta-6-xbox-series-s-performance-analysis-admires-the-effort-but-says-significant-frame-drops-are-a-problem" rel="nofollow noopener" target="_blank">VGC — разбор версии для Xbox Series S</a></li><li><a href="https://www.pushsquare.com/news/2026/11/ps5-pro-is-not-powerful-enough-to-run-gta-6-at-60fps-rockstar-explains-frame-rate-decision" rel="nofollow noopener" target="_blank">Push Square — Rockstar объяснила решение про 30 fps</a></li><li><a href="https://dtf.ru/games/5418300-gta-6-na-ps5-pro-ogranichenie-v-30-fps" rel="nofollow noopener" target="_blank">DTF — разбор DF о процессорном ограничении</a></li><li><a href="https://shazoo.ru/2026/11/18/194300/digital-foundry-razobrala-gta-6-1440p-30-fps-i-vozmozno-lucsaia-trassirovka-lucei-v-igrax" rel="nofollow noopener" target="_blank">Shazoo — пересказ технического разбора</a></li><li><a href="https://www.pcgamer.com/games/grand-theft-auto/gta-6-looks-gorgeous-and-seeing-it-run-at-a-stable-30-fps-on-ageing-ps5-pro-hardware-makes-me-hopeful-for-pc-performance/" rel="nofollow noopener" target="_blank">PC Gamer — что стабильные 30 fps значат для будущей версии на ПК</a></li><li><a href="https://deadline.com/2026/11/gta-6-sales-launch-day-surge-videogame-1237229514/" rel="nofollow noopener" target="_blank">Deadline — предзаказы и первые сутки продаж</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1200-gta6-fps-na-konsolyah.html&text=GTA%20VI%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8F%D1%85%3A%2030%20fps%20%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D1%82%D1%81%D1%8F%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D0%B7%D0%B4%D0%B5" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1200-gta6-fps-na-konsolyah.html&title=GTA%20VI%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8F%D1%85%3A%2030%20fps%20%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D1%82%D1%81%D1%8F%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D0%B7%D0%B4%D0%B5" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1200-gta6-fps-na-konsolyah.html&text=GTA%20VI%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8F%D1%85%3A%2030%20fps%20%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D1%82%D1%81%D1%8F%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D0%B7%D0%B4%D0%B5" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1200-gta6-fps-na-konsolyah.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-20-1200-gta6-fps-na-konsolyah-pin.jpg&description=GTA%20VI%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D1%8F%D1%85%3A%2030%20fps%20%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D1%82%D1%81%D1%8F%20%D0%BD%D0%B5%20%D0%B2%D0%B5%D0%B7%D0%B4%D0%B5" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-20-1200-gta6-fps-na-konsolyah.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="GTA VI: 99 из 100 и рекорд Metacritic" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-playstation">
+  <div class="card__cover"><img src="/assets/img/gta6rev-17.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-18T15:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">GTA VI: 99 из 100 и рекорд Metacritic</a></h3>
     <p class="card__sum">За день до релиза спало эмбарго на рецензии GTA VI, и пресса выдала почти единодушный максимум: 99 из 100 на Metacritic по…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-1500-gta6-recenziya-99-metacritic.html">Читать →</a><span class="srcc">источников: 11</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="PlayStation отбилась от иска на £2 млрд" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/ps-store-sud-2-mlrd-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-17T18:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-1800-playstation-isk-2-mlrd.html">PlayStation отбилась от иска на £2 млрд</a></h3>
     <p class="card__sum">Лондонский трибунал по конкуренции 17 ноября отклонил коллективный иск к Sony почти на £2 млрд — 12,2 млн британских…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-17-1800-playstation-isk-2-mlrd.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-playstation">
-  <div class="card__cover"><img src="/assets/img/qssr-ps5-apu-die.jpg" alt="QSSR на обычной PS5: апскейл без ИИ-блока" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/qssr-ps5-apu-die.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-playstation" href="/playstation/">PlayStation</a><time datetime="2026-11-15T12:00:00+03:00">15.11</time></div>
     <h3 class="card__title"><a href="/2026-11-15-1200-qssr-ii-upskaling-ps5.html">QSSR на обычной PS5: апскейл без ИИ-блока</a></h3>
     <p class="card__sum">13 ноября Sony расширила список игр с QSSR до восьми — Spider-Man 2 уже обновилась, Control Resonant ждёт декабрьского…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-15-1200-qssr-ii-upskaling-ps5.html">Читать →</a><span class="srcc">источников: 5</span></div>
   </div>
 </article></div></section>
 </main>
@@ -187,9 +179,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -207,9 +198,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

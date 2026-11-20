@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/gadgets/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/gadgets/">Гаджеты</a></li><li aria-current="page">Commodore 64 возвращается в магазины Европы</li></ol></nav>
 <article class="post cat-gadgets">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-05T23:07:00+03:00">05.11.2026, 23:07</time></div>
@@ -100,50 +100,42 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Commodore подписала эксклюзивный контракт с дистрибьютором Colby: C64 Ultimate впервые за тридцать с лишним лет попадёт на полки магазинов в Европе, на Ближнем Востоке и в Африке. Цены и точной даты пока нет — только «праздничный сезон».</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Эксклюзивная дистрибуция через Colby — Великобритания, Европа, Ближний Восток и Африка</li><li>В магазины идёт C64 Ultimate на FPGA Artix-7 с совместимостью «более 99,9 %»</li><li>Названы Media Markt и Argos, США пока «в работе»; цены и даты в рознице нет</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/c64-ultimate-v-magazinah.jpg" alt="Commodore 64 возвращается в магазины Европы"></figure>
-  <div class="post__body"><p>Commodore 3 ноября объявила об эксклюзивном дистрибьюторском соглашении с компанией Colby, и это не косметическая новость: впервые более чем за тридцать лет машины под этой маркой появятся на полках обычных магазинов, а не только в собственном интернет-магазине. Первым товаром по контракту станет C64 Ultimate. Это официальное заявление самой Commodore, подтверждённое пресс-релизом дистрибьютора.</p>
+  <figure class="post__cover"><img src="/assets/img/c64-ultimate-v-magazinah.jpg" alt="Commodore 64 возвращается в магазины Европы" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout "><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Эксклюзивная дистрибуция через Colby — Великобритания, Европа, Ближний Восток и Африка</li><li>В магазины идёт C64 Ultimate на FPGA Artix-7 с совместимостью «более 99,9 %»</li><li>Названы Media Markt и Argos, США пока «в работе»; цены и даты в рознице нет</li></ul></aside><div class="post__body"><p>Commodore 3 ноября объявила об эксклюзивном дистрибьюторском соглашении с компанией Colby, и это не косметическая новость: впервые более чем за тридцать лет машины под этой маркой появятся на полках обычных магазинов, а не только в собственном интернет-магазине. Первым товаром по контракту станет C64 Ultimate. Это официальное заявление самой Commodore, подтверждённое пресс-релизом дистрибьютора.</p>
 <p>Что за железо: C64 Ultimate воспроизводит оригинальный Commodore 64 не эмуляцией, а на уровне чипов — на FPGA AMD Xilinx Artix-7. Commodore заявляет совместимость с оригинальным софтом и периферией «более 99,9 %»: поддерживаются картриджи, джойстики, datasette и дисководы, то есть старые коллекции должны работать на новой машине. Корпус и раскладка клавиатуры — от оригинала.</p>
 <p>В розницу пойдут три издания: BASIC Beige, Starlight Edition и Founders Edition. Срок — «праздничный сезон», то есть до конца года; точных дат и цен в рознице Commodore не называет. Через Colby товар получат Великобритания, Европа, Ближний Восток и Африка (TDGN добавляет «часть Азии»). Дистрибьютор заявляет около 70 партнёров и более 500 торговых точек, а в качестве примеров сетей сама Commodore называет Media Markt и Argos. США в соглашение не входят: компания пишет, что «работает и над этим рынком».</p>
 <p>Контекст: бренд возродил Кристиан Симпсон — YouTube-автор, известный в ретро-сообществе; после C64 Ultimate вышли версия в корпусе 64C и смартфон Callback 8020, который, по данным Everyeye, стал самым продаваемым продуктом компании. До сих пор всё это продавалось онлайн, так что договор с Colby — переход из нишевой истории в обычный ретейл.</p>
 <p><strong>Оценка:</strong> красивая новость с точки зрения «железо как оно есть» — FPGA-реплика вместо эмулятора это самый честный способ вернуть старую машину, и 30 лет без полок звучит как хорошая строчка в пресс-релизе. Но покупать вслепую я бы не советовал: ни цены, ни даты, ни подтверждённого списка магазинов нет, а «праздничный сезон» в Европе легко растягивается до февраля. Если хочется именно такую машинку к Новому году — надёжнее официальный онлайн-магазин, а на полки смотреть как на бонус, когда они реально появятся.</p>
-<figure class="post__fig"><img src="/assets/img/c64-ultimate-v-magazinah-foto.jpg" alt="Commodore 64 с дисководом 1541 и CRT-монитором: та самая машина, которую теперь вернут в магазины" loading="lazy"></figure></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://www.colby.si/novica/colby-commodore-distributor-uk-europe-middle-east-africa/" rel="nofollow noopener" target="_blank">Colby — Colby named exclusive Commodore distributor across four regions</a></li><li><a href="https://thedailygame.news/story/2026-11-04-commodore-signs-colby-retail-deal-to-bring-c64-ultimate-back-to-european--a9374543" rel="nofollow noopener" target="_blank">The Daily Game News — Commodore signs Colby retail deal to bring C64 Ultimate back to European stores</a></li><li><a href="https://www.everyeye.it/notizie/commodore-64-tornera-negozi-fisici-c64-ultimate-quando-909948.html" rel="nofollow noopener" target="_blank">Everyeye — Il Commodore 64 tornerà nei negozi fisici con il C64 Ultimate</a></li></ol></section>
-  <section class="share" data-share-root>
+<figure class="post__fig"><img src="/assets/img/c64-ultimate-v-magazinah-foto.jpg" alt="Commodore 64 с дисководом 1541 и CRT-монитором: та самая машина, которую теперь вернут в магазины" loading="lazy"></figure></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://www.colby.si/novica/colby-commodore-distributor-uk-europe-middle-east-africa/" rel="nofollow noopener" target="_blank">Colby — Colby named exclusive Commodore distributor across four regions</a></li><li><a href="https://thedailygame.news/story/2026-11-04-commodore-signs-colby-retail-deal-to-bring-c64-ultimate-back-to-european--a9374543" rel="nofollow noopener" target="_blank">The Daily Game News — Commodore signs Colby retail deal to bring C64 Ultimate back to European stores</a></li><li><a href="https://www.everyeye.it/notizie/commodore-64-tornera-negozi-fisici-c64-ultimate-quando-909948.html" rel="nofollow noopener" target="_blank">Everyeye — Il Commodore 64 tornerà nei negozi fisici con il C64 Ultimate</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fc64-ultimate-v-magazinah.html&text=Commodore%2064%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D0%B2%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B%20%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D1%8B" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fc64-ultimate-v-magazinah.html&title=Commodore%2064%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D0%B2%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B%20%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D1%8B" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fc64-ultimate-v-magazinah.html&text=Commodore%2064%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D0%B2%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B%20%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D1%8B" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fc64-ultimate-v-magazinah.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fc64-ultimate-v-magazinah-pin.jpg&description=Commodore%2064%20%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%89%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D0%B2%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B%20%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D1%8B" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fc64-ultimate-v-magazinah.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-gadgets">
+  <div class="card__cover"><img src="/assets/img/huawei-osta-o1-pro.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-20T10:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1000-huawei-osta-o1-pro.html">Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro</a></h3>
     <p class="card__sum">Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м.</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1000-huawei-osta-o1-pro.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="Flipper One: карманный Linux-компьютер собрал $12 млн" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/flipper-one-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-19T08:00:00+03:00">19.11</time></div>
     <h3 class="card__title"><a href="/2026-11-19-0800-flipper-one-kickstarter.html">Flipper One: карманный Linux-компьютер собрал $12 млн</a></h3>
     <p class="card__sum">Flipper Devices открыла сборы на Flipper One — карманный Linux-компьютер на Rockchip с двумя Ethernet-портами, Wi-Fi 6E и…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-19-0800-flipper-one-kickstarter.html">Читать →</a><span class="srcc">источников: 8</span></div>
   </div>
 </article>
 <article class="card card-- cat-gadgets">
-  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/yandex-pin-side.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-gadgets" href="/gadgets/">Гаджеты</a><time datetime="2026-11-18T14:20:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-yandex-pin-diktofon.html">«Яндекс Пин»: носимый ИИ-диктофон засветился до анонса — запуск 24 ноября</a></h3>
     <p class="card__sum">Яндекс готовит носимый диктофон «Пин» — пластина размером с карту, которая записывает разговоры, отправляет их через телефон…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-yandex-pin-diktofon.html">Читать →</a><span class="srcc">источников: 4</span></div>
   </div>
 </article></div></section>
 </main>
@@ -158,9 +150,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -178,9 +169,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {

@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#0A0C0F">
+<meta name="theme-color" content="#18131F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="/assets/theme.css">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -84,7 +84,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <header class="top">
   <div class="wrap top__in">
     <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(192)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(48)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(12)</span></a><span class="nav__sep" aria-hidden="true"></span><a class="nav__link nav__link--authors" href="/avtory/">Авторы</a><span class="nav__sep" aria-hidden="true"></span><details class="nav__rubrics"><summary class="nav__link">Рубрики<span class="nav__num">(9)</span></summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
     <div class="top__actions">
       <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
@@ -92,7 +92,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </header>
 <main class="wrap post-page">
-<div class="backrow"><a class="backlink" href="/switch/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> Назад</a></div>
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Главная</a></li><li><a href="/switch/">Nintendo Switch</a></li><li aria-current="page">Stellar Blade на Switch 2: 60 fps из 30</li></ol></nav>
 <article class="post cat-switch">
   <header class="post__head">
     <div class="post__meta"><a class="chip chip--solid cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-05T18:05:00+03:00">05.11.2026, 18:05</time></div>
@@ -100,51 +100,43 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Stellar Blade Complete Edition вышла на Switch 2 — со всеми DLC, четырьмя костюмами Bayonetta и генерацией кадров, которая поднимает базовые 30 fps до 60. Порт удачный, но с оговорками: мыло в портативе и задержка ввода при включённой интерполяции.</p>
     <p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p>
   </header>
-  <aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Базовые 30 fps поднимают до 60 через NVIDIA DLSS и AMD FSR 3.1 Frame Generation</li><li>Генерация кадров включена по умолчанию; отключение убирает артефакты, но роняет частоту</li><li>Док — до 1080p, портатив — 720p, установка 25,2 ГБ, вся игра на картридже</li><li>Коллаборация с Bayonetta: четыре бесплатных костюма, доступны и на PS5, и на PC</li></ul></aside>
-  <figure class="post__cover"><img src="/assets/img/stellar-blade-switch-2.jpg" alt="Stellar Blade на Switch 2: 60 fps из 30"></figure>
-  <div class="post__body"><p>5 ноября <a class="tlink" href="/titles/stellar-blade.html">Stellar Blade</a> Complete Edition вышла на Nintendo Switch 2 — спустя полтора года после премьеры на PS5 и год с небольшим после PC. Это официальный релиз, игра уже продаётся в eShop, и это первый Switch 2-проект студии Shift Up. Издание полное: внутри все вышедшие DLC, включая коллаборации с NieR:Automata и Goddess of Victory: NIKKE, плюс новая — четыре бесплатных костюма в стиле Bayonetta, которые в тот же день получили и версии на PS5 и PC.</p>
+  <figure class="post__cover"><img src="/assets/img/stellar-blade-switch-2.jpg" alt="Stellar Blade на Switch 2: 60 fps из 30" width="1600" height="900" fetchpriority="high"></figure><div class="reading-layout "><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Базовые 30 fps поднимают до 60 через NVIDIA DLSS и AMD FSR 3.1 Frame Generation</li><li>Генерация кадров включена по умолчанию; отключение убирает артефакты, но роняет частоту</li><li>Док — до 1080p, портатив — 720p, установка 25,2 ГБ, вся игра на картридже</li><li>Коллаборация с Bayonetta: четыре бесплатных костюма, доступны и на PS5, и на PC</li></ul></aside><div class="post__body"><p>5 ноября <a class="tlink" href="/titles/stellar-blade.html">Stellar Blade</a> Complete Edition вышла на Nintendo Switch 2 — спустя полтора года после премьеры на PS5 и год с небольшим после PC. Это официальный релиз, игра уже продаётся в eShop, и это первый Switch 2-проект студии Shift Up. Издание полное: внутри все вышедшие DLC, включая коллаборации с NieR:Automata и Goddess of Victory: NIKKE, плюс новая — четыре бесплатных костюма в стиле Bayonetta, которые в тот же день получили и версии на PS5 и PC.</p>
 <p>Технически порт построен на двух технологиях сразу: NVIDIA DLSS отвечает за апскейл, AMD FSR 3.1 Frame Generation — за интерполяцию кадров. Базовая симуляция идёт на 30 fps, а с включённой генерацией цель — 60 fps и в доке, и в портативе. Разрешение: в доке картинка апскейлится до 1080p, в портативе — 720p. По замерам Final Weapon, в доке частота держится у верхней границы диапазона 50–60 fps стабильнее, чем в портативе.</p>
 <p>Главная ловушка — генерация кадров включена по умолчанию, и RPG Site советует выключать её сразу. Причина: при базовых 30 fps интерполяция добавляет задержку ввода, а без неё доджи и парирования в этом экшене ощущаются заметно отзывчивее. С выключенной генерацией картинка чище, но частота скачет; с включённой — плавнее, но с артефактами и «мылом» вокруг быстро движущихся объектов. Проще говоря, выбор между отзывчивостью и плавностью, и обзорщики сходятся, что для боссов лучше первое. Частота кадров в доке при этом не ограничена сверху, и это отдельная претензия RPG Site.</p>
 <p>Что с размерами и загрузкой: на Switch 2 игра занимает 25,2 ГБ против 38,8 ГБ на PS5, а загрузка сохранения идёт примерно 8 секунд — медленнее не сильно, дольше выходит только старт из меню консоли. Розничное издание содержит полную игру на картридже, а не код на скачивание — редкость по нынешним временам и заметный плюс.</p>
 <p>По фичам платформы Shift Up постаралась: гироскоп, поддержка мыши, отдельные настройки для портативного и док-режима, навигация по меню тачем и один из лучших вариантов HD-вибрации на консоли — на этом сходятся и RPG Site, и Polygon. Слабое место — батарея: Polygon насчитал около трёх часов в портативе на настройках по умолчанию и почти максимальной яркости.</p>
 <p><strong>Оценка:</strong> если у вас есть PS5, играть в доке лучше там — это честно. Но как портативная версия это заметно лучше, чем можно было ждать от проекта, который изначально целился в железо на порядок мощнее, и Hobby Consolas называет порт «звёздным». Худший сценарий — играть в доке с включённой по умолчанию генерацией кадров и решить, что виновата консоль: первым делом зайдите в настройки.</p>
-<figure class="post__fig"><img src="/assets/img/stellar-blade-switch-2-hp.jpg" alt="Босс Stellar Blade на разрушенной улице: кадр из игры" loading="lazy"></figure></div>
-  
-  <section class="sources"><h2>Источники</h2><ol><li><a href="https://finalweapon.net/2026/11/02/stellar-blade-complete-edition-review-nintendo-switch-2" rel="nofollow noopener" target="_blank">Final Weapon — Stellar Blade Complete Edition Review, Impressive Switch 2 Debut</a></li><li><a href="https://rpgsite.net/feature/21675-stellar-blade-complete-edition-on-switch-2-feels-better-than-the-demo-but-needs-more-work" rel="nofollow noopener" target="_blank">RPG Site — Stellar Blade Complete Edition on Switch 2 feels better than the demo, but needs more work</a></li><li><a href="https://gamingtrend.com/impressions/stellar-blade-complete-edition-switch-2-impressions" rel="nofollow noopener" target="_blank">GamingTrend — Stellar Blade Complete Edition Switch 2 impressions</a></li><li><a href="https://polygon.com/stellar-blade-nintendo-switch-2-impressions" rel="nofollow noopener" target="_blank">Polygon — 2024&#x27;s Best Action Game Is (Mostly) Just as Good in Stunning Switch 2 Port</a></li><li><a href="https://hobbyconsolas.com/videojuegos/analisis-stellar-blade-complete-edition-para-nintendo-switch-2-un-port-estelar-lleno-contenido-todo-incluido-cartucho_7056433_0.html" rel="nofollow noopener" target="_blank">Hobby Consolas — Análisis de Stellar Blade Complete Edition para Switch 2</a></li><li><a href="https://gamerant.com/bayonetta-x-stellar-blade-collab-november-5-2026/" rel="nofollow noopener" target="_blank">Game Rant — Bayonetta crossover outfits</a></li></ol></section>
-  <section class="share" data-share-root>
+<figure class="post__fig"><img src="/assets/img/stellar-blade-switch-2-hp.jpg" alt="Босс Stellar Blade на разрушенной улице: кадр из игры" loading="lazy"></figure></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://finalweapon.net/2026/11/02/stellar-blade-complete-edition-review-nintendo-switch-2" rel="nofollow noopener" target="_blank">Final Weapon — Stellar Blade Complete Edition Review, Impressive Switch 2 Debut</a></li><li><a href="https://rpgsite.net/feature/21675-stellar-blade-complete-edition-on-switch-2-feels-better-than-the-demo-but-needs-more-work" rel="nofollow noopener" target="_blank">RPG Site — Stellar Blade Complete Edition on Switch 2 feels better than the demo, but needs more work</a></li><li><a href="https://gamingtrend.com/impressions/stellar-blade-complete-edition-switch-2-impressions" rel="nofollow noopener" target="_blank">GamingTrend — Stellar Blade Complete Edition Switch 2 impressions</a></li><li><a href="https://polygon.com/stellar-blade-nintendo-switch-2-impressions" rel="nofollow noopener" target="_blank">Polygon — 2024&#x27;s Best Action Game Is (Mostly) Just as Good in Stunning Switch 2 Port</a></li><li><a href="https://hobbyconsolas.com/videojuegos/analisis-stellar-blade-complete-edition-para-nintendo-switch-2-un-port-estelar-lleno-contenido-todo-incluido-cartucho_7056433_0.html" rel="nofollow noopener" target="_blank">Hobby Consolas — Análisis de Stellar Blade Complete Edition para Switch 2</a></li><li><a href="https://gamerant.com/bayonetta-x-stellar-blade-collab-november-5-2026/" rel="nofollow noopener" target="_blank">Game Rant — Bayonetta crossover outfits</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fstellar-blade-switch-2.html&text=Stellar%20Blade%20%D0%BD%D0%B0%20Switch%202%3A%2060%20fps%20%D0%B8%D0%B7%2030" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fstellar-blade-switch-2.html&title=Stellar%20Blade%20%D0%BD%D0%B0%20Switch%202%3A%2060%20fps%20%D0%B8%D0%B7%2030" target="_blank" rel="noopener nofollow">ВКонтакте</a>
   <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2Fstellar-blade-switch-2.html&text=Stellar%20Blade%20%D0%BD%D0%B0%20Switch%202%3A%2060%20fps%20%D0%B8%D0%B7%2030" target="_blank" rel="noopener nofollow">X</a>
   <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2Fstellar-blade-switch-2.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2Fstellar-blade-switch-2-pin.jpg&description=Stellar%20Blade%20%D0%BD%D0%B0%20Switch%202%3A%2060%20fps%20%D0%B8%D0%B7%2030" target="_blank" rel="noopener nofollow">Pinterest</a>
   <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2Fstellar-blade-switch-2.html">Пошерить</button>
-</section>
+</section></div></div>
 </article>
-<section class="related"><h2>По теме</h2><div class="grid grid--list"><article class="card card-- cat-switch">
-  <div class="card__cover"><img src="/assets/img/zelda-40-switch-2-dok.jpg" alt="Юбилейное издание Switch 2 вернётся в январе 2027" loading="lazy"></div>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-switch">
+  <div class="card__cover"><img src="/assets/img/zelda-40-switch-2-dok.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-20T18:00:00+03:00">20.11</time></div>
     <h3 class="card__title"><a href="/2026-11-20-1800-zelda-switch-2-yanvar.html">Юбилейное издание Switch 2 вернётся в январе 2027</a></h3>
     <p class="card__sum">Nintendo подтвердила через страницу своего магазина, что тираж Zelda 40th Anniversary Edition приедет «в январе 2027» — то…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-20-1800-zelda-switch-2-yanvar.html">Читать →</a><span class="srcc">источников: 7</span></div>
   </div>
 </article>
 <article class="card card-- cat-switch">
-  <div class="card__cover"><img src="/assets/img/tga-2026-nominacii-cover.jpg" alt="Nintendo обошла всех в номинациях The Game Awards" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/tga-2026-nominacii-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-18T08:00:00+03:00">18.11</time></div>
     <h3 class="card__title"><a href="/2026-11-18-0800-tga-2026-nominacii.html">Nintendo обошла всех в номинациях The Game Awards</a></h3>
     <p class="card__sum">Шоу The Game Awards 17 ноября объявило номинантов 2026 года: Nintendo получила 12 номинаций на шесть игр и стала самым…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-18-0800-tga-2026-nominacii.html">Читать →</a><span class="srcc">источников: 10</span></div>
   </div>
 </article>
 <article class="card card-- cat-switch">
-  <div class="card__cover"><img src="/assets/img/eshop-podarit-igru.jpg" alt="Nintendo разрешила дарить игры в eShop — внутри семьи" loading="lazy"></div>
+  <div class="card__cover"><img src="/assets/img/eshop-podarit-igru.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-switch" href="/switch/">Nintendo Switch</a><time datetime="2026-11-16T08:00:00+03:00">16.11</time></div>
     <h3 class="card__title"><a href="/2026-11-16-0800-eshop-podarit-igru-seme.html">Nintendo разрешила дарить игры в eShop — внутри семьи</a></h3>
     <p class="card__sum">Nintendo включила в eShop на Switch и Switch 2 цифровые подарки: игру, DLC или набор обновления до Switch 2 Edition можно…</p>
-    <div class="card__foot"><a class="more" href="/2026-11-16-0800-eshop-podarit-igru-seme.html">Читать →</a><span class="srcc">источников: 11</span></div>
   </div>
 </article></div></section>
 </main>
@@ -159,9 +151,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
   r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
-  localStorage.setItem('gv-mode', r.dataset.mode);
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
-if (localStorage.getItem('gv-mode')) document.documentElement.dataset.mode = localStorage.getItem('gv-mode');
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {
@@ -179,9 +170,11 @@ siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) c
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
-const route = location.pathname;
-const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
-document.querySelector(active)?.classList.add('nav__link--active');
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
 </script>
 <script>
 (() => {
