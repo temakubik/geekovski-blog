@@ -8,6 +8,44 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-20-1500-vk-play-arenda-konsoli.html",
+   "url": "https://geekovski.ru/2026-11-20-1500-vk-play-arenda-konsoli.html",
+   "title": "VK Play сдаёт консоли в аренду под GTA VI",
+   "summary": "«VK Play Облачный гейминг» открыл в тестовом режиме консольный тариф: можно забронировать время на удалённой приставке и играть в GTA VI с ПК или прямо в браузере — без покупки консоли и без покупки самой игры. В тарифе пока одна игра, а что происходит с прогрессом между бронированиями, VK не объяснила.",
+   "date_published": "2026-11-20T15:00:00+03:00",
+   "date_modified": "2026-11-20T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/vk-play-konsol-arenda.jpg",
+   "_sources": [
+    {
+     "name": "CNews — VK Play запустил консольный тариф с доступом к GTA VI",
+     "url": "https://www.cnews.ru/news/line/2026-11-20_vk_play_zapustil_konsolnyj"
+    },
+    {
+     "name": "Computerra — тариф, механика брони и цитата Александра Михеева",
+     "url": "https://computerra.ru/376314/vk-play-zapustil-konsolnyj-tarif-s-dostupom-k-gta-vi"
+    },
+    {
+     "name": "PCNews — тариф не передаёт аккаунт и копию игры",
+     "url": "https://pcnews.ru/news/gta_vi_na_obycnom_pk_vk_play_zapustil_arendu_konsolej_cerez_oblako-1858048.html"
+    },
+    {
+     "name": "Xbox Wire — GTA VI в Xbox Cloud Gaming с 19 ноября",
+     "url": "https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19"
+    },
+    {
+     "name": "DTF — как купить GTA VI в России и цены у посредников",
+     "url": "https://dtf.ru/gta/5417403-gde-kupit-gta-6-v-rossii"
+    },
+    {
+     "name": "Habr — объявление VK Play о поиске партнёров со своими консолями",
+     "url": "https://habr.com/ru/articles/1099934"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-20-1200-gta6-fps-na-konsolyah.html",
    "url": "https://geekovski.ru/2026-11-20-1200-gta6-fps-na-konsolyah.html",
    "title": "GTA VI на консолях: 30 fps держится не везде",

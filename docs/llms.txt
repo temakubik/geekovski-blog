@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 13 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 16 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 18 материалов
-- [PC-игры](https://geekovski.ru/pc/): 30 материалов
+- [PC-игры](https://geekovski.ru/pc/): 31 материал
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 35 материалов
 - [Кино](https://geekovski.ru/kino/): 23 материала
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 70 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 85 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 86 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 34 материала; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [VK Play сдаёт консоли в аренду под GTA VI](https://geekovski.ru/2026-11-20-1500-vk-play-arenda-konsoli.html): «VK Play Облачный гейминг» открыл в тестовом режиме консольный тариф: можно забронировать время на удалённой приставке и играть в GTA VI с ПК или прямо в браузере — без покупки консоли и без покупки самой игры. В тарифе пока одна игра, а что происходит с прогрессом между бронированиями, VK не объяснила. (20.11.2026)
 - [GTA VI на консолях: 30 fps держится не везде](https://geekovski.ru/2026-11-20-1200-gta6-fps-na-konsolyah.html): Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в езде и долгих взрывах, Series X близка к PS5, а Series S выдаёт 720p и половину кадров — 20–27 вместо 30. (20.11.2026)
 - [Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro](https://geekovski.ru/2026-11-20-1000-huawei-osta-o1-pro.html): Huawei вывела на рынок новый бренд смартфонов OSTA (по-китайски «Синман») — первый с момента продажи Honor в 2020-м. Первая модель O1 Pro повторяет широкий корпус Pura X View: 6,39 дюйма при пропорции 16:9,5, Kirin 9030S, батарея 7000 мА·ч, до 16 ГБ памяти и 1 ТБ. Цену на старте не назвали, продажи в Китае — сегодня в 18:08 по Пекину. (20.11.2026)
 - [Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек](https://geekovski.ru/2026-11-20-0800-ubisoft-motherbrain.html): Полугодие Ubisoft закрыла с убытком €155,9 млн по non-IFRS и падением бронирований на 16,5%, а команду, сделавшую её первую играбельную демку на генеративном ИИ, вынесла в отдельную дочку Motherbrain. В тот же день компания объявила о сокращении 166 позиций в Монреале и Квебеке. (20.11.2026)
