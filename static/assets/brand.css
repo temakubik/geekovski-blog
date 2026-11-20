@@ -5,5 +5,5 @@
 
 .brand__logo--light { display: none; }
 
-[data-mode="light"] .brand__logo--dark { display: none; }
-[data-mode="light"] .brand__logo--light { display: block; }
+:is([data-mode="light"], [data-theme="editorial"]:not([data-mode="dark"])) .brand__logo--dark { display: none; }
+:is([data-mode="light"], [data-theme="editorial"]:not([data-mode="dark"])) .brand__logo--light { display: block; }

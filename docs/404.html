@@ -31,7 +31,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#18131F">
+<meta name="theme-color" content="#F1F4F9">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
@@ -78,17 +78,18 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 
 </head>
 <body class="t-editorial">
+<a class="skip-link" href="#main-content">К содержанию</a>
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/" aria-label="GEEKOVSKI — главная"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="GEEKOVSKI" width="418" height="80" loading="eager"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80" loading="eager" aria-hidden="true"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Главная</a><a class="nav__link" href="/archive/">Архив</a><a class="nav__link" href="/digests/">Дайджесты</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/avtory/">Авторы</a><details class="nav__rubrics"><summary class="nav__link">Рубрики</summary><div class="nav__categories"><a class="nav__link nav__link--sm" href="/xbox/">Xbox</a><a class="nav__link nav__link--sm" href="/switch/">Nintendo Switch</a><a class="nav__link nav__link--sm" href="/playstation/">PlayStation</a><a class="nav__link nav__link--sm" href="/pc/">PC-игры</a><a class="nav__link nav__link--sm" href="/vr/">VR</a><a class="nav__link nav__link--sm" href="/gadgets/">Гаджеты</a><a class="nav__link nav__link--sm" href="/kino/">Кино</a><a class="nav__link nav__link--sm" href="/serialy/">Сериалы</a><a class="nav__link nav__link--sm" href="/ai/">AI</a></div></details></nav>
+    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link" href="/">Блог</a><a class="nav__link" href="/categories/">Категории</a><a class="nav__link" href="/avtory/">Авторы</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/digests/">Дайджесты</a></nav>
     <div class="top__actions">
-      <button class="theme-toggle" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <div class="top__links"><a href="/rss.xml">RSS</a><a href="https://vk.com/geekovskiread">ВКонтакте</a></div><button class="theme-toggle" type="button" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
-<main class="wrap"><section class="lead"><h1>Страница не нашлась</h1><p>Адрес мог измениться или в ссылке опечатка. Живые материалы — в рубриках и на <a href="/">главной</a>: <a href="/xbox/">Xbox</a>, <a href="/switch/">Nintendo Switch</a>, <a href="/playstation/">PlayStation</a>, <a href="/pc/">PC-игры</a>, <a href="/vr/">VR</a>, <a href="/gadgets/">Гаджеты</a>, <a href="/kino/">Кино</a>, <a href="/serialy/">Сериалы</a>, <a href="/ai/">AI</a>.</p></section></main>
+<main id="main-content" tabindex="-1" class="wrap"><section class="lead"><h1>Страница не нашлась</h1><p>Адрес мог измениться или в ссылке опечатка. Живые материалы — в рубриках и на <a href="/">главной</a>: <a href="/xbox/">Xbox</a>, <a href="/switch/">Nintendo Switch</a>, <a href="/playstation/">PlayStation</a>, <a href="/pc/">PC-игры</a>, <a href="/vr/">VR</a>, <a href="/gadgets/">Гаджеты</a>, <a href="/kino/">Кино</a>, <a href="/serialy/">Сериалы</a>, <a href="/ai/">AI</a>.</p></section></main>
 <footer class="foot">
   <div class="wrap foot__in">
     <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
@@ -99,7 +100,8 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <script>
 document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   const r = document.documentElement;
-  r.dataset.mode = r.dataset.mode === 'light' ? 'dark' : 'light';
+  const mode = r.dataset.mode || (r.dataset.theme === 'editorial' ? 'light' : 'dark');
+  r.dataset.mode = mode === 'light' ? 'dark' : 'light';
   try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
 const menuButton = document.querySelector('.menu-toggle');
@@ -118,7 +120,13 @@ menuButton?.addEventListener('click', () => {
 siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
 const rubrics = document.querySelector('.nav__rubrics');
 document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
-document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { closeMenu(); if (rubrics) rubrics.open = false; } });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    if (menuButton?.getAttribute('aria-expanded') === 'true') menuButton.focus();
+    closeMenu();
+    if (rubrics) rubrics.open = false;
+  }
+});
 if (document.documentElement.dataset.theme !== 'editorial') {
   const route = location.pathname;
   const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
