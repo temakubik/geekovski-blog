@@ -698,16 +698,17 @@ a.tlink:hover { border-bottom-style: solid; }
 .home-intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(180px, 26%);
-  align-items: end;
-  gap: 18px 34px;
-  padding: clamp(40px, 5vw, 78px) var(--gutter) clamp(32px, 3.8vw, 56px);
+  align-items: center;
+  gap: 12px 28px;
+  padding: clamp(22px, 2.4vw, 38px) var(--gutter);
 }
 .home-intro h1 {
-  font: 760 clamp(58px, 7.3vw, 115px)/.86 var(--font-display);
+  font: 760 clamp(49px, 5.2vw, 80px)/.95 var(--font-display);
   letter-spacing: -.022em;
+  text-wrap: balance;
 }
 .home-intro p {
-  margin: 0 0 3px;
+  margin: 0;
   color: var(--muted);
   font-size: clamp(15px, 1.24vw, 18px);
   line-height: 1.5;
@@ -743,7 +744,7 @@ a.tlink:hover { border-bottom-style: solid; }
 }
 .home-stories .card:last-child { border-inline-end: 0; }
 .home-stories .card__cover {
-  height: clamp(185px, 20vw, 302px);
+  height: clamp(185px, min(20vw, 36vh), 302px);
   margin: 0;
   aspect-ratio: auto;
   border-radius: 0;
@@ -872,15 +873,15 @@ a.tlink:hover { border-bottom-style: solid; }
 .category-index p { margin: 9px 0 0; color: var(--muted); font-size: 14px; }
 
 @media (max-width: 680px) {
-  .home-intro { grid-template-columns: 1fr; gap: 15px; padding-block: 26px 26px; }
-  .home-intro h1 { font-size: clamp(47px, 11.4vw, 79px); }
+  .home-intro { grid-template-columns: 1fr; gap: 8px; padding-block: 17px 18px; }
+  .home-intro h1 { font-size: clamp(35px, 10.1vw, 58px); }
   .home-intro p br { display: none; }
   .home-edition { padding-block: 8px; }
   .home-edition a { font-size: 12px; }
   .home-stories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home-stories:has(> .card:nth-child(2):last-child) > .card { grid-column: 1 / -1; }
   .home-stories .card--big { grid-column: 1 / -1; border-inline-end: 0; border-bottom: 1px solid var(--line); }
-  .home-stories .card__cover { height: auto; aspect-ratio: 4 / 3; }
+  .home-stories .card__cover { height: auto; aspect-ratio: 3 / 2; }
   .home-stories .card--big .card__cover { aspect-ratio: 16 / 9; }
   .home-stories .card__body { padding: 13px var(--gutter) 17px; }
   .home-stories .card:not(.card--big) .card__body { padding-inline: 13px; }

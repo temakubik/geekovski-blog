@@ -861,7 +861,7 @@ def rubric_links(current=None):
 
 def editorial_front(posts, digests, cal_entries):
     intro = ('''<header class="home-intro">
-  <h1>Игры, технологии<br> и кино</h1>
+  <h1>Игры, технологии и кино</h1>
   <p>Новости и разборы с источниками.<br> Без маркетингового сиропа.</p>
 </header>''')
     top_cards = "\n".join(card(p, "editorial", big=i == 0, summary=False, priority=i == 0)
