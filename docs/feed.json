@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-20-0800-ubisoft-motherbrain.html",
+   "url": "https://geekovski.ru/2026-11-20-0800-ubisoft-motherbrain.html",
+   "title": "Ubisoft завела ИИ-дочку Motherbrain и сократила 166 человек",
+   "summary": "Полугодие Ubisoft закрыла с убытком €155,9 млн по non-IFRS и падением бронирований на 16,5%, а команду, сделавшую её первую играбельную демку на генеративном ИИ, вынесла в отдельную дочку Motherbrain. В тот же день компания объявила о сокращении 166 позиций в Монреале и Квебеке.",
+   "date_published": "2026-11-20T08:00:00+03:00",
+   "date_modified": "2026-11-20T08:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/ubisoft-otchet-cover.jpg",
+   "_sources": [
+    {
+     "name": "Ubisoft — отчёт за первое полугодие 2026–27",
+     "url": "https://staticctf.ubisoft.com/8aefmxkxpxwl/4rjH83tyAju38erlDGV0sm/5f6d973ac0db88ac2bef4d21fe1a4835/Ubisoft_FY27_H1_Earnings_PR_EN_vF.pdf"
+    },
+    {
+     "name": "Gematsu — 166 сокращений в Монреале и Квебеке",
+     "url": "https://www.gematsu.com/2026/11/ubisoft-lays-off-166-staff-at-montreal-and-quebec-studios"
+    },
+    {
+     "name": "Ubisoft News — анонс Teammates",
+     "url": "https://news.ubisoft.com/en-us/article/3mWlITIuWuu0MoVuR6o8ps/ubisoft-reveals-teammates-an-ai-experiment-to-change-the-game"
+    },
+    {
+     "name": "GamesBeat — разбор демки Teammates",
+     "url": "https://gamesbeat.com/ubisofts-teammates-demo-showcases-the-future-of-ai-npcs-with-some-growing-pains/"
+    },
+    {
+     "name": "IGN — какие команды попали под сокращения",
+     "url": "https://www.ign.com/articles/ubisoft-cuts-166-jobs-assassins-creed"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html",
    "url": "https://geekovski.ru/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html",
    "title": "Китай исчез из прогноза NVIDIA: H200 больше не возят",
