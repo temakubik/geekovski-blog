@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-20-1200-gta6-fps-na-konsolyah.html",
+   "url": "https://geekovski.ru/2026-11-20-1200-gta6-fps-na-konsolyah.html",
+   "title": "GTA VI на консолях: 30 fps держится не везде",
+   "summary": "Digital Foundry разобрала GTA VI на четырёх консолях: PS5 Pro держит почти безупречные 30 кадров, обычная PS5 проседает в езде и долгих взрывах, Series X близка к PS5, а Series S выдаёт 720p и половину кадров — 20–27 вместо 30.",
+   "date_published": "2026-11-20T12:00:00+03:00",
+   "date_modified": "2026-11-20T12:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-fps-cover.jpg",
+   "_sources": [
+    {
+     "name": "Digital Foundry — GTA 6: PS5 vs PS5 Pro, Xbox Series X and Series S",
+     "url": "https://digitalfoundry.net/features/gta-6-ps5-vs-ps5-pro-xbox-series-x-and-series-s-which-console-plays-best"
+    },
+    {
+     "name": "Digital Foundry — технический разбор GTA 6",
+     "url": "https://digitalfoundry.net/reviews/grand-theft-auto-6-a-landmark-achievement-that-redefines-a-console-generation"
+    },
+    {
+     "name": "VGC — разбор версии для PS5",
+     "url": "https://videogameschronicle.com/news/gta-6-base-ps5-performance-analysis-shows-struggle-to-maintain-30-fps-at-all-times"
+    },
+    {
+     "name": "VGC — разбор версии для Xbox Series S",
+     "url": "https://videogameschronicle.com/news/gta-6-xbox-series-s-performance-analysis-admires-the-effort-but-says-significant-frame-drops-are-a-problem"
+    },
+    {
+     "name": "Push Square — Rockstar объяснила решение про 30 fps",
+     "url": "https://www.pushsquare.com/news/2026/11/ps5-pro-is-not-powerful-enough-to-run-gta-6-at-60fps-rockstar-explains-frame-rate-decision"
+    },
+    {
+     "name": "DTF — разбор DF о процессорном ограничении",
+     "url": "https://dtf.ru/games/5418300-gta-6-na-ps5-pro-ogranichenie-v-30-fps"
+    },
+    {
+     "name": "Shazoo — пересказ технического разбора",
+     "url": "https://shazoo.ru/2026/11/18/194300/digital-foundry-razobrala-gta-6-1440p-30-fps-i-vozmozno-lucsaia-trassirovka-lucei-v-igrax"
+    },
+    {
+     "name": "PC Gamer — что стабильные 30 fps значат для будущей версии на ПК",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-looks-gorgeous-and-seeing-it-run-at-a-stable-30-fps-on-ageing-ps5-pro-hardware-makes-me-hopeful-for-pc-performance/"
+    },
+    {
+     "name": "Deadline — предзаказы и первые сутки продаж",
+     "url": "https://deadline.com/2026/11/gta-6-sales-launch-day-surge-videogame-1237229514/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-20-1000-huawei-osta-o1-pro.html",
    "url": "https://geekovski.ru/2026-11-20-1000-huawei-osta-o1-pro.html",
    "title": "Huawei запустила OSTA: широкий «ИИ-телефон» O1 Pro",
