@@ -8,6 +8,60 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-21-1000-gta6-prodazhi-rekord.html",
+   "url": "https://geekovski.ru/2026-11-21-1000-gta6-prodazhi-rekord.html",
+   "title": "GTA VI собрала $3,79 млрд за первые сутки",
+   "summary": "Rockstar отчиталась за первый день GTA VI: $3,79 млрд розничных продаж по всему миру и 32,5 млн копий, проданных ещё до релиза. Это больше, чем собрал любой фильм за весь прокат и любой тур в истории музыки. При этом Take-Two в отчёте говорит про «розничные продажи», а не про свою выручку, и почти половина покупателей взяла издание за $100.",
+   "date_published": "2026-11-21T10:00:00+03:00",
+   "date_modified": "2026-11-21T10:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-prodazhi-rekord.jpg",
+   "_sources": [
+    {
+     "name": "Take-Two Interactive — пресс-релиз о рекорде первого дня",
+     "url": "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records"
+    },
+    {
+     "name": "ABC News (AP) — $3,79 млрд и 32,5 млн предзаказов",
+     "url": "https://abcnews.com/amp/US/wireStory/grand-theft-auto-vi-sets-record-379b-day-138335808"
+    },
+    {
+     "name": "CNN — сравнение с прокатом и данные Sensor Tower",
+     "url": "https://www.cnn.com/2026/11/20/media/gta-vi-launch-sales-numbers"
+    },
+    {
+     "name": "Deutsche Welle — реакция Хаузера и дата ПК-версии",
+     "url": "https://amp.dw.com/ru/379-mlrd-za-pervyj-den-gta-vi-ustanovila-rekord-v-istorii-videoigr/a-80007565"
+    },
+    {
+     "name": "CNBC — прогнозы аналитиков перед релизом",
+     "url": "https://www.cnbc.com/2026/11/18/gta-vi-publisher-take-two-jumps-as-gamers-relish-blockbuster-release.html"
+    },
+    {
+     "name": "Marvin Labs — как копия GTA VI попадает в отчётность Take-Two",
+     "url": "https://www.marvin-labs.com/blog/live-with-marvin-gta-vi-take-two-launch-test/"
+    },
+    {
+     "name": "Take-Two — отчёт за второй квартал 2027 финансового года",
+     "url": "https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fiscal-4"
+    },
+    {
+     "name": "Rockstar Games Store — цены изданий",
+     "url": "https://store.rockstargames.com/game/buy-gta-vi"
+    },
+    {
+     "name": "Marketplace — оценка выручки GTA Online",
+     "url": "https://www.marketplace.org/story/2026/11/18/gta-vis-price-tag"
+    },
+    {
+     "name": "Gaming Goods — цены изданий и отсутствие российской цены",
+     "url": "https://gaming-goods.ru/blog/p/gta-6-data-vyhoda-cena-kak-kupit"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-21-0800-odin-doma-kalkin.html",
    "url": "https://geekovski.ru/2026-11-21-0800-odin-doma-kalkin.html",
    "title": "«Один дома» возвращается: Калкин снова сыграет Кевина",
