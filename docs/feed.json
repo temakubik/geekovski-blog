@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html",
+   "url": "https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html",
+   "title": "Лутбоксы, pay-to-win и дети: что предлагает ЕС",
+   "summary": "Еврокомиссия 11 ноября показала проект Digital Fairness Act — первый в истории ЕС документ, который лезет прямо в игровые механики: лутбоксы несовершеннолетним, платная валюта выключена по умолчанию, цена каждого предмета в евро. Это пока не закон, а индустрия уже называет его «game over» для европейских студий.",
+   "date_published": "2026-11-21T21:00:00+03:00",
+   "date_modified": "2026-11-21T21:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/es-lutboksy-dfa.jpg",
+   "_sources": [
+    {
+     "name": "Еврокомиссия — проект Digital Fairness Act, COM(2026) 1100",
+     "url": "https://commission.europa.eu/document/download/0575d59f-554f-4a9e-b54b-e6b717175809_en?filename=Proposal+for+a+Digital+Fairness+Act.pdf"
+    },
+    {
+     "name": "Еврокомиссия — вопросы и ответы по потребительскому пакету, 11 ноября 2026",
+     "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/qanda_26_2408/QANDA_26_2408_EN.pdf"
+    },
+    {
+     "name": "Еврокомиссия — пресс-релиз Consumer Package",
+     "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407"
+    },
+    {
+     "name": "Politico — реакция игровых компаний",
+     "url": "https://www.politico.eu/article/european-gaming-firms-say-new-eu-consumer-rules-will-cripple-the-industry-digital-fairness-act/"
+    },
+    {
+     "name": "EGDF и Video Games Europe — совместное заявление",
+     "url": "https://www.egdf.eu/joint-statement-from-the-european-games-developer-federation-egdf-and-video-games-europe-vge-on-the-digital-fairness-act/"
+    },
+    {
+     "name": "game (Германия) — разбор DFA для индустрии",
+     "url": "https://www.game.de/en/digital-fairness-act-european-commission-hits-games-with-double-regulation-and-legal-uncertainty/"
+    },
+    {
+     "name": "heise online — что черновик значит для лутбоксов",
+     "url": "https://www.heise.de/en/news/Digital-Fairness-Act-What-the-EU-draft-means-for-loot-boxes-in-games-11521109.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-21-1800-xbox-klipy-gta6-avtomoderaciya.html",
    "url": "https://geekovski.ru/2026-11-21-1800-xbox-klipy-gta6-avtomoderaciya.html",
    "title": "Xbox банит игроков за клипы, которые загрузил сам",
