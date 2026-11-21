@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-21-1800-xbox-klipy-gta6-avtomoderaciya.html",
+   "url": "https://geekovski.ru/2026-11-21-1800-xbox-klipy-gta6-avtomoderaciya.html",
+   "title": "Xbox банит игроков за клипы, которые загрузил сам",
+   "summary": "Игроки на Xbox Series X|S получают двухдневные блокировки за ролики GTA VI, которые консоль сама выгрузила на серверы Xbox: фильтр модерации разглядел на пляже Вице-Сити купальники и счёл это нарушением. Автозагрузка захватов включена по умолчанию, а Microsoft ситуацию пока не комментировала.",
+   "date_published": "2026-11-21T18:00:00+03:00",
+   "date_modified": "2026-11-21T18:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-klipy-gta6-avtomoderaciya.jpg",
+   "_sources": [
+    {
+     "name": "Pure Xbox — игрокам советуют выключить автозагрузку",
+     "url": "https://www.purexbox.com/news/2026/11/gta-6-players-warned-to-turn-off-auto-uploads-or-risk-getting-banned-on-xbox"
+    },
+    {
+     "name": "Insider Gaming — разбор банов за автозагрузку",
+     "url": "https://insider-gaming.com/gta-6-xbox-auto-upload-ban-explained/"
+    },
+    {
+     "name": "Xbox Support — защита от оскорбительных изображений",
+     "url": "https://support.xbox.com/en-GB/help/family-online-safety/enforcement/protecting-players-from-offensive-imagery"
+    },
+    {
+     "name": "Xbox — Community Standards",
+     "url": "https://www.xbox.com/en-US/legal/community-standards"
+    },
+    {
+     "name": "PlayStation Support — захват геймплея на PS5",
+     "url": "https://www.playstation.com/en-us/support/games/capture-ps5-gameplay-screenshots/"
+    },
+    {
+     "name": "Reddit — тред с описанием бана",
+     "url": "https://www.reddit.com/r/xbox/comments/1y0u01i/psa_turn_off_autoupload_for_gta_6_clips_on_xbox/"
+    },
+    {
+     "name": "Twisted Voxel — сводка случаев",
+     "url": "https://twistedvoxel.com/gta-vi-xbox-suspensions-auto-upload-nudity/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html",
    "url": "https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html",
    "title": "Claude доказал гипотезу Римана. Проверено, но не понято",
