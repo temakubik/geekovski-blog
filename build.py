@@ -335,14 +335,15 @@ CATEGORIES_PATH = "/categories/"
 
 def nav(theme, canonical):
     if theme == "editorial":
-        links = [("/", "Блог"), (CATEGORIES_PATH, "Категории"), ("/avtory/", "Авторы"),
-                 ("/calendar/", "Календарь"), ("/digests/", "Дайджесты")]
+        links = [("/", "Блог", NAV_COUNTS["posts"]), (CATEGORIES_PATH, "Категории", len(CATS)),
+                 ("/avtory/", "Авторы", None), ("/calendar/", "Календарь", None),
+                 ("/digests/", "Дайджесты", NAV_COUNTS["digests"])]
         route = urllib.parse.urlsplit(canonical or "").path
-        section = next((path for path, _ in links[1:] if route.startswith(path)), "/")
+        section = next((path for path, _, _ in links[1:] if route.startswith(path)), "/")
         if route.strip("/") in CAT_NAME:
             section = CATEGORIES_PATH
-        return "".join(nav_link(path, label, canonical, " nav__link--active" if path == section and route else "")
-                       for path, label in links)
+        return "".join(nav_link(path, label, canonical, " nav__link--active" if path == section and route else "", count)
+                       for path, label, count in links)
     c = dict(NAV_COUNTS)
     c["rubrics"] = sum(1 for k, _ in CATS if open_rubrics.get(k))
     return ('<a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(%d)</span></a>'
@@ -360,9 +361,10 @@ def nav(theme, canonical):
                       for k, n in CATS) + '</div></details>')
 
 
-def nav_link(path, label, canonical, modifier=""):
+def nav_link(path, label, canonical, modifier="", count=None):
     current = ' aria-current="page"' if canonical == SITE["url"] + path else ""
-    return f'<a class="nav__link{modifier}" href="{path}"{current}>{label}</a>'
+    number = f' <span class="nav__count">{count}</span>' if count is not None else ""
+    return f'<a class="nav__link{modifier}" href="{path}"{current}>{label}{number}</a>'
 
 PAGE = """<!DOCTYPE html>
 <html lang="ru" data-theme="{theme}">
@@ -859,40 +861,30 @@ def rubric_links(current=None):
     return f'<nav class="topic-nav" aria-label="Рубрики блога">{links}</nav>'
 
 
-def editorial_front(posts, digests, cal_entries):
+def editorial_front(posts):
     intro = ('''<header class="home-intro">
   <h1>Игры, технологии и кино</h1>
   <p>Новости и разборы с источниками.<br> Без маркетингового сиропа.</p>
 </header>''')
-    top_cards = "\n".join(card(p, "editorial", big=i == 0, summary=False, priority=i == 0)
+    top_cards = "\n".join(card(p, "editorial", big=i == 0, summary=i == 0, priority=i == 0)
                            for i, p in enumerate(posts[:3]))
     fresh = f'<div class="home-stories">{top_cards}</div>' if top_cards else '<p class="home-empty">Публикаций пока нет.</p>'
     first = (f'<section class="home-front" aria-labelledby="fresh-title">'
              f'<div class="home-edition"><h2 id="fresh-title">Свежие материалы</h2>'
              f'<a href="/archive/">Архив публикаций <span aria-hidden="true">↗</span></a></div>{fresh}</section>')
 
-    digest = ""
-    if digests:
-        latest = digests[0]
-        digest = (f'<section class="home-digest"><div class="rubric__head"><h2>Дайджесты</h2>'
-                  f'<a class="rubric__all" href="/digests/">Все выпуски ↗</a></div>'
-                  f'<a class="home-digest__item" href="{publication_path(latest)}">'
-                  f'<time datetime="{iso(latest["date"])}">{ru_date(latest["date"])} · '
-                  f'{latest["date"]:%H:%M}</time><strong>{html.escape(strip_prefix(latest["title"]))}</strong></a></section>')
-    calendar = calendar_strip(cal_entries, "editorial", limit=2)
-    side_sections = f'<div class="home-services">{digest}{calendar}</div>' if digest or calendar else ""
     more = ""
     if len(posts) > 3:
         cards = "\n".join(card(p, "editorial", summary=False) for p in posts[3:HOME_POST_LIMIT])
         more = (f'<section class="home-more" aria-labelledby="more-title"><div class="section-head">'
                 f'<h2 id="more-title">Ещё из блога</h2></div><div class="editorial-grid">{cards}</div>'
                 f'<a class="archive-door" href="/archive/">Весь архив <span aria-hidden="true">↗</span></a></section>')
-    return f'<main class="wrap home">{intro}{first}{side_sections}{more}</main>'
+    return f'<main class="wrap home">{intro}{first}{more}</main>'
 
 
-def render_index(posts, theme, digests=None, cal_entries=None):
+def render_index(posts, theme):
     if theme == "editorial":
-        return page(HOME_TITLE, HOME_DESC, editorial_front(posts, digests or [], cal_entries or []), theme,
+        return page(HOME_TITLE, HOME_DESC, editorial_front(posts), theme,
                     canonical=SITE["url"] + "/", og_alt="GEEKOVSKI — игры, технологии и кино",
                     jsonld=ldjson(ld_org(), ld_website(),
                                   ld_itemlist(posts[:HOME_POST_LIMIT], "Свежие материалы GEEKOVSKI") if posts else None))
@@ -2034,7 +2026,7 @@ def build(theme, out_dir, content_dir=None):
     NAV_COUNTS["posts"] = len(posts)
     NAV_COUNTS["digests"] = len(digests)
     NAV_COUNTS["calendars"] = sum(1 for e in cal_entries if e["day"] >= datetime.now().date())
-    (out / "index.html").write_text(render_index(posts, theme, digests, cal_entries), encoding="utf-8")
+    (out / "index.html").write_text(render_index(posts, theme), encoding="utf-8")
     archive_dir = out / "archive"
     archive_dir.mkdir(exist_ok=True)
     (archive_dir / "index.html").write_text(render_archive(months, theme), encoding="utf-8")
@@ -2588,22 +2580,6 @@ def calendar_entries(calendars):
             })
     out.sort(key=lambda e: (e["day"], e["title"]))
     return out
-
-
-def calendar_strip(entries, theme, limit=3, today=None):
-    """Плашка «ближайшая неделя» на главной."""
-    week = _cal_week(entries, today)[:limit]
-    if not week:
-        return ""
-    rows = "".join(
-        '<a class="cstrip__row cat-{cat}" href="{href}"><span class="cstrip__d">{d}</span>'
-        '<span class="cstrip__t">{t}</span><span class="cstrip__p">{p}</span></a>'.format(
-            cat=e["category"], href=e["href"],
-            d="%02d.%02d" % (e["day"].day, e["day"].month),
-            t=html.escape(e["title"]), p=html.escape(e["platforms"]))
-        for e in week)
-    return ('<section class="cstrip"><div class="rubric__head"><h2>Календарь анонсов</h2>'
-            '<a class="rubric__all" href="/calendar/">Вся неделя →</a></div>%s</section>') % rows
 
 
 # ---------- Style Guide ----------
