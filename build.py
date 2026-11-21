@@ -684,11 +684,11 @@ def ld_breadcrumb(crumbs):
     }
 
 
-def breadcrumbs(crumbs):
-    links = "".join(f'<li><a href="{path}">{html.escape(name)}</a></li>' for name, path in crumbs[:-1])
-    current = html.escape(crumbs[-1][0])
-    return (f'<nav class="breadcrumbs" aria-label="Путь к странице"><ol>{links}'
-            f'<li aria-current="page">{current}</li></ol></nav>')
+def breadcrumbs(crumbs, include_current=True):
+    parents = crumbs[:-1] if include_current else crumbs
+    links = "".join(f'<li><a href="{path}">{html.escape(name)}</a></li>' for name, path in parents)
+    current = f'<li aria-current="page">{html.escape(crumbs[-1][0])}</li>' if include_current else ""
+    return f'<nav class="breadcrumbs" aria-label="Путь к странице"><ol>{links}{current}</ol></nav>'
 
 
 def ld_itemlist(posts, name):
@@ -1091,8 +1091,10 @@ def article_contents(body):
         end = heading.end()
         links.append(f'<li><a href="#{anchor}">{label}</a></li>')
     items = "".join(links)
-    toc = (f'<nav class="article-toc" aria-label="Содержание статьи">'
-           f'<p>Содержание</p><ol>{items}</ol></nav>')
+    toc = (f'<details class="article-toc" open><summary>Содержание</summary>'
+           f'<nav aria-label="Содержание статьи"><ul>{items}</ul></nav></details>'
+           '<script>if(matchMedia("(max-width: 1169px)").matches)'
+           'document.currentScript.previousElementSibling.open=false;</script>')
     return "".join(parts) + body[end:], toc
 
 
@@ -1148,20 +1150,28 @@ def render_post(p, posts, theme):
     path = publication_path(p)
     catname = CAT_NAME[p["category"]]
     crumbs = [("Блог", "/"), ("Категории", CATEGORIES_PATH), (catname, f'/{p["category"]}/'), (p["title"], path)]
+    published = p["date"]
+    date = f"{ru_date(published)} {published:%Y, %H:%M}" if editorial else published.strftime("%d.%m.%Y, %H:%M")
+    time = f'<time datetime="{iso(published)}">{date}</time>'
+    meta = ""
+    if editorial:
+        byline = f'<div class="post__creditline">{byline}{time}</div>'
+    else:
+        meta = (f'<div class="post__meta"><a class="chip chip--solid cat-{p["category"]}" '
+                f'href="/{p["category"]}/">{catname}</a>{time}</div>')
     share = share_block(SITE["url"] + path, p["title"],
                         SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None)
     reading = f'<div class="post__body">{body}</div>{credit_line}{srcs}{share}'
     if editorial:
         layout = "reading-layout--toc" if toc else ""
-        reading = f'{cover}<div class="reading-layout {layout}">{toc}<div class="reading-text">{tldr}{reading}</div></div>'
+        reading = f'<div class="reading-layout {layout}">{cover}{toc}<div class="reading-text">{tldr}{reading}</div></div>'
     else:
         reading = f'{tldr}{cover}{reading}'
     content = """<main class="wrap post-page">
 {back}
 <article class="post cat-{cat}">
   <header class="post__head">
-    <div class="post__meta"><a class="chip chip--solid cat-{cat}" href="/{cat}/">{catname}</a><time datetime="{isodt}">{date}</time></div>
-    <h1>{title}</h1>
+{meta}    <h1>{title}</h1>
     {lead}
     {byline}
   </header>
@@ -1169,12 +1179,11 @@ def render_post(p, posts, theme):
 </article>
 {rel}
 </main>""".format(
-        cat=p["category"], catname=catname,
-        date=p["date"].strftime("%d.%m.%Y, %H:%M"), isodt=iso(p["date"]),
+        cat=p["category"], meta=f"    {meta}\n" if meta else "",
         title=html.escape(p["title"]),
         lead=f'<p class="post__lead">{html.escape(p["summary"])}</p>' if p["summary"] else "",
         reading=reading, rel=rel, byline=byline,
-        back=breadcrumbs(crumbs) if editorial else back_link("Назад", f'/{p["category"]}/'),
+        back=breadcrumbs(crumbs[:-1], include_current=False) if editorial else back_link("Назад", f'/{p["category"]}/'),
     )
     og = SITE["url"] + p["cover"] if p["cover"] else None
     url = SITE["url"] + path
@@ -1894,12 +1903,12 @@ DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и 
 .dviews { margin: 0 0 22px; }
 .dviews__tabs {
   display: inline-flex; gap: 4px; padding: 4px; margin: 0 0 20px;
-  border: 1px solid var(--line); border-radius: 12px; background: var(--panel);
+  border: 1px solid var(--line); border-radius:var(--surface-corners,12px); background: var(--panel);
 }
 .dviews__tab {
   font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em;
   text-transform: uppercase; color: var(--muted); background: transparent;
-  border: 0; border-radius: 8px; padding: 9px 20px; cursor: pointer;
+  border: 0; border-radius:var(--surface-corners,8px); padding: 9px 20px; cursor: pointer;
   transition: color .15s, background .15s;
 }
 .dviews__tab:hover { color: var(--text); }
@@ -1912,7 +1921,7 @@ DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и 
 .stripx__w { text-align: center; font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .stripx__row { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
 .stripx__cell {
-  position: relative; aspect-ratio: 4 / 3; border-radius: 10px;
+  position: relative; aspect-ratio: 4 / 3; border-radius:var(--surface-corners,10px);
   border: 1px solid var(--line); background: var(--bg); color: var(--muted);
   display: grid; grid-template-rows: auto 1fr; align-items: start;
   padding: 7px 9px 8px; cursor: default; transition: border-color .15s, background .15s;
@@ -1927,11 +1936,11 @@ DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и 
 .stripx__cell.has .stripx__n { color: var(--text); }
 .stripx__cell.active .stripx__n { color: var(--accent); }
 .stripx__dots { align-self: end; display: flex; gap: 4px; }
-.stripx__dot { width: 7px; height: 7px; border-radius: 50%; background: #F5C518; }
+.stripx__dot { width: 7px; height: 7px; border-radius:var(--surface-corners,50%); background: #F5C518; }
 
 .stripx__dot.is-evening { background: var(--part-eve, #A855F7); }
 .stripx__nav {
-  width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line);
+  width: 42px; height: 42px; border-radius:var(--surface-corners,10px); border: 1px solid var(--line);
   background: var(--panel); color: var(--text); cursor: pointer; font-size: 17px; line-height: 1;
   transition: border-color .15s, color .15s, transform .1s;
 }
@@ -1954,7 +1963,7 @@ DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и 
   .stripx__range { grid-column: 1; }
   .stripx__nav { grid-row: 1; }
   .stripx__row { gap: 4px; }
-  .stripx__cell { padding: 6px; border-radius: 8px; }
+  .stripx__cell { padding: 6px; border-radius:var(--surface-corners,8px); }
   .stripx__n { font-size: var(--fs-small); }
 }
 """
@@ -2670,10 +2679,10 @@ def render_style_guide(theme):
                   '<img src="/assets/img/geekovski-icon.svg" alt="" width="18" height="18">знак</span>'
                   '<span style="display:flex;align-items:center;gap:6px">'
                   '<img src="/assets/img/geekovski-logo.svg" alt="" width="73" height="14" '
-                  'style="background:#0A0C0F;padding:3px 6px;border-radius:4px">лого на тёмном</span>'
+                  'style="background:#0A0C0F;padding:3px 6px;border-radius:var(--surface-corners,4px)">лого на тёмном</span>'
                   '<span style="display:flex;align-items:center;gap:6px">'
                   '<img src="/assets/img/geekovski-logo-light.svg" alt="" width="73" height="14" '
-                  'style="background:#fff;padding:3px 6px;border-radius:4px">лого на светлом</span>'
+                  'style="background:#fff;padding:3px 6px;border-radius:var(--surface-corners,4px)">лого на светлом</span>'
                   '</div></section>') % icons
 
     # --- компоненты
