@@ -8,6 +8,60 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-21-1200-flagmany-dorozhayut-pamyat.html",
+   "url": "https://geekovski.ru/2026-11-21-1200-flagmany-dorozhayut-pamyat.html",
+   "title": "Флагманы дорожают на треть: память съела 40% цены",
+   "summary": "Counterpoint Research считает, что премиальные флагманы к концу 2026 года подорожают больше чем на 30% год к году, потому что DRAM и NAND забрали больше 40% их себестоимости. iPhone 18 Pro уже прибавил $100, в Индии Samsung и Xiaomi подняли цены на 41 модель, а TrendForce не ждёт разворота раньше второй половины 2027-го.",
+   "date_published": "2026-11-21T12:00:00+03:00",
+   "date_modified": "2026-11-21T12:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/pamyat-vitrina-s26.jpg",
+   "_sources": [
+    {
+     "name": "Counterpoint Research — прогноз по ценам премиальных флагманов",
+     "url": "https://counterpointresearch.com/en/insights/premium-flagship-smartphones-to-get-over-30-percent-costlier"
+    },
+    {
+     "name": "3DNews — пересказ отчёта Counterpoint с цифрами по Индии",
+     "url": "https://3dnews.ru/1151605/flagmani-prevrashchayutsya-v-predmet-roskoshi-defitsit-pamyati-vzvintil-tseni-bolee-chem-na-30-"
+    },
+    {
+     "name": "TrendForce — контрактные цены DRAM и NAND в IV квартале 2026",
+     "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html"
+    },
+    {
+     "name": "Hi-Tech Mail — память для iPhone 18 Pro подорожала почти на 400%",
+     "url": "https://hi-tech.mail.ru/news/154815-pamyat-dlya-iphone-18-pro-podorozhala-v-chetyre-raza/"
+    },
+    {
+     "name": "AppleInsider.ru — реальные цены iPhone 18 Pro и Pro Max",
+     "url": "https://appleinsider.ru/eto-interesno/skolko-budet-stoit-iphone-18-pro-novye-podrobnosti-o-czene-smartfonov-apple-2026.html"
+    },
+    {
+     "name": "Moneycontrol — Samsung и Xiaomi подняли цены на 41 модель в Индии",
+     "url": "https://moneycontrol.com/technology/party-s-over-samsung-xiaomi-raise-smartphone-prices-by-up-to-19-after-diwali-article-14080794.html"
+    },
+    {
+     "name": "Seoul Economic Daily — KB Securities ждёт роста контрактных цен DRAM на 40% в 2027 году",
+     "url": "https://en.sedaily.com/market/2026/11/20/kb-securities-sees-dram-contract-prices-jumping-40-percent"
+    },
+    {
+     "name": "3DNews — восстановленная DRAM в новых смартфонах",
+     "url": "https://3dnews.ru/1150989/novie-smartfoni-vsyo-chashche-komplektuyut-bu-pamyatyu-perepayannaya-dram-budet-v-9-gadgetovv-sleduyushchem-godu"
+    },
+    {
+     "name": "CNews — следом за памятью дорожают OLED-панели",
+     "url": "https://telecom.cnews.ru/news/top/2026-11-05_vsled_za_defitsitom_pamyati"
+    },
+    {
+     "name": "Coinotag — роуд-шоу TrendForce: путь цен DRAM на 2027 год",
+     "url": "https://en.coinotag.com/trendforce-2026-q4-dram-contract-prices-up-10-15"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-21-1000-gta6-prodazhi-rekord.html",
    "url": "https://geekovski.ru/2026-11-21-1000-gta6-prodazhi-rekord.html",
    "title": "GTA VI собрала $3,79 млрд за первые сутки",
