@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html",
+   "url": "https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html",
+   "title": "Claude доказал гипотезу Римана. Проверено, но не понято",
+   "summary": "Математик Anthropic Левент Альпёге опубликовал четыре страницы заметки и 17,4 млн строк Lean-кода — он утверждает, что вместе с Claude доказал гипотезу Римана и её обобщение. Код за сутки прошёл независимые проверки в MIT, но человекочитаемого доказательства нет: математики пока понимают не больше нашего.",
+   "date_published": "2026-11-21T15:00:00+03:00",
+   "date_modified": "2026-11-21T15:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/riemann-zeros-line.jpg",
+   "_sources": [
+    {
+     "name": "Заметка Левента Альпёге — Remark",
+     "url": "https://alpo.ge/remark.pdf"
+    },
+    {
+     "name": "Эндрю Сазерленд (MIT) — страница проверки",
+     "url": "https://math.mit.edu/~drew/grh/"
+    },
+    {
+     "name": "Terence Tao — разбор трёх результатов",
+     "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/"
+    },
+    {
+     "name": "Scott Aaronson — «The stochastic parrots have apparently proved the Riemann Hypothesis»",
+     "url": "https://scottaaronson.blog/?p=10344"
+    },
+    {
+     "name": "The Verge — заявление и реакция",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem"
+    },
+    {
+     "name": "Quanta — как проверяют доказательство",
+     "url": "https://www.quantamagazine.org/update/169569/"
+    },
+    {
+     "name": "Clay Mathematics Institute — правила премии",
+     "url": "https://www.claymath.org/millennium-problems/"
+    },
+    {
+     "name": "Anthropic — августовский результат про нули дзета-функции",
+     "url": "https://www.anthropic.com/research/riemann-zeta"
+    },
+    {
+     "name": "Ravi Vakil — объявление о рукописи Мазулло",
+     "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-21-1200-flagmany-dorozhayut-pamyat.html",
    "url": "https://geekovski.ru/2026-11-21-1200-flagmany-dorozhayut-pamyat.html",
    "title": "Флагманы дорожают на треть: память съела 40% цены",
