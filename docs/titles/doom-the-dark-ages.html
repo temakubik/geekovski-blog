@@ -41,9 +41,16 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <link rel="stylesheet" href="/assets/fonts.css">
-<link rel="stylesheet" href="/assets/theme.css">
+<link rel="stylesheet" href="/assets/theme.css?v=c49f30dc9694">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<script>
+document.documentElement.dataset.js = '';
+try {
+  const mode = localStorage.getItem('gv-mode');
+  if (mode) document.documentElement.dataset.mode = mode;
+  if (localStorage.getItem('gv-sidebar') === 'compact') document.documentElement.dataset.sidebar = 'compact';
+} catch (e) {}
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -79,13 +86,14 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <a class="skip-link" href="#main-content">К содержанию</a>
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80"></a>
-    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--active" href="/">Блог <span class="nav__count">203</span></a><a class="nav__link" href="/categories/">Категории <span class="nav__count">9</span></a><a class="nav__link" href="/avtory/">Авторы</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/digests/">Дайджесты <span class="nav__count">54</span></a></nav>
+    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg?v=black-tile" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg?v=black-tile" alt="" width="418" height="80"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--active" href="/" title="Блог"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span class="nav__label">Блог</span> <span class="nav__count">203</span></a><a class="nav__link" href="/categories/" title="Категории"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg><span class="nav__label">Категории</span> <span class="nav__count">9</span></a><a class="nav__link" href="/avtory/" title="Авторы"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span class="nav__label">Авторы</span></a><a class="nav__link" href="/calendar/" title="Календарь"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="15"/><path d="M8 3v4m8-4v4M4 10h16m-12 4h2m4 0h2"/></svg><span class="nav__label">Календарь</span></a><a class="nav__link" href="/digests/" title="Дайджесты"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M7 7h13v13H7zM4 17V4h13m-7 7h7m-7 4h7"/></svg><span class="nav__label">Дайджесты</span> <span class="nav__count">54</span></a></nav>
     <div class="top__actions">
       <div class="top__links"><a href="/rss.xml">RSS</a><a href="https://vk.com/geekovskiread">ВКонтакте</a></div><button class="theme-toggle" type="button" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
     </div>
   </div>
+    <button class="sidebar-toggle" type="button" aria-controls="site-nav" aria-expanded="true" aria-label="Свернуть меню" title="Свернуть меню"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg></button>
 </header>
 <main id="main-content" tabindex="-1" class="wrap"><div class="backrow"><a class="backlink" href="/calendar/" onclick="if(document.referrer){history.back();return false}"><span class="backlink__arrow" aria-hidden="true">←</span> К календарю</a></div><article class="tp"><div class="tp__cover"><img src="/assets/img/doom-slaughter-mode-cover.jpg" alt="DOOM: The Dark Ages"></div><h1>DOOM: The Dark Ages</h1><div class="tp__meta"><div class="tp__row"><span class="tp__k">Год</span><span class="tp__v">2025</span></div><div class="tp__row"><span class="tp__k">Разработчик</span><span class="tp__v">id Software</span></div><div class="tp__row"><span class="tp__k">Издатель</span><span class="tp__v">Bethesda Softworks</span></div><div class="tp__row"><span class="tp__k">Жанр</span><span class="tp__v">шутер от первого лица</span></div><div class="tp__row"><span class="tp__k">Платформы</span><span class="tp__v">PC · PS5 · Xbox Series</span></div></div><div class="post__body"><p>Приквел DOOM (2016) и DOOM Eternal: Палач Рока воюет в средневековье против армий ада. Вышла 14 мая 2025 года на ПК, PS5 и Xbox Series X|S на движке idTech. 7 июля 2026 года получила сюжетное дополнение Revelations с новыми уровнями, демонами, Chain Spear и Ripatorium 3.0; 16 ноября 2026-го в дополнении появился бесконечный режим «Бойня» (Slaughter Mode) со случайными аренами, боссами и валютой-черепами.</p></div><section class="sources"><h2>Источники</h2><ul><li><a href="https://store.steampowered.com/app/3017860/DOOM_The_Dark_Ages">Steam — DOOM: The Dark Ages</a></li><li><a href="https://slayersclub.bethesda.net/en-US/news/doom-the-dark-ages-revelations-slaughter-mode-update-5-release-notes">Bethesda Slayers Club — Revelations Slaughter Mode Update 5</a></li></ul></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
@@ -109,6 +117,24 @@ document.querySelector('.theme-toggle')?.addEventListener('click', () => {
   r.dataset.mode = mode === 'light' ? 'dark' : 'light';
   try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
 });
+const sidebarButton = document.querySelector('.sidebar-toggle');
+if (sidebarButton) {
+  const root = document.documentElement;
+  function updateSidebarLabel(compact) {
+    const label = compact ? 'Развернуть меню' : 'Свернуть меню';
+    sidebarButton.setAttribute('aria-expanded', String(!compact));
+    sidebarButton.setAttribute('aria-label', label);
+    sidebarButton.title = label;
+  }
+  updateSidebarLabel(root.dataset.sidebar === 'compact');
+  sidebarButton.addEventListener('click', () => {
+    const compact = root.dataset.sidebar !== 'compact';
+    if (compact) root.dataset.sidebar = 'compact';
+    else delete root.dataset.sidebar;
+    updateSidebarLabel(compact);
+    try { localStorage.setItem('gv-sidebar', compact ? 'compact' : 'full'); } catch (e) {}
+  });
+}
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {

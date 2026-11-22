@@ -9,6 +9,7 @@
 """
 import argparse
 import collections
+import hashlib
 import html
 import json
 import os
@@ -331,19 +332,34 @@ def plain(text: str, n: int = 240) -> str:
 NAV_COUNTS = {"posts": 0, "digests": 0, "rubrics": 0, "calendars": 0}
 open_rubrics = {}   # заполняется в build(): слаг -> число материалов
 CATEGORIES_PATH = "/categories/"
+SIDEBAR_ICONS = {
+    "blog": '<rect x="4" y="3" width="16" height="18"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+    "categories": '<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/>',
+    "authors": '<circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/>',
+    "calendar": '<rect x="4" y="5" width="16" height="15"/><path d="M8 3v4m8-4v4M4 10h16m-12 4h2m4 0h2"/>',
+    "digests": '<path d="M7 7h13v13H7zM4 17V4h13m-7 7h7m-7 4h7"/>',
+    "collapse": '<path d="M15 6l-6 6 6 6"/>',
+}
+
+
+def sidebar_icon(name):
+    return ('<svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" '
+            'stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">'
+            f'{SIDEBAR_ICONS[name]}</svg>')
 
 
 def nav(theme, canonical):
     if theme == "editorial":
-        links = [("/", "Блог", NAV_COUNTS["posts"]), (CATEGORIES_PATH, "Категории", len(CATS)),
-                 ("/avtory/", "Авторы", None), ("/calendar/", "Календарь", None),
-                 ("/digests/", "Дайджесты", NAV_COUNTS["digests"])]
+        links = [("/", "Блог", NAV_COUNTS["posts"], "blog"),
+                 (CATEGORIES_PATH, "Категории", len(CATS), "categories"),
+                 ("/avtory/", "Авторы", None, "authors"), ("/calendar/", "Календарь", None, "calendar"),
+                 ("/digests/", "Дайджесты", NAV_COUNTS["digests"], "digests")]
         route = urllib.parse.urlsplit(canonical or "").path
-        section = next((path for path, _, _ in links[1:] if route.startswith(path)), "/")
+        section = next((path for path, *_ in links[1:] if route.startswith(path)), "/")
         if route.strip("/") in CAT_NAME:
             section = CATEGORIES_PATH
-        return "".join(nav_link(path, label, canonical, " nav__link--active" if path == section and route else "", count)
-                       for path, label, count in links)
+        return "".join(nav_link(path, label, canonical, " nav__link--active" if path == section and route else "",
+                                count, icon=icon) for path, label, count, icon in links)
     c = dict(NAV_COUNTS)
     c["rubrics"] = sum(1 for k, _ in CATS if open_rubrics.get(k))
     return ('<a class="nav__link nav__link--blog" href="/">Блог<span class="nav__num">(%d)</span></a>'
@@ -361,10 +377,13 @@ def nav(theme, canonical):
                       for k, n in CATS) + '</div></details>')
 
 
-def nav_link(path, label, canonical, modifier="", count=None):
+def nav_link(path, label, canonical, modifier="", count=None, icon=None):
     current = ' aria-current="page"' if canonical == SITE["url"] + path else ""
+    title = f' title="{html.escape(label)}"' if icon else ""
+    caption = f'{sidebar_icon(icon)}<span class="nav__label">{label}</span>' if icon else label
     number = f' <span class="nav__count">{count}</span>' if count is not None else ""
-    return f'<a class="nav__link{modifier}" href="{path}"{current}>{label}{number}</a>'
+    return f'<a class="nav__link{modifier}" href="{path}"{current}{title}>{caption}{number}</a>'
+
 
 PAGE = """<!DOCTYPE html>
 <html lang="ru" data-theme="{theme}">
@@ -408,9 +427,16 @@ PAGE = """<!DOCTYPE html>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 {head_extra}
 <link rel="stylesheet" href="/assets/fonts.css">
-<link rel="stylesheet" href="/assets/theme.css">
+<link rel="stylesheet" href="{theme_stylesheet}">
 <link rel="stylesheet" href="/assets/brand.css">
-<script>document.documentElement.dataset.js='';try{{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}}catch(e){{}}</script>
+<script>
+document.documentElement.dataset.js = '';
+try {{
+  const mode = localStorage.getItem('gv-mode');
+  if (mode) document.documentElement.dataset.mode = mode;
+  if (localStorage.getItem('gv-sidebar') === 'compact') document.documentElement.dataset.sidebar = 'compact';
+}} catch (e) {{}}
+</script>
 {metrika}
 {ga}
 {tmr}
@@ -421,14 +447,14 @@ PAGE = """<!DOCTYPE html>
 {skip_link}
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80"></a>
+    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg?v=black-tile" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg?v=black-tile" alt="" width="418" height="80"></a>
     <nav class="nav" id="site-nav" aria-label="Основное меню">{nav}</nav>
     <div class="top__actions">
       {side_links}<button class="theme-toggle" type="button" title="Сменить тему" aria-label="Сменить тему">◐</button>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
     </div>
   </div>
-</header>
+{sidebar_toggle}</header>
 {content}
 <footer class="foot">
   <div class="wrap foot__in">
@@ -444,6 +470,24 @@ document.querySelector('.theme-toggle')?.addEventListener('click', () => {{
   r.dataset.mode = mode === 'light' ? 'dark' : 'light';
   try {{ localStorage.setItem('gv-mode', r.dataset.mode); }} catch (e) {{}}
 }});
+const sidebarButton = document.querySelector('.sidebar-toggle');
+if (sidebarButton) {{
+  const root = document.documentElement;
+  function updateSidebarLabel(compact) {{
+    const label = compact ? 'Развернуть меню' : 'Свернуть меню';
+    sidebarButton.setAttribute('aria-expanded', String(!compact));
+    sidebarButton.setAttribute('aria-label', label);
+    sidebarButton.title = label;
+  }}
+  updateSidebarLabel(root.dataset.sidebar === 'compact');
+  sidebarButton.addEventListener('click', () => {{
+    const compact = root.dataset.sidebar !== 'compact';
+    if (compact) root.dataset.sidebar = 'compact';
+    else delete root.dataset.sidebar;
+    updateSidebarLabel(compact);
+    try {{ localStorage.setItem('gv-sidebar', compact ? 'compact' : 'full'); }} catch (e) {{}}
+  }});
+}}
 const menuButton = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 function closeMenu() {{
@@ -498,6 +542,7 @@ if ('serviceWorker' in navigator) {{
 
 DEFAULT_OG = SITE["url"] + "/assets/img/og-default.png"
 THEME_COLORS = {"editorial": "#F1F4F9"}
+THEME_STYLESHEET = "/assets/theme.css"
 
 # Счётчик Яндекс.Метрики. Отдельной строкой, а не внутри PAGE: код счётчика
 # набит фигурными скобками, а PAGE собирается через str.format() — в шаблоне
@@ -774,10 +819,16 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         ])
     editorial = theme == "editorial"
     return PAGE.format(
+        theme_stylesheet=THEME_STYLESHEET,
         theme=theme, theme_color=THEME_COLORS.get(theme, "#0A0C0F"), title=html.escape(title), desc=html.escape(desc),
         nav=nav(theme, canonical), content=content.replace("<main", '<main id="main-content" tabindex="-1"', 1)
         if editorial else content, year=datetime.now().year, vk=SITE["vk"],
         skip_link='<a class="skip-link" href="#main-content">К содержанию</a>' if editorial else "",
+        sidebar_toggle=(
+            '    <button class="sidebar-toggle" type="button" aria-controls="site-nav" aria-expanded="true" '
+            'aria-label="Свернуть меню" title="Свернуть меню">'
+            f'{sidebar_icon("collapse")}</button>\n'
+            if editorial else ""),
         side_links=(f'<div class="top__links"><a href="/rss.xml">RSS</a>'
                     f'<a href="{SITE["vk"]}">ВКонтакте</a></div>') if editorial else "",
         og_image_meta=og_image_meta(og_image, og_alt or title),
@@ -1962,6 +2013,7 @@ DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и 
 
 
 def build(theme, out_dir, content_dir=None):
+    global THEME_STYLESHEET
     content = Path(content_dir) if content_dir else ROOT / "content"
     everything = [parse_post(p) for p in sorted((content / "posts").glob("*.md"))]
     everything = [p for p in everything if not p["draft"]]
@@ -1992,7 +2044,10 @@ def build(theme, out_dir, content_dir=None):
     if scale.exists():
         parts.append(scale.read_text(encoding="utf-8"))
     parts.append(theme_css.read_text(encoding="utf-8"))
-    (out / "assets" / "theme.css").write_text("\n".join(parts), encoding="utf-8")
+    styles = "\n".join(parts).encode("utf-8")
+    (out / "assets" / "theme.css").write_bytes(styles)
+    version = hashlib.sha256(styles).hexdigest()[:12]
+    THEME_STYLESHEET = f"/assets/theme.css?v={version}"
     for extra in (ROOT / "static" / "assets").glob("*") if (ROOT / "static" / "assets").exists() else []:
         shutil.copy(extra, out / "assets" / extra.name)
     fonts_src = ROOT / "static" / "fonts"
@@ -2109,7 +2164,9 @@ def build(theme, out_dir, content_dir=None):
             {"src": "/assets/img/favicon-192.png", "sizes": "192x192", "type": "image/png"},
         ],
     }, ensure_ascii=False, indent=1), encoding="utf-8")
-    shutil.copy(ROOT / "static" / "sw.js", out / "sw.js")
+    worker = (ROOT / "static" / "sw.js").read_text(encoding="utf-8")
+    worker = worker.replace('"/assets/theme.css"', json.dumps(THEME_STYLESHEET))
+    (out / "sw.js").write_text(worker, encoding="utf-8")
     (out / "offline.html").write_text(offline_page(theme), encoding="utf-8")
     (out / "robots.txt").write_text(robots_txt(), encoding="utf-8")
     (out / "llms.txt").write_text(llms_txt(posts, digests, TITLES, AUTHORS), encoding="utf-8")
@@ -2654,10 +2711,10 @@ def render_style_guide(theme):
                   '<span style="display:flex;align-items:center;gap:6px">'
                   '<img src="/assets/img/geekovski-icon.svg" alt="" width="18" height="18">знак</span>'
                   '<span style="display:flex;align-items:center;gap:6px">'
-                  '<img src="/assets/img/geekovski-logo.svg" alt="" width="73" height="14" '
+                  '<img src="/assets/img/geekovski-logo.svg?v=black-tile" alt="" width="73" height="14" '
                   'style="background:#0A0C0F;padding:3px 6px;border-radius:var(--surface-corners,4px)">лого на тёмном</span>'
                   '<span style="display:flex;align-items:center;gap:6px">'
-                  '<img src="/assets/img/geekovski-logo-light.svg" alt="" width="73" height="14" '
+                  '<img src="/assets/img/geekovski-logo-light.svg?v=black-tile" alt="" width="73" height="14" '
                   'style="background:#fff;padding:3px 6px;border-radius:var(--surface-corners,4px)">лого на светлом</span>'
                   '</div></section>') % icons
 
