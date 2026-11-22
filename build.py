@@ -534,6 +534,7 @@ ROBOTS_NOINDEX = "noindex,follow"
 #   Google Search Console → «HTML-тег» → GOOGLE_VERIFICATION
 YANDEX_VERIFICATION = "acc866b9b963f469"
 GOOGLE_VERIFICATION = ""
+ZEN_VERIFICATION = "fcazccy74hGDyQJiYWhzVO7N3Kee8a2dhQQxuO7BiCeonKzNJ8udV93xNXeCPUpJ"
 
 ORG_ID = SITE["url"] + "/#organization"
 WEBSITE_ID = SITE["url"] + "/#website"
@@ -695,6 +696,8 @@ def verify_meta():
         tags.append('<meta name="yandex-verification" content="%s">' % YANDEX_VERIFICATION)
     if GOOGLE_VERIFICATION:
         tags.append('<meta name="google-site-verification" content="%s">' % GOOGLE_VERIFICATION)
+    if ZEN_VERIFICATION:
+        tags.append('<meta name="zen-verification" content="%s" />' % ZEN_VERIFICATION)
     return "\n".join(tags)
 
 
