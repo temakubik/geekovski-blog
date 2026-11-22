@@ -8,6 +8,84 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html",
+   "url": "https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html",
+   "title": "Hellraiser забрал хоррор-Оскар у Resident Evil Requiem",
+   "summary": "На пятой церемонии The Horror Game Awards в Лондоне главный приз получил Clive Barker's Hellraiser: Revival от Saber Interactive, хотя Resident Evil Requiem собрал больше всего статуэток — четыре. Разница объясняется устройством голосования и тем, что жанровая премия ценит не полировку, а самобытность.",
+   "date_published": "2026-11-22T08:00:00+03:00",
+   "date_modified": "2026-11-22T08:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/hga2026-hellraiser-cover.jpg",
+   "_sources": [
+    {
+     "name": "The Horror Game Awards — официальный список победителей",
+     "url": "https://www.thehorrorgameawards.com/news/your-winners-for-the-horror-game-awards-2026"
+    },
+    {
+     "name": "The Escapist — Requiem взял больше всех наград",
+     "url": "https://www.escapistmagazine.com/hellraiser-revival-takes-horror-game-of-the-year-as-resident-evil-requiem-wins-the-most-awards/"
+    },
+    {
+     "name": "Horror Obsessive — номинации и правила голосования",
+     "url": "https://horrorobsessive.com/2026/11/05/horror-game-awards-2026-reanimal-leads-nominations/"
+    },
+    {
+     "name": "iXBT Games — итоги церемонии",
+     "url": "https://ixbt.games/news/2026/11/22/novinka-saber-prevzosla-resident-evil-requiem-zabrala-glavnuiu-nagradu-horror-game-awards-2026.html"
+    },
+    {
+     "name": "Saber Interactive — страница Hellraiser: Revival",
+     "url": "https://saber.games/hellraiserrevival"
+    },
+    {
+     "name": "Metacritic — Hellraiser: Revival",
+     "url": "https://www.metacritic.com/game/clive-barkers-hellraiser-revival"
+    },
+    {
+     "name": "OpenCritic — Hellraiser: Revival",
+     "url": "https://opencritic.com/game/21457/clive-barkers-hellraiser-revival"
+    },
+    {
+     "name": "Metacritic — Resident Evil Requiem",
+     "url": "https://www.metacritic.com/game/resident-evil-requiem"
+    },
+    {
+     "name": "Capcom — 5 млн копий Requiem за пять дней",
+     "url": "https://www.capcom.co.jp/ir/english/news/html/e260304.html"
+    },
+    {
+     "name": "Steam — Hellraiser: Revival",
+     "url": "https://store.steampowered.com/app/1551980/"
+    },
+    {
+     "name": "PlayStation Blog — Silent Hill: Townfall выходит 24 сентября",
+     "url": "https://blog.playstation.com/2026/06/02/silent-hill-townfall-launches-september-24-on-ps5"
+    },
+    {
+     "name": "VGC — ремейк Silent Hill от Bloober и 2027 год",
+     "url": "https://www.videogameschronicle.com/news/bloober-teams-silent-hill-remake-is-set-for-a-2027-release-with-the-first-two-actors-named-report-claims"
+    },
+    {
+     "name": "Tarsier Studios — REANIMAL",
+     "url": "https://tarsier.se/games/reanimal/"
+    },
+    {
+     "name": "Steam — Tenebris Somnia",
+     "url": "https://store.steampowered.com/app/2121510/"
+    },
+    {
+     "name": "GamesRadar+ — победители Golden Joystick 2026",
+     "url": "https://www.gamesradar.com/games/all-the-golden-joystick-awards-2026-winners-revealed/"
+    },
+    {
+     "name": "VGC — номинации The Game Awards 2026",
+     "url": "https://www.videogameschronicle.com/news/gta-6-is-the-most-nominated-game-at-the-game-awards-2026/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html",
    "url": "https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html",
    "title": "Лутбоксы, pay-to-win и дети: что предлагает ЕС",
