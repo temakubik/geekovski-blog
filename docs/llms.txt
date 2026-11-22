@@ -12,7 +12,7 @@
 ## Рубрики
 
 - [Xbox](https://geekovski.ru/xbox/): 14 материалов
-- [Nintendo Switch](https://geekovski.ru/switch/): 17 материалов
+- [Nintendo Switch](https://geekovski.ru/switch/): 18 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 19 материалов
 - [PC-игры](https://geekovski.ru/pc/): 33 материала
 - [VR](https://geekovski.ru/vr/): 8 материалов
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 74 материала; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 91 материал; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 92 материала; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 35 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Фанаты GTA 6 обвалили рейтинг ремейка Zelda](https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html): За сутки пользовательская оценка ремейка Ocarina of Time на Metacritic упала с 9,6 — исторического максимума агрегатора — до 8,5. Часть фанатов GTA VI решила, что ремейк Zelda обваливают их игру, и ответила нулями; у самих GTA VI при 99 баллах от критиков пользовательская оценка 5,6. (22.11.2026)
 - [Tesla выпустила FSD v15: 25x безопасности без базы](https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html): Tesla начала раскатку FSD v15 первым клиентам — с новой визуализацией Reality View и обещанием «25-кратного» улучшения безопасности, которое нельзя проверить: базовую частоту вмешательств компания не публикует. (22.11.2026)
 - [Hellraiser забрал хоррор-Оскар у Resident Evil Requiem](https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html): На пятой церемонии The Horror Game Awards в Лондоне главный приз получил Clive Barker's Hellraiser: Revival от Saber Interactive, хотя Resident Evil Requiem собрал больше всего статуэток — четыре. Разница объясняется устройством голосования и тем, что жанровая премия ценит не полировку, а самобытность. (22.11.2026)
 - [Лутбоксы, pay-to-win и дети: что предлагает ЕС](https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html): Еврокомиссия 11 ноября показала проект Digital Fairness Act — первый в истории ЕС документ, который лезет прямо в игровые механики: лутбоксы несовершеннолетним, платная валюта выключена по умолчанию, цена каждого предмета в евро. Это пока не закон, а индустрия уже называет его «game over» для европейских студий. (21.11.2026)

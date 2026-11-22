@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html",
+   "url": "https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html",
+   "title": "Фанаты GTA 6 обвалили рейтинг ремейка Zelda",
+   "summary": "За сутки пользовательская оценка ремейка Ocarina of Time на Metacritic упала с 9,6 — исторического максимума агрегатора — до 8,5. Часть фанатов GTA VI решила, что ремейк Zelda обваливают их игру, и ответила нулями; у самих GTA VI при 99 баллах от критиков пользовательская оценка 5,6.",
+   "date_published": "2026-11-22T12:00:00+03:00",
+   "date_modified": "2026-11-22T12:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/zelda-oot-ocenki-konnik.jpg",
+   "_sources": [
+    {
+     "name": "Metacritic — ремейк Ocarina of Time, оценки игроков",
+     "url": "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/user-reviews/?platform=nintendo-switch-2"
+    },
+    {
+     "name": "Metacritic — GTA VI, оценки игроков",
+     "url": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=playstation-5"
+    },
+    {
+     "name": "Metacritic — ремейк Ocarina of Time, оценки критиков",
+     "url": "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/"
+    },
+    {
+     "name": "Dexerto — рейтинговая война GTA 6 и ремейка Zelda",
+     "url": "https://www.dexerto.com/gaming/gta-6-and-ocarina-of-time-remake-caught-in-metacritic-review-bomb-war-3430280/"
+    },
+    {
+     "name": "Notebookcheck — пользовательский рейтинг Zelda падает в ответ на бомбинг GTA 6",
+     "url": "https://www.notebookcheck.net/Zelda-Ocarina-of-Time-Metacritic-user-rating-sinks-in-response-to-GTA-6-review-bombing.1456403.0.html"
+    },
+    {
+     "name": "TwistedVoxel — волна нулей на странице ремейка",
+     "url": "https://twistedvoxel.com/ocarina-of-time-remake-review-bombing/"
+    },
+    {
+     "name": "Nintendo — 5,2 млн копий за первые четыре дня",
+     "url": "https://www.nintendo.co.jp/corporate/release/en/2026/261111.html"
+    },
+    {
+     "name": "Nintendo Life — продажи ремейка и место в чарте Switch 2",
+     "url": "https://www.nintendolife.com/news/2026/11/its-official-zelda-ocarina-of-time-has-sold-over-5-million-copies-in-4-days"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html",
    "url": "https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html",
    "title": "Tesla выпустила FSD v15: 25x безопасности без базы",
