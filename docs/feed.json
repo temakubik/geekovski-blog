@@ -8,6 +8,80 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-22-1500-iphone-duo-sharnir-polomki.html",
+   "url": "https://geekovski.ru/2026-11-22-1500-iphone-duo-sharnir-polomki.html",
+   "title": "Почему ломается экран iPhone Duo: разбор шарнира",
+   "summary": "22 ноября в сети появилось видео, на котором видно сам момент поломки внутреннего экрана складного iPhone Duo — проблемную деталь шарнира уже прозвали Pixel Pincher 9000. Apple признала проблему ещё в октябре и меняет аппараты через AppleCare, но ни причину, ни число затронутых устройств не называет до сих пор.",
+   "date_published": "2026-11-22T15:00:00+03:00",
+   "date_modified": "2026-11-22T15:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/duo-sharnir-cover.jpg",
+   "_sources": [
+    {
+     "name": "iXBT — видео момента поломки экрана Duo",
+     "url": "https://www.ixbt.com/news/2026/11/22/kak-lomaetsia-ekran-novogo-iphone-poiavilos-video-s-momentom-povrezdeniia-displeia-iz-za-sarnira.html"
+    },
+    {
+     "name": "MacRumors — Apple отвечает на сообщения о трещинах",
+     "url": "https://www.macrumors.com/2026/10/26/iphone-duo-crack-apple-response/"
+    },
+    {
+     "name": "MacRumors — разборка iFixit и версии причины",
+     "url": "https://www.macrumors.com/2026/10/25/ifixit-iphone-duo-teardown/"
+    },
+    {
+     "name": "MacRumors — первые сообщения о трещинах",
+     "url": "https://www.macrumors.com/2026/10/23/iphone-duo-screen-cracks/"
+    },
+    {
+     "name": "The Verge — Apple признала «проблему»",
+     "url": "https://www.theverge.com/tech/1018760/iphone-duo-crackgate-inside-screen-hinge-crack"
+    },
+    {
+     "name": "The Verge — почему Duo возвращают",
+     "url": "https://www.theverge.com/tech/1030398/iphone-duo-returns-screen-apps"
+    },
+    {
+     "name": "9to5Mac — Тернус о возвратах и дефиците",
+     "url": "https://9to5mac.com/2026/11/02/john-ternus-addresses-iphone-duo-supply-constraints-display-issue/"
+    },
+    {
+     "name": "9to5Mac — опрос о возвратах",
+     "url": "https://9to5mac.com/2026/11/12/30-of-iphone-duo-buyers-may-have-returned-it-but-i-dont-think-apple-should-worry"
+    },
+    {
+     "name": "9to5Mac — запчасти Duo в Self Service Repair",
+     "url": "https://9to5mac.com/2026/11/17/apple-now-selling-iphone-duo-replacement-parts-and-tools/"
+    },
+    {
+     "name": "CNBC — заявление Apple и цена ремонта",
+     "url": "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html"
+    },
+    {
+     "name": "Los Angeles Times — рассказы владельцев",
+     "url": "https://www.latimes.com/business/story/2026-10-27/apples-new-foldable-iphone-is-cracking-after-hours-or-days-of-use"
+    },
+    {
+     "name": "iXBT — тест JerryRigEverything с пылью",
+     "url": "https://www.ixbt.com/news/2026/10/24/skladnoi-iphone-duo-ne-prosel-test-na-procnost-pyl-zablokirovala-sarnir-a-ekran-slomalsia-pri-sgibanii.html"
+    },
+    {
+     "name": "iXBT — причины быстрой поломки по версии iFixit",
+     "url": "https://www.ixbt.com/news/2026/10/26/nazvany-priciny-bystroi-polomki-ekrana-iphone-duo.html"
+    },
+    {
+     "name": "Apple — поддержка: проблемы с шарниром",
+     "url": "https://support.apple.com/en-us/148323"
+    },
+    {
+     "name": "Apple Newsroom — iPhone Duo",
+     "url": "https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html",
    "url": "https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html",
    "title": "Фанаты GTA 6 обвалили рейтинг ремейка Zelda",
