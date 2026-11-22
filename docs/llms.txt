@@ -19,18 +19,19 @@
 - [Гаджеты](https://geekovski.ru/gadgets/): 36 материалов
 - [Кино](https://geekovski.ru/kino/): 24 материала
 - [Сериалы](https://geekovski.ru/serialy/): 11 материалов
-- [AI](https://geekovski.ru/ai/): 37 материалов
+- [AI](https://geekovski.ru/ai/): 38 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Авторы
 
-- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 73 материала; лента автора — https://geekovski.ru/avtory/seva.xml
+- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 74 материала; лента автора — https://geekovski.ru/avtory/seva.xml
 - [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 91 материал; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 35 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Tesla выпустила FSD v15: 25x безопасности без базы](https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html): Tesla начала раскатку FSD v15 первым клиентам — с новой визуализацией Reality View и обещанием «25-кратного» улучшения безопасности, которое нельзя проверить: базовую частоту вмешательств компания не публикует. (22.11.2026)
 - [Hellraiser забрал хоррор-Оскар у Resident Evil Requiem](https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html): На пятой церемонии The Horror Game Awards в Лондоне главный приз получил Clive Barker's Hellraiser: Revival от Saber Interactive, хотя Resident Evil Requiem собрал больше всего статуэток — четыре. Разница объясняется устройством голосования и тем, что жанровая премия ценит не полировку, а самобытность. (22.11.2026)
 - [Лутбоксы, pay-to-win и дети: что предлагает ЕС](https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html): Еврокомиссия 11 ноября показала проект Digital Fairness Act — первый в истории ЕС документ, который лезет прямо в игровые механики: лутбоксы несовершеннолетним, платная валюта выключена по умолчанию, цена каждого предмета в евро. Это пока не закон, а индустрия уже называет его «game over» для европейских студий. (21.11.2026)
 - [Xbox банит игроков за клипы, которые загрузил сам](https://geekovski.ru/2026-11-21-1800-xbox-klipy-gta6-avtomoderaciya.html): Игроки на Xbox Series X|S получают двухдневные блокировки за ролики GTA VI, которые консоль сама выгрузила на серверы Xbox: фильтр модерации разглядел на пляже Вице-Сити купальники и счёл это нарушением. Автозагрузка захватов включена по умолчанию, а Microsoft ситуацию пока не комментировала. (21.11.2026)

@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html",
+   "url": "https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html",
+   "title": "Tesla выпустила FSD v15: 25x безопасности без базы",
+   "summary": "Tesla начала раскатку FSD v15 первым клиентам — с новой визуализацией Reality View и обещанием «25-кратного» улучшения безопасности, которое нельзя проверить: базовую частоту вмешательств компания не публикует.",
+   "date_published": "2026-11-22T10:00:00+03:00",
+   "date_modified": "2026-11-22T10:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/tesla-fsd-v15-golden-gate.jpg",
+   "_sources": [
+    {
+     "name": "Tesla в X — анонс раскатки",
+     "url": "https://x.com/Tesla/status/2124222447855743019"
+    },
+    {
+     "name": "Tesla Super Intelligence — полные релиз-ноты v15",
+     "url": "https://x.com/TeslaSI/status/2124229673056113100"
+    },
+    {
+     "name": "Electrek — разбор v15 и цифры «25x»",
+     "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/"
+    },
+    {
+     "name": "TeslAnt — первые машины на v15.0.1, Европа и HW3",
+     "url": "https://teslant.com/en/changelog/tesla-fsd-v15-hw4-reality-view-first-wave-2026-11"
+    },
+    {
+     "name": "Teslarati — раскатка началась, релиз-ноты",
+     "url": "https://www.teslarati.com/tesla-full-self-driving-v15-rollout-begins-full-release-notes-improvements/"
+    },
+    {
+     "name": "Drive Tesla — устройство Reality View",
+     "url": "https://driveteslacanada.ca/news/tesla-reality-view/"
+    },
+    {
+     "name": "Not a Tesla App — сборка 2026.38.6.11 (FSD 15)",
+     "url": "https://www.notateslaapp.com/software-updates/version/2026.38.6.11/release-notes"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html",
    "url": "https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html",
    "title": "Hellraiser забрал хоррор-Оскар у Resident Evil Requiem",
