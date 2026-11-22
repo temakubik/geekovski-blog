@@ -8,6 +8,572 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
+   "url": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
+   "title": "«Тайный город»: Москву поделили три Великих Дома",
+   "summary": "23 ноября ТНТ и Кинопоиск одновременно выпускают «Тайный город» — восьмисерийную экранизацию цикла Вадима Панова о Москве, где рядом с людьми живут три Великих Дома магов. Больше миллиона пользователей Кинопоиска уже добавили сериал в «Буду смотреть», а у прошлой версии этой истории десять лет назад было 5,4 из 10.",
+   "date_published": "2026-11-22T21:00:00+03:00",
+   "date_modified": "2026-11-22T21:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/tajnyj-gorod-moskva-vecher.jpg",
+   "_sources": [
+    {
+     "name": "Кинопоиск — о сериале «Тайный город»",
+     "url": "https://www.kinopoisk.ru/media/article/4012814"
+    },
+    {
+     "name": "Матч ТВ — премьерный показ в Доме Союзов",
+     "url": "https://matchtv.ru/cinema/matchtvnews_NI2387305_V_Moskve_v_Kolonnom_zale_Doma_Sojuzov_sostojalas_premjera_seriala_Tajnyj_gorod"
+    },
+    {
+     "name": "Rambler — пресс-релиз ТНТ, Кинопоиска и «Медиаслова»",
+     "url": "https://kino.rambler.ru/movies/57014291-dobro-pozhalovat-v-taynyy-gorod-premera-seriala-o-skrytoy-storone-moskvy-sostoitsya-23-noyabrya-odnovremenno-na-tnt-i-kinopoiske"
+    },
+    {
+     "name": "Вокруг ТВ — финальный трейлер и постеры",
+     "url": "https://vokrug.tv/article/show/17939761752"
+    },
+    {
+     "name": "Кинопоиск — сериал 2014 года, три сезона",
+     "url": "https://www.kinopoisk.ru/series/746564"
+    },
+    {
+     "name": "Издательство АСТ — цикл Вадима Панова",
+     "url": "https://ast.ru/news/vadim-panov-knigi-biografiya-ekranizatsii/"
+    },
+    {
+     "name": "Википедия — цикл «Тайный город»",
+     "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-22-1500-iphone-duo-sharnir-polomki.html",
+   "url": "https://geekovski.ru/2026-11-22-1500-iphone-duo-sharnir-polomki.html",
+   "title": "Почему ломается экран iPhone Duo: разбор шарнира",
+   "summary": "22 ноября в сети появилось видео, на котором видно сам момент поломки внутреннего экрана складного iPhone Duo — проблемную деталь шарнира уже прозвали Pixel Pincher 9000. Apple признала проблему ещё в октябре и меняет аппараты через AppleCare, но ни причину, ни число затронутых устройств не называет до сих пор.",
+   "date_published": "2026-11-22T15:00:00+03:00",
+   "date_modified": "2026-11-22T18:10:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/duo-sharnir-cover.jpg",
+   "_sources": [
+    {
+     "name": "iXBT — видео момента поломки экрана Duo",
+     "url": "https://www.ixbt.com/news/2026/11/22/kak-lomaetsia-ekran-novogo-iphone-poiavilos-video-s-momentom-povrezdeniia-displeia-iz-za-sarnira.html"
+    },
+    {
+     "name": "MacRumors — Apple отвечает на сообщения о трещинах",
+     "url": "https://www.macrumors.com/2026/10/26/iphone-duo-crack-apple-response/"
+    },
+    {
+     "name": "MacRumors — разборка iFixit и версии причины",
+     "url": "https://www.macrumors.com/2026/10/25/ifixit-iphone-duo-teardown/"
+    },
+    {
+     "name": "MacRumors — первые сообщения о трещинах",
+     "url": "https://www.macrumors.com/2026/10/23/iphone-duo-screen-cracks/"
+    },
+    {
+     "name": "The Verge — Apple признала «проблему»",
+     "url": "https://www.theverge.com/tech/1018760/iphone-duo-crackgate-inside-screen-hinge-crack"
+    },
+    {
+     "name": "The Verge — почему Duo возвращают",
+     "url": "https://www.theverge.com/tech/1030398/iphone-duo-returns-screen-apps"
+    },
+    {
+     "name": "9to5Mac — Тернус о возвратах и дефиците",
+     "url": "https://9to5mac.com/2026/11/02/john-ternus-addresses-iphone-duo-supply-constraints-display-issue/"
+    },
+    {
+     "name": "9to5Mac — опрос о возвратах",
+     "url": "https://9to5mac.com/2026/11/12/30-of-iphone-duo-buyers-may-have-returned-it-but-i-dont-think-apple-should-worry"
+    },
+    {
+     "name": "9to5Mac — запчасти Duo в Self Service Repair",
+     "url": "https://9to5mac.com/2026/11/17/apple-now-selling-iphone-duo-replacement-parts-and-tools/"
+    },
+    {
+     "name": "CNBC — заявление Apple и цена ремонта",
+     "url": "https://www.cnbc.com/2026/10/26/apple-responds-to-user-reports-of-broken-iphone-duo-screens.html"
+    },
+    {
+     "name": "Los Angeles Times — рассказы владельцев",
+     "url": "https://www.latimes.com/business/story/2026-10-27/apples-new-foldable-iphone-is-cracking-after-hours-or-days-of-use"
+    },
+    {
+     "name": "iXBT — тест JerryRigEverything с пылью",
+     "url": "https://www.ixbt.com/news/2026/10/24/skladnoi-iphone-duo-ne-prosel-test-na-procnost-pyl-zablokirovala-sarnir-a-ekran-slomalsia-pri-sgibanii.html"
+    },
+    {
+     "name": "iXBT — причины быстрой поломки по версии iFixit",
+     "url": "https://www.ixbt.com/news/2026/10/26/nazvany-priciny-bystroi-polomki-ekrana-iphone-duo.html"
+    },
+    {
+     "name": "Apple — поддержка: проблемы с шарниром",
+     "url": "https://support.apple.com/en-us/148323"
+    },
+    {
+     "name": "Apple Newsroom — iPhone Duo",
+     "url": "https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html",
+   "url": "https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html",
+   "title": "Фанаты GTA 6 обвалили рейтинг ремейка Zelda",
+   "summary": "За сутки пользовательская оценка ремейка Ocarina of Time на Metacritic упала с 9,6 — исторического максимума агрегатора — до 8,5. Часть фанатов GTA VI решила, что ремейк Zelda обваливают их игру, и ответила нулями; у самих GTA VI при 99 баллах от критиков пользовательская оценка 5,6.",
+   "date_published": "2026-11-22T12:00:00+03:00",
+   "date_modified": "2026-11-22T12:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/zelda-oot-ocenki-konnik.jpg",
+   "_sources": [
+    {
+     "name": "Metacritic — ремейк Ocarina of Time, оценки игроков",
+     "url": "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/user-reviews/?platform=nintendo-switch-2"
+    },
+    {
+     "name": "Metacritic — GTA VI, оценки игроков",
+     "url": "https://www.metacritic.com/game/grand-theft-auto-vi/user-reviews/?platform=playstation-5"
+    },
+    {
+     "name": "Metacritic — ремейк Ocarina of Time, оценки критиков",
+     "url": "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/"
+    },
+    {
+     "name": "Dexerto — рейтинговая война GTA 6 и ремейка Zelda",
+     "url": "https://www.dexerto.com/gaming/gta-6-and-ocarina-of-time-remake-caught-in-metacritic-review-bomb-war-3430280/"
+    },
+    {
+     "name": "Notebookcheck — пользовательский рейтинг Zelda падает в ответ на бомбинг GTA 6",
+     "url": "https://www.notebookcheck.net/Zelda-Ocarina-of-Time-Metacritic-user-rating-sinks-in-response-to-GTA-6-review-bombing.1456403.0.html"
+    },
+    {
+     "name": "TwistedVoxel — волна нулей на странице ремейка",
+     "url": "https://twistedvoxel.com/ocarina-of-time-remake-review-bombing/"
+    },
+    {
+     "name": "Nintendo — 5,2 млн копий за первые четыре дня",
+     "url": "https://www.nintendo.co.jp/corporate/release/en/2026/261111.html"
+    },
+    {
+     "name": "Nintendo Life — продажи ремейка и место в чарте Switch 2",
+     "url": "https://www.nintendolife.com/news/2026/11/its-official-zelda-ocarina-of-time-has-sold-over-5-million-copies-in-4-days"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html",
+   "url": "https://geekovski.ru/2026-11-22-1000-tesla-fsd-v15.html",
+   "title": "Tesla выпустила FSD v15: 25x безопасности без базы",
+   "summary": "Tesla начала раскатку FSD v15 первым клиентам — с новой визуализацией Reality View и обещанием «25-кратного» улучшения безопасности, которое нельзя проверить: базовую частоту вмешательств компания не публикует.",
+   "date_published": "2026-11-22T10:00:00+03:00",
+   "date_modified": "2026-11-22T10:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/tesla-fsd-v15-golden-gate.jpg",
+   "_sources": [
+    {
+     "name": "Tesla в X — анонс раскатки",
+     "url": "https://x.com/Tesla/status/2124222447855743019"
+    },
+    {
+     "name": "Tesla Super Intelligence — полные релиз-ноты v15",
+     "url": "https://x.com/TeslaSI/status/2124229673056113100"
+    },
+    {
+     "name": "Electrek — разбор v15 и цифры «25x»",
+     "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/"
+    },
+    {
+     "name": "TeslAnt — первые машины на v15.0.1, Европа и HW3",
+     "url": "https://teslant.com/en/changelog/tesla-fsd-v15-hw4-reality-view-first-wave-2026-11"
+    },
+    {
+     "name": "Teslarati — раскатка началась, релиз-ноты",
+     "url": "https://www.teslarati.com/tesla-full-self-driving-v15-rollout-begins-full-release-notes-improvements/"
+    },
+    {
+     "name": "Drive Tesla — устройство Reality View",
+     "url": "https://driveteslacanada.ca/news/tesla-reality-view/"
+    },
+    {
+     "name": "Not a Tesla App — сборка 2026.38.6.11 (FSD 15)",
+     "url": "https://www.notateslaapp.com/software-updates/version/2026.38.6.11/release-notes"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html",
+   "url": "https://geekovski.ru/2026-11-22-0800-hellraiser-horror-game-awards-2026.html",
+   "title": "Hellraiser забрал хоррор-Оскар у Resident Evil Requiem",
+   "summary": "На пятой церемонии The Horror Game Awards в Лондоне главный приз получил Clive Barker's Hellraiser: Revival от Saber Interactive, хотя Resident Evil Requiem собрал больше всего статуэток — четыре. Разница объясняется устройством голосования и тем, что жанровая премия ценит не полировку, а самобытность.",
+   "date_published": "2026-11-22T08:00:00+03:00",
+   "date_modified": "2026-11-22T08:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/hga2026-hellraiser-cover.jpg",
+   "_sources": [
+    {
+     "name": "The Horror Game Awards — официальный список победителей",
+     "url": "https://www.thehorrorgameawards.com/news/your-winners-for-the-horror-game-awards-2026"
+    },
+    {
+     "name": "The Escapist — Requiem взял больше всех наград",
+     "url": "https://www.escapistmagazine.com/hellraiser-revival-takes-horror-game-of-the-year-as-resident-evil-requiem-wins-the-most-awards/"
+    },
+    {
+     "name": "Horror Obsessive — номинации и правила голосования",
+     "url": "https://horrorobsessive.com/2026/11/05/horror-game-awards-2026-reanimal-leads-nominations/"
+    },
+    {
+     "name": "iXBT Games — итоги церемонии",
+     "url": "https://ixbt.games/news/2026/11/22/novinka-saber-prevzosla-resident-evil-requiem-zabrala-glavnuiu-nagradu-horror-game-awards-2026.html"
+    },
+    {
+     "name": "Saber Interactive — страница Hellraiser: Revival",
+     "url": "https://saber.games/hellraiserrevival"
+    },
+    {
+     "name": "Metacritic — Hellraiser: Revival",
+     "url": "https://www.metacritic.com/game/clive-barkers-hellraiser-revival"
+    },
+    {
+     "name": "OpenCritic — Hellraiser: Revival",
+     "url": "https://opencritic.com/game/21457/clive-barkers-hellraiser-revival"
+    },
+    {
+     "name": "Metacritic — Resident Evil Requiem",
+     "url": "https://www.metacritic.com/game/resident-evil-requiem"
+    },
+    {
+     "name": "Capcom — 5 млн копий Requiem за пять дней",
+     "url": "https://www.capcom.co.jp/ir/english/news/html/e260304.html"
+    },
+    {
+     "name": "Steam — Hellraiser: Revival",
+     "url": "https://store.steampowered.com/app/1551980/"
+    },
+    {
+     "name": "PlayStation Blog — Silent Hill: Townfall выходит 24 сентября",
+     "url": "https://blog.playstation.com/2026/06/02/silent-hill-townfall-launches-september-24-on-ps5"
+    },
+    {
+     "name": "VGC — ремейк Silent Hill от Bloober и 2027 год",
+     "url": "https://www.videogameschronicle.com/news/bloober-teams-silent-hill-remake-is-set-for-a-2027-release-with-the-first-two-actors-named-report-claims"
+    },
+    {
+     "name": "Tarsier Studios — REANIMAL",
+     "url": "https://tarsier.se/games/reanimal/"
+    },
+    {
+     "name": "Steam — Tenebris Somnia",
+     "url": "https://store.steampowered.com/app/2121510/"
+    },
+    {
+     "name": "GamesRadar+ — победители Golden Joystick 2026",
+     "url": "https://www.gamesradar.com/games/all-the-golden-joystick-awards-2026-winners-revealed/"
+    },
+    {
+     "name": "VGC — номинации The Game Awards 2026",
+     "url": "https://www.videogameschronicle.com/news/gta-6-is-the-most-nominated-game-at-the-game-awards-2026/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html",
+   "url": "https://geekovski.ru/2026-11-21-2100-es-lutboksy-dfa.html",
+   "title": "Лутбоксы, pay-to-win и дети: что предлагает ЕС",
+   "summary": "Еврокомиссия 11 ноября показала проект Digital Fairness Act — первый в истории ЕС документ, который лезет прямо в игровые механики: лутбоксы несовершеннолетним, платная валюта выключена по умолчанию, цена каждого предмета в евро. Это пока не закон, а индустрия уже называет его «game over» для европейских студий.",
+   "date_published": "2026-11-21T21:00:00+03:00",
+   "date_modified": "2026-11-21T21:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/es-lutboksy-dfa.jpg",
+   "_sources": [
+    {
+     "name": "Еврокомиссия — проект Digital Fairness Act, COM(2026) 1100",
+     "url": "https://commission.europa.eu/document/download/0575d59f-554f-4a9e-b54b-e6b717175809_en?filename=Proposal+for+a+Digital+Fairness+Act.pdf"
+    },
+    {
+     "name": "Еврокомиссия — вопросы и ответы по потребительскому пакету, 11 ноября 2026",
+     "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/qanda_26_2408/QANDA_26_2408_EN.pdf"
+    },
+    {
+     "name": "Еврокомиссия — пресс-релиз Consumer Package",
+     "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2407"
+    },
+    {
+     "name": "Politico — реакция игровых компаний",
+     "url": "https://www.politico.eu/article/european-gaming-firms-say-new-eu-consumer-rules-will-cripple-the-industry-digital-fairness-act/"
+    },
+    {
+     "name": "EGDF и Video Games Europe — совместное заявление",
+     "url": "https://www.egdf.eu/joint-statement-from-the-european-games-developer-federation-egdf-and-video-games-europe-vge-on-the-digital-fairness-act/"
+    },
+    {
+     "name": "game (Германия) — разбор DFA для индустрии",
+     "url": "https://www.game.de/en/digital-fairness-act-european-commission-hits-games-with-double-regulation-and-legal-uncertainty/"
+    },
+    {
+     "name": "heise online — что черновик значит для лутбоксов",
+     "url": "https://www.heise.de/en/news/Digital-Fairness-Act-What-the-EU-draft-means-for-loot-boxes-in-games-11521109.html"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-21-1800-xbox-klipy-gta6-avtomoderaciya.html",
+   "url": "https://geekovski.ru/2026-11-21-1800-xbox-klipy-gta6-avtomoderaciya.html",
+   "title": "Xbox банит игроков за клипы, которые загрузил сам",
+   "summary": "Игроки на Xbox Series X|S получают двухдневные блокировки за ролики GTA VI, которые консоль сама выгрузила на серверы Xbox: фильтр модерации разглядел на пляже Вице-Сити купальники и счёл это нарушением. Автозагрузка захватов включена по умолчанию, а Microsoft ситуацию пока не комментировала.",
+   "date_published": "2026-11-21T18:00:00+03:00",
+   "date_modified": "2026-11-21T18:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-klipy-gta6-avtomoderaciya.jpg",
+   "_sources": [
+    {
+     "name": "Pure Xbox — игрокам советуют выключить автозагрузку",
+     "url": "https://www.purexbox.com/news/2026/11/gta-6-players-warned-to-turn-off-auto-uploads-or-risk-getting-banned-on-xbox"
+    },
+    {
+     "name": "Insider Gaming — разбор банов за автозагрузку",
+     "url": "https://insider-gaming.com/gta-6-xbox-auto-upload-ban-explained/"
+    },
+    {
+     "name": "Xbox Support — защита от оскорбительных изображений",
+     "url": "https://support.xbox.com/en-GB/help/family-online-safety/enforcement/protecting-players-from-offensive-imagery"
+    },
+    {
+     "name": "Xbox — Community Standards",
+     "url": "https://www.xbox.com/en-US/legal/community-standards"
+    },
+    {
+     "name": "PlayStation Support — захват геймплея на PS5",
+     "url": "https://www.playstation.com/en-us/support/games/capture-ps5-gameplay-screenshots/"
+    },
+    {
+     "name": "Reddit — тред с описанием бана",
+     "url": "https://www.reddit.com/r/xbox/comments/1y0u01i/psa_turn_off_autoupload_for_gta_6_clips_on_xbox/"
+    },
+    {
+     "name": "Twisted Voxel — сводка случаев",
+     "url": "https://twistedvoxel.com/gta-vi-xbox-suspensions-auto-upload-nudity/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html",
+   "url": "https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html",
+   "title": "Claude доказал гипотезу Римана. Проверено, но не понято",
+   "summary": "Математик Anthropic Левент Альпёге опубликовал четыре страницы заметки и 17,4 млн строк Lean-кода — он утверждает, что вместе с Claude доказал гипотезу Римана и её обобщение. Код за сутки прошёл независимые проверки в MIT, но человекочитаемого доказательства нет: математики пока понимают не больше нашего.",
+   "date_published": "2026-11-21T15:00:00+03:00",
+   "date_modified": "2026-11-21T15:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/riemann-zeros-line.jpg",
+   "_sources": [
+    {
+     "name": "Заметка Левента Альпёге — Remark",
+     "url": "https://alpo.ge/remark.pdf"
+    },
+    {
+     "name": "Эндрю Сазерленд (MIT) — страница проверки",
+     "url": "https://math.mit.edu/~drew/grh/"
+    },
+    {
+     "name": "Terence Tao — разбор трёх результатов",
+     "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/"
+    },
+    {
+     "name": "Scott Aaronson — «The stochastic parrots have apparently proved the Riemann Hypothesis»",
+     "url": "https://scottaaronson.blog/?p=10344"
+    },
+    {
+     "name": "The Verge — заявление и реакция",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem"
+    },
+    {
+     "name": "Quanta — как проверяют доказательство",
+     "url": "https://www.quantamagazine.org/update/169569/"
+    },
+    {
+     "name": "Clay Mathematics Institute — правила премии",
+     "url": "https://www.claymath.org/millennium-problems/"
+    },
+    {
+     "name": "Anthropic — августовский результат про нули дзета-функции",
+     "url": "https://www.anthropic.com/research/riemann-zeta"
+    },
+    {
+     "name": "Ravi Vakil — объявление о рукописи Мазулло",
+     "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-21-1200-flagmany-dorozhayut-pamyat.html",
+   "url": "https://geekovski.ru/2026-11-21-1200-flagmany-dorozhayut-pamyat.html",
+   "title": "Флагманы дорожают на треть: память съела 40% цены",
+   "summary": "Counterpoint Research считает, что премиальные флагманы к концу 2026 года подорожают больше чем на 30% год к году, потому что DRAM и NAND забрали больше 40% их себестоимости. iPhone 18 Pro уже прибавил $100, в Индии Samsung и Xiaomi подняли цены на 41 модель, а TrendForce не ждёт разворота раньше второй половины 2027-го.",
+   "date_published": "2026-11-21T12:00:00+03:00",
+   "date_modified": "2026-11-21T12:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/pamyat-vitrina-s26.jpg",
+   "_sources": [
+    {
+     "name": "Counterpoint Research — прогноз по ценам премиальных флагманов",
+     "url": "https://counterpointresearch.com/en/insights/premium-flagship-smartphones-to-get-over-30-percent-costlier"
+    },
+    {
+     "name": "3DNews — пересказ отчёта Counterpoint с цифрами по Индии",
+     "url": "https://3dnews.ru/1151605/flagmani-prevrashchayutsya-v-predmet-roskoshi-defitsit-pamyati-vzvintil-tseni-bolee-chem-na-30-"
+    },
+    {
+     "name": "TrendForce — контрактные цены DRAM и NAND в IV квартале 2026",
+     "url": "https://www.trendforce.com/presscenter/news/20260930-13258.html"
+    },
+    {
+     "name": "Hi-Tech Mail — память для iPhone 18 Pro подорожала почти на 400%",
+     "url": "https://hi-tech.mail.ru/news/154815-pamyat-dlya-iphone-18-pro-podorozhala-v-chetyre-raza/"
+    },
+    {
+     "name": "AppleInsider.ru — реальные цены iPhone 18 Pro и Pro Max",
+     "url": "https://appleinsider.ru/eto-interesno/skolko-budet-stoit-iphone-18-pro-novye-podrobnosti-o-czene-smartfonov-apple-2026.html"
+    },
+    {
+     "name": "Moneycontrol — Samsung и Xiaomi подняли цены на 41 модель в Индии",
+     "url": "https://moneycontrol.com/technology/party-s-over-samsung-xiaomi-raise-smartphone-prices-by-up-to-19-after-diwali-article-14080794.html"
+    },
+    {
+     "name": "Seoul Economic Daily — KB Securities ждёт роста контрактных цен DRAM на 40% в 2027 году",
+     "url": "https://en.sedaily.com/market/2026/11/20/kb-securities-sees-dram-contract-prices-jumping-40-percent"
+    },
+    {
+     "name": "3DNews — восстановленная DRAM в новых смартфонах",
+     "url": "https://3dnews.ru/1150989/novie-smartfoni-vsyo-chashche-komplektuyut-bu-pamyatyu-perepayannaya-dram-budet-v-9-gadgetovv-sleduyushchem-godu"
+    },
+    {
+     "name": "CNews — следом за памятью дорожают OLED-панели",
+     "url": "https://telecom.cnews.ru/news/top/2026-11-05_vsled_za_defitsitom_pamyati"
+    },
+    {
+     "name": "Coinotag — роуд-шоу TrendForce: путь цен DRAM на 2027 год",
+     "url": "https://en.coinotag.com/trendforce-2026-q4-dram-contract-prices-up-10-15"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-21-1000-gta6-prodazhi-rekord.html",
+   "url": "https://geekovski.ru/2026-11-21-1000-gta6-prodazhi-rekord.html",
+   "title": "GTA VI собрала $3,79 млрд за первые сутки",
+   "summary": "Rockstar отчиталась за первый день GTA VI: $3,79 млрд розничных продаж по всему миру и 32,5 млн копий, проданных ещё до релиза. Это больше, чем собрал любой фильм за весь прокат и любой тур в истории музыки. При этом Take-Two в отчёте говорит про «розничные продажи», а не про свою выручку, и почти половина покупателей взяла издание за $100.",
+   "date_published": "2026-11-21T10:00:00+03:00",
+   "date_modified": "2026-11-21T10:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-prodazhi-rekord.jpg",
+   "_sources": [
+    {
+     "name": "Take-Two Interactive — пресс-релиз о рекорде первого дня",
+     "url": "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records"
+    },
+    {
+     "name": "ABC News (AP) — $3,79 млрд и 32,5 млн предзаказов",
+     "url": "https://abcnews.com/amp/US/wireStory/grand-theft-auto-vi-sets-record-379b-day-138335808"
+    },
+    {
+     "name": "CNN — сравнение с прокатом и данные Sensor Tower",
+     "url": "https://www.cnn.com/2026/11/20/media/gta-vi-launch-sales-numbers"
+    },
+    {
+     "name": "Deutsche Welle — реакция Хаузера и дата ПК-версии",
+     "url": "https://amp.dw.com/ru/379-mlrd-za-pervyj-den-gta-vi-ustanovila-rekord-v-istorii-videoigr/a-80007565"
+    },
+    {
+     "name": "CNBC — прогнозы аналитиков перед релизом",
+     "url": "https://www.cnbc.com/2026/11/18/gta-vi-publisher-take-two-jumps-as-gamers-relish-blockbuster-release.html"
+    },
+    {
+     "name": "Marvin Labs — как копия GTA VI попадает в отчётность Take-Two",
+     "url": "https://www.marvin-labs.com/blog/live-with-marvin-gta-vi-take-two-launch-test/"
+    },
+    {
+     "name": "Take-Two — отчёт за второй квартал 2027 финансового года",
+     "url": "https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fiscal-4"
+    },
+    {
+     "name": "Rockstar Games Store — цены изданий",
+     "url": "https://store.rockstargames.com/game/buy-gta-vi"
+    },
+    {
+     "name": "Marketplace — оценка выручки GTA Online",
+     "url": "https://www.marketplace.org/story/2026/11/18/gta-vis-price-tag"
+    },
+    {
+     "name": "Gaming Goods — цены изданий и отсутствие российской цены",
+     "url": "https://gaming-goods.ru/blog/p/gta-6-data-vyhoda-cena-kak-kupit"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-21-0800-odin-doma-kalkin.html",
+   "url": "https://geekovski.ru/2026-11-21-0800-odin-doma-kalkin.html",
+   "title": "«Один дома» возвращается: Калкин снова сыграет Кевина",
+   "summary": "Disney в ранней разработке делает новый «Один дома» с Маколеем Калкиным в роли взрослого Кевина — сценарий пишут Сет Роген и Эван Голдберг по идее самого актёра. Официального анонса нет, Disney отказалась от комментариев, а Крис Коламбус, узнавший новость последним, говорит, что без умершей в январе Кэтрин О’Хары такого фильма быть не может.",
+   "date_published": "2026-11-21T08:00:00+03:00",
+   "date_modified": "2026-11-21T08:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/home-alone-culkin.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — sequel с Калкиным, Рогеном и Голдбергом",
+     "url": "https://deadline.com/2026/11/home-alone-macaulay-culkin-seth-rogen-evan-goldberg-1237230258/"
+    },
+    {
+     "name": "Variety — проект в ранней разработке, подтверждение",
+     "url": "https://variety.com/2026/film/news/home-alone-reboot-disney-macaulay-culkin-seth-rogen-1236954344/"
+    },
+    {
+     "name": "Variety — Коламбус о возвращении после смерти О’Хары",
+     "url": "https://variety.com/2026/film/news/chris-columbus-home-alone-reboot-reaction-catherine-ohara-1236954497/"
+    },
+    {
+     "name": "Variety — питч Калкина 2025 года",
+     "url": "https://variety.com/2025/film/news/macaulay-culkin-home-alone-sequel-kevin-mccallister-son-1236591647/"
+    },
+    {
+     "name": "The Hollywood Reporter — подтверждение проекта",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/home-alone-sequel-disney-macaulay-culkin-seth-rogen-1236760116/"
+    },
+    {
+     "name": "NPR — Кэтрин О’Хара умерла 30 января 2026 года",
+     "url": "https://www.npr.org/2026/01/30/nx-s1-5694218/catherine-o-hara-dead"
+    },
+    {
+     "name": "Wikipedia — касса и хронология франшизы",
+     "url": "https://en.wikipedia.org/wiki/Home_Alone_(franchise)"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html",
    "url": "https://geekovski.ru/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html",
    "title": "Уилл Райт возвращается с игрой из ваших воспоминаний",

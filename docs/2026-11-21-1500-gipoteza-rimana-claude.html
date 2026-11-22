@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude доказал гипотезу Римана. Проверено, но не понято — GEEKOVSKI</title>
+<meta name="description" content="Математик Anthropic Левент Альпёге опубликовал четыре страницы заметки и 17,4 млн строк Lean-кода — он утверждает, что вместе с Claude доказал гипотезу Римана и её обобщение. Код за сутки прошёл независимые проверки в MIT, но человекочитаемого доказательства нет: математики пока понимают не больше нашего.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html">
+<meta property="og:title" content="Claude доказал гипотезу Римана. Проверено, но не понято — GEEKOVSKI">
+<meta property="og:description" content="Математик Anthropic Левент Альпёге опубликовал четыре страницы заметки и 17,4 млн строк Lean-кода — он утверждает, что вместе с Claude доказал гипотезу Римана и её обобщение. Код за сутки прошёл независимые проверки в MIT, но человекочитаемого доказательства нет: математики пока понимают не больше нашего.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/riemann-zeros-line.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Claude доказал гипотезу Римана. Проверено, но не понято">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude доказал гипотезу Римана. Проверено, но не понято — GEEKOVSKI">
+<meta name="twitter:description" content="Математик Anthropic Левент Альпёге опубликовал четыре страницы заметки и 17,4 млн строк Lean-кода — он утверждает, что вместе с Claude доказал гипотезу Римана и её обобщение. Код за сутки прошёл независимые проверки в MIT, но человекочитаемого доказательства нет: математики пока понимают не больше нашего.">
+<meta property="article:published_time" content="2026-11-21T15:00:00+03:00">
+<meta property="article:modified_time" content="2026-11-21T15:00:00+03:00">
+<meta property="article:section" content="AI">
+<meta property="article:author" content="GEEKOVSKI">
+<!--  — бренд-набор 2026-11-13: браузеры и Google держат favicon в своём кэше
+     неделями и max-age не уважают; при следующей замене знака номер поднять. -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#F1F4F9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="yandex-verification" content="acc866b9b963f469">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — дайджесты" href="/feed.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css">
+<link rel="stylesheet" href="/assets/brand.css">
+<script>document.documentElement.dataset.js='';try{const m=localStorage.getItem('gv-mode');if(m)document.documentElement.dataset.mode=m}catch(e){}</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Top.Mail.Ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3816456;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+<!-- /Top.Mail.Ru counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","sameAs":["https://vk.com/geekovskiread"],"logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"BlogPosting","@id":"https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html#article","headline":"Claude доказал гипотезу Римана. Проверено, но не понято","description":"Математик Anthropic Левент Альпёге опубликовал четыре страницы заметки и 17,4 млн строк Lean-кода — он утверждает, что вместе с Claude доказал гипотезу Римана и её обобщение. Код за сутки прошёл независимые проверки в MIT, но человекочитаемого доказательства нет: математики пока понимают не больше нашего.","datePublished":"2026-11-21T15:00:00+03:00","dateModified":"2026-11-21T15:00:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"AI","keywords":["AI","GEEKOVSKI"],"wordCount":1148,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/riemann-zeros-line.jpg","width":1600,"height":900}],"citation":["https://alpo.ge/remark.pdf","https://math.mit.edu/~drew/grh/","https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/","https://scottaaronson.blog/?p=10344","https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem","https://www.quantamagazine.org/update/169569/","https://www.claymath.org/millennium-problems/","https://www.anthropic.com/research/riemann-zeta","https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/"],"abstract":"В архиве 175 187 файлов Lean и около 17,4 млн строк · независимые ядра приняли доказательство, часть проверок ещё идёт · премию Клэя не могут вручить раньше конца 2028 года"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Блог","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"Категории","item":"https://geekovski.ru/categories/"},{"@type":"ListItem","position":3,"name":"AI","item":"https://geekovski.ru/ai/"},{"@type":"ListItem","position":4,"name":"Claude доказал гипотезу Римана. Проверено, но не понято","item":"https://geekovski.ru/2026-11-21-1500-gipoteza-rimana-claude.html"}]}]}</script>
+
+</head>
+<body class="t-editorial">
+<a class="skip-link" href="#main-content">К содержанию</a>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--active" href="/">Блог <span class="nav__count">203</span></a><a class="nav__link" href="/categories/">Категории <span class="nav__count">9</span></a><a class="nav__link" href="/avtory/">Авторы</a><a class="nav__link" href="/calendar/">Календарь</a><a class="nav__link" href="/digests/">Дайджесты <span class="nav__count">54</span></a></nav>
+    <div class="top__actions">
+      <div class="top__links"><a href="/rss.xml">RSS</a><a href="https://vk.com/geekovskiread">ВКонтакте</a></div><button class="theme-toggle" type="button" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main-content" tabindex="-1" class="wrap post-page">
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Блог</a></li><li><a href="/categories/">Категории</a></li><li><a href="/ai/">AI</a></li></ol></nav>
+<article class="post cat-ai">
+  <header class="post__head">
+    <h1>Claude доказал гипотезу Римана. Проверено, но не понято</h1>
+    <p class="post__lead">Математик Anthropic Левент Альпёге опубликовал четыре страницы заметки и 17,4 млн строк Lean-кода — он утверждает, что вместе с Claude доказал гипотезу Римана и её обобщение. Код за сутки прошёл независимые проверки в MIT, но человекочитаемого доказательства нет: математики пока понимают не больше нашего.</p>
+    <div class="post__creditline"><p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p><time datetime="2026-11-21T15:00:00+03:00">21 ноября 2026, 15:00</time></div>
+  </header>
+  <div class="reading-layout reading-layout--toc"><figure class="post__cover"><img src="/assets/img/riemann-zeros-line.jpg" alt="Claude доказал гипотезу Римана. Проверено, но не понято" width="1600" height="900" fetchpriority="high"></figure><details class="article-toc" open><summary>Содержание</summary><nav aria-label="Содержание статьи"><ul><li><a href="#section-o-chem-voobsche-rech">О чём вообще речь</a></li><li><a href="#section-chto-imenno-lezhit-v-arhive">Что именно лежит в архиве</a></li><li><a href="#section-chto-proverili-za-sutki">Что проверили за сутки</a></li><li><a href="#section-chego-eti-proverki-ne-znachat">Чего эти проверки не значат</a></li><li><a href="#section-pochemu-net-teksta-na-250-tysyach-stranic">Почему нет текста на 250 тысяч страниц</a></li><li><a href="#section-milliona-ne-budet-esche-dva-goda">Миллиона не будет ещё два года</a></li><li><a href="#section-v-tot-zhe-den-chelovek-vylozhil-940-stranic">В тот же день человек выложил 940 страниц</a></li><li><a href="#section-chto-eto-znachit">Что это значит</a></li></ul></nav></details><script>if(matchMedia("(max-width: 1169px)").matches)document.currentScript.previousElementSibling.open=false;</script><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>В архиве 175 187 файлов Lean и около 17,4 млн строк · независимые ядра приняли доказательство, часть проверок ещё идёт · премию Клэя не могут вручить раньше конца 2028 года</li></ul></aside><div class="post__body"><p>Вечером 20 ноября Левент Альпёге, математик из Anthropic, выложил на личном сайте четырёхстраничную заметку «Remark» и ссылку на архив Lean-кода из четырнадцати частей. В заметке — фраза, которой математики ждут с 1859 года: он считает, что вместе с Claude нашёл доказательство гипотезы Римана, метод распространяется и на обобщённую гипотезу Римана, а сам аргумент формализован в Lean без дополнительных допущений.</p>
+<p>Статьи к этому нет. Есть только код — и за следующие сутки он превратился в самый обсуждаемый математический артефакт года.</p>
+<h2 id="section-o-chem-voobsche-rech">О чём вообще речь</h2>
+<p>Гипотеза Римана — про то, как распределены простые числа. Дзета-функция Римана раскладывается в произведение по простым, и её нули управляют ошибкой в оценке количества простых до заданной границы. Гипотеза утверждает, что все нетривиальные нули лежат на одной вертикальной прямой в комплексной плоскости — там, где действительная часть равна 1/2. Численно проверены первые десять триллионов нулей, общего доказательства нет 167 лет.</p>
+<p>Гипотеза входит в семь «проблем тысячелетия» Института Клэя, за каждую назначен миллион долларов. Обобщённая версия (GRH) распространяет то же утверждение на L-функции Дирихле и через них — на кучу результатов из теории чисел: от оценок в алгоритмах до условий применимости многих теорем.</p>
+<figure class="post__fig"><img src="/assets/img/riemann-portrait.jpg" alt="Бернхард Риман, портрет XIX века" loading="lazy"></figure>
+<h2 id="section-chto-imenno-lezhit-v-arhive">Что именно лежит в архиве</h2>
+<p>Считать можно по-разному, но порядок такой: 175 187 файлов <code>.lean</code>, около 17,4 млн строк, сборка на Lean 4.33.1 и Mathlib 4.33.1, архив на 239 275 554 байта. В распакованном виде — 1,3 ГБ исходников. Львиная доля в каталоге <code>Development</code>: 141 928 файлов и 12,2 млн строк.</p>
+<p>Важная деталь, которую легко пропустить: главная теорема в <code>Main.lean</code> доказывает <code>RiemannHypothesis</code> — это определение из самого Mathlib, общей библиотеки, а не собственная формулировка автора. Самый частый способ подсунуть «доказательство» — доказать похожее, но не то утверждение; здесь целевое утверждение взято извне архива. Рядом ещё четыре теоремы: про нули дзета-функции на прямой и про L-функции Дирихле.</p>
+<h2 id="section-chto-proverili-za-sutki">Что проверили за сутки</h2>
+<p>Эндрю Сазерленд из MIT открыл страницу проверки и обновлял её по ходу. На утро 21 ноября (09:30 UTC) там стоит вот это.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Проверка</th><th style="text-align:left">Результат</th></tr></thead><tbody><tr><td style="text-align:left">Все 175 187 модулей компилируются</td><td style="text-align:left">ошибок нет</td></tr><tr><td style="text-align:left">Аксиомы пяти главных теорем</td><td style="text-align:left">только <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code></td></tr><tr><td style="text-align:left">Аксиомы вне ядра Lean</td><td style="text-align:left">нет, все 15 в <code>Init</code></td></tr><tr><td style="text-align:left">Файлы Mathlib против официального кэша</td><td style="text-align:left">совпадают байт в байт</td></tr><tr><td style="text-align:left">Прогон всех модулей через <code>leanchecker</code></td><td style="text-align:left">175 187 из 175 187, ноль отказов</td></tr><tr><td style="text-align:left">Независимое ядро <code>nanoda</code> (Rust) на полном экспорте</td><td style="text-align:left">принимает</td></tr><tr><td style="text-align:left">Сверка утверждений через <code>con-leche --compare</code></td><td style="text-align:left">все пять теорем совпали</td></tr><tr><td style="text-align:left">Стандартное и «параноидальное» ядро Lean</td><td style="text-align:left">ещё идёт</td></tr><tr><td style="text-align:left">Полный <code>lake comparator</code></td><td style="text-align:left">ещё идёт</td></tr></tbody></table></div>
+<figure class="post__fig"><img src="/assets/img/riemann-verification-page.jpg" alt="Страница проверки Эндрю Сазерленда: таблица пройденных тестов" loading="lazy"></figure>
+<p>Независимо тот же код собрал Саймон Дедео из Carnegie Mellon — об этом пишет Quanta. Проверка разными ядрами нужна как раз потому, что Lean — программа, в ней бывают ошибки, а символы в доказательстве можно переопределить так, что всё станет тривиально верным. Именно от этого страхует сверка утверждений и прогон на сторонних ядрах.</p>
+<h2 id="section-chego-eti-proverki-ne-znachat">Чего эти проверки не значат</h2>
+<p>Три оговорки, без которых новость превращается в кликбейт.</p>
+<p><strong>«GRH» здесь — не GRH.</strong> Сазерленд на своей же странице уточняет: в этом архиве «GRH» означает только L-функции Дирихле, а не самую широкую формулировку. Это по-прежнему огромный результат, но не тот, что звучит в заголовках.</p>
+<p><strong>Проверка опирается на ядра и на определения Mathlib.</strong> Пройденный тест значит: формальные утверждения, как они записаны, следуют из трёх стандартных аксиом с точки зрения использованных ядер. Если ошибка в самом ядре или определение в Mathlib не та, что мы думаем, проверка этого не поймает. Сазерленд и сам вынес это в оговорки: сравнение с сборкой в песочнице ещё не сделано.</p>
+<p><strong>Понимания нет.</strong> 17 млн строк не прочитал никто. Скотт Ааронсон в тот же вечер написал, что математики удовлетворятся не тогда, когда код сойдётся, а когда смогут объяснить, выделить и заново собрать идеи доказательства сами, — и что на это уйдут годы, потому что люди двигаются с биологической скоростью.</p>
+<h2 id="section-pochemu-net-teksta-na-250-tysyach-stranic">Почему нет текста на 250 тысяч страниц</h2>
+<p>Альпёге объясняет это сам. Письменная версия аргумента, которую выдала модель, заняла больше 250 000 страниц; выкладывать «travesty of slop», по его словам, было бы очевидно неуместно, поэтому он решил показать только Lean. Он прямо пишет, что представляет миру полный аргумент, не освоив огромную область математики вокруг него, и ожидает, что доказательство «массово упростится, вероятно, сразу же».</p>
+<p>Теренс Тао в тот же день разобрал три работы Альпёге разом: две — про взрыв решений уравнений Эйлера и Навье — Стокса, обе с человекочитаемым текстом и формализацией, и третью — GRH, только в Lean, «огромную». По его словам, следить за проверкой и вытаскивать стратегию лучше всего в треде Lean Zulip, а первые разборы показывают, что задействован весь аппарат современной программы Ленглендса и арифметической геометрии. Тао при этом пишет, что Альпёге использовал «внутреннюю модель ИИ», а сам Альпёге говорит про Claude — расхождение в формулировках пока никто не снимал.</p>
+<h2 id="section-milliona-ne-budet-esche-dva-goda">Миллиона не будет ещё два года</h2>
+<p>Правила Института Клэя не оставляют вариантов. Премию могут вручить, только если решение опубликовано в квалифицированном издании, с момента публикации прошло не меньше двух лет, решение получило общее признание математического сообщества и отвечает на вопросы официальной постановки задачи. Архив на личном сайте — не издание.</p>
+<p>Значит, даже в идеальном сценарии, когда всё подтвердится, миллион не могут вручить раньше конца 2028-го. И это лучший расклад, а не базовый.</p>
+<h2 id="section-v-tot-zhe-den-chelovek-vylozhil-940-stranic">В тот же день человек выложил 940 страниц</h2>
+<p>Самое неудобное совпадение: пока Lean-архив компилировался, Рави Вакил — президент Американского математического общества — выложил 940-страничную рукопись Алессандро Мазулло, постдока из Стэнфорда, с доказательством GRH целиком человеческими методами. Брайан Конрад, по словам Вакила, разбирал её несколько месяцев и дал подробные замечания, которые сейчас вносятся. Вакил написал, что план был довезти Мазулло в Стэнфорд на год, дошлифовать текст и объявить позже, но теперь лучше выложить текущий черновик.</p>
+<p>Теоретики числа при этом не спешат: у Мазулло уже была попытка доказать гипотезу Римана несколько лет назад, и она не выдержала проверки. Так что на столе сейчас два недоказанных GRH — машинный на 17 млн строк и человеческий на 940 страниц, и оба ждут разбора.</p>
+<h2 id="section-chto-eto-znachit">Что это значит</h2>
+<p><strong>Доказательство перестало быть текстом.</strong> Впервые претендент на проблему тысячелетия существует в виде, который проверяет машина, а не читает человек. Формально это сильнее, чем привычная статья: пропустить логическую дыру в 17 млн строк, которые прошли четыре ядра, трудно. Практически — пока бесполезнее: с таким артефактом нельзя работать, его нельзя упростить, из него нельзя вытащить идею.</p>
+<p><strong>Код и математика разошлись.</strong> «Проверено» и «понято» — теперь разные состояния одного результата, и между ними могут пройти годы. Именно поэтому в тот же день рядом появилась человеческая рукопись: сообществу нужен не только сертификат, но и объяснение.</p>
+<p><strong>Оценка.</strong> Самое интересное здесь не то, доказал ли Claude гипотезу Римана, а то, что произошло с институтом доказательства. Anthropic своё заявление не комментировала и в нём не участвовала — в августе компания прямо писала, что не ждёт, что техники Claude приведут к доказательству гипотезы. Заявление сделал человек, чьё имя стоит под кодом, и ответственность за него лежит на нём. Дальше решает не пресс-релиз, а страница Сазерленда и тред в Lean Zulip.</p>
+<p>Следить стоит там: оба оставшихся теста — стандартное и «параноидальное» ядро — ещё не вынесли вердикт.</p></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://alpo.ge/remark.pdf" rel="nofollow noopener" target="_blank">Заметка Левента Альпёге — Remark</a></li><li><a href="https://math.mit.edu/~drew/grh/" rel="nofollow noopener" target="_blank">Эндрю Сазерленд (MIT) — страница проверки</a></li><li><a href="https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/" rel="nofollow noopener" target="_blank">Terence Tao — разбор трёх результатов</a></li><li><a href="https://scottaaronson.blog/?p=10344" rel="nofollow noopener" target="_blank">Scott Aaronson — «The stochastic parrots have apparently proved the Riemann Hypothesis»</a></li><li><a href="https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem" rel="nofollow noopener" target="_blank">The Verge — заявление и реакция</a></li><li><a href="https://www.quantamagazine.org/update/169569/" rel="nofollow noopener" target="_blank">Quanta — как проверяют доказательство</a></li><li><a href="https://www.claymath.org/millennium-problems/" rel="nofollow noopener" target="_blank">Clay Mathematics Institute — правила премии</a></li><li><a href="https://www.anthropic.com/research/riemann-zeta" rel="nofollow noopener" target="_blank">Anthropic — августовский результат про нули дзета-функции</a></li><li><a href="https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/" rel="nofollow noopener" target="_blank">Ravi Vakil — объявление о рукописи Мазулло</a></li></ol></section><section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-21-1500-gipoteza-rimana-claude.html&text=Claude%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D0%B3%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%B7%D1%83%20%D0%A0%D0%B8%D0%BC%D0%B0%D0%BD%D0%B0.%20%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BE%2C%20%D0%BD%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%BE" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-21-1500-gipoteza-rimana-claude.html&title=Claude%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D0%B3%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%B7%D1%83%20%D0%A0%D0%B8%D0%BC%D0%B0%D0%BD%D0%B0.%20%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BE%2C%20%D0%BD%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%BE" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-21-1500-gipoteza-rimana-claude.html&text=Claude%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D0%B3%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%B7%D1%83%20%D0%A0%D0%B8%D0%BC%D0%B0%D0%BD%D0%B0.%20%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BE%2C%20%D0%BD%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%BE" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-21-1500-gipoteza-rimana-claude.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-21-1500-gipoteza-rimana-claude-pin.jpg&description=Claude%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%20%D0%B3%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%B7%D1%83%20%D0%A0%D0%B8%D0%BC%D0%B0%D0%BD%D0%B0.%20%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BE%2C%20%D0%BD%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%BE" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-21-1500-gipoteza-rimana-claude.html">Пошерить</button>
+</section></div></div>
+</article>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/tesla-fsd-v15-golden-gate.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-22T10:00:00+03:00">22.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-22-1000-tesla-fsd-v15.html">Tesla выпустила FSD v15: 25x безопасности без базы</a></h3>
+    <p class="card__sum">Tesla начала раскатку FSD v15 первым клиентам — с новой визуализацией Reality View и обещанием «25-кратного» улучшения…</p>
+  </div>
+</article>
+<article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-20T21:00:00+03:00">20.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij.html">Уилл Райт возвращается с игрой из ваших воспоминаний</a></h3>
+    <p class="card__sum">Создатель SimCity и The Sims показал MyMems — мобильную «социальную симуляцию», где игрок наговаривает в телефон истории из…</p>
+  </div>
+</article>
+<article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/nvidia-kitaj-gonkong-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-19T21:00:00+03:00">19.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-19-2100-nvidia-kitaj-ishchez-iz-prognoza.html">Китай исчез из прогноза NVIDIA: H200 больше не возят</a></h3>
+    <p class="card__sum">На звонке по итогам квартала и.</p>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/avtory/">Авторы</a><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a><a class="foot__ext" href="https://vk.com/geekovskiread" target="_blank" rel="noopener">ВКонтакте</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  const mode = r.dataset.mode || (r.dataset.theme === 'editorial' ? 'light' : 'dark');
+  r.dataset.mode = mode === 'light' ? 'dark' : 'light';
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
+});
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    if (menuButton?.getAttribute('aria-expanded') === 'true') menuButton.focus();
+    closeMenu();
+    if (rubrics) rubrics.open = false;
+  }
+});
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>
