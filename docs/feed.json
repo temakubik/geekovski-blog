@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
+   "url": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
+   "title": "«Тайный город»: Москву поделили три Великих Дома",
+   "summary": "23 ноября ТНТ и Кинопоиск одновременно выпускают «Тайный город» — восьмисерийную экранизацию цикла Вадима Панова о Москве, где рядом с людьми живут три Великих Дома магов. Больше миллиона пользователей Кинопоиска уже добавили сериал в «Буду смотреть», а у прошлой версии этой истории десять лет назад было 5,4 из 10.",
+   "date_published": "2026-11-22T21:00:00+03:00",
+   "date_modified": "2026-11-22T21:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/tajnyj-gorod-moskva-vecher.jpg",
+   "_sources": [
+    {
+     "name": "Кинопоиск — о сериале «Тайный город»",
+     "url": "https://www.kinopoisk.ru/media/article/4012814"
+    },
+    {
+     "name": "Матч ТВ — премьерный показ в Доме Союзов",
+     "url": "https://matchtv.ru/cinema/matchtvnews_NI2387305_V_Moskve_v_Kolonnom_zale_Doma_Sojuzov_sostojalas_premjera_seriala_Tajnyj_gorod"
+    },
+    {
+     "name": "Rambler — пресс-релиз ТНТ, Кинопоиска и «Медиаслова»",
+     "url": "https://kino.rambler.ru/movies/57014291-dobro-pozhalovat-v-taynyy-gorod-premera-seriala-o-skrytoy-storone-moskvy-sostoitsya-23-noyabrya-odnovremenno-na-tnt-i-kinopoiske"
+    },
+    {
+     "name": "Вокруг ТВ — финальный трейлер и постеры",
+     "url": "https://vokrug.tv/article/show/17939761752"
+    },
+    {
+     "name": "Кинопоиск — сериал 2014 года, три сезона",
+     "url": "https://www.kinopoisk.ru/series/746564"
+    },
+    {
+     "name": "Издательство АСТ — цикл Вадима Панова",
+     "url": "https://ast.ru/news/vadim-panov-knigi-biografiya-ekranizatsii/"
+    },
+    {
+     "name": "Википедия — цикл «Тайный город»",
+     "url": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B9%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-22-1500-iphone-duo-sharnir-polomki.html",
    "url": "https://geekovski.ru/2026-11-22-1500-iphone-duo-sharnir-polomki.html",
    "title": "Почему ломается экран iPhone Duo: разбор шарнира",
