@@ -348,6 +348,7 @@
 - [MyMems](https://geekovski.ru/titles/mymems.html): 2027
 - [NieR: Automata](https://geekovski.ru/titles/nier-automata.html): 2017
 - [The Odyssey / «Одиссея»](https://geekovski.ru/titles/odysseya-nolan.html): 2026
+- [Huawei OSTA O1 Pro](https://geekovski.ru/titles/osta-o1-pro.html): 2026
 - [Останься](https://geekovski.ru/titles/ostansya.html): 2027
 - [Path of Exile 2](https://geekovski.ru/titles/path-of-exile-2.html): 2026
 - [Phantom Blade Zero](https://geekovski.ru/titles/phantom-blade-zero.html): 2026
