@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-23-1800-nvidia-huang-vozvrat.html",
+   "url": "https://geekovski.ru/2026-11-23-1800-nvidia-huang-vozvrat.html",
+   "title": "Nvidia вернула Хуанга в CEO через 11 дней",
+   "summary": "23 ноября совет директоров Nvidia единогласно вернул Дженсена Хуанга на пост CEO — через 11 дней после отставки на фоне шпионского скандала. В релизе компания прямо ссылается на консультации с высокопоставленными чиновниками США, а акции в моменте прибавляли до 31 % после падения почти вдвое от октябрьского пика.",
+   "date_published": "2026-11-23T18:00:00+03:00",
+   "date_modified": "2026-11-23T18:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/nvidia-huang-vozvrat-cover.jpg",
+   "_sources": [
+    {
+     "name": "NVIDIA Newsroom — пресс-релиз о возвращении Хуана",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+    },
+    {
+     "name": "SEC — форма 8-K от 22–23 ноября 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm"
+    },
+    {
+     "name": "InvestmentNews — петиция, Трамп и давление акционеров",
+     "url": "https://www.investmentnews.com/equities/back-by-popular-demand-nvidia-restores-jensen-huang-to-ceo-role/269129"
+    },
+    {
+     "name": "Business Insider — реакция рынка и падение от пика",
+     "url": "https://www.businessinsider.com/ai-stock-rally-jensen-huang-nvidia-reinstated-ceo-2026-11"
+    },
+    {
+     "name": "FXStreet — премаркет, $160 и фьючерсы",
+     "url": "https://www.fxstreet.com/news/jensen-huang-reinstated-at-nvidia-nvda-shares-spike-27-202611231416"
+    },
+    {
+     "name": "Euronews — хронология, ФБР и слушания 1 декабря",
+     "url": "https://www.euronews.com/2026/11/23/nvidia-reinstates-jensen-huang-as-ceo-11-days-after-he-resigned"
+    },
+    {
+     "name": "The Hindu (AFP) — реакция Трампа",
+     "url": "https://www.thehindu.com/sci-tech/technology/nvidia-reinstates-jensen-huang-as-ceo-after-us-government-input/article71735341.ece"
+    },
+    {
+     "name": "NVIDIA Newsroom — результаты III квартала 2027 финансового года",
+     "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027"
+    },
+    {
+     "name": "Morningstar — Nvidia уступила Alphabet и стала четвёртой",
+     "url": "https://www.morningstar.com/news/marketwatch/20261120188/alphabet-just-overtook-nvidia-in-market-value-for-the-first-time-in-over-2-years"
+    },
+    {
+     "name": "Silicon Republic — реакция аналитиков и история компании",
+     "url": "https://www.siliconrepublic.com/business/nvidia-votes-unanimously-to-bring-jensen-huang-back-as-ceo"
+    },
+    {
+     "name": "WSJ — Nvidia на четвёртом месте по капитализации",
+     "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-20-2026/card/nvidia-has-now-slipped-to-no-4-in-market-cap-w92wQQi42ajTrkQljTcU"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html",
    "url": "https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html",
    "title": "BioWare закрылась после 31 года: Mass Effect отменена",
