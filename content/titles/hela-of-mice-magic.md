@@ -2,9 +2,9 @@
 kind: game
 title: Hela: of Mice & Magic
 year: 2026
-studio: Windup
+developer: Windup
 genre: приключение, кооператив
-platforms: xbox pc
+platforms: pc ps5 xbox switch2
 aliases: Hela, Hela of Mice and Magic, Хела
 ---
 

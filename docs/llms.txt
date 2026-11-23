@@ -299,10 +299,12 @@
 
 - [Задача трёх тел](https://geekovski.ru/titles/3-body-problem.html): 2024
 - [«Задача трёх тел», сезон 2](https://geekovski.ru/titles/3-body-problem-2.html): 2027
+- [«Александр I»](https://geekovski.ru/titles/aleksandr-i.html): 2026
 - [Angry Birds 3 в кино](https://geekovski.ru/titles/angry-birds-3-v-kino.html): 2026
 - [Arkheron](https://geekovski.ru/titles/arkheron.html): 2026
 - [Atomfall](https://geekovski.ru/titles/atomfall.html): 2025
 - [«Мстители: Судный день»](https://geekovski.ru/titles/avengers-doomsday.html): 2026
+- [«Баста. Начало игры»](https://geekovski.ru/titles/basta-nachalo-igry.html): 2026
 - [Big Walk](https://geekovski.ru/titles/big-walk.html): 2026
 - [Black Doves, сезон 2](https://geekovski.ru/titles/black-doves-sezon-2.html): 2026
 - [«Новые похождения Клиффа Бута»](https://geekovski.ru/titles/cliff-booth.html): 2026
@@ -321,7 +323,9 @@
 - [Gods Don't Give Gifts](https://geekovski.ru/titles/gods-dont-give-gifts.html): 2026
 - [Godzilla: Destroy All Monsters Melee Remastered](https://geekovski.ru/titles/godzilla-destroy-all-monsters-melee-remastered.html): 2026
 - [Godzilla Minus Zero](https://geekovski.ru/titles/godzilla-minus-zero.html): 2026
+- [«Гордость и предубеждение»](https://geekovski.ru/titles/gordost-i-predubezhdenie.html): 2026
 - [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
+- [GRIME II](https://geekovski.ru/titles/grime-2.html): 2026
 - [Grand Theft Auto VI](https://geekovski.ru/titles/gta-6.html): 2026
 - [Hela: of Mice & Magic](https://geekovski.ru/titles/hela-of-mice-magic.html): 2026
 - ["Clive Barker's Hellraiser: Revival"](https://geekovski.ru/titles/hellraiser-revival.html): 2026
@@ -340,7 +344,9 @@
 - [Останься](https://geekovski.ru/titles/ostansya.html): 2027
 - [Path of Exile 2](https://geekovski.ru/titles/path-of-exile-2.html): 2026
 - [Phantom Blade Zero](https://geekovski.ru/titles/phantom-blade-zero.html): 2026
+- [Professor Layton and the New World of Steam](https://geekovski.ru/titles/professor-layton-new-world-of-steam.html): 2026
 - [Rainbow Six Siege](https://geekovski.ru/titles/rainbow-six-siege.html): 2015
+- [Rayman Legends Retold](https://geekovski.ru/titles/rayman-legends-retold.html): 2026
 - [Resident Evil Requiem](https://geekovski.ru/titles/resident-evil-requiem.html): 2026
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
@@ -349,6 +355,7 @@
 - [The Altruists](https://geekovski.ru/titles/the-altruists.html): 2026
 - [«Три богатыря и гуси-лебеди»](https://geekovski.ru/titles/tri-bogatyrya-gusi-lebedi.html): 2026
 - [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
+- [«Ведьмин лес»](https://geekovski.ru/titles/vedmin-les.html): 2026
 - [«Вершина»](https://geekovski.ru/titles/vershina-film.html): 2026
 - [Virgin River](https://geekovski.ru/titles/virgin-river.html): 2019
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
