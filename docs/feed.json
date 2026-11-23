@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html",
+   "url": "https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html",
+   "title": "Прокатные удостоверения для игр: что обсуждает правительство",
+   "summary": "23 ноября «Коммерсантъ» со ссылкой на источники сообщил, что правительство видит целесообразным ввести для видеоигр прокатные удостоверения — как у фильмов, — а создателей и распространителей игр записать в реестр ОРИ с хранением данных в России и подключением к СОРМ. Индустрия против: игра — сервис, который меняется каждый день, и удостоверение версии её не описывает.",
+   "date_published": "2026-11-23T12:00:00+03:00",
+   "date_modified": "2026-11-23T12:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/prokat-igr-duma.jpg",
+   "_sources": [
+    {
+     "name": "Коммерсантъ — что обсуждают в правительстве, 23.11.2026",
+     "url": "https://www.kommersant.ru/doc/9127181"
+    },
+    {
+     "name": "Коммерсантъ — первое чтение до конца года, 29.10.2026",
+     "url": "https://www.kommersant.ru/doc/9064083"
+    },
+    {
+     "name": "Meduza — пересказ публикации «Ъ»",
+     "url": "https://meduza.io/news/2026/11/23/v-rossii-vnov-predlozhili-vvesti-prokatnye-udostovereniya-dlya-videoigr"
+    },
+    {
+     "name": "3DNews — ОРИ, СОРМ и реакция рынка",
+     "url": "https://3dnews.ru/1151663"
+    },
+    {
+     "name": "КонсультантПлюс — ст. 5.1 закона о господдержке кинематографии",
+     "url": "https://www.consultant.ru/document/cons_doc_LAW_11454/125c3833a032b683212225dbc7b49e5d15c7b3a4/"
+    },
+    {
+     "name": "ГАРАНТ — приказ Минкультуры № 942 о порядке выдачи прокатных удостоверений",
+     "url": "https://base.garant.ru/409086106/"
+    },
+    {
+     "name": "Интерфакс — реестр ОРИ, сроки хранения и состав",
+     "url": "https://www.interfax.ru/russia/1125441"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html",
    "url": "https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html",
    "title": "Kodak SlideTag: брелок с экраном и Find My за $35",
