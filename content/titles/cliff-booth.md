@@ -6,6 +6,7 @@ studio: Netflix
 genre: драма, криминал
 platforms: kino
 aliases: Cliff Booth, Клифф Бут
+cover: /assets/img/cliff-booth-1.jpg
 ---
 
 Финчер по сценарию Тарантино: 1977 год, Бут — «решатель проблем» голливудских студий.

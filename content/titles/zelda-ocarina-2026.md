@@ -7,7 +7,7 @@ developer: Nintendo EPD
 publisher: Nintendo
 genre: экшн-приключение
 platforms: switch2
-cover: /assets/img/anno-zelda-ocarina-of-time.jpg
+cover: /assets/img/zelda-oot-ocenki-konnik.jpg
 aliases: Zelda: Ocarina of Time | Ocarina of Time | Зельда: Ocarina of Time | ремейк Ocarina of Time
 sources: Nintendo — 5,2 млн копий за первые четыре дня | https://www.nintendo.co.jp/corporate/release/en/2026/261111.html; Metacritic — оценки ремейка | https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/; Nintendo — Ask the Developer Vol. 24 | https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-24-the-legend-of-zelda-ocarina-of-time-part-1/
 ---

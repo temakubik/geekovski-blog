@@ -7,7 +7,7 @@ developer: Shift Up
 publisher: Sony Interactive Entertainment
 genre: экшн-приключение
 platforms: switch2
-cover: /assets/img/anno-stellar-blade.jpg
+cover: /assets/img/stellar-blade-switch-2-hp.jpg
 aliases: Stellar Blade | Стеллар Блейд
 sources: Wikipedia — Stellar Blade | https://en.wikipedia.org/wiki/Stellar_Blade; GamesRadar+ — релизы ноября 2026 | https://www.gamesradar.com/video-game-release-dates
 ---

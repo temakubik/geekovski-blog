@@ -100,7 +100,7 @@ def parse_post(path: Path):
         else:
             sources.append({"name": line, "url": ""})
     kind = meta.get("kind", "post").strip().lower()
-    if kind not in ("post", "digest", "calendar", "game", "film", "series"):
+    if kind not in ("post", "digest", "calendar", "game", "film", "series", "gadget"):
         kind = "post"
     # tldr: пункт | пункт — выжимка для блока «Коротко» в начале материала
     tldr = [x.strip() for x in meta.get("tldr", "").split("|") if x.strip()]
@@ -332,7 +332,7 @@ def plain(text: str, n: int = 240) -> str:
 
 # ---------- templates ----------
 
-NAV_COUNTS = {"posts": 0, "digests": 0, "rubrics": 0, "calendars": 0}
+NAV_COUNTS = {"posts": 0, "digests": 0, "rubrics": 0, "calendars": 0, "titles": 0}
 open_rubrics = {}   # заполняется в build(): слаг -> число материалов
 CATEGORIES_PATH = "/categories/"
 SIDEBAR_ICONS = {
@@ -341,6 +341,7 @@ SIDEBAR_ICONS = {
     "authors": '<circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/>',
     "calendar": '<rect x="4" y="5" width="16" height="15"/><path d="M8 3v4m8-4v4M4 10h16m-12 4h2m4 0h2"/>',
     "digests": '<path d="M7 7h13v13H7zM4 17V4h13m-7 7h7m-7 4h7"/>',
+    "catalog": '<path d="M3 5h7v15H3zM14 5h4l3 14-4 1zM6 8h2m-2 4h2"/>',
     "collapse": '<path d="M15 6l-6 6 6 6"/>',
 }
 
@@ -356,7 +357,8 @@ def nav(theme, canonical):
         links = [("/", "Блог", NAV_COUNTS["posts"], "blog"),
                  (CATEGORIES_PATH, "Категории", len(CATS), "categories"),
                  ("/avtory/", "Авторы", None, "authors"), ("/calendar/", "Календарь", None, "calendar"),
-                 ("/digests/", "Дайджесты", NAV_COUNTS["digests"], "digests")]
+                 ("/digests/", "Дайджесты", NAV_COUNTS["digests"], "digests"),
+                 (CATALOG_PATH, "Каталог", NAV_COUNTS["titles"], "catalog")]
         route = urllib.parse.urlsplit(canonical or "").path
         section = next((path for path, *_ in links[1:] if route.startswith(path)), "/")
         if route.strip("/") in CAT_NAME:
@@ -370,6 +372,8 @@ def nav(theme, canonical):
             '<a class="nav__link nav__link--digests" href="/digests/">Дайджесты<span class="nav__num">(%d)</span></a>'
             '<span class="nav__sep" aria-hidden="true"></span>'
             '<a class="nav__link nav__link--cal" href="/calendar/">Календарь<span class="nav__num">(%d)</span></a>'
+            '<span class="nav__sep" aria-hidden="true"></span>'
+            '<a class="nav__link" href="/titles/">Каталог</a>'
             '<span class="nav__sep" aria-hidden="true"></span>'
             '<a class="nav__link nav__link--authors" href="/avtory/">Авторы</a>'
             '<span class="nav__sep" aria-hidden="true"></span>'
@@ -1776,6 +1780,8 @@ def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None,
                               caption=a["name"]))
     # страницы тайтлов (игры, фильмы, сериалы) — такие же точки входа, как материалы:
     # по ним ищут «<название> дата выхода», и из календаря на них ведут ссылки
+    if titles:
+        urls.append(entry(SITE["url"] + CATALOG_PATH))
     for slug in sorted(titles or {}):
         urls.append(entry(SITE["url"] + "/titles/" + slug + ".html"))
     for d in (digests or []):
@@ -1995,85 +2001,6 @@ def image_report(posts):
     return problems
 
 
-# У страницы /digests/ лид (.lead) идёт вплотную к переключателю, и его нижняя
-# граница читалась как непонятная линия без заголовка. Убираем рамку только тут.
-DIGEST_HIDE_LEAD = ".lead { border-bottom: 0; padding-bottom: 10px; margin-bottom: 14px; }"
-
-# Стили переключателя видов дайджестов и сетки календаря лежат здесь, а не в
-# editorial.css. Причина: в большом theme.css (50 КБ) Chromium переставал
-# применять правила, стоящие после тяжёлого блока (баг разбора: файл читался
-# целиком, а последние ~36 правил отбрасывались). Отдаём их отдельным
-# inline-<style> и проверяем страницу в браузере, а не только в CSS-файле.
-DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и две недели календарём. */
-.dviews { margin: 0 0 22px; }
-.dviews__tabs {
-  display: inline-flex; gap: 4px; padding: 4px; margin: 0 0 20px;
-  border: 1px solid var(--line); border-radius:var(--surface-corners,12px); background: var(--panel);
-}
-.dviews__tab {
-  font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em;
-  text-transform: uppercase; color: var(--muted); background: transparent;
-  border: 0; border-radius:var(--surface-corners,8px); padding: 9px 20px; cursor: pointer;
-  transition: color .15s, background .15s;
-}
-.dviews__tab:hover { color: var(--text); }
-/* активный таб — тёмный с лаймовой рамкой: чёрный текст на синем не читался */
-.dviews__tab.is-on { color: var(--accent); background: rgba(55, 123, 240, .16); box-shadow: inset 0 0 0 1px var(--accent); }
-
-.stripx { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; margin-bottom: 14px; }
-.stripx__range { font-family: var(--font-caps); font-size: var(--fs-small); letter-spacing: .12em; text-transform: uppercase; color: var(--text); }
-.stripx__wd { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
-.stripx__w { text-align: center; font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.stripx__row { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
-.stripx__cell {
-  position: relative; aspect-ratio: 4 / 3; border-radius:var(--surface-corners,10px);
-  border: 1px solid var(--line); background: var(--bg); color: var(--muted);
-  display: grid; grid-template-rows: auto 1fr; align-items: start;
-  padding: 7px 9px 8px; cursor: default; transition: border-color .15s, background .15s;
-}
-.stripx__cell.has { color: var(--text); cursor: pointer; }
-.stripx__cell.has:hover { border-color: var(--accent); background: var(--panel); }
-.stripx__cell.today { box-shadow: inset 0 0 0 1px rgba(55, 123, 240, .55); }
-.stripx__cell.active { border-color: var(--accent); background: rgba(55, 123, 240, .16); }
-.stripx__n { font-family: var(--font-display); font-style: italic; font-size: var(--fs-card); line-height: 1; }
-/* «эта неделя» и «следующая»: вторая строка приглушена, первая — на панели */
-.stripx__cell.next { background: transparent; opacity: .72; }
-.stripx__cell.has .stripx__n { color: var(--text); }
-.stripx__cell.active .stripx__n { color: var(--accent); }
-.stripx__dots { align-self: end; display: flex; gap: 4px; }
-.stripx__dot { width: 7px; height: 7px; border-radius:var(--surface-corners,50%); background: #F5C518; }
-
-.stripx__dot.is-evening { background: var(--part-eve, #A855F7); }
-.stripx__nav {
-  width: 42px; height: 42px; border-radius:var(--surface-corners,10px); border: 1px solid var(--line);
-  background: var(--panel); color: var(--text); cursor: pointer; font-size: 17px; line-height: 1;
-  transition: border-color .15s, color .15s, transform .1s;
-}
-.stripx__nav:hover { border-color: var(--accent); color: var(--accent); }
-.stripx__nav:active { transform: scale(.95); }
-.stripx__panel { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 4px; }
-.stripx__ptitle { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.stripx__item { display: grid; grid-template-columns: max-content 1fr auto; gap: 12px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
-.stripx__item:last-child { border-bottom: 0; }
-.stripx__item:hover .stripx__name { color: var(--accent); }
-.stripx__part { font-family: var(--font-caps); font-size: var(--fs-meta); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.stripx__name { font-family: var(--font-display); font-style: italic; font-size: var(--fs-card); line-height: 1.25; }
-.stripx__count { font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--muted); }
-
-@media (max-width: 640px) {
-  .dviews__tabs { display: flex; width: 100%; }
-  .dviews__tab { flex: 1 1 0; padding: 9px 10px; letter-spacing: .06em; }
-  .stripx { grid-template-columns: 1fr auto; gap: 10px; }
-  .stripx__wd { display: none; }
-  .stripx__range { grid-column: 1; }
-  .stripx__nav { grid-row: 1; }
-  .stripx__row { gap: 4px; }
-  .stripx__cell { padding: 6px; border-radius:var(--surface-corners,8px); }
-  .stripx__n { font-size: var(--fs-small); }
-}
-"""
-
-
 # Старые адреса дайджестов, которые Google успел обнаружить в корне сайта.
 LEGACY_DIGEST_SLUGS = {
     "2026-11-02-utro",
@@ -2164,6 +2091,7 @@ def build(theme, out_dir, content_dir=None):
         open_rubrics[c] = len([p for p in posts if p["category"] == c])
     NAV_COUNTS["posts"] = len(posts)
     NAV_COUNTS["digests"] = len(digests)
+    NAV_COUNTS["titles"] = len(TITLES)
     NAV_COUNTS["calendars"] = sum(1 for e in cal_entries if e["day"] >= datetime.now().date())
     (out / "index.html").write_text(render_index(posts, theme), encoding="utf-8")
     archive_dir = out / "archive"
@@ -2201,6 +2129,7 @@ def build(theme, out_dir, content_dir=None):
                 redirect_page(publication_path(d), d["title"]), encoding="utf-8")
     tdir = out / "titles"
     tdir.mkdir(exist_ok=True)
+    (tdir / "index.html").write_text(render_catalog(TITLES, cal_entries, theme), encoding="utf-8")
     for slug in TITLES:
         htmlp = title_page(slug, theme)
         if htmlp:
@@ -2279,9 +2208,6 @@ def build(theme, out_dir, content_dir=None):
 
 # ---------- Календарь анонсов ----------
 
-WD = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
-MONTHS_GEN_MONTH = ["января", "февраля", "марта", "апреля", "мая", "июня",
-                   "июля", "августа", "сентября", "октября", "ноября", "декабря"]
 MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
               "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
 MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
@@ -2297,153 +2223,184 @@ PLATFORMS = {
 }
 
 
-def _cal_icon(kind_note):
-    """Иконка по типу анонса: релиз / порт / сериал."""
-    k = (kind_note or "").lower()
-    if "сериал" in k or "фильм" in k:
-        return ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
-                'stroke-width="1.7"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 3l4 4 4-4"/></svg>')
-    if "порт" in k or "ремастер" in k or "ремейк" in k:
-        return ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
-                'stroke-width="1.7"><path d="M4 12a8 8 0 0 1 13.7-5.6M20 12a8 8 0 0 1-13.7 5.6"/><path d="M18 4v4h-4M6 20v-4h4"/></svg>')
-    return ('<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" '
-            'stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg>')
+CATALOG_PATH = "/titles/"
+TITLE_KINDS = {
+    "game": ("Игра", "Игры"),
+    "film": ("Фильм", "Кино"),
+    "series": ("Сериал", "Сериалы"),
+    "gadget": ("Гаджет", "Гаджеты"),
+}
 
 
-def _cal_week(entries, today=None):
-    """Ближайшие 7 дней: от сегодня до +6."""
-    today = today or datetime.now().date()
-    return [e for e in entries if 0 <= (e["day"] - today).days <= 6]
+def release_date(day):
+    return f"{day.day} {MONTHS_GEN[day.month - 1]} {day.year}"
 
 
-def _plat_tags(value):
-    """'pc ps5 switch2' → chips. Незнакомое значение печатаем как текст."""
-    out = []
-    for tok in (value or "").split():
-        label, cat = PLATFORMS.get(tok.lower(), (tok, None))
-        cls = "plat plat--%s" % cat if cat else "plat"
-        out.append('<span class="%s">%s</span>' % (cls, html.escape(label)))
-    return "".join(out)
+def platform_text(platforms):
+    readable = {"pc": "ПК", "kino": "Кинотеатры"}
+    return " · ".join(readable.get(token, PLATFORMS.get(token, (token, ""))[0])
+                      for token in platforms.split())
 
 
-def _same_as_category(e):
-    """Тип анонса, совпадающий с названием рубрики, второй раз не печатаем."""
-    note = (e["kind_note"] or "").strip().lower()
-    cat = CAT_NAME.get(e["category"], "").lower()
-    if not note:
-        return False
-    return note in cat or cat in note
+def collection_cover(src):
+    # Старые шаблонные обложки календаря содержат повторяющиеся дату и заголовок.
+    path = local_image(urllib.parse.urljoin(SITE["url"], src))
+    if not src or not path or path.name.startswith("anno-") or not path.is_file():
+        return ""
+    return src
 
 
-def _cal_card(e):
-    """Карточка анонса: картинка 16:9, тип, название, платформы."""
-    visual = ""
-    if e.get("cover"):
-        visual = '<div class="anno__cover"><img src="%s" alt="%s" loading="lazy"></div>' % (
-            e["cover"], html.escape(e["title"], quote=True))
-    else:
-        visual = '<div class="anno__cover anno__cover--mono"><span>%s</span></div>' % html.escape(
-            e["title"][:2].upper())
-    return ('<a class="anno cat-{cat}" href="/titles/{slug}.html">{visual}'
-            '<div class="anno__body"><div class="anno__meta"><span class="anno__type">{icon}{note}</span>'
-            '{catsfx}</div>'
-            '<h3 class="anno__title">{title}</h3>'
-            '<div class="anno__plat">{plats}</div></div></a>').format(
-        cat=e["category"], visual=visual, icon=_cal_icon(e["kind_note"]), slug=e["slug"],
-        catsfx=('<span class="anno__cat">%s</span>' % CAT_NAME.get(e["category"], e["category"]))
-                   if not _same_as_category(e) else "",
-        note=html.escape(e["kind_note"] or "релиз"), title=html.escape(e["title"]),
-        plats=_plat_tags(e["platforms"]))
+def card_credit(value):
+    label, separator, url = value.rpartition("|")
+    if separator and urllib.parse.urlsplit(url.strip()).scheme in ("https", "http"):
+        return f'<p>Фото: <a href="{html.escape(url.strip())}">{html.escape(label.strip())}</a></p>'
+    return ""
+
+
+def collection_card(title, url, summary, meta, *, cover="", facts="", details="",
+                    links="", attrs="", priority=False):
+    cover = collection_cover(cover)
+    image = image_tag(cover, priority=priority).replace("<img ", '<img class="collection-card__cover" ', 1)
+    facts = f'<p class="collection-card__facts">{html.escape(facts)}</p>' if facts else ""
+    summary = f'<p class="collection-card__summary">{html.escape(summary)}</p>' if summary else ""
+    links = f'<div class="collection-card__links">{links}</div>' if links else ""
+    return (f'<article class="collection-card" data-collection-item{attrs}>'
+            f'{image}<div class="collection-card__text"><p class="collection-card__meta">{meta}</p>'
+            f'<h3><a href="{html.escape(url)}">{html.escape(title)}</a></h3>'
+            f'{facts}{summary}{details}</div>{links}</article>')
+
+
+def collection_filters(name, choices, label):
+    buttons = "".join(
+        f'<button type="button" data-filter-value="{html.escape(value)}"'
+        f' aria-pressed="{str(index == 0).lower()}">{html.escape(text)}</button>'
+        for index, (value, text) in enumerate(choices)
+    )
+    return (f'<div class="collection-filters collection-filters--{name}" data-filter="{name}"'
+            f' role="group" aria-label="{label}">{buttons}</div>')
+
+
+def month_filter(days):
+    keys = sorted({day.strftime("%Y-%m") for day in days}, reverse=True)
+    options = "".join(f'<option value="{key}">{archive_month_name(key)}</option>' for key in keys)
+    return ('<label class="collection-field">Месяц <select data-filter="month">'
+            f'<option value="">Все месяцы</option>{options}</select></label>')
+
+
+def collection_layout(title, count_name, controls, cards, *, mode="", empty):
+    path = "/titles/" if mode == "catalog" else f"/{mode}/"
+    classes = ' collection-grid--digests' if mode == 'digests' else ''
+    return (
+        f'<main class="wrap collection" data-collection="{mode}">'
+        + breadcrumbs([("Блог", "/"), (title, path)])
+        + f'<h1>{title}</h1><div class="collection-controls" data-collection-controls hidden>{controls}</div>'
+        f'<div class="collection-heading"><h2>{count_name}</h2><span data-collection-count role="status"></span></div>'
+        f'<div class="collection-grid{classes}">{cards}</div>'
+        f'<p class="collection-empty" data-collection-empty{" hidden" if cards else ""}>{empty}</p></main>'
+    )
+
+
+def collection_assets():
+    assets = ROOT / "static" / "assets"
+    version = hashlib.sha256((assets / "collections.css").read_bytes()
+                             + (assets / "collections.js").read_bytes()).hexdigest()[:10]
+    return (f'<link rel="stylesheet" href="/assets/collections.css?v={version}">'
+            f'<script defer src="/assets/collections.js?v={version}"></script>')
 
 
 def render_calendar_page(entries, theme, today=None):
-    today = today or datetime.now().date()
-    week = _cal_week(entries, today)
-    # дальше — «Дальше по календарю», сгруппировано по месяцам
-    later = [e for e in entries if (e["day"] - today).days > 6]
-    groups = {}
-    for e in week:
-        groups.setdefault(e["day"], []).append(e)
-
-    blocks = []
-    for day in sorted(groups):
-        d = datetime.combine(day, datetime.min.time())
-        rel = "сегодня" if day == today else ("завтра" if (day - today).days == 1 else "")
-        head = ('<div class="cal__day"><span class="cal__how"><span class="cal__num">%02d</span>'
-                '<span class="cal__month">%s</span></span><span class="cal__wd">%s</span>%s</div>') % (
-            d.day, MONTHS_GEN[d.month - 1], WD[d.weekday()],
-            ('<span class="cal__rel">%s</span>' % rel) if rel else "")
-        cards = "".join(_cal_card(e) for e in groups[day])
-        blocks.append('<section class="cal__group">%s<div class="cal__cards">%s</div></section>' % (head, cards))
-
-    if not blocks:
-        body = ('<p class="lead__empty">На ближайшую неделю подтверждённых дат пока нет. '
-                'Как только анонсы появятся — они окажутся здесь.</p>')
-        desc = "Что выходит на этой неделе: игры, фильмы и сериалы с подтверждёнными датами. " + SITE["tagline"]
-    else:
-        body = ('<section class="cal-week"><div class="rubric__head"><h2>Релизы на этой неделе</h2>'
-                '<span class="rubric__all">%d %s</span></div><div class="cal">%s</div></section>'
-                % (len(week), plural(len(week), "релиз", "релиза", "релизов"), "".join(blocks)))
-        desc = ("Календарь анонсов: %d %s на этой неделе с подтверждёнными датами — "
-                "игры, платформы, фильмы и сериалы. %s") % (
-            len(week), plural(len(week), "релиз", "релиза", "релизов"), SITE["tagline"])
-
-    # «Громкие релизы месяца»: тот же месяц, но дальше недели. Каждый месяц — свой блок,
-    # поэтому прошлый месяц не исчезает, а спускается в блок истории.
-    this_month = [e for e in entries if (e["day"] - today).days > 6
-                  and (e["day"].year, e["day"].month) == (today.year, today.month)]
-    past_months = {}
-    for e in entries:
-        if e["day"] < today:
-            past_months.setdefault((e["day"].year, e["day"].month), []).append(e)
-    later_months = {}
-    for e in entries:
-        if (e["day"] - today).days > 6 and (e["day"].year, e["day"].month) != (today.year, today.month):
-            later_months.setdefault((e["day"].year, e["day"].month), []).append(e)
-
-    def month_rows(items):
-        return "".join(
-            '<a class="mrow cat-%s" href="%s"><span class="mrow__d">%02d</span>'
-            '<span class="mrow__t">%s</span><span class="mrow__p">%s</span></a>'
-            % (e["category"], e["href"], e["day"].day, html.escape(e["title"]), _plat_tags(e["platforms"]))
-            for e in sorted(items, key=lambda x: (x["day"], x["title"])))
-
-    if this_month:
-        body += ('<section class="cal-month"><div class="rubric__head"><h2>Громкие релизы %s</h2>'
-                 '<span class="rubric__all">%d %s</span></div>%s</section>'
-                 % (MONTHS_GEN_MONTH[today.month - 1], len(this_month),
-                    plural(len(this_month), "релиз", "релиза", "релизов"), month_rows(this_month)))
-
-    if later_months:
-        mblocks = "".join(
-            '<section class="mblock"><h3 class="mblock__h">%s %d</h3>%s</section>'
-            % (MONTHS_NOM[m - 1], y, month_rows(later_months[(y, m)]))
-            for (y, m) in sorted(later_months))
-        body += ('<section class="cal-later"><div class="rubric__head"><h2>Дальше по календарю</h2>'
-                 '<span class="rubric__all">%d %s</span></div>%s</section>'
-                 % (sum(len(v) for v in later_months.values()),
-                    plural(sum(len(v) for v in later_months.values()), "дата", "даты", "дат"), mblocks))
-
-    if past_months:
-        pblocks = "".join(
-            '<section class="mblock mblock--past"><h3 class="mblock__h">%s %d</h3>%s</section>'
-            % (MONTHS_NOM[m - 1], y, month_rows(past_months[(y, m)]))
-            for (y, m) in sorted(past_months, reverse=True))
-        body += ('<section class="cal-later cal-history"><div class="rubric__head"><h2>История</h2></div>%s</section>'
-                 % pblocks)
-
-    content = ('<main class="wrap">' + back_link("На главную", "/") + '<section class="lead"><h1>Календарь анонсов</h1>'
-               '<p>Что выходит на этой неделе и что уже назначено дальше. Только подтверждённые даты.</p></section>'
-               '%s</main>') % body
-    return page("Календарь анонсов — релизы недели и месяца | %s" % SITE["title"], desc, content, theme,
-                canonical=SITE["url"] + "/calendar/",
+    today = today or datetime.now(timezone(timedelta(hours=3))).date()
+    upcoming = [entry for entry in entries if entry["day"] >= today]
+    recent = list(reversed([entry for entry in entries if entry["day"] < today]))
+    cards = []
+    for index, entry in enumerate(upcoming + recent):
+        day = entry["day"]
+        title = TITLES.get(entry["slug"], {})
+        cover = collection_cover(entry["cover"]) or title.get("cover") or ""
+        kind = (title.get("kind") or
+                {"kino": "film", "serialy": "series", "gadgets": "gadget"}.get(entry["category"], "game"))
+        period = "past" if day < today else "week" if (day - today).days <= 6 else "later"
+        meta = (f'<time datetime="{day.isoformat()}">{release_date(day)}</time> · '
+                f'{TITLE_KINDS[kind][0]} · {html.escape(entry["kind_note"] or "релиз")}')
+        summary = title.get("card_summary") or plain(entry["summary"], 155)
+        more = f'<p>{html.escape(entry["summary"])}</p>' if entry["summary"] != summary and entry["summary"] else ""
+        more += card_credit(title.get("cover_source", ""))
+        details = f'<details><summary>Подробнее</summary>{more}</details>' if more else ""
+        links = (f'<a href="{CATALOG_PATH}#title-{html.escape(entry["slug"])}">В каталог ↗</a>'
+                 if title else "")
+        source, separator, url = entry["source"].rpartition("|")
+        if separator and urllib.parse.urlsplit(url.strip()).scheme in ("https", "http"):
+            links += f'<a href="{html.escape(url.strip())}">{html.escape(source.strip())} ↗</a>'
+        facts = " · ".join(value for value in (platform_text(entry["platforms"]), entry["where"]) if value)
+        cards.append(collection_card(entry["title"], entry["href"], summary, meta, cover=cover,
+                                     facts=facts, details=details, links=links, priority=index < 3,
+                                     attrs=f' data-kind="{kind}" data-period="{period}"'))
+    controls = collection_filters("period", [("week", "Ближайшие 7 дней"), ("later", "Позже"),
+                                            ("past", "Уже вышло")], "Период")
+    controls += collection_filters("kind", [("", "Все")] + [(k, v[1]) for k, v in TITLE_KINDS.items()],
+                                   "Тип релиза")
+    content = collection_layout("Календарь релизов", "Расписание", controls, "".join(cards),
+                                mode="calendar", empty="В этом периоде пока нет релизов выбранной категории.")
+    desc = "Календарь выхода игр, фильмов, сериалов и гаджетов. Даты, платформы, регионы и ссылки на источники."
+    url = SITE["url"] + "/calendar/"
+    return page(title_tag("Календарь релизов"), desc, content, theme, canonical=url,
+                head_extra=collection_assets(),
                 jsonld=ldjson(ld_org(), ld_website(),
-                              {"@type": "CollectionPage", "@id": SITE["url"] + "/calendar/#page",
-                               "url": SITE["url"] + "/calendar/", "name": "Календарь анонсов",
-                               "description": desc, "inLanguage": "ru-RU",
-                               "isPartOf": {"@id": WEBSITE_ID}},
-                              calendar_itemlist(entries),
-                              ld_breadcrumb([("Главная", "/"), ("Календарь анонсов", "/calendar/")])))
+                              {"@type": "CollectionPage", "@id": url + "#page", "url": url,
+                               "name": "Календарь релизов", "description": desc, "isPartOf": {"@id": WEBSITE_ID}},
+                              calendar_itemlist(upcoming),
+                              ld_breadcrumb([("Блог", "/"), ("Календарь релизов", "/calendar/")])))
+
+
+def render_catalog(titles, entries, theme):
+    events = collections.defaultdict(list)
+    today = datetime.now(timezone(timedelta(hours=3))).date()
+    for entry in entries:
+        events[entry["slug"]].append(entry)
+    chosen = {}
+    for slug, days in events.items():
+        chosen[slug] = next((e for e in days if e["day"] >= today), days[-1])
+    items = sorted(titles.values(), key=lambda item: (
+        not bool(collection_cover(item["cover"])),
+        chosen[item["slug"]]["day"] if item["slug"] in chosen and chosen[item["slug"]]["day"] >= today
+        else datetime.max.date(),
+        item["title"].casefold(),
+    ))
+    cards, ld_items = [], []
+    for index, item in enumerate(items, 1):
+        slug = item["slug"]
+        url = f"{CATALOG_PATH}{slug}.html"
+        event = chosen.get(slug)
+        if event:
+            day = event["day"]
+            timing = f'<time datetime="{day.isoformat()}">{release_date(day)}</time>'
+        else:
+            timing = html.escape(item["year"])
+        label = TITLE_KINDS[item["kind"]][0]
+        meta = " · ".join(filter(None, (html.escape(label), timing)))
+        facts = " · ".join(filter(None, (item["meta"].get("brand"), platform_text(item["platforms"]))))
+        credit = card_credit(item["cover_source"])
+        details = f'<details><summary>Об изображении</summary>{credit}</details>' if credit else ""
+        search = html.escape(" ".join(_aliases(item)), quote=True)
+        cards.append(collection_card(item["title"], url, item["card_summary"] or plain(item["body"], 145),
+                                     meta, cover=item["cover"], facts=facts, details=details, priority=index <= 3,
+                                     links=f'<a href="{html.escape(url)}">Открыть карточку ↗</a>',
+                                     attrs=f' id="title-{html.escape(slug)}" data-kind="{item["kind"]}" data-search="{search}"'))
+        ld_items.append({"@type": "ListItem", "position": index, "url": SITE["url"] + url, "name": item["title"]})
+    controls = collection_filters("kind", [("", "Все")] + [(k, v[1]) for k, v in TITLE_KINDS.items()], "Тип релиза")
+    controls += ('<label class="collection-field">Поиск <input type="search" data-collection-search'
+                 ' placeholder="По названию"></label>')
+    content = collection_layout("Каталог", "Карточки", controls, "".join(cards),
+                                mode="catalog", empty="По этому запросу ничего не найдено.")
+    url = SITE["url"] + CATALOG_PATH
+    desc = "Каталог игр, фильмов, сериалов и гаджетов GEEKOVSKI. Описания, даты релизов, платформы и связанные публикации."
+    return page(title_tag("Каталог игр, фильмов, сериалов и гаджетов"), desc, content, theme, canonical=url,
+                head_extra=collection_assets(),
+                jsonld=ldjson(ld_org(), ld_website(),
+                              {"@type": "CollectionPage", "@id": url + "#page", "url": url, "name": "Каталог",
+                               "description": desc, "isPartOf": {"@id": WEBSITE_ID}},
+                              {"@type": "ItemList", "numberOfItems": len(ld_items), "itemListElement": ld_items},
+                              ld_breadcrumb([("Блог", "/"), ("Каталог", CATALOG_PATH)])))
 
 
 def calendar_itemlist(entries, limit=30):
@@ -2574,7 +2531,7 @@ AUTHOR_BY_CAT = {}  # рубрика → паспорт автора, котор
 
 
 def load_titles():
-    """content/titles/*.md — база игр, фильмов и сериалов. Ключ — слаг заголовка."""
+    """Карточки релизов из content/titles, по одной на постоянный адрес."""
     out = {}
     d = ROOT / "content" / "titles"
     if not d.exists():
@@ -2584,7 +2541,7 @@ def load_titles():
         slug = rec["slug"] if rec.get("slug") else f.stem
         out[slug] = {
             "slug": slug,
-            "kind": rec["kind"] if rec["kind"] in ("game", "film", "series") else "game",
+            "kind": rec["kind"] if rec["kind"] in TITLE_KINDS else "game",
             "title": rec["title"],
             "year": rec["meta"].get("year", ""),
             "genre": rec["meta"].get("genre", ""),
@@ -2592,6 +2549,8 @@ def load_titles():
             "platforms": rec["meta"].get("platforms", ""),
             "links": rec["meta"].get("links", ""),
             "cover": rec["cover"],
+            "card_summary": rec["meta"].get("card_summary", ""),
+            "cover_source": rec["meta"].get("cover_source", ""),
             "body": rec["body"],
             "sources": rec["sources"],
             "meta": rec["meta"],
@@ -2609,6 +2568,8 @@ def title_page(slug, theme):
         rows = [("Год", t["year"]), ("Разработчик", t["developers"]),
                 ("Издатель", t["meta"].get("publisher", "")), ("Жанр", t["genre"]),
                 ("Платформы", plat_labels)]
+    elif t["kind"] == "gadget":
+        rows = [("Год", t["year"]), ("Бренд", t["meta"].get("brand", "")), ("Тип", t["genre"])]
     else:
         rows = [("Год", t["year"]), ("Студия", t["developers"]),
                 ("Дистрибьютор", t["meta"].get("publisher", "")), ("Жанр", t["genre"]),
@@ -2619,13 +2580,23 @@ def title_page(slug, theme):
                    for x in t["sources"] if x["url"])
     cover = ('<div class="tp__cover"><img src="%s" alt="%s"></div>'
              % (t["cover"], html.escape(t["title"], quote=True))) if t["cover"] else ""
-    # даты из календаря: ближайшая будущая
-    rel = [e for e in CAL_ENTRIES if e["slug"] == slug and e["day"] >= datetime.now().date()]
+    events = [entry for entry in CAL_ENTRIES if entry["slug"] == slug]
+    rel = [e for e in events if e["day"] >= datetime.now(timezone(timedelta(hours=3))).date()]
     when = ""
     if rel:
         e = sorted(rel, key=lambda x: x["day"])[0]
         when = ('<div class="tp__when">Выходит <b>%d %s</b></div>'
                 % (e["day"].day, MONTHS_GEN[e["day"].month - 1]))
+    schedule = ""
+    if events:
+        rows = []
+        for entry in events:
+            day = entry["day"]
+            place = " · ".join(filter(None, (platform_text(entry["platforms"]), entry["where"])))
+            rows.append(f'<li><time datetime="{day.isoformat()}">{release_date(day)}</time> — '
+                        f'{html.escape(entry["kind_note"] or "релиз")}{html.escape(" · " + place) if place else ""}</li>')
+        schedule = '<section class="sources"><h2>Даты релизов</h2><ul>' + "".join(rows) + '</ul></section>'
+    credit = card_credit(t["cover_source"])
     mentions = articles_for_title(slug)
     if mentions:
         if len(mentions) == 1 and mentions[0]["kind"] == "post":
@@ -2656,18 +2627,19 @@ def title_page(slug, theme):
                '<div class="tp__meta">%s</div><div class="post__body">%s</div>%s'
                '%s</article>%s</main>') % (
         cover, html.escape(t["title"]), when, meta, md(t["body"]) if t["body"] else "",
-        ('<section class="sources"><h2>Источники</h2><ul>%s</ul></section>' % srcs) if srcs else "",
+        schedule + (('<section class="sources"><h2>Источники</h2><ul>%s</ul>%s</section>' % (srcs, credit))
+                    if srcs or credit else ""),
         share_block(SITE["url"] + "/titles/%s.html" % slug, t["title"], t["cover"] or DEFAULT_OG),
         ment_block)
     content = content.replace('<main class="wrap"><article class="tp">',
-                              '<main class="wrap">' + back_link("К календарю", "/calendar/") + '<article class="tp">', 1)
-    return page("%s — %s | %s" % (t["title"], {"game": "игра", "series": "сериал"}.get(t["kind"], "фильм"),
+                              '<main class="wrap">' + back_link("К каталогу", CATALOG_PATH) + '<article class="tp">', 1)
+    return page("%s — %s | %s" % (t["title"], TITLE_KINDS[t["kind"]][0].lower(),
                                   SITE["title"]),
                 plain(t["body"], 180), content, theme,
                 canonical=SITE["url"] + "/titles/%s.html" % slug,
                 og_image=t["cover"] or DEFAULT_OG,
                 jsonld=ldjson(ld_org(), ld_website(), ld_title(t, slug),
-                              ld_breadcrumb([("Главная", "/"), ("Календарь анонсов", "/calendar/"),
+                              ld_breadcrumb([("Главная", "/"), ("Каталог", CATALOG_PATH),
                                              (t["title"], "/titles/%s.html" % slug)])))
 
 
@@ -2678,7 +2650,7 @@ def ld_title(t, slug):
     в разметке есть дата релиза из календаря, жанр, студия и издатель.
     """
     url = "%s/titles/%s.html" % (SITE["url"], slug)
-    kind = {"game": "VideoGame", "film": "Movie", "series": "TVSeries"}.get(t["kind"], "CreativeWork")
+    kind = {"game": "VideoGame", "film": "Movie", "series": "TVSeries", "gadget": "Product"}[t["kind"]]
     obj = {"@type": kind, "@id": url + "#entity", "name": t["title"], "url": url,
            "inLanguage": "ru-RU", "description": plain(t["body"], 200) or None}
     if t["cover"]:
@@ -2687,7 +2659,10 @@ def ld_title(t, slug):
         if size:
             entry["width"], entry["height"] = size
         obj["image"] = entry
-    if t["genre"]:
+    if t["kind"] == "gadget":
+        obj["brand"] = t["meta"].get("brand") or None
+        obj["category"] = t["genre"] or None
+    elif t["genre"]:
         obj["genre"] = [g.strip() for g in re.split(r"[,/]", t["genre"]) if g.strip()]
     for key, meta_key in (("productionCompany", "developer"), ("publisher", "publisher")):
         name = (t.get("meta") or {}).get(meta_key) or t["developers"]
@@ -2695,8 +2670,8 @@ def ld_title(t, slug):
             obj[key] = {"@type": "Organization", "name": name}
     # подтверждённая дата релиза из календаря (ближайшая будущая или последняя прошедшая)
     days = sorted(e["day"] for e in CAL_ENTRIES if e.get("slug") == slug)
-    if days:
-        today = datetime.now().date()
+    if days and t["kind"] != "gadget":
+        today = datetime.now(timezone(timedelta(hours=3))).date()
         future = [d for d in days if d >= today]
         obj["datePublished"] = (future[0] if future else days[-1]).strftime("%Y-%m-%d")
     return {k: v for k, v in obj.items() if v is not None}
@@ -2704,7 +2679,7 @@ def ld_title(t, slug):
 
 def calendar_entries(calendars):
     """Разворачивает заметки kind: calendar в плоский список записей."""
-    out = []
+    out, seen = [], set()
     for c in calendars:
         for it in c["items"]:
             day = None
@@ -2714,12 +2689,16 @@ def calendar_entries(calendars):
                 continue
             slug = it.get("slug") or title_slug(it["title"])
             slug = TITLE_REDIRECTS.get(slug, slug)
+            key = (day, slug, it.get("platforms", ""), it.get("kind_note", ""), it.get("where", ""))
+            if key in seen:
+                continue
+            seen.add(key)
             out.append({
                 "day": day, "category": it["category"], "title": it["title"],
                 "cover": it.get("cover", ""),
                 "slug": slug,
                 "platforms": it.get("platforms", ""), "kind_note": it.get("kind_note", ""),
-                "summary": it["summary"], "source": it["source"],
+                "summary": it["summary"], "source": it["source"], "where": it.get("where", ""),
                 "href": "/titles/%s.html" % slug,
             })
     out.sort(key=lambda e: (e["day"], e["title"]))
@@ -2842,12 +2821,6 @@ def render_style_guide(theme):
 
 # ---------- дайджест: техническая мета и оформление ----------
 
-MONTHS_GEN_MONTH = ["января", "февраля", "марта", "апреля", "мая", "июня",
-                   "июля", "августа", "сентября", "октября", "ноября", "декабря"]
-MONTHS_NOM = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-              "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
-MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня",
-              "июля", "августа", "сентября", "октября", "ноября", "декабря"]
 
 
 def part_of_day(dt):
@@ -3015,165 +2988,48 @@ def render_digest(d, theme, next_d=None, prev_d=None):
     url = "%s/digests/%s.html" % (SITE["url"], d["slug"])
     return page(title_tag(head_title), d["summary"] or meta, content, theme,
                 canonical=url, og_type="article", article=d, og_alt=head_title,
+                og_image=SITE["url"] + d["cover"] if d["cover"] else None,
                 jsonld=ldjson(ld_org(), ld_website(), ld_article(d, url, headline=head_title),
                               ld_breadcrumb([("Главная", "/"), ("Дайджесты", "/digests/"),
                                              (head_title, "/digests/%s.html" % d["slug"])])))
 
 
-def _digest_calendar(digests):
-    """Календарь выпусков на две недели: сегодня и шесть дней вперёд + следующая неделя.
-
-    Квадратные ячейки 7×2, точки — выпуски (лайм — утренний, фиолетовый —
-    вечерний), клик по дню показывает этот день в панели под сеткой.
-    Стрелки листают окно на неделю. Данные — JSON в странице, без запросов.
-    """
-    data = []
-    for d in digests:
-        data.append({
-            "d": d["date"].strftime("%Y-%m-%d"),
-            "p": part_of_day(d["date"]).upper(),
-            "t": sentence_case(strip_prefix(d["title"])),
-            "u": "/digests/%s.html" % d["slug"],
-            "n": len(d["items"]),
-        })
-    payload = json.dumps(data, ensure_ascii=False)
-    return """<div class="stripx" id="dcal">
-  <button class="stripx__nav" type="button" id="sxPrev" aria-label="Предыдущая неделя">←</button>
-  <div class="stripx__range" id="sxRange"></div>
-  <button class="stripx__nav" type="button" id="sxNext" aria-label="Следующая неделя">→</button>
-  <div class="stripx__wd" id="sxWd"></div>
-  <div class="stripx__row" id="sxGrid"></div>
-  <div class="stripx__panel" id="sxPanel" style="grid-column:1/-1"></div>
-</div>
-<script>
-(function () {
-  var DATA = %s;
-  var grid = document.getElementById("sxGrid");
-  var panel = document.getElementById("sxPanel");
-  var range = document.getElementById("sxRange");
-  var wdBox = document.getElementById("sxWd");
-  var byDate = {};
-  DATA.forEach(function (x) { (byDate[x.d] = byDate[x.d] || []).push(x); });
-  var WD = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
-  var MG = ["января", "февраля", "марта", "апреля", "мая", "июня",
-            "июля", "августа", "сентября", "октября", "ноября", "декабря"];
-  wdBox.innerHTML = WD.map(function (w) { return '<span class="stripx__w">' + w + "</span>"; }).join("");
-
-  function midnight(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
-  function addDays(d, n) { var x = new Date(d.getTime()); x.setDate(x.getDate() + n); return midnight(x); }
-  function iso(d) { return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
-
-  var today = midnight(new Date());
-  var start = addDays(today, -((today.getDay() + 6) %% 7));
-
-  function rangeText(a, b) {
-    if (a.getMonth() === b.getMonth()) {
-      return a.getDate() + "–" + b.getDate() + " " + MG[b.getMonth()];
-    }
-    return a.getDate() + " " + MG[a.getMonth()] + " – " + b.getDate() + " " + MG[b.getMonth()];
-  }
-
-  function panelFor(isoDate) {
-    var items = byDate[isoDate] || [];
-    if (!items.length) { panel.innerHTML = ""; panel.style.display = "none"; return; }
-    var d = new Date(isoDate + "T00:00:00");
-    var html = '<div class="stripx__ptitle">' + d.getDate() + " " + MG[d.getMonth()] + "</div>";
-    items.forEach(function (x) {
-      html += '<a class="stripx__item" href="' + x.u + '">' +
-              '<span class="stripx__part">' + x.p + "</span>" +
-              '<span class="stripx__name">' + x.t + "</span>" +
-              '<span class="stripx__count">' + x.n + "</span></a>";
-    });
-    panel.innerHTML = html;
-    panel.style.display = "";
-  }
-
-  function render(pick) {
-    range.textContent = rangeText(start, addDays(start, 13));
-    var html = "";
-    var lastHas = null;
-    for (var i = 0; i < 14; i++) {
-      var day = addDays(start, i), k = iso(day), items = byDate[k];
-      var cls = "stripx__cell" + (items ? " has" : "") +
-                (k === iso(today) ? " today" : "") + (i > 6 ? " next" : "");
-      var dots = "";
-      if (items) {
-        lastHas = k;
-        var morning = false, evening = false;
-        items.forEach(function (x) { if (x.p === "ВЕЧЕР") evening = true; else morning = true; });
-        if (morning) dots += '<i class="stripx__dot"></i>';
-        if (evening) dots += '<i class="stripx__dot is-evening"></i>';
-      }
-      html += '<button type="button" class="' + cls + '" data-date="' + k + '"' +
-              (items ? "" : " disabled") + '><span class="stripx__n">' + day.getDate() +
-              '</span><span class="stripx__dots">' + dots + "</span></button>";
-    }
-    grid.innerHTML = html;
-    grid.querySelectorAll(".stripx__cell.has").forEach(function (b) {
-      b.addEventListener("click", function () {
-        grid.querySelectorAll(".stripx__cell.active").forEach(function (x) { x.classList.remove("active"); });
-        b.classList.add("active");
-        panelFor(b.dataset.date);
-      });
-    });
-    var want = pick && byDate[pick] ? pick : lastHas;
-    if (want) {
-      var el = grid.querySelector('[data-date="' + want + '"]');
-      if (el) { el.classList.add("active"); panelFor(want); return; }
-    }
-    panel.innerHTML = ""; panel.style.display = "none";
-  }
-
-  document.getElementById("sxPrev").addEventListener("click", function () { start = addDays(start, -7); render(); });
-  document.getElementById("sxNext").addEventListener("click", function () { start = addDays(start, 7); render(); });
-  var q = (location.search.match(/[?&]date=(\d{4}-\d{2}-\d{2})/) || [])[1];
-  if (q) { start = addDays(new Date(q + "T00:00:00"), -((new Date(q + "T00:00:00").getDay() + 6) %% 7)); }
-  render(q);
-})();
-</script>""" % payload
-
-
 def render_digests_index(digests, theme):
-    rows = []
-    for d in digests:
-        rows.append("""<article class="drow cat-{cat} is-{slot}">
-  <a class="drow__date" href="/digests/{slug}.html"><span class="drow__day">{day}</span><span class="drow__part">{part}</span></a>
-  <div class="drow__body">
-    <h3 class="drow__title"><a href="/digests/{slug}.html">{title}</a></h3>
-    <p class="drow__sum">{sum}</p>
-    <div class="drow__tags">{tags}</div>
-  </div>
-  <span class="drow__count">{count}</span>
-</article>""".format(slot=("morning" if d["date"].hour < 12 else "evening"),
-                    cat=(digest_tags(d)[0][0] if digest_tags(d) else "ai"),
-                    slug=d["slug"], part=part_of_day(d["date"]).upper(), day=ru_date(d["date"]),
-                    title=html.escape(sentence_case(strip_prefix(d["title"]))), sum=html.escape(d["summary"]),
-                    tags=tags_html(d), count=news_count(len(d["items"]))))
-    content = ('<main class="wrap">' + back_link("На главную", "/") + '<section class="lead"><h1>Дайджесты</h1>'
-               '<p>Коротко о том, что произошло — утром в 9 и вечером в 19. Из самого интересного потом выходят большие статьи в блоге.</p>'
-               '</section>'
-               '<div class="dviews" id="dviews">'
-               '<div class="dviews__tabs" role="tablist">'
-               '<button type="button" class="dviews__tab is-on" data-view="list">Список</button>'
-               '<button type="button" class="dviews__tab" data-view="cal">Календарь</button>'
-               '</div>'
-               '<div class="dviews__pane" data-pane="list"><div class="dlist">%s</div></div>'
-               '<div class="dviews__pane" data-pane="cal" hidden>%s</div>'
-               '</div>'
-               '<script>(function(){var w=document.getElementById("dviews"),'
-               't=w.querySelectorAll(".dviews__tab"),p=w.querySelectorAll(".dviews__pane");'
-               'function set(v){t.forEach(function(b){b.classList.toggle("is-on",b.dataset.view===v)});'
-               'p.forEach(function(x){x.hidden=x.dataset.pane!==v});'
-               'try{localStorage.setItem("digestView",v)}catch(e){}}'
-               't.forEach(function(b){b.addEventListener("click",function(){set(b.dataset.view)})});'
-               'var saved="list";try{saved=localStorage.getItem("digestView")||"list"}catch(e){}set(saved);})();</script>'
-               '</main>') % ("".join(rows) or "<p>Пока пусто.</p>", _digest_calendar(digests))
+    # Daily roundups can reuse a lead image from one of the articles they link to.
+    article_covers = {publication_path(post): post["cover"] for post in ALL_POSTS
+                      if post["kind"] == "post" and collection_cover(post["cover"])}
+    cards = []
+    for i, digest in enumerate(digests):
+        date = digest["date"]
+        meta = f'<time datetime="{iso(date)}">{release_date(date)} · {date:%H:%M}</time>'
+        slot = "morning" if date.hour < 12 else "evening"
+        meta += f' · {"Утро" if slot == "morning" else "Вечер"} · {news_count(len(digest["items"]))}'
+        topics = "".join(f'<li>{html.escape(item["title"])}</li>' for item in digest["items"] if item["title"])
+        credit = card_credit(digest["meta"].get("cover_source", ""))
+        details = f'<details><summary>Темы выпуска</summary><ul>{topics}</ul>{credit}</details>' if topics else ""
+        url = publication_path(digest)
+        cover = digest["cover"]
+        if not cover and is_digest_of_articles(digest):
+            for item in digest["items"]:
+                reference = item["source"].rpartition("|")[2].strip()
+                cover = article_covers.get(urllib.parse.urlsplit(reference).path, "")
+                if cover:
+                    break
+        cards.append(collection_card(digest["meta"].get("card_title") or sentence_case(strip_prefix(digest["title"])),
+                                     url, digest["meta"].get("card_summary") or plain(digest["summary"], 160),
+                                     meta, cover=cover, details=details, priority=i < 2,
+                                     links=f'<a href="{html.escape(url)}">Читать выпуск ↗</a>',
+                                     attrs=f' data-slot="{slot}" data-month="{date:%Y-%m}" data-date="{date:%Y-%m-%d}"'))
+    controls = collection_filters("slot", [("", "Все выпуски"), ("morning", "Утро"), ("evening", "Вечер")],
+                                   "Время выпуска")
+    controls += month_filter(d["date"] for d in digests)
+    content = collection_layout("Дайджесты", "Выпуски", controls, "".join(cards),
+                                mode="digests", empty="За этот период выпусков нет.")
     url = SITE["url"] + "/digests/"
     desc = ("Дайджесты GEEKOVSKI: короткие выпуски новостей игр, техники, кино и AI с ссылками "
             "на первоисточники. Выпусков в архиве: %d." % len(digests))
-    return page("Дайджесты — короткие новости GEEKOVSKI", desc, content, theme,
-                canonical=url, og_alt="Дайджесты GEEKOVSKI",
-                digest_css="<style>%s</style>\n<style>%s</style>" % (DIGEST_VIEW_CSS, DIGEST_HIDE_LEAD),
+    return page("Дайджесты — короткие новости GEEKOVSKI", desc, content, theme, canonical=url,
+                head_extra=collection_assets(),
                 jsonld=ldjson(ld_org(), ld_website(),
                               {"@type": "CollectionPage", "@id": url + "#page", "url": url,
                                "name": "Дайджесты", "description": desc, "inLanguage": "ru-RU",
