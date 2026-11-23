@@ -8,6 +8,44 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html",
+   "url": "https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html",
+   "title": "OpenAI предложила тормоз для ИИ, измеряемый в perplexity",
+   "summary": "22 ноября главный научный сотрудник OpenAI Якуб Пачоцкий опубликовал эссе «Perplexity and Intelligence» — компания впервые раскрыла внутреннюю кривую обучения своих моделей и предложила индустрии договориться об общих пределах разработки, измеряемых perplexity. Порога в цифрах, органа проверки и самих обязательств в тексте нет.",
+   "date_published": "2026-11-23T08:00:00+03:00",
+   "date_modified": "2026-11-23T08:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/openai-perplexity-server-racks.jpg",
+   "_sources": [
+    {
+     "name": "OpenAI — Perplexity and Intelligence (Якуб Пачоцкий)",
+     "url": "https://openai.com/index/perplexity-and-intelligence/"
+    },
+    {
+     "name": "TechCrunch — разбор предложения",
+     "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/"
+    },
+    {
+     "name": "Dario Amodei — We Must Pace the Frontier",
+     "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+    },
+    {
+     "name": "OpenAI — CoT monitorability across the model lifecycle",
+     "url": "https://alignment.openai.com/cot-monitorability-model-lifecycle"
+    },
+    {
+     "name": "Anthropic — цена размещения акций (19 ноября)",
+     "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+    },
+    {
+     "name": "Сэм Альтман в X",
+     "url": "https://x.com/sama/status/2124551594691932405"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
    "url": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
    "title": "«Тайный город»: Москву поделили три Великих Дома",
