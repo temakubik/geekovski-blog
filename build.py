@@ -824,7 +824,7 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         nav=nav(theme, canonical), content=content.replace("<main", '<main id="main-content" tabindex="-1"', 1)
         if editorial else content, year=datetime.now().year, vk=SITE["vk"],
         skip_link='<a class="skip-link" href="#main-content">К содержанию</a>' if editorial else "",
-        brand_mark=('<img class="brand__mark" src="/assets/img/geekovski-icon-dark-tile.svg" '
+        brand_mark=('<img class="brand__mark" src="/assets/img/geekovski-icon.svg" '
                     'alt="" width="32" height="32">') if editorial else "",
         sidebar_toggle=(
             '    <button class="sidebar-toggle" type="button" aria-controls="site-nav" aria-expanded="true" '

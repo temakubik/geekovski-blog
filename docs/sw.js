@@ -7,7 +7,7 @@
 // именем оставалась у читателя прежней (кот в очках вместо кота на полке).
 // Номер версии — единственный способ выкинуть старые файлы у тех, кто уже
 // установил приложение; при замене любой картинки или шрифта поднимать.
-const VERSION = "geekovski-v13";
+const VERSION = "geekovski-v14";
 const STATIC_CACHE = `${VERSION}-static`;
 const PAGE_CACHE = `${VERSION}-pages`;
 
@@ -18,7 +18,7 @@ self.addEventListener("install", (event) => {
     caches.open(STATIC_CACHE).then((cache) =>
       cache.addAll([
         OFFLINE_URL,
-        "/assets/theme.css?v=d76394790f22",
+        "/assets/theme.css?v=24832b021c37",
         "/assets/brand.css",
         "/assets/fonts.css",
         "/assets/img/app-icon-512.png",
