@@ -8,6 +8,60 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-23-2100-xbox-platnyj-multiplayer-helix.html",
+   "url": "https://geekovski.ru/2026-11-23-2100-xbox-platnyj-multiplayer-helix.html",
+   "title": "Xbox чуть не отменила платный мультиплеер",
+   "summary": "По данным Windows Central, изначальный план Xbox Helix был радикальнее, чем казалось — полноценный игровой ПК со Steam и без подписки для сетевой игры. После смены руководства и подорожания комплектующих Microsoft вернулась к модели обычной консоли, а вместе с ней — к платежу, который компания собирает с игроков с 2002 года.",
+   "date_published": "2026-11-23T21:00:00+03:00",
+   "date_modified": "2026-11-23T21:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/xbox-helix-multiplayer.jpg",
+   "_sources": [
+    {
+     "name": "Windows Central — изначальный план Helix",
+     "url": "https://www.windowscentral.com/gaming/xbox/xbox-previously-planned-to-remove-the-paywall-for-xbox-live-multiplayer-will-xbox-helix-still-be-able-to"
+    },
+    {
+     "name": "GamesRadar — пересказ отчёта",
+     "url": "https://www.gamesradar.com/hardware/xbox-project-helix-was-reportedly-planned-to-run-steam-games-and-have-free-online-multiplayer-but-microsoft-scrapped-its-initial-pc-like-design"
+    },
+    {
+     "name": "Particle — Helix как консоль, а не ПК",
+     "url": "https://particle.news/story/microsoft-recasts-project-helix-as-a-console-as-earlier-pcstyle-plan-appears-curtailed"
+    },
+    {
+     "name": "Microsoft — пресс-релиз о запуске Xbox Live",
+     "url": "https://news.microsoft.com/source/2002/08/13/xbox-live-to-launch-on-one-year-anniversary-of-console-launch"
+    },
+    {
+     "name": "IGN — история Xbox Live",
+     "url": "https://ign.com/articles/2010/01/09/xbox-live-through-the-years"
+    },
+    {
+     "name": "PlayStation.Blog — FAQ PlayStation 4",
+     "url": "https://blog.playstation.com/archive/2013/10/30/playstation-4-the-ultimate-faq"
+    },
+    {
+     "name": "IGN — запуск Nintendo Switch Online",
+     "url": "https://ign.com/articles/2018/09/19/nintendo-switch-online-is-live-now"
+    },
+    {
+     "name": "Xbox — Game Pass",
+     "url": "https://www.xbox.com/en-US/xbox-game-pass"
+    },
+    {
+     "name": "Microsoft — Аша Шарма во главе Microsoft Gaming",
+     "url": "https://blogs.microsoft.com/blog/2026/02/20/asha-sharma-named-evp-and-ceo-microsoft-gaming"
+    },
+    {
+     "name": "CNBC — смена руководства Xbox",
+     "url": "https://www.cnbc.com/2026/05/05/microsoft-xbox-ceo-asha-sharma-executive-overhaul.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-23-1800-nvidia-huang-vozvrat.html",
    "url": "https://geekovski.ru/2026-11-23-1800-nvidia-huang-vozvrat.html",
    "title": "Nvidia вернула Хуанга в CEO через 11 дней",
