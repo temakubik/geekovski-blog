@@ -2074,6 +2074,15 @@ DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и 
 """
 
 
+# Старые адреса дайджестов, которые Google успел обнаружить в корне сайта.
+LEGACY_DIGEST_SLUGS = {
+    "2026-11-02-utro",
+    "2026-11-03-vecher",
+    "2026-11-05-otchet",
+    "2026-11-05-vecher",
+}
+
+
 def redirect_page(path, label):
     url = SITE["url"] + path
     return (
@@ -2187,6 +2196,9 @@ def build(theme, out_dir, content_dir=None):
         nxt = digests[i - 1] if i > 0 else None      # новее
         prv = digests[i + 1] if i + 1 < len(digests) else None
         (dgdir / ("%s.html" % d["slug"])).write_text(render_digest(d, theme, nxt, prv), encoding="utf-8")
+        if d["slug"] in LEGACY_DIGEST_SLUGS:
+            (out / f'{d["slug"]}.html').write_text(
+                redirect_page(publication_path(d), d["title"]), encoding="utf-8")
     tdir = out / "titles"
     tdir.mkdir(exist_ok=True)
     for slug in TITLES:
