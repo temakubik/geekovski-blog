@@ -14,23 +14,27 @@
 - [Xbox](https://geekovski.ru/xbox/): 14 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 18 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 19 материалов
-- [PC-игры](https://geekovski.ru/pc/): 33 материала
+- [PC-игры](https://geekovski.ru/pc/): 35 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
-- [Гаджеты](https://geekovski.ru/gadgets/): 37 материалов
+- [Гаджеты](https://geekovski.ru/gadgets/): 38 материалов
 - [Кино](https://geekovski.ru/kino/): 24 материала
 - [Сериалы](https://geekovski.ru/serialy/): 12 материалов
-- [AI](https://geekovski.ru/ai/): 38 материалов
+- [AI](https://geekovski.ru/ai/): 39 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
 
 ## Авторы
 
-- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 75 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 92 материала; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 77 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 94 материала; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 36 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [BioWare закрылась после 31 года: Mass Effect отменена](https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html): 20 ноября стал последним рабочим днём BioWare — студия из Эдмонтона, сделавшая Baldur's Gate, Knights of the Old Republic и Mass Effect, закрылась через месяц после объявления EA. Следующая Mass Effect отменена, по компании сократили около 400 человек, а права на обе главные франшизы остались у издателя. (23.11.2026)
+- [Прокатные удостоверения для игр: что обсуждает правительство](https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html): 23 ноября «Коммерсантъ» со ссылкой на источники сообщил, что правительство видит целесообразным ввести для видеоигр прокатные удостоверения — как у фильмов, — а создателей и распространителей игр записать в реестр ОРИ с хранением данных в России и подключением к СОРМ. Индустрия против: игра — сервис, который меняется каждый день, и удостоверение версии её не описывает. (23.11.2026)
+- [Kodak SlideTag: брелок с экраном и Find My за $35](https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html): 22 ноября Reto под лицензией Kodak выпустила SlideTag — брелок размером с 35-мм слайд, с цветным e-ink экраном и вдобавок трекером для Find My и Google Find Hub. $34,99, продажи идут «слепыми коробками» с восемью дизайнами и одним секретным, а обозреватели уже называют это лучшим продуктом Reto. (23.11.2026)
+- [OpenAI предложила тормоз для ИИ, измеряемый в perplexity](https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html): 22 ноября главный научный сотрудник OpenAI Якуб Пачоцкий опубликовал эссе «Perplexity and Intelligence» — компания впервые раскрыла внутреннюю кривую обучения своих моделей и предложила индустрии договориться об общих пределах разработки, измеряемых perplexity. Порога в цифрах, органа проверки и самих обязательств в тексте нет. (23.11.2026)
 - [«Тайный город»: Москву поделили три Великих Дома](https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html): 23 ноября ТНТ и Кинопоиск одновременно выпускают «Тайный город» — восьмисерийную экранизацию цикла Вадима Панова о Москве, где рядом с людьми живут три Великих Дома магов. Больше миллиона пользователей Кинопоиска уже добавили сериал в «Буду смотреть», а у прошлой версии этой истории десять лет назад было 5,4 из 10. (22.11.2026)
 - [Почему ломается экран iPhone Duo: разбор шарнира](https://geekovski.ru/2026-11-22-1500-iphone-duo-sharnir-polomki.html): 22 ноября в сети появилось видео, на котором видно сам момент поломки внутреннего экрана складного iPhone Duo — проблемную деталь шарнира уже прозвали Pixel Pincher 9000. Apple признала проблему ещё в октябре и меняет аппараты через AppleCare, но ни причину, ни число затронутых устройств не называет до сих пор. (22.11.2026)
 - [Фанаты GTA 6 обвалили рейтинг ремейка Zelda](https://geekovski.ru/2026-11-22-1200-metacritic-vojna-gta6-zelda.html): За сутки пользовательская оценка ремейка Ocarina of Time на Metacritic упала с 9,6 — исторического максимума агрегатора — до 8,5. Часть фанатов GTA VI решила, что ремейк Zelda обваливают их игру, и ответила нулями; у самих GTA VI при 99 баллах от критиков пользовательская оценка 5,6. (22.11.2026)
@@ -237,6 +241,7 @@
 
 ## Дайджесты
 
+- [Стайнфелд вернулась в «Мстителей», Гуаданьино отказался от «Американского психопата», Activision запатентовала болтливых NPC](https://geekovski.ru/digests/2026-11-23-utro.html): Marvel официально подтвердила Хейли Стайнфелд в «Судном дне», Лука Гуаданьино признал, что ремейк «Американского психопата» не состоится, Activision получила патент на NPC, обучающихся на голосовом чате игроков, в коде iOS 27.1 нашли отключённую колонку виджетов для iPhone Duo, а Red Hook показала арену из DLC The Butcher's Asylum.
 - [Что вышло 22 ноября: 4 статьи](https://geekovski.ru/digests/2026-11-22-otchet.html): День премий, рейтингов и железа: хоррор-Оскар у Hellraiser, Tesla с FSD v15 без проверяемой базы, рейтинговая война вокруг ремейка Zelda и разбор поломок шарнира iPhone Duo.
 - [Вечер 22 ноября: Switch 2 подешевела на $50, «Голодные игры» взяли $120 млн, OpenAI переписала правила промптов](https://geekovski.ru/digests/2026-11-22-vecher.html): Nintendo срезала $50 с бандла Switch 2 на время чёрной пятницы, приквел «Голодных игр» открылся в США стомиллионным уик-эндом, Гурман назвал пять устройств Apple на февраль–март, OpenAI велела переписать системные промпты под GPT-6.2, а Steam Link научился подставлять комнату внутрь игр на Quest.
 - [Утро 22 ноября: OpenRouter выгнал трёх провайдеров за утечки промптов, в GTA VI нашли вид от первого лица, Nicalis вырезала AI-музыку из Isaac](https://geekovski.ru/digests/2026-11-22-utro.html): Dragos поймала утечки промптов у трёх хостингов ИИ, и OpenRouter отключил их от платформы, игроки нашли глитч, включающий вид от первого лица в GTA VI, Nicalis патчем убрала нераскрытую AI-музыку из Repentance+, в eShop началась распродажа на 1200+ игр, а Doogee показала смартфон с экраном 16:10.
@@ -296,10 +301,12 @@
 
 - [Задача трёх тел](https://geekovski.ru/titles/3-body-problem.html): 2024
 - [«Задача трёх тел», сезон 2](https://geekovski.ru/titles/3-body-problem-2.html): 2027
+- [«Александр I»](https://geekovski.ru/titles/aleksandr-i.html): 2026
 - [Angry Birds 3 в кино](https://geekovski.ru/titles/angry-birds-3-v-kino.html): 2026
 - [Arkheron](https://geekovski.ru/titles/arkheron.html): 2026
 - [Atomfall](https://geekovski.ru/titles/atomfall.html): 2025
 - [«Мстители: Судный день»](https://geekovski.ru/titles/avengers-doomsday.html): 2026
+- [«Баста. Начало игры»](https://geekovski.ru/titles/basta-nachalo-igry.html): 2026
 - [Big Walk](https://geekovski.ru/titles/big-walk.html): 2026
 - [Black Doves, сезон 2](https://geekovski.ru/titles/black-doves-sezon-2.html): 2026
 - [«Новые похождения Клиффа Бута»](https://geekovski.ru/titles/cliff-booth.html): 2026
@@ -309,6 +316,7 @@
 - [Danganronpa 2×2](https://geekovski.ru/titles/danganronpa-2x2.html): 2027
 - [Death Stranding 2: On the Beach](https://geekovski.ru/titles/death-stranding-2.html): 2025
 - [DOOM: The Dark Ages](https://geekovski.ru/titles/doom-the-dark-ages.html): 2025
+- [Dragon Age](https://geekovski.ru/titles/dragon-age.html): 2009
 - [«Дюна: часть третья»](https://geekovski.ru/titles/dune-part-three.html): 2026
 - [John Wick: анимационный приквел](https://geekovski.ru/titles/dzhon-uik-animaciya.html)
 - [Эбенезер (Ebenezer)](https://geekovski.ru/titles/ebenezer.html): 2026
@@ -318,8 +326,9 @@
 - [Gods Don't Give Gifts](https://geekovski.ru/titles/gods-dont-give-gifts.html): 2026
 - [Godzilla: Destroy All Monsters Melee Remastered](https://geekovski.ru/titles/godzilla-destroy-all-monsters-melee-remastered.html): 2026
 - [Godzilla Minus Zero](https://geekovski.ru/titles/godzilla-minus-zero.html): 2026
+- [«Гордость и предубеждение»](https://geekovski.ru/titles/gordost-i-predubezhdenie.html): 2026
 - [Grand Theft Auto VI](https://geekovski.ru/titles/grand-theft-auto-vi.html): 2026
-- [Grand Theft Auto VI](https://geekovski.ru/titles/gta-6.html): 2026
+- [GRIME II](https://geekovski.ru/titles/grime-2.html): 2026
 - [Hela: of Mice & Magic](https://geekovski.ru/titles/hela-of-mice-magic.html): 2026
 - ["Clive Barker's Hellraiser: Revival"](https://geekovski.ru/titles/hellraiser-revival.html): 2026
 - [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
@@ -327,6 +336,7 @@
 - [Властелин колец: Кольца власти, сезон 3](https://geekovski.ru/titles/kolca-vlasti-3-sezon.html): 2026
 - [League of Legends](https://geekovski.ru/titles/league-of-legends.html): 2009
 - [Marvel's Blade](https://geekovski.ru/titles/marvels-blade.html): 2027
+- [Mass Effect](https://geekovski.ru/titles/mass-effect.html): 2007
 - [MECCHA CHAMELEON](https://geekovski.ru/titles/meccha-chameleon.html): 2026
 - [Metaphor: ReFantazio](https://geekovski.ru/titles/metaphor-refantazio.html): 2024
 - [MindsEye](https://geekovski.ru/titles/mindseye.html): 2025
@@ -337,7 +347,9 @@
 - [Останься](https://geekovski.ru/titles/ostansya.html): 2027
 - [Path of Exile 2](https://geekovski.ru/titles/path-of-exile-2.html): 2026
 - [Phantom Blade Zero](https://geekovski.ru/titles/phantom-blade-zero.html): 2026
+- [Professor Layton and the New World of Steam](https://geekovski.ru/titles/professor-layton-new-world-of-steam.html): 2026
 - [Rainbow Six Siege](https://geekovski.ru/titles/rainbow-six-siege.html): 2015
+- [Rayman Legends Retold](https://geekovski.ru/titles/rayman-legends-retold.html): 2026
 - [Resident Evil Requiem](https://geekovski.ru/titles/resident-evil-requiem.html): 2026
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
@@ -346,6 +358,7 @@
 - [The Altruists](https://geekovski.ru/titles/the-altruists.html): 2026
 - [«Три богатыря и гуси-лебеди»](https://geekovski.ru/titles/tri-bogatyrya-gusi-lebedi.html): 2026
 - [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
+- [«Ведьмин лес»](https://geekovski.ru/titles/vedmin-les.html): 2026
 - [«Вершина»](https://geekovski.ru/titles/vershina-film.html): 2026
 - [Virgin River](https://geekovski.ru/titles/virgin-river.html): 2019
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026

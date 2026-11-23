@@ -8,6 +8,186 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html",
+   "url": "https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html",
+   "title": "BioWare закрылась после 31 года: Mass Effect отменена",
+   "summary": "20 ноября стал последним рабочим днём BioWare — студия из Эдмонтона, сделавшая Baldur's Gate, Knights of the Old Republic и Mass Effect, закрылась через месяц после объявления EA. Следующая Mass Effect отменена, по компании сократили около 400 человек, а права на обе главные франшизы остались у издателя.",
+   "date_published": "2026-11-23T15:00:00+03:00",
+   "date_modified": "2026-11-23T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/bioware-edmonton-epcor-cover.jpg",
+   "_sources": [
+    {
+     "name": "BioWare — BioWare Update",
+     "url": "https://blog.bioware.com/2026/10/21/bioware-update/"
+    },
+    {
+     "name": "Девон Гарднер — пост о последнем дне",
+     "url": "https://x.com/devonkgardner/status/2123902125063483554"
+    },
+    {
+     "name": "The Verge — EA is shutting down BioWare",
+     "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware"
+    },
+    {
+     "name": "Game Developer — EA shut down BioWare in favor of a Star Wars title",
+     "url": "https://www.gamedeveloper.com/business/report-ea-shut-down-bioware-in-favor-of-star-wars-battlefront-sequel-after-previously-decrying-licensed-games"
+    },
+    {
+     "name": "VGC — Mass Effect TV series still in production",
+     "url": "https://www.videogameschronicle.com/news/mass-effect-tv-series-still-in-production-despite-bioware-closure-as-game-director-writes-at-least-i-can-play-gta-6/"
+    },
+    {
+     "name": "IGN — Mass Effect TV show still in development",
+     "url": "https://www.ign.com/articles/mass-effect-tv-series-prime-video-bioware-closure"
+    },
+    {
+     "name": "GameSpot — Mass Effect TV show still going ahead",
+     "url": "https://www.gamespot.com/articles/mass-effect-tv-show-still-going-ahead-after-ea-cancels-mass-effect-5-and-closes-bioware-report-says/"
+    },
+    {
+     "name": "VGTimes — BioWare has closed after 31 years",
+     "url": "https://vgtimes.com/gaming-news/175328-bioware-has-closed-after-31-years-with-november-20-as-its-final-working-day.html"
+    },
+    {
+     "name": "DTF — BioWare окончательно закрылась",
+     "url": "https://dtf.ru/gameindustry/5426750-zakrytie-bioware-i-sudba-mass-effect"
+    },
+    {
+     "name": "Save Mass Effect — хронология кампании",
+     "url": "https://www.savemasseffect.com/timeline.html"
+    },
+    {
+     "name": "Wikipedia — BioWare",
+     "url": "https://en.wikipedia.org/wiki/BioWare"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html",
+   "url": "https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html",
+   "title": "Прокатные удостоверения для игр: что обсуждает правительство",
+   "summary": "23 ноября «Коммерсантъ» со ссылкой на источники сообщил, что правительство видит целесообразным ввести для видеоигр прокатные удостоверения — как у фильмов, — а создателей и распространителей игр записать в реестр ОРИ с хранением данных в России и подключением к СОРМ. Индустрия против: игра — сервис, который меняется каждый день, и удостоверение версии её не описывает.",
+   "date_published": "2026-11-23T12:00:00+03:00",
+   "date_modified": "2026-11-23T12:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/prokat-igr-duma.jpg",
+   "_sources": [
+    {
+     "name": "Коммерсантъ — что обсуждают в правительстве, 23.11.2026",
+     "url": "https://www.kommersant.ru/doc/9127181"
+    },
+    {
+     "name": "Коммерсантъ — первое чтение до конца года, 29.10.2026",
+     "url": "https://www.kommersant.ru/doc/9064083"
+    },
+    {
+     "name": "Meduza — пересказ публикации «Ъ»",
+     "url": "https://meduza.io/news/2026/11/23/v-rossii-vnov-predlozhili-vvesti-prokatnye-udostovereniya-dlya-videoigr"
+    },
+    {
+     "name": "3DNews — ОРИ, СОРМ и реакция рынка",
+     "url": "https://3dnews.ru/1151663"
+    },
+    {
+     "name": "КонсультантПлюс — ст. 5.1 закона о господдержке кинематографии",
+     "url": "https://www.consultant.ru/document/cons_doc_LAW_11454/125c3833a032b683212225dbc7b49e5d15c7b3a4/"
+    },
+    {
+     "name": "ГАРАНТ — приказ Минкультуры № 942 о порядке выдачи прокатных удостоверений",
+     "url": "https://base.garant.ru/409086106/"
+    },
+    {
+     "name": "Интерфакс — реестр ОРИ, сроки хранения и состав",
+     "url": "https://www.interfax.ru/russia/1125441"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html",
+   "url": "https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html",
+   "title": "Kodak SlideTag: брелок с экраном и Find My за $35",
+   "summary": "22 ноября Reto под лицензией Kodak выпустила SlideTag — брелок размером с 35-мм слайд, с цветным e-ink экраном и вдобавок трекером для Find My и Google Find Hub. $34,99, продажи идут «слепыми коробками» с восемью дизайнами и одним секретным, а обозреватели уже называют это лучшим продуктом Reto.",
+   "date_published": "2026-11-23T10:00:00+03:00",
+   "date_modified": "2026-11-23T10:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/slidetag-cover.jpg",
+   "_sources": [
+    {
+     "name": "PetaPixel — анонс SlideTag",
+     "url": "https://petapixel.com/2026/11/22/kodak-slidetag-is-a-35-blind-box-e-ink-photo-display-and-airtag-alternative/"
+    },
+    {
+     "name": "PetaPixel — обзор SlideTag, выбор редакции",
+     "url": "https://petapixel.com/2026/11/22/kodak-slidetag-review-this-e-ink-equipped-airtag-keychain-rocks/"
+    },
+    {
+     "name": "Digital Trends — характеристики и отсутствие UWB",
+     "url": "https://www.digitaltrends.com/phones/kodaks-slidetag-puts-your-photos-on-a-keychain-and-it-can-help-you-find-your-stuff-too/"
+    },
+    {
+     "name": "Digital Camera World — цены и дизайны",
+     "url": "https://www.digitalcameraworld.com/tech/digital-photo-frames/kodachrome-makes-unexpected-comeback-as-kodak-slidetag-a-cute-keychain-digital-photo-frame-with-built-in-tracker"
+    },
+    {
+     "name": "Магазин Kodak (Reto) — спецификации и условия слепых коробок",
+     "url": "https://www.kodak.retopro.co/products/kodak-slidetag-br-keychain-photo-display-and-tracker-blind-box"
+    },
+    {
+     "name": "TechRepublic — AirTag 2 и Pixel Tag по $29",
+     "url": "https://www.techrepublic.com/article/news-google-pixel-tag-vs-airtag-2/"
+    },
+    {
+     "name": "9to5Google — Pixel Tag в продаже",
+     "url": "https://9to5google.com/2026/11/10/google-pixel-tag-launches/"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html",
+   "url": "https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html",
+   "title": "OpenAI предложила тормоз для ИИ, измеряемый в perplexity",
+   "summary": "22 ноября главный научный сотрудник OpenAI Якуб Пачоцкий опубликовал эссе «Perplexity and Intelligence» — компания впервые раскрыла внутреннюю кривую обучения своих моделей и предложила индустрии договориться об общих пределах разработки, измеряемых perplexity. Порога в цифрах, органа проверки и самих обязательств в тексте нет.",
+   "date_published": "2026-11-23T08:00:00+03:00",
+   "date_modified": "2026-11-23T08:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/openai-perplexity-server-racks.jpg",
+   "_sources": [
+    {
+     "name": "OpenAI — Perplexity and Intelligence (Якуб Пачоцкий)",
+     "url": "https://openai.com/index/perplexity-and-intelligence/"
+    },
+    {
+     "name": "TechCrunch — разбор предложения",
+     "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/"
+    },
+    {
+     "name": "Dario Amodei — We Must Pace the Frontier",
+     "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+    },
+    {
+     "name": "OpenAI — CoT monitorability across the model lifecycle",
+     "url": "https://alignment.openai.com/cot-monitorability-model-lifecycle"
+    },
+    {
+     "name": "Anthropic — цена размещения акций (19 ноября)",
+     "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+    },
+    {
+     "name": "Сэм Альтман в X",
+     "url": "https://x.com/sama/status/2124551594691932405"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
    "url": "https://geekovski.ru/2026-11-22-2100-tajnyj-gorod-serial.html",
    "title": "«Тайный город»: Москву поделили три Великих Дома",

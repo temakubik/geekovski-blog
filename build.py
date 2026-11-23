@@ -17,8 +17,11 @@ import re
 import shutil
 import struct
 import urllib.parse
-from datetime import datetime, timedelta
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+from dzen_feed import adapt_html as dzen_html
 
 ROOT = Path(__file__).resolve().parent
 SITE = {
@@ -616,6 +619,7 @@ ROBOTS_NOINDEX = "noindex,follow"
 #   Google Search Console → «HTML-тег» → GOOGLE_VERIFICATION
 YANDEX_VERIFICATION = "acc866b9b963f469"
 GOOGLE_VERIFICATION = ""
+ZEN_VERIFICATION = "fcazccy74hGDyQJiYWhzVO7N3Kee8a2dhQQxuO7BiCeonKzNJ8udV93xNXeCPUpJ"
 
 ORG_ID = SITE["url"] + "/#organization"
 WEBSITE_ID = SITE["url"] + "/#website"
@@ -800,6 +804,8 @@ def verify_meta():
         tags.append('<meta name="yandex-verification" content="%s">' % YANDEX_VERIFICATION)
     if GOOGLE_VERIFICATION:
         tags.append('<meta name="google-site-verification" content="%s">' % GOOGLE_VERIFICATION)
+    if ZEN_VERIFICATION:
+        tags.append('<meta name="zen-verification" content="%s" />' % ZEN_VERIFICATION)
     return "\n".join(tags)
 
 
@@ -1679,6 +1685,61 @@ def vk_feed(posts):
                with_content=VK_FEED_FULL_TEXT)
 
 
+DZEN_WINDOW_DAYS = 3
+DZEN_FEED_LIMIT = 500
+
+
+def dzen_selection(posts, now=None):
+    """Only published articles from the last 72 hours; no archive backfill."""
+    now = now or datetime.now(timezone(timedelta(hours=3))).replace(tzinfo=None)
+    floor = now - timedelta(days=DZEN_WINDOW_DAYS)
+    return sorted((p for p in posts if p["kind"] == "post" and not p["draft"]
+                   and floor <= p["date"] <= now
+                   and p["meta"].get("dzen", "true").lower() not in ("false", "no", "0", "нет")),
+                  key=lambda p: p["date"], reverse=True)[:DZEN_FEED_LIMIT]
+
+
+def dzen_image_allowed(url):
+    path = local_image(url)
+    if not path or path.suffix.lower() not in (".jpg", ".jpeg", ".png", ".gif"):
+        return False
+    size = image_size(path)
+    if size is None and path.suffix.lower() == ".gif":
+        try:
+            data = path.read_bytes()[:10]
+            if len(data) == 10 and data[:6] in (b"GIF87a", b"GIF89a"):
+                size = struct.unpack("<HH", data[6:10])
+        except OSError:
+            pass
+    return size is not None and size[0] >= 700
+
+
+def dzen_feed(posts, now=None):
+    """Dzen: automatic articles, noindex copies, stable canonical GUIDs."""
+    selected = dzen_selection(posts, now)
+    for prefix, uri in (("atom", "http://www.w3.org/2005/Atom"),
+                        ("content", "http://purl.org/rss/1.0/modules/content/"),
+                        ("dc", "http://purl.org/dc/elements/1.1/"),
+                        ("media", "http://search.yahoo.com/mrss/")):
+        ET.register_namespace(prefix, uri)
+    root = ET.fromstring(rss(selected, self_name="dzen.xml", limit=DZEN_FEED_LIMIT,
+                             with_content=True))
+    for item in root.findall("./channel/item"):
+        for category in item.findall("category"):
+            item.remove(category)
+        # No native-draft: the user explicitly chose immediate publication.
+        for directive in ("format-article", "noindex"):
+            ET.SubElement(item, "category").text = directive
+        for media in list(item):
+            if media.tag in ("enclosure", "{http://search.yahoo.com/mrss/}content"):
+                if not dzen_image_allowed(media.get("url", "")):
+                    item.remove(media)
+        content = item.find("{http://purl.org/rss/1.0/modules/content/}encoded")
+        if content is not None:
+            content.text = dzen_html(content.text or "", SITE["url"], dzen_image_allowed)
+    return '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding="unicode")
+
+
 def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None, archive_keys=()):
     """Sitemap с lastmod у каждой записи и картинками материалов.
 
@@ -1738,10 +1799,9 @@ def robots_txt():
     bots = ["YandexBot", "Googlebot", "Bingbot", "GPTBot", "OAI-SearchBot", "ChatGPT-User",
             "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Amazonbot", "Applebot",
             "Applebot-Extended"]
-    lines = ["# GEEKOVSKI — robots.txt", "User-agent: *", "Allow: /",
-             "Disallow: /style-guide.html", ""]
+    lines = ["# GEEKOVSKI — robots.txt", "User-agent: *", "Allow: /", ""]
     lines += ["User-agent: %s" % b for b in bots]
-    lines += ["Allow: /", "Disallow: /style-guide.html", "", "Sitemap: %s/sitemap.xml" % SITE["url"],
+    lines += ["Allow: /", "", "Sitemap: %s/sitemap.xml" % SITE["url"],
               "Host: %s" % SITE["url"].split("//")[1], ""]
     return "\n".join(lines)
 
@@ -2014,6 +2074,19 @@ DIGEST_VIEW_CSS = """/* Дайджесты: вида два — список и 
 """
 
 
+def redirect_page(path, label):
+    url = SITE["url"] + path
+    return (
+        '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">'
+        f'<title>{html.escape(label)} — GEEKOVSKI</title>'
+        '<meta name="robots" content="noindex,follow">'
+        f'<link rel="canonical" href="{html.escape(url, quote=True)}">'
+        f'<meta http-equiv="refresh" content="0; url={html.escape(path, quote=True)}">'
+        f'</head><body><p>Страница переехала: <a href="{html.escape(path, quote=True)}">'
+        f'{html.escape(label)}</a></p></body></html>'
+    )
+
+
 def build(theme, out_dir, content_dir=None):
     global THEME_STYLESHEET
     content = Path(content_dir) if content_dir else ROOT / "content"
@@ -2101,6 +2174,7 @@ def build(theme, out_dir, content_dir=None):
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(render_cat(c, name, [p for p in posts if p["category"] == c], theme), encoding="utf-8")
     (out / "rss.xml").write_text(rss(posts), encoding="utf-8")
+    (out / "dzen.xml").write_text(dzen_feed(posts), encoding="utf-8")
     # BOM перед декларацией: GitHub Pages отдаёт фид как application/xml без
     # charset, и парсеры (в первую очередь импортёр ВКонтакте) сваливаются в
     # windows-1251 — русские заголовки приезжают «РѕС‚Р±РёР»Р°СЃСЊ». BOM
@@ -2119,6 +2193,9 @@ def build(theme, out_dir, content_dir=None):
         htmlp = title_page(slug, theme)
         if htmlp:
             (tdir / ("%s.html" % slug)).write_text(htmlp, encoding="utf-8")
+    for old_slug, slug in TITLE_REDIRECTS.items():
+        (tdir / f"{old_slug}.html").write_text(
+            redirect_page(f"/titles/{slug}.html", TITLES[slug]["title"]), encoding="utf-8")
     if AUTHORS:
         adir = out / "avtory"
         adir.mkdir(exist_ok=True)
@@ -2133,14 +2210,7 @@ def build(theme, out_dir, content_dir=None):
     # его slug мог попасть в закладки и в поиск — отдаём редирект на общий раздел
     for c in calendars:
         (out / ("%s.html" % c["slug"])).write_text(
-            '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">'
-            '<title>Календарь анонсов — GEEKOVSKI</title>'
-            '<meta name="robots" content="noindex,follow">'
-            '<link rel="canonical" href="%s/calendar/">'
-            '<meta http-equiv="refresh" content="0; url=/calendar/">'
-            '</head><body><p>Календарь переехал: <a href="/calendar/">geekovski.ru/calendar/</a></p>'
-            '<script>location.replace("/calendar/")</script></body></html>' % SITE["url"],
-            encoding="utf-8")
+            redirect_page("/calendar/", "Календарь анонсов"), encoding="utf-8")
     cdir = out / "calendar"
     cdir.mkdir(exist_ok=True)
     (cdir / "index.html").write_text(render_calendar_page(cal_entries, theme), encoding="utf-8")
@@ -2483,6 +2553,7 @@ def title_slug(text):
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:60] or "title"
 
 
+TITLE_REDIRECTS = {"gta-6": "grand-theft-auto-vi"}
 TITLES = {}
 ALL_POSTS = []   # все материалы и дайджесты: нужны для обратной перелинковки
 CAL_ENTRIES = []   # заполняется в build(): записи календаря для страниц тайтлов
@@ -2629,13 +2700,15 @@ def calendar_entries(calendars):
                 day = datetime.strptime(it.get("date", ""), "%Y-%m-%d").date()
             except ValueError:
                 continue
+            slug = it.get("slug") or title_slug(it["title"])
+            slug = TITLE_REDIRECTS.get(slug, slug)
             out.append({
                 "day": day, "category": it["category"], "title": it["title"],
                 "cover": it.get("cover", ""),
-                "slug": it.get("slug") or title_slug(it["title"]),
+                "slug": slug,
                 "platforms": it.get("platforms", ""), "kind_note": it.get("kind_note", ""),
                 "summary": it["summary"], "source": it["source"],
-                "href": "/titles/%s.html" % (it.get("slug") or title_slug(it["title"])),
+                "href": "/titles/%s.html" % slug,
             })
     out.sort(key=lambda e: (e["day"], e["title"]))
     return out

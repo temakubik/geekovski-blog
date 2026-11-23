@@ -1,7 +1,6 @@
 # GEEKOVSKI — robots.txt
 User-agent: *
 Allow: /
-Disallow: /style-guide.html
 
 User-agent: YandexBot
 User-agent: Googlebot
@@ -16,7 +15,6 @@ User-agent: Amazonbot
 User-agent: Applebot
 User-agent: Applebot-Extended
 Allow: /
-Disallow: /style-guide.html
 
 Sitemap: https://geekovski.ru/sitemap.xml
 Host: geekovski.ru
