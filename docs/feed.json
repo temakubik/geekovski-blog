@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html",
+   "url": "https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html",
+   "title": "Kodak SlideTag: брелок с экраном и Find My за $35",
+   "summary": "22 ноября Reto под лицензией Kodak выпустила SlideTag — брелок размером с 35-мм слайд, с цветным e-ink экраном и вдобавок трекером для Find My и Google Find Hub. $34,99, продажи идут «слепыми коробками» с восемью дизайнами и одним секретным, а обозреватели уже называют это лучшим продуктом Reto.",
+   "date_published": "2026-11-23T10:00:00+03:00",
+   "date_modified": "2026-11-23T10:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/slidetag-cover.jpg",
+   "_sources": [
+    {
+     "name": "PetaPixel — анонс SlideTag",
+     "url": "https://petapixel.com/2026/11/22/kodak-slidetag-is-a-35-blind-box-e-ink-photo-display-and-airtag-alternative/"
+    },
+    {
+     "name": "PetaPixel — обзор SlideTag, выбор редакции",
+     "url": "https://petapixel.com/2026/11/22/kodak-slidetag-review-this-e-ink-equipped-airtag-keychain-rocks/"
+    },
+    {
+     "name": "Digital Trends — характеристики и отсутствие UWB",
+     "url": "https://www.digitaltrends.com/phones/kodaks-slidetag-puts-your-photos-on-a-keychain-and-it-can-help-you-find-your-stuff-too/"
+    },
+    {
+     "name": "Digital Camera World — цены и дизайны",
+     "url": "https://www.digitalcameraworld.com/tech/digital-photo-frames/kodachrome-makes-unexpected-comeback-as-kodak-slidetag-a-cute-keychain-digital-photo-frame-with-built-in-tracker"
+    },
+    {
+     "name": "Магазин Kodak (Reto) — спецификации и условия слепых коробок",
+     "url": "https://www.kodak.retopro.co/products/kodak-slidetag-br-keychain-photo-display-and-tracker-blind-box"
+    },
+    {
+     "name": "TechRepublic — AirTag 2 и Pixel Tag по $29",
+     "url": "https://www.techrepublic.com/article/news-google-pixel-tag-vs-airtag-2/"
+    },
+    {
+     "name": "9to5Google — Pixel Tag в продаже",
+     "url": "https://9to5google.com/2026/11/10/google-pixel-tag-launches/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html",
    "url": "https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html",
    "title": "OpenAI предложила тормоз для ИИ, измеряемый в perplexity",
