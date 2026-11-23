@@ -447,7 +447,7 @@ try {{
 {skip_link}
 <header class="top">
   <div class="wrap top__in">
-    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg?v=black-tile" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg?v=black-tile" alt="" width="418" height="80"></a>
+    <a class="brand" href="/" aria-label="GEEKOVSKI — блог">{brand_mark}<img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80"></a>
     <nav class="nav" id="site-nav" aria-label="Основное меню">{nav}</nav>
     <div class="top__actions">
       {side_links}<button class="theme-toggle" type="button" title="Сменить тему" aria-label="Сменить тему">◐</button>
@@ -824,6 +824,8 @@ def page(title, desc, content, theme, og_image=None, canonical=None, jsonld="",
         nav=nav(theme, canonical), content=content.replace("<main", '<main id="main-content" tabindex="-1"', 1)
         if editorial else content, year=datetime.now().year, vk=SITE["vk"],
         skip_link='<a class="skip-link" href="#main-content">К содержанию</a>' if editorial else "",
+        brand_mark=('<img class="brand__mark" src="/assets/img/geekovski-icon-dark-tile.svg" '
+                    'alt="" width="32" height="32">') if editorial else "",
         sidebar_toggle=(
             '    <button class="sidebar-toggle" type="button" aria-controls="site-nav" aria-expanded="true" '
             'aria-label="Свернуть меню" title="Свернуть меню">'
@@ -2711,10 +2713,10 @@ def render_style_guide(theme):
                   '<span style="display:flex;align-items:center;gap:6px">'
                   '<img src="/assets/img/geekovski-icon.svg" alt="" width="18" height="18">знак</span>'
                   '<span style="display:flex;align-items:center;gap:6px">'
-                  '<img src="/assets/img/geekovski-logo.svg?v=black-tile" alt="" width="73" height="14" '
+                  '<img src="/assets/img/geekovski-logo.svg" alt="" width="73" height="14" '
                   'style="background:#0A0C0F;padding:3px 6px;border-radius:var(--surface-corners,4px)">лого на тёмном</span>'
                   '<span style="display:flex;align-items:center;gap:6px">'
-                  '<img src="/assets/img/geekovski-logo-light.svg?v=black-tile" alt="" width="73" height="14" '
+                  '<img src="/assets/img/geekovski-logo-light.svg" alt="" width="73" height="14" '
                   'style="background:#fff;padding:3px 6px;border-radius:var(--surface-corners,4px)">лого на светлом</span>'
                   '</div></section>') % icons
 
