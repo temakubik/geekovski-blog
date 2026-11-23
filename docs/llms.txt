@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 14 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 18 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 19 материалов
-- [PC-игры](https://geekovski.ru/pc/): 34 материала
+- [PC-игры](https://geekovski.ru/pc/): 35 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 38 материалов
 - [Кино](https://geekovski.ru/kino/): 24 материала
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 77 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 93 материала; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 94 материала; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 36 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [BioWare закрылась после 31 года: Mass Effect отменена](https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html): 20 ноября стал последним рабочим днём BioWare — студия из Эдмонтона, сделавшая Baldur's Gate, Knights of the Old Republic и Mass Effect, закрылась через месяц после объявления EA. Следующая Mass Effect отменена, по компании сократили около 400 человек, а права на обе главные франшизы остались у издателя. (23.11.2026)
 - [Прокатные удостоверения для игр: что обсуждает правительство](https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html): 23 ноября «Коммерсантъ» со ссылкой на источники сообщил, что правительство видит целесообразным ввести для видеоигр прокатные удостоверения — как у фильмов, — а создателей и распространителей игр записать в реестр ОРИ с хранением данных в России и подключением к СОРМ. Индустрия против: игра — сервис, который меняется каждый день, и удостоверение версии её не описывает. (23.11.2026)
 - [Kodak SlideTag: брелок с экраном и Find My за $35](https://geekovski.ru/2026-11-23-1000-kodak-slidetag-breklok.html): 22 ноября Reto под лицензией Kodak выпустила SlideTag — брелок размером с 35-мм слайд, с цветным e-ink экраном и вдобавок трекером для Find My и Google Find Hub. $34,99, продажи идут «слепыми коробками» с восемью дизайнами и одним секретным, а обозреватели уже называют это лучшим продуктом Reto. (23.11.2026)
 - [OpenAI предложила тормоз для ИИ, измеряемый в perplexity](https://geekovski.ru/2026-11-23-0800-openai-perplexity-predel.html): 22 ноября главный научный сотрудник OpenAI Якуб Пачоцкий опубликовал эссе «Perplexity and Intelligence» — компания впервые раскрыла внутреннюю кривую обучения своих моделей и предложила индустрии договориться об общих пределах разработки, измеряемых perplexity. Порога в цифрах, органа проверки и самих обязательств в тексте нет. (23.11.2026)
@@ -315,6 +316,7 @@
 - [Danganronpa 2×2](https://geekovski.ru/titles/danganronpa-2x2.html): 2027
 - [Death Stranding 2: On the Beach](https://geekovski.ru/titles/death-stranding-2.html): 2025
 - [DOOM: The Dark Ages](https://geekovski.ru/titles/doom-the-dark-ages.html): 2025
+- [Dragon Age](https://geekovski.ru/titles/dragon-age.html): 2009
 - [«Дюна: часть третья»](https://geekovski.ru/titles/dune-part-three.html): 2026
 - [John Wick: анимационный приквел](https://geekovski.ru/titles/dzhon-uik-animaciya.html)
 - [Эбенезер (Ebenezer)](https://geekovski.ru/titles/ebenezer.html): 2026
@@ -335,6 +337,7 @@
 - [Властелин колец: Кольца власти, сезон 3](https://geekovski.ru/titles/kolca-vlasti-3-sezon.html): 2026
 - [League of Legends](https://geekovski.ru/titles/league-of-legends.html): 2009
 - [Marvel's Blade](https://geekovski.ru/titles/marvels-blade.html): 2027
+- [Mass Effect](https://geekovski.ru/titles/mass-effect.html): 2007
 - [MECCHA CHAMELEON](https://geekovski.ru/titles/meccha-chameleon.html): 2026
 - [Metaphor: ReFantazio](https://geekovski.ru/titles/metaphor-refantazio.html): 2024
 - [MindsEye](https://geekovski.ru/titles/mindseye.html): 2025

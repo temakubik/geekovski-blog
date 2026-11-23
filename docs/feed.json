@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html",
+   "url": "https://geekovski.ru/2026-11-23-1500-bioware-zakrylas-31-god.html",
+   "title": "BioWare закрылась после 31 года: Mass Effect отменена",
+   "summary": "20 ноября стал последним рабочим днём BioWare — студия из Эдмонтона, сделавшая Baldur's Gate, Knights of the Old Republic и Mass Effect, закрылась через месяц после объявления EA. Следующая Mass Effect отменена, по компании сократили около 400 человек, а права на обе главные франшизы остались у издателя.",
+   "date_published": "2026-11-23T15:00:00+03:00",
+   "date_modified": "2026-11-23T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/bioware-edmonton-epcor-cover.jpg",
+   "_sources": [
+    {
+     "name": "BioWare — BioWare Update",
+     "url": "https://blog.bioware.com/2026/10/21/bioware-update/"
+    },
+    {
+     "name": "Девон Гарднер — пост о последнем дне",
+     "url": "https://x.com/devonkgardner/status/2123902125063483554"
+    },
+    {
+     "name": "The Verge — EA is shutting down BioWare",
+     "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware"
+    },
+    {
+     "name": "Game Developer — EA shut down BioWare in favor of a Star Wars title",
+     "url": "https://www.gamedeveloper.com/business/report-ea-shut-down-bioware-in-favor-of-star-wars-battlefront-sequel-after-previously-decrying-licensed-games"
+    },
+    {
+     "name": "VGC — Mass Effect TV series still in production",
+     "url": "https://www.videogameschronicle.com/news/mass-effect-tv-series-still-in-production-despite-bioware-closure-as-game-director-writes-at-least-i-can-play-gta-6/"
+    },
+    {
+     "name": "IGN — Mass Effect TV show still in development",
+     "url": "https://www.ign.com/articles/mass-effect-tv-series-prime-video-bioware-closure"
+    },
+    {
+     "name": "GameSpot — Mass Effect TV show still going ahead",
+     "url": "https://www.gamespot.com/articles/mass-effect-tv-show-still-going-ahead-after-ea-cancels-mass-effect-5-and-closes-bioware-report-says/"
+    },
+    {
+     "name": "VGTimes — BioWare has closed after 31 years",
+     "url": "https://vgtimes.com/gaming-news/175328-bioware-has-closed-after-31-years-with-november-20-as-its-final-working-day.html"
+    },
+    {
+     "name": "DTF — BioWare окончательно закрылась",
+     "url": "https://dtf.ru/gameindustry/5426750-zakrytie-bioware-i-sudba-mass-effect"
+    },
+    {
+     "name": "Save Mass Effect — хронология кампании",
+     "url": "https://www.savemasseffect.com/timeline.html"
+    },
+    {
+     "name": "Wikipedia — BioWare",
+     "url": "https://en.wikipedia.org/wiki/BioWare"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html",
    "url": "https://geekovski.ru/2026-11-23-1200-prokatnye-udostovereniya-igr.html",
    "title": "Прокатные удостоверения для игр: что обсуждает правительство",
