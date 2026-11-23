@@ -7,7 +7,7 @@ developer: ZA/UM
 publisher: ZA/UM
 genre: RPG, шпионская драма
 platforms: switch2 ps5 xbox
-cover: /assets/img/anno-zero-parades-directors-cut.jpg
+cover: /assets/img/anno-zero-parades-director-s-cut.jpg
 aliases: Zero Parades | Zero Parades: For Dead Spies | Зеро Парад
 sources: Steam — ZERO PARADES | https://store.steampowered.com/; Game Release Wall — ноябрь 2026 | https://gamereleasewall.com/2026/november
 ---
