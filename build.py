@@ -2328,9 +2328,10 @@ def render_calendar_page(entries, theme, today=None):
         details = f'<details><summary>Подробнее</summary>{more}</details>' if more else ""
         links = (f'<a href="{CATALOG_PATH}#title-{html.escape(entry["slug"])}">В каталог ↗</a>'
                  if title else "")
-        source, separator, url = entry["source"].rpartition("|")
-        if separator and urllib.parse.urlsplit(url.strip()).scheme in ("https", "http"):
-            links += f'<a href="{html.escape(url.strip())}">{html.escape(source.strip())} ↗</a>'
+        for reference in entry["source"].split(";"):
+            source, separator, url = reference.rpartition("|")
+            if separator and urllib.parse.urlsplit(url.strip()).scheme in ("https", "http"):
+                links += f'<a href="{html.escape(url.strip())}">{html.escape(source.strip())} ↗</a>'
         facts = " · ".join(value for value in (platform_text(entry["platforms"]), entry["where"]) if value)
         cards.append(collection_card(entry["title"], entry["href"], summary, meta, cover=cover,
                                      facts=facts, details=details, links=links, priority=index < 3,
