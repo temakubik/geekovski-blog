@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-24-1200-pulse-elevate-otmena.html",
+   "url": "https://geekovski.ru/2026-11-24-1200-pulse-elevate-otmena.html",
+   "title": "Sony отменила предзаказы на колонки Pulse Elevate",
+   "summary": "Покупателям Pulse Elevate пришли письма об отмене предзаказов — через полторы недели после того, как Sony отложила запуск колонок за $219,99 «на неопределённый срок». Это второй первопартийный аксессуар PS5, который компания не смогла выпустить в 2026 году.",
+   "date_published": "2026-11-24T12:00:00+03:00",
+   "date_modified": "2026-11-24T12:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/pulse-elevate-sony.jpg",
+   "_sources": [
+    {
+     "name": "PlayStation LifeStyle — письма об отмене предзаказов",
+     "url": "https://playstationlifestyle.net/2026/11/19/playstation-5-speakers-accessories-preorders-canceled/"
+    },
+    {
+     "name": "PlayStation.Blog — анонс Pulse Elevate и обновление от 6 ноября",
+     "url": "https://blog.playstation.com/2025/09/24/introducing-pulse-elevate-sony-interactive-entertainments-first-wireless-speakers-for-desktop-gaming/"
+    },
+    {
+     "name": "PlayStation.Blog — анонс FlexStrike и перенос от 14 июля",
+     "url": "https://blog.playstation.com/2026/06/01/flexstrike-wireless-fight-stick-27-gaming-monitor-launching-in-august-followed-by-pulse-elevate-wireless-speakers-later-this-year/"
+    },
+    {
+     "name": "Notebookcheck — задержка Pulse Elevate и статус FlexStrike",
+     "url": "https://www.notebookcheck.net/1445348.html"
+    },
+    {
+     "name": "iXBT Games — хроника отмены",
+     "url": "https://ixbt.games/en/news/2026/11/24/snacala-zaderzka-teper-otmena-sony-sorvala-zapusk-novogo-ustroistva-dlia-ps5.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/cyberpunk-2-edgerunners.html",
    "url": "https://geekovski.ru/cyberpunk-2-edgerunners.html",
    "title": "Cyberpunk 2, Edgerunners 2 и патч 2.5 — что уже вышло",
