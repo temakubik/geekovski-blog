@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-24-0800-spilberg-vestern-andereson.html",
+   "url": "https://geekovski.ru/2026-11-24-0800-spilberg-vestern-andereson.html",
+   "title": "Спилберг снимает вестерн по сценарию Пола Томаса Андерсона",
+   "summary": "23 ноября Deadline сообщил, что Стивен Спилберг готовит для Focus Features свой первый вестерн — экранизацию романа Кевина Барри «The Heart in Winter» со сценарием Пола Томаса Андерсона и Джесси Бакли, Киллианом Мёрфи и Марком Райлансом в главных ролях. Премьера — «где-то в 2028-м», и пока это инсайд: студия новость не подтверждала.",
+   "date_published": "2026-11-24T08:00:00+03:00",
+   "date_modified": "2026-11-24T08:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/spilberg-vesttern-batt-1900.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — Steven Spielberg Sets Adaptation Of «The Heart In Winter»",
+     "url": "https://deadline.com/2026/11/steven-spielberg-the-heart-in-winter-paul-thomas-anderson-1237231172/"
+    },
+    {
+     "name": "The Guardian — Steven Spielberg to make a western written by Paul Thomas Anderson",
+     "url": "https://www.theguardian.com/film/2026/nov/23/spielberg-western-paul-thomas-anderson-heart-in-winter"
+    },
+    {
+     "name": "The Guardian — The Heart in Winter by Kevin Barry review",
+     "url": "https://www.theguardian.com/books/article/2024/jun/12/the-heart-in-winter-by-kevin-barry-review"
+    },
+    {
+     "name": "Kirkus Reviews — The Heart in Winter",
+     "url": "https://kirkusreviews.com/book-reviews/kevin-barry/the-heart-in-winter/"
+    },
+    {
+     "name": "The New York Times — On the Lam in the Wild West",
+     "url": "https://www.nytimes.com/2024/07/10/books/review/kevin-barry-heart-in-winter.html"
+    },
+    {
+     "name": "The Hollywood Reporter — Focus Features Reteaming With Paul Thomas Anderson",
+     "url": "https://hollywoodreporter.com/news/focus-features-paul-thomas-anderson-team-70s-high-school-movie-1263696"
+    },
+    {
+     "name": "Oscars.org — The 88th Academy Awards",
+     "url": "https://www.oscars.org/oscars/ceremonies/2016"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-23-2100-xbox-platnyj-multiplayer-helix.html",
    "url": "https://geekovski.ru/2026-11-23-2100-xbox-platnyj-multiplayer-helix.html",
    "title": "Xbox чуть не отменила платный мультиплеер",
@@ -64,8 +106,8 @@
   {
    "id": "https://geekovski.ru/2026-11-23-1800-nvidia-huang-vozvrat.html",
    "url": "https://geekovski.ru/2026-11-23-1800-nvidia-huang-vozvrat.html",
-   "title": "Nvidia вернула Хуанга в CEO через 11 дней",
-   "summary": "23 ноября совет директоров Nvidia единогласно вернул Дженсена Хуанга на пост CEO — через 11 дней после отставки на фоне шпионского скандала. В релизе компания прямо ссылается на консультации с высокопоставленными чиновниками США, а акции в моменте прибавляли до 31 % после падения почти вдвое от октябрьского пика.",
+   "title": "Nvidia вернула Дженсена Хуанга на пост CEO",
+   "summary": "Совет директоров Nvidia единогласно вернул Дженсена Хуанга на пост CEO 22 ноября. Решение вступило в силу сразу, а компания объявила о нём 23 ноября. Внутренняя проверка сообщений о том, что Хуанг мог стать целью иностранной разведки, продолжается.",
    "date_published": "2026-11-23T18:00:00+03:00",
    "date_modified": "2026-11-23T18:00:00+03:00",
    "tags": [
@@ -94,8 +136,12 @@
      "url": "https://www.fxstreet.com/news/jensen-huang-reinstated-at-nvidia-nvda-shares-spike-27-202611231416"
     },
     {
-     "name": "Euronews — хронология, ФБР и слушания 1 декабря",
-     "url": "https://www.euronews.com/2026/11/23/nvidia-reinstates-jensen-huang-as-ceo-11-days-after-he-resigned"
+     "name": "Палата представителей США — интервью 1 декабря",
+     "url": "https://foreignaffairs.house.gov/news/press-releases/jensen-huang-and-nvidia-agree-to-appear-before-congress"
+    },
+    {
+     "name": "SEC — форма 8-K об отставке",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
     },
     {
      "name": "The Hindu (AFP) — реакция Трампа",
