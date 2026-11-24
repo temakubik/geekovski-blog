@@ -8,6 +8,66 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/cyberpunk-2-edgerunners.html",
+   "url": "https://geekovski.ru/cyberpunk-2-edgerunners.html",
+   "title": "Cyberpunk 2, Edgerunners 2 и патч 2.5 — что уже вышло",
+   "summary": "Продолжение Cyberpunk 2077 остаётся в разработке. Аниме Edgerunners 2 уже вышло на Netflix, а для Cyberpunk 2077 есть отдельный патч 2.5. Как отличить три проекта и где искать каждый.",
+   "date_published": "2026-11-24T11:36:00+03:00",
+   "date_modified": "2026-11-24T11:36:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/cyberpunk-2077-update-25.jpg",
+   "_sources": [
+    {
+     "name": "CD Projekt Red — презентация для инвесторов за первое полугодие 2026 года",
+     "url": "https://www.cdprojekt.com/en/wp-content/uploads-en/2026/09/cd-projekt-red-group-presentation-h1-2026.pdf"
+    },
+    {
+     "name": "Netflix — дата премьеры и кадры Edgerunners 2",
+     "url": "https://www.netflix.com/tudum/articles/cyberpunk-edgerunners-2-release-date-news"
+    },
+    {
+     "name": "CD Projekt Red — выход обновления 2.5",
+     "url": "https://www.cyberpunk.net/en/news/52125/cyberpunk-2077s-edgerunners-2-update-2-5-is-out-now"
+    },
+    {
+     "name": "CD Projekt Red — описание изменений в патче 2.5",
+     "url": "https://www.cyberpunk.net/en/news/52120/check-out-whats-coming-to-night-city-in-the-edgerunners-2-update-for-cyberpunk-2077"
+    }
+   ]
+  },
+  {
+   "id": "https://geekovski.ru/dawn-of-war-iv-data-vyhoda.html",
+   "url": "https://geekovski.ru/dawn-of-war-iv-data-vyhoda.html",
+   "title": "Dawn of War IV — дата выхода, издания и системные требования",
+   "summary": "Warhammer 40,000: Dawn of War IV выйдет 3 декабря 2026 года в Steam, Commander Edition откроется 30 ноября. Сравниваем издания и проверяем, какое железо нужно для стратегии.",
+   "date_published": "2026-11-24T11:36:00+03:00",
+   "date_modified": "2026-11-24T11:36:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/dawn-of-war-iv-cover.jpg",
+   "_sources": [
+    {
+     "name": "Deep Silver — даты, платформы, фракции и состав изданий",
+     "url": "https://www.deepsilver.com/games/dawn-of-war-iv"
+    },
+    {
+     "name": "Steam — системные требования и локализация",
+     "url": "https://store.steampowered.com/app/2272360/Warhammer_40000_Dawn_of_War_IV/"
+    },
+    {
+     "name": "Steam — Commander Edition",
+     "url": "https://store.steampowered.com/sub/1624417/"
+    },
+    {
+     "name": "Warhammer Community — обзор игрового процесса",
+     "url": "https://www.warhammer-community.com/en-gb/videos/abgo35qs/warhammer-40000-dawn-of-war-iv-official-game-overview-trailer/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html",
    "url": "https://geekovski.ru/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html",
    "title": "Amazon купила софт Decart за $7,5 млрд",
