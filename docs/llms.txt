@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 15 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 18 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 20 материалов
-- [PC-игры](https://geekovski.ru/pc/): 37 материалов
+- [PC-игры](https://geekovski.ru/pc/): 38 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 39 материалов
 - [Кино](https://geekovski.ru/kino/): 25 материалов
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 81 материал; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 98 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 99 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 37 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Tarkov перешла на Unity 6: что даёт патч 1.3.5.0](https://geekovski.ru/2026-11-24-2100-tarkov-unity-6.html): Battlestate выпустила патч 1.3.5.0 — Escape from Tarkov переехала на Unity 6, графика собрана в единую платформу RenderStack, переписана загрузка рейдов и починены утечки памяти. DirectX 12, FSR 4 и DLSS Frame Generation в патч не вошли: движок только открыл под них дорогу. (24.11.2026)
 - [Сотрудники OpenAI и Anthropic: новые модели нельзя выпускать](https://geekovski.ru/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html): Axios поговорил с более чем двумя десятками людей внутри OpenAI, Anthropic и вокруг них: неопубликованные модели компаний заметно сильнее публичных, и удержать их во внутренних тестах всё труднее. Внутри лабораторий обсуждают не то, как безопаснее выпустить следующий релиз, а стоит ли выпускать его вообще. Официального заявления нет — это репортаж со ссылкой на анонимные источники. (24.11.2026)
 - [«Яндекс Пин» вышел: 19 990 ₽ и подписка за расшифровку](https://geekovski.ru/2026-11-24-1500-yandex-pin-zapusk.html): Яндекс официально представил Пин — носимое устройство с Алисой AI за 19 990 ₽. Без подписки расшифровка ограничена 10 часами в месяц, 50 часов стоят 690 ₽, безлимит — 1190 ₽. Утечка от 17 ноября оказалась права в главном, но ошиблась в цене и форм-факторе. (24.11.2026)
 - [Sony отменила предзаказы на колонки Pulse Elevate](https://geekovski.ru/2026-11-24-1200-pulse-elevate-otmena.html): Покупателям Pulse Elevate пришли письма об отмене предзаказов — через полторы недели после того, как Sony отложила запуск колонок за $219,99 «на неопределённый срок». Это второй первопартийный аксессуар PS5, который компания не смогла выпустить в 2026 году. (24.11.2026)
@@ -334,6 +335,7 @@
 - [«Дюна: часть третья»](https://geekovski.ru/titles/dune-part-three.html): 2026
 - [John Wick: анимационный приквел](https://geekovski.ru/titles/dzhon-uik-animaciya.html)
 - [Эбенезер (Ebenezer)](https://geekovski.ru/titles/ebenezer.html): 2026
+- [Escape from Tarkov](https://geekovski.ru/titles/escape-from-tarkov.html): 2025
 - [Fragmentary Order](https://geekovski.ru/titles/fragmentary-order.html): 2026
 - [God of War Laufey](https://geekovski.ru/titles/god-of-war-laufey.html): 2027
 - [God of War Sons of Sparta](https://geekovski.ru/titles/god-of-war-sons-of-sparta.html): 2026
