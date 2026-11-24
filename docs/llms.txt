@@ -16,7 +16,7 @@
 - [PlayStation](https://geekovski.ru/playstation/): 20 материалов
 - [PC-игры](https://geekovski.ru/pc/): 37 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
-- [Гаджеты](https://geekovski.ru/gadgets/): 38 материалов
+- [Гаджеты](https://geekovski.ru/gadgets/): 39 материалов
 - [Кино](https://geekovski.ru/kino/): 25 материалов
 - [Сериалы](https://geekovski.ru/serialy/): 12 материалов
 - [AI](https://geekovski.ru/ai/): 41 материал
@@ -25,12 +25,13 @@
 
 ## Авторы
 
-- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 79 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
+- [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 80 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
 - [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 98 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 37 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [«Яндекс Пин» вышел: 19 990 ₽ и подписка за расшифровку](https://geekovski.ru/2026-11-24-1500-yandex-pin-zapusk.html): Яндекс официально представил Пин — носимое устройство с Алисой AI за 19 990 ₽. Без подписки расшифровка ограничена 10 часами в месяц, 50 часов стоят 690 ₽, безлимит — 1190 ₽. Утечка от 17 ноября оказалась права в главном, но ошиблась в цене и форм-факторе. (24.11.2026)
 - [Sony отменила предзаказы на колонки Pulse Elevate](https://geekovski.ru/2026-11-24-1200-pulse-elevate-otmena.html): Покупателям Pulse Elevate пришли письма об отмене предзаказов — через полторы недели после того, как Sony отложила запуск колонок за $219,99 «на неопределённый срок». Это второй первопартийный аксессуар PS5, который компания не смогла выпустить в 2026 году. (24.11.2026)
 - [Cyberpunk 2, Edgerunners 2 и патч 2.5 — что уже вышло](https://geekovski.ru/cyberpunk-2-edgerunners.html): Продолжение Cyberpunk 2077 остаётся в разработке. Аниме Edgerunners 2 уже вышло на Netflix, а для Cyberpunk 2077 есть отдельный патч 2.5. Как отличить три проекта и где искать каждый. (24.11.2026)
 - [Dawn of War IV — дата выхода, издания и системные требования](https://geekovski.ru/dawn-of-war-iv-data-vyhoda.html): Warhammer 40,000: Dawn of War IV выйдет 3 декабря 2026 года в Steam, Commander Edition откроется 30 ноября. Сравниваем издания и проверяем, какое железо нужно для стратегии. (24.11.2026)

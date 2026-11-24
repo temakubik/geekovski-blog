@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-24-1500-yandex-pin-zapusk.html",
+   "url": "https://geekovski.ru/2026-11-24-1500-yandex-pin-zapusk.html",
+   "title": "«Яндекс Пин» вышел: 19 990 ₽ и подписка за расшифровку",
+   "summary": "Яндекс официально представил Пин — носимое устройство с Алисой AI за 19 990 ₽. Без подписки расшифровка ограничена 10 часами в месяц, 50 часов стоят 690 ₽, безлимит — 1190 ₽. Утечка от 17 ноября оказалась права в главном, но ошиблась в цене и форм-факторе.",
+   "date_published": "2026-11-24T15:00:00+03:00",
+   "date_modified": "2026-11-24T15:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/yandex-pin-launch-cover.jpg",
+   "_sources": [
+    {
+     "name": "Яндекс — страница Яндекс Пина, характеристики и тарифы",
+     "url": "https://alice.yandex.ru/wearables/pin"
+    },
+    {
+     "name": "RB.ru — анонс, цена и подписки",
+     "url": "https://rb.ru/news/yandeks-predstavil-novoe-nosimoe-ustrojstvo-s-ii-pin-zapisyvaet-vstrechi-i-napominaet-o-zadachah/"
+    },
+    {
+     "name": "РБК — подтверждение пресс-службы, цена и тарифы",
+     "url": "https://www.rbc.ru/rbcfreenews/6b045d3a5e4dd4c2bc5ccb7a"
+    },
+    {
+     "name": "Код Дурова — детали устройства и старт продаж",
+     "url": "https://kod.ru/yandex-pin-predstavlen"
+    },
+    {
+     "name": "CNews — хранение записей и привязка к аккаунту",
+     "url": "https://www.cnews.ru/news/top/2026-11-24_yandeks_sozdal_ustrojstvo"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-24-1200-pulse-elevate-otmena.html",
    "url": "https://geekovski.ru/2026-11-24-1200-pulse-elevate-otmena.html",
    "title": "Sony отменила предзаказы на колонки Pulse Elevate",
