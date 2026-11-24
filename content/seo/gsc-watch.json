@@ -1,0 +1,378 @@
+{
+ "urls": {
+  "https://geekovski.ru/2026-11-06-1112-sega-fave-vzlom-arkady.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1112-sega-fave-vzlom-arkady.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1116-gamesir-nova-vision.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1116-gamesir-nova-vision.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1120-palacio-netflix-1985.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1205-unity-25-mlrd-silver-lake-pif.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1205-unity-25-mlrd-silver-lake-pif.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1206-metr-anthropic-uskorenie-vdvoe.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1306-dzhon-uik-animaciya.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1306-dzhon-uik-animaciya.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1307-palo-alto-clutch.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1307-palo-alto-clutch.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1405-tesla-cybertruck-konec.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1405-tesla-cybertruck-konec.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-07",
+   "canonical": "https://geekovski.ru/2026-11-06-1406-ea-25-klassik-v-steam.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1505-nier-automata-366-gb.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1505-nier-automata-366-gb.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1506-render-road-lionsgate.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1506-render-road-lionsgate.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1605-anthropic-ipo-ocenka.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1605-anthropic-ipo-ocenka.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1606-windows-paint-rce.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1705-alexa-zakaz-po-tekstu.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-07",
+   "canonical": "https://geekovski.ru/2026-11-06-1705-alexa-zakaz-po-tekstu.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1706-macbook-neo-2-proizvodstvo.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1706-macbook-neo-2-proizvodstvo.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1707-odysseya-vozvrat-v-kino.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1707-odysseya-vozvrat-v-kino.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1805-openssh-sshole.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-1805-openssh-sshole.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-1806-ai-golos-129-mln.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-07",
+   "canonical": "https://geekovski.ru/2026-11-06-1806-ai-golos-129-mln.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-2105-meta-skraping-otmena.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-07",
+   "canonical": "https://geekovski.ru/2026-11-06-2105-meta-skraping-otmena.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-pwa-install.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-06",
+   "canonical": "https://geekovski.ru/2026-11-06-pwa-install.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-06-rewrite-apps-rust.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-07-game-pass-noyabr.html": {
+   "coverage": "Страница просканирована, но пока не проиндексирована",
+   "verdict": "NEUTRAL",
+   "crawled": "2026-11-08",
+   "canonical": "https://geekovski.ru/2026-11-07-game-pass-noyabr.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-07-gta6-212gb-predzagruzka.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-08",
+   "canonical": "https://geekovski.ru/2026-11-07-gta6-212gb-predzagruzka.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-07-skidki-noyabrya.html": {
+   "coverage": "Страница отправлена и проиндексирована",
+   "verdict": "PASS",
+   "crawled": "2026-11-08",
+   "canonical": "https://geekovski.ru/2026-11-07-skidki-noyabrya.html",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-08-2355-nvidia-proverka-huang.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-08-7-serialov-noyabrya.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-1000-ps5-za-300-vmesto-ps6.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-1500-arkane-lyon-zakrytie.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-1800-psvr2-vitrina-uhod.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-2100-switch-2-lite-sluh.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-ipad-mini-2026-nuzhen-li.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-kassovye-hity-2026.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-macbook-pro-oled-obzory.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-modretro-chromatic-codex.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-provaly-2026-kino.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-09-top-smartfonov-noyabr.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-0800-prism-collection.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-1000-dc-studios-latcham.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-1200-switch-2-jailbreak.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-1500-big-walk-ai-igf.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-1800-gta6-xbox-30fps.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-2100-ring-drone-cam.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-cliff-booth-trailer.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-gemini-4-carbon.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-half-life-ep3-leak.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-10-ocharovannye-kinopoisk.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-0800-quest-kino-3d-imax.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-1000-ps-plus-noyabr-katalog.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-1200-xbox-take-two-10-let.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-1520-tsmc-doli-openai-anthropic.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  }
+ },
+ "pointer": 50,
+ "rounds": 4,
+ "history": [
+  {
+   "date": "2026-11-25",
+   "total": 5,
+   "indexed": 5
+  },
+  {
+   "date": "2026-11-25",
+   "total": 30,
+   "indexed": 22
+  },
+  {
+   "date": "2026-11-25",
+   "total": 45,
+   "indexed": 22
+  },
+  {
+   "date": "2026-11-25",
+   "total": 50,
+   "indexed": 22
+  }
+ ]
+}
