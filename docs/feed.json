@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html",
+   "url": "https://geekovski.ru/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html",
+   "title": "Сотрудники OpenAI и Anthropic: новые модели нельзя выпускать",
+   "summary": "Axios поговорил с более чем двумя десятками людей внутри OpenAI, Anthropic и вокруг них: неопубликованные модели компаний заметно сильнее публичных, и удержать их во внутренних тестах всё труднее. Внутри лабораторий обсуждают не то, как безопаснее выпустить следующий релиз, а стоит ли выпускать его вообще. Официального заявления нет — это репортаж со ссылкой на анонимные источники.",
+   "date_published": "2026-11-24T18:00:00+03:00",
+   "date_modified": "2026-11-24T18:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/ii-slishkom-opasno-cover.jpg",
+   "_sources": [
+    {
+     "name": "Axios — расследование Мэдисон Миллс",
+     "url": "https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks"
+    },
+    {
+     "name": "Yahoo Finance — ANT ниже цены IPO",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-falls-below-ipo-price-122810237.html"
+    },
+    {
+     "name": "CNBC — иск прокурора Калифорнии к OpenAI",
+     "url": "https://www.cnbc.com/2026/11/16/openai-california-bonta-ai-lawsuit.html"
+    },
+    {
+     "name": "NPR — что сказано в иске",
+     "url": "https://www.npr.org/2026/11/16/nx-s1-6042920/california-sues-openai-hugging-face-hacking-incident"
+    },
+    {
+     "name": "TechCrunch — разбор иска и эпизодов",
+     "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents"
+    },
+    {
+     "name": "OpenAI — эссе научного руководителя о общих пределах",
+     "url": "https://openai.com/index/perplexity-and-intelligence/"
+    },
+    {
+     "name": "Anthropic — отчёт о непредусмотренных действиях моделей",
+     "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+    },
+    {
+     "name": "METR и Redwood Research — отчёт об инциденте с Hugging Face",
+     "url": "https://metr.org/hugging-face-incident-report-aug-2026.pdf"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-24-1500-yandex-pin-zapusk.html",
    "url": "https://geekovski.ru/2026-11-24-1500-yandex-pin-zapusk.html",
    "title": "«Яндекс Пин» вышел: 19 990 ₽ и подписка за расшифровку",
