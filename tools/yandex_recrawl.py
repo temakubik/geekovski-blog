@@ -50,6 +50,27 @@ def call(token: str, url: str, payload: dict | None = None, method="GET"):
         return r.status, json.loads(r.read().decode() or "{}")
 
 
+def ensure_sitemap(token: str, uid: str, hid: str) -> str:
+    """Добавляет sitemap в Вебмастер, если его там нет.
+
+    Возвращает короткий статус для отчёта. POST /user-added-sitemaps у Яндекса
+    отдаёт 504 в дни инцидентов — это не наша ошибка, и повторять в цикле смысла нет.
+    """
+    url = API % (uid, hid) + "/user-added-sitemaps"
+    try:
+        _, cur = call(token, url)
+        if cur.get("sitemaps"):
+            return "sitemap уже в кабинете"
+        status, _ = call(token, url, {"url": SITE + "/sitemap.xml"}, method="POST")
+        return "sitemap добавлен (HTTP %s)" % status
+    except urllib.error.HTTPError as exc:
+        if exc.code in (502, 503, 504):
+            return "sitemap не добавился: Яндекс отдаёт %s" % exc.code
+        return "sitemap: HTTP %s" % exc.code
+    except Exception as exc:
+        return "sitemap: %s" % str(exc)[:60]
+
+
 def sent_state() -> dict:
     if SENT.exists():
         try:
@@ -122,6 +143,8 @@ def main() -> int:
     if not slugs:
         print("очередь пуста: всё свежее уже отправлено")
         return 0
+
+    print(ensure_sitemap(token, str(uid), hid))
 
     urls = ["%s/%s.html" % (SITE, s) for s in slugs]
     print("к отправке: %d" % len(urls))

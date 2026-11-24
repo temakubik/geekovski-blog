@@ -60,17 +60,31 @@ def webmaster(token, days):
 
     base = "https://api.webmaster.yandex.net/v4/user/%s/hosts/%s" % (uid, hid)
     out = {}
+
+    def explain(exc):
+        """404/400 у Вебмастера — это чаще всего инцидент на стороне Яндекса.
+
+        `HOST_NOT_LOADED` («Host is not loaded in Ya.Webmaster yet») приходит, когда
+        данные сайта не выгружаются: в кабинете в такие дни висит баннер «данные
+        временно не обновляются». Это не наша поломка и не повод чинить токен.
+        """
+        text = str(exc)
+        if "404" in text or "400" in text:
+            return "данные Вебмастера временно недоступны (инцидент на стороне Яндекса)"
+        return text[:60]
+
     try:
-        summary = api(base + "/summary", token)
-        out["indexed"] = summary.get("searchable_pages_count")
-        out["excluded"] = summary.get("excluded_pages_count")
+        diag = api(base + "/diagnostics", token)
+        problems = [k for k, v in (diag.get("problems") or {}).items()
+                    if v.get("state") == "PRESENT" and v.get("severity") in ("FATAL", "CRITICAL")]
+        out["fatal_problems"] = problems
     except Exception as e:
-        out["indexed_error"] = str(e)[:60]
+        out["indexed_error"] = explain(e)
     try:
         to = date.today()
         frm = to - timedelta(days=days)
         hist = api(base + "/search-queries/all/history", token, {
-            "query_indicator": ["TOTAL_SHOWS", "TOTAL_CLICKS"],
+            "query_indicator": "TOTAL_SHOWS",
             "date_from": frm.isoformat(), "date_to": to.isoformat(),
         })
         ind = hist.get("indicators", {})
@@ -79,7 +93,7 @@ def webmaster(token, days):
         out["shows"] = int(shows)
         out["clicks"] = int(clicks)
     except Exception as e:
-        out["queries_error"] = str(e)[:60]
+        out["queries_error"] = explain(e)
     return out
 
 
