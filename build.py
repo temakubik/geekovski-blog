@@ -3130,6 +3130,9 @@ if __name__ == "__main__":
     a = ap.parse_args()
     ps = build(a.theme, a.out, a.content)
     print("theme=%s posts=%d -> %s" % (a.theme, len(ps), a.out))
+    thin = [x for x in ps if not is_service(x) and len(re.findall(r"[^\W\d_]{2,}", x["body"])) < 600]
+    if thin:
+        print("тонкий контент: %d статей короче 600 слов (не блокер, но растёт медленнее)" % len(thin))
     vk_items = vk_selection(ps)
     print("vk.xml: %d анонсов (%s)" % (len(vk_items), ", ".join(p["slug"] for p in vk_items)))
     problems = image_report(ps)
