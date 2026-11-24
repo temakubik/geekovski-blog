@@ -1282,9 +1282,11 @@ def render_post(p, posts, theme):
                         SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None)
     more_block = ""
     if more:
-        more_block = ('<nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><ul>%s</ul></nav>'
-                      % "".join('<li><a href="%s">%s</a></li>' % (publication_path(x), html.escape(x["title"]))
-                                for x in more))
+        # карточки, а не строки: у каждой обложка и рубрика — так блок читается
+        # как продолжение ленты, а не как список сносок
+        more_block = ('<nav class="post__more" aria-label="Другие материалы по теме">'
+                      '<h2>Читайте также</h2><div class="morecards">%s</div></nav>'
+                      % "".join(card(x, theme, summary=False, priority=True) for x in more))
     reading = f'<div class="post__body">{body}{more_block}</div>{credit_line}{srcs}{share}'
     if editorial:
         layout = "reading-layout--toc" if toc else ""

@@ -47,7 +47,7 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <link rel="stylesheet" href="/assets/fonts.css">
-<link rel="stylesheet" href="/assets/theme.css?v=ee8b8059250f">
+<link rel="stylesheet" href="/assets/theme.css?v=a4d7f94e4764">
 <link rel="stylesheet" href="/assets/brand.css">
 <script>
 document.documentElement.dataset.js = '';
@@ -115,7 +115,25 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <p>Ключевая оговорка, которую легко пропустить за цифрами: это <strong>base</strong>-модель, то есть сырой чекпойнт в конце предобучения — без mid-training, без инструкций и без выравнивания. Из коробки она не отвечает на вопросы и не ведёт диалог, а требует, чтобы каждая строка входа начиналась с BOS-токена. Baidu прямо говорит: берите веса как стартовую точку для доменной адаптации, SFT или RL-исследований. Версия после посттренировки, собственно ERNIE 5.5 Flash, ещё впереди.</p>
 <p>Зачем это нужно: открытые base-чекпойнты такого размера — редкость, обычно компании выкладывают уже «причёсанную» instruct-версию, чтобы не отдавать конкурентам сырьё. В карточке модели Baidu сравнивает себя с DeepSeek-V4-Flash-Base (284 млрд параметров), Hy3-preview-Base (295 млрд) и MiMo-V2.5-Base (310 млрд) и заявляет SOTA среди base-моделей сопоставимого размера — это её собственные бенчмарки, независимой проверки пока нет.</p>
 <p><strong>Оценка:</strong> ход сильный, но практическая польза появится не сразу. Пока это конструктор для тех, у кого есть кластер: 280 млрд параметров даже в FP8 — это сотни гигабайт памяти, и на бытовой машине такой чекпойнт не запустить. Зато для команд, которые дообучают модели под свои домены, появился ещё один бесплатный фундамент — и это ровно тот случай, когда «открытые веса» означают открытые веса, а не маркетинговую строчку в пресс-релизе.</p>
-<figure class="post__fig"><img src="/assets/img/baidu-ernie-5-5-flash-base-hp.jpg" alt="Серверные стойки в синей подсветке дата-центра" loading="lazy"></figure><nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><ul><li><a href="/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html">Сотрудники OpenAI и Anthropic: новые модели нельзя выпускать</a></li><li><a href="/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html">Amazon купила софт Decart за $7,5 млрд</a></li><li><a href="/2026-11-23-1800-nvidia-huang-vozvrat.html">Nvidia вернула Дженсена Хуанга на пост CEO</a></li></ul></nav></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://huggingface.co/baidu/ERNIE-5.5-Flash-Base" rel="nofollow noopener" target="_blank">Hugging Face — baidu/ERNIE-5.5-Flash-Base, карточка модели</a></li><li><a href="https://ernie.baidu.com/zh/release/ernie-5-5-flash-base" rel="nofollow noopener" target="_blank">Baidu — ERNIE 5.5 Flash Base, страница релиза</a></li><li><a href="https://x.com/Baidu_Inc/status/2118265920665587935" rel="nofollow noopener" target="_blank">Baidu (X) — анонс ERNIE 5.5 Flash Base</a></li><li><a href="https://zhidx.com/p/607749.html" rel="nofollow noopener" target="_blank">智东西 — 280B总参数、14B激活, релиз и бенчмарки</a></li></ol></section><section class="share" data-share-root>
+<figure class="post__fig"><img src="/assets/img/baidu-ernie-5-5-flash-base-hp.jpg" alt="Серверные стойки в синей подсветке дата-центра" loading="lazy"></figure><nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><div class="morecards"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/ii-slishkom-opasno-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-24T18:00:00+03:00">24.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html">Сотрудники OpenAI и Anthropic: новые модели нельзя выпускать</a></h3>
+  </div>
+</article><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/amazon-decart-trainium-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-24T10:00:00+03:00">24.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html">Amazon купила софт Decart за $7,5 млрд</a></h3>
+  </div>
+</article><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/nvidia-huang-vozvrat-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-23T18:00:00+03:00">23.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-23-1800-nvidia-huang-vozvrat.html">Nvidia вернула Дженсена Хуанга на пост CEO</a></h3>
+  </div>
+</article></div></nav></div><section class="sources"><h2>Источники</h2><ol><li><a href="https://huggingface.co/baidu/ERNIE-5.5-Flash-Base" rel="nofollow noopener" target="_blank">Hugging Face — baidu/ERNIE-5.5-Flash-Base, карточка модели</a></li><li><a href="https://ernie.baidu.com/zh/release/ernie-5-5-flash-base" rel="nofollow noopener" target="_blank">Baidu — ERNIE 5.5 Flash Base, страница релиза</a></li><li><a href="https://x.com/Baidu_Inc/status/2118265920665587935" rel="nofollow noopener" target="_blank">Baidu (X) — анонс ERNIE 5.5 Flash Base</a></li><li><a href="https://zhidx.com/p/607749.html" rel="nofollow noopener" target="_blank">智东西 — 280B总参数、14B激活, релиз и бенчмарки</a></li></ol></section><section class="share" data-share-root>
   <span class="share__label">Поделиться</span>
   <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2Fbaidu-ernie-5-5-flash-base.html&text=Baidu%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D0%BB%D0%B0%20%D0%B2%D0%B5%D1%81%D0%B0%20ERNIE%205.5%20Flash%20Base" target="_blank" rel="noopener nofollow">Telegram</a>
   <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2Fbaidu-ernie-5-5-flash-base.html&title=Baidu%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D0%BB%D0%B0%20%D0%B2%D0%B5%D1%81%D0%B0%20ERNIE%205.5%20Flash%20Base" target="_blank" rel="noopener nofollow">ВКонтакте</a>

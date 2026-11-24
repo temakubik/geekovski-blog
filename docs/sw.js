@@ -18,7 +18,7 @@ self.addEventListener("install", (event) => {
     caches.open(STATIC_CACHE).then((cache) =>
       cache.addAll([
         OFFLINE_URL,
-        "/assets/theme.css?v=ee8b8059250f",
+        "/assets/theme.css?v=a4d7f94e4764",
         "/assets/brand.css",
         "/assets/fonts.css",
         "/assets/img/app-icon-512.png",
