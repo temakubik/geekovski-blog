@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html",
+   "url": "https://geekovski.ru/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html",
+   "title": "Amazon купила софт Decart за $7,5 млрд",
+   "summary": "23 ноября Amazon официально объявила, что покупает проприетарную технологию Decart Optimization Stack и забирает трёх соучредителей с командой инженеров. Сумму компания не назвала — Bloomberg пишет о $7,5 млрд. Софт нужен, чтобы чужие модели хорошо работали на Trainium и Amazon могла продавать чипы наружу.",
+   "date_published": "2026-11-24T10:00:00+03:00",
+   "date_modified": "2026-11-24T10:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/amazon-decart-trainium-cover.jpg",
+   "_sources": [
+    {
+     "name": "About Amazon — пресс-релиз о сделке",
+     "url": "https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization"
+    },
+    {
+     "name": "Bloomberg — сумма около $7,5 млрд",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-23/amazon-is-said-to-pay-7-5-billion-for-ai-startup-decart-s-tech"
+    },
+    {
+     "name": "Calcalist — хронология переговоров",
+     "url": "https://www.calcalistech.com/ctechnews/article/g0mtcg4mi"
+    },
+    {
+     "name": "GeekWire — структура сделки и Annapurna",
+     "url": "https://www.geekwire.com/2026/amazon-is-buying-decarts-ai-chip-software-for-a-reported-7-5b-and-bringing-its-founders-aboard/"
+    },
+    {
+     "name": "TechCrunch — Lucy и Oasis 3",
+     "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+    },
+    {
+     "name": "CNBC — подтверждение найма соучредителей",
+     "url": "https://www.cnbc.com/2026/11/23/amazon-decarts-ai-acquisition.html"
+    },
+    {
+     "name": "Globes — условия и суммы для основателей",
+     "url": "https://en.globes.co.il/en/article-amazon-confirms-decart-acquisition-1001564520"
+    },
+    {
+     "name": "About Amazon — Trainium3 UltraServer",
+     "url": "https://www.aboutamazon.com/news/aws/trainium-3-ultraserver-faster-ai-training-lower-cost"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-24-0800-spilberg-vestern-andereson.html",
    "url": "https://geekovski.ru/2026-11-24-0800-spilberg-vestern-andereson.html",
    "title": "Спилберг снимает вестерн по сценарию Пола Томаса Андерсона",
