@@ -281,6 +281,7 @@ def main():
     # картинку грузим через сессию пользователя и она идёт attachment-ом, а URL —
     # отдельной строкой в тексте поста.
     photo = None
+    web_fallback = False
     if args.photo:
         pth = pathlib.Path(args.photo).expanduser()
         if not pth.exists():
@@ -293,7 +294,11 @@ def main():
             photo = vk_session.upload_wall_photo(pth, community_id(
                 args.owner or os.environ.get("VK_GROUP_ID", "")), vk_session.token())
         except Exception as exc:
-            die("не удалось загрузить фото: %s" % exc)
+            # API-фото упирается в привязку токена к IP. Пока её нет — ставим
+            # пост веб-клиентом сообщества: сессия в cookie, без токена и без привязки.
+            sys.stderr.write("фото через API не ушло (%s) — ставлю пост веб-клиентом\n" % exc)
+            photo = None
+            web_fallback = True
     elif args.post:
         die("пост в ВК ставится только с фото: передай --photo (иначе ВК отбивает вложение-ссылку)")
 
@@ -343,6 +348,19 @@ def main():
         die("нет токена: задай VK_GROUP_TOKEN в окружении или передай --token")
     if not params.get("owner_id"):
         die("нет id сообщества: задай VK_GROUP_ID или передай --owner")
+
+    if photo is None and args.photo:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import vk_session
+        res = vk_session.post_text(text, community_id(params["owner_id"]))
+        state[slug] = {"post_id": res["post_id"], "owner_id": "-" + str(params["owner_id"]),
+                       "vk_url": res["vk_url"], "url": url,
+                       "published_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                       "scheduled_for": args.publish_at, "text": text,
+                       "via": "web"}
+        save_state(state)
+        print("Опубликовано (веб-клиент, без фото): " + res["vk_url"])
+        return 0
 
     payload = api("wall.post", params, token)
     if "error" in payload:

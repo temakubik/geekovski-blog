@@ -757,6 +757,23 @@ def ld_itemlist(posts, name):
     }
 
 
+SERVICE_SLUG = re.compile(r"(?:^|/)(?:\d{4}-\d{2}-\d{2}-)?(?:otchet|vecher|utro|kalendar)$")
+
+
+def is_service(p) -> bool:
+    """Материал-служебка: ежедневный отчёт, вечерний дайджест, календарь.
+
+    Такие страницы тонкие и одинаковые по структуре — в sitemap им не место:
+    на молодом домене они съедают краулинговый бюджет статей, а сами в выдачу
+    не идут. Оставляем доступными (noindex,follow), чтобы не ломать ссылки.
+    """
+    if p.get("kind") == "digest":
+        return True
+    if (p.get("meta") or {}).get("noindex") in ("true", "1", "yes"):
+        return True
+    return bool(SERVICE_SLUG.search(p["slug"]))
+
+
 def publication_path(p):
     directory = "/digests/" if p["kind"] == "digest" else "/"
     return f"{directory}{p['slug']}.html"
@@ -770,7 +787,7 @@ def ld_article(p, url, image_url=None, headline=None):
     """
     body_text = p["body"] if p["kind"] == "post" else " ".join(i["summary"] for i in p["items"])
     obj = {
-        "@type": "Article" if p["kind"] == "digest" else "BlogPosting",
+        "@type": "Article" if p["kind"] == "digest" else "NewsArticle",
         "@id": url + "#article",
         "headline": headline or p["title"],
         "description": p["summary"] or plain(body_text, 160),
@@ -1167,8 +1184,41 @@ def article_contents(body):
     return "".join(parts) + body[end:], toc
 
 
+def contextual_links(p, posts, limit=3):
+    """Контекстные ссылки в теле статьи — не карточки, а строки текста.
+
+    Карточки «По теме» стоят внизу и в тексте не считаются; поисковику же важны
+    ссылки внутри абзацев, с осмысленным анкором. Собираем три: две из своей
+    рубрики и одну из соседней с общим словом в заголовке.
+    """
+    def words(t):
+        return {w.lower() for w in re.findall(r"[А-Яа-яA-Za-z]{4,}", t)}
+
+    mine = [x for x in posts if x["slug"] != p["slug"]]
+    own_words = words(p["title"])
+    same = [x for x in mine if x["category"] == p["category"]]
+    other = [x for x in mine if x["category"] != p["category"]]
+    picked = []
+    for x in same:
+        if len(picked) < 2:
+            picked.append(x)
+    for x in sorted(other, key=lambda y: -len(own_words & words(y["title"]))):
+        if len(own_words & words(x["title"])) >= 1:
+            picked.append(x)
+            break
+    if len(picked) < limit:
+        for x in same[2:]:
+            picked.append(x)
+            if len(picked) >= limit:
+                break
+    return picked[:limit]
+
+
 def render_post(p, posts, theme):
-    related = [x for x in posts if x["category"] == p["category"] and x["slug"] != p["slug"]][:3]
+    more = contextual_links(p, posts)
+    _more_slugs = {x["slug"] for x in more}
+    related = [x for x in posts if x["category"] == p["category"]
+               and x["slug"] != p["slug"] and x["slug"] not in _more_slugs][:3]
     p = dict(p, body=link_articles_to_titles(p["body"]))
     srcs = ""
     if p["sources"]:
@@ -1230,7 +1280,12 @@ def render_post(p, posts, theme):
                 f'href="/{p["category"]}/">{catname}</a>{time}</div>')
     share = share_block(SITE["url"] + path, p["title"],
                         SITE["url"] + (p["pin"] or p["cover"]) if (p["pin"] or p["cover"]) else None)
-    reading = f'<div class="post__body">{body}</div>{credit_line}{srcs}{share}'
+    more_block = ""
+    if more:
+        more_block = ('<nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><ul>%s</ul></nav>'
+                      % "".join('<li><a href="%s">%s</a></li>' % (publication_path(x), html.escape(x["title"]))
+                                for x in more))
+    reading = f'<div class="post__body">{body}{more_block}</div>{credit_line}{srcs}{share}'
     if editorial:
         layout = "reading-layout--toc" if toc else ""
         reading = f'<div class="reading-layout {layout}">{cover}{toc}<div class="reading-text">{tldr}{reading}</div></div>'
@@ -1260,6 +1315,7 @@ def render_post(p, posts, theme):
                 p["summary"] or plain(p["body"], 160),
                 content, theme, og_image=og, canonical=url, og_type="article",
                 article=p, og_alt=p["title"],
+                robots=ROBOTS_NOINDEX if is_service(p) else ROBOTS_INDEX,
                 jsonld=ldjson(ld_org(), ld_website(), ld_article(p, url),
                               ld_breadcrumb(crumbs)))
 
@@ -1781,7 +1837,8 @@ def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None,
         items = [p for p in posts if p["category"] == c]
         urls.append(entry(SITE["url"] + "/%s/" % c,
                           max([p["date"] for p in items]).strftime("%Y-%m-%d") if items else None))
-    urls.append(entry(SITE["url"] + "/digests/"))
+    # /digests/ — служебная лента: в sitemap не ставим, у неё свой noindex
+
     urls.append(entry(SITE["url"] + "/about.html"))
     if with_calendar:
         urls.append(entry(SITE["url"] + "/calendar/"))
@@ -1798,9 +1855,9 @@ def sitemap(posts, digests=None, titles=None, with_calendar=False, authors=None,
         urls.append(entry(SITE["url"] + CATALOG_PATH))
     for slug in sorted(titles or {}):
         urls.append(entry(SITE["url"] + "/titles/" + slug + ".html"))
-    for d in (digests or []):
-        urls.append(entry(SITE["url"] + publication_path(d), (d.get("updated") or d["date"]).strftime("%Y-%m-%d")))
     for p in posts:
+        if is_service(p):
+            continue
         urls.append(entry("%s/%s.html" % (SITE["url"], p["slug"]),
                           (p.get("updated") or p["date"]).strftime("%Y-%m-%d"),
                           SITE["url"] + p["cover"] if p["cover"] else None, p["title"]))
@@ -3007,8 +3064,10 @@ def render_digest(d, theme, next_d=None, prev_d=None):
                 html.escape(s["url"]), html.escape(s["name"])) for s in d["sources"] if s["url"])) if d["sources"] else "",
     )
     url = "%s/digests/%s.html" % (SITE["url"], d["slug"])
+    # выпуск дайджеста — сводка ссылок, она не конкурирует со статьями в выдаче
     return page(title_tag(head_title), d["summary"] or meta, content, theme,
                 canonical=url, og_type="article", article=d, og_alt=head_title,
+                robots=ROBOTS_NOINDEX,
                 og_image=SITE["url"] + d["cover"] if d["cover"] else None,
                 jsonld=ldjson(ld_org(), ld_website(), ld_article(d, url, headline=head_title),
                               ld_breadcrumb([("Главная", "/"), ("Дайджесты", "/digests/"),
@@ -3049,7 +3108,9 @@ def render_digests_index(digests, theme):
     url = SITE["url"] + "/digests/"
     desc = ("Дайджесты GEEKOVSKI: короткие выпуски новостей игр, техники, кино и AI с ссылками "
             "на первоисточники. Выпусков в архиве: %d." % len(digests))
+    # лента дайджестов — навигация по архиву, а не контент для выдачи: noindex
     return page("Дайджесты — короткие новости GEEKOVSKI", desc, content, theme, canonical=url,
+                robots=ROBOTS_NOINDEX,
                 head_extra=collection_assets(),
                 jsonld=ldjson(ld_org(), ld_website(),
                               {"@type": "CollectionPage", "@id": url + "#page", "url": url,

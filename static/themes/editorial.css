@@ -1094,3 +1094,13 @@ a.tlink:hover { border-bottom-style: solid; }
     transition-duration: .01ms !important;
   }
 }
+
+/* Контекстные ссылки в теле статьи: строкой текста, а не карточками — их читают
+   и люди, и роботы; анкор осмысленный, вес перетекает между материалами. */
+.post__more { margin: 34px 0 8px; padding-top: 18px; border-top: 1px solid var(--line); }
+.post__more h2 { font-size: var(--fs-card); margin: 0 0 10px; letter-spacing: .02em; text-transform: uppercase; color: var(--muted); font-family: var(--font-mono, var(--font-text)); }
+.post__more ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.post__more li { font-size: var(--fs-body); line-height: 1.45; }
+.post__more li::before { content: "→ "; color: var(--accent); }
+.post__more a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.post__more a:hover { color: var(--accent); }
