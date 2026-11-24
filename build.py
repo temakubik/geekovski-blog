@@ -1026,11 +1026,29 @@ def _aliases(t):
     return [n for n in names if len(n) >= 3]
 
 
+def configure_title_mentions():
+    """Сопоставляем только однозначные названия, от длинных к коротким."""
+    global TITLE_MENTION_PATTERN
+    candidates = collections.defaultdict(set)
+    for slug, title in TITLES.items():
+        for name in _aliases(title):
+            candidates[name.lower()].add(slug)
+    TITLE_ALIASES.clear()
+    TITLE_ALIASES.update(
+        (name, next(iter(slugs))) for name, slugs in candidates.items() if len(slugs) == 1
+    )
+    names = sorted(TITLE_ALIASES, key=len, reverse=True)
+    TITLE_MENTION_PATTERN = re.compile(
+        r"(?<![\w\[/])(" + "|".join(map(re.escape, names)) + r")(?![\w\]])",
+        re.IGNORECASE,
+    ) if names else None
+
+
 def link_articles_to_titles(html_text):
     """Первое упоминание тайтла в тексте статьи → ссылка на его страницу.
     Работает по чистому тексту ДО markdown, поэтому длинные имена
     обрабатываются первыми и ссылки не вкладываются друг в друга."""
-    if not TITLES:
+    if TITLE_MENTION_PATTERN is None:
         return html_text
     # Уже готовые markdown-картинки и ссылки прячем в плейсхолдеры: иначе алиас
     # тайтла в подписи картинки рвал синтаксис («!<a …>-switch-2-hp.jpg)»),
@@ -1048,48 +1066,44 @@ def link_articles_to_titles(html_text):
     # «Stellar Blade» ловился алиасом «Blade» другого тайтла, и в href получалось
     # /titles/stellar-[blade](/titles/marvels-blade.html. re.sub вставленный
     # текст заново не сканирует, поэтому вложенных ссылок не бывает.
-    alias_map = {}
-    for slug, t in TITLES.items():
-        for name in _aliases(t):
-            alias_map.setdefault(name.lower(), (name, slug))
-    if not alias_map:
-        return html_text
-    names = sorted(alias_map, key=len, reverse=True)
-    pat = re.compile(r"(?<![\w\[/])(" + "|".join(re.escape(n) for n in names) + r")(?![\w\]])",
-                     re.IGNORECASE)
-    done = set()
+    done = {
+        slug for link in stash if not link.startswith("!")
+        for slug in TITLE_LINK_PATTERN.findall(link)
+    }
 
     def _rep(m):
-        name, slug = alias_map[m.group(1).lower()]
-        if slug in done:
+        slug = TITLE_ALIASES.get(m.group(1).lower())
+        if slug is None or slug in done:
             return m.group(1)
         done.add(slug)
         return "[%s](/titles/%s.html)" % (m.group(1), slug)
 
-    linked = pat.sub(_rep, html_text)
+    linked = TITLE_MENTION_PATTERN.sub(_rep, html_text)
     if stash:
         linked = re.sub(r"\x00(\d+)\x00", lambda m: stash[int(m.group(1))], linked)
     return linked
 
 
-def articles_for_title(slug):
-    """Все материалы и новости дайджестов, где упомянут тайтл."""
-    t = TITLES.get(slug)
-    if not t:
-        return []
-    names = [re.escape(n) for n in _aliases(t)]
-    pat = re.compile("|".join(names), re.IGNORECASE) if names else None
-    if not pat:
-        return []
-    hits = []
-    for post in ALL_POSTS:
+def index_title_mentions(posts):
+    """Собираем обратные ссылки из тех же упоминаний и явных редакционных ссылок."""
+    TITLE_ARTICLES.clear()
+    if TITLE_MENTION_PATTERN is None:
+        return
+    for post in posts:
         parts = [post["title"], post["summary"], post["body"] or ""]
         if post["kind"] == "digest":
-            parts += [i["title"] + " " + i["summary"] for i in post["items"]]
-        if pat.search(" ".join(parts)):
-            # текст, где тайтл упомянут именно в новости, а не только в метаданных
-            hits.append(post)
-    return hits[:12]
+            parts.extend(item["title"] + " " + item["summary"] for item in post["items"])
+        text = "\n".join(parts)
+        text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
+        explicit = TITLE_LINK_PATTERN.findall(text)
+        text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)
+        slugs = set(explicit) & TITLES.keys()
+        slugs.update(
+            TITLE_ALIASES.get(m.group(1).lower()) for m in TITLE_MENTION_PATTERN.finditer(text)
+        )
+        for slug in slugs - {None}:
+            if len(TITLE_ARTICLES[slug]) < 12:
+                TITLE_ARTICLES[slug].append(post)
 
 
 def back_link(label=None, href=None):
@@ -2037,12 +2051,14 @@ def build(theme, out_dir, content_dir=None):
     CAL_ENTRIES[:] = cal_entries
     TITLES.clear()
     TITLES.update(load_titles())
+    configure_title_mentions()
     AUTHORS[:] = load_authors(content)
     AUTHOR_BY_CAT.clear()
     for a in AUTHORS:
         for c in a["categories"]:
             AUTHOR_BY_CAT.setdefault(c, a)
     ALL_POSTS[:] = posts + digests
+    index_title_mentions(ALL_POSTS)
 
     out = Path(out_dir)
     if out.exists():
@@ -2525,7 +2541,11 @@ def title_slug(text):
 
 TITLE_REDIRECTS = {"gta-6": "grand-theft-auto-vi"}
 TITLES = {}
-ALL_POSTS = []   # все материалы и дайджесты: нужны для обратной перелинковки
+TITLE_ALIASES = {}
+TITLE_MENTION_PATTERN = None
+TITLE_LINK_PATTERN = re.compile(r"\[[^\]]+\]\(/titles/([a-z0-9-]+)\.html\)")
+TITLE_ARTICLES = collections.defaultdict(list)
+ALL_POSTS = []
 CAL_ENTRIES = []   # заполняется в build(): записи календаря для страниц тайтлов
 AUTHORS = []       # заполняется в build(): паспорта редакции из content/authors
 AUTHOR_BY_CAT = {}  # рубрика → паспорт автора, который её ведёт
@@ -2598,7 +2618,7 @@ def title_page(slug, theme):
                         f'{html.escape(entry["kind_note"] or "релиз")}{html.escape(" · " + place) if place else ""}</li>')
         schedule = '<section class="sources"><h2>Даты релизов</h2><ul>' + "".join(rows) + '</ul></section>'
     credit = card_credit(t["cover_source"])
-    mentions = articles_for_title(slug)
+    mentions = TITLE_ARTICLES.get(slug)
     if mentions:
         if len(mentions) == 1 and mentions[0]["kind"] == "post":
             m = mentions[0]

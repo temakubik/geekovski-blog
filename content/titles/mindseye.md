@@ -8,7 +8,7 @@ publisher: IO Interactive Partners
 genre: action-adventure
 platforms: ps5 xbox pc
 cover: /assets/img/mindseye-dron.jpg
-aliases: MindsEye | Майндсай | Build a Rocket Boy
+aliases: MindsEye | Майндсай
 sources: Steam — страница MindsEye | https://store.steampowered.com/app/3265250/; Companies House — отчётность Build a Rocket Boy | https://find-and-update.company-information.service.gov.uk/company/SC537252/filing-history
 ---
 
