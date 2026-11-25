@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-25-1500-sudnyj-den-trejler-rekord.html",
+   "url": "https://geekovski.ru/2026-11-25-1500-sudnyj-den-trejler-rekord.html",
+   "title": "Трейлер «Судного дня»: 563 млн просмотров за сутки",
+   "summary": "Финальный трейлер «Мстителей: Судного дня» за первые сутки собрал 563 млн просмотров — это рекорд Disney и второе место в истории кинотрейлеров после «Человека-паука: Совершенно новый день». Предпродажи добрались до $50 млн за три месяца до премьеры, а 18 декабря фильм выходит в один день с «Дюной: Часть 3».",
+   "date_published": "2026-11-25T15:00:00+03:00",
+   "date_modified": "2026-11-25T15:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/sudnyj-den-trejler-cover.jpg",
+   "_sources": [
+    {
+     "name": "Deadline — рекорд просмотров",
+     "url": "https://deadline.com/2026/11/avengers-doomsday-final-trailer-viewership-record-1237232943/"
+    },
+    {
+     "name": "Euronews — второй результат в истории, последняя роль Патрика Стюарта",
+     "url": "https://www.euronews.com/2026/11/25/avengers-doomsday-final-trailer-breaks-records-to-become-second-most-viewed-of-all-time"
+    },
+    {
+     "name": "Cybersport — рекорд, метрики соцсетей и дата проката в СНГ",
+     "url": "https://cybersport.metaratings.ru/news/finalnyj-trejler-mstitelej-sudnyj-den-stal-samym-populyarnym-v-istorii-disney-674423/"
+    },
+    {
+     "name": "TheWrap — $50 млн предпродаж за три месяца до премьеры",
+     "url": "https://www.thewrap.com/creative-content/movies/avengers-doomsday-presales-50-million-before-release/"
+    },
+    {
+     "name": "TheWrap — $16,5 млн за первые сутки в премиум-форматах",
+     "url": "https://www.thewrap.com/industry-news/box-office/avengers-doomsday-presales-first-day-infinity-vision/"
+    },
+    {
+     "name": "Boxoffice Pro — прогноз «Дюны: Часть 3»",
+     "url": "https://www.boxofficepro.com/long-range-forecast-dune-part-3-aims-for-a-series-high-debut-as-it-opens-against-avengers-doomsday/"
+    },
+    {
+     "name": "IMDb — сводка рекорда",
+     "url": "https://www.imdb.com/news/ni66127363/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-25-1200-terraria-krossplay.html",
    "url": "https://geekovski.ru/2026-11-25-1200-terraria-krossplay.html",
    "title": "Terraria наконец получила кроссплей — с оговорками",
