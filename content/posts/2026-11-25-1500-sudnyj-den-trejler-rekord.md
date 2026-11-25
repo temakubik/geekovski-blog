@@ -7,7 +7,7 @@ summary: Финальный трейлер «Мстителей: Судного 
 tldr: 563 млн просмотров за 24 часа — рекорд Disney; прежний держал тизер того же фильма с 503 млн | В истории кинотрейлеров выше только «Человек-паук: Совершенно новый день» — 718,6 млн за сутки | Продано предпродаж на $50 млн, 70 % из них — премиум-форматы; домашний дебют прогнозируют на $340–369 млн
 cover: /assets/img/sudnyj-den-trejler-cover.jpg
 pin: /assets/img/2026-11-25-1500-sudnyj-den-trejler-rekord-pin.jpg
-credit: иллюстрации GEEKOVSKI.
+credit: Кадры: Marvel Studios — финальный трейлер «Мстителей: Судного дня».
 sources: Deadline — рекорд просмотров | https://deadline.com/2026/11/avengers-doomsday-final-trailer-viewership-record-1237232943/; Euronews — второй результат в истории, последняя роль Патрика Стюарта | https://www.euronews.com/2026/11/25/avengers-doomsday-final-trailer-breaks-records-to-become-second-most-viewed-of-all-time; Cybersport — рекорд, метрики соцсетей и дата проката в СНГ | https://cybersport.metaratings.ru/news/finalnyj-trejler-mstitelej-sudnyj-den-stal-samym-populyarnym-v-istorii-disney-674423/; TheWrap — $50 млн предпродаж за три месяца до премьеры | https://www.thewrap.com/creative-content/movies/avengers-doomsday-presales-50-million-before-release/; TheWrap — $16,5 млн за первые сутки в премиум-форматах | https://www.thewrap.com/industry-news/box-office/avengers-doomsday-presales-first-day-infinity-vision/; Boxoffice Pro — прогноз «Дюны: Часть 3» | https://www.boxofficepro.com/long-range-forecast-dune-part-3-aims-for-a-series-high-debut-as-it-opens-against-avengers-doomsday/; IMDb — сводка рекорда | https://www.imdb.com/news/ni66127363/
 ---
 
@@ -43,7 +43,7 @@ sources: Deadline — рекорд просмотров | https://deadline.com/2
 
 Ключевая деталь: 70 % проданных билетов — премиум-форматы, помеченные меткой Infinity Vision. Это не технический стандарт, а маркетинговый ярлык, который Disney придумал специально под эту премьеру: IMAX на три недели отдан «Дюне: Часть 3» по давнему договору Warner с Дени Вильнёвом, и студии пришлось уводить фанатов в другие большие залы — Dolby, ScreenX и прочие. Судя по доле премиум-форматов в предпродажах, схема работает.
 
-![](/assets/img/sudnyj-den-zal-imax.jpg)
+![](/assets/img/sudnyj-den-kadr-shlem.jpg)
 
 ## 18 декабря: «Дюнсдей»
 
@@ -63,7 +63,7 @@ sources: Deadline — рекорд просмотров | https://deadline.com/2
 
 Сначала эту роль сыграл «Человек-паук: Совершенно новый день»: $2 млрд за три недели, больше $2,4 млрд в итоге — третий результат в истории до поправки на инфляцию. На этой неделе он обойдёт «Пробуждение силы» и станет самым кассовым фильмом в истории США до инфляции. «Судный день» идёт следом и с более громкой кампанией: Дауни-младший в роли Доктора Дума, Крис Эванс снова Стив Роджерс, плюс Люди Икс и Фантастическая четвёрка в одном кадре — тот тип события, на который зритель ходит не за сюжетом, а за встречей.
 
-![](/assets/img/sudnyj-den-premera.jpg)
+![](/assets/img/sudnyj-den-kadr-geroy.jpg)
 
 ## Где подвох
 
@@ -73,7 +73,7 @@ sources: Deadline — рекорд просмотров | https://deadline.com/2
 - **У кампании появился эмоциональный слой, который не считается в просмотрах.** Патрик Стюарт умер 28 октября в 86 лет; «Судный день» — его последняя роль в кино и девятое появление в роли профессора Ксавье, начиная с «Людей Икс» 2000 года. Энтони Руссо рассказал Entertainment Weekly, что актёр работал на площадке, уже превозмогая проблемы со здоровьем, а Кевин Файги говорил, что студия думает, как достойно почтить память друга. Часть зрителей пойдёт в зал в том числе за этим.
 - **Российского проката нет, и дата в СНГ — не то же самое.** О российской премьере не сообщалось: Disney официально не выпускает свои фильмы в России с 2022 года. По данным Cybersport, в прокат стран СНГ картина выйдет 7 января 2027 года — на три недели позже мировой премьеры.
 
-![](/assets/img/sudnyj-den-proektor.jpg)
+![](/assets/img/sudnyj-den-kadr-profil.jpg)
 
 ## Три вывода
 
