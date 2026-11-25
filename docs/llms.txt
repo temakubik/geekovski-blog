@@ -13,7 +13,7 @@
 
 - [Xbox](https://geekovski.ru/xbox/): 15 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 18 материалов
-- [PlayStation](https://geekovski.ru/playstation/): 20 материалов
+- [PlayStation](https://geekovski.ru/playstation/): 21 материал
 - [PC-игры](https://geekovski.ru/pc/): 38 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 39 материалов
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 82 материала; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 99 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 100 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 37 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Инсайдер: Intergalactic выйдет в конце 2027 года](https://geekovski.ru/2026-11-25-1000-insayder-intergalactic-konec-2027.html): 24 ноября инсайдер NateTheHate сказал, что Naughty Dog целится в конец 2027 года, хотя раньше Bloomberg описывал внутренний ориентир на середину. Игра уже проходима от начала до конца, студия полирует её, а официальной даты у Sony по-прежнему нет. (25.11.2026)
 - [Tidal удалит 29 млн ИИ-треков с 9 декабря](https://geekovski.ru/2026-11-25-0800-tidal-ai-music.html): Tidal с 9 декабря начнёт удалять полностью сгенерированные нейросетями треки — к концу года это больше 29 млн песен, около 6,3 % каталога. За последние 90 дней 43 % загрузок на сервис были сделаны ИИ. Это первый крупный стриминг, который не ставит ярлык, а выносит музыку за дверь. (25.11.2026)
 - [Tarkov перешла на Unity 6: что даёт патч 1.3.5.0](https://geekovski.ru/2026-11-24-2100-tarkov-unity-6.html): Battlestate выпустила патч 1.3.5.0 — Escape from Tarkov переехала на Unity 6, графика собрана в единую платформу RenderStack, переписана загрузка рейдов и починены утечки памяти. DirectX 12, FSR 4 и DLSS Frame Generation в патч не вошли: движок только открыл под них дорогу. (24.11.2026)
 - [Сотрудники OpenAI и Anthropic: новые модели нельзя выпускать](https://geekovski.ru/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html): Axios поговорил с более чем двумя десятками людей внутри OpenAI, Anthropic и вокруг них: неопубликованные модели компаний заметно сильнее публичных, и удержать их во внутренних тестах всё труднее. Внутри лабораторий обсуждают не то, как безопаснее выпустить следующий релиз, а стоит ли выпускать его вообще. Официального заявления нет — это репортаж со ссылкой на анонимные источники. (24.11.2026)
@@ -351,6 +352,7 @@
 - ["Clive Barker's Hellraiser: Revival"](https://geekovski.ru/titles/hellraiser-revival.html): 2026
 - [Hogwarts Legacy](https://geekovski.ru/titles/hogwarts-legacy.html): 2023
 - [«Голодные игры: Рассвет жатвы»](https://geekovski.ru/titles/hunger-games-rassvet-zhatvy.html): 2026
+- [Intergalactic: The Heretic Prophet](https://geekovski.ru/titles/intergalactic-the-heretic-prophet.html): 2027
 - [Властелин колец: Кольца власти, сезон 3](https://geekovski.ru/titles/kolca-vlasti-3-sezon.html): 2026
 - [League of Legends](https://geekovski.ru/titles/league-of-legends.html): 2009
 - [Marvel's Blade](https://geekovski.ru/titles/marvels-blade.html): 2027

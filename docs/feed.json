@@ -8,6 +8,72 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-25-1000-insayder-intergalactic-konec-2027.html",
+   "url": "https://geekovski.ru/2026-11-25-1000-insayder-intergalactic-konec-2027.html",
+   "title": "Инсайдер: Intergalactic выйдет в конце 2027 года",
+   "summary": "24 ноября инсайдер NateTheHate сказал, что Naughty Dog целится в конец 2027 года, хотя раньше Bloomberg описывал внутренний ориентир на середину. Игра уже проходима от начала до конца, студия полирует её, а официальной даты у Sony по-прежнему нет.",
+   "date_published": "2026-11-25T10:00:00+03:00",
+   "date_modified": "2026-11-25T10:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/intergalactic-konec-2027-cover.jpg",
+   "_sources": [
+    {
+     "name": "PlayStation Blog — анонс Intergalactic",
+     "url": "https://blog.playstation.com/2024/12/12/announcing-intergalactic-the-heretic-prophet-a-new-franchise-from-naughty-dog"
+    },
+    {
+     "name": "GameMAG — инсайд NateTheHate о конце 2027 года",
+     "url": "https://gamemag.ru/news/202291/insayder-soobshchil-sroki-vyhoda-intergalactic-the-heretic-prophet-ot-naughty-dog"
+    },
+    {
+     "name": "VGTimes — отчёт о новом окне релиза",
+     "url": "https://vgtimes.com/gaming-news/175602-intergalactic-the-heretic-prophet-reportedly-targeting-late-2027-release.html"
+    },
+    {
+     "name": "«Лента.ру» — пересказ инсайда и слова Дракманна",
+     "url": "https://lenta.ru/news/2026/11/25/intergalactic"
+    },
+    {
+     "name": "Kotaku — Дракманн о финальной стадии производства",
+     "url": "https://kotaku.com/neil-druckman-intergalactic-the-heretic-prophet-2027-playable-polish-2000756229"
+    },
+    {
+     "name": "Game Informer — Дракманн о полном показе в 2027 году",
+     "url": "https://gameinformer.com/2026/09/29/naughty-dog-will-fully-reveal-intergalactic-the-heretic-prophet-in-2027-but-is-going"
+    },
+    {
+     "name": "The Verge — перенос God of War Laufey на 20 мая 2027 года",
+     "url": "https://www.theverge.com/games/1026448/sony-playstation-god-of-war-laufey-delay"
+    },
+    {
+     "name": "PlayStation Blog — Laufey: предзаказы и обновлённая дата",
+     "url": "https://blog.playstation.com/2026/09/28/god-of-war-laufey-pre-orders-available-starting-september-29-editions-detailed"
+    },
+    {
+     "name": "Insider Gaming — Bloomberg о переработках в Naughty Dog",
+     "url": "https://insider-gaming.com/naughty-dog-making-overtime-mandatory-for-intergalactic-developers/"
+    },
+    {
+     "name": "PC Gamer — детали отчёта о переработках",
+     "url": "https://www.pcgamer.com/games/naughty-dog-developers-reportedly-hit-with-mandatory-overtime-to-finish-an-internal-demo-for-its-upcoming-sci-fi-game-intergalactic-the-heretic-prophet/"
+    },
+    {
+     "name": "Twisted Voxel — Шрайер о том, когда студия переключилась на Intergalactic",
+     "url": "https://twistedvoxel.com/majority-of-naughty-dog-wasnt-working-on-intergalactic-until-the-last-of-us-online-canceled/"
+    },
+    {
+     "name": "IGN — расписание эксклюзивов PS5",
+     "url": "https://www.ign.com/articles/upcoming-ps5-games"
+    },
+    {
+     "name": "Wikipedia — Intergalactic: The Heretic Prophet",
+     "url": "https://en.wikipedia.org/wiki/Intergalactic:_The_Heretic_Prophet"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-25-0800-tidal-ai-music.html",
    "url": "https://geekovski.ru/2026-11-25-0800-tidal-ai-music.html",
    "title": "Tidal удалит 29 млн ИИ-треков с 9 декабря",
