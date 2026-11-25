@@ -7,7 +7,7 @@ summary: GPD 16 ноября раскрыла характеристики WIN M
 tldr: WIN Mini Ultra построен на Intel Arc G3 Extreme — 14 ядер, графика Arc B390 с 12 ядрами Xe3, TDP до 45 Вт | Экран вырос с 7 до 8 дюймов (1920×1200, 48–120 Гц, 575 нит), батарея — с 44 до 56 Вт·ч, память — до 64 ГБ LPDDR5X | Главная плата за апгрейд — вес: 845 г против 555 г у WIN Mini 2025; цену и дату старта GPD ещё не назвала
 cover: /assets/img/gpd-win-mini-ultra.jpg
 pin: /assets/img/2026-11-16-1000-gpd-win-mini-ultra-pin.jpg
-credit: Изображения: пресс-кадры GPD.
+credit: пресс-кадры GPD.
 sources: ITHome — официальный анонс WIN Mini Ultra | https://www.ithome.com/1/027/532.htm; Ifeng — конфигурация и размеры | https://feng.ifeng.com/c/8y5zLa8cY8L; DROIX — полная таблица характеристик и замеры GPD | https://droix.net/blogs/gpd-win-mini-ultra-announced/; TechPowerUp — GPD WIN Max 3 за $1750 | https://www.techpowerup.com/351768/gpd-win-max-3-handhelds-usd-1-750-is-the-best-price-which-we-can-provide; Notebookcheck — предварительный обзор Win Mini Ultra | https://www.notebookcheck.net/New-GPD-Win-Mini-Ultra-previewed-before-release-with-VRR-display-and-Intel-Arc-B390-graphics.1448794.0.html; Хабр — GPD Win Mini 2025 и его цены | https://habr.com/ru/articles/873780/
 ---
 

@@ -7,7 +7,7 @@ summary: По данным Bloomberg, Apple представит первые у
 tldr: Анонс на WWDC в июне 2027, продажи до конца 2027 года — Марк Гурман, Bloomberg | В первой модели не будет AR-дисплея: управление голосом через Siri, камеры распознают окружение | Прототипы тоньше Ray-Ban Meta второго поколения; зарядка — магнитный трёхконтактный разъём размером с Tic Tac
 cover: /assets/img/apple-park.jpg
 pin: /assets/img/2026-11-18-apple-n50-ochki-pin.jpg
-credit: Изображения: Daniel Lu, CCadio / Wikimedia Commons, CC BY-SA 4.0 и CC BY 4.0.
+credit: Daniel Lu, CCadio / Wikimedia Commons, CC BY-SA 4.0 и CC BY 4.0.
 sources: MacRumors — детали из отчёта Гурмана | https://macrumors.com/2026/11/15/apple-smart-glasses-hinge-on-siri; Bloomberg — Power On, 15 ноября | https://www.bloomberg.com/news/newsletters/2026-11-15/apple-siri-ai-app-integrations-power-smart-glasses-iphone-duo-2-face-id-plan; Tom's Guide — чем отличаются от Vision Pro | https://tomsguide.com/computing/smart-glasses/apples-first-smart-glasses-are-finally
 ---
 

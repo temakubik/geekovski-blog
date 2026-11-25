@@ -7,7 +7,7 @@ summary: Netflix назвал дату возвращения «Задачи т�
 tldr: Премьера второго сезона — 14 января 2027 года, тизер-трейлер выходит 17 ноября | Второй сезон, по сообщениям, короче первого: шесть эпизодов вместо восьми, Netflix это не подтверждал | Третий сезон финальный и снимался подряд со вторым в Будапеште; по налоговым документам Венгрии на два сезона ушло около $260 млн
 cover: /assets/img/zadacha-treh-tel-2-sezon.jpg
 pin: /assets/img/2026-11-17-0800-zadacha-treh-tel-2-sezon-pin.jpg
-credit: Изображения: Astrobond / Wikimedia Commons, CC BY-SA 4.0; SCJiang / Wikimedia Commons, CC BY-SA 4.0; H. Raab / Wikimedia Commons, CC BY-SA 4.0; Prolete / Wikimedia Commons, CC0; Coolcaesar / Wikimedia Commons, CC BY-SA 3.0.
+credit: Astrobond / Wikimedia Commons, CC BY-SA 4.0; SCJiang / Wikimedia Commons, CC BY-SA 4.0; H. Raab / Wikimedia Commons, CC BY-SA 4.0; Prolete / Wikimedia Commons, CC0; Coolcaesar / Wikimedia Commons, CC BY-SA 3.0.
 sources: Deadline — «3 Body Problem» Sets Season 2 Release Date At Netflix | https://deadline.com/2026/11/3-body-problem-season-2-release-date-netflix-1237225311/; The Hollywood Reporter — Netflix's «3 Body Problem» Gets Season 2 Premiere Date, Trailer Coming Tomorrow | https://www.hollywoodreporter.com/tv/tv-news/3-body-problem-season-2-date-when-netflix-1236755059/; Netflix Tudum — 3 Body Problem Begins Production on Season 2 | https://www.netflix.com/tudum/articles/3-body-problem-renewed; What's on Netflix — Season 2 Confirmed to Have Reduced Episode Count | https://www.whats-on-netflix.com/news/3-body-problem-season-2-confirmed-to-have-reduced-episode-count/; Wikipedia — 3 Body Problem (TV series) | https://en.wikipedia.org/wiki/3_Body_Problem_(TV_series)
 ---
 

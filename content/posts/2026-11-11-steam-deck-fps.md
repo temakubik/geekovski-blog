@@ -7,7 +7,7 @@ summary: Valve показала в магазине реальный FPS игр 
 tldr: 9 ноября Valve добавила на страницы Steam средний FPS и гистограммы для игр на Steam Deck | Verified означает совместимость, а не плавность — теперь это видно по цифрам | Путь к Deck занял 13 лет: Steam Machines (2013–2015) провалились, Deck вышел в 2022-м, OLED — в 2023-м, а в 2026-м цены выросли на 43–46%
 cover: /assets/img/steamdeck-oled.jpg
 pin: /assets/img/2026-11-11-steam-deck-fps-pin.jpg
-credit: Изображения: SparklesTrainNerd, Sergey Galyonkin, Valve — Wikimedia Commons (CC BY-SA) и пресс-служба Valve.
+credit: SparklesTrainNerd, Sergey Galyonkin, Valve — Wikimedia Commons (CC BY-SA) и пресс-служба Valve.
 sources: Valve — Steam Deck Framerate (новость Steam) | https://store.steampowered.com/news/app/593110/view/685269801333948419; Ars Technica — разбор данных Valve | https://arstechnica.com/gaming/2026/11/steam-deck-performance-gets-a-reality-check-with-valves-new-fps-data/; BBC — подорожание Steam Deck на 40% | https://www.bbc.com/news/articles/cz725d5d1x7o; IGN — Valve о планах на Steam Deck 2 | https://www.ign.com/articles/valve-says-ram-crisis-hasnt-affected-plans-for-steam-deck-2; Wikipedia — Steam Deck | https://en.wikipedia.org/wiki/Steam_Deck; Wikipedia — Steam Machine | https://en.wikipedia.org/wiki/Steam_Machine; PC Gamer — что случилось со Steam Machines | https://www.pcgamer.com/what-happened-to-steam-machines/
 ---
 

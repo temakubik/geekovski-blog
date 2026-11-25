@@ -7,7 +7,7 @@ summary: Sony закрывает приложение PS Plus для Windows: 10
 tldr: Приложение PS Plus для Windows перестанет работать 10 декабря 2026 года | Sony: облачным стримингом на ПК пользовались меньше 0,4% подписчиков Premium | Альтернативы остаются — консоль PlayStation и портативный Portal; ПК-версии эксклюзивов Sony тоже сворачивает
 cover: /assets/img/ps-controller.jpg
 pin: /assets/img/2026-11-12-ps-plus-pc-otkluchenie-pin.jpg
-credit: Изображения: Chris Woodrich, Osh33m / Wikimedia Commons, CC BY-SA 4.0.
+credit: Chris Woodrich, Osh33m / Wikimedia Commons, CC BY-SA 4.0.
 sources: The Verge — приложение PS Plus для ПК закрывают | https://www.theverge.com/games/1031144/sony-playstation-plus-windows-pc-app-shutting-down; VGC — Sony объявила о конце стриминга на ПК | https://videogameschronicle.com/news/playstation-announces-end-of-pc-streaming-in-december
 ---
 

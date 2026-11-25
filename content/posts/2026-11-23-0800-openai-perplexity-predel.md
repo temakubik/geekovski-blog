@@ -7,7 +7,7 @@ summary: 22 ноября главный научный сотрудник OpenAI
 tldr: GPT-3.5 на этой шкале — 0.99, GPT-4 — 0.91, нынешние модели OpenAI ушли ниже 0.8 | компания предлагает общий предел, который нельзя переходить до появления замены CoT-мониторингу | оговорок в тексте четыре, и главная — метрику нельзя честно сравнить между лабораториями
 cover: /assets/img/openai-perplexity-server-racks.jpg
 pin: /assets/img/2026-11-23-0800-openai-perplexity-predel-pin.jpg
-credit: Изображения: Victor Grigas / Wikimedia Commons, CC BY-SA 3.0; TechCrunch / Wikimedia Commons, CC BY 2.0; Village Global / Wikimedia Commons, CC BY 2.0; SimonWaldherr / Wikimedia Commons, CC BY-SA 4.0
+credit: Victor Grigas / Wikimedia Commons, CC BY-SA 3.0; TechCrunch / Wikimedia Commons, CC BY 2.0; Village Global / Wikimedia Commons, CC BY 2.0; SimonWaldherr / Wikimedia Commons, CC BY-SA 4.0
 sources: OpenAI — Perplexity and Intelligence (Якуб Пачоцкий) | https://openai.com/index/perplexity-and-intelligence/; TechCrunch — разбор предложения | https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/; Dario Amodei — We Must Pace the Frontier | https://darioamodei.com/post/we-must-pace-the-frontier; OpenAI — CoT monitorability across the model lifecycle | https://alignment.openai.com/cot-monitorability-model-lifecycle; Anthropic — цена размещения акций (19 ноября) | https://www.anthropic.com/news/anthropic-prices-initial-public-offering; Сэм Альтман в X | https://x.com/sama/status/2124551594691932405
 ---
 

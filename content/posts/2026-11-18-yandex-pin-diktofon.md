@@ -8,7 +8,7 @@ summary: Яндекс готовит носимый диктофон «Пин» 
 tldr: Официально Яндекс анонсировал диктофон с Алисой Про ещё в октябре 2025-го: карта из алюминия, 80 часов записи, аппаратное шифрование | Утечка 17 ноября: обзор Синодова, Яндекс просил удалить, журналист отказался; по слухам запуск 24 ноября | Ориентир по цене — Plaud NotePin за 25 900 ₽; подписки, по пересказу, 600 и 1200 ₽ в месяц
 cover: /assets/img/yandex-pin-side.jpg
 pin: /assets/img/2026-11-18-yandex-pin-diktofon-pin.jpg
-credit: Изображения: пресс-служба Яндекса; фото распаковки — Юрий Синодов.
+credit: пресс-служба Яндекса; фото распаковки — Юрий Синодов.
 sources: Яндекс — анонс диктофона с Алисой Про | https://yandex.ru/company/news/30-10-2025-05; Mobile-Review — колонка Эльдара Муртазина | https://mobile-review.com/all/articles/analytics/skrytaya-zapis-razgovorov-vokrug-sebya-novyj-i; Техноновости — утечка обзора Синодова | https://techno-news.net/2026/11/17/news_81811/; 3DNews — товарные знаки Яндекса | https://3dnews.ru/1144492/yandeks-razrabativaet-novie-iiustroystva-pin-hronum-i-drugie-z
 ---
 

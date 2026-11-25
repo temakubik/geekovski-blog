@@ -7,7 +7,7 @@ summary: Яндекс официально представил Пин — но�
 tldr: 19 990 ₽ за устройство, бесплатно — 10 часов расшифровки в месяц | 50 часов — 690 ₽ в месяц, безлимит — 1190 ₽, первые три месяца без ограничений | Круглый корпус 34 × 12 мм, около 16 г, три микрофона, до 24 часов работы
 cover: /assets/img/yandex-pin-launch-cover.jpg
 pin: /assets/img/2026-11-24-1500-yandex-pin-zapusk-pin.jpg
-credit: Изображения: пресс-служба Яндекса
+credit: пресс-служба Яндекса
 sources: Яндекс — страница Яндекс Пина, характеристики и тарифы | https://alice.yandex.ru/wearables/pin; RB.ru — анонс, цена и подписки | https://rb.ru/news/yandeks-predstavil-novoe-nosimoe-ustrojstvo-s-ii-pin-zapisyvaet-vstrechi-i-napominaet-o-zadachah/; РБК — подтверждение пресс-службы, цена и тарифы | https://www.rbc.ru/rbcfreenews/6b045d3a5e4dd4c2bc5ccb7a; Код Дурова — детали устройства и старт продаж | https://kod.ru/yandex-pin-predstavlen; CNews — хранение записей и привязка к аккаунту | https://www.cnews.ru/news/top/2026-11-24_yandeks_sozdal_ustrojstvo
 ---
 

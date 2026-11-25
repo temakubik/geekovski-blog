@@ -7,7 +7,7 @@ summary: 16 ноября Первый канал начинает показ д�
 tldr: Премьера 16 ноября 2026 года на Первом канале, позже сериал покажет Okko | 1984 год, Южный порт, автомобильная мафия; Черкасов (Андрей Смоляков) расследует убийство частным порядком | В касте Филипп Янковский, Софья Эрнст, Никита Шаманов, Елена Подкаминская; режиссёр Евгений Звездаков
 cover: /assets/img/mosgaz-car.jpg
 pin: /assets/img/2026-11-12-mosgaz-12-yuzhny-port-pin.jpg
-credit: Изображения: Merkushev Vladimir / Wikimedia, CC BY 3.0; Artyom Svetlov / Wikimedia, CC BY 4.0. Кадры не из сериала.
+credit: Merkushev Vladimir / Wikimedia, CC BY 3.0; Artyom Svetlov / Wikimedia, CC BY 4.0. Кадры не из сериала.
 sources: InterMedia — премьера и состав | https://www.intermedia.ru/news/408009; КиноРяд — сюжет и дата | https://kinoryad.ru/news/mosgaz-delo-12-yuzhnyy-port-data-vykhoda-seriala-132df; TV Mag — объявление даты | https://tvmag.ru/article/serials/2026-11-10-pervyy-kanal-obyavil-o-starte-v-efire-12-sezon
 ---
 

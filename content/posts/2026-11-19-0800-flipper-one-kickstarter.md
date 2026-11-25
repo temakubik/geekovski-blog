@@ -7,7 +7,7 @@ summary: Flipper Devices открыла сборы на Flipper One — карм
 tldr: Flipper One — не наследник Flipper Zero, а Linux-компьютер на RK3576 с 8 ГБ памяти и двумя гигабитными портами; NFC, RFID и Sub-1 ГГц в нём нет вообще | Кампания на Kickstarter: $399 за устройство, $59 за LoRa-модуль, $149 за SDR и $219 за 5G; миллион долларов собрали за десять минут, к утру 19 ноября — больше $12 млн | Подвох в цене и сроках: компания продаёт железо по себестоимости из-за дефицита памяти, а поставки назначены только на июль 2027 года
 cover: /assets/img/flipper-one-cover.jpg
 pin: /assets/img/2026-11-19-0800-flipper-one-kickstarter-pin.jpg
-credit: Изображения: Flipper Devices.
+credit: Flipper Devices.
 sources: Flipper — страница Flipper One | https://flipper.net/pages/flipper-one; Kickstarter — кампания Flipper One | https://www.kickstarter.com/projects/flipper-devices/flipper-one; XDA Developers — разбор железа и модулей | https://www.xda-developers.com/flipper-one-launches-kickstarter-trading-nfc-rfid-linux/; The Verge — предзаказ и характеристики | https://www.theverge.com/tech/1034392/flipper-devices-one-zero-pocket-linux-computer-multi-tool-preorder-kickstarter; rtl-sdr.com — 23 тысячи бэкеров и $12 млн | https://www.rtl-sdr.com/flipper-one-launches-on-kickstarter-a-linux-multi-tool-with-an-optional-sdr-module-and-mt7921-wi-fi/; heise online — ход кампании и сроки | https://www.heise.de/en/news/Record-Breaking-Crowdfunding-Flipper-One-Available-to-Preorder-on-Kickstarter-11528918.html; Rozetked — российский разбор анонса | https://rozetked.me/news/49533-flipper-devices-nachala-sbor-sredstv-na-miniatyurnyy-arm-komp-yuter-flipper-one; Flipper Docs — статус mainline-ядра | https://docs.flipper.net/one/cpu-software/rk3576-mainlining
 ---
 

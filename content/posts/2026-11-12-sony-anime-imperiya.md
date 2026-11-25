@@ -7,7 +7,7 @@ summary: Sony делает аниме главным драйвером рост
 tldr: Аниме-рынок — $28 млрд и один из самых быстрорастущих в индустрии развлечений | Иваками: «с „Клинком“ мы хотим, чтобы франшиза жила 10–20, а может, 50–100 лет» | Sony уже крупнейший акционер Kadokawa, вместе с Crunchyroll создала студию Hayate и открыта к инвестициям в Shueisha
 cover: /assets/img/sony-anime-akiba.jpg
 pin: /assets/img/2026-11-12-sony-anime-imperiya-pin.jpg
-credit: Изображения: Akiba denkigai, IQRemix / Wikimedia Commons, CC0 и CC BY-SA 2.0.
+credit: Akiba denkigai, IQRemix / Wikimedia Commons, CC0 и CC BY-SA 2.0.
 sources: The Business Times — интервью о ставке на аниме | https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/sony-bets-homegrown-anime-fuel-decades-future-growth; Anime News Network — Crunchyroll Storyworks и Hayate | https://animenewsnetwork.com/news/2026-10-07/sony-pictures-entertainment-launches-crunchyroll-storyworks-division-for-anime-li
 ---
 

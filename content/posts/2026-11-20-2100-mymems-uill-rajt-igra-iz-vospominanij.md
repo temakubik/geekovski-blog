@@ -7,7 +7,7 @@ summary: Создатель SimCity и The Sims показал MyMems — моб
 tldr: Gallium Studios Уилла Райта подключила Behavior Engine от Artificial Agency и целится в релиз MyMems в 2027 году | Игрок наговаривает воспоминания в телефон, игра генерирует из них объекты на карте и ИИ-аватаров реальных людей | Свою модель поведения MemDNA разработчики описывают как локальную, но независимой проверки приватности пока нет
 cover: /assets/img/mymems-uill-rajt-igra-iz-vospominanij.jpg
 pin: /assets/img/2026-11-20-2100-mymems-uill-rajt-igra-iz-vospominanij-pin.jpg
-credit: Изображения: Gallium Studios и Artificial Agency — официальные материалы пресс-релиза от 18 ноября 2026 года и ролика анонса MyMems.
+credit: Gallium Studios и Artificial Agency — официальные материалы пресс-релиза от 18 ноября 2026 года и ролика анонса MyMems.
 sources: Gallium Studios и Artificial Agency — пресс-релиз о партнёрстве | https://www.artificial.agency/news/gallium; The Verge — интервью Уилла Райта о MyMems | https://www.theverge.com/games/1036140/will-wright-mymems-ai-game-interview; Ars Technica — разбор анонса и истории Proxi | https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/; Gallium Studios — сайт MyMems и набор в ранний круг | https://galliumstudios.com/; YouTube — ролик анонса MyMems | https://www.youtube.com/watch?v=QrhvFz_YzQg
 ---
 

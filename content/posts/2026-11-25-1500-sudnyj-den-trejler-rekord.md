@@ -7,7 +7,7 @@ summary: Финальный трейлер «Мстителей: Судного 
 tldr: 563 млн просмотров за 24 часа — рекорд Disney; прежний держал тизер того же фильма с 503 млн | В истории кинотрейлеров выше только «Человек-паук: Совершенно новый день» — 718,6 млн за сутки | Продано предпродаж на $50 млн, 70 % из них — премиум-форматы; домашний дебют прогнозируют на $340–369 млн
 cover: /assets/img/sudnyj-den-trejler-cover.jpg
 pin: /assets/img/2026-11-25-1500-sudnyj-den-trejler-rekord-pin.jpg
-credit: Изображения: иллюстрации GEEKOVSKI.
+credit: иллюстрации GEEKOVSKI.
 sources: Deadline — рекорд просмотров | https://deadline.com/2026/11/avengers-doomsday-final-trailer-viewership-record-1237232943/; Euronews — второй результат в истории, последняя роль Патрика Стюарта | https://www.euronews.com/2026/11/25/avengers-doomsday-final-trailer-breaks-records-to-become-second-most-viewed-of-all-time; Cybersport — рекорд, метрики соцсетей и дата проката в СНГ | https://cybersport.metaratings.ru/news/finalnyj-trejler-mstitelej-sudnyj-den-stal-samym-populyarnym-v-istorii-disney-674423/; TheWrap — $50 млн предпродаж за три месяца до премьеры | https://www.thewrap.com/creative-content/movies/avengers-doomsday-presales-50-million-before-release/; TheWrap — $16,5 млн за первые сутки в премиум-форматах | https://www.thewrap.com/industry-news/box-office/avengers-doomsday-presales-first-day-infinity-vision/; Boxoffice Pro — прогноз «Дюны: Часть 3» | https://www.boxofficepro.com/long-range-forecast-dune-part-3-aims-for-a-series-high-debut-as-it-opens-against-avengers-doomsday/; IMDb — сводка рекорда | https://www.imdb.com/news/ni66127363/
 ---
 

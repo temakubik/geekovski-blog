@@ -7,7 +7,7 @@ summary: 22 ноября Reto под лицензией Kodak выпустила
 tldr: 1,54 дюйма шестицветного e-ink на 240×240 точек, 16,6 грамма, батарейка CR2032 меняется вручную — картинка держится без питания месяцами | Работает в сетях Apple Find My и Google Find Hub, но без UWB: точного наведения на предмет, как у AirTag 2 и Pixel Tag, здесь нет | $34,99 за коробку и $279,92 за набор из восьми — набор не дешевле, а секретный серебристый дизайн выпадает с шансом 1 к 64
 cover: /assets/img/slidetag-cover.jpg
 pin: /assets/img/2026-11-23-1000-kodak-slidetag-breklok-pin.jpg
-credit: Изображения: Kodak / Reto — пресс-материалы.
+credit: Kodak / Reto — пресс-материалы.
 sources: PetaPixel — анонс SlideTag | https://petapixel.com/2026/11/22/kodak-slidetag-is-a-35-blind-box-e-ink-photo-display-and-airtag-alternative/; PetaPixel — обзор SlideTag, выбор редакции | https://petapixel.com/2026/11/22/kodak-slidetag-review-this-e-ink-equipped-airtag-keychain-rocks/; Digital Trends — характеристики и отсутствие UWB | https://www.digitaltrends.com/phones/kodaks-slidetag-puts-your-photos-on-a-keychain-and-it-can-help-you-find-your-stuff-too/; Digital Camera World — цены и дизайны | https://www.digitalcameraworld.com/tech/digital-photo-frames/kodachrome-makes-unexpected-comeback-as-kodak-slidetag-a-cute-keychain-digital-photo-frame-with-built-in-tracker; Магазин Kodak (Reto) — спецификации и условия слепых коробок | https://www.kodak.retopro.co/products/kodak-slidetag-br-keychain-photo-display-and-tracker-blind-box; TechRepublic — AirTag 2 и Pixel Tag по $29 | https://www.techrepublic.com/article/news-google-pixel-tag-vs-airtag-2/; 9to5Google — Pixel Tag в продаже | https://9to5google.com/2026/11/10/google-pixel-tag-launches/
 ---
 
