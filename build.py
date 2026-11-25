@@ -296,8 +296,9 @@ def md(text: str) -> str:
         if mi:
             flush()
             alt, src = mi.group(1), mi.group(2)
-            out.append('<figure class="post__fig"><img src="%s" alt="%s" loading="lazy"></figure>' % (
-                html.escape(src), html.escape(alt)))
+            # image_tag подставляет width/height из файла: без них картинка
+            # занимает нулевую высоту и текст прыгает, когда она догрузится
+            out.append('<figure class="post__fig">%s</figure>' % image_tag(src, alt))
             continue
         m = re.match(r"^(#{2,4})\s+(.*)$", s)
         if m:
