@@ -349,10 +349,115 @@
    "crawled": "",
    "canonical": "",
    "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-1800-kolca-vlasti-3-sezon.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-2100-pixel-tag.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-h3vr2-quest3.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-hunger-games-rassvet-zhatvy.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-marvel-rivals-season-11.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-steam-deck-fps.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-11-switch2-mariokart-bundle.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-0800-nvidia-huang-otstavka.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-1000-metaphor-refantazio-switch-2.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-1200-ebenezer-depp-scrooge.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-1500-golden-joystick-2026.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-1800-disk-bolshe-ne-igra.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-2100-xbox-25-let-firefight.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-gta6-yaponiya-cenzura.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-hail-mary-vr.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-25"
   }
  },
- "pointer": 50,
- "rounds": 4,
+ "pointer": 65,
+ "rounds": 5,
  "history": [
   {
    "date": "2026-11-25",
@@ -372,6 +477,11 @@
   {
    "date": "2026-11-25",
    "total": 50,
+   "indexed": 22
+  },
+  {
+   "date": "2026-11-25",
+   "total": 65,
    "indexed": 22
   }
  ]

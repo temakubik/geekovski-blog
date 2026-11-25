@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude и OpenAI доказали VP ≠ VNP. Никто не проверил — GEEKOVSKI</title>
+<meta name="description" content="В ночь с 23 на 24 ноября Anthropic и OpenAI выложили на GitHub два независимых доказательства гипотезы Вэлианта — «алгебраической» версии P против NP, открытой в 1979 году. Оба доказательства проходят машинную проверку в Lean 4, но ни одно не читал математик: Anthropic прямо пишет, что человеческой проверки не было.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://geekovski.ru/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html">
+<meta property="og:title" content="Claude и OpenAI доказали VP ≠ VNP. Никто не проверил — GEEKOVSKI">
+<meta property="og:description" content="В ночь с 23 на 24 ноября Anthropic и OpenAI выложили на GitHub два независимых доказательства гипотезы Вэлианта — «алгебраической» версии P против NP, открытой в 1979 году. Оба доказательства проходят машинную проверку в Lean 4, но ни одно не читал математик: Anthropic прямо пишет, что человеческой проверки не было.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GEEKOVSKI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://geekovski.ru/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html">
+<meta property="og:image" content="https://geekovski.ru/assets/img/vp-vnp-proofs-cover.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Claude и OpenAI доказали VP ≠ VNP. Никто не проверил">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude и OpenAI доказали VP ≠ VNP. Никто не проверил — GEEKOVSKI">
+<meta name="twitter:description" content="В ночь с 23 на 24 ноября Anthropic и OpenAI выложили на GitHub два независимых доказательства гипотезы Вэлианта — «алгебраической» версии P против NP, открытой в 1979 году. Оба доказательства проходят машинную проверку в Lean 4, но ни одно не читал математик: Anthropic прямо пишет, что человеческой проверки не было.">
+<meta property="article:published_time" content="2026-11-25T18:00:00+03:00">
+<meta property="article:modified_time" content="2026-11-25T18:00:00+03:00">
+<meta property="article:section" content="AI">
+<meta property="article:author" content="GEEKOVSKI">
+<!--  — бренд-набор 2026-11-13: браузеры и Google держат favicon в своём кэше
+     неделями и max-age не уважают; при следующей замене знака номер поднять. -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="icon" type="image/png" sizes="120x120" href="/assets/img/favicon-120.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#F1F4F9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GEEKOVSKI">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="yandex-verification" content="acc866b9b963f469">
+<meta name="zen-verification" content="fcazccy74hGDyQJiYWhzVO7N3Kee8a2dhQQxuO7BiCeonKzNJ8udV93xNXeCPUpJ" />
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — лента" href="/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="GEEKOVSKI — дайджесты" href="/feed.xml">
+<link rel="alternate" type="application/feed+json" title="GEEKOVSKI — JSON-лента" href="/feed.json">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<link rel="stylesheet" href="/assets/fonts.css">
+<link rel="stylesheet" href="/assets/theme.css?v=a4d7f94e4764">
+<link rel="stylesheet" href="/assets/brand.css">
+<script>
+document.documentElement.dataset.js = '';
+try {
+  const mode = localStorage.getItem('gv-mode');
+  if (mode) document.documentElement.dataset.mode = mode;
+  if (localStorage.getItem('gv-sidebar') === 'compact') document.documentElement.dataset.sidebar = 'compact';
+} catch (e) {}
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114070859', 'ym');
+
+    ym(114070859, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114070859" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Top.Mail.Ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3816456;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+<!-- /Top.Mail.Ru counter -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://geekovski.ru/#organization","name":"GEEKOVSKI","url":"https://geekovski.ru/","description":"Технологии, игры и кино без маркетингового сиропа","sameAs":["https://vk.com/geekovskiread"],"logo":{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/icon-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://geekovski.ru/#website","url":"https://geekovski.ru/","name":"GEEKOVSKI","description":"Технологии, игры и кино без маркетингового сиропа","inLanguage":"ru-RU","publisher":{"@id":"https://geekovski.ru/#organization"}},{"@type":"NewsArticle","@id":"https://geekovski.ru/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html#article","headline":"Claude и OpenAI доказали VP ≠ VNP. Никто не проверил","description":"В ночь с 23 на 24 ноября Anthropic и OpenAI выложили на GitHub два независимых доказательства гипотезы Вэлианта — «алгебраической» версии P против NP, открытой в 1979 году. Оба доказательства проходят машинную проверку в Lean 4, но ни одно не читал математик: Anthropic прямо пишет, что человеческой проверки не было.","datePublished":"2026-11-25T18:00:00+03:00","dateModified":"2026-11-25T18:00:00+03:00","inLanguage":"ru-RU","mainEntityOfPage":{"@type":"WebPage","@id":"https://geekovski.ru/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html"},"author":{"@id":"https://geekovski.ru/#organization"},"publisher":{"@id":"https://geekovski.ru/#organization"},"isAccessibleForFree":true,"articleSection":"AI","keywords":["AI","GEEKOVSKI"],"wordCount":1379,"isPartOf":{"@id":"https://geekovski.ru/#website"},"image":[{"@type":"ImageObject","url":"https://geekovski.ru/assets/img/vp-vnp-proofs-cover.jpg","width":1600,"height":900}],"citation":["https://github.com/anthropics/formal-math/tree/main/vp-vnp","https://github.com/anthropics/formal-math/blob/main/vp-vnp/paper.pdf","https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026","https://github.com/openai/math/blob/main/lean/OAI/Computability/VPVNP/ClassSeparation.lean","https://mlq.ai/news/anthropic-posts-a-claude-written-proof-checked-in-lean-that-claims-vp-and-vnp-differ-over-every-field","https://interestingengineering.com/ai-robotics/claude-proves-vp-not-vnp-valiant-conjecture","https://aiweekly.co/alerts/anthropic-posts-claude-authored-vp-vnp-proof-unverified","https://mezha.net/eng/news/mezha-806c58e53a5f3da0c7fc8b36_anthropic_and_openai"],"abstract":"23 ноября Anthropic выложила 70-страничную статью «VP ≠ VNP over every field», подписанную «Claude (Anthropic)», через пять часов OpenAI добавила свою версию на 30 страниц Оба доказательства формализованы в Lean 4 и проходят машинную проверку, включая независимое ядро nanoda, но ни один математик их ещё не разбирал Результат не решает P против NP: речь про алгебраические схемы над полем, а не про булевы"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Блог","item":"https://geekovski.ru/"},{"@type":"ListItem","position":2,"name":"Категории","item":"https://geekovski.ru/categories/"},{"@type":"ListItem","position":3,"name":"AI","item":"https://geekovski.ru/ai/"},{"@type":"ListItem","position":4,"name":"Claude и OpenAI доказали VP ≠ VNP. Никто не проверил","item":"https://geekovski.ru/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html"}]}]}</script>
+
+</head>
+<body class="t-editorial">
+<a class="skip-link" href="#main-content">К содержанию</a>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="/" aria-label="GEEKOVSKI — блог"><img class="brand__mark" src="/assets/img/geekovski-icon.svg" alt="" width="32" height="32"><img class="brand__logo brand__logo--dark" src="/assets/img/geekovski-logo.svg" alt="" width="418" height="80"><img class="brand__logo brand__logo--light" src="/assets/img/geekovski-logo-light.svg" alt="" width="418" height="80"></a>
+    <nav class="nav" id="site-nav" aria-label="Основное меню"><a class="nav__link nav__link--active" href="/" title="Блог"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span class="nav__label">Блог</span> <span class="nav__count">222</span></a><a class="nav__link" href="/categories/" title="Категории"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg><span class="nav__label">Категории</span> <span class="nav__count">9</span></a><a class="nav__link" href="/avtory/" title="Авторы"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span class="nav__label">Авторы</span></a><a class="nav__link" href="/calendar/" title="Календарь"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="15"/><path d="M8 3v4m8-4v4M4 10h16m-12 4h2m4 0h2"/></svg><span class="nav__label">Календарь</span></a><a class="nav__link" href="/digests/" title="Дайджесты"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M7 7h13v13H7zM4 17V4h13m-7 7h7m-7 4h7"/></svg><span class="nav__label">Дайджесты</span> <span class="nav__count">61</span></a><a class="nav__link" href="/titles/" title="Каталог"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 5h7v15H3zM14 5h4l3 14-4 1zM6 8h2m-2 4h2"/></svg><span class="nav__label">Каталог</span> <span class="nav__count">72</span></a></nav>
+    <div class="top__actions">
+      <div class="top__links"><a href="/rss.xml">RSS</a><a href="https://vk.com/geekovskiread">ВКонтакте</a></div><button class="theme-toggle" type="button" title="Сменить тему" aria-label="Сменить тему">◐</button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+    <button class="sidebar-toggle" type="button" aria-controls="site-nav" aria-expanded="true" aria-label="Свернуть меню" title="Свернуть меню"><svg class="sidebar-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg></button>
+</header>
+<main id="main-content" tabindex="-1" class="wrap post-page">
+<nav class="breadcrumbs" aria-label="Путь к странице"><ol><li><a href="/">Блог</a></li><li><a href="/categories/">Категории</a></li><li><a href="/ai/">AI</a></li></ol></nav>
+<article class="post cat-ai">
+  <header class="post__head">
+    <h1>Claude и OpenAI доказали VP ≠ VNP. Никто не проверил</h1>
+    <p class="post__lead">В ночь с 23 на 24 ноября Anthropic и OpenAI выложили на GitHub два независимых доказательства гипотезы Вэлианта — «алгебраической» версии P против NP, открытой в 1979 году. Оба доказательства проходят машинную проверку в Lean 4, но ни одно не читал математик: Anthropic прямо пишет, что человеческой проверки не было.</p>
+    <div class="post__creditline"><p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p><time datetime="2026-11-25T18:00:00+03:00">25 ноября 2026, 18:00</time></div>
+  </header>
+  <div class="reading-layout reading-layout--toc"><figure class="post__cover"><img src="/assets/img/vp-vnp-proofs-cover.jpg" alt="Claude и OpenAI доказали VP ≠ VNP. Никто не проверил" width="1600" height="900" fetchpriority="high"></figure><details class="article-toc" open><summary>Содержание</summary><nav aria-label="Содержание статьи"><ul><li><a href="#section-chto-takoe-vp-i-vnp-esli-sovsem-korotko">Что такое VP и VNP, если совсем коротко</a></li><li><a href="#section-chto-imenno-utverzhdaet-anthropic">Что именно утверждает Anthropic</a></li><li><a href="#section-chto-otvetila-openai">Что ответила OpenAI</a></li><li><a href="#section-chto-proveril-lean-i-chego-on-ne-proveril">Что проверил Lean — и чего он не проверил</a></li><li><a href="#section-chto-govoryat-matematiki">Что говорят математики</a></li><li><a href="#section-chem-eto-otlichaetsya-ot-istorii-s-gipotezoy-rimana">Чем это отличается от истории с гипотезой Римана</a></li><li><a href="#section-chto-dalshe">Что дальше</a></li></ul></nav></details><script>if(matchMedia("(max-width: 1169px)").matches)document.currentScript.previousElementSibling.open=false;</script><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>23 ноября Anthropic выложила 70-страничную статью «VP ≠ VNP over every field», подписанную «Claude (Anthropic)», через пять часов OpenAI добавила свою версию на 30 страниц</li><li>Оба доказательства формализованы в Lean 4 и проходят машинную проверку, включая независимое ядро nanoda, но ни один математик их ещё не разбирал</li><li>Результат не решает P против NP: речь про алгебраические схемы над полем, а не про булевы</li></ul></aside><div class="post__body"><p>Вечером 23 ноября, в 23:04 по Москве, в публичном репозитории Anthropic на GitHub появилась папка <code>vp-vnp</code>. Внутри — 70-страничная статья «VP ≠ VNP over every field» и формальное доказательство на Lean 4. В строке автора стоит не человек: «Claude (Anthropic)».</p>
+<p>Через пять часов, в 04:14 по Москве, в репозитории <code>openai/math</code> появилась своя папка — препринт «VP and VNP are different» на 30 страниц, тоже с формализацией. Ни пресс-релиза, ни поста в блоге, ни брифинга для журналистов не было ни у одной из компаний. Только коммиты.</p>
+<p>Обе работы утверждают одно и то же: классы VP и VNP не совпадают. Это гипотеза, которую Лесли Вэлиант сформулировал в 1979 году и которая 47 лет держалась без доказательства.</p>
+<figure class="post__fig"><img src="/assets/img/vp-vnp-matrix.jpg" alt="Абстрактная решётка вычислительных узлов: сложение и умножение в тёмном поле" loading="lazy"></figure>
+<h2 id="section-chto-takoe-vp-i-vnp-esli-sovsem-korotko">Что такое VP и VNP, если совсем коротко</h2>
+<p>В обычной теории сложности спрашивают, можно ли решить задачу быстро — это P против NP. В алгебраической сложности задачи другие: на вход дают многочлен, а считать разрешено только сложением и умножением, собирая схему из слагаемых и множителей. VP — это многочлены, которые такая схема вычисляет, если в ней полиномиальное число узлов. VNP — те, что получаются суммированием экспоненциально многих вариантов.</p>
+<p>Самый наглядный пример — два почти одинаковых объекта. Определитель матрицы считается быстро: методом Гаусса за полиномиальное время. Перманент выглядит как определитель, в котором все минусы заменили на плюсы, — и для него быстрого способа нет. Вэлиант предположил, что его и не будет: перманент лежит в VNP, но не в VP.</p>
+<figure class="post__fig"><img src="/assets/img/leslie-valiant.jpg" alt="Лесли Вэлиант, автор гипотезы 1979 года" loading="lazy"></figure>
+<p>Доказательство неравенства классов — это доказательство того, что никакой достаточно остроумный алгоритм не поможет. Такие результаты даются тяжелее всего: нужно исключить все возможные схемы сразу, а не придумать одну хорошую. Предыдущий рекорд для перманента — оценка порядка m² log m из работ Штрассена и Баура—Штрассена семидесятых и восьмидесятых годов. То есть почти полвека лучшая известная нижняя граница была смешной по сравнению с тем, что ожидали увидеть.</p>
+<p>И главное: это по-прежнему <strong>не</strong> P против NP. VP и VNP — про многочлены над полем, а не про булевы схемы. Обе компании это оговаривают у себя прямым текстом: результат не решает главную задачу тысячелетия.</p>
+<h2 id="section-chto-imenno-utverzhdaet-anthropic">Что именно утверждает Anthropic</h2>
+<p>Папка устроена как научная публикация, а не как анонс. README перечисляет результат, статья лежит рядом в PDF, доказательство — в виде кода. Формулировка README: для любого поля схемы для многочлена гамильтонова цикла, а для перманента — вне характеристики 2, требуют больше чем m^(c (log m)^(1/3)) узлов при всех достаточно больших m. То же верно для схем, которые лишь приближают значения. Отсюда вывод: VP — собственное подмножество VNP, и VNP не лежит даже в замыкании VP.</p>
+<p>Если перевести в привычные экспоненты, нижняя граница получается квазиполиномиальной — 2^Ω((log m)^(4/3)), тогда как лучшие известные верхние оценки остаются экспоненциальными, порядка 2^O(m). Между ними по-прежнему зазор, и в самой статье сказано, что «есть ещё много места, чтобы подтянуть оценки».</p>
+<p>Доказательство разбито на два случая — «плоский» и «сжимающий», — и в каждом работает своя геометрия: в одном случае нижняя оценка на размер схемы выводится напрямую, в другом доказывается неравенство типа Пуанкаре на унитреугольных группах. Аргумент опирается на «спектральные точки», существование которых авторы получают через лемму Цорна, а не предъявляют конструкцией. Это ровно тот случай, когда математику придётся разбирать не «идею на салфетке», а длинную цепочку.</p>
+<p>И вот фраза, из-за которой вся история и стала новостью. В README написано: «The result was discovered by an internal research Claude model». И дальше: «Both were written by AI models, and no human mathematician has checked the proof». То есть и статью, и формальное доказательство написали модели, а человека в контуре проверки не было вообще. Папка при этом помечена как research artifact — не поддерживается и правок не принимает.</p>
+<h2 id="section-chto-otvetila-openai">Что ответила OpenAI</h2>
+<p>Ответ пришёл не словами, а второй папкой. Препринт «VP and VNP are different» датирован тем же 23 ноября. Главная теорема — нижняя граница exp(Ω((log n)^(5/4))) для явно заданного семейства из VNP над любым полем; следствие переносит оценку на ориентированный многочлен гамильтонова цикла и на перманент вне характеристики 2. Формальное доказательство точного разделения классов лежит отдельным файлом в Lean-части репозитория.</p>
+<p>Ещё две детали, которые легко пропустить. В changelog OpenAI стоит строка, что результат получен 6 ноября — то есть на две с половиной недели раньше публикации. А в README препринта уже висит примечание: два препринта от 24 ноября из той же серии включают этот результат и усиливают количественные оценки. Наука на глазах переписывает сама себя за сутки.</p>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left"></th><th style="text-align:left">Anthropic</th><th style="text-align:left">OpenAI</th></tr></thead><tbody><tr><td style="text-align:left">Автор в шапке</td><td style="text-align:left">«Claude (Anthropic)»</td><td style="text-align:left">OpenAI, модель не названа</td></tr><tr><td style="text-align:left">Объём статьи</td><td style="text-align:left">70 страниц</td><td style="text-align:left">30 страниц</td></tr><tr><td style="text-align:left">Публикация</td><td style="text-align:left">23 ноября, 20:04 UTC</td><td style="text-align:left">24 ноября, 01:14 UTC</td></tr><tr><td style="text-align:left">Нижняя граница</td><td style="text-align:left">2^Ω((log m)^(4/3))</td><td style="text-align:left">exp(Ω((log n)^(5/4)))</td></tr><tr><td style="text-align:left">Приближающие схемы</td><td style="text-align:left">в статье и в Lean</td><td style="text-align:left">в статье</td></tr><tr><td style="text-align:left">Проверка людьми</td><td style="text-align:left">нет, прямо сказано в README</td><td style="text-align:left">публично не заявлена</td></tr></tbody></table></div>
+<h2 id="section-chto-proveril-lean-i-chego-on-ne-proveril">Что проверил Lean — и чего он не проверил</h2>
+<p>Lean 4 — это язык, на котором математическое рассуждение записывается так, что компьютер проверяет каждый шаг. Проверка тут не формальность: она ловит подмену утверждения и дыры в логике, на которых ловятся и люди.</p>
+<p>У Anthropic файл <code>Statement.lean</code> с формулировками импортирует только Mathlib — общую математическую библиотеку, то есть целевые утверждения взяты извне, а не написаны под доказательство. Сборка не должна выдавать аксиом, кроме трёх стандартных: propext, Classical.choice и Quot.sound. В непрерывной интеграции репозитория прогоняется Comparator — он сверяет доказанные теоремы с формулировками из отдельного файла <code>Challenge.lean</code> — и второе, независимо написанное ядро nanoda. Прогон на смёрженном коде прошёл.</p>
+<p>Только всё это проверяет не то, что кажется на первый взгляд. Lean подтверждает: формальные теоремы следуют из формальных определений. Он не подтверждает, что эти определения — те самые VP и VNP, о которых говорят математики. README говорит об этом без обиняков: «Lean checks the proofs, but no machine checks that this file says what is claimed». Совпадение формулировки с гипотезой Вэлианта, по словам авторов, оценивали только ИИ-читатели. Плюс одна оговорка по мелочи, которая на деле важна: замечание N.6 про следствие для детерминантной сложности в Lean не формализовано.</p>
+<h2 id="section-chto-govoryat-matematiki">Что говорят математики</h2>
+<p>Пока — осторожно. Том Гур из Кембриджа назвал прогресс беспрецедентным: по его словам, работа десятилетий сдвинулась за считаные дни. Но он же сказал, что сообществу нужно время, чтобы изучить доказательства и понять, насколько широко применимы их методы. Варун Канаде из Оксфорда отозвался в похожем ключе: результаты могут приблизить исследователей к пониманию, но это не готовый ответ.</p>
+<p>Публичного разбора от специалиста именно по алгебраической сложности — с проверкой <code>Statement.lean</code> против стандартных определений — на момент публикации этого текста не появилось. Ни одна из двух компаний не заявляла, что доказательство проверено человеком.</p>
+<h2 id="section-chem-eto-otlichaetsya-ot-istorii-s-gipotezoy-rimana">Чем это отличается от истории с гипотезой Римана</h2>
+<p>Четыре дня назад мы <a href="/2026-11-21-1500-gipoteza-rimana-claude.html">разбирали</a> другой случай: математик Anthropic Левент Альпёге выложил заметку и архив Lean-кода про гипотезу Римана, и проверку тогда взяли на себя живые люди — Эндрю Сазерленд из MIT вёл страницу с результатами прогонов, Саймон Дедео собирал тот же код независимо, Теренс Тао разбирал результат содержательно.</p>
+<p>Здесь цепочка короче на одно звено. Автор статьи — модель, формальное доказательство — тоже модель, и человека, который сказал бы «я прочитал и понял», в этой истории пока нет ни одного. Машинная проверка отвечает на вопрос «не противоречит ли код сам себе», а не на вопрос «доказано ли то, что мы думали».</p>
+<h2 id="section-chto-dalshe">Что дальше</h2>
+<p>Три вещи, за которыми стоит следить.</p>
+<p>Первая — человеческая проверка формулировок. Именно там обычно и находятся расхождения: формальное определение может оказаться чуть слабее гипотезы, и тогда всё рассыпается без всякой ошибки в доказательстве.</p>
+<p>Вторая — сравнение двух работ. Они идут разными путями и дают разные оценки, и это удобно: специалисты получат две независимые цепочки рассуждений про один объект. Если хотя бы одна выстоит, у теории сложности появится первый за десятилетия серьёзный сдвиг в нижних оценках.</p>
+<p>Третья — что это значит для лабораторий. Два результата за сутки, выложенные коммитами без пресс-релизов, — это новый способ публиковать математику: не через журнал и не через arXiv, а через репозиторий с прогоняемым CI. Плохо тут одно: читать такие работы пока умеют только машины, и именно поэтому следующим шагом придётся учиться объяснять результат по-человечески, а не только предъявлять код.</p>
+<p><em>Оценка: даже если оба доказательства рассыпятся, событие останется важным. Оно показало, что модели уже выдают результаты, которые нельзя отбросить за пять минут, — и что узкое место переехало из «придумать» в «проверить». Это, если честно, менее приятная новость, чем заголовки про победу над P против NP, зато правда.</em></p><nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><div class="morecards"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/tidal-ai-music-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-25T08:00:00+03:00">25.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-25-0800-tidal-ai-music.html">Tidal удалит 29 млн ИИ-треков с 9 декабря</a></h3>
+  </div>
+</article><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/ii-slishkom-opasno-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-24T18:00:00+03:00">24.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html">Сотрудники OpenAI и Anthropic: новые модели нельзя выпускать</a></h3>
+  </div>
+</article><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/amazon-decart-trainium-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-24T10:00:00+03:00">24.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html">Amazon купила софт Decart за $7,5 млрд</a></h3>
+  </div>
+</article></div></nav></div><p class="imgcredit">Изображения: Изображения: Eliza R. Grinnell / Harvard University SEAS, CC BY 4.0 (портрет Лесли Вэлианта); обложка и кадр с матрицей сгенерированы для GEEKOVSKI</p><section class="sources"><h2>Источники</h2><ol><li><a href="https://github.com/anthropics/formal-math/tree/main/vp-vnp" rel="nofollow noopener" target="_blank">Anthropic — папка vp-vnp в formal-math (README)</a></li><li><a href="https://github.com/anthropics/formal-math/blob/main/vp-vnp/paper.pdf" rel="nofollow noopener" target="_blank">Anthropic — статья «VP ≠ VNP over every field» (PDF)</a></li><li><a href="https://github.com/openai/math/tree/main/preprints/VP-and-VNP-are-different-November-23-2026" rel="nofollow noopener" target="_blank">OpenAI — препринт «VP and VNP are different»</a></li><li><a href="https://github.com/openai/math/blob/main/lean/OAI/Computability/VPVNP/ClassSeparation.lean" rel="nofollow noopener" target="_blank">OpenAI — формальное доказательство в Lean</a></li><li><a href="https://mlq.ai/news/anthropic-posts-a-claude-written-proof-checked-in-lean-that-claims-vp-and-vnp-differ-over-every-field" rel="nofollow noopener" target="_blank">MLQ — разбор утверждения и того, что проверяет Lean</a></li><li><a href="https://interestingengineering.com/ai-robotics/claude-proves-vp-not-vnp-valiant-conjecture" rel="nofollow noopener" target="_blank">Interesting Engineering — публикация и реакция</a></li><li><a href="https://aiweekly.co/alerts/anthropic-posts-claude-authored-vp-vnp-proof-unverified" rel="nofollow noopener" target="_blank">AI Weekly — что именно проверил Lean и чего не проверил</a></li><li><a href="https://mezha.net/eng/news/mezha-806c58e53a5f3da0c7fc8b36_anthropic_and_openai" rel="nofollow noopener" target="_blank">Межа — реакция математиков</a></li></ol></section><section class="share" data-share-root>
+  <span class="share__label">Поделиться</span>
+  <a class="share__btn" href="https://t.me/share/url?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-25-1800-vp-vnp-dva-dokazatelstva.html&text=Claude%20%D0%B8%20OpenAI%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%D0%B8%20VP%20%E2%89%A0%20VNP.%20%D0%9D%D0%B8%D0%BA%D1%82%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D0%BB" target="_blank" rel="noopener nofollow">Telegram</a>
+  <a class="share__btn" href="https://vk.com/share.php?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-25-1800-vp-vnp-dva-dokazatelstva.html&title=Claude%20%D0%B8%20OpenAI%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%D0%B8%20VP%20%E2%89%A0%20VNP.%20%D0%9D%D0%B8%D0%BA%D1%82%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D0%BB" target="_blank" rel="noopener nofollow">ВКонтакте</a>
+  <a class="share__btn" href="https://x.com/intent/tweet?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-25-1800-vp-vnp-dva-dokazatelstva.html&text=Claude%20%D0%B8%20OpenAI%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%D0%B8%20VP%20%E2%89%A0%20VNP.%20%D0%9D%D0%B8%D0%BA%D1%82%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D0%BB" target="_blank" rel="noopener nofollow">X</a>
+  <a class="share__btn" href="https://ru.pinterest.com/pin/create/button/?url=https%3A%2F%2Fgeekovski.ru%2F2026-11-25-1800-vp-vnp-dva-dokazatelstva.html&media=https%3A%2F%2Fgeekovski.ru%2Fassets%2Fimg%2F2026-11-25-1800-vp-vnp-dva-dokazatelstva-pin.jpg&description=Claude%20%D0%B8%20OpenAI%20%D0%B4%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%D0%B8%20VP%20%E2%89%A0%20VNP.%20%D0%9D%D0%B8%D0%BA%D1%82%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D0%BB" target="_blank" rel="noopener nofollow">Pinterest</a>
+  <button class="share__btn share__btn--copy" type="button" data-copy="https%3A%2F%2Fgeekovski.ru%2F2026-11-25-1800-vp-vnp-dva-dokazatelstva.html">Пошерить</button>
+</section></div></div>
+</article>
+<section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/nvidia-huang-vozvrat-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-23T18:00:00+03:00">23.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-23-1800-nvidia-huang-vozvrat.html">Nvidia вернула Дженсена Хуанга на пост CEO</a></h3>
+    <p class="card__sum">Совет директоров Nvidia единогласно вернул Дженсена Хуанга на пост CEO 22 ноября.</p>
+  </div>
+</article>
+<article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/openai-perplexity-server-racks.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-23T08:00:00+03:00">23.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-23-0800-openai-perplexity-predel.html">OpenAI предложила тормоз для ИИ, измеряемый в perplexity</a></h3>
+    <p class="card__sum">22 ноября главный научный сотрудник OpenAI Якуб Пачоцкий опубликовал эссе «Perplexity and Intelligence» — компания впервые…</p>
+  </div>
+</article>
+<article class="card card-- cat-ai">
+  <div class="card__cover"><img src="/assets/img/tesla-fsd-v15-golden-gate.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__body">
+    <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-22T10:00:00+03:00">22.11</time></div>
+    <h3 class="card__title"><a href="/2026-11-22-1000-tesla-fsd-v15.html">Tesla выпустила FSD v15: 25x безопасности без базы</a></h3>
+    <p class="card__sum">Tesla начала раскатку FSD v15 первым клиентам — с новой визуализацией Reality View и обещанием «25-кратного» улучшения…</p>
+  </div>
+</article></div></section>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span class="foot__brand"><img src="/assets/img/favicon.svg" alt="" width="18" height="18">© 2026 GEEKOVSKI</span>
+    <span class="foot__note">Мнение в текстах отделено от факта. Источники — в конце каждой заметки.</span>
+    <span class="foot__links"><a href="/avtory/">Авторы</a><a href="/about.html">О сайте</a><a href="/rss.xml">RSS</a><a class="foot__ext" href="https://vk.com/geekovskiread" target="_blank" rel="noopener">ВКонтакте</a></span>
+  </div>
+</footer>
+<script>
+document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+  const r = document.documentElement;
+  const mode = r.dataset.mode || (r.dataset.theme === 'editorial' ? 'light' : 'dark');
+  r.dataset.mode = mode === 'light' ? 'dark' : 'light';
+  try { localStorage.setItem('gv-mode', r.dataset.mode); } catch (e) {}
+});
+const sidebarButton = document.querySelector('.sidebar-toggle');
+if (sidebarButton) {
+  const root = document.documentElement;
+  function updateSidebarLabel(compact) {
+    const label = compact ? 'Развернуть меню' : 'Свернуть меню';
+    sidebarButton.setAttribute('aria-expanded', String(!compact));
+    sidebarButton.setAttribute('aria-label', label);
+    sidebarButton.title = label;
+  }
+  updateSidebarLabel(root.dataset.sidebar === 'compact');
+  sidebarButton.addEventListener('click', () => {
+    const compact = root.dataset.sidebar !== 'compact';
+    if (compact) root.dataset.sidebar = 'compact';
+    else delete root.dataset.sidebar;
+    updateSidebarLabel(compact);
+    try { localStorage.setItem('gv-sidebar', compact ? 'compact' : 'full'); } catch (e) {}
+  });
+}
+const menuButton = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('#site-nav');
+function closeMenu() {
+  menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  siteNav?.classList.remove('nav--open');
+}
+menuButton?.addEventListener('click', () => {
+  const open = menuButton.getAttribute('aria-expanded') !== 'true';
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  siteNav?.classList.toggle('nav--open', open);
+});
+siteNav?.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
+const rubrics = document.querySelector('.nav__rubrics');
+document.addEventListener('click', (event) => { if (rubrics?.open && !rubrics.contains(event.target)) rubrics.open = false; });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    if (menuButton?.getAttribute('aria-expanded') === 'true') menuButton.focus();
+    closeMenu();
+    if (rubrics) rubrics.open = false;
+  }
+});
+if (document.documentElement.dataset.theme !== 'editorial') {
+  const route = location.pathname;
+  const active = route === '/' ? '.nav__link--blog' : route.startsWith('/digests/') ? '.nav__link--digests' : '.nav__rubrics > summary';
+  document.querySelector(active)?.classList.add('nav__link--active');
+}
+</script>
+<script>
+(() => {
+  const btn = document.querySelector('[data-copy]');
+  if (btn) btn.addEventListener('click', async () => {
+    const url = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(url);
+      const old = btn.textContent; btn.textContent = 'Ссылка скопирована'; btn.classList.add('share__btn--done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('share__btn--done'); }, 1800);
+    } catch (e) { window.prompt('Скопируйте ссылку', url); }
+  });
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+}
+</script>
+</body>
+</html>
