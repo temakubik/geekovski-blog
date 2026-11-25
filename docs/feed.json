@@ -8,6 +8,44 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-25-0800-tidal-ai-music.html",
+   "url": "https://geekovski.ru/2026-11-25-0800-tidal-ai-music.html",
+   "title": "Tidal удалит 29 млн ИИ-треков с 9 декабря",
+   "summary": "Tidal с 9 декабря начнёт удалять полностью сгенерированные нейросетями треки — к концу года это больше 29 млн песен, около 6,3 % каталога. За последние 90 дней 43 % загрузок на сервис были сделаны ИИ. Это первый крупный стриминг, который не ставит ярлык, а выносит музыку за дверь.",
+   "date_published": "2026-11-25T08:00:00+03:00",
+   "date_modified": "2026-11-25T08:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/tidal-ai-music-cover.jpg",
+   "_sources": [
+    {
+     "name": "TechCrunch — Tidal to ban and remove millions of AI-generated tracks",
+     "url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/"
+    },
+    {
+     "name": "The Verge — Tidal will start banning AI-generated music next month",
+     "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban"
+    },
+    {
+     "name": "TIDAL Support — AI Policy",
+     "url": "https://support.tidal.com/hc/en-us/articles/48031883413521-AI-Policy"
+    },
+    {
+     "name": "TIDAL — пост о новой политике",
+     "url": "https://x.com/TIDAL/status/2125233598714487170"
+    },
+    {
+     "name": "«Яндекс Музыка» — новые правила работы с ИИ-контентом",
+     "url": "https://yandex.ru/company/news/08-09-2025-03"
+    },
+    {
+     "name": "The Verge — Spotify убрал 50 млн треков-спама из рекомендаций",
+     "url": "https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-24-2100-tarkov-unity-6.html",
    "url": "https://geekovski.ru/2026-11-24-2100-tarkov-unity-6.html",
    "title": "Tarkov перешла на Unity 6: что даёт патч 1.3.5.0",
