@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-25-2100-witcher-4-sony-reklama.html",
+   "url": "https://geekovski.ru/2026-11-25-2100-witcher-4-sony-reklama.html",
+   "title": "Sony стала рекламным партнёром «Ведьмака 4»",
+   "summary": "24 ноября CD Projekt подписала с Sony Interactive Entertainment новые соглашения — про игры студии на PlayStation, про подписку PS Plus и про совместную рекламную кампанию «Ведьмака 4». Сумму и эксклюзивность не раскрыли, релиз по-прежнему целится в 2028 год, а квартал у студии вышел слабым.",
+   "date_published": "2026-11-25T21:00:00+03:00",
+   "date_modified": "2026-11-25T21:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/vedmak-4-sony-reklama.jpg",
+   "_sources": [
+    {
+     "name": "CD Projekt — консолидированная отчётность за третий квартал 2026",
+     "url": "https://www.cdprojekt.com/en/wp-content/uploads-en/2026/11/consolidated-financial-statements-of-the-cd-projekt-red-group-for-q3-2026.pdf"
+    },
+    {
+     "name": "CD Projekt — презентация для инвесторов Q3 2026",
+     "url": "https://www.cdprojekt.com/en/wp-content/uploads-en/2026/11/cd-projekt-red-group-presentation-q3-2026.pdf"
+    },
+    {
+     "name": "Polygon — сделку сравнили с договором Sony и Rockstar по GTA VI",
+     "url": "https://www.polygon.com/playstation-cd-projekt-red-marketing-partnership-deal-announced"
+    },
+    {
+     "name": "TechPowerUp — цитата финдиректора и контекст PS Plus",
+     "url": "https://www.techpowerup.com/355179/cd-projekt-red-teams-up-with-sony-for-the-witcher-4-marketing-campaign"
+    },
+    {
+     "name": "Wccftech — сделка и рост расходов на разработку",
+     "url": "https://wccftech.com/cd-projekt-red-sony-deal-the-witcher-4-marketing-playstation-plus"
+    },
+    {
+     "name": "Onliner — сводка по сделке и срокам",
+     "url": "https://tech.onliner.by/2026/11/25/cd-projekt-red-budet-sotrudnichat-s-playstation-vse-radi-vedmaka-4"
+    },
+    {
+     "name": "The Verge — возврат Cyberpunk 2077 в PlayStation Store",
+     "url": "https://www.theverge.com/2021/6/15/22457000/cd-projekt-red-cyberpunk-2077-playstation-store-return-bug-fixes"
+    },
+    {
+     "name": "Engadget — удаление игры из магазина Sony и предупреждение Microsoft",
+     "url": "https://www.engadget.com/cyberpunk-2077-playstation-store-return-date-173952597.html"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html",
    "url": "https://geekovski.ru/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html",
    "title": "Claude и OpenAI доказали VP ≠ VNP. Никто не проверил",
