@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-25-1200-terraria-krossplay.html",
+   "url": "https://geekovski.ru/2026-11-25-1200-terraria-krossplay.html",
+   "title": "Terraria наконец получила кроссплей — с оговорками",
+   "summary": "24 ноября Re-Logic выпустила обновление 1.4.6 — первую фазу кроссплея. Игроки на PC, Mac, Xbox, PlayStation, Switch, Android и iOS теперь видят игры друг друга в одной локальной сети и играют вместе без подписки на консоли. Полноценной игры с друзьями через интернет пока нет, а у Switch есть отдельный запрет на приватные выделенные серверы.",
+   "date_published": "2026-11-25T12:00:00+03:00",
+   "date_modified": "2026-11-25T12:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/terraria-crossplay-console-menu.jpg",
+   "_sources": [
+    {
+     "name": "Terraria Community Forums — анонс «Terraria 1.4.6 — Available Now!»",
+     "url": "https://forums.terraria.org/index.php?threads/terraria-1-4-6-available-now.152563/"
+    },
+    {
+     "name": "Steam — анонс обновления 1.4.6 для Terraria",
+     "url": "https://store.steampowered.com/news/app/105600/view/1849827110446549"
+    },
+    {
+     "name": "GamesRadar+ — разбор первой фазы кроссплея",
+     "url": "https://www.gamesradar.com/games/survival/terraria-devs-make-significant-progress-in-their-quest-to-conquer-the-world-phase-one-of-crossplay-is-now-available-after-years-in-the-making/"
+    },
+    {
+     "name": "Game*Spark — на каких платформах уже вышло обновление, японская версия ждёт",
+     "url": "https://en.gamespark.jp/article/2026/11/25/2654.html"
+    },
+    {
+     "name": "IGN — 70 млн копий к 15-летию и обещание обновлений после 1.4.6",
+     "url": "https://www.ign.com/articles/terraria-marks-15-years-and-70-million-players-with-a-promise-to-continue-updates-beyond-146-and-crossplay-patch"
+    },
+    {
+     "name": "iXBT Games — короткая сводка по 1.4.6",
+     "url": "https://ixbt.games/news/2026/11/25/novaia-era-terraria-vyslo-obnovlenie-146-s-podderzkoi-krosspleia.html"
+    },
+    {
+     "name": "Terraria Community Forums — State of the Game, сентябрь 2026",
+     "url": "https://forums.terraria.org/index.php?threads/terraria-state-of-the-game-september-2026.151999/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-25-1000-insayder-intergalactic-konec-2027.html",
    "url": "https://geekovski.ru/2026-11-25-1000-insayder-intergalactic-konec-2027.html",
    "title": "Инсайдер: Intergalactic выйдет в конце 2027 года",

@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 15 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 18 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 21 материал
-- [PC-игры](https://geekovski.ru/pc/): 38 материалов
+- [PC-игры](https://geekovski.ru/pc/): 39 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 39 материалов
 - [Кино](https://geekovski.ru/kino/): 25 материалов
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 82 материала; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 100 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 101 материал; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 37 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Terraria наконец получила кроссплей — с оговорками](https://geekovski.ru/2026-11-25-1200-terraria-krossplay.html): 24 ноября Re-Logic выпустила обновление 1.4.6 — первую фазу кроссплея. Игроки на PC, Mac, Xbox, PlayStation, Switch, Android и iOS теперь видят игры друг друга в одной локальной сети и играют вместе без подписки на консоли. Полноценной игры с друзьями через интернет пока нет, а у Switch есть отдельный запрет на приватные выделенные серверы. (25.11.2026)
 - [Инсайдер: Intergalactic выйдет в конце 2027 года](https://geekovski.ru/2026-11-25-1000-insayder-intergalactic-konec-2027.html): 24 ноября инсайдер NateTheHate сказал, что Naughty Dog целится в конец 2027 года, хотя раньше Bloomberg описывал внутренний ориентир на середину. Игра уже проходима от начала до конца, студия полирует её, а официальной даты у Sony по-прежнему нет. (25.11.2026)
 - [Tidal удалит 29 млн ИИ-треков с 9 декабря](https://geekovski.ru/2026-11-25-0800-tidal-ai-music.html): Tidal с 9 декабря начнёт удалять полностью сгенерированные нейросетями треки — к концу года это больше 29 млн песен, около 6,3 % каталога. За последние 90 дней 43 % загрузок на сервис были сделаны ИИ. Это первый крупный стриминг, который не ставит ярлык, а выносит музыку за дверь. (25.11.2026)
 - [Tarkov перешла на Unity 6: что даёт патч 1.3.5.0](https://geekovski.ru/2026-11-24-2100-tarkov-unity-6.html): Battlestate выпустила патч 1.3.5.0 — Escape from Tarkov переехала на Unity 6, графика собрана в единую платформу RenderStack, переписана загрузка рейдов и починены утечки памяти. DirectX 12, FSR 4 и DLSS Frame Generation в патч не вошли: движок только открыл под них дорогу. (24.11.2026)
@@ -376,6 +377,7 @@
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
 - [«Тайный город»](https://geekovski.ru/titles/tajnyj-gorod.html): 2026
+- [Terraria](https://geekovski.ru/titles/terraria.html): 2011
 - [The Altruists](https://geekovski.ru/titles/the-altruists.html): 2026
 - [«Три богатыря и гуси-лебеди»](https://geekovski.ru/titles/tri-bogatyrya-gusi-lebedi.html): 2026
 - [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
