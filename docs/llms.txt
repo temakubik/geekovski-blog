@@ -12,7 +12,7 @@
 ## Рубрики
 
 - [Xbox](https://geekovski.ru/xbox/): 15 материалов
-- [Nintendo Switch](https://geekovski.ru/switch/): 18 материалов
+- [Nintendo Switch](https://geekovski.ru/switch/): 19 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 23 материала
 - [PC-игры](https://geekovski.ru/pc/): 40 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 85 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 104 материала; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 105 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 39 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Xenoblade Chronicles 3 получит 4K и 60 fps](https://geekovski.ru/2026-11-26-2100-xenoblade-3-switch-2-edition.html): 26 ноября Nintendo показала трёхминутный обзорный трейлер Xenoblade Chronicles 3 — Nintendo Switch 2 Edition и перечислила всё, что даёт платный апгрейд: до 4K в телевизионном режиме, Full HD в портативе, до 60 кадров в секунду, режим обороны Heroes' Vault, новую героиню Шиммер и новые озвученные сцены. Релиз 3 декабря: полное издание за $69.99, апгрейд для владельцев версии на Switch — $9.99. (26.11.2026)
 - [Diablo IV оставила сезонных боссов навсегда](https://geekovski.ru/2026-11-26-1800-diablo-4-sezon-16-postoyannoe.html): Blizzard объявила, что сезон 16 «Гамбит Тираэля» стартует 1 декабря, и вместе с ним в игру навсегда переезжает часть контента прошлого сезона — Прайм-злодеи в Убер-Тристраме, капостные подземелья, призыв Диабло и остров коровы. Заодно Helltide перестанет прерываться, а угли не будут сгорать при завершении события. (26.11.2026)
 - [Видеокарты дорожают: NVIDIA режет поставки GPU на 20–30%](https://geekovski.ru/2026-11-26-1500-nvidia-rezhet-postavki-gpu.html): 25 ноября китайский форум дистрибьюторов Board Channels опубликовал скриншот письма, в котором NVIDIA предупреждает партнёров о сокращении квот на игровые GPU на 20–30% с ноября по январь, а тайваньское Commercial Times пишет, что мощности уходят на ИИ-чипы. NVIDIA это не подтверждала, модели и регионы не названы, но карты дорожают и без официальных заявлений: в России медиана выросла на 10% за три недели, RTX 5070 и 5070 Ti — на 19–24%. (26.11.2026)
 - [«Охота за Голлумом» отснята — премьера 17 декабря 2027](https://geekovski.ru/2026-11-26-1200-ohota-za-gollumom-semki-zaversheny.html): Warner Bros. 25 ноября объявила о завершении съёмок «Властелина колец: Охота за Голлумом». Энди Серкис снял фильм и сыграл в нём главную роль, Иэн Маккеллен и Элайджа Вуд вернулись к своим персонажам, Арагорна играет Джейми Дорнан. Премьера — 17 декабря 2027 года, через тринадцать лет после последнего игрового фильма по Средиземью. (26.11.2026)
@@ -410,6 +411,7 @@
 - [Warhammer 40,000: Dawn of War IV](https://geekovski.ru/titles/warhammer-40000-dawn-of-war-iv.html): 2026
 - [«Оборотень»](https://geekovski.ru/titles/werwulf.html): 2026
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
+- [Xenoblade Chronicles 3](https://geekovski.ru/titles/xenoblade-chronicles-3.html): 2022
 - [«Ёлки 13»](https://geekovski.ru/titles/yolki-13.html): 2026
 - [The Legend of Zelda: Ocarina of Time](https://geekovski.ru/titles/zelda-ocarina-2026.html): 2026
 - [Zero Parades: Director's Cut](https://geekovski.ru/titles/zero-parades-directors-cut.html): 2026

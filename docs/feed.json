@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-26-2100-xenoblade-3-switch-2-edition.html",
+   "url": "https://geekovski.ru/2026-11-26-2100-xenoblade-3-switch-2-edition.html",
+   "title": "Xenoblade Chronicles 3 получит 4K и 60 fps",
+   "summary": "26 ноября Nintendo показала трёхминутный обзорный трейлер Xenoblade Chronicles 3 — Nintendo Switch 2 Edition и перечислила всё, что даёт платный апгрейд: до 4K в телевизионном режиме, Full HD в портативе, до 60 кадров в секунду, режим обороны Heroes' Vault, новую героиню Шиммер и новые озвученные сцены. Релиз 3 декабря: полное издание за $69.99, апгрейд для владельцев версии на Switch — $9.99.",
+   "date_published": "2026-11-26T21:00:00+03:00",
+   "date_modified": "2026-11-26T21:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/xenoblade-3-switch-2-mio.jpg",
+   "_sources": [
+    {
+     "name": "Nintendo — страница игры",
+     "url": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-3-nintendo-switch-2-edition-switch-2/"
+    },
+    {
+     "name": "Nintendo — обзорный трейлер",
+     "url": "https://www.nintendo.com/us/whatsnew/watch-the-xenoblade-chronicles-3-nintendo-switch-2-edition-overview-trailer-ahead-of-the-game-launch-on-dec-3"
+    },
+    {
+     "name": "Gematsu — обзорный трейлер",
+     "url": "https://gematsu.com/2026/11/xenoblade-chronicles-3-nintendo-switch-2-edition-overview-trailer"
+    },
+    {
+     "name": "Nintendo Life — патч 3.0.0",
+     "url": "https://nintendolife.com/news/2026/11/xenoblade-chronicles-3-version-3-0-0-is-now-live-here-are-the-patch-notes"
+    },
+    {
+     "name": "Digital Foundry — техразбор версии 2022 года",
+     "url": "https://www.digitalfoundry.net/articles/digitalfoundry-2022-xenoblade-chronicles-3-nintendo-switch-tech-review"
+    },
+    {
+     "name": "Nintendo Life — Xenoblade Chronicles X и её апгрейд",
+     "url": "https://nintendolife.com/news/2026/02/xenoblade-chronicles-x-definitive-edition-gets-nintendo-switch-2-upgrade-out-now"
+    },
+    {
+     "name": "Nintendo Life — релизы eShop 26 ноября",
+     "url": "https://nintendolife.com/news/2026/11/here-are-all-the-games-coming-to-switch-eshop-this-week-november-26"
+    },
+    {
+     "name": "Gematsu — Monster Hunter Wilds на Switch 2",
+     "url": "https://gematsu.com/2026/09/monster-hunter-wilds-for-switch-2-launches-december-4"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-26-1800-diablo-4-sezon-16-postoyannoe.html",
    "url": "https://geekovski.ru/2026-11-26-1800-diablo-4-sezon-16-postoyannoe.html",
    "title": "Diablo IV оставила сезонных боссов навсегда",
