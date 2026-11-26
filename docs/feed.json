@@ -8,6 +8,36 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-26-1800-diablo-4-sezon-16-postoyannoe.html",
+   "url": "https://geekovski.ru/2026-11-26-1800-diablo-4-sezon-16-postoyannoe.html",
+   "title": "Diablo IV оставила сезонных боссов навсегда",
+   "summary": "Blizzard объявила, что сезон 16 «Гамбит Тираэля» стартует 1 декабря, и вместе с ним в игру навсегда переезжает часть контента прошлого сезона — Прайм-злодеи в Убер-Тристраме, капостные подземелья, призыв Диабло и остров коровы. Заодно Helltide перестанет прерываться, а угли не будут сгорать при завершении события.",
+   "date_published": "2026-11-26T18:00:00+03:00",
+   "date_modified": "2026-11-26T18:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/diablo-4-sezon-16-cover.jpg",
+   "_sources": [
+    {
+     "name": "Blizzard — обзор сезона «Гамбит Тираэля»",
+     "url": "https://news.blizzard.com/en-us/article/24316979/advance-the-war-against-death-in-season-of-tyraels-gambit"
+    },
+    {
+     "name": "Blizzard — патчноуты 3.3.0",
+     "url": "https://news.blizzard.com/en-us/article/24316980/diablo-iv-patch-notes"
+    },
+    {
+     "name": "Mixed — Helltide и угли",
+     "url": "https://mixed-news.com/en/diablo-4-season-16-helltides-cinders-permanent-december/"
+    },
+    {
+     "name": "Output Lag — постоянные боссы и подземелья",
+     "url": "https://outputlag.com/news/diablo-iv-season-16-makes-diablo-mephisto-and-baal-permanent-lair-bosses-on-december-1/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-26-1500-nvidia-rezhet-postavki-gpu.html",
    "url": "https://geekovski.ru/2026-11-26-1500-nvidia-rezhet-postavki-gpu.html",
    "title": "Видеокарты дорожают: NVIDIA режет поставки GPU на 20–30%",
