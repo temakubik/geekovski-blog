@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-26-1200-ohota-za-gollumom-semki-zaversheny.html",
+   "url": "https://geekovski.ru/2026-11-26-1200-ohota-za-gollumom-semki-zaversheny.html",
+   "title": "«Охота за Голлумом» отснята — премьера 17 декабря 2027",
+   "summary": "Warner Bros. 25 ноября объявила о завершении съёмок «Властелина колец: Охота за Голлумом». Энди Серкис снял фильм и сыграл в нём главную роль, Иэн Маккеллен и Элайджа Вуд вернулись к своим персонажам, Арагорна играет Джейми Дорнан. Премьера — 17 декабря 2027 года, через тринадцать лет после последнего игрового фильма по Средиземью.",
+   "date_published": "2026-11-26T12:00:00+03:00",
+   "date_modified": "2026-11-26T12:00:00+03:00",
+   "tags": [
+    "Кино"
+   ],
+   "image": "https://geekovski.ru/assets/img/gollum-hobbiton.jpg",
+   "_sources": [
+    {
+     "name": "Warner Bros. — анонс завершения съёмок",
+     "url": "https://x.com/warnerbros/status/2125651261492256856"
+    },
+    {
+     "name": "Deadline — Элайджа Вуд о возвращении к роли Фродо",
+     "url": "https://deadline.com/2026/11/elijah-wood-what-it-was-like-playing-frodo-hunt-for-gollum-1237221444"
+    },
+    {
+     "name": "Variety — премьера 17 декабря 2027 года",
+     "url": "https://variety.com/2025/film/news/lord-of-the-rings-the-hunt-for-gollum-release-date-december-2027-1236390820"
+    },
+    {
+     "name": "Variety — Филиппа Бойенс: это один фильм, а не два",
+     "url": "https://variety.com/2024/film/news/the-lord-of-the-rings-the-hunt-for-gollum-not-two-movies-gandalf-1236182563"
+    },
+    {
+     "name": "Variety — Серкис едет в Новую Зеландию начинать подготовку",
+     "url": "https://variety.com/2025/film/news/andy-serkis-gollum-new-lord-of-the-rings-movie-films-1236506643"
+    },
+    {
+     "name": "Polygon — съёмки официально завершены",
+     "url": "https://polygon.com/lord-of-the-rings-hunt-for-gollum-filming-wrapped-announced"
+    },
+    {
+     "name": "The Hollywood Reporter — дата релиза и два фильма по сделке",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/lord-of-the-rings-hunt-gollum-december-2027-release-evil-dead-1236211003/"
+    },
+    {
+     "name": "Cinema Express — каст, персонажи и прощальное видео",
+     "url": "https://cinemaexpress.com/english/news/2026/Nov/26/the-lord-of-the-rings-the-hunt-for-gollum-wraps-shoot-heads-into-post-production"
+    },
+    {
+     "name": "Warner Bros. — пресс-релиз о двух новых фильмах",
+     "url": "https://press.wbd.com/us/media-release/warner-bros-pictures/warner-bros-pictures-and-new-line-cinema-are-set-reunite-oscar-winning-lord-rings-and"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-26-1000-gta6-ps5-peregrev.html",
    "url": "https://geekovski.ru/2026-11-26-1000-gta6-ps5-peregrev.html",
    "title": "GTA 6 и «сгоревшие» PS5: что подтверждено",

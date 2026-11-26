@@ -454,10 +454,115 @@
    "crawled": "",
    "canonical": "",
    "checked": "2026-11-25"
+  },
+  "https://geekovski.ru/2026-11-12-mosgaz-12-yuzhny-port.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-12-ps-plus-pc-otkluchenie.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-12-ps-store-hardware.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-12-redmagic-12-pro-linux.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-12-sony-anime-imperiya.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-12-xbox-cloud-free-ads.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-0800-ps5-100-million.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-1000-alphaproof-signal.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-1200-xiaomi-18-pro-back-display.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-1500-sboi-microsoft-outlook-xbox.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-1800-pyatnica-13-trinadcatyy-film.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-2100-chatgpt-wallet.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-anr-apex-dlss.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-avengers-encore.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-pico-space-pro-utechka.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-26"
   }
  },
- "pointer": 65,
- "rounds": 5,
+ "pointer": 80,
+ "rounds": 6,
  "history": [
   {
    "date": "2026-11-25",
@@ -482,6 +587,11 @@
   {
    "date": "2026-11-25",
    "total": 65,
+   "indexed": 22
+  },
+  {
+   "date": "2026-11-26",
+   "total": 80,
    "indexed": 22
   }
  ]
