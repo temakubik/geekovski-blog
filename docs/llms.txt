@@ -332,18 +332,22 @@
 - [Angry Birds 3 в кино](https://geekovski.ru/titles/angry-birds-3-v-kino.html): 2026
 - [Arkheron](https://geekovski.ru/titles/arkheron.html): 2026
 - [Atomfall](https://geekovski.ru/titles/atomfall.html): 2025
+- [Attack on Titan 3](https://geekovski.ru/titles/attack-on-titan-3.html): 2026
 - [«Мстители: Судный день»](https://geekovski.ru/titles/avengers-doomsday.html): 2026
 - [«Баста. Начало игры»](https://geekovski.ru/titles/basta-nachalo-igry.html): 2026
 - [Big Walk](https://geekovski.ru/titles/big-walk.html): 2026
 - [Black Doves, сезон 2](https://geekovski.ru/titles/black-doves-sezon-2.html): 2026
+- [«Чебурашка 3»](https://geekovski.ru/titles/cheburashka-3.html): 2026
 - [«Новые похождения Клиффа Бута»](https://geekovski.ru/titles/cliff-booth.html): 2026
 - [CONTROL Resonant](https://geekovski.ru/titles/control-resonant.html): 2026
 - [Crimson Desert](https://geekovski.ru/titles/crimson-desert.html): 2026
 - [CRYMELIGHT](https://geekovski.ru/titles/crymelight.html): 2026
 - [Danganronpa 2×2](https://geekovski.ru/titles/danganronpa-2x2.html): 2027
 - [Death Stranding 2: On the Beach](https://geekovski.ru/titles/death-stranding-2.html): 2025
+- [Demon Tides](https://geekovski.ru/titles/demon-tides.html): 2027
 - [DOOM: The Dark Ages](https://geekovski.ru/titles/doom-the-dark-ages.html): 2025
 - [Dragon Age](https://geekovski.ru/titles/dragon-age.html): 2009
+- [Dragon Quest Monsters: The Withered World](https://geekovski.ru/titles/dragon-quest-monsters-withered-world.html): 2026
 - [«Дюна: часть третья»](https://geekovski.ru/titles/dune-part-three.html): 2026
 - [John Wick: анимационный приквел](https://geekovski.ru/titles/dzhon-uik-animaciya.html)
 - [Эбенезер (Ebenezer)](https://geekovski.ru/titles/ebenezer.html): 2026
@@ -384,9 +388,13 @@
 - [Soulframe](https://geekovski.ru/titles/soulframe.html): 2026
 - [Spider-Man: Brand New Day](https://geekovski.ru/titles/spider-man-brand-new-day.html): 2026
 - [Stellar Blade](https://geekovski.ru/titles/stellar-blade.html): 2026
+- [Stranger Than Heaven](https://geekovski.ru/titles/stranger-than-heaven.html): 2027
 - [«Тайный город»](https://geekovski.ru/titles/tajnyj-gorod.html): 2026
 - [Terraria](https://geekovski.ru/titles/terraria.html): 2011
 - [The Altruists](https://geekovski.ru/titles/the-altruists.html): 2026
+- [The Pitt, сезон 3](https://geekovski.ru/titles/the-pitt-sezon-3.html): 2027
+- [Thief: The Dark Project Remastered](https://geekovski.ru/titles/thief-dark-project-remastered.html): 2026
+- [Titan Quest II](https://geekovski.ru/titles/titan-quest-2.html): 2027
 - [«Три богатыря и гуси-лебеди»](https://geekovski.ru/titles/tri-bogatyrya-gusi-lebedi.html): 2026
 - [Under Siege (Palacio)](https://geekovski.ru/titles/under-siege.html): 2026
 - [Ведьмак 4](https://geekovski.ru/titles/vedmak-4.html): 2028
@@ -394,6 +402,7 @@
 - [«Вершина»](https://geekovski.ru/titles/vershina-film.html): 2026
 - [Virgin River](https://geekovski.ru/titles/virgin-river.html): 2019
 - [Warhammer 40,000: Dawn of War IV](https://geekovski.ru/titles/warhammer-40000-dawn-of-war-iv.html): 2026
+- [«Оборотень»](https://geekovski.ru/titles/werwulf.html): 2026
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
 - [«Ёлки 13»](https://geekovski.ru/titles/yolki-13.html): 2026
 - [The Legend of Zelda: Ocarina of Time](https://geekovski.ru/titles/zelda-ocarina-2026.html): 2026

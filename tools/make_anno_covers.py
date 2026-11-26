@@ -67,7 +67,7 @@ MONTHS = ["Январь", "Февраль", "Март", "Апрель", "Май"
           "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
 PLAT = {"switch2": "Switch 2", "switch": "Switch", "ps5": "PS5", "ps4": "PS4",
         "xbox": "Xbox Series", "pc": "PC", "mac": "Mac", "netflix": "Netflix",
-        "kino": "Кино", "vr": "VR", "tv": "ТВ"}
+        "kino": "Кино", "vr": "VR", "tv": "ТВ", "hbo": "HBO Max"}
 
 
 def slugify(text):
