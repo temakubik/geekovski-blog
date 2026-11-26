@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-26-0800-oppo-find-x10-rossiya.html",
+   "url": "https://geekovski.ru/2026-11-26-0800-oppo-find-x10-rossiya.html",
+   "title": "OPPO Find X10 в России: 139 999 ₽",
+   "summary": "26 ноября в России начинаются продажи OPPO Find X10 и Find X10 Pro Max. На старте просят 139 999, 149 999 и 189 999 ₽ при рекомендованных 159 999, 169 999 и 209 999 ₽, первым покупателям обещают телеконвертер Hasselblad в подарок и лишний год гарантии.",
+   "date_published": "2026-11-26T08:00:00+03:00",
+   "date_modified": "2026-11-26T08:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/oppo-find-x10-rossiya-cover.jpg",
+   "_sources": [
+    {
+     "name": "Rozetked — OPPO представила в России Find X10 и Find X10 Pro Max",
+     "url": "https://rozetked.me/news/49668-oppo-predstavila-v-rossii-find-x10-i-find-x10-pro-max-raskryty-stoimost-i-data-starta-prodazh"
+    },
+    {
+     "name": "Hi-Tech Mail — В России представили OPPO Find X10 и Find X10 Pro Max",
+     "url": "https://hi-tech.mail.ru/news/161653-oppo-find-x10-i-find-x10-pro-max-preview"
+    },
+    {
+     "name": "TechInsider — Три камеры по 200 Мп",
+     "url": "https://techinsider.ru/news/news-1750225-tri-kamery-po-200-mp-smartfony-find-x10-i-find-x10-pro-max-s-optikoi-hasselblad-dobralis-do-rossii"
+    },
+    {
+     "name": "PCNews — цены, акция и гарантия",
+     "url": "https://pcnews.ru/news/tri_kamery_po_200_mp_8000_mac_80_vt_i_dimensity_9600_pro_flagmanskie_kamerofony_oppo_find_x10_pro_max_i_find_x10_vyhodat_v_rossii_ceny__ot_140_tys_rublej-1859341.html"
+    },
+    {
+     "name": "OPPO — пресс-релиз о глобальном запуске серии",
+     "url": "https://www.oppo.com/en/newsroom/press/oppo-find-x10-series-global-launch/"
+    },
+    {
+     "name": "MobiDevices — характеристики и цены глобальной версии",
+     "url": "https://mobidevices.com/oppo-find-x10-global"
+    },
+    {
+     "name": "MobiDevices — характеристики Find X10 и цены в Китае",
+     "url": "https://mobidevices.com/oppo-find-x10"
+    },
+    {
+     "name": "Comss — характеристики серии на китайской презентации",
+     "url": "https://www.comss.ru/page.php?id=22112"
+    },
+    {
+     "name": "GSMArena — обзор Find X10 Pro Max, батарея для Европы",
+     "url": "https://m.gsmarena.com/oppo_find_x10_pro_max-review-3008.php"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-25-2100-witcher-4-sony-reklama.html",
    "url": "https://geekovski.ru/2026-11-25-2100-witcher-4-sony-reklama.html",
    "title": "Sony стала рекламным партнёром «Ведьмака 4»",
