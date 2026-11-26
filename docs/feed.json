@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-26-1500-nvidia-rezhet-postavki-gpu.html",
+   "url": "https://geekovski.ru/2026-11-26-1500-nvidia-rezhet-postavki-gpu.html",
+   "title": "Видеокарты дорожают: NVIDIA режет поставки GPU на 20–30%",
+   "summary": "25 ноября китайский форум дистрибьюторов Board Channels опубликовал скриншот письма, в котором NVIDIA предупреждает партнёров о сокращении квот на игровые GPU на 20–30% с ноября по январь, а тайваньское Commercial Times пишет, что мощности уходят на ИИ-чипы. NVIDIA это не подтверждала, модели и регионы не названы, но карты дорожают и без официальных заявлений: в России медиана выросла на 10% за три недели, RTX 5070 и 5070 Ti — на 19–24%.",
+   "date_published": "2026-11-26T15:00:00+03:00",
+   "date_modified": "2026-11-26T15:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/gpu-defitsit-cover.jpg",
+   "_sources": [
+    {
+     "name": "VideoCardz — NVIDIA allegedly cuts gaming GPU supply by 20-30% for Q4, помечено как слух",
+     "url": "https://videocardz.com/newz/nvidia-reportedly-cuts-gaming-gpu-supply-by-another-20-30-for-q4"
+    },
+    {
+     "name": "Wccftech — NVIDIA notifies board partners of 20–30% reduction in gaming GPU supply",
+     "url": "https://wccftech.com/nvidia-notifies-board-partners-of-20-30-reduction-in-gaming-gpu-supply/"
+    },
+    {
+     "name": "VC.ru — NVIDIA сократила поставки видеокарт на 20–30% до января 2027 года, ссылка на Commercial Times",
+     "url": "https://vc.ru/ai/3278537-nvidia-sokrashchaet-postavki-videokart-geforce-rtx"
+    },
+    {
+     "name": "VideoCardz — GeForce RTX 50 prices reportedly rising by up to $500 in China",
+     "url": "https://videocardz.com/newz/nvidia-geforce-rtx-50-prices-reportedly-rising-by-up-to-500-in-china-rtx-5080-up-by-420"
+    },
+    {
+     "name": "Palert — когда подешевеют видеокарты: замер цен на Ozon, DNS и Ситилинке",
+     "url": "https://palert.ru/blog/kogda-podesheveyut-videokarty"
+    },
+    {
+     "name": "RB.ru — средняя цена видеокарты в России выросла до 49,8 тыс. рублей",
+     "url": "https://rb.ru/news/rynok-videokart-v-rossii-vyros-pochti-na-5-i-prevysil-10-mlrd-no-pokupat-ih-stali-menshe/"
+    },
+    {
+     "name": "VideoCardz — MSI launches $7,800 RTX 5090 Black Friday bundle",
+     "url": "https://videocardz.com/newz/msi-launches-7800-rtx-5090-black-friday-bundle-at-3x-the-gpus-original-msrp-gamers-ask-if-theyre-out-of-their-mind"
+    },
+    {
+     "name": "VideoCardz — ASUS co-CEO says budget PCs may drop from 16GB to 8GB RAM",
+     "url": "https://videocardz.com/newz/asus-co-ceo-says-budget-pcs-may-drop-from-16gb-to-8gb-ram-due-to-rising-memory-prices"
+    },
+    {
+     "name": "SteamDB — Valve о поставках Steam Machine и ценах",
+     "url": "https://steamdb.com/en/steam/steam-machine-supply-and-price"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-26-1200-ohota-za-gollumom-semki-zaversheny.html",
    "url": "https://geekovski.ru/2026-11-26-1200-ohota-za-gollumom-semki-zaversheny.html",
    "title": "«Охота за Голлумом» отснята — премьера 17 декабря 2027",
