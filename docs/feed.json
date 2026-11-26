@@ -8,6 +8,68 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-26-1000-gta6-ps5-peregrev.html",
+   "url": "https://geekovski.ru/2026-11-26-1000-gta6-ps5-peregrev.html",
+   "title": "GTA 6 и «сгоревшие» PS5: что подтверждено",
+   "summary": "С первых дней после релиза 19 ноября часть игроков на PS5 ловит ошибку CE-108255-1 и внезапные отключения, двое стримеров заявили о погибших консолях, а 25 ноября по сети разошёлся «PS5 blackout». Патч 01.002.002 вышел 23 ноября, но кода ошибки в нём нет, Sony и Rockstar молчат, а доказательств, что игра ломает железо, пока никто не показал.",
+   "date_published": "2026-11-26T10:00:00+03:00",
+   "date_modified": "2026-11-26T10:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-ps5-peregrev-cover.jpg",
+   "_sources": [
+    {
+     "name": "Rockstar Games Support — список исправлений GTA VI для PS5 и Xbox Series X|S",
+     "url": "https://support.rockstargames.com/articles/sN5pEdFYZdlvijKXd6xpJ/grand-theft-auto-vi-launch-updates-ps5-xbox-series-x-or-s"
+    },
+    {
+     "name": "PlayStation Blog — итоги запуска на PlayStation 5",
+     "url": "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/"
+    },
+    {
+     "name": "PlayStation Support — код ошибки CE-108255-1",
+     "url": "https://www.playstation.com/en-us/support/error-codes/ps5/ce-108255-1/"
+    },
+    {
+     "name": "Notebookcheck — патч не закрыл CE-108255-1",
+     "url": "https://www.notebookcheck.net/GTA-6-update-fails-to-fix-PS5-crash-CE-108255-1-as-patch-disappoints-console-owners.1458054.0.html"
+    },
+    {
+     "name": "PC Guide — замеры потребления и два случая со стримерами",
+     "url": "https://www.pcguide.com/news/gta-6-players-report-ps5-consoles-failing-as-tests-reveal-unusually-high-power-consumption/"
+    },
+    {
+     "name": "TweakTown — бюджет питания PS5 и реакция сообщества",
+     "url": "https://www.tweaktown.com/news/114881/gta-6-has-ps5-owners-checking-their-vents-after-a-console-dies-and-another-starts-smoking/index.html"
+    },
+    {
+     "name": "TechRadar — кадры с «сожжённой» PS5 и пауза перед дымом",
+     "url": "https://www.techradar.com/gaming/twitch-streamer-claims-gta-6-fried-my-ps5-live-on-air-as-more-consoles-catch-on-fire-the-gpu-is-done-and-the-console-is-gone"
+    },
+    {
+     "name": "GAMINGbible — «PS5 blackout» и запрос в Sony и Rockstar",
+     "url": "https://gamingbible.com/news/gta-6-blackouts-begin-ps5-consoles-shut-down-293316-20261125"
+    },
+    {
+     "name": "PC Gamer — цифры Sony: 39 млн игроков и 683 млн часов",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/sony-gta-6-set-record-for-highest-number-of-concurrent-players-for-any-game-on-playstation-ever"
+    },
+    {
+     "name": "GTA Scoop — проверка утверждения про «убитые» PS5",
+     "url": "https://gtascoop.com/news/2026-11-25-fact-check-gta-6-killing-ps5-consoles-blackout"
+    },
+    {
+     "name": "TechPowerUp — ревизии PS5 Slim и жидкий металл",
+     "url": "https://www.techpowerup.com/355064/gta-vi-proves-too-demanding-for-some-ps5-consoles-even-at-30-fps"
+    },
+    {
+     "name": "IGN — размеры патча 01.002.002 на PS5 и Xbox",
+     "url": "https://nordic.ign.com/grand-theft-auto-vi/115971/gta-6-update-01002002-rolling-out-now-although-there-are-no-patch-notes-yet"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-26-0800-oppo-find-x10-rossiya.html",
    "url": "https://geekovski.ru/2026-11-26-0800-oppo-find-x10-rossiya.html",
    "title": "OPPO Find X10 в России: 139 999 ₽",
