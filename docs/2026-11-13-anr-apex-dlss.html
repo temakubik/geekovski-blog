@@ -109,9 +109,9 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Apex Compute выпустила открытую бету ANR — генерации кадров, которая, по заявлениям компании, в 2,4 раза быстрее DLSS и работает на железе, где DLSS официально недоступен: Radeon RX 5000, GeForce GTX 16, Steam Deck и Intel Arc. Проверить это можно уже сейчас — бета ставится в игры через OptiScaler.</p>
     <div class="post__creditline"><p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p><time datetime="2026-11-13T12:40:00+03:00">13 ноября 2026, 12:40</time></div>
   </header>
-  <div class="reading-layout reading-layout--toc"><figure class="post__cover"><img src="/assets/img/anr-apex.jpg" alt="ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck" width="1600" height="900" fetchpriority="high"></figure><details class="article-toc" open><summary>Содержание</summary><nav aria-label="Содержание статьи"><ul><li><a href="#section-chto-zayavlyayut">Что заявляют</a></li><li><a href="#section-pochemu-eto-interesno">Почему это интересно</a></li><li><a href="#section-spisok-podderzhivaemogo-zheleza">Список поддерживаемого железа</a></li><li><a href="#section-kak-poprobovat">Как попробовать</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-stoit-li-probovat">Стоит ли пробовать</a></li></ul></nav></details><script>if(matchMedia("(max-width: 1169px)").matches)document.currentScript.previousElementSibling.open=false;</script><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>ANR — набор из генерации кадров, суперразрешения и реконструкции лучей; в бете пока только генерация кадров</li><li>Заявлено до 2,4× быстрее DLSS Frame Generation и лучше по качеству; в собственных замерах Apex на RTX 5090 — 0,34 против 0,81 в режиме 2X</li><li>Поддержка: RTX 20–50, GTX 16, RX 5000–9000, Steam Deck, Arc A и B, Apple M1 и новее</li></ul></aside><div class="post__body"><p>Стартап <strong>Apex Compute</strong> 11 ноября выкатил <strong>ANR — Apex Neural Rendering</strong>. Это набор технологий апскейла, генерации кадров и реконструкции лучей. Генерация кадров уже доступна в открытой бете, остальное — «в обучении».</p>
+  <div class="reading-layout reading-layout--toc"><figure class="post__cover"><picture><source srcset="/assets/img/anr-apex.webp" type="image/webp"><img src="/assets/img/anr-apex.jpg" alt="ANR от Apex Compute: открытый конкурент DLSS, который работает на старых Radeon и Steam Deck" width="1600" height="900" fetchpriority="high"></picture></figure><details class="article-toc" open><summary>Содержание</summary><nav aria-label="Содержание статьи"><ul><li><a href="#section-chto-zayavlyayut">Что заявляют</a></li><li><a href="#section-pochemu-eto-interesno">Почему это интересно</a></li><li><a href="#section-spisok-podderzhivaemogo-zheleza">Список поддерживаемого железа</a></li><li><a href="#section-kak-poprobovat">Как попробовать</a></li><li><a href="#section-gde-podvoh">Где подвох</a></li><li><a href="#section-stoit-li-probovat">Стоит ли пробовать</a></li></ul></nav></details><script>if(matchMedia("(max-width: 1169px)").matches)document.currentScript.previousElementSibling.open=false;</script><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>ANR — набор из генерации кадров, суперразрешения и реконструкции лучей; в бете пока только генерация кадров</li><li>Заявлено до 2,4× быстрее DLSS Frame Generation и лучше по качеству; в собственных замерах Apex на RTX 5090 — 0,34 против 0,81 в режиме 2X</li><li>Поддержка: RTX 20–50, GTX 16, RX 5000–9000, Steam Deck, Arc A и B, Apple M1 и новее</li></ul></aside><div class="post__body"><p>Стартап <strong>Apex Compute</strong> 11 ноября выкатил <strong>ANR — Apex Neural Rendering</strong>. Это набор технологий апскейла, генерации кадров и реконструкции лучей. Генерация кадров уже доступна в открытой бете, остальное — «в обучении».</p>
 <p>Главное в анонсе не качество картинки, а список видеокарт. ANR работает там, где NVIDIA официально не даёт DLSS: на <strong>Radeon RX 5000</strong>, <strong>GeForce GTX 16</strong>, <strong>Steam Deck</strong> и встроенной графике Apple.</p>
-<figure class="post__fig"><img src="/assets/img/anr-apex-2.jpg" alt="Второй кадр сравнения ANR на The Last of Us Part II Remastered" width="1400" height="741" loading="lazy" decoding="async"></figure>
+<figure class="post__fig"><picture><source srcset="/assets/img/anr-apex-2.webp" type="image/webp"><img src="/assets/img/anr-apex-2.jpg" alt="Второй кадр сравнения ANR на The Last of Us Part II Remastered" width="1400" height="741" loading="lazy" decoding="async"></picture></figure>
 <h2 id="section-chto-zayavlyayut">Что заявляют</h2>
 <p>Apex говорит прямо: ANR даёт <strong>до 2,4 раза большую производительность</strong> и <strong>лучшее качество</strong>, чем DLSS от NVIDIA. Это маркетинговое утверждение, и к нему стоит относиться соответственно — но компания хотя бы даёт цифры и возможность проверить.</p>
 <p>В собственном замере на <strong>RTX 5090</strong> в 4K показатели ANR в режимах 2X / 3X / 4X — <strong>0,34 / 0,53 / 1,13</strong> против <strong>0,81 / 1,08 / 1,27</strong> у DLSS Frame Generation. В режиме 2X разница и даёт те самые 2,4 раза.</p>
@@ -137,19 +137,19 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 <p><strong>Нет, если</strong> вы играете в онлайн-шутеры. Подмена DLL и античит — плохая комбинация, риск бана не оправдан.</p>
 <p><strong>Нет, если</strong> вам нужна стабильность. Бета есть бета: ждите как минимум пары месяцев и независимых обзоров.</p>
 <p>Одна честная оговорка: всё выше — из материалов самой Apex и разбора VideoCardz. Я не запускал ANR на своём железе, поэтому не могу подтвердить ни прирост, ни качество картинки. Когда появятся независимые тесты, картина станет понятнее.</p><nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><div class="morecards"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/alien-isolation-2-lv921.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/alien-isolation-2-lv921.webp" type="image/webp"><img src="/assets/img/alien-isolation-2-lv921.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-27T15:00:00+03:00">27.11</time></div>
     <h3 class="card__title"><a href="/2026-11-27-1500-alien-isolation-2-planeta.html">Alien: Isolation 2: ксеноморф охотится на открытой планете</a></h3>
   </div>
 </article><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/diablo-4-sezon-16-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/diablo-4-sezon-16-cover.webp" type="image/webp"><img src="/assets/img/diablo-4-sezon-16-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-26T18:00:00+03:00">26.11</time></div>
     <h3 class="card__title"><a href="/2026-11-26-1800-diablo-4-sezon-16-postoyannoe.html">Diablo IV оставила сезонных боссов навсегда</a></h3>
   </div>
 </article><article class="card card-- cat-vr">
-  <div class="card__cover"><img src="/assets/img/steam-frame-steamvr-2-19-1.jpg" alt="" width="2400" height="1350" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/steam-frame-steamvr-2-19-1.webp" type="image/webp"><img src="/assets/img/steam-frame-steamvr-2-19-1.jpg" alt="" width="2400" height="1350" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-vr" href="/vr/">VR</a><time datetime="2026-11-04T18:06:00+03:00">04.11</time></div>
     <h3 class="card__title"><a href="/steam-frame-steamvr-2-19-1.html">Steam Frame: стрим стал чётче, суперсэмплинг убрали</a></h3>
@@ -164,7 +164,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 </section></div></div>
 </article>
 <section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/terraria-crossplay-console-menu.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/terraria-crossplay-console-menu.webp" type="image/webp"><img src="/assets/img/terraria-crossplay-console-menu.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-25T12:00:00+03:00">25.11</time></div>
     <h3 class="card__title"><a href="/2026-11-25-1200-terraria-krossplay.html">Terraria наконец получила кроссплей — с оговорками</a></h3>
@@ -172,7 +172,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/tarkov-unity6-les.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/tarkov-unity6-les.webp" type="image/webp"><img src="/assets/img/tarkov-unity6-les.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-24T21:00:00+03:00">24.11</time></div>
     <h3 class="card__title"><a href="/2026-11-24-2100-tarkov-unity-6.html">Tarkov перешла на Unity 6: что даёт патч 1.3.5.0</a></h3>
@@ -180,7 +180,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/cyberpunk-2077-update-25.jpg" alt="" width="1280" height="719" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/cyberpunk-2077-update-25.webp" type="image/webp"><img src="/assets/img/cyberpunk-2077-update-25.jpg" alt="" width="1280" height="719" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-24T11:36:00+03:00">24.11</time></div>
     <h3 class="card__title"><a href="/cyberpunk-2-edgerunners.html">Cyberpunk 2, Edgerunners 2 и патч 2.5 — что уже вышло</a></h3>

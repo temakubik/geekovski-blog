@@ -109,26 +109,26 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">Baidu выложила на Hugging Face и ModelScope веса ERNIE 5.5 Flash Base — разреженной MoE-модели на 280 млрд параметров, где на каждый токен работает 14 млрд. Это сырой чекпойнт после предобучения, без инструктажа и дообучения.</p>
     <div class="post__creditline"><p class="byline"><img class="byline__pic" src="/assets/img/author-seva.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/seva.html">Всеволод Гринёв</a></span></p><time datetime="2026-11-05T18:05:00+03:00">5 ноября 2026, 18:05</time></div>
   </header>
-  <div class="reading-layout "><figure class="post__cover"><img src="/assets/img/baidu-ernie-5-5-flash-base.jpg" alt="Baidu открыла веса ERNIE 5.5 Flash Base" width="1600" height="900" fetchpriority="high"></figure><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>280 млрд параметров всего, 14 млрд активных на токен — 512 экспертов, верхние 10 на токен</li><li>Предобучение с нуля на 33,5 трлн токенов, контекст тренировки 128K, для инференса 1M</li><li>Веса в FP8 и BF16, лицензия ERNIE 5.5 Flash Base v1.0</li><li>Это base-модель, а не готовый ассистент: версия после посттренировки ещё впереди</li></ul></aside><div class="post__body"><p>5 ноября Baidu выложила в открытый доступ ERNIE 5.5 Flash Base: веса лежат на Hugging Face и ModelScope, карточка модели, лицензия и страница релиза — тоже опубликованы. Это официальный релиз, но без презентации и пресс-конференции: китайская компания просто выложила чекпойнт — так что новость разошлась по разработчикам быстрее, чем по новостным лентам.</p>
+  <div class="reading-layout "><figure class="post__cover"><picture><source srcset="/assets/img/baidu-ernie-5-5-flash-base.webp" type="image/webp"><img src="/assets/img/baidu-ernie-5-5-flash-base.jpg" alt="Baidu открыла веса ERNIE 5.5 Flash Base" width="1600" height="900" fetchpriority="high"></picture></figure><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>280 млрд параметров всего, 14 млрд активных на токен — 512 экспертов, верхние 10 на токен</li><li>Предобучение с нуля на 33,5 трлн токенов, контекст тренировки 128K, для инференса 1M</li><li>Веса в FP8 и BF16, лицензия ERNIE 5.5 Flash Base v1.0</li><li>Это base-модель, а не готовый ассистент: версия после посттренировки ещё впереди</li></ul></aside><div class="post__body"><p>5 ноября Baidu выложила в открытый доступ ERNIE 5.5 Flash Base: веса лежат на Hugging Face и ModelScope, карточка модели, лицензия и страница релиза — тоже опубликованы. Это официальный релиз, но без презентации и пресс-конференции: китайская компания просто выложила чекпойнт — так что новость разошлась по разработчикам быстрее, чем по новостным лентам.</p>
 <p>Цифры архитектуры такие: 280 млрд параметров всего и 14 млрд активных на каждый токен. Внутри 43 слоя — один плотный блок и 42 слоя разреженной MoE с 512 роутируемыми экспертами (на токен выбираются верхние 10) плюс один общий эксперт. Из 43 слоёв 37 построены на heavily compressed attention, ещё 6 — на multi-head latent attention с разреженным механизмом. Размерность скрытого слоя 4096, словарь 201 216 токенов.</p>
 <p>Модель предобучена с нуля на 33,5 трлн токенов с оптимизатором Muon. Контекст на этапе обучения — 128K, но в конфигурации релиза включён 1M токенов для дообучения и инференса. Веса выложены в двух вариантах: FP8 (основной) и BF16, оба в safetensors. Модель текстовая, без мультимодальности; в карточке отдельно оговорено, что 0,36 млрд параметров ECHO не входят в счёт активных.</p>
 <p>Ключевая оговорка, которую легко пропустить за цифрами: это <strong>base</strong>-модель, то есть сырой чекпойнт в конце предобучения — без mid-training, без инструкций и без выравнивания. Из коробки она не отвечает на вопросы и не ведёт диалог, а требует, чтобы каждая строка входа начиналась с BOS-токена. Baidu прямо говорит: берите веса как стартовую точку для доменной адаптации, SFT или RL-исследований. Версия после посттренировки, собственно ERNIE 5.5 Flash, ещё впереди.</p>
 <p>Зачем это нужно: открытые base-чекпойнты такого размера — редкость, обычно компании выкладывают уже «причёсанную» instruct-версию, чтобы не отдавать конкурентам сырьё. В карточке модели Baidu сравнивает себя с DeepSeek-V4-Flash-Base (284 млрд параметров), Hy3-preview-Base (295 млрд) и MiMo-V2.5-Base (310 млрд) и заявляет SOTA среди base-моделей сопоставимого размера — это её собственные бенчмарки, независимой проверки пока нет.</p>
 <p><strong>Оценка:</strong> ход сильный, но практическая польза появится не сразу. Пока это конструктор для тех, у кого есть кластер: 280 млрд параметров даже в FP8 — это сотни гигабайт памяти, и на бытовой машине такой чекпойнт не запустить. Зато для команд, которые дообучают модели под свои домены, появился ещё один бесплатный фундамент — и это ровно тот случай, когда «открытые веса» означают открытые веса, а не маркетинговую строчку в пресс-релизе.</p>
-<figure class="post__fig"><img src="/assets/img/baidu-ernie-5-5-flash-base-hp.jpg" alt="Серверные стойки в синей подсветке дата-центра" width="1600" height="1065" loading="lazy" decoding="async"></figure><nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><div class="morecards"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/kitaj-ai-h100.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+<figure class="post__fig"><picture><source srcset="/assets/img/baidu-ernie-5-5-flash-base-hp.webp" type="image/webp"><img src="/assets/img/baidu-ernie-5-5-flash-base-hp.jpg" alt="Серверные стойки в синей подсветке дата-центра" width="1600" height="1065" loading="lazy" decoding="async"></picture></figure><nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><div class="morecards"><article class="card card-- cat-ai">
+  <div class="card__cover"><picture><source srcset="/assets/img/kitaj-ai-h100.webp" type="image/webp"><img src="/assets/img/kitaj-ai-h100.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-27T10:00:00+03:00">27.11</time></div>
     <h3 class="card__title"><a href="/2026-11-27-1000-kitajskie-ai-upirajutsya-v-chipy-i-uchitelej.html">Китайские ИИ-лаборатории упёрлись в чипы и учителей</a></h3>
   </div>
 </article><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/vp-vnp-proofs-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/vp-vnp-proofs-cover.webp" type="image/webp"><img src="/assets/img/vp-vnp-proofs-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-25T18:00:00+03:00">25.11</time></div>
     <h3 class="card__title"><a href="/2026-11-25-1800-vp-vnp-dva-dokazatelstva.html">Claude и OpenAI доказали VP ≠ VNP. Никто не проверил</a></h3>
   </div>
 </article><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/tidal-ai-music-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/tidal-ai-music-cover.webp" type="image/webp"><img src="/assets/img/tidal-ai-music-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-25T08:00:00+03:00">25.11</time></div>
     <h3 class="card__title"><a href="/2026-11-25-0800-tidal-ai-music.html">Tidal удалит 29 млн ИИ-треков с 9 декабря</a></h3>
@@ -143,7 +143,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 </section></div></div>
 </article>
 <section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/ii-slishkom-opasno-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/ii-slishkom-opasno-cover.webp" type="image/webp"><img src="/assets/img/ii-slishkom-opasno-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-24T18:00:00+03:00">24.11</time></div>
     <h3 class="card__title"><a href="/2026-11-24-1800-ii-slishkom-opasno-vypuskat.html">Сотрудники OpenAI и Anthropic: новые модели нельзя выпускать</a></h3>
@@ -151,7 +151,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/amazon-decart-trainium-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/amazon-decart-trainium-cover.webp" type="image/webp"><img src="/assets/img/amazon-decart-trainium-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-24T10:00:00+03:00">24.11</time></div>
     <h3 class="card__title"><a href="/2026-11-24-1000-amazon-decart-soft-7-5-mlrd.html">Amazon купила софт Decart за $7,5 млрд</a></h3>
@@ -159,7 +159,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </article>
 <article class="card card-- cat-ai">
-  <div class="card__cover"><img src="/assets/img/nvidia-huang-vozvrat-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/nvidia-huang-vozvrat-cover.webp" type="image/webp"><img src="/assets/img/nvidia-huang-vozvrat-cover.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-ai" href="/ai/">AI</a><time datetime="2026-11-23T18:00:00+03:00">23.11</time></div>
     <h3 class="card__title"><a href="/2026-11-23-1800-nvidia-huang-vozvrat.html">Nvidia вернула Дженсена Хуанга на пост CEO</a></h3>

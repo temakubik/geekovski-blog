@@ -109,26 +109,26 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
     <p class="post__lead">В стабильной сборке Telegram 13.2 заработали HTMLBubbles — интерактивные сообщения на HTML, CSS и JavaScript. Внутри пузыря чата уже запускают клоны Wolfenstein 3D и 2048, прогресс сохраняется между запусками приложения.</p>
     <div class="post__creditline"><p class="byline"><img class="byline__pic" src="/assets/img/author-mark.jpg" alt="" width="40" height="40" loading="lazy"><span class="byline__text"><span class="byline__label">Автор</span> <a class="byline__name" href="/avtory/mark.html">Марк Стрельцов</a></span></p><time datetime="2026-11-05T22:15:00+03:00">5 ноября 2026, 22:15</time></div>
   </header>
-  <div class="reading-layout "><figure class="post__cover"><img src="/assets/img/telegram-htmlbubbles.jpg" alt="В Telegram 13.2 запускают игры прямо в сообщениях" width="1600" height="900" fetchpriority="high"></figure><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Виджет — это сообщение с HTML/CSS/JS, нарисованное прямо в переписке без Mini App и без WebView на Android</li><li>Лимиты жёсткие — 32 КБ кода, 600×600 пикселей, запрет сетевых запросов, внешних скриптов, полей ввода и WebGL</li><li>Официального анонса от Telegram нет, выключателя в настройках тоже; в десктопном клиенте виджетов пока нет</li></ul></aside><div class="post__body"><p>В Telegram 13.2 появилась технология HTMLBubbles: сообщение перестало быть просто текстом или медиа и стало контейнером, внутри которого исполняется HTML, CSS и JavaScript. Редакция «Код Дурова» проверила это в стабильной сборке — виджет рисуется прямо в пузыре переписки, отдельное окно Mini App открывать не нужно. Аналогичные интерактивные сообщения заметили и в 13.2 у Rozetked.</p>
+  <div class="reading-layout "><figure class="post__cover"><picture><source srcset="/assets/img/telegram-htmlbubbles.webp" type="image/webp"><img src="/assets/img/telegram-htmlbubbles.jpg" alt="В Telegram 13.2 запускают игры прямо в сообщениях" width="1600" height="900" fetchpriority="high"></picture></figure><div class="reading-text"><aside class="tldr"><h2 class="tldr__title">Коротко</h2><ul><li>Виджет — это сообщение с HTML/CSS/JS, нарисованное прямо в переписке без Mini App и без WebView на Android</li><li>Лимиты жёсткие — 32 КБ кода, 600×600 пикселей, запрет сетевых запросов, внешних скриптов, полей ввода и WebGL</li><li>Официального анонса от Telegram нет, выключателя в настройках тоже; в десктопном клиенте виджетов пока нет</li></ul></aside><div class="post__body"><p>В Telegram 13.2 появилась технология HTMLBubbles: сообщение перестало быть просто текстом или медиа и стало контейнером, внутри которого исполняется HTML, CSS и JavaScript. Редакция «Код Дурова» проверила это в стабильной сборке — виджет рисуется прямо в пузыре переписки, отдельное окно Mini App открывать не нужно. Аналогичные интерактивные сообщения заметили и в 13.2 у Rozetked.</p>
 <p>Энтузиасты уже успели поиграться: внутри переписки запускали клоны Wolfenstein 3D (в отчётах фигурирует под именем Monkenstein 3D), Geometry Dash и 2048, а среди готовых примеров есть калькулятор и виджет погоды. Главное отличие от Mini Apps не в картинке, а в механике: виджет живёт в самом сообщении, пересылается вместе с ним и умеет сохранять состояние между запусками Telegram — тот же счёт в игре не сбрасывается после перезапуска клиента.</p>
-<figure class="post__fig"><img src="/assets/img/telegram-htmlbubbles-foto.jpg" alt="Рука с телефоном и открытым мессенджером: теперь в пузыре может работать не только текст" width="1400" height="2100" loading="lazy" decoding="async"></figure>
+<figure class="post__fig"><picture><source srcset="/assets/img/telegram-htmlbubbles-foto.webp" type="image/webp"><img src="/assets/img/telegram-htmlbubbles-foto.jpg" alt="Рука с телефоном и открытым мессенджером: теперь в пузыре может работать не только текст" width="1400" height="2100" loading="lazy" decoding="async"></picture></figure>
 <p>Ограничения прописаны жёстко, и это не осторожность ради осторожности, а устройство песочницы. Код — до 32 КБ, сам виджет — до 600×600 пикселей без прокрутки, сетевые запросы к сторонним ресурсам, внешние скрипты и файлы, поля ввода, видео и WebGL запрещены. Общаться с миром виджет может только через своего бота: запрос по нажатию (до 64 байт) и ответ (до 1 КБ), поэтому опрос или график обновляются без повторной отправки сообщения. На Android под виджетом нет ни WebView, ни Chromium: разметку рисует нативный рендерер, а скрипт исполняет встроенный интерпретатор QuickJS в песочнице — на Apple-платформах это отдельный модуль на WebKit, закрытый от сети тремя слоями.</p>
 <p>Для разработчиков Telegram открыл исходники песочницы WidgetSandbox, движка Twidget и JavaScript-движка QuickJS, а в Bot API появились методы для отправки и обновления виджетов, включая синхронизацию данных между пересланными копиями одного сообщения. То есть заготовка под «сообщения-приложения» сделана основательно, а не как эксперимент на выходные.</p>
 <p>Статус инфоповода называем прямо: функция работает в стабильной 13.2, но официального анонса в блоге Telegram нет, и в настройках нет выключателя, который отключал бы виджеты — на это обратили внимание тестировщики. В десктопном клиенте (7.3) интерактивных сообщений пока нет вовсе, так что «у всех уже работает» — неверная картина.</p>
 <p>Оценка: это самый интересный за годы сдвиг в мессенджере, и не из-за Doom в чате. Если песочница выдержит напор, Telegram получит формат, которого нет ни у кого: сообщение, которое само себе приложение, пересылается и помнит состояние. Настораживает другое — исполнение чужого JavaScript внутри переписки без видимого переключателя; пока ограничения жёсткие, но именно они и будут главным предметом споров.</p><nav class="post__more" aria-label="Другие материалы по теме"><h2>Читайте также</h2><div class="morecards"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/alien-isolation-2-lv921.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/alien-isolation-2-lv921.webp" type="image/webp"><img src="/assets/img/alien-isolation-2-lv921.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-27T15:00:00+03:00">27.11</time></div>
     <h3 class="card__title"><a href="/2026-11-27-1500-alien-isolation-2-planeta.html">Alien: Isolation 2: ксеноморф охотится на открытой планете</a></h3>
   </div>
 </article><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/diablo-4-sezon-16-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/diablo-4-sezon-16-cover.webp" type="image/webp"><img src="/assets/img/diablo-4-sezon-16-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-26T18:00:00+03:00">26.11</time></div>
     <h3 class="card__title"><a href="/2026-11-26-1800-diablo-4-sezon-16-postoyannoe.html">Diablo IV оставила сезонных боссов навсегда</a></h3>
   </div>
 </article><article class="card card-- cat-vr">
-  <div class="card__cover"><img src="/assets/img/meta-120-mln-vr-igry-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/meta-120-mln-vr-igry-cover.webp" type="image/webp"><img src="/assets/img/meta-120-mln-vr-igry-cover.jpg" alt="" width="1600" height="900" fetchpriority="high"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-vr" href="/vr/">VR</a><time datetime="2026-11-17T21:00:00+03:00">17.11</time></div>
     <h3 class="card__title"><a href="/2026-11-17-2100-meta-120-mln-vr-igry.html">Meta зарезервировала $120 млн под VR-игры</a></h3>
@@ -143,7 +143,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
 </section></div></div>
 </article>
 <section class="related"><h2>По теме</h2><div class="editorial-grid"><article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/terraria-crossplay-console-menu.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/terraria-crossplay-console-menu.webp" type="image/webp"><img src="/assets/img/terraria-crossplay-console-menu.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-25T12:00:00+03:00">25.11</time></div>
     <h3 class="card__title"><a href="/2026-11-25-1200-terraria-krossplay.html">Terraria наконец получила кроссплей — с оговорками</a></h3>
@@ -151,7 +151,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/tarkov-unity6-les.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/tarkov-unity6-les.webp" type="image/webp"><img src="/assets/img/tarkov-unity6-les.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-24T21:00:00+03:00">24.11</time></div>
     <h3 class="card__title"><a href="/2026-11-24-2100-tarkov-unity-6.html">Tarkov перешла на Unity 6: что даёт патч 1.3.5.0</a></h3>
@@ -159,7 +159,7 @@ _tmr.push({id: "3816456", type: "pageView", start: (new Date()).getTime()});
   </div>
 </article>
 <article class="card card-- cat-pc">
-  <div class="card__cover"><img src="/assets/img/cyberpunk-2077-update-25.jpg" alt="" width="1280" height="719" loading="lazy" decoding="async"></div>
+  <div class="card__cover"><picture><source srcset="/assets/img/cyberpunk-2077-update-25.webp" type="image/webp"><img src="/assets/img/cyberpunk-2077-update-25.jpg" alt="" width="1280" height="719" loading="lazy" decoding="async"></picture></div>
   <div class="card__body">
     <div class="card__meta"><a class="chip cat-pc" href="/pc/">PC-игры</a><time datetime="2026-11-24T11:36:00+03:00">24.11</time></div>
     <h3 class="card__title"><a href="/cyberpunk-2-edgerunners.html">Cyberpunk 2, Edgerunners 2 и патч 2.5 — что уже вышло</a></h3>

@@ -678,6 +678,27 @@ def local_image(url):
     return None
 
 
+def webp_variant(path):
+    """WebP-копия рядом с JPEG: ~вдвое меньше байт при том же размере кадра.
+
+    GitHub Pages отдаёт картинки медленно и с большим TTFB, поэтому вес
+    файла напрямую влияет на то, доедет ли кадр до читателя.
+    """
+    if not path or path.suffix.lower() not in (".jpg", ".jpeg", ".png"):
+        return None
+    out = path.with_suffix(".webp")
+    if out.exists() and out.stat().st_mtime >= path.stat().st_mtime:
+        return out
+    try:
+        from PIL import Image
+        with Image.open(path) as im:
+            im = im.convert("RGB") if im.mode not in ("RGB", "RGBA") else im
+            im.save(out, "WEBP", quality=78, method=6)
+        return out
+    except Exception:
+        return None
+
+
 def image_tag(src, alt="", priority=False):
     if not src:
         return ""
@@ -685,7 +706,12 @@ def image_tag(src, alt="", priority=False):
     size = image_size(path) if path else None
     dimensions = ' width="%d" height="%d"' % size if size else ""
     loading = 'fetchpriority="high"' if priority else 'loading="lazy" decoding="async"'
-    return f'<img src="{html.escape(src)}" alt="{html.escape(alt)}"{dimensions} {loading}>'
+    img = f'<img src="{html.escape(src)}" alt="{html.escape(alt)}"{dimensions} {loading}>'
+    webp = webp_variant(path)
+    if webp and path is not None:
+        rel = "/assets/img/" + webp.name
+        return f'<picture><source srcset="{rel}" type="image/webp">{img}</picture>'
+    return img
 
 
 def og_image_meta(url, alt):
@@ -3138,6 +3164,15 @@ if __name__ == "__main__":
         print("тонкий контент: %d статей короче 600 слов (не блокер, но растёт медленнее)" % len(thin))
     vk_items = vk_selection(ps)
     print("vk.xml: %d анонсов (%s)" % (len(vk_items), ", ".join(p["slug"] for p in vk_items)))
+    # WebP-копии рождаются во время рендера, то есть уже после первого копирования
+    # static/img → out/assets/img. Досыпаем их в собранный сайт.
+    webp_src = ROOT / "static" / "img"
+    if webp_src.exists():
+        for webp in webp_src.glob("*.webp"):
+            dst = Path(a.out) / "assets" / "img" / webp.name
+            if not dst.exists():
+                shutil.copy(webp, dst)
+
     problems = image_report(ps)
     if problems:
         print("\nкартинки: проблем %d" % len(problems))
