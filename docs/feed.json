@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-27-1500-alien-isolation-2-planeta.html",
+   "url": "https://geekovski.ru/2026-11-27-1500-alien-isolation-2-planeta.html",
+   "title": "Alien: Isolation 2: ксеноморф охотится на открытой планете",
+   "summary": "26 ноября SEGA и Creative Assembly выложили официальное интервью о Alien: Isolation 2, а IGN, GamesRadar, CreativeBloq и Shacknews — разборы получасового пролога. Сиквел уходит с космической станции на планету LV-921, играем за сотрудницу Weyland-Yutani Блейк, ксеноморфа по-прежнему нельзя убить, а даты и цены нет до сих пор.",
+   "date_published": "2026-11-27T15:00:00+03:00",
+   "date_modified": "2026-11-27T15:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/alien-isolation-2-lv921.jpg",
+   "_sources": [
+    {
+     "name": "SEGA — карточка продукта и платформы",
+     "url": "https://www.sega.co.jp/en/release/260608_6.html"
+    },
+    {
+     "name": "SEGA — пресс-релиз анонса",
+     "url": "https://sega.prezly.com/creative-assembly-announce-alien-isolation-2"
+    },
+    {
+     "name": "IGN — превью пролога",
+     "url": "https://www.ign.com/articles/alien-isolation-2-hands-on-preview"
+    },
+    {
+     "name": "IGN — интервью с Элом Хоупом",
+     "url": "https://www.ign.com/articles/we-wanted-to-match-the-original-and-go-beyond-alien-isolation-2s-director-on-improving-a-survivor-horror-icon"
+    },
+    {
+     "name": "IGN Nordic — разговор на Lucca Comics & Games",
+     "url": "https://nordic.ign.com/alien-isolation-sequel/115136/alien-isolation-2-sticking-with-pure-survival-horror-roots-says-creative-director"
+    },
+    {
+     "name": "GamesRadar — про технологии и звук",
+     "url": "https://gamesradar.com/games/survival-horror/12-years-later-alien-isolation-2-leads-want-better-tech-and-more-space-to-sear-the-horror-sequel-into-your-memory-genuinely-unforgettable"
+    },
+    {
+     "name": "CreativeBloq — эстетика 1979 года",
+     "url": "https://creativebloq.com/entertainment/gaming/alien-isolation-2-continues-the-original-1979-films-aesthetic-but-takes-the-horror-outside"
+    },
+    {
+     "name": "Shacknews — атмосфера против масштаба",
+     "url": "https://shacknews.com/article/150831/creative-assembly-stays-true-to-the-first-movie-as-alien-isolation-2-focus-on-atmosphere-over-scale"
+    },
+    {
+     "name": "PlayStation Blog — впечатления с Summer Game Fest",
+     "url": "https://blog.playstation.com/2026/06/08/summer-game-fest-2026-hands-on-and-more-details-on-11-upcoming-ps5-games/"
+    },
+    {
+     "name": "PC Gamer — продажи первой части",
+     "url": "https://pcgamer.com/alien-isolation-sold-21-million-copies-during-weak-year-for-sega"
+    },
+    {
+     "name": "Kotaku — анонс на десятилетие игры",
+     "url": "https://kotaku.com/alien-isolation-2-teaser-trailer-sega-2000690735"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-27-1200-gta6-vnimanie-rynok.html",
    "url": "https://geekovski.ru/2026-11-27-1200-gta6-vnimanie-rynok.html",
    "title": "GTA 6 забрала треть внимания всех геймеров",
