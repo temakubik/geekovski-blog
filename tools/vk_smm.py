@@ -542,7 +542,7 @@ def cmd_poll(args):
     state = read_json(LONGPOLL_STATE, {})
     server = call("groups.getLongPollServer", {"group_id": group_id()}, token, "Long Poll")
     ts = state.get("ts") or server["ts"]
-    url = "%s?act=a_check&key=%s&ts=%s&wait=%d&mode=2&version=3" % (
+    url = "%s?act=a_check&key=%s&ts=%s&wait=%d&mode=2" % (
         server["server"], server["key"], ts, args.wait)
     try:
         with urllib.request.urlopen(url, timeout=args.wait + 30) as r:

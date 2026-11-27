@@ -133,7 +133,10 @@ body {
 }
 h1, h2, h3, h4, .h0, .h1, .h2 { font-style: normal; }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+/* height: auto обязателен: атрибуты width/height в разметке браузер
+   применяет как CSS-размеры, и без этого картинка в тексте растягивается
+   по высоте атрибута при width: 100% */
+img { max-width: 100%; height: auto; display: block; }
 .wrap { width: 100%; max-width: 1360px; margin-inline: auto; padding-inline: var(--gutter); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
@@ -445,7 +448,7 @@ a.chip:hover, a.chip:focus-visible { border-color: currentColor; }
 
 /* картинки в тексте */
 .post__fig { margin: 26px 0; }
-.post__fig img { width: 100%; }
+.post__fig img { width: 100%; height: auto; }
 .post__fig figcaption { margin-top: 8px; font-family: var(--font-mono); font-size: var(--fs-meta); color: var(--muted); }
 
 /* поделиться */
