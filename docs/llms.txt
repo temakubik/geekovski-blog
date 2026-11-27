@@ -11,7 +11,7 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 15 материалов
+- [Xbox](https://geekovski.ru/xbox/): 16 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 19 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 24 материала
 - [PC-игры](https://geekovski.ru/pc/): 41 материал
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 87 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 107 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 108 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 39 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Arkheron: класс собирают из реликвий, а не выбирают](https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html): 27 ноября Bonfire Studios выпустила в ранний доступ Arkheron — командный PvP-экшен, где нет классов и выбора героя до матча, а роль задают подобранные реликвии. Игра стоит $24,99, первые выходные бесплатные для всех, а в Game Pass Ultimate она входит на три месяца вперёд. (27.11.2026)
 - [Alien: Isolation 2: ксеноморф охотится на открытой планете](https://geekovski.ru/2026-11-27-1500-alien-isolation-2-planeta.html): 26 ноября SEGA и Creative Assembly выложили официальное интервью о Alien: Isolation 2, а IGN, GamesRadar, CreativeBloq и Shacknews — разборы получасового пролога. Сиквел уходит с космической станции на планету LV-921, играем за сотрудницу Weyland-Yutani Блейк, ксеноморфа по-прежнему нельзя убить, а даты и цены нет до сих пор. (27.11.2026)
 - [GTA 6 забрала треть внимания всех геймеров](https://geekovski.ru/2026-11-27-1200-gta6-vnimanie-rynok.html): Screen Engine/ASI замерила первую неделю после релиза — 31,4% всего внимания игроков мира, почти втрое больше прежнего рекорда Fortnite 2019 года, а доля живых сервисов впервые с начала замеров упала ниже половины — с 57% до 42,4%. В тот же день The Game Business отчиталась по Европе — «коробки без диска» дали лучший физический старт в Британии с 2019-го, а продажи консолей в UK выросли на 38%. (27.11.2026)
 - [Китайские ИИ-лаборатории упёрлись в чипы и учителей](https://geekovski.ru/2026-11-27-1000-kitajskie-ai-upirajutsya-v-chipy-i-uchitelej.html): 26 ноября Reuters со ссылкой на анонимные источники сообщил, что Z.AI не выпустила GLM-5.5 — флагман на 3 трлн параметров, обещанный в ноябре, — а Moonshot начала дистиллировать модели Google и Meta, потому что данные OpenAI и Anthropic добывать стало трудно. Причины две: закрытые цепочки рассуждений американских лабораторий и правило BIS, с 19 ноября требующее лицензию на зарубежные вычисления для китайских компаний. (27.11.2026)

@@ -8,6 +8,68 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html",
+   "url": "https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html",
+   "title": "Arkheron: класс собирают из реликвий, а не выбирают",
+   "summary": "27 ноября Bonfire Studios выпустила в ранний доступ Arkheron — командный PvP-экшен, где нет классов и выбора героя до матча, а роль задают подобранные реликвии. Игра стоит $24,99, первые выходные бесплатные для всех, а в Game Pass Ultimate она входит на три месяца вперёд.",
+   "date_published": "2026-11-27T18:00:00+03:00",
+   "date_modified": "2026-11-27T18:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/arkheron-cover.jpg",
+   "_sources": [
+    {
+     "name": "Bonfire Studios — страница запуска и условия",
+     "url": "https://www.arkheron.com/en_US/play"
+    },
+    {
+     "name": "Bonfire Studios — «Arkheron costs $24.99. Your friends play free»",
+     "url": "https://www.arkheron.com/en_US/news/pricing-announcement"
+    },
+    {
+     "name": "GamesBeat — интервью с Робом Пардо",
+     "url": "https://gamesbeat.com/arkheron-makes-progress-toward-early-access-with-every-bit-of-player-feedback-rob-pardo-interview/"
+    },
+    {
+     "name": "GamesBeat — анонс даты раннего доступа",
+     "url": "https://gamesbeat.com/arkheron-enters-early-access-on-pc-and-consoles-on-november-27/"
+    },
+    {
+     "name": "Game Informer — превью",
+     "url": "https://gameinformer.com/preview/2026/02/19/a-promising-battle-royale-no-seriously"
+    },
+    {
+     "name": "GameSpot — превью и разбор системы героев",
+     "url": "https://gamespot.com/articles/this-hero-action-pvp-game-demands-you-earn-your-favorite-character-every-match/1100-6538283"
+    },
+    {
+     "name": "GamerFuzion — сводка превью и бета-тестов",
+     "url": "https://gamerfuzion.com/arkheron-previews-what-hands-on-impressions-agree-on/"
+    },
+    {
+     "name": "But Why Tho — превью и интервью",
+     "url": "https://butwhytho.net/2026/02/arkheron-hands-on-preview-bonfire-studios/"
+    },
+    {
+     "name": "Game Over Interactive — цены, редакции, системные требования",
+     "url": "https://gameoverinteractive.com/news/arkheron-price-free-weekend-game-pass-crossplay"
+    },
+    {
+     "name": "ixbt.games — запуск в Game Pass",
+     "url": "https://ixbt.games/news/2026/11/27/v-xbox-game-pass-poiavilas-neobycnaia-novinka-arkheron-predlagaet-masstabnye-setevye-bitvy.html"
+    },
+    {
+     "name": "Lenta.ru — новость о запуске",
+     "url": "https://lenta.ru/news/2026/11/27/arkheron/"
+    },
+    {
+     "name": "Steam — страница игры",
+     "url": "https://store.steampowered.com/app/3333850/Arkheron/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-27-1500-alien-isolation-2-planeta.html",
    "url": "https://geekovski.ru/2026-11-27-1500-alien-isolation-2-planeta.html",
    "title": "Alien: Isolation 2: ксеноморф охотится на открытой планете",
