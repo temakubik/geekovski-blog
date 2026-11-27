@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-27-0800-anbernic-rg-47g1.html",
+   "url": "https://geekovski.ru/2026-11-27-0800-anbernic-rg-47g1.html",
+   "title": "Anbernic RG 47G1: экран 120 Гц, чип попроще",
+   "summary": "26 ноября Anbernic показала вертикальный Android-хендхелд RG 47G1 — тот же корпус, экран 4,7 дюйма 1280×960 с частотой 120 Гц и батарея на 5500 мА·ч, что у прошлогоднего RG 477V, но вместо Dimensity 8300 внутри Snapdragon G1 Gen 2 с GPU Adreno A12. Цену и дату релиза не назвали; RG 477V сейчас продаётся за $258, а тот же чип стоит в Retroid Pocket Classic за $145.",
+   "date_published": "2026-11-27T08:00:00+03:00",
+   "date_modified": "2026-11-27T08:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/anbernic-rg-47g1.jpg",
+   "_sources": [
+    {
+     "name": "ComputerBase — Anbernic RG 47G1: 4:3-Retro-Handheld mit 120 Hz",
+     "url": "https://www.computerbase.de/news/gaming/anbernic-rg-47g1-4-3-retro-handheld-mit-120-hz-und-snapdragon-g1-gen-2.100543/"
+    },
+    {
+     "name": "Android Authority — ANBERNIC's next Snapdragon-powered Game Boy-like handheld",
+     "url": "https://www.androidauthority.com/anbernic-rg-47g1-teased-snapdragon-120hz-3740662/"
+    },
+    {
+     "name": "Retro Handhelds — RG 47G1 Looks Like a Snapdragon Successor to the RG477V",
+     "url": "https://retrohandhelds.gg/anbernic-rg-47g1-looks-like-a-snapdragon-successor-to-the-rg477v/"
+    },
+    {
+     "name": "Notebookcheck — Anbernic reveals new Game Boy-inspired handheld",
+     "url": "https://www.notebookcheck.net/RG-47G1-Anbernic-reveals-new-Nintendo-Game-Boy-inspired-gaming-handheld-with-120-Hz-display.1460971.0.html"
+    },
+    {
+     "name": "IT之家 — ANBERNIC 公布 RG 47G1",
+     "url": "https://www.ithome.com/1/033/120.htm"
+    },
+    {
+     "name": "Retro Handhelds — обзор RG 55G1 на том же чипе",
+     "url": "https://retrohandhelds.gg/anbernic-rg55g1-review"
+    },
+    {
+     "name": "ComputerBase — RG DDS: цена и характеристики",
+     "url": "https://www.computerbase.de/news/gaming/anbernic-rg-dds-preis-ab-285-us-dollar-und-komplette-spezifikationen-bekannt.99870/"
+    },
+    {
+     "name": "Anbernic — ролик-анонс RG 47G1",
+     "url": "https://www.youtube.com/watch?v=SaDxlvqTYo8"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-26-2100-xenoblade-3-switch-2-edition.html",
    "url": "https://geekovski.ru/2026-11-26-2100-xenoblade-3-switch-2-edition.html",
    "title": "Xenoblade Chronicles 3 получит 4K и 60 fps",
