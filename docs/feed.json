@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-27-1000-kitajskie-ai-upirajutsya-v-chipy-i-uchitelej.html",
+   "url": "https://geekovski.ru/2026-11-27-1000-kitajskie-ai-upirajutsya-v-chipy-i-uchitelej.html",
+   "title": "Китайские ИИ-лаборатории упёрлись в чипы и учителей",
+   "summary": "26 ноября Reuters со ссылкой на анонимные источники сообщил, что Z.AI не выпустила GLM-5.5 — флагман на 3 трлн параметров, обещанный в ноябре, — а Moonshot начала дистиллировать модели Google и Meta, потому что данные OpenAI и Anthropic добывать стало трудно. Причины две: закрытые цепочки рассуждений американских лабораторий и правило BIS, с 19 ноября требующее лицензию на зарубежные вычисления для китайских компаний.",
+   "date_published": "2026-11-27T10:00:00+03:00",
+   "date_modified": "2026-11-27T10:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/kitaj-ai-h100.jpg",
+   "_sources": [
+    {
+     "name": "Reuters — US chip curbs, distillation crackdown threaten Chinese AI model development",
+     "url": "https://www.reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26"
+    },
+    {
+     "name": "LiveMint (Reuters) — полный текст материала",
+     "url": "https://www.livemint.com/technology/exclusiveus-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-sources-say-11795677671352.html"
+    },
+    {
+     "name": "The Next Web — Moonshot reportedly turns to Google and Meta models for distillation",
+     "url": "https://thenextweb.com/news/moonshot-distilling-google-meta-zai-glm-5-5-delay"
+    },
+    {
+     "name": "BIS — Addressing Remote Access to Advanced Semiconductors, Federal Register 19.11.2026",
+     "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/html/2026-23529.htm"
+    },
+    {
+     "name": "CISA, NSA, FBI — China-Based AI Companies Conducting Industrial-Scale Distillation Campaigns (AA26-251A)",
+     "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a"
+    },
+    {
+     "name": "OpenAI — Combatting adversarial distillation",
+     "url": "https://openai.com/index/combatting-adversarial-distillation/"
+    },
+    {
+     "name": "Anthropic — Strengthening our defenses against distillation attacks",
+     "url": "https://www.anthropic.com/news/distillation-defenses"
+    },
+    {
+     "name": "Anthropic — September 2026 threat intelligence report",
+     "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+     "name": "OSTP — NSTM-4",
+     "url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/NSTM-4.pdf"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-27-0800-anbernic-rg-47g1.html",
    "url": "https://geekovski.ru/2026-11-27-0800-anbernic-rg-47g1.html",
    "title": "Anbernic RG 47G1: экран 120 Гц, чип попроще",
