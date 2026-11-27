@@ -559,10 +559,115 @@
    "crawled": "",
    "canonical": "",
    "checked": "2026-11-26"
+  },
+  "https://geekovski.ru/2026-11-13-tri-premery-pyatnica.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-13-wolfenstein-3.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-14-0800-god-of-war-ps4.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-14-1000-google-umnye-ochki.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-14-1200-xbox-x25-rasprodali.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-14-1500-intel-70-desktopa.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-14-1800-sud-zamorozit-ii-isk.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-14-2100-meta-805-mln-gallereya.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-15-0800-blg-worlds-2026.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-15-1000-anthropic-ipo-shest-kopiy.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-15-1200-qssr-ii-upskaling-ps5.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-15-1500-godzilla-minus-zero-vtoroy-weekend.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-15-1800-siege-vital-signal-ranked-3-0.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-15-2100-virgin-river-9-sezon.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-16-0800-eshop-podarit-igru-seme.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-27"
   }
  },
- "pointer": 80,
- "rounds": 6,
+ "pointer": 95,
+ "rounds": 7,
  "history": [
   {
    "date": "2026-11-25",
@@ -592,6 +697,11 @@
   {
    "date": "2026-11-26",
    "total": 80,
+   "indexed": 22
+  },
+  {
+   "date": "2026-11-27",
+   "total": 95,
    "indexed": 22
   }
  ]

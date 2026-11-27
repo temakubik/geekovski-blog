@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-27-1200-gta6-vnimanie-rynok.html",
+   "url": "https://geekovski.ru/2026-11-27-1200-gta6-vnimanie-rynok.html",
+   "title": "GTA 6 забрала треть внимания всех геймеров",
+   "summary": "Screen Engine/ASI замерила первую неделю после релиза — 31,4% всего внимания игроков мира, почти втрое больше прежнего рекорда Fortnite 2019 года, а доля живых сервисов впервые с начала замеров упала ниже половины — с 57% до 42,4%. В тот же день The Game Business отчиталась по Европе — «коробки без диска» дали лучший физический старт в Британии с 2019-го, а продажи консолей в UK выросли на 38%.",
+   "date_published": "2026-11-27T12:00:00+03:00",
+   "date_modified": "2026-11-27T12:00:00+03:00",
+   "tags": [
+    "PlayStation"
+   ],
+   "image": "https://geekovski.ru/assets/img/gta6-vnimanie-skyline.jpg",
+   "_sources": [
+    {
+     "name": "GamesBeat — GTA VI’s launch causes 26% drop in live-service game attention",
+     "url": "https://gamesbeat.com/gta-vis-launch-causes-26-drop-in-live-service-game-attention"
+    },
+    {
+     "name": "The Game Business — No disc no problem: GTA 6 is the biggest physical game launch since 2019",
+     "url": "https://www.thegamebusiness.com/p/no-disc-no-problem-gta-6-is-the-biggest"
+    },
+    {
+     "name": "VGC — Despite being a code in a box, GTA 6’s physical release broke sales records",
+     "url": "https://www.videogameschronicle.com/news/despite-being-a-code-in-a-box-gta-6s-physical-release-broke-sales-records/"
+    },
+    {
+     "name": "Pure Xbox — Xbox console sales get a huge boost in the UK",
+     "url": "https://www.purexbox.com/news/2026/11/xbox-console-sales-get-a-huge-boost-in-the-uk-while-gta-6-breaks-records-for-physical-games"
+    },
+    {
+     "name": "Eurogamer — GTA 6 sets massive livestreaming record",
+     "url": "https://www.eurogamer.net/grand-theft-auto-6-first-week-hours-watched-record"
+    },
+    {
+     "name": "Streams Charts — GTA 6 breaks streaming launch records",
+     "url": "https://streamscharts.com/news/gta6-livestreaming-week-after-launch"
+    },
+    {
+     "name": "PlayStation Blog — GTA VI стал крупнейшим запуском в истории PlayStation",
+     "url": "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history"
+    },
+    {
+     "name": "Screen Engine/ASI — методология Global Attention Share",
+     "url": "https://www.screenengineasi.com/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-27-1000-kitajskie-ai-upirajutsya-v-chipy-i-uchitelej.html",
    "url": "https://geekovski.ru/2026-11-27-1000-kitajskie-ai-upirajutsya-v-chipy-i-uchitelej.html",
    "title": "Китайские ИИ-лаборатории упёрлись в чипы и учителей",

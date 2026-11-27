@@ -13,7 +13,7 @@
 
 - [Xbox](https://geekovski.ru/xbox/): 15 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 19 материалов
-- [PlayStation](https://geekovski.ru/playstation/): 23 материала
+- [PlayStation](https://geekovski.ru/playstation/): 24 материала
 - [PC-игры](https://geekovski.ru/pc/): 40 материалов
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 42 материала
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 87 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 105 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 106 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 39 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [GTA 6 забрала треть внимания всех геймеров](https://geekovski.ru/2026-11-27-1200-gta6-vnimanie-rynok.html): Screen Engine/ASI замерила первую неделю после релиза — 31,4% всего внимания игроков мира, почти втрое больше прежнего рекорда Fortnite 2019 года, а доля живых сервисов впервые с начала замеров упала ниже половины — с 57% до 42,4%. В тот же день The Game Business отчиталась по Европе — «коробки без диска» дали лучший физический старт в Британии с 2019-го, а продажи консолей в UK выросли на 38%. (27.11.2026)
 - [Китайские ИИ-лаборатории упёрлись в чипы и учителей](https://geekovski.ru/2026-11-27-1000-kitajskie-ai-upirajutsya-v-chipy-i-uchitelej.html): 26 ноября Reuters со ссылкой на анонимные источники сообщил, что Z.AI не выпустила GLM-5.5 — флагман на 3 трлн параметров, обещанный в ноябре, — а Moonshot начала дистиллировать модели Google и Meta, потому что данные OpenAI и Anthropic добывать стало трудно. Причины две: закрытые цепочки рассуждений американских лабораторий и правило BIS, с 19 ноября требующее лицензию на зарубежные вычисления для китайских компаний. (27.11.2026)
 - [Anbernic RG 47G1: экран 120 Гц, чип попроще](https://geekovski.ru/2026-11-27-0800-anbernic-rg-47g1.html): 26 ноября Anbernic показала вертикальный Android-хендхелд RG 47G1 — тот же корпус, экран 4,7 дюйма 1280×960 с частотой 120 Гц и батарея на 5500 мА·ч, что у прошлогоднего RG 477V, но вместо Dimensity 8300 внутри Snapdragon G1 Gen 2 с GPU Adreno A12. Цену и дату релиза не назвали; RG 477V сейчас продаётся за $258, а тот же чип стоит в Retroid Pocket Classic за $145. (27.11.2026)
 - [Xenoblade Chronicles 3 получит 4K и 60 fps](https://geekovski.ru/2026-11-26-2100-xenoblade-3-switch-2-edition.html): 26 ноября Nintendo показала трёхминутный обзорный трейлер Xenoblade Chronicles 3 — Nintendo Switch 2 Edition и перечислила всё, что даёт платный апгрейд: до 4K в телевизионном режиме, Full HD в портативе, до 60 кадров в секунду, режим обороны Heroes' Vault, новую героиню Шиммер и новые озвученные сцены. Релиз 3 декабря: полное издание за $69.99, апгрейд для владельцев версии на Switch — $9.99. (26.11.2026)
