@@ -18,7 +18,7 @@
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 42 материала
 - [Кино](https://geekovski.ru/kino/): 27 материалов
-- [Сериалы](https://geekovski.ru/serialy/): 12 материалов
+- [Сериалы](https://geekovski.ru/serialy/): 13 материалов
 - [AI](https://geekovski.ru/ai/): 45 материалов
 - [Дайджесты](https://geekovski.ru/digests/): короткие выпуски новостей
 - [Календарь анонсов](https://geekovski.ru/calendar/): подтверждённые даты релизов игр, фильмов и сериалов
@@ -27,10 +27,11 @@
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 87 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
 - [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 108 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
-- [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 39 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
+- [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 40 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [«Бегущий по лезвию 2099» расколол критиков и зрителей](https://geekovski.ru/2026-11-27-2100-blade-runner-2099-razdelil-kritikov.html): 25 ноября Prime Video выложил разом все восемь серий «Бегущего по лезвию 2099» — первого игрового сериала франшизы. У критиков 70% на Rotten Tomatoes и 65 на Metacritic, у зрителей — 50% и 3,4 балла: картинку и пару Шафер — Йео хвалят, восемь часов вместо двух — нет. (27.11.2026)
 - [Arkheron: класс собирают из реликвий, а не выбирают](https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html): 27 ноября Bonfire Studios выпустила в ранний доступ Arkheron — командный PvP-экшен, где нет классов и выбора героя до матча, а роль задают подобранные реликвии. Игра стоит $24,99, первые выходные бесплатные для всех, а в Game Pass Ultimate она входит на три месяца вперёд. (27.11.2026)
 - [Alien: Isolation 2: ксеноморф охотится на открытой планете](https://geekovski.ru/2026-11-27-1500-alien-isolation-2-planeta.html): 26 ноября SEGA и Creative Assembly выложили официальное интервью о Alien: Isolation 2, а IGN, GamesRadar, CreativeBloq и Shacknews — разборы получасового пролога. Сиквел уходит с космической станции на планету LV-921, играем за сотрудницу Weyland-Yutani Блейк, ксеноморфа по-прежнему нельзя убить, а даты и цены нет до сих пор. (27.11.2026)
 - [GTA 6 забрала треть внимания всех геймеров](https://geekovski.ru/2026-11-27-1200-gta6-vnimanie-rynok.html): Screen Engine/ASI замерила первую неделю после релиза — 31,4% всего внимания игроков мира, почти втрое больше прежнего рекорда Fortnite 2019 года, а доля живых сервисов впервые с начала замеров упала ниже половины — с 57% до 42,4%. В тот же день The Game Business отчиталась по Европе — «коробки без диска» дали лучший физический старт в Британии с 2019-го, а продажи консолей в UK выросли на 38%. (27.11.2026)
@@ -352,6 +353,7 @@
 - [«Баста. Начало игры»](https://geekovski.ru/titles/basta-nachalo-igry.html): 2026
 - [Big Walk](https://geekovski.ru/titles/big-walk.html): 2026
 - [Black Doves, сезон 2](https://geekovski.ru/titles/black-doves-sezon-2.html): 2026
+- [Бегущий по лезвию 2099](https://geekovski.ru/titles/blade-runner-2099.html): 2026
 - [«Чебурашка 3»](https://geekovski.ru/titles/cheburashka-3.html): 2026
 - [«Новые похождения Клиффа Бута»](https://geekovski.ru/titles/cliff-booth.html): 2026
 - [CONTROL Resonant](https://geekovski.ru/titles/control-resonant.html): 2026

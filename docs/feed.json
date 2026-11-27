@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-27-2100-blade-runner-2099-razdelil-kritikov.html",
+   "url": "https://geekovski.ru/2026-11-27-2100-blade-runner-2099-razdelil-kritikov.html",
+   "title": "«Бегущий по лезвию 2099» расколол критиков и зрителей",
+   "summary": "25 ноября Prime Video выложил разом все восемь серий «Бегущего по лезвию 2099» — первого игрового сериала франшизы. У критиков 70% на Rotten Tomatoes и 65 на Metacritic, у зрителей — 50% и 3,4 балла: картинку и пару Шафер — Йео хвалят, восемь часов вместо двух — нет.",
+   "date_published": "2026-11-27T21:00:00+03:00",
+   "date_modified": "2026-11-27T21:00:00+03:00",
+   "tags": [
+    "Сериалы"
+   ],
+   "image": "https://geekovski.ru/assets/img/blade-runner-2099.jpg",
+   "_sources": [
+    {
+     "name": "Prime Video Press — премьера и трейлер",
+     "url": "https://press.amazonmgmstudios.com/us/en/press-release/whatever-you-can-build-you-can-destroy-prime-video"
+    },
+    {
+     "name": "Amazon MGM Studios — карточка сериала и титры",
+     "url": "https://press.amazonmgmstudios.com/us/en/original-series/blade-runner-2099/1"
+    },
+    {
+     "name": "Prime Video — страница сериала с сериями",
+     "url": "https://www.primevideo.com/detail/0LB7N1ZYZ2AFOEXO5IJ1YUWQVF"
+    },
+    {
+     "name": "Variety — рецензия",
+     "url": "https://variety.com/2026/tv/reviews/blade-runner-2099-review-hunter-schafer-amazon-prime-video-1236955543/"
+    },
+    {
+     "name": "The Hollywood Reporter — рецензия",
+     "url": "https://www.hollywoodreporter.com/tv/tv-reviews/blade-runner-2099-review-michelle-yeoh-hunter-schafer-amazon-1236760567/"
+    },
+    {
+     "name": "Vulture — рецензия",
+     "url": "https://www.vulture.com/article/blade-runner-2099-review-michelle-yeoh.html"
+    },
+    {
+     "name": "NME — рецензия",
+     "url": "https://www.nme.com/reviews/tv-reviews/blade-runner-2099-review-michelle-yeoh-hunter-schafer-amazon-prime-3976755"
+    },
+    {
+     "name": "The Verge — рецензия",
+     "url": "https://www.theverge.com/entertainment/1039095/blade-runner-2099-review"
+    },
+    {
+     "name": "Rotten Tomatoes — сводка оценок",
+     "url": "https://www.rottentomatoes.com/tv/blade_runner_2099"
+    },
+    {
+     "name": "Metacritic — сводка оценок",
+     "url": "https://www.metacritic.com/tv/blade-runner-2099/"
+    },
+    {
+     "name": "World of Reel — бюджет и производство",
+     "url": "https://www.worldofreel.com/blog/2026/11/23/blade-runner-2099-reviews-are-mixed"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html",
    "url": "https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html",
    "title": "Arkheron: класс собирают из реликвий, а не выбирают",
