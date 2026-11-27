@@ -7,7 +7,7 @@
 // именем оставалась у читателя прежней (кот в очках вместо кота на полке).
 // Номер версии — единственный способ выкинуть старые файлы у тех, кто уже
 // установил приложение; при замене любой картинки или шрифта поднимать.
-const VERSION = "geekovski-v14";
+const VERSION = "geekovski-v15";
 const STATIC_CACHE = `${VERSION}-static`;
 const PAGE_CACHE = `${VERSION}-pages`;
 
@@ -46,14 +46,20 @@ self.addEventListener("fetch", (event) => {
   // статика: сначала кэш, потом сеть
   if (/\.(css|js|woff2?|ttf|png|jpe?g|webp|svg|ico)$/i.test(url.pathname)) {
     event.respondWith(
-      caches.match(request).then((hit) =>
-        hit ||
-        fetch(request).then((res) => {
-          const copy = res.clone();
-          caches.open(STATIC_CACHE).then((c) => c.put(request, copy));
-          return res;
-        })
-      )
+      caches.match(request).then((hit) => {
+        if (hit && hit.ok) return hit;
+        return fetch(request)
+          .then((res) => {
+            // кэшируем только удачные ответы: иначе однажды пойманная ошибка
+            // (404 в момент деплоя) остаётся у читателя навсегда
+            if (res.ok) {
+              const copy = res.clone();
+              caches.open(STATIC_CACHE).then((c) => c.put(request, copy));
+            }
+            return res;
+          })
+          .catch(() => hit || Response.error());
+      })
     );
     return;
   }
