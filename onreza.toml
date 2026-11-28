@@ -1,0 +1,16 @@
+#:schema https://docs.onreza.ru/schemas/onreza-project-v1.schema.json
+
+[project]
+id = "01a22150-acab-7581-8c6e-dfc1d281e901"
+name = "geekovski-blog"
+workspace = "nplx"
+
+# Собираем на платформе тем же скриптом, что и локально: build.py кладёт готовый
+# сайт в docs/. Зависимость всего одна — Pillow (см. requirements.txt).
+[build]
+install_command = "pip install -r requirements.txt"
+command = "python3 build.py --theme editorial --out docs --strict-images"
+output_directory = "docs"
+
+[deploy]
+compute = "static"
