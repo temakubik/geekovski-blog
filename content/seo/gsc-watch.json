@@ -664,10 +664,115 @@
    "crawled": "",
    "canonical": "",
    "checked": "2026-11-27"
+  },
+  "https://geekovski.ru/2026-11-16-1000-gpd-win-mini-ultra.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-16-1200-qwen4-max-zakrytye-vesa.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-16-1500-project-helix-konsol-ili-pk.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-16-1800-oppo-reno17-8000-mach.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-16-2100-ssha-oblachnaya-lazejka.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-17-0800-zadacha-treh-tel-2-sezon.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-17-1000-xiaomi-18-pro-zadnij-ekran.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-17-1200-doom-slaughter-mode.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-17-1500-ostansya-shyamalan-treiler.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-17-1800-playstation-isk-2-mlrd.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-17-2100-meta-120-mln-vr-igry.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-18-0800-tga-2026-nominacii.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-18-1000-gpt-62-astra-cenovaya-voyna.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-18-1200-game-pass-volna-premium.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
+  },
+  "https://geekovski.ru/2026-11-18-1500-gta6-recenziya-99-metacritic.html": {
+   "coverage": "URL неизвестен Google",
+   "verdict": "NEUTRAL",
+   "crawled": "",
+   "canonical": "",
+   "checked": "2026-11-28"
   }
  },
- "pointer": 95,
- "rounds": 7,
+ "pointer": 110,
+ "rounds": 8,
  "history": [
   {
    "date": "2026-11-25",
@@ -702,6 +807,11 @@
   {
    "date": "2026-11-27",
    "total": 95,
+   "indexed": 22
+  },
+  {
+   "date": "2026-11-28",
+   "total": 110,
    "indexed": 22
   }
  ]

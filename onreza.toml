@@ -6,10 +6,12 @@ name = "geekovski-blog"
 workspace = "nplx"
 
 # Собираем на платформе тем же скриптом, что и локально: build.py кладёт готовый
-# сайт в docs/. Зависимость всего одна — Pillow (см. requirements.txt).
+# сайт в docs/. Единственная зависимость — Pillow.
 [build]
-install_command = "pip install -r requirements.txt"
-command = "python3 build.py --theme editorial --out docs --strict-images"
+# Pillow ставим внутри команды сборки: отдельный requirements.txt заставляет
+# платформу определять проект как Python-приложение и требовать deploy.entry.
+install_command = ""
+command = "pip install --quiet pillow && python3 build.py --theme editorial --out docs --strict-images"
 output_directory = "docs"
 
 [deploy]
