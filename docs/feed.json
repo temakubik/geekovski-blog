@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-28-0800-warframe-tau.html",
+   "url": "https://geekovski.ru/2026-11-28-0800-warframe-tau.html",
+   "title": "«Warframe: Tau» — вторая солнечная система с 9 декабря",
+   "summary": "27 ноября на Devstream 199 Digital Extremes назвала дату крупнейшего обновления в истории Warframe — Tau выходит 9 декабря бесплатно на PC, консолях и мобильных. Игрокам открывают вторую звёздную систему: кольцевой город Форнакс под чёрным дождём, пустыню Периту, два часа сюжетного квеста и первый в игре карточный клуб.",
+   "date_published": "2026-11-28T08:00:00+03:00",
+   "date_modified": "2026-11-28T08:00:00+03:00",
+   "tags": [
+    "PC-игры"
+   ],
+   "image": "https://geekovski.ru/assets/img/warframe-tau-fornax.jpg",
+   "_sources": [
+    {
+     "name": "Digital Extremes — итоги ноябрьского Devstream и дата Tau",
+     "url": "https://www.digitalextremes.com/news/november-warframe-devstream-highlights-warframe-tau-set-for-release-december-9"
+    },
+    {
+     "name": "Digital Extremes — итоги октябрьского Devstream",
+     "url": "https://www.digitalextremes.com/news/october-warframe-devstream-highlights"
+    },
+    {
+     "name": "Warframe — страница Tau",
+     "url": "https://www.warframe.com/en/tau"
+    },
+    {
+     "name": "Warframe — Форнакс",
+     "url": "https://www.warframe.com/en/tau/fornax"
+    },
+    {
+     "name": "Warframe — Перита",
+     "url": "https://www.warframe.com/en/tau/perita"
+    },
+    {
+     "name": "Games Press — пресс-релиз «Warframe: Tau Arrives Free for All Platforms Dec. 9»",
+     "url": "https://www.gamespress.com/Warframe-Tau-Arrives-Free-for-All-Platforms-Dec-9"
+    },
+    {
+     "name": "Eurogamer — разбор Devstream: «практически сиквел»",
+     "url": "https://www.eurogamer.net/warframe-tau-dev-stream-december-9th"
+    },
+    {
+     "name": "Inven Global — Q&A о Tau и новых типах урона",
+     "url": "https://www.invenglobal.com/articles/29243/warframe-heads-to-second-star-system-tau-on-december-10"
+    },
+    {
+     "name": "Lords of Gaming — разбор Devstream 199",
+     "url": "https://lordsofgaming.net/2026/11/warframe-devstream-199-breakdown/"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-27-2100-blade-runner-2099-razdelil-kritikov.html",
    "url": "https://geekovski.ru/2026-11-27-2100-blade-runner-2099-razdelil-kritikov.html",
    "title": "«Бегущий по лезвию 2099» расколол критиков и зрителей",
