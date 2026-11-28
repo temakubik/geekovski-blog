@@ -8,6 +8,56 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-28-1000-switch-2-dampy-piratstvo.html",
+   "url": "https://geekovski.ru/2026-11-28-1000-switch-2-dampy-piratstvo.html",
+   "title": "Switch 2 научили запускать дампы — пиратство началось",
+   "summary": "25 ноября разработчик под ником Olmectron выложил nx2-relink — открытый инструмент, который превращает дамп игры для Switch 2 в homebrew-программу .nro и запускает её на консоли без эмулятора. Требуется джейлбрейк kaiHEN и прошивка ровно 23.0.1, DLC не поддерживается, разработчики честно предупреждают о бане и риске окирпичить консоль — но это ровно тот сценарий, которого Nintendo боялась с первого дня.",
+   "date_published": "2026-11-28T10:00:00+03:00",
+   "date_modified": "2026-11-28T10:00:00+03:00",
+   "tags": [
+    "Nintendo Switch"
+   ],
+   "image": "https://geekovski.ru/assets/img/sw2-pirat-cover.jpg",
+   "_sources": [
+    {
+     "name": "GitHub — Olmectron/nx2-relink, README и лицензия",
+     "url": "https://github.com/olmectron/nx2-relink"
+    },
+    {
+     "name": "GamesRadar — The era of Switch 2 piracy is here",
+     "url": "https://www.gamesradar.com/games/the-era-of-switch-2-piracy-is-here-as-new-hack-allows-jailbroken-consoles-to-play-dumped-games-in-a-nightmare-scenario-for-nintendo/"
+    },
+    {
+     "name": "Switch2Unlock — kaiHEN вышел, риск кирпича",
+     "url": "https://switch2unlock.com/en/news/kaihen-homebrew-enabler/"
+    },
+    {
+     "name": "Switch2Unlock — гайд по ns2jb и kaiHEN",
+     "url": "https://switch2unlock.com/en/guides/ns2jb/"
+    },
+    {
+     "name": "f0il — SmileBASIC 4 вернулась в eShop с патчем",
+     "url": "https://www.f0il.com/smilebasic-4-returns-to-the-eshop-with-a-patch-closing-one-of-kaihens-switch-2-entry-points/"
+    },
+    {
+     "name": "TechPowerUp — прошивка 23.5.0 закрыла джейлбрейк",
+     "url": "https://www.techpowerup.com/354664/nintendo-switch-2-jailbreak-reportedly-patched-with-firmware-23-5-0"
+    },
+    {
+     "name": "GamesCreed — спор вокруг демо с microSD",
+     "url": "https://www.gamescreed.com/news/switch-2-jailbreak-game-microsd"
+    },
+    {
+     "name": "IGN — DMCA-волна Nintendo против модчипов и Yuzu",
+     "url": "https://nordic.ign.com/nintendo-switch-2/115544/nintendo-takes-down-switch-emulators-and-mod-chip-firmware-in-massive-github-dmca-sweep"
+    },
+    {
+     "name": "Shazoo — хакер научил взломанные консоли запускать дампы",
+     "url": "https://shazoo.ru/2026/11/26/194694/xaker-pri-pomoshhi-ii-naucil-vzlomannye-versii-switch-2-zapuskat-dampy-igr-teper-nintendo-zdet-novaia-volna-piratstva"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-28-0800-warframe-tau.html",
    "url": "https://geekovski.ru/2026-11-28-0800-warframe-tau.html",
    "title": "«Warframe: Tau» — вторая солнечная система с 9 декабря",

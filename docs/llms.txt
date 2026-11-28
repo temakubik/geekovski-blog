@@ -12,7 +12,7 @@
 ## Рубрики
 
 - [Xbox](https://geekovski.ru/xbox/): 16 материалов
-- [Nintendo Switch](https://geekovski.ru/switch/): 19 материалов
+- [Nintendo Switch](https://geekovski.ru/switch/): 20 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 24 материала
 - [PC-игры](https://geekovski.ru/pc/): 42 материала
 - [VR](https://geekovski.ru/vr/): 8 материалов
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 87 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 109 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 110 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 40 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Switch 2 научили запускать дампы — пиратство началось](https://geekovski.ru/2026-11-28-1000-switch-2-dampy-piratstvo.html): 25 ноября разработчик под ником Olmectron выложил nx2-relink — открытый инструмент, который превращает дамп игры для Switch 2 в homebrew-программу .nro и запускает её на консоли без эмулятора. Требуется джейлбрейк kaiHEN и прошивка ровно 23.0.1, DLC не поддерживается, разработчики честно предупреждают о бане и риске окирпичить консоль — но это ровно тот сценарий, которого Nintendo боялась с первого дня. (28.11.2026)
 - [«Warframe: Tau» — вторая солнечная система с 9 декабря](https://geekovski.ru/2026-11-28-0800-warframe-tau.html): 27 ноября на Devstream 199 Digital Extremes назвала дату крупнейшего обновления в истории Warframe — Tau выходит 9 декабря бесплатно на PC, консолях и мобильных. Игрокам открывают вторую звёздную систему: кольцевой город Форнакс под чёрным дождём, пустыню Периту, два часа сюжетного квеста и первый в игре карточный клуб. (28.11.2026)
 - [«Бегущий по лезвию 2099» расколол критиков и зрителей](https://geekovski.ru/2026-11-27-2100-blade-runner-2099-razdelil-kritikov.html): 25 ноября Prime Video выложил разом все восемь серий «Бегущего по лезвию 2099» — первого игрового сериала франшизы. У критиков 70% на Rotten Tomatoes и 65 на Metacritic, у зрителей — 50% и 3,4 балла: картинку и пару Шафер — Йео хвалят, восемь часов вместо двух — нет. (27.11.2026)
 - [Arkheron: класс собирают из реликвий, а не выбирают](https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html): 27 ноября Bonfire Studios выпустила в ранний доступ Arkheron — командный PvP-экшен, где нет классов и выбора героя до матча, а роль задают подобранные реликвии. Игра стоит $24,99, первые выходные бесплатные для всех, а в Game Pass Ultimate она входит на три месяца вперёд. (27.11.2026)
@@ -364,6 +365,7 @@
 - [Danganronpa 2×2](https://geekovski.ru/titles/danganronpa-2x2.html): 2027
 - [Death Stranding 2: On the Beach](https://geekovski.ru/titles/death-stranding-2.html): 2025
 - [Demon Tides](https://geekovski.ru/titles/demon-tides.html): 2027
+- [Donkey Kong Bananza](https://geekovski.ru/titles/donkey-kong-bananza.html): 2025
 - [DOOM: The Dark Ages](https://geekovski.ru/titles/doom-the-dark-ages.html): 2025
 - [Dragon Age](https://geekovski.ru/titles/dragon-age.html): 2009
 - [Dragon Quest Monsters: The Withered World](https://geekovski.ru/titles/dragon-quest-monsters-withered-world.html): 2026

@@ -699,6 +699,31 @@ def webp_variant(path):
         return None
 
 
+
+def prune_images(out_dir: Path) -> tuple:
+    """Удаляет из собранного сайта файлы assets/img, на которые никто не ссылается."""
+    img_dir = out_dir / "assets" / "img"
+    if not img_dir.exists():
+        return 0, 0
+    used = set()
+    pattern = re.compile(r"/assets/img/([A-Za-z0-9._@-]+)")
+    for path in out_dir.rglob("*"):
+        if not path.is_file() or path.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".ico"):
+            continue
+        try:
+            used |= set(pattern.findall(path.read_text(encoding="utf-8", errors="ignore")))
+        except OSError:
+            continue
+    removed = size = 0
+    for f in img_dir.iterdir():
+        if not f.is_file() or f.name in used:
+            continue
+        size += f.stat().st_size
+        f.unlink()
+        removed += 1
+    return removed, size
+
+
 def image_tag(src, alt="", priority=False):
     if not src:
         return ""
@@ -3172,6 +3197,12 @@ if __name__ == "__main__":
             dst = Path(a.out) / "assets" / "img" / webp.name
             if not dst.exists():
                 shutil.copy(webp, dst)
+
+    # Чистим картинки, на которые не ссылается ни одна страница, фид или стиль:
+    # на хостинге платим за каждый мегабайт деплоя, а старые обложки копятся годами.
+    pruned, pruned_bytes = prune_images(Path(a.out))
+    if pruned:
+        print("картинки: убрано неиспользуемых %d (%.1f МБ)" % (pruned, pruned_bytes / 1048576))
 
     problems = image_report(ps)
     if problems:
