@@ -8,6 +8,52 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-28-1200-tehsbor-na-elektroniku.html",
+   "url": "https://geekovski.ru/2026-11-28-1200-tehsbor-na-elektroniku.html",
+   "title": "Техсбор на электронику: кто заплатит и сколько",
+   "summary": "27 ноября правительство утвердило правила исчисления технологического сбора, и с декабря импортёры платят за каждую ввезённую единицу техники — 373 рубля за смартфон и 746 за ноутбук. Если модели нет в «Честном знаке», ставка вырастает до 496 и 992 рублей, но до покупателя доходит около процента цены, а фактически взимать сбор начнут с 27 декабря, а не с 1-го.",
+   "date_published": "2026-11-28T12:00:00+03:00",
+   "date_modified": "2026-11-28T12:00:00+03:00",
+   "tags": [
+    "Гаджеты"
+   ],
+   "image": "https://geekovski.ru/assets/img/techsbor-hand.jpg",
+   "_sources": [
+    {
+     "name": "iXBT — 373 рубля за смартфон, 746 за ноутбук",
+     "url": "https://www.ixbt.com/news/2026/11/27/373-rublia-za-smartfon-746-rublei-za-noutbuk-v-rossii-utverdili-pravila-texnologiceskogo-sbora-on-vstupaet-v-silu-1-dekabria.html"
+    },
+    {
+     "name": "Интерфакс — Минпромторг утвердил ставки",
+     "url": "https://interfax.ru/business/1122741"
+    },
+    {
+     "name": "ГАРАНТ — приказ Минпромторга № 5366 от 13.10.2026",
+     "url": "https://garant.ru/news/2274177"
+    },
+    {
+     "name": "Профиль — сбор начнут взимать с 27 декабря",
+     "url": "https://profile.ru/news/economy/v-rossii-s-27-dekabrya-nachnut-vzimat-tehnologicheskij-sbor-za-smartfony-i-noutbuki-a999-1928512"
+    },
+    {
+     "name": "Росбалт — что это значит для покупателя",
+     "url": "https://rosbalt.ru/news/2026-11-28/v-rossii-utverdili-tehsbor-na-elektroniku-chto-eto-znachit-dlya-pokupatelya-5743983"
+    },
+    {
+     "name": "Парламентская газета — правила уплаты и прогноз Минфина",
+     "url": "https://pnp.ru/economics/v-rossii-utverdili-pravila-uplaty-tekhnologicheskogo-sbora.html"
+    },
+    {
+     "name": "Хабр — механика расчёта и позиция РАТЭК",
+     "url": "https://habr.com/ru/articles/1113404"
+    },
+    {
+     "name": "Лента.ру — разбор ставок и коэффициентов",
+     "url": "https://lenta.ru/articles/2026/11/10/tehnologicheskiy-sbor"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-28-1000-switch-2-dampy-piratstvo.html",
    "url": "https://geekovski.ru/2026-11-28-1000-switch-2-dampy-piratstvo.html",
    "title": "Switch 2 научили запускать дампы — пиратство началось",
