@@ -8,6 +8,48 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-28-2100-gigachat-4-otkrytye-vesa.html",
+   "url": "https://geekovski.ru/2026-11-28-2100-gigachat-4-otkrytye-vesa.html",
+   "title": "GigaChat 4: открытые веса и ловушка лицензий",
+   "summary": "26 ноября на AI Journey Сбер показал GigaChat 4 — флагман на 708 млрд параметров с контекстом в миллион токенов и весами под MIT, плюс компактную 37B для одной-двух видеокарт. Главное в этом релизе не бенчмарки, а две разные лицензии: свободная висит на модели, которую без 16 ускорителей H100 не запустить, а удобную для локалхоста 37B бизнесу использовать нельзя.",
+   "date_published": "2026-11-28T21:00:00+03:00",
+   "date_modified": "2026-11-28T21:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/gigachat4-cover.jpg",
+   "_sources": [
+    {
+     "name": "СберПро — Сбер представил новую флагманскую модель GigaChat 4 и ещё ряд ИИ-решений",
+     "url": "https://sber.pro/publication/sber-predstavil-novuyu-flagmanskuyu-model-gigachat-4-i-eschyo-ryad-ii-reshenii/"
+    },
+    {
+     "name": "Hugging Face — GigaChat4-708B-A41B",
+     "url": "https://huggingface.co/ai-sage/GigaChat4-708B-A41B"
+    },
+    {
+     "name": "Hugging Face — GigaChat4-37B-A4B",
+     "url": "https://huggingface.co/ai-sage/GigaChat4-37B-A4B"
+    },
+    {
+     "name": "vc.ru — Миллион токенов и хитрая лицензия: что на самом деле показал релиз GigaChat 4",
+     "url": "https://vc.ru/ai/3282932-gigachat-4-ot-sbera-miliony-tokenov-i-litsenzii-dlya-biznesa"
+    },
+    {
+     "name": "Ведомости — «Сбер» представил новые модели GigaChat и Kandinsky",
+     "url": "https://vedomosti.ru/technology/news/2026/11/26/1415693-novie-modeli"
+    },
+    {
+     "name": "SGLang Cookbook — GigaChat 4",
+     "url": "https://docs.sglang.io/cookbook/autoregressive/GigaChat/GigaChat4"
+    },
+    {
+     "name": "GitHub — технический отчёт GigaChat 4",
+     "url": "https://github.com/salute-developers/gigachat4"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-28-1800-xbox-bez-impossible-lair.html",
    "url": "https://geekovski.ru/2026-11-28-1800-xbox-bez-impossible-lair.html",
    "title": "Playtonic объяснила, почему Xbox остался без Impossible Lair",
