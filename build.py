@@ -711,9 +711,15 @@ def prune_images(out_dir: Path) -> tuple:
         if not path.is_file() or path.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".ico"):
             continue
         try:
-            used |= set(pattern.findall(path.read_text(encoding="utf-8", errors="ignore")))
+            text = path.read_text(encoding="utf-8", errors="ignore")
         except OSError:
             continue
+        used |= set(pattern.findall(text))
+        # Кнопка Pinterest ссылается на пин в percent-encoded виде (media=https%3A%2F%2F…),
+        # поэтому без раскодирования все вертикальные пины вычищались как «неиспользуемые»
+        # и share-ссылка вела на 404.
+        if "%2f" in text.lower():
+            used |= set(pattern.findall(urllib.parse.unquote(text)))
     removed = size = 0
     for f in img_dir.iterdir():
         if not f.is_file() or f.name in used:
