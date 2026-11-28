@@ -14,7 +14,7 @@
 - [Xbox](https://geekovski.ru/xbox/): 16 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 19 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 24 материала
-- [PC-игры](https://geekovski.ru/pc/): 41 материал
+- [PC-игры](https://geekovski.ru/pc/): 42 материала
 - [VR](https://geekovski.ru/vr/): 8 материалов
 - [Гаджеты](https://geekovski.ru/gadgets/): 42 материала
 - [Кино](https://geekovski.ru/kino/): 27 материалов
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 87 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 108 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 109 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 40 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [«Warframe: Tau» — вторая солнечная система с 9 декабря](https://geekovski.ru/2026-11-28-0800-warframe-tau.html): 27 ноября на Devstream 199 Digital Extremes назвала дату крупнейшего обновления в истории Warframe — Tau выходит 9 декабря бесплатно на PC, консолях и мобильных. Игрокам открывают вторую звёздную систему: кольцевой город Форнакс под чёрным дождём, пустыню Периту, два часа сюжетного квеста и первый в игре карточный клуб. (28.11.2026)
 - [«Бегущий по лезвию 2099» расколол критиков и зрителей](https://geekovski.ru/2026-11-27-2100-blade-runner-2099-razdelil-kritikov.html): 25 ноября Prime Video выложил разом все восемь серий «Бегущего по лезвию 2099» — первого игрового сериала франшизы. У критиков 70% на Rotten Tomatoes и 65 на Metacritic, у зрителей — 50% и 3,4 балла: картинку и пару Шафер — Йео хвалят, восемь часов вместо двух — нет. (27.11.2026)
 - [Arkheron: класс собирают из реликвий, а не выбирают](https://geekovski.ru/2026-11-27-1800-arkheron-ranij-dostup.html): 27 ноября Bonfire Studios выпустила в ранний доступ Arkheron — командный PvP-экшен, где нет классов и выбора героя до матча, а роль задают подобранные реликвии. Игра стоит $24,99, первые выходные бесплатные для всех, а в Game Pass Ultimate она входит на три месяца вперёд. (27.11.2026)
 - [Alien: Isolation 2: ксеноморф охотится на открытой планете](https://geekovski.ru/2026-11-27-1500-alien-isolation-2-planeta.html): 26 ноября SEGA и Creative Assembly выложили официальное интервью о Alien: Isolation 2, а IGN, GamesRadar, CreativeBloq и Shacknews — разборы получасового пролога. Сиквел уходит с космической станции на планету LV-921, играем за сотрудницу Weyland-Yutani Блейк, ксеноморфа по-прежнему нельзя убить, а даты и цены нет до сих пор. (27.11.2026)
@@ -419,6 +420,7 @@
 - [«Вершина»](https://geekovski.ru/titles/vershina-film.html): 2026
 - [Virgin River](https://geekovski.ru/titles/virgin-river.html): 2019
 - [«Властелин колец: Охота за Голлумом»](https://geekovski.ru/titles/vlastelin-kolets-ohota-za-gollumom.html): 2027
+- [Warframe](https://geekovski.ru/titles/warframe.html): 2013
 - [Warhammer 40,000: Dawn of War IV](https://geekovski.ru/titles/warhammer-40000-dawn-of-war-iv.html): 2026
 - [«Оборотень»](https://geekovski.ru/titles/werwulf.html): 2026
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
