@@ -8,6 +8,40 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-28-1500-openai-protiv-apple-sekrety.html",
+   "url": "https://geekovski.ru/2026-11-28-1500-openai-protiv-apple-sekrety.html",
+   "title": "OpenAI обвинила Apple в краже секретов ИИ-устройства",
+   "summary": "27 ноября OpenAI подала встречные требования к Apple в федеральном суде Северной Калифорнии: по версии компании, Apple сама получила её документы про невыпущенный гаджет, давила на поставщиков и устроила для увольняющихся «ловушку» с личными iCloud и iMessage. Apple называет это попыткой отвлечь суд от сути своего иска.",
+   "date_published": "2026-11-28T15:00:00+03:00",
+   "date_modified": "2026-11-28T15:00:00+03:00",
+   "tags": [
+    "AI"
+   ],
+   "image": "https://geekovski.ru/assets/img/openai-apple-isk-cover.jpg",
+   "_sources": [
+    {
+     "name": "CNN — OpenAI countersues Apple in ongoing trade secrets fight",
+     "url": "https://www.cnn.com/2026/11/27/tech/openai-apple-countersuit"
+    },
+    {
+     "name": "Al Jazeera (Reuters) — OpenAI countersues Apple over trade secrets",
+     "url": "https://www.aljazeera.com/economy/2026/11/27/openai-countersues-apple-over-trade-secrets-as-ai-race-heats-up"
+    },
+    {
+     "name": "CNN — OpenAI accuses former employee of leaking intel on AI device to Apple",
+     "url": "https://www.cnn.com/2026/10/14/tech/openai-accuses-former-employee-of-leaking-intel-on-ai-device-to-apple"
+    },
+    {
+     "name": "Reuters — Apple sues OpenAI, two former employees for trade secrets theft",
+     "url": "https://www.reuters.com/legal/litigation/apple-sues-openai-alleging-misappropriation-trade-secrets-court-records-show-2026-07-10/"
+    },
+    {
+     "name": "CNN — Apple sues OpenAI over stolen trade secrets (июль)",
+     "url": "https://www.cnn.com/2026/07/10/tech/apple-openai-devices-lawsuit"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-28-1200-tehsbor-na-elektroniku.html",
    "url": "https://geekovski.ru/2026-11-28-1200-tehsbor-na-elektroniku.html",
    "title": "Техсбор на электронику: кто заплатит и сколько",
