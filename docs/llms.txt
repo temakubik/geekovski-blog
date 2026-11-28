@@ -11,7 +11,7 @@
 
 ## Рубрики
 
-- [Xbox](https://geekovski.ru/xbox/): 16 материалов
+- [Xbox](https://geekovski.ru/xbox/): 17 материалов
 - [Nintendo Switch](https://geekovski.ru/switch/): 20 материалов
 - [PlayStation](https://geekovski.ru/playstation/): 24 материала
 - [PC-игры](https://geekovski.ru/pc/): 42 материала
@@ -26,11 +26,12 @@
 ## Авторы
 
 - [Всеволод Гринёв](https://geekovski.ru/avtory/seva.html): Техред · железо и цифры. 89 материалов; лента автора — https://geekovski.ru/avtory/seva.xml
-- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 110 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
+- [Марк Стрельцов](https://geekovski.ru/avtory/mark.html): Игры · консоли и инди. 111 материалов; лента автора — https://geekovski.ru/avtory/mark.xml
 - [Аня Гладышева](https://geekovski.ru/avtory/anya.html): Кино и сериалы. 40 материалов; лента автора — https://geekovski.ru/avtory/anya.xml
 
 ## Материалы
 
+- [Playtonic объяснила, почему Xbox остался без Impossible Lair](https://geekovski.ru/2026-11-28-1800-xbox-bez-impossible-lair.html): 27 ноября Playtonic опубликовала заявление: апгрейд Yooka-Laylee and the Impossible Lair до Definitive Edition выйдет 15 декабря на PS5, Switch 2 и PC, а версии для Xbox Series X|S не будет — «технические сложности и затраты» маленькая студия не потянула. Xbox-версия 2019 года при этом работала хорошо, и это главный аргумент против объяснения. (28.11.2026)
 - [OpenAI обвинила Apple в краже секретов ИИ-устройства](https://geekovski.ru/2026-11-28-1500-openai-protiv-apple-sekrety.html): 27 ноября OpenAI подала встречные требования к Apple в федеральном суде Северной Калифорнии: по версии компании, Apple сама получила её документы про невыпущенный гаджет, давила на поставщиков и устроила для увольняющихся «ловушку» с личными iCloud и iMessage. Apple называет это попыткой отвлечь суд от сути своего иска. (28.11.2026)
 - [Техсбор на электронику: кто заплатит и сколько](https://geekovski.ru/2026-11-28-1200-tehsbor-na-elektroniku.html): 27 ноября правительство утвердило правила исчисления технологического сбора, и с декабря импортёры платят за каждую ввезённую единицу техники — 373 рубля за смартфон и 746 за ноутбук. Если модели нет в «Честном знаке», ставка вырастает до 496 и 992 рублей, но до покупателя доходит около процента цены, а фактически взимать сбор начнут с 27 декабря, а не с 1-го. (28.11.2026)
 - [Switch 2 научили запускать дампы — пиратство началось](https://geekovski.ru/2026-11-28-1000-switch-2-dampy-piratstvo.html): 25 ноября разработчик под ником Olmectron выложил nx2-relink — открытый инструмент, который превращает дамп игры для Switch 2 в homebrew-программу .nro и запускает её на консоли без эмулятора. Требуется джейлбрейк kaiHEN и прошивка ровно 23.0.1, DLC не поддерживается, разработчики честно предупреждают о бане и риске окирпичить консоль — но это ровно тот сценарий, которого Nintendo боялась с первого дня. (28.11.2026)
@@ -431,6 +432,7 @@
 - [World of Warcraft: Forever](https://geekovski.ru/titles/world-of-warcraft-forever.html): 2026
 - [Xenoblade Chronicles 3](https://geekovski.ru/titles/xenoblade-chronicles-3.html): 2022
 - [«Ёлки 13»](https://geekovski.ru/titles/yolki-13.html): 2026
+- [Yooka-Laylee and the Impossible Lair](https://geekovski.ru/titles/yooka-laylee-impossible-lair.html): 2019
 - [The Legend of Zelda: Ocarina of Time](https://geekovski.ru/titles/zelda-ocarina-2026.html): 2026
 - [Zero Parades: Director's Cut](https://geekovski.ru/titles/zero-parades-directors-cut.html): 2026
 - [«Зима в Простоквашино»](https://geekovski.ru/titles/zima-v-prostokvashino.html): 2026

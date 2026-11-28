@@ -8,6 +8,64 @@
  "favicon": "https://geekovski.ru/assets/img/icon-512.png",
  "items": [
   {
+   "id": "https://geekovski.ru/2026-11-28-1800-xbox-bez-impossible-lair.html",
+   "url": "https://geekovski.ru/2026-11-28-1800-xbox-bez-impossible-lair.html",
+   "title": "Playtonic объяснила, почему Xbox остался без Impossible Lair",
+   "summary": "27 ноября Playtonic опубликовала заявление: апгрейд Yooka-Laylee and the Impossible Lair до Definitive Edition выйдет 15 декабря на PS5, Switch 2 и PC, а версии для Xbox Series X|S не будет — «технические сложности и затраты» маленькая студия не потянула. Xbox-версия 2019 года при этом работала хорошо, и это главный аргумент против объяснения.",
+   "date_published": "2026-11-28T18:00:00+03:00",
+   "date_modified": "2026-11-28T18:00:00+03:00",
+   "tags": [
+    "Xbox"
+   ],
+   "image": "https://geekovski.ru/assets/img/yooka-impossible-lair-def-edition.jpg",
+   "_sources": [
+    {
+     "name": "Playtonic Games — The Impossible Lair: Definitive Edition arrives December 15th",
+     "url": "https://www.playtonicgames.com/news/yooka-laylee-and-the-impossible-lair-definitive-edition-arrives-december-15th"
+    },
+    {
+     "name": "Gematsu — Definitive Edition announced for PS5, Switch 2, and PC",
+     "url": "https://www.gematsu.com/2026/11/yooka-laylee-and-the-impossible-lair-definitive-edition-announced-for-ps5-switch-2-and-pc"
+    },
+    {
+     "name": "The Verge — Yooka-Laylee's free upgrade is skipping Xbox",
+     "url": "https://www.theverge.com/games/1044715/yooka-laylees-free-upgrade-is-skipping-xbox"
+    },
+    {
+     "name": "Windows Central — Playtonic can't ship Definitive Edition on Xbox",
+     "url": "https://www.windowscentral.com/gaming/xbox/playtonic-says-that-it-cant-ship-yooka-laylee-definitive-edition-on-xbox-due-to-technical-challenges-and-costs"
+    },
+    {
+     "name": "Pure Xbox — Developer issues statement on why Definitive Edition is skipping Xbox",
+     "url": "https://www.purexbox.com/news/2026/11/yooka-laylee-developer-issues-statement-on-why-definitive-edition-is-skipping-xbox"
+    },
+    {
+     "name": "IGN — Dev's explanation for skipping Xbox sparks backlash",
+     "url": "https://www.ign.com/articles/yooka-laylee-and-the-impossible-lair-no-xbox-release"
+    },
+    {
+     "name": "Nintendo Life — Definitive Edition on Switch 2",
+     "url": "https://www.nintendolife.com/news/2026/11/yooka-laylee-and-the-impossible-lair-is-getting-a-definitive-edition-on-switch-2"
+    },
+    {
+     "name": "Playtonic Games — Yooka-Replaylee launches on October 9",
+     "url": "https://playtonicgames.com/news/yooka-replaylee-launches-on-october-9"
+    },
+    {
+     "name": "Gematsu — Yooka-Replaylee physical edition launches December 18",
+     "url": "https://gematsu.com/2025/10/yooka-replaylee-physical-edition-launches-december-18"
+    },
+    {
+     "name": "IGN — Big Walk developer explains why the game isn't on Xbox",
+     "url": "https://ign.com/articles/big-walk-developer-explains-why-the-game-isnt-on-xbox"
+    },
+    {
+     "name": "Tech Times — Free upgrade is for digital owners, Playtonic says",
+     "url": "https://www.techtimes.com/articles/331672/20261127/yooka-laylee-impossible-lair-definitive-edition-free-upgrade-digital-owners-playtonic-says.htm"
+    }
+   ]
+  },
+  {
    "id": "https://geekovski.ru/2026-11-28-1500-openai-protiv-apple-sekrety.html",
    "url": "https://geekovski.ru/2026-11-28-1500-openai-protiv-apple-sekrety.html",
    "title": "OpenAI обвинила Apple в краже секретов ИИ-устройства",
